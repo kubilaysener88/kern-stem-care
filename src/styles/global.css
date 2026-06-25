@@ -1,0 +1,465 @@
+@import 'tailwindcss';
+
+/* ============================================================
+   Kern Stem Care — global design system
+   Tokens + shared primitives used across every page and the
+   shared header/footer. Page-specific styles stay scoped in
+   their own .astro components.
+   ============================================================ */
+:root {
+  --navy: #0d2a4a;
+  --blue: #1565c0;
+  --blue-light: #42a5f5;
+  --teal: #0a9396;
+  /* Darker teal for text/UI on light backgrounds — brand teal #0a9396 is only
+     3.7:1 on white (fails WCAG AA); this is ~5.7:1 (passes AA). */
+  --teal-text: #0a7274;
+  --teal-light: #e0f2f1;
+  --bg: #ffffff;
+  --bg-alt: #f5f8fc;
+  --ink: #1f2a37;
+  --muted: #5b6b7d;
+  --line: #e3eaf2;
+  --gold: #c9a227;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(13, 42, 74, 0.08);
+  --shadow-lg: 0 20px 50px rgba(13, 42, 74, 0.14);
+  --maxw: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  color: var(--navy);
+  margin: 0 0 0.5em;
+  font-weight: 700;
+}
+h2 {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+}
+h3 {
+  font-size: 1.25rem;
+}
+p {
+  margin: 0 0 1em;
+}
+
+/* Layout helpers */
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 22px;
+}
+.section {
+  padding: 72px 0;
+}
+.section.alt {
+  background: var(--bg-alt);
+}
+.center {
+  text-align: center;
+}
+.eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--teal-text);
+  margin-bottom: 0.6em;
+}
+.lead {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 760px;
+}
+.center .lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+.ph {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+  text-align: center;
+}
+.btn-primary {
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(21, 101, 192, 0.3);
+}
+.btn-primary:hover {
+  background: #0d4ea0;
+  transform: translateY(-2px);
+}
+.btn-ghost {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.btn-outline {
+  background: #fff;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+}
+.btn-outline:hover {
+  background: var(--blue);
+  color: #fff;
+}
+
+/* Grids + cards */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+.g2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.g3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.g4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 900px) {
+  .g3,
+  .g4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 620px) {
+  .g2,
+  .g3,
+  .g4 {
+    grid-template-columns: 1fr;
+  }
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: var(--shadow);
+  transition: 0.2s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.card .ico {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: var(--teal-light);
+  color: var(--teal);
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+}
+.card h3 {
+  margin-bottom: 0.35em;
+}
+.card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Split (text + media) */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+@media (max-width: 860px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
+.media-ph {
+  background: linear-gradient(135deg, #dceaf7, #cfeae8);
+  border: 2px dashed #9fc3d6;
+  border-radius: var(--radius);
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #4c6f86;
+  font-weight: 600;
+  padding: 20px;
+}
+
+/* Checklist */
+.check {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.check li {
+  position: relative;
+  padding: 8px 0 8px 34px;
+  color: var(--ink);
+}
+.check li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 22px;
+  height: 22px;
+  background: var(--teal);
+  color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Numbered steps */
+.steps {
+  counter-reset: s;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+@media (max-width: 900px) {
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 560px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
+.step {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 22px;
+  position: relative;
+}
+.step::before {
+  counter-increment: s;
+  content: counter(s);
+  position: absolute;
+  top: -18px;
+  left: 22px;
+  width: 40px;
+  height: 40px;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 14px rgba(21, 101, 192, 0.35);
+}
+.step h3 {
+  margin-top: 10px;
+  font-size: 1.05rem;
+}
+.step p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Disclaimer box */
+.disclaimer {
+  background: #fff7e6;
+  border: 1px solid #f0d98c;
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  color: #6b5a1e;
+  font-size: 0.86rem;
+}
+.disclaimer strong {
+  color: #5a4a14;
+}
+
+/* Interior page hero */
+.page-hero {
+  background: linear-gradient(120deg, #0d2a4a 0%, #13427a 55%, #0a6e74 100%);
+  color: #fff;
+  padding: 64px 0;
+}
+.page-hero h1 {
+  color: #fff;
+  font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+}
+.page-hero .lead {
+  color: #dce9f6;
+  max-width: 720px;
+}
+.page-hero .eyebrow {
+  color: #9fd0ff;
+}
+
+/* Forms (contact / lead capture) */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+@media (max-width: 860px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.form-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+.form-card .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 560px) {
+  .form-card .row {
+    grid-template-columns: 1fr;
+  }
+}
+.form-card .field {
+  margin-bottom: 14px;
+}
+.form-card label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  display: block;
+}
+.form-card label > span {
+  display: block;
+  margin-bottom: 5px;
+}
+.form-card input,
+.form-card select,
+.form-card textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  font-size: 0.94rem;
+  font-family: inherit;
+}
+.info-block {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 22px;
+  align-items: flex-start;
+}
+.info-block .ico {
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  background: var(--teal-light);
+  color: var(--teal);
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  flex: none;
+}
+.info-block h3 {
+  margin: 0 0 2px;
+  font-size: 1rem;
+}
+.info-block p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* ============================================================
+   Accessibility utilities (WCAG 2.1 AA)
+   ============================================================ */
+
+/* Visually hidden but available to assistive tech. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip-to-content link — visible only when focused (2.4.1 Bypass Blocks). */
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  margin: 8px;
+  padding: 10px 16px;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+  transform: translateY(-150%);
+  transition: transform 0.2s;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Consistent, high-contrast keyboard focus indicator (2.4.7).
+   Dark surfaces (hero, footer, CTA) override the color locally. */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+main:focus {
+  outline: none;
+}

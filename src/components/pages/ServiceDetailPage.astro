@@ -1,0 +1,33 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import PageHero from '../PageHero.astro';
+import ProseSections from '../ProseSections.astro';
+import StructuredData from '../StructuredData.astro';
+import type { Lang } from '../../i18n/ui';
+import { pagesContent } from '../../i18n/pages';
+
+interface Props {
+  lang: Lang;
+  service: 'stemCells' | 'exosomes' | 'fibroblasts';
+}
+const { lang, service } = Astro.props;
+const p = pagesContent[lang][service];
+const backLabel = lang === 'es' ? '← Todos los servicios' : '← All services';
+const ctaLabel = lang === 'es' ? 'Solicitar Consulta Gratis' : 'Request Free Consultation';
+---
+
+<SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription}>
+  <StructuredData slot="head" lang={lang} organization={false} procedures={[service]} />
+  <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} />
+
+  <section class="section">
+    <div class="wrap">
+      <ProseSections sections={p.sections} />
+      {p.disclaimer && <div class="disclaimer" style="max-width:760px;margin:8px auto 0" set:html={p.disclaimer} />}
+      <div class="center" style="margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href={`/${lang}/services`} class="btn btn-outline">{backLabel}</a>
+        <a href={`/${lang}/contact`} class="btn btn-primary">{ctaLabel}</a>
+      </div>
+    </div>
+  </section>
+</SiteLayout>

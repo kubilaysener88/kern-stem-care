@@ -1,0 +1,72 @@
+---
+import { languages, type Lang } from '../i18n/ui';
+import { getRouteFromUrl } from '../i18n/utils';
+
+/**
+ * Reusable SEO head component.
+ * Receives title, description and image, and emits:
+ *  - primary meta (title, description, canonical, robots)
+ *  - Open Graph + Twitter Card tags
+ *  - hreflang alternates for every locale + x-default
+ */
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  /** Social share image — path relative to /public or an absolute URL. */
+  image?: string;
+  /** og:type — 'website' (default) or 'article'. */
+  type?: 'website' | 'article';
+  /** Set true to keep the page out of search indexes. */
+  noindex?: boolean;
+}
+
+const { lang, title, description, image = '/og-image.jpg', type = 'website', noindex = false } = Astro.props;
+
+// Astro.site comes from `site` in astro.config.mjs.
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL(image, Astro.site);
+
+// og:locale wants a full locale (e.g. en_US).
+const ogLocale: Record<Lang, string> = { en: 'en_US', es: 'es_ES' };
+const ogAlternate = (Object.keys(languages) as Lang[]).filter((l) => l !== lang).map((l) => ogLocale[l]);
+
+// hreflang alternates for every locale + x-default.
+const route = getRouteFromUrl(Astro.url);
+const hrefFor = (code: Lang) => new URL(`/${code}${route === '/' ? '' : route}`, Astro.site).href;
+const locales = Object.keys(languages) as Lang[];
+const xDefault = hrefFor(locales[0]);
+---
+
+<!-- Global metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Primary SEO -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+<meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+
+<!-- Language alternates (hreflang) -->
+{locales.map((code) => <link rel="alternate" hreflang={code} href={hrefFor(code)} />)}
+<link rel="alternate" hreflang="x-default" href={xDefault} />
+
+<!-- Open Graph -->
+<meta property="og:type" content={type} />
+<meta property="og:site_name" content="Kern Stem Care" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:image" content={socialImageURL} />
+<meta property="og:locale" content={ogLocale[lang]} />
+{ogAlternate.map((l) => <meta property="og:locale:alternate" content={l} />)}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={socialImageURL} />

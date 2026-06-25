@@ -1,0 +1,92 @@
+---
+import PageHero from './PageHero.astro';
+import type { Lang } from '../i18n/ui';
+import { legalNav, type LegalDoc } from '../i18n/legal';
+
+interface Props {
+  lang: Lang;
+  doc: LegalDoc;
+}
+const { lang, doc } = Astro.props;
+
+// Links to the other two legal pages.
+const related = legalNav(lang).filter((l) => l.slug !== doc.slug);
+const moreLabel = lang === 'es' ? 'Más documentos legales' : 'More legal documents';
+const datePh = lang === 'es' ? '[fecha]' : '[date]';
+const updatedLead = `${doc.updatedLabel} <span class="ph">${datePh}</span>`;
+---
+
+<PageHero title={doc.h1} lead={updatedLead} />
+
+<section class="section">
+  <div class="wrap">
+    <div class="legal">
+      <div class="note">
+        <strong>{doc.templateNoticeLabel}</strong><span set:html={doc.templateNotice} />
+      </div>
+
+      <p>{doc.intro}</p>
+
+      {doc.medDisclaimer && <div class="med" set:html={doc.medDisclaimer} />}
+
+      {doc.sections.map((s) => (
+        <>
+          <h2>{s.h2}</h2>
+          <p set:html={s.body} />
+        </>
+      ))}
+
+      <nav class="legal-links" aria-label={moreLabel}>
+        <a href={`/${lang}`}>{doc.backHome}</a>
+        {related.map((l) => <a href={`/${lang}/${l.slug}`}>{l.label}</a>)}
+      </nav>
+    </div>
+  </div>
+</section>
+
+<style>
+  .legal {
+    max-width: 860px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+  .legal h2 {
+    color: var(--navy);
+    font-size: 1.25rem;
+    margin: 30px 0 8px;
+  }
+  .legal p,
+  .legal li {
+    color: #33414f;
+  }
+  .legal .note {
+    background: #fff7e6;
+    border: 1px solid #f0d98c;
+    border-radius: 12px;
+    padding: 16px 20px;
+    color: #6b5a1e;
+    font-size: 0.9rem;
+    margin: 0 0 24px;
+  }
+  .legal .med {
+    background: #eef5fb;
+    border: 1px solid #c7ddf0;
+    border-radius: 12px;
+    padding: 16px 20px;
+    color: #234;
+    font-size: 0.92rem;
+    margin: 24px 0;
+  }
+  .legal .ph {
+    color: var(--blue);
+    font-weight: 700;
+  }
+  .legal-links {
+    margin-top: 36px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+  }
+</style>

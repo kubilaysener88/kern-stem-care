@@ -1,0 +1,10 @@
+<svg viewBox="0 0 470 112" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kern Stem Care - Genesis">
+  <defs><clipPath id="gL"><circle cx="50" cy="56" r="24"/></clipPath></defs>
+  <circle cx="74" cy="56" r="24" fill="#cfeae8" clip-path="url(#gL)"/>
+  <circle cx="50" cy="56" r="24" fill="none" stroke="#1565c0" stroke-width="2.2"/>
+  <circle cx="74" cy="56" r="24" fill="none" stroke="#0a9396" stroke-width="2.2"/>
+  <circle cx="62" cy="56" r="4" fill="#c9a227"/>
+  <text x="150" y="55" font-family="'Segoe UI', Arial, sans-serif" font-size="40" font-weight="500" fill="#0d2a4a" letter-spacing="6">KERN</text>
+  <line x1="152" y1="67" x2="300" y2="67" stroke="#c9a227" stroke-width="1"/>
+  <text x="153" y="85" font-family="'Segoe UI', Arial, sans-serif" font-size="12.5" font-weight="500" fill="#0a9396" letter-spacing="9">STEM CARE</text>
+</svg>

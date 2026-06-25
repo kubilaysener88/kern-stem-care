@@ -1,0 +1,144 @@
+---
+import type { Lang } from '../i18n/ui';
+
+/**
+ * Simple, accessible cookie-consent banner.
+ * - Hidden until the inline script confirms no choice is stored (no flash for
+ *   returning visitors); the choice persists in localStorage.
+ * - Accessible: labelled landmark region, polite live announcement, real <button>s,
+ *   keyboard operable, dismissible from either action.
+ * - Gate any analytics/marketing cookies on the stored 'accepted' value.
+ */
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const t =
+  lang === 'es'
+    ? {
+        label: 'Consentimiento de cookies',
+        message: 'Usamos cookies para mejorar tu experiencia y analizar el tráfico del sitio. Puedes aceptarlas o rechazarlas. Consulta nuestra',
+        policy: 'Política de Privacidad',
+        accept: 'Aceptar',
+        decline: 'Rechazar',
+      }
+    : {
+        label: 'Cookie consent',
+        message: 'We use cookies to improve your experience and analyze site traffic. You can accept or decline. See our',
+        policy: 'Privacy Policy',
+        accept: 'Accept',
+        decline: 'Decline',
+      };
+---
+
+<section id="cookie-consent" class="cookie-consent" role="region" aria-label={t.label} aria-live="polite" hidden>
+  <div class="cc-inner wrap">
+    <p class="cc-text">
+      {t.message} <a href={`/${lang}/privacy`}>{t.policy}</a>.
+    </p>
+    <div class="cc-actions">
+      <button type="button" class="cc-btn cc-decline" data-consent="declined">{t.decline}</button>
+      <button type="button" class="cc-btn cc-accept" data-consent="accepted">{t.accept}</button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cookie-consent {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background: #fff;
+    border-top: 1px solid var(--line);
+    box-shadow: 0 -8px 30px rgba(13, 42, 74, 0.12);
+  }
+  .cc-inner {
+    display: flex;
+    align-items: center;
+    gap: 18px 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .cc-text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--ink);
+    max-width: 70ch;
+    flex: 1 1 320px;
+  }
+  .cc-text a {
+    color: var(--blue);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  .cc-actions {
+    display: flex;
+    gap: 10px;
+    flex: none;
+  }
+  .cc-btn {
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 2px solid var(--blue);
+    transition: 0.15s;
+  }
+  .cc-decline {
+    background: #fff;
+    color: var(--blue);
+  }
+  .cc-decline:hover {
+    background: var(--bg-alt);
+  }
+  .cc-accept {
+    background: var(--blue);
+    color: #fff;
+  }
+  .cc-accept:hover {
+    background: #0d4ea0;
+  }
+  .cc-btn:focus-visible {
+    outline: 3px solid var(--teal);
+    outline-offset: 2px;
+  }
+  @media (max-width: 560px) {
+    .cc-actions {
+      width: 100%;
+    }
+    .cc-btn {
+      flex: 1;
+    }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    var KEY = 'ksc-cookie-consent';
+    var el = document.getElementById('cookie-consent');
+    if (!el) return;
+    var stored = null;
+    try {
+      stored = localStorage.getItem(KEY);
+    } catch (e) {}
+    if (stored) return; // choice already made — keep it hidden
+
+    el.hidden = false;
+    el.querySelectorAll('[data-consent]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        try {
+          localStorage.setItem(KEY, btn.getAttribute('data-consent'));
+        } catch (e) {}
+        el.hidden = true;
+        // Other scripts can read localStorage['ksc-cookie-consent'] to gate cookies.
+        document.dispatchEvent(new CustomEvent('cookie-consent', { detail: btn.getAttribute('data-consent') }));
+      });
+    });
+  })();
+</script>

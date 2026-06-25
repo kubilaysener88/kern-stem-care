@@ -1,0 +1,41 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import PageHero from '../PageHero.astro';
+import StructuredData from '../StructuredData.astro';
+import type { Lang } from '../../i18n/ui';
+import { pagesContent } from '../../i18n/pages';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const p = pagesContent[lang].services;
+const more = lang === 'es' ? 'Saber más' : 'Learn more';
+const sectionHeading = lang === 'es' ? 'Terapias celulares que coordinamos' : 'Cellular therapies we coordinate';
+---
+
+<SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription}>
+  <StructuredData slot="head" lang={lang} organization={false} procedures={['stemCells', 'exosomes', 'fibroblasts']} />
+  <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} />
+
+  <section class="section" aria-labelledby="services-heading">
+    <div class="wrap">
+      <h2 id="services-heading" class="sr-only">{sectionHeading}</h2>
+      <div class="grid g3">
+        {
+          p.cards.map((card) => (
+            <div class="card">
+              <div class="ico" aria-hidden="true">{card.icon}</div>
+              <h3>{card.title}</h3>
+              <p set:html={card.body} />
+              <p style="margin-top:14px">
+                <a href={`/${lang}/services/${card.slug}`} aria-label={`${more}: ${card.title}`}>{more} →</a>
+              </p>
+            </div>
+          ))
+        }
+      </div>
+      <div class="disclaimer" style="margin-top:34px" set:html={p.disclaimer} />
+    </div>
+  </section>
+</SiteLayout>

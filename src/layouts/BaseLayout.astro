@@ -1,0 +1,30 @@
+---
+import Seo from '../components/Seo.astro';
+import StructuredData from '../components/StructuredData.astro';
+import type { Lang } from '../i18n/ui';
+import '../styles/global.css';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  image?: string;
+  noindex?: boolean;
+}
+
+const { lang, title, description, image, noindex } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <Seo lang={lang} title={title} description={description} image={image} noindex={noindex} />
+    <!-- Site-wide organization schema (Organization / TravelAgency) on every page -->
+    <StructuredData lang={lang} />
+    <!-- Page-specific head content (extra JSON-LD, etc.) -->
+    <slot name="head" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

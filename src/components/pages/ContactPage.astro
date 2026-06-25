@@ -1,0 +1,66 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import PageHero from '../PageHero.astro';
+import type { Lang } from '../../i18n/ui';
+import { pagesContent } from '../../i18n/pages';
+import { homeContent } from '../../i18n/home';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const p = pagesContent[lang].contact;
+const c = homeContent[lang].contact;
+const submitMsg =
+  lang === 'es'
+    ? 'Gracias. Conecte este formulario a su correo o CRM para recibir solicitudes reales.'
+    : 'Thank you. Connect this form to your email or CRM to receive real submissions.';
+const infoHeading = lang === 'es' ? 'Información de contacto' : 'Contact information';
+const formHeading = lang === 'es' ? 'Envíanos un mensaje' : 'Send us a message';
+---
+
+<SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription}>
+  <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div aria-labelledby="contact-info-heading">
+          <h2 id="contact-info-heading" class="sr-only">{infoHeading}</h2>
+          {c.info.map((b) => (
+            <div class="info-block"><div class="ico" aria-hidden="true">{b.icon}</div><div><h3>{b.title}</h3><p class="ph">{b.value}</p></div></div>
+          ))}
+        </div>
+        <div class="form-card">
+          <h2 id="contact-form-heading" class="sr-only">{formHeading}</h2>
+          <form onsubmit="return fakeSubmit(event)" aria-labelledby="contact-form-heading">
+            <div class="row">
+              <div class="field"><label><span>{c.form.labelFirst}</span><input required /></label></div>
+              <div class="field"><label><span>{c.form.labelLast}</span><input required /></label></div>
+            </div>
+            <div class="row">
+              <div class="field"><label><span>{c.form.labelEmail}</span><input type="email" required /></label></div>
+              <div class="field"><label><span>{c.form.labelPhone}</span><input /></label></div>
+            </div>
+            <div class="row">
+              <div class="field"><label><span>{c.form.labelCountry}</span><select>{c.form.countryOptions.map((o) => <option>{o}</option>)}</select></label></div>
+              <div class="field"><label><span>{c.form.labelArea}</span><select>{c.form.areaOptions.map((o) => <option>{o}</option>)}</select></label></div>
+            </div>
+            <div class="field"><label><span>{c.form.labelMessage}</span><textarea rows="4"></textarea></label></div>
+            <button class="btn btn-primary" style="width:100%">{c.form.submit}</button>
+            <p style="font-size:.74rem;color:var(--muted);margin:12px 0 0">{c.form.fineprint}</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</SiteLayout>
+
+<script is:inline define:vars={{ submitMsg }}>
+  function fakeSubmit(e) {
+    e.preventDefault();
+    alert(submitMsg);
+    return false;
+  }
+  window.fakeSubmit = fakeSubmit;
+</script>

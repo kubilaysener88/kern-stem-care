@@ -1,0 +1,243 @@
+---
+/**
+ * Lazy "facade" video testimonial.
+ * Renders only a thumbnail + play button. The actual YouTube/Vimeo <iframe> is
+ * injected on click, so no third-party player JS loads until the user opts in
+ * (big performance / privacy win — avoids loading every embed up front).
+ *
+ * Works with real data or [bracketed] placeholders: a placeholder/empty videoId
+ * shows a "set the video ID" notice instead of a broken embed.
+ */
+export type VideoProvider = 'youtube' | 'vimeo';
+
+interface Props {
+  provider?: VideoProvider;
+  videoId: string;
+  /** Patient name / story title (also used as the iframe title). */
+  title: string;
+  /** Poster image. For YouTube it defaults to the video's hqdefault thumbnail. */
+  thumbnail?: string;
+  tag?: string;
+  meta?: string;
+  summary?: string;
+  playLabel?: string;
+  placeholderLabel?: string;
+}
+
+const {
+  provider = 'youtube',
+  videoId,
+  title,
+  thumbnail,
+  tag,
+  meta,
+  summary,
+  playLabel = 'Play video',
+  placeholderLabel = 'Set the video ID to enable playback.',
+} = Astro.props;
+
+const isPlaceholder = !videoId || videoId.trim().startsWith('[');
+
+// YouTube thumbnails are derivable from the id; Vimeo needs an explicit poster.
+const resolvedThumb =
+  thumbnail ?? (provider === 'youtube' && !isPlaceholder ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg` : undefined);
+
+const phClass = (s?: string) => (s && s.includes('[') ? 'ph' : '');
+const playIcon = '<svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
+---
+
+<figure
+  class="video-testimonial"
+  data-provider={provider}
+  data-id={videoId}
+  data-title={title}
+  data-missing={placeholderLabel}
+>
+  <div class="vt-frame">
+    <button class="vt-facade" type="button" aria-label={`${playLabel}: ${title}`}>
+      {
+        resolvedThumb ? (
+          <img class="vt-thumb" src={resolvedThumb} alt="" loading="lazy" decoding="async" width="640" height="360" />
+        ) : (
+          <span class="vt-noimg" aria-hidden="true">🎥 <span class="vt-ph">{videoId}</span></span>
+        )
+      }
+      <span class="vt-play" set:html={playIcon} />
+      {tag && <span class="vt-tag">{tag}</span>}
+    </button>
+  </div>
+
+  {
+    (title || meta || summary) && (
+      <figcaption>
+        {title && <h3 class:list={['vt-name', phClass(title)]}>{title}</h3>}
+        {meta && <p class:list={['vt-meta', phClass(meta)]}>{meta}</p>}
+        {summary && <p class:list={['vt-summary', phClass(summary)]}>{summary}</p>}
+      </figcaption>
+    )
+  }
+</figure>
+
+<style>
+  .video-testimonial {
+    margin: 0;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: 0.2s;
+  }
+  .video-testimonial:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  .vt-frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #0d2a4a;
+  }
+  .vt-facade {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background: none;
+    display: block;
+  }
+  .vt-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .vt-noimg {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    gap: 6px;
+    text-align: center;
+    color: #dce9f6;
+    font-weight: 600;
+    background: linear-gradient(135deg, #13427a, #0a6e74);
+  }
+  .vt-noimg .vt-ph {
+    color: #9fd0ff;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .vt-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--blue);
+    display: grid;
+    place-items: center;
+    padding-left: 3px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+    transition: transform 0.18s, background 0.18s;
+  }
+  .vt-facade:hover .vt-play,
+  .vt-facade:focus-visible .vt-play {
+    transform: translate(-50%, -50%) scale(1.08);
+    background: #fff;
+  }
+  .vt-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(13, 42, 74, 0.85);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 5px 11px;
+    border-radius: 50px;
+  }
+
+  figcaption {
+    padding: 16px 18px;
+  }
+  .vt-name {
+    margin: 0 0 4px;
+    color: var(--navy);
+    font-size: 1rem;
+  }
+  .vt-meta {
+    margin: 0 0 6px;
+    font-size: 0.8rem;
+    color: var(--teal-text);
+    font-weight: 600;
+  }
+  .vt-summary {
+    margin: 0;
+    font-size: 0.86rem;
+    color: var(--muted);
+  }
+
+  /* Injected on click (global because it's created at runtime, not at build) */
+  .vt-frame :global(.vt-iframe) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .vt-frame :global(.vt-missing) {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    padding: 20px;
+    color: #dce9f6;
+    font-size: 0.9rem;
+    background: linear-gradient(135deg, #13427a, #0a6e74);
+  }
+</style>
+
+<script>
+  // One delegated handler covers every <VideoTestimonial> on the page.
+  function buildEmbed(provider: string, id: string, title: string): HTMLIFrameElement {
+    const src =
+      provider === 'vimeo'
+        ? `https://player.vimeo.com/video/${encodeURIComponent(id)}?autoplay=1&title=0&byline=0`
+        : `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0`;
+    const iframe = document.createElement('iframe');
+    iframe.className = 'vt-iframe';
+    iframe.src = src;
+    iframe.title = title || 'Video';
+    iframe.loading = 'lazy';
+    iframe.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media';
+    iframe.setAttribute('allowfullscreen', '');
+    return iframe;
+  }
+
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    const facade = target.closest?.('.vt-facade');
+    if (!facade) return;
+    const root = facade.closest('.video-testimonial') as HTMLElement | null;
+    const frame = root?.querySelector('.vt-frame');
+    if (!root || !frame) return;
+
+    const id = root.dataset.id ?? '';
+    const provider = root.dataset.provider ?? 'youtube';
+    const title = root.dataset.title ?? '';
+
+    if (!id || id.trim().startsWith('[')) {
+      // Placeholder id — don't load a broken embed.
+      frame.innerHTML = `<div class="vt-missing">${root.dataset.missing ?? 'Set the video ID to enable playback.'}</div>`;
+      return;
+    }
+    frame.replaceChildren(buildEmbed(provider, id, title));
+  });
+</script>

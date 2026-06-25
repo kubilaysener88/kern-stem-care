@@ -1,0 +1,51 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import PageHero from '../PageHero.astro';
+import VideoTestimonial from '../VideoTestimonial.astro';
+import type { Lang } from '../../i18n/ui';
+import { pagesContent } from '../../i18n/pages';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const p = pagesContent[lang].testimonials;
+const ctaLabel = lang === 'es' ? 'Solicitar Consulta Gratis' : 'Request Free Consultation';
+const playLabel = lang === 'es' ? 'Reproducir video' : 'Play video';
+const placeholderLabel =
+  lang === 'es'
+    ? 'Coloca el ID del video (YouTube o Vimeo) para habilitar la reproducción.'
+    : 'Set the video ID (YouTube or Vimeo) to enable playback.';
+const sectionHeading = lang === 'es' ? 'Testimonios en video de pacientes' : 'Patient video testimonials';
+---
+
+<SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription}>
+  <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} />
+
+  <section class="section" aria-labelledby="testimonials-heading">
+    <div class="wrap">
+      <h2 id="testimonials-heading" class="sr-only">{sectionHeading}</h2>
+      <div class="grid g3">
+        {
+          p.cards.map((card) => (
+            <VideoTestimonial
+              provider={card.provider}
+              videoId={card.videoId}
+              thumbnail={card.thumbnail}
+              tag={card.tag}
+              title={card.name}
+              meta={card.meta}
+              summary={card.summary}
+              playLabel={playLabel}
+              placeholderLabel={placeholderLabel}
+            />
+          ))
+        }
+      </div>
+      <div class="disclaimer" style="margin-top:30px" set:html={p.disclaimer} />
+      <div class="center" style="margin-top:28px">
+        <a href={`/${lang}/contact`} class="btn btn-primary">{ctaLabel}</a>
+      </div>
+    </div>
+  </section>
+</SiteLayout>

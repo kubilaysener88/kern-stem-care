@@ -1,0 +1,39 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import PageHero from '../PageHero.astro';
+import ProseSections from '../ProseSections.astro';
+import type { Lang } from '../../i18n/ui';
+import { pagesContent } from '../../i18n/pages';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const p = pagesContent[lang].process;
+const ctaLabel = lang === 'es' ? 'Empezar mi proceso' : 'Start my journey';
+const stepsHeading = lang === 'es' ? 'Proceso paso a paso' : 'Your step-by-step journey';
+---
+
+<SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription}>
+  <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} />
+
+  <section class="section" aria-labelledby="process-steps-heading">
+    <div class="wrap">
+      <h2 id="process-steps-heading" class="sr-only">{stepsHeading}</h2>
+      <div class="steps">
+        {p.steps.map((step) => (
+          <div class="step"><h3>{step.title}</h3><p>{step.body}</p></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <ProseSections sections={p.sections} />
+      <div class="center" style="margin-top:28px">
+        <a href={`/${lang}/contact`} class="btn btn-primary">{ctaLabel}</a>
+      </div>
+    </div>
+  </section>
+</SiteLayout>

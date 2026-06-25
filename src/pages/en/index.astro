@@ -1,0 +1,15 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import HomeContent from '../../components/HomeContent.astro';
+import HomeSchema from '../../components/HomeSchema.astro';
+import StructuredData from '../../components/StructuredData.astro';
+import { ui } from '../../i18n/ui';
+
+const lang = 'en' as const;
+---
+
+<SiteLayout lang={lang} title={ui[lang]['site.title']} description={ui[lang]['site.description']}>
+  <HomeSchema slot="head" lang={lang} />
+  <StructuredData slot="head" lang={lang} organization={false} procedures={['stemCells', 'exosomes', 'fibroblasts']} />
+  <HomeContent lang={lang} />
+</SiteLayout>

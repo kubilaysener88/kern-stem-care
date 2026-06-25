@@ -1,0 +1,23 @@
+---
+import type { Lang } from '../i18n/ui';
+import { organizationNode, medicalProcedureNode, type ProcedureKey } from '../data/structuredData';
+
+interface Props {
+  lang: Lang;
+  /** Emit the Organization identity node (default true). */
+  organization?: boolean;
+  /** MedicalProcedure nodes to emit (cellular therapies). */
+  procedures?: ProcedureKey[];
+}
+const { lang, organization = true, procedures = [] } = Astro.props;
+
+const site = Astro.site?.href.replace(/\/$/, '') ?? 'https://www.kernstemcare.com';
+
+const graph: Record<string, unknown>[] = [];
+if (organization) graph.push(organizationNode(site, lang));
+for (const key of procedures) graph.push(medicalProcedureNode(site, lang, key));
+
+const json = { '@context': 'https://schema.org', '@graph': graph };
+---
+
+{graph.length > 0 && <script type="application/ld+json" is:inline set:html={JSON.stringify(json)} />}

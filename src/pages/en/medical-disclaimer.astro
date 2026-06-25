@@ -1,0 +1,12 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import LegalContent from '../../components/LegalContent.astro';
+import { legalContent } from '../../i18n/legal';
+
+const lang = 'en' as const;
+const doc = legalContent[lang].medical;
+---
+
+<SiteLayout lang={lang} title={doc.metaTitle} description="Medical Disclaimer for Kern Stem Care — an agency, not a clinic.">
+  <LegalContent lang={lang} doc={doc} />
+</SiteLayout>

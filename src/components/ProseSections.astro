@@ -1,0 +1,37 @@
+---
+import type { PageSection } from '../i18n/pages';
+
+interface Props {
+  sections: PageSection[];
+}
+const { sections } = Astro.props;
+---
+
+<div class="prose">
+  {
+    sections.map((s) => (
+      <div class="prose-block">
+        <h2>{s.h2}</h2>
+        <p set:html={s.body} />
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .prose {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .prose-block {
+    margin-bottom: 28px;
+  }
+  .prose-block h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.4em;
+  }
+  .prose-block p {
+    color: var(--muted);
+    margin: 0;
+  }
+</style>

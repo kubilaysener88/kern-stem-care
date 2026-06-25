@@ -1,0 +1,29 @@
+---
+import type { Lang } from '../i18n/ui';
+import { homeContent } from '../i18n/home';
+
+/**
+ * Home-page FAQ structured data. The organization identity (MedicalBusiness) is
+ * emitted site-wide by BaseLayout via <StructuredData>; the MedicalProcedure nodes
+ * are added on the home/service pages via <StructuredData procedures={...} />.
+ */
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const stripTags = (s: string) => s.replace(/<[^>]*>/g, '').trim();
+
+const faqPage = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  inLanguage: lang,
+  mainEntity: homeContent[lang].faq.items.map((item) => ({
+    '@type': 'Question',
+    name: stripTags(item.q),
+    acceptedAnswer: { '@type': 'Answer', text: stripTags(item.a) },
+  })),
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(faqPage)} />

@@ -1,0 +1,12 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import LegalContent from '../../components/LegalContent.astro';
+import { legalContent } from '../../i18n/legal';
+
+const lang = 'en' as const;
+const doc = legalContent[lang].privacy;
+---
+
+<SiteLayout lang={lang} title={doc.metaTitle} description="Privacy Policy for Kern Stem Care.">
+  <LegalContent lang={lang} doc={doc} />
+</SiteLayout>

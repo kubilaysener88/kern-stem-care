@@ -1,0 +1,901 @@
+---
+import type { Lang } from '../i18n/ui';
+import { homeContent } from '../i18n/home';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const c = homeContent[lang];
+
+const accentStyle: Record<string, string> = {
+  blue: 'border-top:4px solid var(--blue)',
+  teal: 'border-top:4px solid var(--teal)',
+  gold: 'border-top:4px solid var(--gold)',
+  'teal-border': 'border:1px solid var(--teal)',
+};
+
+const submitMsg =
+  lang === 'es'
+    ? 'Gracias. Conecte este formulario a su correo o CRM para recibir solicitudes reales.'
+    : 'Thank you. Connect this form to your email or CRM to receive real submissions.';
+---
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="hero-flags">🇲🇽 <span>{c.hero.flagsPre}</span> · <span>{c.hero.flagsMid}</span> 🇺🇸 🇨🇦</span>
+      <h1>{c.hero.h1}</h1>
+      <p>{c.hero.p}</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
+        {c.hero.pills.map((pill) => <span class="hero-flags" style="margin:0">{pill}</span>)}
+      </div>
+      <div class="hero-cta">
+        <a href={`/${lang}/contact`} class="btn btn-primary">{c.hero.ctaPrimary}</a>
+        <a href={`/${lang}/services`} class="btn btn-ghost">{c.hero.ctaGhost}</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h2>{c.hero.card.title}</h2>
+      <p style="font-size:.85rem;color:var(--muted);margin-bottom:14px">{c.hero.card.subtitle}</p>
+      <form onsubmit="return fakeSubmit(event)">
+        <div class="field"><label><span>{c.hero.card.labelName}</span><input required placeholder={c.hero.card.phName} /></label></div>
+        <div class="field"><label><span>{c.hero.card.labelEmail}</span><input type="email" required placeholder={c.hero.card.phEmail} /></label></div>
+        <div class="field"><label><span>{c.hero.card.labelCountry}</span>
+          <select>{c.hero.card.countryOptions.map((o) => <option>{o}</option>)}</select></label></div>
+        <div class="field"><label><span>{c.hero.card.labelCondition}</span><input placeholder={c.hero.card.phCondition} /></label></div>
+        <button class="btn btn-primary">{c.hero.card.submit}</button>
+        <p class="tiny">{c.hero.card.fineprint}</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROLE DISCLOSURE BANNER ============ -->
+<div class="role-banner"><span set:html={c.roleBanner} /></div>
+
+<!-- ============ MEDIA CAROUSEL ============ -->
+<section class="section" id="showcase" style="padding-top:48px;padding-bottom:48px">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:26px">
+      <span class="eyebrow">{c.showcase.eyebrow}</span>
+      <h2>{c.showcase.h2}</h2>
+    </div>
+    <div class="kc" id="kc">
+      <div class="kc-track" id="kc-track">
+        {c.showcase.slides.map((s) => (
+          <div class="kc-slide">
+            <div class="kc-ph">{s.emoji} <span class="ph">{s.ph}</span></div>
+            <div class="kc-cap"><span>{s.caption}</span></div>
+          </div>
+        ))}
+      </div>
+      <button class="kc-arrow kc-prev" id="kc-prev" aria-label="Previous">‹</button>
+      <button class="kc-arrow kc-next" id="kc-next" aria-label="Next">›</button>
+      <div class="kc-dots" id="kc-dots"></div>
+    </div>
+    <div class="center" style="margin-top:26px">
+      <a href={`/${lang}/contact`} class="btn btn-primary" style="font-size:1.05rem;padding:16px 34px">{c.showcase.ctaBook}</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST BAR ============ -->
+<section class="trust" aria-label={lang === 'es' ? 'Datos clave' : 'Key facts'}>
+  <div class="wrap">
+    {c.trust.map((s) => (
+      <div><div class={s.isPh ? 'num ph' : 'num'}>{s.num}</div><div class="lbl">{s.label}</div></div>
+    ))}
+  </div>
+</section>
+
+<!-- ============ CORE THERAPIES ============ -->
+<section class="section alt" id="therapies">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">{c.therapies.eyebrow}</span>
+      <h2>{c.therapies.h2}</h2>
+      <p class="lead">{c.therapies.lead}</p>
+    </div>
+    <div class="grid g3" style="margin-top:44px">
+      {c.therapies.cards.map((card) => (
+        <div class="card" style={card.accent ? accentStyle[card.accent] : undefined}>
+          <div class="ico">{card.icon}</div>
+          <h3>{card.title}</h3>
+          <p set:html={card.body} />
+        </div>
+      ))}
+    </div>
+    <div class="disclaimer" style="margin-top:30px" set:html={c.therapies.note} />
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">{c.about.eyebrow}</span>
+      <h2>{c.about.h2}</h2>
+      <p>{c.about.p}</p>
+      <ul class="check">
+        {c.about.checks.map((li) => <li>{li}</li>)}
+      </ul>
+      <a href={`/${lang}/about`} class="btn btn-outline">{c.about.cta}</a>
+    </div>
+    <div class="media-ph"><span set:html={c.about.mediaPh} /></div>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section class="section alt">
+  <div class="wrap center">
+    <span class="eyebrow">{c.why.eyebrow}</span>
+    <h2>{c.why.h2}</h2>
+    <p class="lead">{c.why.lead}</p>
+    <div class="grid g4" style="margin-top:40px;text-align:left">
+      {c.why.cards.map((card) => (
+        <div class="card"><div class="ico">{card.icon}</div><h3>{card.title}</h3><p>{card.body}</p></div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ============ TREATMENTS ============ -->
+<section class="section" id="treatments">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">{c.treatments.eyebrow}</span>
+      <h2>{c.treatments.h2}</h2>
+      <p class="lead">{c.treatments.lead}</p>
+    </div>
+    <div class="grid g3" style="margin-top:42px">
+      {c.treatments.cards.map((card) => (
+        <div class="card" style={card.accent ? accentStyle[card.accent] : undefined}>
+          <div class="ico">{card.icon}</div>
+          <h3>{card.title}</h3>
+          <p set:html={card.body} />
+        </div>
+      ))}
+    </div>
+    <div class="disclaimer" style="margin-top:34px" set:html={c.treatments.note} />
+  </div>
+</section>
+
+<!-- ============ PATIENT JOURNEY ============ -->
+<section class="section alt" id="journey">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">{c.journey.eyebrow}</span>
+      <h2>{c.journey.h2}</h2>
+    </div>
+    <div class="steps" style="margin-top:48px">
+      {c.journey.steps.map((step) => (
+        <div class="step"><h3>{step.title}</h3><p>{step.body}</p></div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section class="section" id="team">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">{c.team.eyebrow}</span>
+      <h2>{c.team.h2}</h2>
+      <p class="lead">{c.team.lead}</p>
+    </div>
+
+    <h3 style="text-align:center;margin:36px 0 18px;color:var(--teal-text)">{c.team.coordinatorsTitle}</h3>
+    <div class="grid g3">
+      {c.team.coordinators.map((p) => (
+        <div class="doc"><div class="photo">{p.photoPh}</div><div class="body"><h3 class="ph">{p.name}</h3><div class="role ph">{p.role}</div><p class="ph">{p.bio}</p></div></div>
+      ))}
+    </div>
+
+    <h3 style="text-align:center;margin:48px 0 8px;color:var(--teal-text)">{c.team.partnersTitle}</h3>
+    <p class="lead center" style="margin-bottom:24px">{c.team.partnersLead}</p>
+    <div class="grid g4">
+      {c.team.partners.map((p) => (
+        <div class="card center"><div class="ico" style="margin:0 auto 14px">{p.icon}</div><h3 class="ph">{p.name}</h3><p class="ph">{p.detail}</p></div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section alt" id="testimonials">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">{c.testimonials.eyebrow}</span>
+      <h2>{c.testimonials.h2}</h2>
+      <p class="lead">{c.testimonials.lead}</p>
+    </div>
+    <div class="filters" id="filters" role="group" aria-label={lang === 'es' ? 'Filtrar testimonios' : 'Filter testimonials'}>
+      {c.testimonials.filters.map((f, i) => (
+        <button type="button" class={i === 0 ? 'active' : ''} data-filter={f.key} aria-pressed={i === 0 ? 'true' : 'false'}>{f.label}</button>
+      ))}
+    </div>
+    <div class="vgrid" id="vgrid">
+      {c.testimonials.cards.map((card) => (
+        <div class="vcard" data-seg={card.seg}>
+          <div class="vthumb"><div class="tag">{card.tag}</div><div class="play">▶</div><div class="drop">{card.drop}</div></div>
+          <div class="vbody"><h3 class="ph">{card.name}</h3><div class="meta ph">{card.meta}</div><p class="ph">{card.summary}</p></div>
+        </div>
+      ))}
+    </div>
+    <div class="disclaimer" style="margin-top:30px" set:html={c.testimonials.note} />
+    <div class="center" style="margin-top:24px">
+      <a href={`/${lang}/testimonials`} class="btn btn-outline">{c.testimonials.eyebrow}</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">{c.faq.eyebrow}</span>
+      <h2>{c.faq.h2}</h2>
+    </div>
+    <div class="faq" style="margin-top:38px">
+      {c.faq.items.map((item) => (
+        <div class="qa">
+          <button onclick="this.parentElement.classList.toggle('open')"><span>{item.q}</span><span class="pm">+</span></button>
+          <div class="ans"><p set:html={item.a} /></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEMBERSHIP ============ -->
+<section class="section" id="membership">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">{c.membership.eyebrow}</span>
+      <h2>{c.membership.h2}</h2>
+      <p class="lead">{c.membership.lead}</p>
+    </div>
+    <div class="grid g3" style="margin-top:44px;align-items:stretch">
+      {c.membership.tiers.map((tier) => (
+        <div class="card tier" style={tier.featured ? 'border:2px solid var(--blue);box-shadow:var(--shadow-lg);position:relative' : undefined}>
+          {tier.badge && <span class="tier-badge">{tier.badge}</span>}
+          <span class="eyebrow">{tier.eyebrow}</span>
+          <div class="tier-price">
+            <span class={tier.priceIsPh ? 'ph' : ''}>{tier.price}</span>{tier.priceSuffix && <span class="tier-suffix">{tier.priceSuffix}</span>}
+          </div>
+          <p class="tier-desc">{tier.desc}</p>
+          <ul class="check tier-features">
+            {tier.features.map((f) => <li set:html={f} />)}
+          </ul>
+          <a href={tier.ctaHref} class={tier.featured ? 'btn btn-primary' : 'btn btn-outline'}>{tier.cta}</a>
+        </div>
+      ))}
+    </div>
+
+    <div id="newsletter" class="newsletter">
+      <div style="flex:1;min-width:240px">
+        <h3 style="margin-bottom:4px">{c.membership.newsletter.title}</h3>
+        <p style="margin:0;color:var(--muted);font-size:.92rem">{c.membership.newsletter.body}</p>
+      </div>
+      <form onsubmit="return fakeSubmit(event)" style="display:flex;gap:10px;flex-wrap:wrap;min-width:280px">
+        <input type="email" required aria-label={c.membership.newsletter.title} placeholder={c.membership.newsletter.phEmail} style="flex:1;min-width:180px;padding:13px 15px;border:1px solid var(--line);border-radius:9px;font-size:.95rem;font-family:inherit" />
+        <button class="btn btn-primary">{c.membership.newsletter.submit}</button>
+      </form>
+    </div>
+
+    <div class="disclaimer" style="margin-top:24px" set:html={c.membership.note} />
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section alt" id="contact">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">{c.contact.eyebrow}</span>
+      <h2>{c.contact.h2}</h2>
+    </div>
+    <div class="contact-grid" style="margin-top:42px">
+      <div>
+        {c.contact.info.map((b) => (
+          <div class="info-block"><div class="ico" aria-hidden="true">{b.icon}</div><div><h3>{b.title}</h3><p class="ph">{b.value}</p></div></div>
+        ))}
+      </div>
+      <div class="form-card">
+        <form onsubmit="return fakeSubmit(event)">
+          <div class="row">
+            <div class="field"><label><span>{c.contact.form.labelFirst}</span><input required /></label></div>
+            <div class="field"><label><span>{c.contact.form.labelLast}</span><input required /></label></div>
+          </div>
+          <div class="row">
+            <div class="field"><label><span>{c.contact.form.labelEmail}</span><input type="email" required /></label></div>
+            <div class="field"><label><span>{c.contact.form.labelPhone}</span><input /></label></div>
+          </div>
+          <div class="row">
+            <div class="field"><label><span>{c.contact.form.labelCountry}</span><select>{c.contact.form.countryOptions.map((o) => <option>{o}</option>)}</select></label></div>
+            <div class="field"><label><span>{c.contact.form.labelArea}</span><select>{c.contact.form.areaOptions.map((o) => <option>{o}</option>)}</select></label></div>
+          </div>
+          <div class="field"><label><span>{c.contact.form.labelMessage}</span><textarea rows="4"></textarea></label></div>
+          <button class="btn btn-primary" style="width:100%">{c.contact.form.submit}</button>
+          <p style="font-size:.74rem;color:var(--muted);margin:12px 0 0">{c.contact.form.fineprint}</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* HERO */
+  .hero {
+    position: relative;
+    color: #fff;
+    background: linear-gradient(120deg, #0d2a4a 0%, #13427a 55%, #0a6e74 100%);
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"><circle cx="30" cy="30" r="1.4" fill="white" opacity="0.18"/></svg>');
+    opacity: 0.5;
+  }
+  .hero .wrap {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .hero h1 {
+    color: #fff;
+    font-size: clamp(2rem, 4.2vw, 3.2rem);
+    margin-bottom: 0.4em;
+  }
+  .hero p {
+    color: #dce9f6;
+    font-size: 1.15rem;
+    max-width: 560px;
+  }
+  .hero-flags {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 22px;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 26px;
+  }
+  /* High-contrast focus ring against the dark hero. */
+  .hero .btn:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+  }
+  .hero-card {
+    background: rgba(255, 255, 255, 0.97);
+    color: var(--ink);
+    border-radius: var(--radius);
+    padding: 26px;
+    box-shadow: var(--shadow-lg);
+  }
+  .hero-card h2 {
+    color: var(--navy);
+    font-size: 1.25rem;
+  }
+  .hero-card .field {
+    margin-bottom: 12px;
+  }
+  .hero-card label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--muted);
+    display: block;
+  }
+  .hero-card label > span {
+    display: block;
+    margin-bottom: 4px;
+  }
+  .hero-card input,
+  .hero-card select,
+  .hero-card textarea {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    font-size: 0.92rem;
+    font-family: inherit;
+  }
+  .hero-card .btn {
+    width: 100%;
+    margin-top: 6px;
+  }
+  .hero-card .tiny {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin: 10px 0 0;
+  }
+  @media (max-width: 860px) {
+    .hero .wrap {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ROLE BANNER */
+  .role-banner {
+    background: #eef5fb;
+    border-bottom: 1px solid #c7ddf0;
+    color: #234;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 12px 22px;
+  }
+
+  /* TRUST BAR */
+  .trust {
+    background: var(--navy);
+    color: #fff;
+  }
+  .trust .wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 30px 22px;
+    text-align: center;
+  }
+  .trust .num {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+  }
+  .trust .lbl {
+    font-size: 0.84rem;
+    color: #b9cbe0;
+  }
+  @media (max-width: 760px) {
+    .trust .wrap {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+  }
+
+  /* TEAM */
+  .doc {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .doc .photo {
+    aspect-ratio: 1/1;
+    background: linear-gradient(135deg, #dceaf7, #cfeae8);
+    display: grid;
+    place-items: center;
+    color: #4c6f86;
+    font-weight: 600;
+  }
+  .doc .body {
+    padding: 18px 20px;
+  }
+  .doc h3 {
+    margin: 0 0 2px;
+    font-size: 1.1rem;
+  }
+  .doc .role {
+    color: var(--teal-text);
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+  }
+  .doc p {
+    color: var(--muted);
+    font-size: 0.86rem;
+    margin: 0;
+  }
+
+  /* TESTIMONIALS */
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 18px 0 34px;
+  }
+  .filters button {
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--muted);
+    padding: 9px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.88rem;
+    transition: 0.2s;
+  }
+  .filters button.active,
+  .filters button:hover {
+    background: var(--blue);
+    color: #fff;
+    border-color: var(--blue);
+  }
+  .vgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 900px) {
+    .vgrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 620px) {
+    .vgrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .vcard {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .vthumb {
+    position: relative;
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, #13427a, #0a6e74);
+    display: grid;
+    place-items: center;
+  }
+  .vthumb .play {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    display: grid;
+    place-items: center;
+    color: var(--blue);
+    font-size: 1.4rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+  .vthumb .tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(13, 42, 74, 0.85);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 5px 11px;
+    border-radius: 50px;
+  }
+  .vthumb .drop {
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .vcard .vbody {
+    padding: 16px 18px;
+  }
+  .vcard h3 {
+    margin: 0 0 4px;
+    color: var(--navy);
+    font-size: 1rem;
+  }
+  .vcard .meta {
+    font-size: 0.8rem;
+    color: var(--teal-text);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .vcard p {
+    font-size: 0.86rem;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  /* FAQ */
+  .faq {
+    max-width: 840px;
+    margin: 0 auto;
+  }
+  .qa {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .qa button {
+    width: 100%;
+    text-align: left;
+    padding: 18px 22px;
+    background: #fff;
+    border: none;
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: var(--navy);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .qa .ans {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    padding: 0 22px;
+    color: var(--muted);
+  }
+  .qa.open .ans {
+    max-height: 320px;
+    padding: 0 22px 18px;
+  }
+  .qa button .pm {
+    color: var(--teal-text);
+    font-size: 1.4rem;
+    flex: none;
+  }
+
+  /* MEMBERSHIP TIERS */
+  .tier {
+    display: flex;
+    flex-direction: column;
+  }
+  .tier-badge {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--blue);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 50px;
+    white-space: nowrap;
+  }
+  .tier-price {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin: 0.1em 0;
+  }
+  .tier-suffix {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  .tier-desc {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  .tier-features {
+    margin: 14px 0 22px;
+    flex: 1;
+  }
+  .newsletter {
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-top: 34px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* CAROUSEL */
+  .kc {
+    position: relative;
+    max-width: 980px;
+    margin: 0 auto;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+  .kc-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .kc-slide {
+    min-width: 100%;
+    position: relative;
+    aspect-ratio: 16/9;
+    background: #0d2a4a;
+  }
+  .kc-slide img,
+  .kc-slide video,
+  .kc-slide iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 0;
+    display: block;
+  }
+  .kc-ph {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: #dce9f6;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background: linear-gradient(120deg, #0d2a4a, #13427a 55%, #0a6e74);
+  }
+  .kc-ph .ph {
+    display: block;
+    margin-top: 8px;
+    color: #9fd0ff;
+    font-size: 0.9rem;
+  }
+  .kc-cap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 14px 18px;
+    background: linear-gradient(transparent, rgba(7, 22, 40, 0.85));
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .kc-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--navy);
+    font-size: 1.7rem;
+    line-height: 1;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: 0.2s;
+  }
+  .kc-arrow:hover {
+    background: #fff;
+    transform: translateY(-50%) scale(1.06);
+  }
+  .kc-prev {
+    left: 14px;
+  }
+  .kc-next {
+    right: 14px;
+  }
+  .kc-dots {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+  }
+  .kc-dots button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding: 0;
+  }
+  .kc-dots button.active {
+    background: #fff;
+    width: 26px;
+    border-radius: 6px;
+  }
+  @media (max-width: 560px) {
+    .kc-arrow {
+      width: 38px;
+      height: 38px;
+      font-size: 1.4rem;
+    }
+  }
+</style>
+
+<script is:inline define:vars={{ submitMsg }}>
+  // Carousel
+  (function () {
+    var track = document.getElementById('kc-track');
+    if (!track) return;
+    var slides = track.children,
+      total = slides.length,
+      i = 0,
+      timer;
+    var dotsWrap = document.getElementById('kc-dots');
+    for (var d = 0; d < total; d++) {
+      var b = document.createElement('button');
+      b.setAttribute('aria-label', 'Slide ' + (d + 1));
+      (function (idx) {
+        b.addEventListener('click', function () {
+          go(idx);
+          reset();
+        });
+      })(d);
+      dotsWrap.appendChild(b);
+    }
+    var dots = dotsWrap.children;
+    function go(n) {
+      i = (n + total) % total;
+      track.style.transform = 'translateX(-' + i * 100 + '%)';
+      for (var k = 0; k < dots.length; k++) dots[k].classList.toggle('active', k === i);
+    }
+    function next() {
+      go(i + 1);
+    }
+    function prev() {
+      go(i - 1);
+    }
+    function start() {
+      timer = setInterval(next, 5000);
+    }
+    function reset() {
+      clearInterval(timer);
+      start();
+    }
+    document.getElementById('kc-next').addEventListener('click', function () {
+      next();
+      reset();
+    });
+    document.getElementById('kc-prev').addEventListener('click', function () {
+      prev();
+      reset();
+    });
+    var kc = document.getElementById('kc');
+    kc.addEventListener('mouseenter', function () {
+      clearInterval(timer);
+    });
+    kc.addEventListener('mouseleave', start);
+    go(0);
+    start();
+  })();
+
+  // Testimonial filters
+  var fbtns = document.querySelectorAll('#filters button');
+  fbtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var f = b.getAttribute('data-filter');
+      fbtns.forEach(function (x) {
+        var on = x === b;
+        x.classList.toggle('active', on);
+        x.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      document.querySelectorAll('#vgrid .vcard').forEach(function (card) {
+        var segs = card.getAttribute('data-seg');
+        card.style.display = f === 'all' || segs.indexOf(f) !== -1 ? '' : 'none';
+      });
+    });
+  });
+
+  // Form stub
+  function fakeSubmit(e) {
+    e.preventDefault();
+    alert(submitMsg);
+    return false;
+  }
+  window.fakeSubmit = fakeSubmit;
+</script>
