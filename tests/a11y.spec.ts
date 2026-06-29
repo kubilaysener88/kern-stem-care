@@ -30,6 +30,16 @@ const ROUTES = [
   '/es/terms',
   '/en/medical-disclaimer',
   '/es/medical-disclaimer',
+  '/en/blog',
+  '/es/blog',
+  '/en/blog/is-stem-cell-therapy-legal-in-mexico',
+  '/es/blog/es-legal-la-terapia-con-celulas-madre-en-mexico',
+  '/en/blog/how-much-does-stem-cell-therapy-cost-in-mexico',
+  '/en/blog/stem-cells-vs-exosomes-difference',
+  '/en/blog/what-to-expect-medical-travel-cancun',
+  '/es/blog/cuanto-cuesta-la-terapia-con-celulas-madre-en-mexico',
+  '/es/blog/celulas-madre-vs-exosomas-diferencia',
+  '/es/blog/que-esperar-viaje-turismo-medico-cancun',
 ];
 
 const WCAG_AA_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'];

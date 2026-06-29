@@ -1,0 +1,135 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import { render, type CollectionEntry } from 'astro:content';
+import type { Lang } from '../../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  post: CollectionEntry<'blog'>;
+}
+const { lang, post } = Astro.props;
+const { Content } = await render(post);
+
+const t =
+  lang === 'es'
+    ? { crumb: 'Blog', by: 'Por', reviewed: 'Revisado por', updated: 'Actualizado' }
+    : { crumb: 'Blog', by: 'By', reviewed: 'Reviewed by', updated: 'Updated' };
+
+const site = Astro.site?.href.replace(/\/$/, '') ?? 'https://www.kernstemcare.com';
+const slug = post.id.replace(/^[a-z]{2}\//, '');
+const url = `${site}/${lang}/blog/${slug}`;
+const fmtDate = (d: Date) => new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'long', day: 'numeric' }).format(d);
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.description,
+  inLanguage: lang,
+  datePublished: post.data.pubDate.toISOString(),
+  dateModified: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
+  author: { '@type': 'Organization', name: post.data.author },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Kern Stem Care',
+    logo: { '@type': 'ImageObject', url: `${site}/assets/logo/kern-genesis.svg` },
+  },
+  image: `${site}/og-image.jpg`,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+};
+---
+
+<SiteLayout lang={lang} title={`${post.data.title} | Kern Stem Care`} description={post.data.description}>
+  <script type="application/ld+json" slot="head" is:inline set:html={JSON.stringify(articleSchema)} />
+  <Breadcrumbs lang={lang} items={[{ label: t.crumb, href: `/${lang}/blog` }, { label: post.data.title }]} />
+
+  <section class="section">
+    <div class="wrap">
+      <article class="post">
+        <p class="post-meta">
+          <time datetime={post.data.pubDate.toISOString()}>{fmtDate(post.data.pubDate)}</time>
+          {post.data.updatedDate && <span> · {t.updated} {fmtDate(post.data.updatedDate)}</span>}
+        </p>
+        <h1>{post.data.title}</h1>
+        <p class="lead">{post.data.description}</p>
+        <p class="byline">
+          {t.by} {post.data.author}
+          {post.data.reviewedBy && <span> · {t.reviewed} <span class="ph">{post.data.reviewedBy}</span></span>}
+        </p>
+        <div class="post-body">
+          <Content />
+        </div>
+      </article>
+    </div>
+  </section>
+</SiteLayout>
+
+<style>
+  .post {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .post-meta {
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--teal-text);
+    margin: 0 0 0.5em;
+  }
+  .post h1 {
+    font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+  }
+  .byline {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin: 0 0 28px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+  /* Markdown body typography */
+  .post-body {
+    line-height: 1.75;
+    color: #33414f;
+  }
+  .post-body :global(h2) {
+    color: var(--navy);
+    font-size: 1.45rem;
+    margin: 1.6em 0 0.4em;
+  }
+  .post-body :global(h3) {
+    color: var(--navy);
+    font-size: 1.15rem;
+    margin: 1.4em 0 0.4em;
+  }
+  .post-body :global(p),
+  .post-body :global(li) {
+    color: #33414f;
+  }
+  .post-body :global(ul),
+  .post-body :global(ol) {
+    padding-left: 1.3em;
+    margin: 0 0 1em;
+  }
+  .post-body :global(li) {
+    margin-bottom: 0.4em;
+  }
+  .post-body :global(a) {
+    color: var(--blue);
+    text-decoration: underline;
+  }
+  .post-body :global(blockquote) {
+    margin: 0 0 1.2em;
+    padding: 14px 20px;
+    background: #fff7e6;
+    border: 1px solid #f0d98c;
+    border-radius: 12px;
+    color: #6b5a1e;
+    font-size: 0.92rem;
+  }
+  .post-body :global(.ph) {
+    color: var(--blue);
+    font-weight: 700;
+  }
+</style>

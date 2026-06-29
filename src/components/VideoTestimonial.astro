@@ -8,6 +8,9 @@
  * Works with real data or [bracketed] placeholders: a placeholder/empty videoId
  * shows a "set the video ID" notice instead of a broken embed.
  */
+import { Picture } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
 export type VideoProvider = 'youtube' | 'vimeo';
 
 interface Props {
@@ -15,8 +18,12 @@ interface Props {
   videoId: string;
   /** Patient name / story title (also used as the iframe title). */
   title: string;
-  /** Poster image. For YouTube it defaults to the video's hqdefault thumbnail. */
-  thumbnail?: string;
+  /**
+   * Poster image. Pass an imported local image (`ImageMetadata`) to get an
+   * optimized AVIF/WebP `<Picture>`, or a URL string for a remote poster.
+   * For YouTube it defaults to the video's own WebP/JPG thumbnail.
+   */
+  thumbnail?: string | ImageMetadata;
   tag?: string;
   meta?: string;
   summary?: string;
@@ -38,9 +45,15 @@ const {
 
 const isPlaceholder = !videoId || videoId.trim().startsWith('[');
 
-// YouTube thumbnails are derivable from the id; Vimeo needs an explicit poster.
-const resolvedThumb =
-  thumbnail ?? (provider === 'youtube' && !isPlaceholder ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg` : undefined);
+// Poster resolution (in priority order):
+//  - local import  -> Astro <Picture> (AVIF + WebP, lazy)
+//  - remote string -> plain <img>
+//  - YouTube auto  -> <picture> with YouTube's own WebP + JPG fallback
+const localThumb = thumbnail && typeof thumbnail !== 'string' ? thumbnail : undefined;
+const remoteThumb = typeof thumbnail === 'string' ? thumbnail : undefined;
+const isYouTubeAuto = !thumbnail && provider === 'youtube' && !isPlaceholder;
+const ytJpg = isYouTubeAuto ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg` : undefined;
+const ytWebp = isYouTubeAuto ? `https://i.ytimg.com/vi_webp/${videoId}/hqdefault.webp` : undefined;
 
 const phClass = (s?: string) => (s && s.includes('[') ? 'ph' : '');
 const playIcon = '<svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
@@ -56,8 +69,24 @@ const playIcon = '<svg viewBox="0 0 24 24" width="26" height="26" fill="currentC
   <div class="vt-frame">
     <button class="vt-facade" type="button" aria-label={`${playLabel}: ${title}`}>
       {
-        resolvedThumb ? (
-          <img class="vt-thumb" src={resolvedThumb} alt="" loading="lazy" decoding="async" width="640" height="360" />
+        localThumb ? (
+          <Picture
+            class="vt-thumb"
+            src={localThumb}
+            formats={['avif', 'webp']}
+            alt=""
+            width={640}
+            height={360}
+            loading="lazy"
+            decoding="async"
+          />
+        ) : isYouTubeAuto ? (
+          <picture>
+            <source type="image/webp" srcset={ytWebp} />
+            <img class="vt-thumb" src={ytJpg} alt="" loading="lazy" decoding="async" width="640" height="360" />
+          </picture>
+        ) : remoteThumb ? (
+          <img class="vt-thumb" src={remoteThumb} alt="" loading="lazy" decoding="async" width="640" height="360" />
         ) : (
           <span class="vt-noimg" aria-hidden="true">🎥 <span class="vt-ph">{videoId}</span></span>
         )
@@ -107,6 +136,11 @@ const playIcon = '<svg viewBox="0 0 24 24" width="26" height="26" fill="currentC
     cursor: pointer;
     background: none;
     display: block;
+  }
+  .vt-frame picture {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
   .vt-thumb {
     width: 100%;
@@ -239,5 +273,9 @@ const playIcon = '<svg viewBox="0 0 24 24" width="26" height="26" fill="currentC
       return;
     }
     frame.replaceChildren(buildEmbed(provider, id, title));
+
+    // Consent-gated analytics: count real plays only (no-op without consent).
+    const track = (window as unknown as { kscTrack?: (n: string, p?: Record<string, string>) => void }).kscTrack;
+    if (track) track('Testimonial Play', { provider, id });
   });
 </script>

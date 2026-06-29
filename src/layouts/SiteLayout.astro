@@ -1,8 +1,10 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import AnnouncementBar from '../components/AnnouncementBar.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import CookieConsent from '../components/CookieConsent.astro';
+import FormHandler from '../components/FormHandler.astro';
 import type { Lang } from '../i18n/ui';
 
 interface Props {
@@ -20,10 +22,12 @@ const skipLabel = lang === 'es' ? 'Saltar al contenido principal' : 'Skip to mai
 <BaseLayout lang={lang} title={title} description={description} image={image} noindex={noindex}>
   <slot name="head" slot="head" />
   <a href="#main-content" class="skip-link">{skipLabel}</a>
+  <AnnouncementBar lang={lang} />
   <SiteHeader lang={lang} />
   <main id="main-content" tabindex="-1">
     <slot />
   </main>
   <SiteFooter lang={lang} />
   <CookieConsent lang={lang} />
+  <FormHandler />
 </BaseLayout>

@@ -2,6 +2,7 @@
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import PageHero from '../PageHero.astro';
 import StructuredData from '../StructuredData.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
 import type { Lang } from '../../i18n/ui';
 import { pagesContent } from '../../i18n/pages';
 
@@ -16,6 +17,7 @@ const sectionHeading = lang === 'es' ? 'Terapias celulares que coordinamos' : 'C
 
 <SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription}>
   <StructuredData slot="head" lang={lang} organization={false} procedures={['stemCells', 'exosomes', 'fibroblasts']} />
+  <Breadcrumbs lang={lang} items={[{ label: p.title }]} />
   <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} />
 
   <section class="section" aria-labelledby="services-heading">

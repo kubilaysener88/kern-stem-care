@@ -2,8 +2,10 @@
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import PageHero from '../PageHero.astro';
 import VideoTestimonial from '../VideoTestimonial.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
 import type { Lang } from '../../i18n/ui';
 import { pagesContent } from '../../i18n/pages';
+import { navLabels } from '../../i18n/nav';
 
 interface Props {
   lang: Lang;
@@ -20,6 +22,7 @@ const sectionHeading = lang === 'es' ? 'Testimonios en video de pacientes' : 'Pa
 ---
 
 <SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription}>
+  <Breadcrumbs lang={lang} items={[{ label: navLabels[lang].testimonials }]} />
   <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} />
 
   <section class="section" aria-labelledby="testimonials-heading">

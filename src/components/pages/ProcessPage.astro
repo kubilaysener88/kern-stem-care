@@ -2,8 +2,10 @@
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import PageHero from '../PageHero.astro';
 import ProseSections from '../ProseSections.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
 import type { Lang } from '../../i18n/ui';
 import { pagesContent } from '../../i18n/pages';
+import { navLabels } from '../../i18n/nav';
 
 interface Props {
   lang: Lang;
@@ -15,6 +17,7 @@ const stepsHeading = lang === 'es' ? 'Proceso paso a paso' : 'Your step-by-step 
 ---
 
 <SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription}>
+  <Breadcrumbs lang={lang} items={[{ label: navLabels[lang].process }]} />
   <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} />
 
   <section class="section" aria-labelledby="process-steps-heading">

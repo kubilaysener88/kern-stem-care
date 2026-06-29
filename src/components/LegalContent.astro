@@ -1,5 +1,6 @@
 ---
 import PageHero from './PageHero.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
 import type { Lang } from '../i18n/ui';
 import { legalNav, type LegalDoc } from '../i18n/legal';
 
@@ -16,6 +17,7 @@ const datePh = lang === 'es' ? '[fecha]' : '[date]';
 const updatedLead = `${doc.updatedLabel} <span class="ph">${datePh}</span>`;
 ---
 
+<Breadcrumbs lang={lang} items={[{ label: doc.h1 }]} />
 <PageHero title={doc.h1} lead={updatedLead} />
 
 <section class="section">

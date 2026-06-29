@@ -1,0 +1,65 @@
+---
+/**
+ * Shared submit handler for Netlify Forms (AJAX, progressive enhancement).
+ *
+ * Any <form data-netlify="true"> on the page is submitted via fetch to "/" with a
+ * URL-encoded body (Netlify intercepts it by the hidden `form-name` field), then the
+ * form is replaced in place with an accessible success message (no page reload, no
+ * alert). A honeypot field (`bot-field`) silently drops bots. On error we restore the
+ * form so the visitor can retry. Without JS the native POST still works (Netlify shows
+ * its default success page).
+ */
+---
+
+<script is:inline>
+  (function () {
+    function encode(form) {
+      return new URLSearchParams(new FormData(form)).toString();
+    }
+    document.addEventListener('submit', function (e) {
+      var form = e.target;
+      if (!form || !form.matches || !form.matches('form[data-netlify]')) return;
+      e.preventDefault();
+
+      // Honeypot: if the hidden field is filled, it's a bot — pretend success, do nothing.
+      var hp = form.querySelector('[name="bot-field"]');
+      if (hp && hp.value) return;
+
+      var btn = form.querySelector('button[type="submit"], button:not([type])');
+      var originalText = btn ? btn.innerHTML : null;
+      if (btn) {
+        btn.disabled = true;
+        btn.setAttribute('aria-busy', 'true');
+        var loading = btn.getAttribute('data-loading');
+        if (loading) btn.textContent = loading;
+      }
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode(form),
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error('Bad status ' + res.status);
+          var ok = document.createElement('div');
+          ok.className = 'form-success';
+          ok.setAttribute('role', 'status');
+          ok.textContent =
+            form.getAttribute('data-success') || 'Thank you! Your message has been sent.';
+          form.replaceWith(ok);
+          ok.focus && ok.setAttribute('tabindex', '-1');
+        })
+        .catch(function () {
+          if (btn) {
+            btn.disabled = false;
+            btn.removeAttribute('aria-busy');
+            if (originalText !== null) btn.innerHTML = originalText;
+          }
+          alert(
+            form.getAttribute('data-error') ||
+              'Something went wrong. Please try again or contact us directly.'
+          );
+        });
+    });
+  })();
+</script>

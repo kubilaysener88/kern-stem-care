@@ -1,0 +1,82 @@
+---
+import { analytics } from '../config/analytics';
+
+/**
+ * Consent-gated, privacy-friendly analytics (Plausible).
+ *
+ * - Nothing loads until the visitor accepts cookies. We read the choice from
+ *   localStorage['ksc-cookie-consent'] and also react live to the 'cookie-consent'
+ *   event dispatched by CookieConsent.astro, so accepting starts tracking at once.
+ * - Exposes window.kscTrack(name, props) — a no-op without consent — used by tagged
+ *   CTAs/forms (data-analytics-event="…") and by VideoTestimonial for plays.
+ * - Plausible is cookieless and needs no consent legally; we gate it anyway to fully
+ *   respect the banner. To swap to GA4: load gtag here instead, and gate it the same
+ *   way (only initialize after consentGranted()).
+ */
+const { enabled, domain, src } = analytics;
+const consentKey = 'ksc-cookie-consent';
+---
+
+{
+  enabled && (
+    <script is:inline define:vars={{ domain, src, consentKey }}>
+      // Plausible queue stub so plausible() is callable before the script loads.
+      window.plausible =
+        window.plausible ||
+        function () {
+          (window.plausible.q = window.plausible.q || []).push(arguments);
+        };
+
+      function kscConsentGranted() {
+        try {
+          return localStorage.getItem(consentKey) === 'accepted';
+        } catch (e) {
+          return false;
+        }
+      }
+
+      var kscLoaded = false;
+      function kscLoadPlausible() {
+        if (kscLoaded || !kscConsentGranted()) return;
+        kscLoaded = true;
+        var s = document.createElement('script');
+        s.defer = true;
+        s.setAttribute('data-domain', domain);
+        s.src = src;
+        document.head.appendChild(s);
+      }
+
+      // Public helper — safe no-op until the visitor consents.
+      window.kscTrack = function (name, props) {
+        if (!name || !kscConsentGranted()) return;
+        kscLoadPlausible();
+        window.plausible(name, props ? { props: props } : undefined);
+      };
+
+      // Side effects deferred off the critical path (kscTrack above stays available
+      // immediately for early calls; the banner is clicked far later than idle).
+      function initAnalytics() {
+        // Load now if consent was given on a previous page, and react to the banner.
+        kscLoadPlausible();
+        document.addEventListener('cookie-consent', function (e) {
+          if (e && e.detail === 'accepted') kscLoadPlausible();
+        });
+
+        // Delegated tracking for tagged links (CTAs) and forms.
+        document.addEventListener('click', function (e) {
+          var el = e.target && e.target.closest ? e.target.closest('a[data-analytics-event]') : null;
+          if (el) window.kscTrack(el.getAttribute('data-analytics-event'));
+        });
+        document.addEventListener(
+          'submit',
+          function (e) {
+            var f = e.target && e.target.closest ? e.target.closest('form[data-analytics-event]') : null;
+            if (f) window.kscTrack(f.getAttribute('data-analytics-event'));
+          },
+          true
+        );
+      }
+      initAnalytics();
+    </script>
+  )
+}

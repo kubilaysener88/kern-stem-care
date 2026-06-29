@@ -1,6 +1,7 @@
 ---
 import type { Lang } from '../i18n/ui';
 import { homeContent } from '../i18n/home';
+import { ANALYTICS_EVENTS } from '../config/analytics';
 
 interface Props {
   lang: Lang;
@@ -15,10 +16,16 @@ const accentStyle: Record<string, string> = {
   'teal-border': 'border:1px solid var(--teal)',
 };
 
-const submitMsg =
+const successMsg =
   lang === 'es'
-    ? 'Gracias. Conecte este formulario a su correo o CRM para recibir solicitudes reales.'
-    : 'Thank you. Connect this form to your email or CRM to receive real submissions.';
+    ? '¡Gracias! Recibimos tu solicitud. Un coordinador te contactará en menos de 24 horas.'
+    : 'Thank you! We received your request. A coordinator will reach out within 24 hours.';
+const errorMsg =
+  lang === 'es'
+    ? 'No se pudo enviar. Inténtalo de nuevo o escríbenos por WhatsApp.'
+    : "Couldn't send. Please try again or message us on WhatsApp.";
+const newsletterSuccess =
+  lang === 'es' ? '¡Listo! Te suscribiste correctamente.' : "You're subscribed. Thank you!";
 ---
 
 <!-- ============ HERO ============ -->
@@ -39,12 +46,15 @@ const submitMsg =
     <div class="hero-card">
       <h2>{c.hero.card.title}</h2>
       <p style="font-size:.85rem;color:var(--muted);margin-bottom:14px">{c.hero.card.subtitle}</p>
-      <form onsubmit="return fakeSubmit(event)">
-        <div class="field"><label><span>{c.hero.card.labelName}</span><input required placeholder={c.hero.card.phName} /></label></div>
-        <div class="field"><label><span>{c.hero.card.labelEmail}</span><input type="email" required placeholder={c.hero.card.phEmail} /></label></div>
+      <form name="lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-success={successMsg} data-error={errorMsg} data-analytics-event={ANALYTICS_EVENTS.bookConsultation}>
+        <input type="hidden" name="form-name" value="lead" />
+        <input type="hidden" name="lang" value={lang} />
+        <p class="hp-field" aria-hidden="true"><label>{lang === 'es' ? 'No llenar' : 'Do not fill'}<input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+        <div class="field"><label><span>{c.hero.card.labelName}</span><input name="full_name" required placeholder={c.hero.card.phName} /></label></div>
+        <div class="field"><label><span>{c.hero.card.labelEmail}</span><input name="email" type="email" required placeholder={c.hero.card.phEmail} /></label></div>
         <div class="field"><label><span>{c.hero.card.labelCountry}</span>
-          <select>{c.hero.card.countryOptions.map((o) => <option>{o}</option>)}</select></label></div>
-        <div class="field"><label><span>{c.hero.card.labelCondition}</span><input placeholder={c.hero.card.phCondition} /></label></div>
+          <select name="country">{c.hero.card.countryOptions.map((o) => <option>{o}</option>)}</select></label></div>
+        <div class="field"><label><span>{c.hero.card.labelCondition}</span><input name="condition" placeholder={c.hero.card.phCondition} /></label></div>
         <button class="btn btn-primary">{c.hero.card.submit}</button>
         <p class="tiny">{c.hero.card.fineprint}</p>
       </form>
@@ -279,8 +289,11 @@ const submitMsg =
         <h3 style="margin-bottom:4px">{c.membership.newsletter.title}</h3>
         <p style="margin:0;color:var(--muted);font-size:.92rem">{c.membership.newsletter.body}</p>
       </div>
-      <form onsubmit="return fakeSubmit(event)" style="display:flex;gap:10px;flex-wrap:wrap;min-width:280px">
-        <input type="email" required aria-label={c.membership.newsletter.title} placeholder={c.membership.newsletter.phEmail} style="flex:1;min-width:180px;padding:13px 15px;border:1px solid var(--line);border-radius:9px;font-size:.95rem;font-family:inherit" />
+      <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-success={newsletterSuccess} data-error={errorMsg} style="display:flex;gap:10px;flex-wrap:wrap;min-width:280px">
+        <input type="hidden" name="form-name" value="newsletter" />
+        <input type="hidden" name="lang" value={lang} />
+        <p class="hp-field" aria-hidden="true"><label>{lang === 'es' ? 'No llenar' : 'Do not fill'}<input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+        <input name="email" type="email" required aria-label={c.membership.newsletter.title} placeholder={c.membership.newsletter.phEmail} style="flex:1;min-width:180px;padding:13px 15px;border:1px solid var(--line);border-radius:9px;font-size:.95rem;font-family:inherit" />
         <button class="btn btn-primary">{c.membership.newsletter.submit}</button>
       </form>
     </div>
@@ -303,20 +316,23 @@ const submitMsg =
         ))}
       </div>
       <div class="form-card">
-        <form onsubmit="return fakeSubmit(event)">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-success={successMsg} data-error={errorMsg} data-analytics-event={ANALYTICS_EVENTS.contactSubmit}>
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="lang" value={lang} />
+          <p class="hp-field" aria-hidden="true"><label>{lang === 'es' ? 'No llenar' : 'Do not fill'}<input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
           <div class="row">
-            <div class="field"><label><span>{c.contact.form.labelFirst}</span><input required /></label></div>
-            <div class="field"><label><span>{c.contact.form.labelLast}</span><input required /></label></div>
+            <div class="field"><label><span>{c.contact.form.labelFirst}</span><input name="first_name" required /></label></div>
+            <div class="field"><label><span>{c.contact.form.labelLast}</span><input name="last_name" required /></label></div>
           </div>
           <div class="row">
-            <div class="field"><label><span>{c.contact.form.labelEmail}</span><input type="email" required /></label></div>
-            <div class="field"><label><span>{c.contact.form.labelPhone}</span><input /></label></div>
+            <div class="field"><label><span>{c.contact.form.labelEmail}</span><input name="email" type="email" required /></label></div>
+            <div class="field"><label><span>{c.contact.form.labelPhone}</span><input name="phone" /></label></div>
           </div>
           <div class="row">
-            <div class="field"><label><span>{c.contact.form.labelCountry}</span><select>{c.contact.form.countryOptions.map((o) => <option>{o}</option>)}</select></label></div>
-            <div class="field"><label><span>{c.contact.form.labelArea}</span><select>{c.contact.form.areaOptions.map((o) => <option>{o}</option>)}</select></label></div>
+            <div class="field"><label><span>{c.contact.form.labelCountry}</span><select name="country">{c.contact.form.countryOptions.map((o) => <option>{o}</option>)}</select></label></div>
+            <div class="field"><label><span>{c.contact.form.labelArea}</span><select name="area">{c.contact.form.areaOptions.map((o) => <option>{o}</option>)}</select></label></div>
           </div>
-          <div class="field"><label><span>{c.contact.form.labelMessage}</span><textarea rows="4"></textarea></label></div>
+          <div class="field"><label><span>{c.contact.form.labelMessage}</span><textarea name="message" rows="4"></textarea></label></div>
           <button class="btn btn-primary" style="width:100%">{c.contact.form.submit}</button>
           <p style="font-size:.74rem;color:var(--muted);margin:12px 0 0">{c.contact.form.fineprint}</p>
         </form>
@@ -817,85 +833,84 @@ const submitMsg =
   }
 </style>
 
-<script is:inline define:vars={{ submitMsg }}>
-  // Carousel
-  (function () {
-    var track = document.getElementById('kc-track');
-    if (!track) return;
-    var slides = track.children,
-      total = slides.length,
-      i = 0,
-      timer;
-    var dotsWrap = document.getElementById('kc-dots');
-    for (var d = 0; d < total; d++) {
-      var b = document.createElement('button');
-      b.setAttribute('aria-label', 'Slide ' + (d + 1));
-      (function (idx) {
-        b.addEventListener('click', function () {
-          go(idx);
-          reset();
-        });
-      })(d);
-      dotsWrap.appendChild(b);
-    }
-    var dots = dotsWrap.children;
-    function go(n) {
-      i = (n + total) % total;
-      track.style.transform = 'translateX(-' + i * 100 + '%)';
-      for (var k = 0; k < dots.length; k++) dots[k].classList.toggle('active', k === i);
-    }
-    function next() {
-      go(i + 1);
-    }
-    function prev() {
-      go(i - 1);
-    }
-    function start() {
-      timer = setInterval(next, 5000);
-    }
-    function reset() {
-      clearInterval(timer);
+<script is:inline>
+  // Non-critical UI (carousel autoplay + testimonial filters). Deferred off the
+  // critical path with requestIdleCallback so it doesn't add to Total Blocking Time.
+  function initHomeUI() {
+    // Carousel
+    (function () {
+      var track = document.getElementById('kc-track');
+      if (!track) return;
+      var slides = track.children,
+        total = slides.length,
+        i = 0,
+        timer;
+      var dotsWrap = document.getElementById('kc-dots');
+      for (var d = 0; d < total; d++) {
+        var b = document.createElement('button');
+        b.setAttribute('aria-label', 'Slide ' + (d + 1));
+        (function (idx) {
+          b.addEventListener('click', function () {
+            go(idx);
+            reset();
+          });
+        })(d);
+        dotsWrap.appendChild(b);
+      }
+      var dots = dotsWrap.children;
+      function go(n) {
+        i = (n + total) % total;
+        track.style.transform = 'translateX(-' + i * 100 + '%)';
+        for (var k = 0; k < dots.length; k++) dots[k].classList.toggle('active', k === i);
+      }
+      function next() {
+        go(i + 1);
+      }
+      function prev() {
+        go(i - 1);
+      }
+      function start() {
+        timer = setInterval(next, 5000);
+      }
+      function reset() {
+        clearInterval(timer);
+        start();
+      }
+      document.getElementById('kc-next').addEventListener('click', function () {
+        next();
+        reset();
+      });
+      document.getElementById('kc-prev').addEventListener('click', function () {
+        prev();
+        reset();
+      });
+      var kc = document.getElementById('kc');
+      kc.addEventListener('mouseenter', function () {
+        clearInterval(timer);
+      });
+      kc.addEventListener('mouseleave', start);
+      go(0);
       start();
-    }
-    document.getElementById('kc-next').addEventListener('click', function () {
-      next();
-      reset();
-    });
-    document.getElementById('kc-prev').addEventListener('click', function () {
-      prev();
-      reset();
-    });
-    var kc = document.getElementById('kc');
-    kc.addEventListener('mouseenter', function () {
-      clearInterval(timer);
-    });
-    kc.addEventListener('mouseleave', start);
-    go(0);
-    start();
-  })();
+    })();
 
-  // Testimonial filters
-  var fbtns = document.querySelectorAll('#filters button');
-  fbtns.forEach(function (b) {
-    b.addEventListener('click', function () {
-      var f = b.getAttribute('data-filter');
-      fbtns.forEach(function (x) {
-        var on = x === b;
-        x.classList.toggle('active', on);
-        x.setAttribute('aria-pressed', on ? 'true' : 'false');
-      });
-      document.querySelectorAll('#vgrid .vcard').forEach(function (card) {
-        var segs = card.getAttribute('data-seg');
-        card.style.display = f === 'all' || segs.indexOf(f) !== -1 ? '' : 'none';
+    // Testimonial filters
+    var fbtns = document.querySelectorAll('#filters button');
+    fbtns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = b.getAttribute('data-filter');
+        fbtns.forEach(function (x) {
+          var on = x === b;
+          x.classList.toggle('active', on);
+          x.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        document.querySelectorAll('#vgrid .vcard').forEach(function (card) {
+          var segs = card.getAttribute('data-seg');
+          card.style.display = f === 'all' || segs.indexOf(f) !== -1 ? '' : 'none';
+        });
       });
     });
-  });
-
-  // Form stub
-  function fakeSubmit(e) {
-    e.preventDefault();
-    alert(submitMsg);
-    return false;
   }
-  window.fakeSubmit = fakeSubmit;
+
+  if ('requestIdleCallback' in window) requestIdleCallback(initHomeUI, { timeout: 2000 });
+  else setTimeout(initHomeUI, 200);
 </script>

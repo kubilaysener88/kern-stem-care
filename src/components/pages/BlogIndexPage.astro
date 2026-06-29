@@ -1,0 +1,97 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import PageHero from '../PageHero.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import { getCollection } from 'astro:content';
+import type { Lang } from '../../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const t =
+  lang === 'es'
+    ? {
+        eyebrow: 'Recursos',
+        title: 'Blog y Recursos',
+        lead: 'Guías y respuestas para pacientes que consideran medicina regenerativa en México.',
+        metaTitle: 'Blog y Recursos | Kern Stem Care',
+        metaDesc: 'Guías y respuestas sobre medicina regenerativa y terapia con células madre en Cancún para pacientes de EE.UU. y Canadá.',
+        crumb: 'Blog',
+        read: 'Leer más',
+        empty: 'Pronto publicaremos nuevos artículos.',
+        heading: 'Artículos recientes',
+      }
+    : {
+        eyebrow: 'Resources',
+        title: 'Blog & Resources',
+        lead: 'Guides and answers for patients considering regenerative care in Mexico.',
+        metaTitle: 'Blog & Resources | Kern Stem Care',
+        metaDesc: 'Guides and answers about regenerative and stem cell therapy in Cancún for U.S. and Canadian patients.',
+        crumb: 'Blog',
+        read: 'Read more',
+        empty: 'New articles coming soon.',
+        heading: 'Latest articles',
+      };
+
+const posts = (await getCollection('blog', (p) => p.data.lang === lang && !p.data.draft)).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
+);
+const slugOf = (id: string) => id.replace(/^[a-z]{2}\//, '');
+const fmtDate = (d: Date) => new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'long', day: 'numeric' }).format(d);
+---
+
+<SiteLayout lang={lang} title={t.metaTitle} description={t.metaDesc}>
+  <Breadcrumbs lang={lang} items={[{ label: t.crumb }]} />
+  <PageHero eyebrow={t.eyebrow} title={t.title} lead={t.lead} />
+
+  <section class="section" aria-labelledby="blog-heading">
+    <div class="wrap">
+      <h2 id="blog-heading" class="sr-only">{t.heading}</h2>
+      {
+        posts.length ? (
+          <div class="grid g3">
+            {posts.map((post) => (
+              <article class="card">
+                <p class="post-date">{fmtDate(post.data.pubDate)}</p>
+                <h3 class="post-title">
+                  <a href={`/${lang}/blog/${slugOf(post.id)}`}>{post.data.title}</a>
+                </h3>
+                <p>{post.data.description}</p>
+                <p style="margin-top:14px">
+                  <a href={`/${lang}/blog/${slugOf(post.id)}`} aria-label={`${t.read}: ${post.data.title}`}>
+                    {t.read} →
+                  </a>
+                </p>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <p class="lead center">{t.empty}</p>
+        )
+      }
+    </div>
+  </section>
+</SiteLayout>
+
+<style>
+  .post-date {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--teal-text);
+    margin: 0 0 0.5em;
+  }
+  .post-title {
+    margin: 0 0 0.4em;
+    font-size: 1.15rem;
+  }
+  .post-title a {
+    color: var(--navy);
+  }
+  .post-title a:hover {
+    color: var(--blue);
+  }
+</style>

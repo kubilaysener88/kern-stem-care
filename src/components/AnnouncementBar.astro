@@ -1,0 +1,51 @@
+---
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const t =
+  lang === 'es'
+    ? { msg: 'Atendemos a pacientes de 🇺🇸 EE.UU. y 🇨🇦 Canadá — consulta gratuita y sin compromiso', cta: 'Agenda ahora' }
+    : { msg: 'Serving patients from 🇺🇸 the U.S. & 🇨🇦 Canada — free, no-obligation consultation', cta: 'Book now' };
+---
+
+<div class="announce">
+  <p class="wrap">
+    <span>🇲🇽 {t.msg}</span>
+    <a href={`/${lang}/contact`}>{t.cta} →</a>
+  </p>
+</div>
+
+<style>
+  .announce {
+    background: var(--navy);
+    color: #cfe0f5;
+  }
+  .announce .wrap {
+    display: flex;
+    gap: 8px 16px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0;
+    padding: 8px 22px;
+    font-size: 0.82rem;
+  }
+  .announce a {
+    color: #fff;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .announce a:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 560px) {
+    .announce .wrap {
+      font-size: 0.74rem;
+    }
+  }
+</style>

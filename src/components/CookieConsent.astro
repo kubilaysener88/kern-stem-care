@@ -121,24 +121,27 @@ const t =
 <script is:inline>
   (function () {
     var KEY = 'ksc-cookie-consent';
-    var el = document.getElementById('cookie-consent');
-    if (!el) return;
-    var stored = null;
-    try {
-      stored = localStorage.getItem(KEY);
-    } catch (e) {}
-    if (stored) return; // choice already made — keep it hidden
+    function init() {
+      var el = document.getElementById('cookie-consent');
+      if (!el) return;
+      var stored = null;
+      try {
+        stored = localStorage.getItem(KEY);
+      } catch (e) {}
+      if (stored) return; // choice already made — keep it hidden
 
-    el.hidden = false;
-    el.querySelectorAll('[data-consent]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        try {
-          localStorage.setItem(KEY, btn.getAttribute('data-consent'));
-        } catch (e) {}
-        el.hidden = true;
-        // Other scripts can read localStorage['ksc-cookie-consent'] to gate cookies.
-        document.dispatchEvent(new CustomEvent('cookie-consent', { detail: btn.getAttribute('data-consent') }));
+      el.hidden = false;
+      el.querySelectorAll('[data-consent]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          try {
+            localStorage.setItem(KEY, btn.getAttribute('data-consent'));
+          } catch (e) {}
+          el.hidden = true;
+          // Other scripts can read localStorage['ksc-cookie-consent'] to gate cookies.
+          document.dispatchEvent(new CustomEvent('cookie-consent', { detail: btn.getAttribute('data-consent') }));
+        });
       });
-    });
+    }
+    init();
   })();
 </script>

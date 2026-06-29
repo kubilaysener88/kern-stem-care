@@ -1,0 +1,13 @@
+# Netlify deploy config for the Astro static site.
+# Connect the repo in the Netlify UI and it picks this up automatically.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Astro 7 requires Node >= 22.12.
+  NODE_VERSION = "22"
+
+# Static site (no SSR) — Netlify serves ./dist directly.
+# Netlify Forms are detected automatically from the built HTML
+# (forms tagged data-netlify="true" with a hidden form-name input).

@@ -1,6 +1,7 @@
 ---
 import Seo from '../components/Seo.astro';
 import StructuredData from '../components/StructuredData.astro';
+import Analytics from '../components/Analytics.astro';
 import type { Lang } from '../i18n/ui';
 import '../styles/global.css';
 
@@ -21,6 +22,8 @@ const { lang, title, description, image, noindex } = Astro.props;
     <Seo lang={lang} title={title} description={description} image={image} noindex={noindex} />
     <!-- Site-wide organization schema (Organization / TravelAgency) on every page -->
     <StructuredData lang={lang} />
+    <!-- Consent-gated, privacy-friendly analytics (Plausible) -->
+    <Analytics />
     <!-- Page-specific head content (extra JSON-LD, etc.) -->
     <slot name="head" />
   </head>

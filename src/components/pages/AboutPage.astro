@@ -2,8 +2,10 @@
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import PageHero from '../PageHero.astro';
 import ProseSections from '../ProseSections.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
 import type { Lang } from '../../i18n/ui';
 import { pagesContent } from '../../i18n/pages';
+import { navLabels } from '../../i18n/nav';
 
 interface Props {
   lang: Lang;
@@ -18,6 +20,7 @@ const mediaPh =
 ---
 
 <SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription}>
+  <Breadcrumbs lang={lang} items={[{ label: navLabels[lang].about }]} />
   <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} />
 
   <section class="section">

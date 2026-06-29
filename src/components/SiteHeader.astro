@@ -2,6 +2,7 @@
 import type { Lang } from '../i18n/ui';
 import { getNav, getConsultLabel, getTagline } from '../i18n/nav';
 import { getRouteFromUrl } from '../i18n/utils';
+import { ANALYTICS_EVENTS } from '../config/analytics';
 
 interface Props {
   lang: Lang;
@@ -64,7 +65,7 @@ const calendarSvg = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none"
           )
         }
         <li class="menu-cta">
-          <a href={`/${lang}/contact`} class="cta-mobile">
+          <a href={`/${lang}/contact`} class="cta-mobile" data-analytics-event={ANALYTICS_EVENTS.bookConsultation}>
             <span class="cta-ico" set:html={calendarSvg} />{consult}
           </a>
         </li>
@@ -76,7 +77,7 @@ const calendarSvg = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none"
         <a href={lang === 'en' ? '#' : otherHref} class:list={{ active: lang === 'en' }} aria-current={lang === 'en' ? 'true' : undefined}>EN</a>
         <a href={lang === 'es' ? '#' : otherHref} class:list={{ active: lang === 'es' }} aria-current={lang === 'es' ? 'true' : undefined}>ES</a>
       </div>
-      <a href={`/${lang}/contact`} class="cta">
+      <a href={`/${lang}/contact`} class="cta" data-analytics-event={ANALYTICS_EVENTS.bookConsultation}>
         <span class="cta-ico" set:html={calendarSvg} />{consult}
       </a>
       <button
@@ -107,11 +108,16 @@ const calendarSvg = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none"
     box-shadow: 0 6px 24px rgba(13, 42, 74, 0.08);
     background: rgba(255, 255, 255, 0.95);
   }
+  /* The header bar may run a touch wider than the 1180 content column so the
+     longer Spanish nav + CTA always fit on one row. */
+  .bar.wrap {
+    max-width: 1380px;
+  }
   .bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 18px;
+    gap: 16px;
     height: 76px;
   }
 
@@ -174,8 +180,8 @@ const calendarSvg = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none"
     gap: 5px;
     color: var(--ink);
     font-weight: 500;
-    font-size: 0.93rem;
-    padding: 8px 12px;
+    font-size: 0.88rem;
+    padding: 8px 9px;
     border-radius: 9px;
     white-space: nowrap;
     transition: color 0.15s, background 0.15s;
@@ -359,15 +365,15 @@ const calendarSvg = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none"
     transform: rotate(-45deg);
   }
 
-  /* Hide tagline on tighter desktop widths */
-  @media (max-width: 1240px) {
+  /* Tagline only shows on wide screens where there's room next to the full nav. */
+  @media (max-width: 1400px) {
     .brand-tag {
       display: none;
     }
   }
 
-  /* Mobile */
-  @media (max-width: 1040px) {
+  /* Mobile / compact nav (raised so the longer Spanish nav never overflows). */
+  @media (max-width: 1240px) {
     .primary {
       position: fixed;
       inset: 76px 0 auto 0;
@@ -443,18 +449,42 @@ const calendarSvg = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none"
       onScroll();
       window.addEventListener('scroll', onScroll, { passive: true });
     }
-    // Close the mobile panel when a link is tapped
     var menu = document.getElementById('menu');
     var burger = document.getElementById('hamburger');
-    if (menu && burger) {
-      menu.addEventListener('click', function (e) {
-        var t = e.target;
-        if (t && t.tagName === 'A' && !t.parentElement.classList.contains('has-sub')) {
-          menu.classList.remove('open');
+    function closeMenu() {
+      if (menu && menu.classList.contains('open')) {
+        menu.classList.remove('open');
+        if (burger) {
           burger.classList.remove('is-open');
           burger.setAttribute('aria-expanded', 'false');
         }
-      });
+      }
     }
+
+    var norm = function (p) { return p.replace(/\/+$/, '') || '/'; };
+
+    // A link to the page you're already on shouldn't do a full reload. Just close
+    // the menu and jump to the top INSTANTLY (no smooth animation — a smooth scroll
+    // on a long page reads as the page "sliding up like a sheet"). Covers header +
+    // footer nav. Hash links are left untouched.
+    document.addEventListener('click', function (e) {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      var a = e.target.closest ? e.target.closest('a[href]') : null;
+      if (!a || a.target === '_blank' || a.hasAttribute('download')) return;
+      var url;
+      try { url = new URL(a.href, location.href); } catch (_) { return; }
+      if (url.origin !== location.origin || url.hash) return;
+      if (norm(url.pathname) === norm(location.pathname)) {
+        e.preventDefault();
+        closeMenu();
+        // Instant jump to the top — no smooth animation (a smooth scroll on a long
+        // page reads as the page "sliding up like a sheet"). Use the scroll element
+        // directly so it works even with `overflow-x: clip` on <html>.
+        var se = document.scrollingElement || document.documentElement || document.body;
+        se.scrollTop = 0;
+      } else {
+        closeMenu();
+      }
+    });
   })();
 </script>

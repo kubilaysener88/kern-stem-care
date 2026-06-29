@@ -109,8 +109,15 @@ npm run test:a11y # axe-core WCAG 2.1 AA scan of every route (Playwright)
    - Keep the "agency, not a clinic" framing and the medical disclaimers.
    - Note that therapies may not be FDA / Health Canada approved (investigational).
    - Testimonials require "results vary / not typical" + written consent.
-4. **Media:** carousel and testimonial cards carry bracketed placeholders for real
-   `<img>`, `<video>`, or YouTube embeds.
+4. **Media / images (performance):**
+   - Put real raster images in `src/assets/` and render them with `<Image>` /
+     `<Picture>` from `astro:assets` — they emit AVIF/WebP and lazy-load. Always pass
+     `width`/`height` (or an aspect-ratio box) to avoid layout shift (CLS).
+   - `VideoTestimonial`'s `thumbnail` prop takes an imported image (`ImageMetadata`)
+     → optimized `<Picture>`; a YouTube id auto-uses YouTube's own WebP thumbnail.
+   - Exception: `public/og-image.jpg` (social card) stays a static file in `public/`
+     with a stable URL — social scrapers don't run Astro's image pipeline. Use 1200×630.
+   - Carousel / testimonial cards carry bracketed placeholders for the real media.
 5. **Domain:** the production domain is set in `astro.config.mjs` (`SITE_URL`) and
    `public/robots.txt`. Replace `kernstemcare.com` if the real domain differs.
 6. **Accessibility (WCAG 2.1 AA) — keep it passing:**
@@ -121,12 +128,47 @@ npm run test:a11y # axe-core WCAG 2.1 AA scan of every route (Playwright)
      `<h2 class="sr-only">` for a visually-headless section.
    - Decorative icons/emoji get `aria-hidden="true"`; meaningful links need a
      descriptive name (e.g. `aria-label`), not just "Learn more".
+7. **Performance / Core Web Vitals:**
+   - Fonts are a **system stack** (no web fonts) — keep it that way, or load any
+     web font with `font-display: swap` + `preload` to avoid blocking/CLS.
+   - CSS is inlined per route (`build.inlineStylesheets: 'always'`) so the critical
+     CSS never blocks rendering. Measured: LCP = the H1 (text), CLS = 0.
+   - Quick check: `npm run preview` then `node scripts/measure-cwv.mjs /en /en/contact`.
+   - Full Lighthouse: `npm run preview` then `npm run lighthouse -- /en mobile` (or
+     `desktop`). Scores: desktop 100/100/100/100; home-mobile ~99/100/100/100.
+     Non-critical home JS is deferred.
+9. **Motion:** scroll-reveal animations were removed (they read as the page
+   "re-opening" on navigation). Only subtle CSS hovers remain. Clicking a nav link
+   for the page you're already on scrolls to top instead of reloading (`SiteHeader`).
+8. **Analytics (privacy-friendly, consent-gated):** Plausible, configured in
+   `src/config/analytics.ts` and loaded by `src/components/Analytics.astro`. It loads
+   ONLY after the visitor accepts cookies, and `window.kscTrack(name, props)` is a
+   no-op without consent. Track a new event by adding `data-analytics-event="…"` to a
+   link/form, or calling `window.kscTrack('…')` from a script. Current events:
+   `Book Consultation` (header CTA), `Contact Form Submit`, `Testimonial Play`.
+   Before going live: register the domain in Plausible (or set `enabled: false`), and
+   mention the analytics tool in the Privacy Policy.
+10. **SEO extras:** breadcrumbs (`Breadcrumbs.astro`, visible + `BreadcrumbList` JSON-LD)
+    on every interior page; per-keyword meta titles in `src/i18n/pages.ts`; social image
+    at `public/og-image.jpg` (regenerate with `node scripts/gen-og.mjs`). NOTE: services
+    use `MedicalProcedure` (provider = independent clinic), not `Service`, to keep the
+    "agency, not a clinic" framing — don't add `Service` schema for the therapies.
+11. **Blog / resources** (`src/content/blog/`): add a post by dropping
+    `src/content/blog/<en|es>/<slug>.md` with the frontmatter from `src/content.config.ts`
+    (`title, description, lang, pubDate, reviewedBy, …`). It auto-appears on `/<lang>/blog`,
+    at `/<lang>/blog/<slug>`, in the sitemap, and emits `BlogPosting` JSON-LD. For health
+    content set `reviewedBy` (E-E-A-T). `draft: true` hides it.
 
 ## TODO backlog (carried over)
 
 - Replace all `[bracketed]` placeholders with real client data.
-- Add `public/og-image.jpg` (referenced by social meta) and real carousel/testimonial media.
+- Replace the placeholder blog posts with real, keyword-targeted articles (set `reviewedBy`).
+- Add real carousel/testimonial media (`og-image.jpg` is now generated).
 - Fill in partner clinics/labs and coordinator profiles (with written permission).
-- Connect the contact + newsletter forms to a real email/CRM endpoint (currently a stub `fakeSubmit`).
+- Forms are wired to **Netlify Forms** (`data-netlify`, names: `contact`, `lead`,
+  `newsletter`; shared AJAX handler in `FormHandler.astro`, deploy config in
+  `netlify.toml`). After the first deploy, set up notifications in the Netlify UI
+  (Forms → Settings → email/Slack/webhook). To use a different backend instead,
+  point `FormHandler.astro`'s `fetch` at it.
 - Set the real WhatsApp number in the floating button (`wa.me/1XXXXXXXXXX`).
 - Have a lawyer review `src/i18n/legal.ts` (Privacy/Terms) for MX/US/CA.

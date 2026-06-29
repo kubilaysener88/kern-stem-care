@@ -11,6 +11,18 @@ const SITE_URL = 'https://www.kernstemcare.com';
 export default defineConfig({
   site: SITE_URL,
 
+  // Inline all CSS into the page <head> so the critical stylesheet never blocks
+  // rendering on a separate request (the bundle is small and gzips well).
+  build: {
+    inlineStylesheets: 'always',
+  },
+
+  // astro:assets — <Image>/<Picture> emit modern formats (WebP/AVIF) and lazy-load
+  // by default. Allow the YouTube thumbnail host for remote image processing.
+  image: {
+    remotePatterns: [{ protocol: 'https', hostname: 'i.ytimg.com' }],
+  },
+
   // Per-language routing: /en and /es (default locale is also prefixed).
   i18n: {
     defaultLocale: 'en',

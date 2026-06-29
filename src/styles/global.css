@@ -31,7 +31,12 @@
   box-sizing: border-box;
 }
 html {
-  scroll-behavior: smooth;
+  /* No `scroll-behavior: smooth`: it animates EVERY scroll — including jumping a
+     long page back to the top on same-page nav — which reads as the page "sliding
+     up like a sheet". Jumps are instant; in-page anchors jump instantly too. */
+  /* Safety net: never let an over-wide element create a horizontal scroll / white
+     gap. `clip` (not hidden) doesn't break the sticky header. */
+  overflow-x: clip;
 }
 body {
   margin: 0;
@@ -452,6 +457,28 @@ p {
   transform: translateY(0);
 }
 
+/* Inline success message shown after a form is submitted (replaces the form). */
+.form-success {
+  padding: 22px 24px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--teal) 12%, #fff);
+  border: 1px solid color-mix(in srgb, var(--teal) 35%, #fff);
+  color: var(--navy);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.form-success::before {
+  content: '✓ ';
+  color: var(--teal-text);
+  font-weight: 800;
+}
+/* Honeypot anti-spam field — hidden from people (and the a11y tree) but present in
+   the HTML for bots to fill. `display:none` keeps it out of tab order and screen
+   readers, so no aria-hidden-focus issue; Netlify still detects it in the markup. */
+.hp-field {
+  display: none;
+}
+
 /* Consistent, high-contrast keyboard focus indicator (2.4.7).
    Dark surfaces (hero, footer, CTA) override the color locally. */
 :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
@@ -462,4 +489,15 @@ p {
 
 main:focus {
   outline: none;
+}
+
+/* Refined hover micro-interactions (cheap transforms only). */
+.card .ico {
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  border-color: #cfe0f5;
+}
+.card:hover .ico {
+  transform: scale(1.08) rotate(-2deg);
 }

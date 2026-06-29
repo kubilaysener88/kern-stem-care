@@ -4,6 +4,9 @@ import PageHero from '../PageHero.astro';
 import type { Lang } from '../../i18n/ui';
 import { pagesContent } from '../../i18n/pages';
 import { homeContent } from '../../i18n/home';
+import { ANALYTICS_EVENTS } from '../../config/analytics';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import { navLabels } from '../../i18n/nav';
 
 interface Props {
   lang: Lang;
@@ -11,15 +14,20 @@ interface Props {
 const { lang } = Astro.props;
 const p = pagesContent[lang].contact;
 const c = homeContent[lang].contact;
-const submitMsg =
+const successMsg =
   lang === 'es'
-    ? 'Gracias. Conecte este formulario a su correo o CRM para recibir solicitudes reales.'
-    : 'Thank you. Connect this form to your email or CRM to receive real submissions.';
+    ? '¡Gracias! Recibimos tu solicitud. Un coordinador te contactará en menos de 24 horas.'
+    : 'Thank you! We received your request. A coordinator will reach out within 24 hours.';
+const errorMsg =
+  lang === 'es'
+    ? 'No se pudo enviar. Inténtalo de nuevo o escríbenos por WhatsApp.'
+    : "Couldn't send. Please try again or message us on WhatsApp.";
 const infoHeading = lang === 'es' ? 'Información de contacto' : 'Contact information';
 const formHeading = lang === 'es' ? 'Envíanos un mensaje' : 'Send us a message';
 ---
 
 <SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription}>
+  <Breadcrumbs lang={lang} items={[{ label: navLabels[lang].contact }]} />
   <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} />
 
   <section class="section">
@@ -33,20 +41,32 @@ const formHeading = lang === 'es' ? 'Envíanos un mensaje' : 'Send us a message'
         </div>
         <div class="form-card">
           <h2 id="contact-form-heading" class="sr-only">{formHeading}</h2>
-          <form onsubmit="return fakeSubmit(event)" aria-labelledby="contact-form-heading">
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            data-success={successMsg}
+            data-error={errorMsg}
+            aria-labelledby="contact-form-heading"
+            data-analytics-event={ANALYTICS_EVENTS.contactSubmit}
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="lang" value={lang} />
+            <p class="hp-field" aria-hidden="true"><label>{lang === 'es' ? 'No llenar' : 'Do not fill'}<input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
             <div class="row">
-              <div class="field"><label><span>{c.form.labelFirst}</span><input required /></label></div>
-              <div class="field"><label><span>{c.form.labelLast}</span><input required /></label></div>
+              <div class="field"><label><span>{c.form.labelFirst}</span><input name="first_name" required /></label></div>
+              <div class="field"><label><span>{c.form.labelLast}</span><input name="last_name" required /></label></div>
             </div>
             <div class="row">
-              <div class="field"><label><span>{c.form.labelEmail}</span><input type="email" required /></label></div>
-              <div class="field"><label><span>{c.form.labelPhone}</span><input /></label></div>
+              <div class="field"><label><span>{c.form.labelEmail}</span><input name="email" type="email" required /></label></div>
+              <div class="field"><label><span>{c.form.labelPhone}</span><input name="phone" /></label></div>
             </div>
             <div class="row">
-              <div class="field"><label><span>{c.form.labelCountry}</span><select>{c.form.countryOptions.map((o) => <option>{o}</option>)}</select></label></div>
-              <div class="field"><label><span>{c.form.labelArea}</span><select>{c.form.areaOptions.map((o) => <option>{o}</option>)}</select></label></div>
+              <div class="field"><label><span>{c.form.labelCountry}</span><select name="country">{c.form.countryOptions.map((o) => <option>{o}</option>)}</select></label></div>
+              <div class="field"><label><span>{c.form.labelArea}</span><select name="area">{c.form.areaOptions.map((o) => <option>{o}</option>)}</select></label></div>
             </div>
-            <div class="field"><label><span>{c.form.labelMessage}</span><textarea rows="4"></textarea></label></div>
+            <div class="field"><label><span>{c.form.labelMessage}</span><textarea name="message" rows="4"></textarea></label></div>
             <button class="btn btn-primary" style="width:100%">{c.form.submit}</button>
             <p style="font-size:.74rem;color:var(--muted);margin:12px 0 0">{c.form.fineprint}</p>
           </form>
@@ -55,12 +75,3 @@ const formHeading = lang === 'es' ? 'Envíanos un mensaje' : 'Send us a message'
     </div>
   </section>
 </SiteLayout>
-
-<script is:inline define:vars={{ submitMsg }}>
-  function fakeSubmit(e) {
-    e.preventDefault();
-    alert(submitMsg);
-    return false;
-  }
-  window.fakeSubmit = fakeSubmit;
-</script>
