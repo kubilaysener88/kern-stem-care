@@ -16,7 +16,7 @@ const t =
     ? { crumb: 'Blog', by: 'Por', reviewed: 'Revisado por', updated: 'Actualizado' }
     : { crumb: 'Blog', by: 'By', reviewed: 'Reviewed by', updated: 'Updated' };
 
-const site = Astro.site?.href.replace(/\/$/, '') ?? 'https://www.kernstemcare.com';
+const site = Astro.site?.href.replace(/\/$/, '') ?? 'https://kernstemcare.com';
 const slug = post.id.replace(/^[a-z]{2}\//, '');
 const url = `${site}/${lang}/blog/${slug}`;
 const fmtDate = (d: Date) => new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'long', day: 'numeric' }).format(d);

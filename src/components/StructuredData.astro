@@ -11,7 +11,7 @@ interface Props {
 }
 const { lang, organization = true, procedures = [] } = Astro.props;
 
-const site = Astro.site?.href.replace(/\/$/, '') ?? 'https://www.kernstemcare.com';
+const site = Astro.site?.href.replace(/\/$/, '') ?? 'https://kernstemcare.com';
 
 const graph: Record<string, unknown>[] = [];
 if (organization) graph.push(organizationNode(site, lang));

@@ -16,7 +16,7 @@ interface Props {
 }
 const { lang, items } = Astro.props;
 
-const site = Astro.site?.href.replace(/\/$/, '') ?? 'https://www.kernstemcare.com';
+const site = Astro.site?.href.replace(/\/$/, '') ?? 'https://kernstemcare.com';
 const homeLabel = lang === 'es' ? 'Inicio' : 'Home';
 const trail: Crumb[] = [{ label: homeLabel, href: `/${lang}` }, ...items];
 

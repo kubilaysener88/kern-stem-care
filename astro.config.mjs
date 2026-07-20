@@ -3,9 +3,9 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
-// Production domain. Replace once the real domain is purchased/confirmed.
+// Production domain — must match Netlify's PRIMARY domain (apex, no www; www 301s here).
 // `site` is required for the sitemap and for absolute canonical/OG URLs.
-const SITE_URL = 'https://www.kernstemcare.com';
+const SITE_URL = 'https://kernstemcare.com';
 
 // https://astro.build/config
 export default defineConfig({
