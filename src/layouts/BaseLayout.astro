@@ -19,6 +19,8 @@ const { lang, title, description, image, noindex } = Astro.props;
 <!doctype html>
 <html lang={lang}>
   <head>
+    <!-- Google Search Console verification -->
+    <meta name="google-site-verification" content="egFDzlmGjCJIpFSdQ8LEvauT0uBfXjeTmSJZVmrCNyY" />
     <Seo lang={lang} title={title} description={description} image={image} noindex={noindex} />
     <!-- Site-wide organization schema (Organization / TravelAgency) on every page -->
     <StructuredData lang={lang} />
