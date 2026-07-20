@@ -1,5 +1,25 @@
 ---
-// Root entry point: send visitors to the default locale.
-// Works in both static and on-demand (SSR) output.
-return Astro.redirect('/en');
+// Root entry point: redirect visitors to the default locale.
+// Rendered as a full HTML page (instead of Astro.redirect) so the Google Search
+// Console verification tag is present on the exact property URL
+// (https://kernstemcare.com/), which GSC fetches to verify ownership.
+const target = '/en';
 ---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="google-site-verification" content="egFDzlmGjCJIpFSdQ8LEvauT0uBfXjeTmSJZVmrCNyY" />
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href="https://kernstemcare.com/en" />
+    <title>Kern Stem Care</title>
+    <script is:inline>
+      window.location.replace('/en');
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to <a href="/en">Kern Stem Care</a>…</p>
+  </body>
+</html>
