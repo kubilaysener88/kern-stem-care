@@ -227,7 +227,7 @@ const en: HomeContent = {
   hero: {
     flagsPre: 'Coordination agency in Cancún',
     flagsMid: 'Guiding patients from',
-    h1: 'Your Trusted Guide to Regenerative Care in Cancún, Mexico',
+    h1: 'Your Trusted Guide to the Best Stem Cell Care in Cancún',
     p: "Finding regenerative and stem-cell care in Mexico shouldn't mean researching dozens of clinics on your own. Kern Stem Care is an agency that brings the best clinics, stem-cell laboratories, and physicians in Cancún together in one place — found, vetted, and presented to you. Choosing the right provider becomes simple, and the travel, lodging, and appointments are handled start to finish.",
     pills: ['🧬 Stem Cells', '✨ Exosomes', '🧫 Fibroblasts'],
     ctaPrimary: 'Request Free Consultation',
