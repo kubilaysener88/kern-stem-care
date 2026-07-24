@@ -228,7 +228,8 @@ const en: HomeContent = {
     flagsPre: 'Coordination agency in Cancún',
     flagsMid: 'Guiding patients from',
     h1: 'Your Trusted Guide to the Best Stem Cell Care in Cancún',
-    p: "Finding regenerative and stem-cell care in Mexico shouldn't mean researching dozens of clinics on your own. Kern Stem Care is an agency that brings the best clinics, stem-cell laboratories, and physicians in Cancún together in one place — found, vetted, and presented to you. Choosing the right provider becomes simple, and the travel, lodging, and appointments are handled start to finish.",
+    tagline: 'Vetted clinics | Transparent pricing | Complete care',
+    p: "",
     pills: ['🧬 Stem Cells', '✨ Exosomes', '🧫 Fibroblasts'],
     ctaPrimary: 'Request Free Consultation',
     ctaGhost: 'What We Coordinate',
@@ -251,8 +252,8 @@ const en: HomeContent = {
   roleBanner:
     'ℹ️ <strong>Kern Stem Care is a medical coordination agency, not a clinic.</strong> All medical care is provided by independent, licensed clinics, physicians, and laboratories in Cancún, Mexico. We coordinate and guide your journey.',
   showcase: {
-    eyebrow: 'Applications & Treatments',
-    h2: 'See the care we coordinate',
+    eyebrow: 'More Than Healthcare',
+    h2: 'Every Moment of Your Care Matters',
     slides: [
       { emoji: '🎥', ph: '[video-1.mp4 / YouTube ID]', caption: 'Stem cell application' },
       { emoji: '📷', ph: '[photo-treatment-1.jpg]', caption: 'Exosome therapy at partner clinic' },
@@ -269,9 +270,9 @@ const en: HomeContent = {
     { num: '🇺🇸 🇨🇦', label: 'Patients from US & Canada' },
   ],
   therapies: {
-    eyebrow: 'Our Foundation',
-    h2: 'Three cellular therapies at the core of everything we coordinate',
-    lead: 'Every program offered by our partner network is built on three pillars of regenerative medicine. These are the cellular therapies the clinics and laboratories in Cancún specialize in — and what we help you access.',
+    eyebrow: 'our treatments',
+    h2: 'Three Cellular Therapies. Care Designed Around You.',
+    lead: 'Every treatment begins with three foundational pillars of regenerative medicine. Our team coordinates your access to specialized clinics and laboratories in Cancún, connecting you with advanced cellular therapies while providing the trust, guidance, and personalized attention you deserve throughout your journey.',
     cards: [
       {
         icon: '🧬',
@@ -345,7 +346,6 @@ const en: HomeContent = {
       { icon: '✨', title: 'Anti-Aging & Longevity', body: 'Vitality and longevity-oriented wellness programs. <span class="ph">[Edit description]</span>' },
       { icon: '🌿', title: 'Senior Health & Wellness', body: 'Wellness programs tailored to the needs of older adults. <span class="ph">[Edit description]</span>' },
       { icon: '💆', title: 'Aesthetic & Skin', body: 'Skin, rejuvenation, and aesthetic wellness — a natural fit for fibroblast applications. <span class="ph">[Edit description]</span>' },
-      { icon: '⚖️', title: 'Metabolic & Hormonal Support', body: 'Wellness-focused support for metabolism, energy, and hormonal balance. <span class="ph">[Edit description]</span>' },
       { icon: '🌱', title: 'Placenta Implant Therapy', accent: 'teal-border', body: 'A placental-tissue implant offered by partner clinics, explored for support of metabolism, energy, and hormonal balance. <span class="ph">[Edit description]</span>' },
       { icon: '🔬', title: 'Personalized Protocols', body: 'Custom evaluations for complex or combined cases. <span class="ph">[Edit description]</span>' },
     ],
@@ -533,8 +533,9 @@ const es: HomeContent = {
   hero: {
     flagsPre: 'Agencia en Cancún',
     flagsMid: 'Guiando a pacientes de',
-    h1: 'Tu Guía de Confianza para la Medicina Regenerativa en Cancún, México',
-    p: 'Buscar tratamiento regenerativo y de células madre en México no debería significar investigar decenas de clínicas por tu cuenta. Kern Stem Care es una agencia que reúne en un solo lugar a las mejores clínicas, laboratorios de células madre y médicos de Cancún — encontrados, verificados y presentados para ti. Elegir al proveedor correcto se vuelve simple, y el viaje, el hospedaje y las citas quedan resueltos de principio a fin.',
+    h1: 'Tu Guía de Confianza para la Mejor Atención en Células Madre en Cancún',
+    tagline: 'Clínicas verificadas | Precios transparentes | Atención completa',
+    p: '',
     pills: ['🧬 Células Madre', '✨ Exosomas', '🧫 Fibroblastos'],
     ctaPrimary: 'Solicitar Consulta Gratis',
     ctaGhost: 'Qué Coordinamos',
@@ -557,8 +558,8 @@ const es: HomeContent = {
   roleBanner:
     'ℹ️ <strong>Kern Stem Care es una agencia de coordinación médica, no una clínica.</strong> Toda la atención médica la brindan clínicas, médicos y laboratorios independientes y certificados en Cancún, México. Nosotros coordinamos y guiamos tu proceso.',
   showcase: {
-    eyebrow: 'Aplicaciones y Tratamientos',
-    h2: 'Conoce la atención que coordinamos',
+    eyebrow: 'Más Que Atención Médica',
+    h2: 'Cada Momento de Tu Atención Importa',
     slides: [
       { emoji: '🎥', ph: '[video-1.mp4 / YouTube ID]', caption: 'Aplicación de células madre' },
       { emoji: '📷', ph: '[photo-treatment-1.jpg]', caption: 'Terapia con exosomas en clínica aliada' },
@@ -575,9 +576,9 @@ const es: HomeContent = {
     { num: '🇺🇸 🇨🇦', label: 'Pacientes de EE.UU. y Canadá' },
   ],
   therapies: {
-    eyebrow: 'Nuestra Base',
-    h2: 'Tres terapias celulares en el centro de todo lo que coordinamos',
-    lead: 'Cada programa que ofrece nuestra red de aliados se construye sobre tres pilares de la medicina regenerativa. Estas son las terapias celulares en las que se especializan las clínicas y laboratorios de Cancún — y a las que te ayudamos a acceder.',
+    eyebrow: 'nuestros tratamientos',
+    h2: 'Tres Terapias Celulares. Atención Diseñada Para Ti.',
+    lead: 'Cada tratamiento comienza con tres pilares fundamentales de la medicina regenerativa. Nuestro equipo coordina tu acceso a clínicas y laboratorios especializados en Cancún, conectándote con terapias celulares avanzadas mientras brinda la confianza, orientación y atención personalizada que mereces a lo largo de tu proceso.',
     cards: [
       {
         icon: '🧬',
@@ -635,7 +636,6 @@ const es: HomeContent = {
       { icon: '✨', title: 'Antienvejecimiento y Longevidad', body: 'Programas de bienestar orientados a la vitalidad y la longevidad. <span class="ph">[Editar descripción]</span>' },
       { icon: '🌿', title: 'Salud y Bienestar del Adulto Mayor', body: 'Programas de bienestar adaptados a las necesidades de los adultos mayores. <span class="ph">[Editar descripción]</span>' },
       { icon: '💆', title: 'Estética y Piel', body: 'Piel, rejuvenecimiento y bienestar estético — encaja de forma natural con las aplicaciones de fibroblastos. <span class="ph">[Editar descripción]</span>' },
-      { icon: '⚖️', title: 'Soporte Metabólico y Hormonal', body: 'Apoyo enfocado en el bienestar para el metabolismo, la energía y el equilibrio hormonal. <span class="ph">[Editar descripción]</span>' },
       { icon: '🌱', title: 'Implante de Placenta', accent: 'teal-border', body: 'Un implante de tejido placentario que ofrecen las clínicas aliadas, explorado como apoyo al metabolismo, la energía y el equilibrio hormonal. <span class="ph">[Editar descripción]</span>' },
       { icon: '🔬', title: 'Protocolos Personalizados', body: 'Evaluaciones a medida para casos complejos o combinados. <span class="ph">[Editar descripción]</span>' },
     ],
