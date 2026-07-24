@@ -35,7 +35,8 @@ const newsletterSuccess =
     <div>
       <span class="hero-flags">🇲🇽 <span>{c.hero.flagsPre}</span> · <span>{c.hero.flagsMid}</span> 🇺🇸 🇨🇦</span>
       <h1>{c.hero.h1}</h1>
-      <p>{c.hero.p}</p>
+      {c.hero.tagline && <p class="hero-tagline">{c.hero.tagline}</p>}
+      {c.hero.p && <p>{c.hero.p}</p>}
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
         {c.hero.pills.map((pill) => <span class="hero-flags" style="margin:0">{pill}</span>)}
       </div>
@@ -388,6 +389,12 @@ const newsletterSuccess =
     color: #dce9f6;
     font-size: 1.15rem;
     max-width: 560px;
+  }
+  .hero-tagline {
+    font-weight: 600;
+    color: #eaf3fc !important;
+    font-size: 1.05rem !important;
+    letter-spacing: 0.01em;
   }
   .hero-flags {
     display: inline-flex;

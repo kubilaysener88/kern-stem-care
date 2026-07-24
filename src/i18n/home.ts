@@ -83,6 +83,8 @@ export interface HomeContent {
     flagsPre: string;
     flagsMid: string;
     h1: string;
+    /** Short pipe-separated value props under the H1 (e.g. "Vetted clinics | …"). */
+    tagline?: string;
     p: string;
     pills: string[];
     ctaPrimary: string;
