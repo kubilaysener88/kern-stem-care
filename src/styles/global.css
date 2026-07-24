@@ -394,6 +394,23 @@ p {
   font-size: 0.94rem;
   font-family: inherit;
 }
+/* Phone field: country dial code ("lada") select + number input side by side. */
+.form-card .phone-group {
+  display: flex;
+  gap: 8px;
+}
+.form-card .phone-group select {
+  width: auto;
+  /* Wide enough for the country name; long names ellipsize when collapsed. */
+  flex: 1 1 56%;
+  min-width: 0;
+  padding-left: 10px;
+  padding-right: 8px;
+}
+.form-card .phone-group input {
+  flex: 1 1 44%;
+  min-width: 0;
+}
 .info-block {
   display: flex;
   gap: 14px;

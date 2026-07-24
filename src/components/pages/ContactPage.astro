@@ -7,6 +7,7 @@ import { homeContent } from '../../i18n/home';
 import { ANALYTICS_EVENTS } from '../../config/analytics';
 import Breadcrumbs from '../Breadcrumbs.astro';
 import { navLabels } from '../../i18n/nav';
+import { getPhoneCodes, getCountries, phoneCodeLabel } from '../../i18n/phoneCodes';
 
 interface Props {
   lang: Lang;
@@ -60,10 +61,22 @@ const formHeading = lang === 'es' ? 'Envíanos un mensaje' : 'Send us a message'
             </div>
             <div class="row">
               <div class="field"><label><span>{c.form.labelEmail}</span><input name="email" type="email" required /></label></div>
-              <div class="field"><label><span>{c.form.labelPhone}</span><input name="phone" /></label></div>
+              <div class="field">
+                <label for="contact-phone"><span>{c.form.labelPhone}</span></label>
+                <div class="phone-group">
+                  <select name="phone_country_code" aria-label={phoneCodeLabel[lang]}>
+                    {getPhoneCodes(lang).map((p) => (
+                      <option value={p.dial} selected={p.iso === 'US'}>
+                        {p[lang]} {p.flag} {p.dial}
+                      </option>
+                    ))}
+                  </select>
+                  <input id="contact-phone" name="phone" type="tel" autocomplete="tel" />
+                </div>
+              </div>
             </div>
             <div class="row">
-              <div class="field"><label><span>{c.form.labelCountry}</span><select name="country">{c.form.countryOptions.map((o) => <option>{o}</option>)}</select></label></div>
+              <div class="field"><label><span>{c.form.labelCountry}</span><select name="country">{getCountries(lang).map((o) => <option value={o.en} selected={o.iso === 'US'}>{o[lang]}</option>)}</select></label></div>
               <div class="field"><label><span>{c.form.labelArea}</span><select name="area">{c.form.areaOptions.map((o) => <option>{o}</option>)}</select></label></div>
             </div>
             <div class="field"><label><span>{c.form.labelMessage}</span><textarea name="message" rows="4"></textarea></label></div>
