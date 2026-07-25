@@ -12,7 +12,7 @@ export interface PageSection {
 }
 export interface ServiceCard {
   icon: string;
-  slug: 'stem-cells' | 'exosomes' | 'fibroblasts';
+  slug: 'stem-cells' | 'exosomes' | 'fibroblasts' | 'placenta';
   title: string;
   body: string;
 }
@@ -75,6 +75,7 @@ export interface PagesSet {
   stemCells: SimplePage;
   exosomes: SimplePage;
   fibroblasts: SimplePage;
+  placenta: SimplePage;
   about: SimplePage;
   process: ProcessPage;
   testimonials: TestimonialsPage;
@@ -93,11 +94,12 @@ const en: PagesSet = {
       'Compare the cellular therapies we help U.S. and Canadian patients access in Cancún — stem cells, exosomes and fibroblasts — through independent, licensed clinics and labs.',
     eyebrow: 'What We Coordinate',
     title: 'Services',
-    lead: 'We coordinate access to three core cellular therapies — offered by independent, licensed partner clinics and laboratories in Cancún. Choose a therapy to learn more. <span class="ph">[Edit this overview.]</span>',
+    lead: 'We coordinate access to the core regenerative therapies offered by independent, licensed partner clinics and laboratories in Cancún. Choose a therapy to learn more. <span class="ph">[Edit this overview.]</span>',
     cards: [
       { icon: '🧬', slug: 'stem-cells', title: 'Stem Cells', body: 'Cells studied for their role in tissue repair and regeneration — the central pillar of every protocol in our network. <span class="ph">[Edit summary.]</span>' },
       { icon: '✨', slug: 'exosomes', title: 'Exosomes', body: 'Cell-released vesicles studied for their role in cell-to-cell signaling and regenerative processes. <span class="ph">[Edit summary.]</span>' },
       { icon: '🧫', slug: 'fibroblasts', title: 'Fibroblasts', body: 'Collagen-producing cells studied in skin, wound, and regenerative applications. <span class="ph">[Edit summary.]</span>' },
+      { icon: '🌱', slug: 'placenta', title: 'Freeze-Dried Placenta', body: 'A lyophilized placental-tissue preparation studied for its growth factors and signaling molecules involved in regeneration. <span class="ph">[Edit summary.]</span>' },
     ],
     disclaimer: investigationalEN,
   },
@@ -139,6 +141,19 @@ const en: PagesSet = {
       { h2: 'What it is', body: 'Fibroblasts are cells that produce collagen and support connective tissue, studied in skin, wound, and regenerative applications. <span class="ph">[Edit description.]</span>' },
       { h2: 'What partners use it for', body: 'A natural fit for aesthetic & skin programs offered by independent clinics. <span class="ph">[List the areas your partners actually offer.]</span>' },
       { h2: 'What to expect', body: 'A provider-led evaluation comes first; we coordinate everything around your visit. <span class="ph">[Describe the typical journey.]</span>' },
+    ],
+    disclaimer: investigationalEN,
+  },
+  placenta: {
+    metaTitle: 'Freeze-Dried Placenta Therapy in Cancún, Mexico | Kern Stem Care',
+    metaDescription: 'Freeze-dried (lyophilized) placental-tissue therapy in Cancún, coordinated by Kern Stem Care with independent, licensed clinics. Bilingual guidance for U.S. & Canada patients.',
+    eyebrow: 'Regenerative Therapy',
+    title: 'Freeze-Dried Placenta',
+    lead: 'An overview of the freeze-dried placenta therapy offered by our partner network. <span class="ph">[Replace with your own introduction.]</span>',
+    sections: [
+      { h2: 'What it is', body: 'Freeze-dried (lyophilized) placenta is a placental-tissue preparation studied for its content of growth factors and signaling molecules involved in regenerative processes. <span class="ph">[Edit description.]</span>' },
+      { h2: 'What partners use it for', body: 'Used by independent clinics within regenerative and wellness programs. <span class="ph">[List the areas your partners actually offer.]</span>' },
+      { h2: 'What to expect', body: 'The provider evaluates your case first; we handle scheduling, travel, and on-the-ground support. <span class="ph">[Describe the typical journey.]</span>' },
     ],
     disclaimer: investigationalEN,
   },
@@ -204,11 +219,12 @@ const es: PagesSet = {
       'Compara las terapias celulares a las que ayudamos a acceder en Cancún — células madre, exosomas y fibroblastos — con clínicas y laboratorios independientes y certificados.',
     eyebrow: 'Qué Coordinamos',
     title: 'Servicios',
-    lead: 'Coordinamos el acceso a tres terapias celulares centrales — ofrecidas por clínicas y laboratorios aliados, independientes y certificados, en Cancún. Elige una terapia para saber más. <span class="ph">[Editar este resumen.]</span>',
+    lead: 'Coordinamos el acceso a las terapias regenerativas centrales — ofrecidas por clínicas y laboratorios aliados, independientes y certificados, en Cancún. Elige una terapia para saber más. <span class="ph">[Editar este resumen.]</span>',
     cards: [
       { icon: '🧬', slug: 'stem-cells', title: 'Células Madre', body: 'Células estudiadas por su papel en la reparación y regeneración de tejidos — el pilar central de cada protocolo de nuestra red. <span class="ph">[Editar resumen.]</span>' },
       { icon: '✨', slug: 'exosomes', title: 'Exosomas', body: 'Vesículas liberadas por las células, estudiadas por su papel en la señalización entre células y los procesos regenerativos. <span class="ph">[Editar resumen.]</span>' },
       { icon: '🧫', slug: 'fibroblasts', title: 'Fibroblastos', body: 'Células productoras de colágeno, estudiadas en aplicaciones de piel, cicatrización y regeneración. <span class="ph">[Editar resumen.]</span>' },
+      { icon: '🌱', slug: 'placenta', title: 'Placenta Liofilizada', body: 'Una preparación de tejido placentario liofilizado, estudiada por sus factores de crecimiento y moléculas de señalización relacionadas con la regeneración. <span class="ph">[Editar resumen.]</span>' },
     ],
     disclaimer: investigationalES,
   },
@@ -250,6 +266,19 @@ const es: PagesSet = {
       { h2: 'Qué es', body: 'Los fibroblastos son células que producen colágeno y dan soporte al tejido conectivo, estudiadas en aplicaciones de piel, cicatrización y regeneración. <span class="ph">[Editar descripción.]</span>' },
       { h2: 'Para qué la usan los aliados', body: 'Encajan de forma natural con los programas de estética y piel que ofrecen las clínicas independientes. <span class="ph">[Lista las áreas que tus aliados realmente ofrecen.]</span>' },
       { h2: 'Qué esperar', body: 'Primero una evaluación dirigida por el proveedor; nosotros coordinamos todo alrededor de tu visita. <span class="ph">[Describe el proceso típico.]</span>' },
+    ],
+    disclaimer: investigationalES,
+  },
+  placenta: {
+    metaTitle: 'Terapia con Placenta Liofilizada en Cancún, México | Kern Stem Care',
+    metaDescription: 'Terapia con tejido placentario liofilizado en Cancún, coordinada por Kern Stem Care con clínicas independientes y certificadas. Guía bilingüe para pacientes de EE.UU. y Canadá.',
+    eyebrow: 'Terapia Regenerativa',
+    title: 'Placenta Liofilizada',
+    lead: 'Un resumen de la terapia con placenta liofilizada que ofrece nuestra red de aliados. <span class="ph">[Reemplazar con tu introducción.]</span>',
+    sections: [
+      { h2: 'Qué es', body: 'La placenta liofilizada (secada en frío) es una preparación de tejido placentario estudiada por su contenido de factores de crecimiento y moléculas de señalización relacionadas con procesos regenerativos. <span class="ph">[Editar descripción.]</span>' },
+      { h2: 'Para qué la usan los aliados', body: 'La utilizan clínicas independientes dentro de programas regenerativos y de bienestar. <span class="ph">[Lista las áreas que tus aliados realmente ofrecen.]</span>' },
+      { h2: 'Qué esperar', body: 'Primero el proveedor evalúa tu caso; nosotros nos encargamos de las citas, el viaje y el acompañamiento. <span class="ph">[Describe el proceso típico.]</span>' },
     ],
     disclaimer: investigationalES,
   },

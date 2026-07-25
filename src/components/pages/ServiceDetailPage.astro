@@ -9,17 +9,23 @@ import { pagesContent } from '../../i18n/pages';
 
 interface Props {
   lang: Lang;
-  service: 'stemCells' | 'exosomes' | 'fibroblasts';
+  service: 'stemCells' | 'exosomes' | 'fibroblasts' | 'placenta';
 }
 const { lang, service } = Astro.props;
 const p = pagesContent[lang][service];
+// MedicalProcedure schema only for the three cellular therapies (placenta is a
+// tissue product, not one of our ProcedureKey entries).
+const procedureKeys = ['stemCells', 'exosomes', 'fibroblasts'] as const;
+const procedures = procedureKeys.includes(service as (typeof procedureKeys)[number])
+  ? [service as (typeof procedureKeys)[number]]
+  : [];
 const backLabel = lang === 'es' ? '← Todos los servicios' : '← All services';
 const ctaLabel = lang === 'es' ? 'Solicitar Consulta Gratis' : 'Request Free Consultation';
 const servicesLabel = lang === 'es' ? 'Servicios' : 'Services';
 ---
 
 <SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription}>
-  <StructuredData slot="head" lang={lang} organization={false} procedures={[service]} />
+  <StructuredData slot="head" lang={lang} organization={false} procedures={procedures} />
   <Breadcrumbs lang={lang} items={[{ label: servicesLabel, href: `/${lang}/services` }, { label: p.title }]} />
   <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} />
 

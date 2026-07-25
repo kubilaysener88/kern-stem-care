@@ -15,7 +15,9 @@ export interface IconCard {
   icon: string;
   title: string;
   body: string;
-  accent?: 'blue' | 'teal' | 'gold' | 'teal-border';
+  accent?: 'blue' | 'teal' | 'gold' | 'green' | 'teal-border';
+  /** When set, the whole card links to /<lang>/services/<slug> ("Learn more"). */
+  slug?: 'stem-cells' | 'exosomes' | 'fibroblasts' | 'placenta';
 }
 export interface Slide {
   emoji: string;
@@ -273,26 +275,36 @@ const en: HomeContent = {
   ],
   therapies: {
     eyebrow: 'our treatments',
-    h2: 'Three Cellular Therapies. Care Designed Around You.',
-    lead: 'Every treatment begins with three foundational pillars of regenerative medicine. Our team coordinates your access to specialized clinics and laboratories in Cancún, connecting you with advanced cellular therapies while providing the trust, guidance, and personalized attention you deserve throughout your journey.',
+    h2: 'Our Regenerative Therapies. Care Designed Around You.',
+    lead: 'Every treatment begins with foundational pillars of regenerative medicine. Our team coordinates your access to specialized clinics and laboratories in Cancún, connecting you with advanced cellular therapies while providing the trust, guidance, and personalized attention you deserve throughout your journey.',
     cards: [
       {
         icon: '🧬',
         title: 'Stem Cells',
+        slug: 'stem-cells',
         accent: 'blue',
         body: 'Cells with the ability to develop into different cell types, widely studied for their role in tissue repair and regeneration. The central pillar of every protocol in our network. <span class="ph">[Edit with the specific stem-cell sources your partners use.]</span>',
       },
       {
         icon: '✨',
         title: 'Exosomes',
+        slug: 'exosomes',
         accent: 'teal',
         body: 'Microscopic vesicles released by cells that carry signaling molecules, studied for their role in cell-to-cell communication and regenerative processes. <span class="ph">[Edit description.]</span>',
       },
       {
         icon: '🧫',
         title: 'Fibroblasts',
+        slug: 'fibroblasts',
         accent: 'gold',
         body: 'Cells that produce collagen and support connective tissue, studied in skin, wound, and regenerative applications. <span class="ph">[Edit description.]</span>',
+      },
+      {
+        icon: '🌱',
+        title: 'Freeze-Dried Placenta',
+        slug: 'placenta',
+        accent: 'green',
+        body: 'A lyophilized (freeze-dried) placental-tissue preparation, studied for its content of growth factors and signaling molecules involved in regenerative processes. <span class="ph">[Edit description.]</span>',
       },
     ],
     note: '<strong>Note:</strong> These cellular therapies are provided by independent, licensed partner laboratories and clinics. Many such therapies are not approved by the U.S. FDA or Health Canada for specific diseases and are considered investigational. Descriptions here are educational and are not a promise of any result.',
@@ -579,26 +591,36 @@ const es: HomeContent = {
   ],
   therapies: {
     eyebrow: 'nuestros tratamientos',
-    h2: 'Tres Terapias Celulares. Atención Diseñada Para Ti.',
-    lead: 'Cada tratamiento comienza con tres pilares fundamentales de la medicina regenerativa. Nuestro equipo coordina tu acceso a clínicas y laboratorios especializados en Cancún, conectándote con terapias celulares avanzadas mientras brinda la confianza, orientación y atención personalizada que mereces a lo largo de tu proceso.',
+    h2: 'Nuestras Terapias Regenerativas. Atención Diseñada Para Ti.',
+    lead: 'Cada tratamiento comienza con los pilares fundamentales de la medicina regenerativa. Nuestro equipo coordina tu acceso a clínicas y laboratorios especializados en Cancún, conectándote con terapias celulares avanzadas mientras brinda la confianza, orientación y atención personalizada que mereces a lo largo de tu proceso.',
     cards: [
       {
         icon: '🧬',
         title: 'Células Madre',
+        slug: 'stem-cells',
         accent: 'blue',
         body: 'Células con la capacidad de transformarse en distintos tipos celulares, ampliamente estudiadas por su papel en la reparación y regeneración de tejidos. El pilar central de cada protocolo de nuestra red. <span class="ph">[Editar con las fuentes específicas de células madre que usan tus aliados.]</span>',
       },
       {
         icon: '✨',
         title: 'Exosomas',
+        slug: 'exosomes',
         accent: 'teal',
         body: 'Vesículas microscópicas liberadas por las células que transportan moléculas de señalización, estudiadas por su papel en la comunicación entre células y en procesos regenerativos. <span class="ph">[Editar descripción.]</span>',
       },
       {
         icon: '🧫',
         title: 'Fibroblastos',
+        slug: 'fibroblasts',
         accent: 'gold',
         body: 'Células que producen colágeno y dan soporte al tejido conectivo, estudiadas en aplicaciones de piel, cicatrización y regeneración. <span class="ph">[Editar descripción.]</span>',
+      },
+      {
+        icon: '🌱',
+        title: 'Placenta Liofilizada',
+        slug: 'placenta',
+        accent: 'green',
+        body: 'Una preparación de tejido placentario liofilizado (secado en frío), estudiada por su contenido de factores de crecimiento y moléculas de señalización relacionadas con procesos regenerativos. <span class="ph">[Editar descripción.]</span>',
       },
     ],
     note: '<strong>Nota:</strong> Estas terapias celulares las brindan laboratorios y clínicas aliadas independientes y certificadas. Muchas de estas terapias no están aprobadas por la FDA de EE.UU. ni Health Canada para enfermedades específicas y se consideran de investigación. Las descripciones aquí son educativas y no son una promesa de ningún resultado.',
