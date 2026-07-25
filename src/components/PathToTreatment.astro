@@ -1,0 +1,102 @@
+---
+import type { Lang } from '../i18n/ui';
+import { pathToTreatment } from '../i18n/pages';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const p = pathToTreatment[lang];
+---
+
+<section class="section alt" aria-labelledby="path-heading">
+  <div class="wrap">
+    <div class="center">
+      <h2 id="path-heading">{p.h2}</h2>
+      <p class="lead">{p.lead}</p>
+    </div>
+
+    <ol class="path">
+      {
+        p.steps.map((step) => (
+          <li class="path-step">
+            <h3>{step.title}</h3>
+            <p>{step.body}</p>
+          </li>
+        ))
+      }
+    </ol>
+
+    <div class="center" style="margin-top:34px">
+      <a href={`/${lang}/contact`} class="btn btn-primary">{p.ctaLabel}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Vertical timeline: the shared .steps grid is 4-up, and this journey has
+     five stages — stacking keeps the order obvious and avoids an orphan card. */
+  .path {
+    counter-reset: path;
+    list-style: none;
+    max-width: 760px;
+    margin: 38px auto 0;
+    padding: 0;
+    position: relative;
+  }
+  .path::before {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 12px;
+    bottom: 12px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--blue), #b9d4ef);
+  }
+  .path-step {
+    position: relative;
+    padding: 0 0 26px 60px;
+  }
+  .path-step:last-child {
+    padding-bottom: 0;
+  }
+  .path-step::before {
+    counter-increment: path;
+    content: counter(path);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background: var(--blue);
+    color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    font-size: 1.05rem;
+    box-shadow: 0 6px 14px rgba(21, 101, 192, 0.35);
+  }
+  .path-step h3 {
+    margin: 6px 0 6px;
+    font-size: 1.05rem;
+  }
+  .path-step p {
+    color: var(--muted);
+    font-size: 0.94rem;
+    margin: 0;
+  }
+  @media (max-width: 560px) {
+    .path-step {
+      padding-left: 52px;
+    }
+    .path::before {
+      left: 15px;
+    }
+    .path-step::before {
+      width: 32px;
+      height: 32px;
+      font-size: 0.95rem;
+    }
+  }
+</style>
