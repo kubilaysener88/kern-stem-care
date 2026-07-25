@@ -14,6 +14,7 @@ const accentStyle: Record<string, string> = {
   blue: 'border-top:4px solid var(--blue)',
   teal: 'border-top:4px solid var(--teal)',
   gold: 'border-top:4px solid var(--gold)',
+  green: 'border-top:4px solid #16a34a',
   'teal-border': 'border:1px solid var(--teal)',
 };
 
@@ -68,49 +69,32 @@ const newsletterSuccess =
 <div class="role-banner"><span set:html={c.roleBanner} /></div>
 
 <!-- ============ CORE THERAPIES ============ -->
-<section class="section alt" id="therapies">
+<section class="section" id="therapies">
   <div class="wrap">
     <div class="center">
       <span class="eyebrow">{c.therapies.eyebrow}</span>
       <h2>{c.therapies.h2}</h2>
       <p class="lead">{c.therapies.lead}</p>
     </div>
-    <div class="grid g3" style="margin-top:44px">
-      {c.therapies.cards.map((card) => (
-        <div class="card" style={card.accent ? accentStyle[card.accent] : undefined}>
-          <div class="ico">{card.icon}</div>
-          <h3>{card.title}</h3>
-          <p set:html={card.body} />
-        </div>
-      ))}
+    <div class="grid g4" style="margin-top:44px">
+      {c.therapies.cards.map((card) =>
+        card.slug ? (
+          <a class="card card-link" href={`/${lang}/services/${card.slug}`} style={card.accent ? accentStyle[card.accent] : undefined}>
+            <div class="ico">{card.icon}</div>
+            <h3>{card.title}</h3>
+            <p set:html={card.body} />
+            <span class="card-more">{lang === 'es' ? 'Saber más' : 'Learn more'} →</span>
+          </a>
+        ) : (
+          <div class="card" style={card.accent ? accentStyle[card.accent] : undefined}>
+            <div class="ico">{card.icon}</div>
+            <h3>{card.title}</h3>
+            <p set:html={card.body} />
+          </div>
+        )
+      )}
     </div>
     <div class="disclaimer" style="margin-top:30px" set:html={c.therapies.note} />
-  </div>
-</section>
-
-<!-- ============ MEDIA CAROUSEL ============ -->
-<section class="section" id="showcase" style="padding-top:48px;padding-bottom:48px">
-  <div class="wrap">
-    <div class="center" style="margin-bottom:26px">
-      <span class="eyebrow">{c.showcase.eyebrow}</span>
-      <h2>{c.showcase.h2}</h2>
-    </div>
-    <div class="kc" id="kc">
-      <div class="kc-track" id="kc-track">
-        {c.showcase.slides.map((s) => (
-          <div class="kc-slide">
-            <div class="kc-ph">{s.emoji} <span class="ph">{s.ph}</span></div>
-            <div class="kc-cap"><span>{s.caption}</span></div>
-          </div>
-        ))}
-      </div>
-      <button class="kc-arrow kc-prev" id="kc-prev" aria-label="Previous">‹</button>
-      <button class="kc-arrow kc-next" id="kc-next" aria-label="Next">›</button>
-      <div class="kc-dots" id="kc-dots"></div>
-    </div>
-    <div class="center" style="margin-top:26px">
-      <a href={`/${lang}/contact`} class="btn btn-primary" style="font-size:1.05rem;padding:16px 34px">{c.showcase.ctaBook}</a>
-    </div>
   </div>
 </section>
 
@@ -120,6 +104,34 @@ const newsletterSuccess =
     {c.trust.map((s) => (
       <div><div class={s.isPh ? 'num ph' : 'num'}>{s.num}</div><div class="lbl">{s.label}</div></div>
     ))}
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section alt" id="testimonials">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">{c.testimonials.eyebrow}</span>
+      <h2>{c.testimonials.h2}</h2>
+      <p class="lead">{c.testimonials.lead}</p>
+    </div>
+    <div class="filters" id="filters" role="group" aria-label={lang === 'es' ? 'Filtrar testimonios' : 'Filter testimonials'}>
+      {c.testimonials.filters.map((f, i) => (
+        <button type="button" class={i === 0 ? 'active' : ''} data-filter={f.key} aria-pressed={i === 0 ? 'true' : 'false'}>{f.label}</button>
+      ))}
+    </div>
+    <div class="vgrid" id="vgrid">
+      {c.testimonials.cards.map((card) => (
+        <div class="vcard" data-seg={card.seg}>
+          <div class="vthumb"><div class="tag">{card.tag}</div><div class="play">▶</div><div class="drop">{card.drop}</div></div>
+          <div class="vbody"><h3 class="ph">{card.name}</h3><div class="meta ph">{card.meta}</div><p class="ph">{card.summary}</p></div>
+        </div>
+      ))}
+    </div>
+    <div class="disclaimer" style="margin-top:30px" set:html={c.testimonials.note} />
+    <div class="center" style="margin-top:24px">
+      <a href={`/${lang}/testimonials`} class="btn btn-outline">{c.testimonials.eyebrow}</a>
+    </div>
   </div>
 </section>
 
@@ -215,30 +227,28 @@ const newsletterSuccess =
   </div>
 </section>
 
-<!-- ============ TESTIMONIALS ============ -->
-<section class="section alt" id="testimonials">
+<!-- ============ MEDIA CAROUSEL ============ -->
+<section class="section alt" id="showcase" style="padding-top:48px;padding-bottom:48px">
   <div class="wrap">
-    <div class="center">
-      <span class="eyebrow">{c.testimonials.eyebrow}</span>
-      <h2>{c.testimonials.h2}</h2>
-      <p class="lead">{c.testimonials.lead}</p>
+    <div class="center" style="margin-bottom:26px">
+      <span class="eyebrow">{c.showcase.eyebrow}</span>
+      <h2>{c.showcase.h2}</h2>
     </div>
-    <div class="filters" id="filters" role="group" aria-label={lang === 'es' ? 'Filtrar testimonios' : 'Filter testimonials'}>
-      {c.testimonials.filters.map((f, i) => (
-        <button type="button" class={i === 0 ? 'active' : ''} data-filter={f.key} aria-pressed={i === 0 ? 'true' : 'false'}>{f.label}</button>
-      ))}
+    <div class="kc" id="kc">
+      <div class="kc-track" id="kc-track">
+        {c.showcase.slides.map((s) => (
+          <div class="kc-slide">
+            <div class="kc-ph">{s.emoji} <span class="ph">{s.ph}</span></div>
+            <div class="kc-cap"><span>{s.caption}</span></div>
+          </div>
+        ))}
+      </div>
+      <button class="kc-arrow kc-prev" id="kc-prev" aria-label="Previous">‹</button>
+      <button class="kc-arrow kc-next" id="kc-next" aria-label="Next">›</button>
+      <div class="kc-dots" id="kc-dots"></div>
     </div>
-    <div class="vgrid" id="vgrid">
-      {c.testimonials.cards.map((card) => (
-        <div class="vcard" data-seg={card.seg}>
-          <div class="vthumb"><div class="tag">{card.tag}</div><div class="play">▶</div><div class="drop">{card.drop}</div></div>
-          <div class="vbody"><h3 class="ph">{card.name}</h3><div class="meta ph">{card.meta}</div><p class="ph">{card.summary}</p></div>
-        </div>
-      ))}
-    </div>
-    <div class="disclaimer" style="margin-top:30px" set:html={c.testimonials.note} />
-    <div class="center" style="margin-top:24px">
-      <a href={`/${lang}/testimonials`} class="btn btn-outline">{c.testimonials.eyebrow}</a>
+    <div class="center" style="margin-top:26px">
+      <a href={`/${lang}/contact`} class="btn btn-primary" style="font-size:1.05rem;padding:16px 34px">{c.showcase.ctaBook}</a>
     </div>
   </div>
 </section>
@@ -395,6 +405,29 @@ const newsletterSuccess =
     color: #eaf3fc !important;
     font-size: 1.05rem !important;
     letter-spacing: 0.01em;
+  }
+  /* Clickable therapy cards on the home page (link to each service page). */
+  .card-link {
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .card-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 34px rgba(13, 42, 74, 0.14);
+  }
+  .card-link .card-more {
+    margin-top: auto;
+    padding-top: 14px;
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+  .card-link:hover .card-more {
+    text-decoration: underline;
   }
   .hero-flags {
     display: inline-flex;

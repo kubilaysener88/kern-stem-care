@@ -15,7 +15,9 @@ export interface IconCard {
   icon: string;
   title: string;
   body: string;
-  accent?: 'blue' | 'teal' | 'gold' | 'teal-border';
+  accent?: 'blue' | 'teal' | 'gold' | 'green' | 'teal-border';
+  /** When set, the whole card links to /<lang>/services/<slug> ("Learn more"). */
+  slug?: 'stem-cells' | 'exosomes' | 'fibroblasts' | 'placenta';
 }
 export interface Slide {
   emoji: string;
@@ -273,31 +275,35 @@ const en: HomeContent = {
   ],
   therapies: {
     eyebrow: 'our treatments',
-    h2: 'Four Cellular Therapies. Care Designed Around You.',
+    h2: 'Our Regenerative Therapies. Care Designed Around You.',
     lead: 'Cellular therapy uses specialized cells — and the signaling molecules they release — that can renew themselves and, under specific conditions, support the body\'s own repair processes. It is an active area of regenerative medicine, studied for tissue repair and inflammation. For most specific diseases it remains investigational rather than an approved standard of care. Kern Stem Care is not a clinic. We are the layer between you and the independent, COFEPRIS-licensed clinics and laboratories in Cancún that deliver these therapies: we vet them before they ever reach you, arrange the logistics, and stay with you from the first call through your follow-up after you return home. Below are the four therapies our partner providers work with, and what each one is actually studied for. Explore each therapy in depth: each one has its own page explaining what it is, what researchers are currently studying it for, and what a protocol typically involves at our partner clinics in Cancún.',
     cards: [
       {
         icon: '🧬',
         title: 'Stem Cells',
+        slug: 'stem-cells',
         accent: 'blue',
         body: 'Cells that can renew themselves and develop into other cell types. The most extensively studied of the cellular therapies, researched for its role in tissue repair and in modulating inflammation. The cell source, dose, and route of administration are confirmed by the treating physician during your medical evaluation.',
       },
       {
         icon: '✨',
         title: 'Exosomes',
+        slug: 'exosomes',
         accent: 'teal',
         body: 'Microscopic vesicles released by cells that carry signaling molecules between them. Because they contain no living cells, exosomes are studied as a cell-free approach to tissue repair and communication. A newer field than stem cell research, with evidence still developing; your physician will review what is currently known during your evaluation.',
       },
       {
         icon: '🧫',
         title: 'Fibroblasts',
+        slug: 'fibroblasts',
         accent: 'gold',
         body: 'Cells that produce collagen and build the connective tissue that gives skin its structure. The most narrowly focused of the four therapies: studied mainly for skin, wound, and aesthetic applications rather than systemic conditions. Your physician will confirm whether this approach fits your case and how the cells are prepared.',
       },
       {
         icon: '🌱',
-        title: 'Placental Implants',
-        accent: 'teal',
+        title: 'Freeze-Dried Placenta',
+        slug: 'placenta',
+        accent: 'green',
         body: 'Lyophilized (freeze-dried) placental tissue, naturally rich in growth factors and signaling molecules. Unlike the other three therapies, it is administered as subdermal injections in the lower abdomen. The least established of the four: explored for general support of metabolism, energy, and hormonal balance, and not approved for any specific condition. Your physician will confirm the tissue source, which varies by partner laboratory, and explain what the current evidence does and does not show.',
       },
     ],
@@ -584,31 +590,35 @@ const es: HomeContent = {
   ],
   therapies: {
     eyebrow: 'nuestros tratamientos',
-    h2: 'Cuatro Terapias Celulares. Atención Diseñada Para Ti.',
+    h2: 'Nuestras Terapias Regenerativas. Atención Diseñada Para Ti.',
     lead: 'La terapia celular utiliza células especializadas — y las moléculas de señalización que estas liberan — capaces de renovarse y, bajo condiciones específicas, apoyar los procesos naturales de reparación del cuerpo. Es un área activa de la medicina regenerativa, estudiada en reparación de tejidos e inflamación. Para la mayoría de las enfermedades específicas sigue siendo de carácter investigacional y no un tratamiento aprobado de referencia. Kern Stem Care no es una clínica. Somos el puente entre tú y las clínicas y laboratorios independientes con licencia COFEPRIS en Cancún que aplican estas terapias: los evaluamos antes de que lleguen a ti, organizamos la logística y te acompañamos desde la primera llamada hasta tu seguimiento al regresar a casa. A continuación, las cuatro terapias con las que trabajan nuestros proveedores aliados y lo que se estudia de cada una. Conoce cada terapia a fondo: cada una tiene su propia página donde explicamos qué es, qué se está estudiando actualmente sobre ella y en qué consiste habitualmente un protocolo en nuestras clínicas aliadas en Cancún.',
     cards: [
       {
         icon: '🧬',
         title: 'Células Madre',
+        slug: 'stem-cells',
         accent: 'blue',
         body: 'Células capaces de renovarse y transformarse en otros tipos celulares. La más estudiada de las terapias celulares, investigada por su papel en la reparación de tejidos y en la modulación de la inflamación. La fuente celular, la dosis y la vía de administración las define el médico tratante durante tu evaluación médica.',
       },
       {
         icon: '✨',
         title: 'Exosomas',
+        slug: 'exosomes',
         accent: 'teal',
         body: 'Vesículas microscópicas liberadas por las células que transportan moléculas de señalización entre ellas. Al no contener células vivas, los exosomas se estudian como un enfoque libre de células para la reparación y la comunicación entre tejidos. Es un campo más reciente que el de las células madre, con evidencia aún en desarrollo; tu médico revisará contigo lo que se sabe actualmente durante tu evaluación.',
       },
       {
         icon: '🧫',
         title: 'Fibroblastos',
+        slug: 'fibroblasts',
         accent: 'gold',
         body: 'Células que producen colágeno y construyen el tejido conectivo que da estructura a la piel. La más acotada de las cuatro terapias: se estudia principalmente en aplicaciones de piel, cicatrización y estética, más que en condiciones sistémicas. Tu médico confirmará si este enfoque es adecuado para tu caso y cómo se preparan las células.',
       },
       {
         icon: '🌱',
-        title: 'Implantes de Placenta',
-        accent: 'teal',
+        title: 'Placenta Liofilizada',
+        slug: 'placenta',
+        accent: 'green',
         body: 'Tejido placentario liofilizado, naturalmente rico en factores de crecimiento y moléculas de señalización. A diferencia de las otras tres terapias, se administra mediante inyecciones subdérmicas en el abdomen bajo. La menos consolidada de las cuatro: se explora como apoyo general al metabolismo, la energía y el equilibrio hormonal, y no está aprobada para ninguna condición específica. Tu médico confirmará el origen del tejido, que varía según el laboratorio aliado, y te explicará qué muestra y qué no muestra la evidencia actual.',
       },
     ],
