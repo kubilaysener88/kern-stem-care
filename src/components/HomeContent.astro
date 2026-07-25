@@ -67,6 +67,27 @@ const newsletterSuccess =
 <!-- ============ ROLE DISCLOSURE BANNER ============ -->
 <div class="role-banner"><span set:html={c.roleBanner} /></div>
 
+<!-- ============ CORE THERAPIES ============ -->
+<section class="section alt" id="therapies">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">{c.therapies.eyebrow}</span>
+      <h2>{c.therapies.h2}</h2>
+      <p class="lead">{c.therapies.lead}</p>
+    </div>
+    <div class="grid g3" style="margin-top:44px">
+      {c.therapies.cards.map((card) => (
+        <div class="card" style={card.accent ? accentStyle[card.accent] : undefined}>
+          <div class="ico">{card.icon}</div>
+          <h3>{card.title}</h3>
+          <p set:html={card.body} />
+        </div>
+      ))}
+    </div>
+    <div class="disclaimer" style="margin-top:30px" set:html={c.therapies.note} />
+  </div>
+</section>
+
 <!-- ============ MEDIA CAROUSEL ============ -->
 <section class="section" id="showcase" style="padding-top:48px;padding-bottom:48px">
   <div class="wrap">
@@ -99,27 +120,6 @@ const newsletterSuccess =
     {c.trust.map((s) => (
       <div><div class={s.isPh ? 'num ph' : 'num'}>{s.num}</div><div class="lbl">{s.label}</div></div>
     ))}
-  </div>
-</section>
-
-<!-- ============ CORE THERAPIES ============ -->
-<section class="section alt" id="therapies">
-  <div class="wrap">
-    <div class="center">
-      <span class="eyebrow">{c.therapies.eyebrow}</span>
-      <h2>{c.therapies.h2}</h2>
-      <p class="lead">{c.therapies.lead}</p>
-    </div>
-    <div class="grid g3" style="margin-top:44px">
-      {c.therapies.cards.map((card) => (
-        <div class="card" style={card.accent ? accentStyle[card.accent] : undefined}>
-          <div class="ico">{card.icon}</div>
-          <h3>{card.title}</h3>
-          <p set:html={card.body} />
-        </div>
-      ))}
-    </div>
-    <div class="disclaimer" style="margin-top:30px" set:html={c.therapies.note} />
   </div>
 </section>
 

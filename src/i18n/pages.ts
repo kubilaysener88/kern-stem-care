@@ -86,6 +86,79 @@ const investigationalEN =
 const investigationalES =
   '<strong>Importante:</strong> Kern Stem Care es una agencia de coordinación y no brinda tratamiento ni consejo médico. Estas terapias las ofrecen proveedores independientes y certificados. Muchas terapias regenerativas y celulares no están aprobadas por la FDA de EE.UU. ni Health Canada para enfermedades específicas y se consideran de investigación. Los resultados individuales varían; no se garantiza ningún resultado ni cura.';
 
+/**
+ * The five-step path is the same for every therapy — it describes how Kern
+ * coordinates, not what the clinic applies. Defined once here and rendered on
+ * each service detail page so the wording can never drift between them.
+ */
+export interface JourneyStep {
+  title: string;
+  body: string;
+}
+export interface PathToTreatmentContent {
+  h2: string;
+  lead: string;
+  steps: JourneyStep[];
+  ctaLabel: string;
+}
+
+export const pathToTreatment: Record<Lang, PathToTreatmentContent> = {
+  en: {
+    h2: 'Your Path to Treatment',
+    lead: 'Five steps, from your first conversation to your follow-up back home. A coordinator stays with you through all of them.',
+    steps: [
+      {
+        title: 'Speak with an advisor',
+        body: 'A coordinator answers your questions, explains the process, and tells you which lab studies you will need for your video consultation.',
+      },
+      {
+        title: 'Send your medical records',
+        body: 'Your studies let us prepare a personalized appointment, so every minute of the consultation goes toward structuring your treatment.',
+      },
+      {
+        title: 'Attend your video consultation',
+        body: 'A specialist physician reviews your case and defines the protocol you need. The medical decision is always theirs, never ours.',
+      },
+      {
+        title: 'Arrive in Cancún',
+        body: 'Our team meets you at the airport and takes you to your hotel and to the clinic. You never have to think about logistics on the day of your treatment.',
+      },
+      {
+        title: 'Return home',
+        body: 'We follow your progress after the procedure and stay in contact with you and with the provider.',
+      },
+    ],
+    ctaLabel: 'Talk to an advisor',
+  },
+  es: {
+    h2: 'Tu Camino al Tratamiento',
+    lead: 'Cinco pasos, desde tu primera conversación hasta tu seguimiento de regreso en casa. Un coordinador te acompaña en todos ellos.',
+    steps: [
+      {
+        title: 'Habla con un asesor',
+        body: 'Un coordinador responde tus dudas, te explica el proceso y te indica qué estudios de laboratorio necesitarás para tu videoconsulta.',
+      },
+      {
+        title: 'Envía tus estudios médicos',
+        body: 'Tus estudios nos permiten preparar una cita personalizada, para que cada minuto de la consulta se dedique a estructurar tu tratamiento.',
+      },
+      {
+        title: 'Recibe tu videoconsulta',
+        body: 'Un médico especialista revisa tu caso y define el protocolo que necesitas. La decisión médica siempre es suya, nunca nuestra.',
+      },
+      {
+        title: 'Llegada a Cancún',
+        body: 'Nuestro equipo te recibe en el aeropuerto y te lleva a tu hotel y a la clínica. No tienes que ocuparte de la logística el día de tu aplicación.',
+      },
+      {
+        title: 'Regreso a casa',
+        body: 'Damos seguimiento a tu evolución después del procedimiento y mantenemos contacto contigo y con el proveedor.',
+      },
+    ],
+    ctaLabel: 'Hablar con un asesor',
+  },
+};
+
 const en: PagesSet = {
   services: {
     metaTitle: 'Regenerative Therapies in Cancún, Mexico | Kern Stem Care',
@@ -108,11 +181,9 @@ const en: PagesSet = {
     title: 'Stem Cells',
     lead: 'Here we explain, in simple words, what stem cells are and how they may help you. <span class="ph">[Replace with your own introduction.]</span>',
     sections: [
-      { h2: 'In simple words', body: 'Think of your body like a house. Over time, some parts wear out or get damaged. <strong>Stem cells</strong> are like tiny helpers your own body uses to repair itself and build new parts. They are special because they haven\'t picked a "job" yet — they can turn into many kinds of cells, such as bone, skin, or muscle cells.' },
-      { h2: 'What are stem cells?', body: 'Stem cells are like the "building blocks" of the body. Every day your body makes new cells to replace old or injured ones, and many of those new cells come from stem cells. Scientists study them closely because of the role they play in the body\'s natural repair and regeneration. <span class="ph">[Edit with the specific stem-cell sources your partners use.]</span>' },
-      { h2: 'How may they help you?', body: 'Doctors and clinics study stem cells because they <strong>may</strong> support the body\'s own repair process. Some people look into them for joint discomfort, recovery, or general wellness. Everyone is different, so it\'s normal to have questions — and results are never guaranteed.' },
-      { h2: 'What partners use it for', body: 'Independent clinics in our network apply it within programs such as joint & orthopedic, sports recovery, and wellness. <span class="ph">[List the areas your partners actually offer.]</span>' },
-      { h2: 'What to expect, step by step', body: 'It all starts with a <strong>medical consultation</strong> done by the provider (the clinic), not by us. In that visit they examine you, explain whether the treatment is right for you, and answer your questions. We take care of the rest: booking the appointment, the travel, and supporting you throughout the journey. <span class="ph">[Describe the typical journey.]</span>' },
+      { h2: 'What are stem cells?', body: 'Stem cells are the body\'s building blocks. They can renew themselves and develop into other cell types — bone, cartilage, skin, or muscle, among others — and your body uses them constantly to replace cells that wear out or become damaged. Of the cellular therapies coordinated in our network, they are the most extensively studied, with decades of published research behind them. The specific cell source is confirmed by the treating physician and varies by partner laboratory.' },
+      { h2: 'How could they help you?', body: 'Research focuses on their role in supporting the body\'s own repair processes, particularly in tissue repair and in modulating inflammation. It is important to be clear about the status of this work: for most specific conditions, stem cell therapy remains investigational rather than an approved standard of care. The evidence is still developing, individual responses vary, and no outcome can be guaranteed — by us or by any provider.' },
+      { h2: 'What is it studied for?', body: 'Independent clinics in our network apply stem cell protocols within programs such as:<br><br><strong>Joint and orthopedic</strong> — cartilage wear, tendon and joint discomfort, and mobility.<br><strong>Sports injury and recovery</strong> — soft-tissue recovery in active patients and athletes.<br><strong>Immune wellness</strong> — programs supporting immune health and resilience.<br><strong>Anti-aging and longevity</strong> — vitality-oriented wellness programs.<br><strong>Senior health</strong> — mobility and quality-of-life programs for older adults.<br><br>Whether any of these applies to your situation is determined by the treating physician during your evaluation, not by us.' },
     ],
     disclaimer: investigationalEN,
   },
@@ -123,9 +194,9 @@ const en: PagesSet = {
     title: 'Exosomes',
     lead: 'An overview of the exosome therapy our partner network provides. <span class="ph">[Replace with your own introduction.]</span>',
     sections: [
-      { h2: 'What it is', body: 'Exosomes are microscopic vesicles released by cells that carry signaling molecules, studied for their role in cell-to-cell communication and regenerative processes. <span class="ph">[Edit description.]</span>' },
-      { h2: 'What partners use it for', body: 'Used by independent clinics within regenerative and wellness programs. <span class="ph">[List the areas your partners actually offer.]</span>' },
-      { h2: 'What to expect', body: 'The provider evaluates your case first; we handle scheduling, travel, and on-the-ground support. <span class="ph">[Describe the typical journey.]</span>' },
+      { h2: 'What are exosomes?', body: 'Exosomes are microscopic vesicles released by cells that carry signaling molecules from one cell to another — essentially the messages cells use to communicate. What distinguishes them from the other therapies is that they contain no living cells: exosome preparations are studied as a cell-free approach, which is why they are sometimes described as carrying the signal without the cell that produced it.' },
+      { h2: 'How could they help you?', body: 'Research focuses on their role in cell-to-cell communication and in the signaling involved in tissue repair. This is a more recent field than stem cell research, and the evidence base is correspondingly smaller and still developing. Exosome preparations are not approved for the treatment of specific diseases, and no outcome can be guaranteed. Your physician will review with you what current research does and does not show.' },
+      { h2: 'What is it studied for?', body: 'Independent clinics in our network apply exosome protocols within programs such as:<br><br><strong>Regenerative and recovery programs</strong> — often alongside other cellular therapies rather than on their own.<br><strong>Aesthetic and skin</strong> — skin quality and rejuvenation programs.<br><strong>Immune wellness</strong> — general wellness and resilience support.<br><strong>Anti-aging and longevity</strong> — vitality-oriented programs.<br><br>Whether any of these applies to your situation is determined by the treating physician during your evaluation, not by us.' },
     ],
     disclaimer: investigationalEN,
   },
@@ -136,9 +207,9 @@ const en: PagesSet = {
     title: 'Fibroblasts',
     lead: 'An overview of the fibroblast therapy our partner network provides. <span class="ph">[Replace with your own introduction.]</span>',
     sections: [
-      { h2: 'What it is', body: 'Fibroblasts are cells that produce collagen and support connective tissue, studied in skin, wound, and regenerative applications. <span class="ph">[Edit description.]</span>' },
-      { h2: 'What partners use it for', body: 'A natural fit for aesthetic & skin programs offered by independent clinics. <span class="ph">[List the areas your partners actually offer.]</span>' },
-      { h2: 'What to expect', body: 'A provider-led evaluation comes first; we coordinate everything around your visit. <span class="ph">[Describe the typical journey.]</span>' },
+      { h2: 'What are fibroblasts?', body: 'Fibroblasts are the cells that produce collagen and build the connective tissue that gives skin its structure and firmness. They are the working cells of the dermis: when skin is injured, fibroblasts are largely responsible for rebuilding the tissue underneath. Of the four therapies coordinated in our network, this is the most narrowly focused — its research is concentrated in skin and wound applications rather than systemic conditions.' },
+      { h2: 'How could they help you?', body: 'Research focuses on their role in collagen production and in the repair of skin and connective tissue. Because the field is concentrated on localized applications, fibroblast therapy is generally studied for the skin itself rather than for internal or systemic conditions. It is not approved as a treatment for specific diseases, individual responses vary, and no outcome can be guaranteed.' },
+      { h2: 'What is it studied for?', body: 'Independent clinics in our network apply fibroblast protocols within programs such as:<br><br><strong>Aesthetic and skin</strong> — skin quality, firmness, and rejuvenation.<br><strong>Wound and scar applications</strong> — support for skin repair processes.<br><strong>Anti-aging programs</strong> — often combined with other therapies rather than used alone.<br><br>If your interest is in joint, orthopedic, or systemic concerns, the physician will likely discuss a different therapy with you. Suitability is determined during your medical evaluation, not by us.' },
     ],
     disclaimer: investigationalEN,
   },
@@ -219,11 +290,9 @@ const es: PagesSet = {
     title: 'Células Madre',
     lead: 'Aquí te explicamos, con palabras sencillas, qué son las células madre y cómo podrían ayudarte. <span class="ph">[Reemplazar con tu introducción.]</span>',
     sections: [
-      { h2: 'En pocas palabras', body: 'Imagina que tu cuerpo es como una casa. Con el tiempo, algunas partes se desgastan o se dañan. Las <strong>células madre</strong> son como pequeñas ayudantes que tu propio cuerpo usa para repararse y crear partes nuevas. Son especiales porque todavía no tienen un "trabajo fijo": pueden convertirse en muchos tipos de células, por ejemplo de hueso, de piel o de músculo.' },
-      { h2: '¿Qué son las células madre?', body: 'Las células madre son como los "ladrillos" con los que se construye el cuerpo. Todos los días tu cuerpo fabrica células nuevas para reemplazar a las viejas o dañadas, y muchas de esas células nuevas nacen a partir de células madre. Los científicos las estudian mucho por el papel que tienen en la reparación y regeneración natural del cuerpo. <span class="ph">[Editar con las fuentes específicas que usan tus aliados.]</span>' },
-      { h2: '¿Cómo podrían ayudarte?', body: 'Los médicos y las clínicas estudian las células madre porque <strong>podrían</strong> apoyar el proceso natural de reparación del propio cuerpo. Algunas personas se interesan en ellas por molestias en las articulaciones, para recuperarse o para su bienestar general. Cada persona es diferente, así que es normal tener dudas — y los resultados nunca están garantizados.' },
-      { h2: 'Para qué la usan los aliados', body: 'Las clínicas independientes de nuestra red la aplican en programas como articular y ortopédico, recuperación deportiva y bienestar. <span class="ph">[Lista las áreas que tus aliados realmente ofrecen.]</span>' },
-      { h2: 'Qué esperar, paso a paso', body: 'Todo empieza con una <strong>consulta médica</strong> que hace el proveedor (la clínica), no nosotros. En esa consulta te revisan, te explican si el tratamiento es adecuado para ti y te resuelven tus dudas. Nosotros nos encargamos de lo demás: agendar la cita, el viaje y acompañarte durante el proceso. <span class="ph">[Describe el proceso típico.]</span>' },
+      { h2: '¿Qué son las células madre?', body: 'Las células madre son los ladrillos con los que se construye el cuerpo. Pueden renovarse a sí mismas y transformarse en otros tipos de células —hueso, cartílago, piel o músculo, entre otras— y tu cuerpo las usa constantemente para reemplazar las células que se desgastan o se dañan. De las terapias celulares que coordinamos, son las más estudiadas, con décadas de investigación publicada. El origen específico de las células lo confirma el médico tratante y varía según el laboratorio aliado.' },
+      { h2: '¿Cómo podrían ayudarte?', body: 'La investigación se centra en su papel para apoyar los procesos naturales de reparación del cuerpo, en particular en la reparación de tejidos y en la modulación de la inflamación. Es importante ser claros sobre el estado de este trabajo: para la mayoría de las condiciones específicas, la terapia con células madre sigue siendo de carácter investigacional y no un tratamiento aprobado de referencia. La evidencia está en desarrollo, cada persona responde distinto y ningún resultado puede garantizarse — ni por nosotros ni por ningún proveedor.' },
+      { h2: '¿Para qué se estudia?', body: 'Las clínicas independientes de nuestra red aplican protocolos con células madre en programas como:<br><br><strong>Articular y ortopédico</strong> — desgaste de cartílago, molestias en tendones y articulaciones, y movilidad.<br><strong>Lesiones deportivas y recuperación</strong> — recuperación de tejidos blandos en pacientes activos y atletas.<br><strong>Bienestar inmunológico</strong> — programas de apoyo a la salud inmune.<br><strong>Antienvejecimiento y longevidad</strong> — programas orientados a la vitalidad.<br><strong>Salud del adulto mayor</strong> — programas de movilidad y calidad de vida.<br><br>Si alguno de estos aplica a tu situación lo determina el médico tratante durante tu evaluación, no nosotros.' },
     ],
     disclaimer: investigationalES,
   },
@@ -234,9 +303,9 @@ const es: PagesSet = {
     title: 'Exosomas',
     lead: 'Un resumen de la terapia con exosomas que ofrece nuestra red de aliados. <span class="ph">[Reemplazar con tu introducción.]</span>',
     sections: [
-      { h2: 'Qué es', body: 'Los exosomas son vesículas microscópicas liberadas por las células que transportan moléculas de señalización, estudiadas por su papel en la comunicación entre células y los procesos regenerativos. <span class="ph">[Editar descripción.]</span>' },
-      { h2: 'Para qué la usan los aliados', body: 'Empleados por clínicas independientes dentro de programas regenerativos y de bienestar. <span class="ph">[Lista las áreas que tus aliados realmente ofrecen.]</span>' },
-      { h2: 'Qué esperar', body: 'El proveedor evalúa tu caso primero; nosotros gestionamos la agenda, el viaje y el acompañamiento presencial. <span class="ph">[Describe el proceso típico.]</span>' },
+      { h2: '¿Qué son los exosomas?', body: 'Los exosomas son vesículas microscópicas que las células liberan para transportar moléculas de señalización de una célula a otra: son, en esencia, los mensajes que las células usan para comunicarse. Lo que los distingue de las otras terapias es que no contienen células vivas; las preparaciones de exosomas se estudian como un enfoque libre de células, por eso a veces se describen como la señal sin la célula que la produjo.' },
+      { h2: '¿Cómo podrían ayudarte?', body: 'La investigación se centra en su papel en la comunicación entre células y en la señalización involucrada en la reparación de tejidos. Es un campo más reciente que el de las células madre, por lo que la base de evidencia es menor y sigue en desarrollo. Las preparaciones de exosomas no están aprobadas para tratar enfermedades específicas y ningún resultado puede garantizarse. Tu médico revisará contigo qué muestra y qué no muestra la investigación actual.' },
+      { h2: '¿Para qué se estudia?', body: 'Las clínicas independientes de nuestra red aplican protocolos con exosomas en programas como:<br><br><strong>Programas regenerativos y de recuperación</strong> — con frecuencia junto a otras terapias celulares, más que de forma aislada.<br><strong>Estética y piel</strong> — programas de calidad de la piel y rejuvenecimiento.<br><strong>Bienestar inmunológico</strong> — apoyo general al bienestar.<br><strong>Antienvejecimiento y longevidad</strong> — programas orientados a la vitalidad.<br><br>Si alguno de estos aplica a tu situación lo determina el médico tratante durante tu evaluación, no nosotros.' },
     ],
     disclaimer: investigationalES,
   },
@@ -247,9 +316,9 @@ const es: PagesSet = {
     title: 'Fibroblastos',
     lead: 'Un resumen de la terapia con fibroblastos que ofrece nuestra red de aliados. <span class="ph">[Reemplazar con tu introducción.]</span>',
     sections: [
-      { h2: 'Qué es', body: 'Los fibroblastos son células que producen colágeno y dan soporte al tejido conectivo, estudiadas en aplicaciones de piel, cicatrización y regeneración. <span class="ph">[Editar descripción.]</span>' },
-      { h2: 'Para qué la usan los aliados', body: 'Encajan de forma natural con los programas de estética y piel que ofrecen las clínicas independientes. <span class="ph">[Lista las áreas que tus aliados realmente ofrecen.]</span>' },
-      { h2: 'Qué esperar', body: 'Primero una evaluación dirigida por el proveedor; nosotros coordinamos todo alrededor de tu visita. <span class="ph">[Describe el proceso típico.]</span>' },
+      { h2: '¿Qué son los fibroblastos?', body: 'Los fibroblastos son las células que producen colágeno y construyen el tejido conectivo que da estructura y firmeza a la piel. Son las células que trabajan en la dermis: cuando la piel se lesiona, los fibroblastos son en buena medida los responsables de reconstruir el tejido que hay debajo. De las cuatro terapias que coordinamos, esta es la más acotada — su investigación se concentra en aplicaciones de piel y cicatrización, más que en condiciones sistémicas.' },
+      { h2: '¿Cómo podrían ayudarte?', body: 'La investigación se centra en su papel en la producción de colágeno y en la reparación de la piel y el tejido conectivo. Como el campo se concentra en aplicaciones localizadas, la terapia con fibroblastos se estudia en general para la piel misma, más que para condiciones internas o sistémicas. No está aprobada como tratamiento de enfermedades específicas, cada persona responde distinto y ningún resultado puede garantizarse.' },
+      { h2: '¿Para qué se estudia?', body: 'Las clínicas independientes de nuestra red aplican protocolos con fibroblastos en programas como:<br><br><strong>Estética y piel</strong> — calidad, firmeza y rejuvenecimiento de la piel.<br><strong>Cicatrices y heridas</strong> — apoyo a los procesos de reparación de la piel.<br><strong>Programas antienvejecimiento</strong> — con frecuencia combinados con otras terapias, más que de forma aislada.<br><br>Si tu interés está en temas articulares, ortopédicos o sistémicos, es probable que el médico te plantee una terapia distinta. La idoneidad se determina durante tu evaluación médica, no por nosotros.' },
     ],
     disclaimer: investigationalES,
   },
