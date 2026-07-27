@@ -39,7 +39,9 @@ const newsletterSuccess =
       {c.hero.tagline && <p class="hero-tagline">{c.hero.tagline}</p>}
       {c.hero.p && <p>{c.hero.p}</p>}
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
-        {c.hero.pills.map((pill) => <span class="hero-flags" style="margin:0">{pill}</span>)}
+        {c.hero.pills.map((pill) => (
+          <a class="hero-flags pill-link" style="margin:0" href={`/${lang}/services/${pill.slug}`}>{pill.label}</a>
+        ))}
       </div>
       <div class="hero-cta">
         <a href={`/${lang}/contact`} class="btn btn-primary">{c.hero.ctaPrimary}</a>
@@ -406,6 +408,19 @@ const newsletterSuccess =
     font-size: 1.05rem !important;
     letter-spacing: 0.01em;
   }
+  /* Hero chips are links to each service page. */
+  .pill-link {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+  }
+  .pill-link:hover {
+    background: rgba(255, 255, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.45);
+    transform: translateY(-2px);
+  }
+
   /* Clickable therapy cards on the home page (link to each service page). */
   .card-link {
     display: flex;

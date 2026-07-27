@@ -88,7 +88,8 @@ export interface HomeContent {
     /** Short pipe-separated value props under the H1 (e.g. "Vetted clinics | …"). */
     tagline?: string;
     p: string;
-    pills: string[];
+    /** Hero chips under the tagline; each links to its service page. */
+    pills: { label: string; slug: 'stem-cells' | 'exosomes' | 'fibroblasts' | 'placenta' }[];
     ctaPrimary: string;
     ctaGhost: string;
     card: {
@@ -234,7 +235,12 @@ const en: HomeContent = {
     h1: 'Your Trusted Guide to the Best Stem Cell Care in Cancún',
     tagline: 'Vetted clinics | Transparent pricing | Complete care',
     p: "",
-    pills: ['🧬 Stem Cells', '✨ Exosomes', '🧫 Fibroblasts'],
+    pills: [
+      { label: '🧬 Stem Cells', slug: 'stem-cells' },
+      { label: '✨ Exosomes', slug: 'exosomes' },
+      { label: '🧫 Fibroblasts', slug: 'fibroblasts' },
+      { label: '🌱 Freeze-Dried Placenta', slug: 'placenta' },
+    ],
     ctaPrimary: 'Request Free Consultation',
     ctaGhost: 'What We Coordinate',
     card: {
@@ -549,7 +555,12 @@ const es: HomeContent = {
     h1: 'Tu Guía de Confianza para la Mejor Atención en Células Madre en Cancún',
     tagline: 'Clínicas verificadas | Precios transparentes | Atención completa',
     p: '',
-    pills: ['🧬 Células Madre', '✨ Exosomas', '🧫 Fibroblastos'],
+    pills: [
+      { label: '🧬 Células Madre', slug: 'stem-cells' },
+      { label: '✨ Exosomas', slug: 'exosomes' },
+      { label: '🧫 Fibroblastos', slug: 'fibroblasts' },
+      { label: '🌱 Placenta Liofilizada', slug: 'placenta' },
+    ],
     ctaPrimary: 'Solicitar Consulta Gratis',
     ctaGhost: 'Qué Coordinamos',
     card: {
