@@ -12,7 +12,8 @@ interface Props {
 const { lang } = Astro.props;
 const p = pagesContent[lang].services;
 const more = lang === 'es' ? 'Saber más' : 'Learn more';
-const sectionHeading = lang === 'es' ? 'Terapias celulares que coordinamos' : 'Cellular therapies we coordinate';
+const sectionHeading =
+  lang === 'es' ? 'Terapias regenerativas que coordinamos' : 'Regenerative therapies we coordinate';
 ---
 
 <SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription}>
@@ -26,14 +27,12 @@ const sectionHeading = lang === 'es' ? 'Terapias celulares que coordinamos' : 'C
       <div class="grid g4">
         {
           p.cards.map((card) => (
-            <div class="card">
+            <a class="card card-link" href={`/${lang}/services/${card.slug}`}>
               <div class="ico" aria-hidden="true">{card.icon}</div>
               <h3>{card.title}</h3>
               <p set:html={card.body} />
-              <p style="margin-top:14px">
-                <a href={`/${lang}/services/${card.slug}`} aria-label={`${more}: ${card.title}`}>{more} →</a>
-              </p>
-            </div>
+              <span class="card-more">{more} →</span>
+            </a>
           ))
         }
       </div>
