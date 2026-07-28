@@ -36,6 +36,11 @@ export default defineConfig({
 
   integrations: [
     sitemap({
+      // Keep the bare root out of the sitemap: it's a noindex redirect to /en, so
+      // listing it told Google to index a page that asks not to be indexed —
+      // which is what Search Console reports as "Page with redirect" /
+      // "Excluded by 'noindex' tag".
+      filter: (page) => page !== `${SITE_URL}/`,
       i18n: {
         defaultLocale: 'en',
         locales: {
