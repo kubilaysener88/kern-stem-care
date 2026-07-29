@@ -56,7 +56,7 @@ const en: LegalSet = {
     backHome: '← Back to home',
     otherLabel: 'Terms of Use',
     rights: '',
-    legalEntityPh: '[legal entity name]',
+    legalEntityPh: 'Kern Corsa, S.A. de C.V.',
   },
   terms: {
     slug: 'terms',
@@ -84,7 +84,7 @@ const en: LegalSet = {
     backHome: '← Back to home',
     otherLabel: 'Privacy Policy',
     rights: '',
-    legalEntityPh: '[legal entity name]',
+    legalEntityPh: 'Kern Corsa, S.A. de C.V.',
   },
   medical: {
     slug: 'medical-disclaimer',
@@ -112,7 +112,7 @@ const en: LegalSet = {
     backHome: '← Back to home',
     otherLabel: 'Privacy Policy',
     rights: '',
-    legalEntityPh: '[legal entity name]',
+    legalEntityPh: 'Kern Corsa, S.A. de C.V.',
   },
 };
 
@@ -142,7 +142,7 @@ const es: LegalSet = {
     backHome: '← Volver al inicio',
     otherLabel: 'Términos de Uso',
     rights: '',
-    legalEntityPh: '[legal entity name]',
+    legalEntityPh: 'Kern Corsa, S.A. de C.V.',
   },
   terms: {
     slug: 'terms',
@@ -170,7 +170,7 @@ const es: LegalSet = {
     backHome: '← Volver al inicio',
     otherLabel: 'Política de Privacidad',
     rights: '',
-    legalEntityPh: '[legal entity name]',
+    legalEntityPh: 'Kern Corsa, S.A. de C.V.',
   },
   medical: {
     slug: 'medical-disclaimer',
@@ -198,7 +198,7 @@ const es: LegalSet = {
     backHome: '← Volver al inicio',
     otherLabel: 'Política de Privacidad',
     rights: '',
-    legalEntityPh: '[legal entity name]',
+    legalEntityPh: 'Kern Corsa, S.A. de C.V.',
   },
 };
 
