@@ -12,7 +12,9 @@ const { sections } = Astro.props;
     sections.map((s) => (
       <div class="prose-block">
         <h2>{s.h2}</h2>
-        <p set:html={s.body} />
+        {/* A div, not a p: section bodies may contain <ul> lists, which are
+            invalid inside a paragraph and get hoisted out by the browser. */}
+        <div class="prose-body" set:html={s.body} />
       </div>
     ))
   }
@@ -30,8 +32,32 @@ const { sections } = Astro.props;
     font-size: 1.4rem;
     margin-bottom: 0.4em;
   }
+  .prose-body,
   .prose-block p {
     color: var(--muted);
     margin: 0;
+  }
+  /* Section bodies are injected with set:html, so they carry no scoping
+     attribute — these have to be :global() to reach them. The global reset
+     strips list markers, so the disc is restored explicitly. */
+  .prose-body :global(p + p) {
+    margin-top: 12px;
+  }
+  .prose-body :global(ul) {
+    list-style: disc;
+    margin: 12px 0 0;
+    padding-left: 22px;
+  }
+  .prose-body :global(li) {
+    margin-bottom: 7px;
+  }
+  .prose-body :global(li::marker) {
+    color: var(--blue);
+  }
+  .prose-body :global(li:last-child) {
+    margin-bottom: 0;
+  }
+  .prose-body :global(ul + p) {
+    margin-top: 14px;
   }
 </style>

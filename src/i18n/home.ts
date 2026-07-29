@@ -260,7 +260,7 @@ const en: HomeContent = {
     },
   },
   roleBanner:
-    'ℹ️ <strong>Kern Stem Care is a medical coordination agency, not a clinic.</strong> All medical care is provided by independent, licensed clinics, physicians, and laboratories in Cancún, Mexico. We coordinate and guide your journey.',
+    'ℹ️ <strong>Kern Stem Care is a legally registered medical coordination agency based in Cancún, not a clinic.</strong> All medical care is provided by independent, licensed clinics, physicians, and laboratories in Cancún, Mexico. We coordinate and guide your journey.',
   showcase: {
     eyebrow: 'More Than Healthcare',
     h2: 'Every Moment of Your Care Matters',
@@ -316,9 +316,9 @@ const en: HomeContent = {
     note: '<strong>Note:</strong> These therapies are provided by independent, licensed partner laboratories and clinics. Many are not approved by the U.S. FDA or Health Canada for specific diseases and are considered investigational. Your treating physician confirms the source, dose, and route of administration — and what the current evidence does and does not show — during your medical evaluation. Descriptions here are educational and are not a promise of any result.',
   },
   about: {
-    eyebrow: 'About Kern Stem Care',
+    eyebrow: 'Why Work With Kern Stem Care',
     h2: 'Your single, trusted point of contact in Mexico',
-    p: 'Think of Kern Stem Care as your personal scout in Mexico. The hard part — knowing which clinics, stem-cell laboratories, and physicians in Cancún are genuinely qualified — is already done for you. Every provider in the network is independent and licensed, vetted before it ever reaches you, so a process that feels overwhelming turns into a few clear choices. Kern Stem Care is the agency; the medical care is delivered by those independent providers.',
+    p: 'Choosing a stem cell clinic from another country is the hardest part: promises you cannot verify, pricing that does not add up, and no one on your side when something changes. That work is already done for you. Every clinic, laboratory, and physician in our Cancún network passed our review before it ever reached you — so what would be a leap into the unknown becomes a few clear choices. Kern Stem Care is the agency that coordinates; the medical care is delivered by those independent providers.',
     checks: [
       'We connect you only with clinics and labs licensed under Mexican health authority (COFEPRIS)',
       'One bilingual coordinator from first call to follow-up',
@@ -329,7 +329,7 @@ const en: HomeContent = {
     mediaPh: '📷 Replace with photo of your team / Cancún<br><span class="ph">[team-cancun.jpg]</span>',
   },
   why: {
-    eyebrow: 'Why Work With Kern Stem Care',
+    eyebrow: 'What We Do For You',
     h2: 'An agency that takes the guesswork out of the journey',
     lead: 'Traveling abroad for care is overwhelming on your own. As your coordination agency, we vet the providers, manage the logistics, and stay by your side — so you can focus on your health.',
     cards: [
@@ -428,7 +428,7 @@ const en: HomeContent = {
     h2: 'Questions patients ask us most',
     items: [
       { q: 'Is this treatment approved by the FDA or Health Canada?', a: 'Many regenerative therapies are not FDA- or Health Canada-approved for specific diseases and are considered investigational. We are transparent about the regulatory and evidence status of every program during your consultation. <span class="ph">[Customize.]</span>' },
-      { q: 'Are you a clinic?', a: 'No. Kern Stem Care is a medical coordination agency. We guide you and arrange your travel, lodging, appointments, and support. The medical evaluation and treatment are provided by independent, licensed clinics and physicians in our Cancún network.' },
+      { q: 'Are you a clinic?', a: 'No. Kern Stem Care is a medical coordination agency legally registered in Cancún, Mexico. We guide you and arrange your travel, lodging, appointments, and support. The medical evaluation and treatment are provided by independent, licensed clinics and physicians in our Cancún network.' },
       { q: 'How do I travel to Cancún from the U.S. or Canada?', a: 'Cancún International (CUN) has direct flights from most major U.S. and Canadian cities. We provide flight guidance, airport pickup, and lodging near the partner clinic. <span class="ph">[Add travel times.]</span>' },
       { q: 'How much does it cost, and who do I pay?', a: 'You receive a transparent written quote before committing. Medical fees are set by and paid to the provider; our coordination fee and travel costs are itemized separately so you always know what you are paying for. <span class="ph">[Explain your fee model.]</span>' },
       { q: 'Are the clinics and labs licensed?', a: "We only connect patients with clinics, physicians, and laboratories licensed under Mexico's health authority (COFEPRIS). We can share each partner's credentials on request. <span class=\"ph\">[Describe your vetting.]</span>" },
@@ -504,7 +504,7 @@ const en: HomeContent = {
   },
   footer: {
     blurb:
-      'Medical coordination agency in Cancún, guiding patients from the United States and Canada to independent, licensed clinics, physicians, and laboratories.',
+      'Legally registered medical coordination agency based in Cancún, guiding patients from the United States and Canada to independent, licensed clinics, physicians, and laboratories.',
     cols: [
       {
         title: 'Explore',
@@ -530,7 +530,7 @@ const en: HomeContent = {
     privacy: 'Privacy Policy',
     terms: 'Terms of Use',
     rights: 'All rights reserved.',
-    legalEntityPh: '[legal entity name]',
+    legalEntityPh: 'Kern Corsa, S.A. de C.V.',
   },
   whatsappLabel: 'Chat with us',
 };
@@ -580,7 +580,7 @@ const es: HomeContent = {
     },
   },
   roleBanner:
-    'ℹ️ <strong>Kern Stem Care es una agencia de coordinación médica, no una clínica.</strong> Toda la atención médica la brindan clínicas, médicos y laboratorios independientes y certificados en Cancún, México. Nosotros coordinamos y guiamos tu proceso.',
+    'ℹ️ <strong>Kern Stem Care es una agencia de coordinación médica legalmente constituida en Cancún, no una clínica.</strong> Toda la atención médica la brindan clínicas, médicos y laboratorios independientes y certificados en Cancún, México. Nosotros coordinamos y guiamos tu proceso.',
   showcase: {
     eyebrow: 'Más Que Atención Médica',
     h2: 'Cada Momento de Tu Atención Importa',
@@ -636,9 +636,9 @@ const es: HomeContent = {
     note: '<strong>Nota:</strong> Estas terapias las brindan laboratorios y clínicas aliadas independientes y certificadas. Muchas no están aprobadas por la FDA de EE.UU. ni Health Canada para enfermedades específicas y se consideran de investigación. Tu médico tratante confirma el origen, la dosis y la vía de administración — y qué muestra y qué no muestra la evidencia actual — durante tu evaluación médica. Las descripciones aquí son educativas y no son una promesa de ningún resultado.',
   },
   about: {
-    eyebrow: 'Sobre Kern Stem Care',
+    eyebrow: 'Por Qué Trabajar con Kern Stem Care',
     h2: 'Tu único punto de contacto de confianza en México',
-    p: 'Piensa en Kern Stem Care como tu explorador personal en México. La parte difícil —saber qué clínicas, laboratorios de células madre y médicos de Cancún están realmente capacitados— ya está hecha por ti. Cada proveedor de la red es independiente y certificado, verificado antes de llegar a ti, de modo que un proceso que parece abrumador se vuelve unas pocas decisiones claras. Kern Stem Care es la agencia; la atención médica la brindan esos proveedores independientes.',
+    p: 'Elegir una clínica de células madre desde otro país es la parte más difícil: promesas que no puedes verificar, precios que no cuadran y nadie de tu lado si algo cambia. Ese trabajo ya lo hicimos por ti. Cada clínica, laboratorio y médico de nuestra red en Cancún pasó por nuestra revisión antes de llegar a ti, así que lo que para otros es un salto al vacío, para ti se vuelve unas pocas decisiones claras. Kern Stem Care es la agencia que coordina; la atención médica la brindan esos proveedores independientes.',
     checks: [
       'Te conectamos solo con clínicas y laboratorios certificados por la autoridad sanitaria mexicana (COFEPRIS)',
       'Un coordinador bilingüe desde la primera llamada hasta el seguimiento',
@@ -649,7 +649,7 @@ const es: HomeContent = {
     mediaPh: '📷 Reemplazar con foto de tu equipo / Cancún<br><span class="ph">[equipo-cancun.jpg]</span>',
   },
   why: {
-    eyebrow: 'Por Qué Trabajar con Kern Stem Care',
+    eyebrow: 'Lo Que Hacemos Por Ti',
     h2: 'Una agencia que elimina la incertidumbre del proceso',
     lead: 'Viajar al extranjero por atención médica es abrumador si lo haces solo. Como tu agencia de coordinación, evaluamos a los proveedores, gestionamos la logística y permanecemos a tu lado — para que te concentres en tu salud.',
     cards: [
@@ -732,7 +732,7 @@ const es: HomeContent = {
     h2: 'Las preguntas más frecuentes',
     items: [
       { q: '¿Está aprobado este tratamiento por la FDA o Health Canada?', a: 'Muchas terapias regenerativas no están aprobadas por la FDA ni Health Canada para enfermedades específicas y se consideran de investigación. Somos transparentes sobre el estatus regulatorio y de evidencia de cada programa durante su consulta. <span class="ph">[Personalizar.]</span>' },
-      { q: '¿Ustedes son una clínica?', a: 'No. Kern Stem Care es una agencia de coordinación médica. Te guiamos y gestionamos tu viaje, hospedaje, citas y acompañamiento. La evaluación y el tratamiento médico los brindan clínicas y médicos independientes y certificados de nuestra red en Cancún.' },
+      { q: '¿Ustedes son una clínica?', a: 'No. Kern Stem Care es una agencia de coordinación médica legalmente constituida en Cancún, México. Te guiamos y gestionamos tu viaje, hospedaje, citas y acompañamiento. La evaluación y el tratamiento médico los brindan clínicas y médicos independientes y certificados de nuestra red en Cancún.' },
       { q: '¿Cómo viajo a Cancún desde EE.UU. o Canadá?', a: 'El Aeropuerto Internacional de Cancún (CUN) tiene vuelos directos desde la mayoría de las ciudades de EE.UU. y Canadá. Ofrecemos guía de vuelos, traslado del aeropuerto y hospedaje cerca de la clínica aliada. <span class="ph">[Agregar tiempos.]</span>' },
       { q: '¿Cuánto cuesta y a quién le pago?', a: 'Recibes una cotización por escrito y transparente antes de comprometerte. Los honorarios médicos los fija y los cobra el proveedor; nuestra tarifa de coordinación y los costos de viaje se detallan por separado para que siempre sepas qué pagas. <span class="ph">[Explicar tu modelo de tarifa.]</span>' },
       { q: '¿Las clínicas y laboratorios están certificados?', a: 'Solo conectamos a los pacientes con clínicas, médicos y laboratorios certificados por la autoridad sanitaria de México (COFEPRIS). Podemos compartir las credenciales de cada aliado si lo solicitas. <span class="ph">[Describir tu proceso de evaluación.]</span>' },
@@ -808,7 +808,7 @@ const es: HomeContent = {
   },
   footer: {
     blurb:
-      'Agencia de coordinación médica en Cancún, que guía a pacientes de Estados Unidos y Canadá hacia clínicas, médicos y laboratorios independientes y certificados.',
+      'Agencia de coordinación médica legalmente constituida en Cancún, que guía a pacientes de Estados Unidos y Canadá hacia clínicas, médicos y laboratorios independientes y certificados.',
     cols: [
       {
         title: 'Explorar',
@@ -834,7 +834,7 @@ const es: HomeContent = {
     privacy: 'Política de Privacidad',
     terms: 'Términos de Uso',
     rights: 'Todos los derechos reservados.',
-    legalEntityPh: '[legal entity name]',
+    legalEntityPh: 'Kern Corsa, S.A. de C.V.',
   },
   whatsappLabel: 'Escríbenos',
 };
