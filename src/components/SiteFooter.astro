@@ -34,10 +34,8 @@ const serviceLinks = [
   { href: `${base}/services/placenta`, label: t.placenta },
 ];
 
-const legalNotice =
-  lang === 'es'
-    ? 'Kern Stem Care es una agencia de coordinación médica, no una clínica. La información de este sitio no constituye consejo médico.'
-    : 'Kern Stem Care is a medical coordination agency, not a clinic. The information on this site is not medical advice.';
+// The agency/medical notice that used to sit here now lives in the single site-wide
+// disclaimer rendered above the footer (LegalDisclaimer.astro), so it isn't repeated.
 
 const footMarkSvg = `<svg viewBox="0 0 30 30" width="23" height="23" aria-hidden="true"><defs><clipPath id="fm"><circle cx="11.5" cy="15" r="8"/></clipPath></defs><circle cx="18.5" cy="15" r="8" fill="#ffffff" opacity="0.28" clip-path="url(#fm)"/><circle cx="11.5" cy="15" r="8" fill="none" stroke="#ffffff" stroke-width="1.5"/><circle cx="18.5" cy="15" r="8" fill="none" stroke="#ffffff" stroke-width="1.5"/><circle cx="15" cy="15" r="2.3" fill="#f5cf52"/></svg>`;
 ---
@@ -76,7 +74,6 @@ const footMarkSvg = `<svg viewBox="0 0 30 30" width="23" height="23" aria-hidden
     </div>
 
     <div class="foot-bottom">
-      <p class="notice">{legalNotice}</p>
       <div class="bottom-row">
         <p class="copyright">© {year} Kern Stem Care <span class="ph">{f.legalEntityPh}</span>. {f.rights}</p>
         <nav class="legal-links" aria-label={legalTitle}>

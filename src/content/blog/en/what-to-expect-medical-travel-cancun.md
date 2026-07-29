@@ -9,9 +9,6 @@ tags: ['medical travel', 'cancun', 'process', 'planning']
 draft: false
 ---
 
-> **Kern Stem Care is a coordination agency, not a clinic.** This article is general
-> educational information, not medical advice. Care is delivered by independent, licensed
-> clinics. [Replace this starter text with your reviewed copy.]
 
 ## Before you travel
 

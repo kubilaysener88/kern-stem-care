@@ -9,9 +9,6 @@ tags: ['células madre', 'exosomas', 'educación']
 draft: false
 ---
 
-> **Kern Stem Care es una agencia de coordinación, no una clínica.** Este artículo es
-> información educativa general, no consejo médico. Qué terapia (si alguna) es apropiada es
-> una decisión tuya y de un médico certificado. [Reemplaza este texto inicial con el revisado por ti.]
 
 ## La versión simple
 

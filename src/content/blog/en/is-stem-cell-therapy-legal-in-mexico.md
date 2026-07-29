@@ -9,9 +9,6 @@ tags: ['regulation', 'stem cells', 'mexico']
 draft: false
 ---
 
-> **Kern Stem Care is a coordination agency, not a clinic.** This article is general
-> educational information, not medical or legal advice. Care is provided by independent,
-> licensed clinics. [Replace this starter text with your attorney-/clinician-reviewed copy.]
 
 ## Short answer
 

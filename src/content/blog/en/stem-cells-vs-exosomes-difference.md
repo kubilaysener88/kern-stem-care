@@ -9,9 +9,6 @@ tags: ['stem cells', 'exosomes', 'education']
 draft: false
 ---
 
-> **Kern Stem Care is a coordination agency, not a clinic.** This article is general
-> educational information, not medical advice. Which therapy (if any) is appropriate is a
-> decision for you and a licensed physician. [Replace this starter text with your reviewed copy.]
 
 ## The simple version
 

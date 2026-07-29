@@ -9,9 +9,6 @@ tags: ['cost', 'stem cells', 'mexico', 'planning']
 draft: false
 ---
 
-> **Kern Stem Care is a coordination agency, not a clinic.** This article is general
-> educational information, not medical or financial advice. Pricing is set by independent,
-> licensed clinics. [Replace this starter text with your reviewed copy.]
 
 ## Short answer
 

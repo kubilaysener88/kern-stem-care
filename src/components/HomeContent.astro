@@ -3,6 +3,7 @@ import type { Lang } from '../i18n/ui';
 import { homeContent } from '../i18n/home';
 import { ANALYTICS_EVENTS } from '../config/analytics';
 import { getPhoneCodes, getCountries, phoneCodeLabel } from '../i18n/phoneCodes';
+import LegalDisclaimer from './LegalDisclaimer.astro';
 
 interface Props {
   lang: Lang;
@@ -68,7 +69,6 @@ const newsletterSuccess =
 </section>
 
 <!-- ============ ROLE DISCLOSURE BANNER ============ -->
-<div class="role-banner"><span set:html={c.roleBanner} /></div>
 
 <!-- ============ CORE THERAPIES ============ -->
 <section class="section" id="therapies">
@@ -96,7 +96,6 @@ const newsletterSuccess =
         )
       )}
     </div>
-    <div class="disclaimer" style="margin-top:30px" set:html={c.therapies.note} />
   </div>
 </section>
 
@@ -130,7 +129,6 @@ const newsletterSuccess =
         </div>
       ))}
     </div>
-    <div class="disclaimer" style="margin-top:30px" set:html={c.testimonials.note} />
     <div class="center" style="margin-top:24px">
       <a href={`/${lang}/testimonials`} class="btn btn-outline">{c.testimonials.eyebrow}</a>
     </div>
@@ -184,7 +182,6 @@ const newsletterSuccess =
         </div>
       ))}
     </div>
-    <div class="disclaimer" style="margin-top:34px" set:html={c.treatments.note} />
   </div>
 </section>
 
@@ -312,7 +309,6 @@ const newsletterSuccess =
       </form>
     </div>
 
-    <div class="disclaimer" style="margin-top:24px" set:html={c.membership.note} />
   </div>
 </section>
 
@@ -366,6 +362,9 @@ const newsletterSuccess =
     </div>
   </div>
 </section>
+
+<!-- The site's only legal/medical disclaimer — home page, page foot, once. -->
+<LegalDisclaimer lang={lang} />
 
 <style>
   /* HERO */
@@ -421,6 +420,12 @@ const newsletterSuccess =
     transform: translateY(-2px);
   }
 
+  /* Single consolidated disclaimer at the foot of the page — tighter than a normal
+     section so it reads as a legal footnote, not as content. */
+  .home-legal {
+    padding-top: 8px;
+    padding-bottom: 40px;
+  }
   /* .card-link lives in global.css — shared with the Services index. */
   .hero-flags {
     display: inline-flex;

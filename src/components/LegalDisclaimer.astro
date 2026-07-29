@@ -1,0 +1,31 @@
+---
+import type { Lang } from '../i18n/ui';
+import { siteDisclaimer } from '../i18n/legal';
+
+/**
+ * The site's ONE legal/medical disclaimer, rendered at the foot of every page by
+ * SiteLayout (just above the footer). Previously this text was split across several
+ * per-section notices; keep it consolidated here so there is a single source of truth
+ * and exactly one disclaimer per page.
+ */
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const heading = lang === 'es' ? 'Aviso legal y médico' : 'Legal and medical disclaimer';
+---
+
+<section class="section site-legal" aria-labelledby="site-legal-heading">
+  <div class="wrap">
+    <h2 id="site-legal-heading" class="sr-only">{heading}</h2>
+    <div class="disclaimer" set:html={siteDisclaimer[lang]} />
+  </div>
+</section>
+
+<style>
+  /* Tighter than a content section so it reads as a legal footnote, not as content. */
+  .site-legal {
+    padding-top: 8px;
+    padding-bottom: 40px;
+  }
+</style>

@@ -9,9 +9,6 @@ tags: ['regulación', 'células madre', 'méxico']
 draft: false
 ---
 
-> **Kern Stem Care es una agencia de coordinación, no una clínica.** Este artículo es
-> información educativa general, no consejo médico ni legal. La atención la brindan
-> clínicas independientes y certificadas. [Reemplaza este texto inicial con el revisado por tu abogado/médico.]
 
 ## Respuesta corta
 
