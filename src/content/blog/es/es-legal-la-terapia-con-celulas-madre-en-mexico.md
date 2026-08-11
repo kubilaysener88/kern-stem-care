@@ -1,6 +1,6 @@
 ---
 title: '¿Es legal la terapia con células madre en México?'
-description: 'Cómo se regula la medicina regenerativa y la terapia con células madre en México (COFEPRIS), qué significa para pacientes de EE.UU. y Canadá, y qué preguntar antes de viajar.'
+description: 'Cómo se regula la medicina regenerativa y la terapia con células madre en México (COFEPRIS), qué significa para pacientes internacionales, y qué preguntar antes de viajar.'
 lang: 'es'
 pubDate: 2026-06-01
 author: 'Kern Stem Care'

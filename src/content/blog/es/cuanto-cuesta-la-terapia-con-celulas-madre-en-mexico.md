@@ -1,6 +1,6 @@
 ---
 title: '¿Cuánto cuesta la terapia con células madre en México?'
-description: 'Qué influye en el precio de la terapia con células madre en México, por qué varían las cotizaciones entre clínicas, y cómo Kern Stem Care da a pacientes de EE.UU. y Canadá un estimado claro y detallado.'
+description: 'Qué influye en el precio de la terapia con células madre en México, por qué varían las cotizaciones entre clínicas, y cómo Kern Stem Care da a pacientes internacionales un estimado claro y detallado.'
 lang: 'es'
 pubDate: 2026-06-10
 author: 'Kern Stem Care'

@@ -275,9 +275,9 @@ const en: HomeContent = {
   },
   trust: [
     { num: '[XX]+', label: 'Patients guided to care', isPh: true },
-    { num: '[XX]', label: 'Partner clinics & physicians in Cancún', isPh: true },
-    { num: '[X]', label: 'Partner cellular-therapy labs', isPh: true },
-    { num: '🇺🇸 🇨🇦', label: 'Patients from US & Canada' },
+    { num: '4', label: 'Partner clinics & physicians in Cancún' },
+    { num: '3', label: 'Partner cellular-therapy labs' },
+    { num: '🌎', label: 'Patients worldwide — including the U.S. & Canada' },
   ],
   therapies: {
     eyebrow: 'our treatments',
@@ -402,8 +402,8 @@ const en: HomeContent = {
   },
   testimonials: {
     eyebrow: 'Patient Stories',
-    h2: 'Real patients, real videos',
-    lead: 'Browse stories by audience segment. Drop your edited video files or embed links into the placeholders below.',
+    h2: 'Real Stories. Real Hope. Real Change.',
+    lead: 'Every journey is different. Every story matters. Discover the experiences of patients who chose a different path with <strong>Kern Stem Care</strong>.<br><br><strong>Watch their stories. Feel the difference.</strong>',
     filters: [
       { key: 'all', label: 'All Stories' },
       { key: 'usa', label: '🇺🇸 U.S. Patients' },
@@ -429,7 +429,7 @@ const en: HomeContent = {
     items: [
       { q: 'Is this treatment approved by the FDA or Health Canada?', a: 'Many regenerative therapies are not FDA- or Health Canada-approved for specific diseases and are considered investigational. We are transparent about the regulatory and evidence status of every program during your consultation. <span class="ph">[Customize.]</span>' },
       { q: 'Are you a clinic?', a: 'No. Kern Stem Care is a medical coordination agency legally registered in Cancún, Mexico. We guide you and arrange your travel, lodging, appointments, and support. The medical evaluation and treatment are provided by independent, licensed clinics and physicians in our Cancún network.' },
-      { q: 'How do I travel to Cancún from the U.S. or Canada?', a: 'Cancún International (CUN) has direct flights from most major U.S. and Canadian cities. We provide flight guidance, airport pickup, and lodging near the partner clinic. <span class="ph">[Add travel times.]</span>' },
+      { q: 'How do I travel to Cancún?', a: 'Cancún International (CUN) is a major hub with direct flights from cities across the Americas, Europe, and beyond — including most major U.S. and Canadian cities. We provide flight guidance, airport pickup, and lodging near the partner clinic. <span class="ph">[Add travel times.]</span>' },
       { q: 'How much does it cost, and who do I pay?', a: 'You receive a transparent written quote before committing. Medical fees are set by and paid to the provider; our coordination fee and travel costs are itemized separately so you always know what you are paying for. <span class="ph">[Explain your fee model.]</span>' },
       { q: 'Are the clinics and labs licensed?', a: "We only connect patients with clinics, physicians, and laboratories licensed under Mexico's health authority (COFEPRIS). We can share each partner's credentials on request. <span class=\"ph\">[Describe your vetting.]</span>" },
       { q: 'What support do I get after returning home?', a: 'We help coordinate remote follow-up with the provider and stay in contact with you. <span class="ph">[Describe your follow-up process.]</span>' },
@@ -504,7 +504,7 @@ const en: HomeContent = {
   },
   footer: {
     blurb:
-      'Legally registered medical coordination agency based in Cancún, guiding patients from the United States and Canada to independent, licensed clinics, physicians, and laboratories.',
+      'Legally registered medical coordination agency based in Cancún, guiding patients from around the world — including the United States and Canada — to independent, licensed clinics, physicians, and laboratories.',
     cols: [
       {
         title: 'Explore',
@@ -595,9 +595,9 @@ const es: HomeContent = {
   },
   trust: [
     { num: '[XX]+', label: 'Pacientes guiados a su atención', isPh: true },
-    { num: '[XX]', label: 'Clínicas y médicos aliados en Cancún', isPh: true },
-    { num: '[X]', label: 'Laboratorios de terapia celular aliados', isPh: true },
-    { num: '🇺🇸 🇨🇦', label: 'Pacientes de EE.UU. y Canadá' },
+    { num: '4', label: 'Clínicas y médicos aliados en Cancún' },
+    { num: '3', label: 'Laboratorios de terapia celular aliados' },
+    { num: '🌎', label: 'Pacientes de todo el mundo — incluyendo EE.UU. y Canadá' },
   ],
   therapies: {
     eyebrow: 'nuestros tratamientos',
@@ -706,8 +706,8 @@ const es: HomeContent = {
   },
   testimonials: {
     eyebrow: 'Historias de Pacientes',
-    h2: 'Pacientes reales, videos reales',
-    lead: 'Explore historias por segmento de audiencia. Coloque sus archivos de video editados o enlaces en los espacios de abajo.',
+    h2: 'Historias reales. Esperanza real. Cambio real.',
+    lead: 'Cada camino es diferente. Cada historia importa. Descubre las experiencias de pacientes que eligieron un camino distinto con <strong>Kern Stem Care</strong>.<br><br><strong>Mira sus historias. Siente la diferencia.</strong>',
     filters: [
       { key: 'all', label: 'Todas' },
       { key: 'usa', label: '🇺🇸 Pacientes de EE.UU.' },
@@ -733,7 +733,7 @@ const es: HomeContent = {
     items: [
       { q: '¿Está aprobado este tratamiento por la FDA o Health Canada?', a: 'Muchas terapias regenerativas no están aprobadas por la FDA ni Health Canada para enfermedades específicas y se consideran de investigación. Somos transparentes sobre el estatus regulatorio y de evidencia de cada programa durante su consulta. <span class="ph">[Personalizar.]</span>' },
       { q: '¿Ustedes son una clínica?', a: 'No. Kern Stem Care es una agencia de coordinación médica legalmente constituida en Cancún, México. Te guiamos y gestionamos tu viaje, hospedaje, citas y acompañamiento. La evaluación y el tratamiento médico los brindan clínicas y médicos independientes y certificados de nuestra red en Cancún.' },
-      { q: '¿Cómo viajo a Cancún desde EE.UU. o Canadá?', a: 'El Aeropuerto Internacional de Cancún (CUN) tiene vuelos directos desde la mayoría de las ciudades de EE.UU. y Canadá. Ofrecemos guía de vuelos, traslado del aeropuerto y hospedaje cerca de la clínica aliada. <span class="ph">[Agregar tiempos.]</span>' },
+      { q: '¿Cómo viajo a Cancún?', a: 'El Aeropuerto Internacional de Cancún (CUN) es un hub importante con vuelos directos desde ciudades de toda América, Europa y más — incluyendo la mayoría de las ciudades de EE.UU. y Canadá. Ofrecemos guía de vuelos, traslado del aeropuerto y hospedaje cerca de la clínica aliada. <span class="ph">[Agregar tiempos.]</span>' },
       { q: '¿Cuánto cuesta y a quién le pago?', a: 'Recibes una cotización por escrito y transparente antes de comprometerte. Los honorarios médicos los fija y los cobra el proveedor; nuestra tarifa de coordinación y los costos de viaje se detallan por separado para que siempre sepas qué pagas. <span class="ph">[Explicar tu modelo de tarifa.]</span>' },
       { q: '¿Las clínicas y laboratorios están certificados?', a: 'Solo conectamos a los pacientes con clínicas, médicos y laboratorios certificados por la autoridad sanitaria de México (COFEPRIS). Podemos compartir las credenciales de cada aliado si lo solicitas. <span class="ph">[Describir tu proceso de evaluación.]</span>' },
       { q: '¿Qué apoyo recibo al volver a casa?', a: 'Ayudamos a coordinar el seguimiento remoto con el proveedor y permanecemos en contacto contigo. <span class="ph">[Describir tu proceso de seguimiento.]</span>' },
@@ -808,7 +808,7 @@ const es: HomeContent = {
   },
   footer: {
     blurb:
-      'Agencia de coordinación médica legalmente constituida en Cancún, que guía a pacientes de Estados Unidos y Canadá hacia clínicas, médicos y laboratorios independientes y certificados.',
+      'Agencia de coordinación médica legalmente constituida en Cancún, que guía a pacientes de todo el mundo — incluyendo Estados Unidos y Canadá — hacia clínicas, médicos y laboratoriosindependientes y certificados.',
     cols: [
       {
         title: 'Explorar',

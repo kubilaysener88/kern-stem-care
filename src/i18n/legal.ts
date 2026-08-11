@@ -47,7 +47,7 @@ const en: LegalSet = {
       { h2: '3. Health information', body: 'Any health information you provide is treated as confidential and shared only with the medical and coordination staff involved in responding to your request. This website is for information requests only and is not a substitute for a medical consultation or a secure medical records system.' },
       { h2: '4. Cookies and analytics', body: 'We use cookies and tools such as web analytics to understand site usage. You can disable cookies in your browser settings. <span class="ph">[List the specific tools you use, e.g. Google Analytics, Meta Pixel.]</span>' },
       { h2: '5. Sharing with third parties', body: 'We may share information with service providers who help us operate (hosting, CRM, communications, travel partners), and when required by law. These providers are expected to protect your information.' },
-      { h2: '6. International transfers', body: 'We are based in Mexico and serve patients in the U.S. and Canada. Your information may be processed in Mexico and other countries. By using this site, you consent to such transfers.' },
+      { h2: '6. International transfers', body: 'We are based in Mexico and serve patients worldwide, including the U.S. and Canada. Your information may be processed in Mexico and other countries. By using this site, you consent to such transfers.' },
       { h2: '7. Your rights', body: 'Depending on your location, you may have rights to access, correct, or delete your data, or object to its processing (for example under Mexico’s data-protection law, Canada’s PIPEDA, or applicable U.S. state laws). To exercise these rights, contact us at <span class="ph">[privacy@kernstemcare.com]</span>.' },
       { h2: '8. Data retention & security', body: 'We retain your information only as long as needed for the purposes described, and use reasonable safeguards to protect it. No method of transmission over the internet is 100% secure.' },
       { h2: '9. Children', body: 'Our website is not directed to children under 18, and we do not knowingly collect their information.' },
@@ -93,7 +93,7 @@ const en: LegalSet = {
     updatedLabel: 'Last updated:',
     templateNoticeLabel: 'Scaffold notice:',
     templateNotice:
-      ' This page is a structured scaffold. Replace each section with your attorney-reviewed wording for Mexico, the U.S. and Canada before publishing. Keep the "agency, not a clinic" framing.',
+      ' This page is a structured scaffold. Replace each section with your attorney-reviewed wording for Mexico, the U.S., Canada, and the other markets you serve before publishing. Keep the "agency, not a clinic" framing.',
     intro:
       'Please read this Medical Disclaimer carefully before relying on any information on this website or engaging our coordination services.',
     medDisclaimer:
@@ -133,7 +133,7 @@ const es: LegalSet = {
       { h2: '3. Información de salud', body: 'Toda información de salud que proporcione se trata como confidencial y se comparte solo con el personal médico y de coordinación involucrado en responder a su solicitud. Este sitio es solo para solicitudes de información y no sustituye una consulta médica ni un sistema seguro de expedientes clínicos.' },
       { h2: '4. Cookies y análisis', body: 'Usamos cookies y herramientas de análisis para entender el uso del sitio. Puede desactivar las cookies en la configuración de su navegador. <span class="ph">[Liste las herramientas específicas que use, p. ej. Google Analytics, Meta Pixel.]</span>' },
       { h2: '5. Compartir con terceros', body: 'Podemos compartir información con proveedores que nos ayudan a operar (hospedaje, CRM, comunicaciones, socios de viaje) y cuando lo exija la ley. Se espera que estos proveedores protejan su información.' },
-      { h2: '6. Transferencias internacionales', body: 'Estamos en México y atendemos a pacientes de EE.UU. y Canadá. Su información puede procesarse en México y otros países. Al usar este sitio, usted consiente dichas transferencias.' },
+      { h2: '6. Transferencias internacionales', body: 'Estamos en México y atendemos a pacientes de todo el mundo, incluyendo EE.UU. y Canadá. Su información puede procesarse en México y otros países. Al usar este sitio, usted consiente dichas transferencias.' },
       { h2: '7. Sus derechos', body: 'Según su ubicación, puede tener derecho a acceder, corregir o eliminar sus datos, u oponerse a su tratamiento (por ejemplo, bajo la ley de protección de datos de México, PIPEDA de Canadá, o leyes estatales aplicables de EE.UU.). Para ejercer estos derechos, contáctenos en <span class="ph">[privacy@kernstemcare.com]</span>.' },
       { h2: '8. Conservación y seguridad', body: 'Conservamos su información solo el tiempo necesario para los fines descritos y usamos medidas razonables para protegerla. Ningún método de transmisión por internet es 100% seguro.' },
       { h2: '9. Menores', body: 'Nuestro sitio no está dirigido a menores de 18 años y no recopilamos su información de forma intencional.' },
@@ -179,7 +179,7 @@ const es: LegalSet = {
     updatedLabel: 'Última actualización:',
     templateNoticeLabel: 'Aviso de plantilla:',
     templateNotice:
-      ' Esta página es una estructura base. Reemplace cada sección con la redacción revisada por su abogado para México, EE.UU. y Canadá antes de publicar. Conserve el enfoque de "agencia, no clínica".',
+      ' Esta página es una estructura base. Reemplace cada sección con la redacción revisada por su abogado para México, EE.UU., Canadá y los demás mercados que atiende antes de publicar. Conserve el enfoque de "agencia, no clínica".',
     intro:
       'Lea este Aviso Médico con atención antes de basarse en cualquier información de este sitio o de contratar nuestros servicios de coordinación.',
     medDisclaimer:

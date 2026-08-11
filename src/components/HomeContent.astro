@@ -27,15 +27,13 @@ const errorMsg =
   lang === 'es'
     ? 'No se pudo enviar. Inténtalo de nuevo o escríbenos por WhatsApp.'
     : "Couldn't send. Please try again or message us on WhatsApp.";
-const newsletterSuccess =
-  lang === 'es' ? '¡Listo! Te suscribiste correctamente.' : "You're subscribed. Thank you!";
 ---
 
 <!-- ============ HERO ============ -->
 <section class="hero">
   <div class="wrap">
     <div>
-      <span class="hero-flags">🇲🇽 <span>{c.hero.flagsPre}</span> · <span>{c.hero.flagsMid}</span> 🇺🇸 🇨🇦</span>
+      <span class="hero-flags">🇲🇽 <span>{c.hero.flagsPre}</span> · <span>{c.hero.flagsMid}</span> 🌎 🇺🇸 🇨🇦</span>
       <h1>{c.hero.h1}</h1>
       {c.hero.tagline && <p class="hero-tagline">{c.hero.tagline}</p>}
       {c.hero.p && <p>{c.hero.p}</p>}
@@ -114,12 +112,7 @@ const newsletterSuccess =
     <div class="center">
       <span class="eyebrow">{c.testimonials.eyebrow}</span>
       <h2>{c.testimonials.h2}</h2>
-      <p class="lead">{c.testimonials.lead}</p>
-    </div>
-    <div class="filters" id="filters" role="group" aria-label={lang === 'es' ? 'Filtrar testimonios' : 'Filter testimonials'}>
-      {c.testimonials.filters.map((f, i) => (
-        <button type="button" class={i === 0 ? 'active' : ''} data-filter={f.key} aria-pressed={i === 0 ? 'true' : 'false'}>{f.label}</button>
-      ))}
+      <p class="lead" set:html={c.testimonials.lead} />
     </div>
     <div class="vgrid" id="vgrid">
       {c.testimonials.cards.map((card) => (
@@ -270,47 +263,8 @@ const newsletterSuccess =
   </div>
 </section>
 
-<!-- ============ MEMBERSHIP ============ -->
-<section class="section" id="membership">
-  <div class="wrap">
-    <div class="center">
-      <span class="eyebrow">{c.membership.eyebrow}</span>
-      <h2>{c.membership.h2}</h2>
-      <p class="lead">{c.membership.lead}</p>
-    </div>
-    <div class="grid g3" style="margin-top:44px;align-items:stretch">
-      {c.membership.tiers.map((tier) => (
-        <div class="card tier" style={tier.featured ? 'border:2px solid var(--blue);box-shadow:var(--shadow-lg);position:relative' : undefined}>
-          {tier.badge && <span class="tier-badge">{tier.badge}</span>}
-          <span class="eyebrow">{tier.eyebrow}</span>
-          <div class="tier-price">
-            <span class={tier.priceIsPh ? 'ph' : ''}>{tier.price}</span>{tier.priceSuffix && <span class="tier-suffix">{tier.priceSuffix}</span>}
-          </div>
-          <p class="tier-desc">{tier.desc}</p>
-          <ul class="check tier-features">
-            {tier.features.map((f) => <li set:html={f} />)}
-          </ul>
-          <a href={tier.ctaHref} class={tier.featured ? 'btn btn-primary' : 'btn btn-outline'}>{tier.cta}</a>
-        </div>
-      ))}
-    </div>
-
-    <div id="newsletter" class="newsletter">
-      <div style="flex:1;min-width:240px">
-        <h3 style="margin-bottom:4px">{c.membership.newsletter.title}</h3>
-        <p style="margin:0;color:var(--muted);font-size:.92rem">{c.membership.newsletter.body}</p>
-      </div>
-      <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-success={newsletterSuccess} data-error={errorMsg} style="display:flex;gap:10px;flex-wrap:wrap;min-width:280px">
-        <input type="hidden" name="form-name" value="newsletter" />
-        <input type="hidden" name="lang" value={lang} />
-        <p class="hp-field" aria-hidden="true"><label>{lang === 'es' ? 'No llenar' : 'Do not fill'}<input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
-        <input name="email" type="email" required aria-label={c.membership.newsletter.title} placeholder={c.membership.newsletter.phEmail} style="flex:1;min-width:180px;padding:13px 15px;border:1px solid var(--line);border-radius:9px;font-size:.95rem;font-family:inherit" />
-        <button class="btn btn-primary">{c.membership.newsletter.submit}</button>
-      </form>
-    </div>
-
-  </div>
-</section>
+<!-- MEMBERSHIP section removed per request (pricing tiers + newsletter). Content
+     kept in home.ts (membership) so it can be restored if needed. -->
 
 <!-- ============ CONTACT ============ -->
 <section class="section alt" id="contact">
@@ -943,23 +897,6 @@ const newsletterSuccess =
       go(0);
       start();
     })();
-
-    // Testimonial filters
-    var fbtns = document.querySelectorAll('#filters button');
-    fbtns.forEach(function (b) {
-      b.addEventListener('click', function () {
-        var f = b.getAttribute('data-filter');
-        fbtns.forEach(function (x) {
-          var on = x === b;
-          x.classList.toggle('active', on);
-          x.setAttribute('aria-pressed', on ? 'true' : 'false');
-        });
-        document.querySelectorAll('#vgrid .vcard').forEach(function (card) {
-          var segs = card.getAttribute('data-seg');
-          card.style.display = f === 'all' || segs.indexOf(f) !== -1 ? '' : 'none';
-        });
-      });
-    });
   }
 
   if ('requestIdleCallback' in window) requestIdleCallback(initHomeUI, { timeout: 2000 });

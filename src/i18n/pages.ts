@@ -164,7 +164,7 @@ const en: PagesSet = {
   services: {
     metaTitle: 'Regenerative Therapies in Cancún, Mexico | Kern Stem Care',
     metaDescription:
-      'Compare the regenerative therapies we help U.S. and Canadian patients access in Cancún — stem cells, exosomes, fibroblasts and freeze-dried placenta — through independent, licensed clinics and labs.',
+      'Compare the regenerative therapies we help international patients access in Cancún — stem cells, exosomes, fibroblasts and freeze-dried placenta — through independent, licensed clinics and labs.',
     eyebrow: 'What We Coordinate',
     title: 'Services',
     lead: 'We coordinate access to the regenerative therapies offered by independent, COFEPRIS-licensed partner clinics and laboratories in Cancún. Each one sits at a different stage of research, and each page below sets out what it is, what it is currently studied for, and what the evidence does and does not show.',
@@ -178,7 +178,7 @@ const en: PagesSet = {
   },
   stemCells: {
     metaTitle: 'Stem Cell Therapy in Cancún, Mexico | Kern Stem Care',
-    metaDescription: 'Considering stem cell therapy in Cancún? Kern Stem Care coordinates evaluation, licensed-clinic treatment, travel and follow-up for U.S. & Canada patients. Free evaluation.',
+    metaDescription: 'Considering stem cell therapy in Cancún? Kern Stem Care coordinates evaluation, licensed-clinic treatment, travel and follow-up for international patients. Free evaluation.',
     eyebrow: 'Cellular Therapy',
     title: 'Stem Cells',
     lead: 'What stem cell therapy involves, what it is currently studied for, and how we coordinate your access to it through independent, licensed clinics in Cancún.',
@@ -191,7 +191,7 @@ const en: PagesSet = {
   },
   exosomes: {
     metaTitle: 'Exosome Therapy in Cancún, Mexico | Kern Stem Care',
-    metaDescription: 'Exosome therapy in Cancún, coordinated end-to-end by Kern Stem Care with independent, licensed clinics. Bilingual guidance and a free evaluation for U.S. & Canada patients.',
+    metaDescription: 'Exosome therapy in Cancún, coordinated end-to-end by Kern Stem Care with independent, licensed clinics. Bilingual guidance and a free evaluation for international patients.',
     eyebrow: 'Cellular Therapy',
     title: 'Exosomes',
     lead: 'What exosome therapy involves, where the research currently stands, and how we coordinate your access to it through independent, licensed clinics in Cancún.',
@@ -204,7 +204,7 @@ const en: PagesSet = {
   },
   fibroblasts: {
     metaTitle: 'Fibroblast Therapy in Cancún, Mexico | Kern Stem Care',
-    metaDescription: 'Fibroblast therapy in Cancún, coordinated by Kern Stem Care with independent, licensed clinics. Bilingual guidance, travel and follow-up for U.S. & Canada patients.',
+    metaDescription: 'Fibroblast therapy in Cancún, coordinated by Kern Stem Care with independent, licensed clinics. Bilingual guidance, travel and follow-up for international patients.',
     eyebrow: 'Cellular Therapy',
     title: 'Fibroblasts',
     lead: 'What fibroblast therapy involves, which applications it is studied for, and how we coordinate your access to it through independent, licensed clinics in Cancún.',
@@ -217,7 +217,7 @@ const en: PagesSet = {
   },
   placenta: {
     metaTitle: 'Freeze-Dried Placenta Therapy in Cancún, Mexico | Kern Stem Care',
-    metaDescription: 'Freeze-dried (lyophilized) placental-tissue therapy in Cancún, coordinated by Kern Stem Care with independent, licensed clinics. Bilingual guidance for U.S. & Canada patients.',
+    metaDescription: 'Freeze-dried (lyophilized) placental-tissue therapy in Cancún, coordinated by Kern Stem Care with independent, licensed clinics. Bilingual guidance for international patients.',
     eyebrow: 'Regenerative Therapy',
     title: 'Freeze-Dried Placenta',
     lead: 'What freeze-dried placenta therapy involves, how it is administered, and how we coordinate your access to it through independent, licensed clinics in Cancún.',
@@ -230,7 +230,7 @@ const en: PagesSet = {
   },
   about: {
     metaTitle: 'About | Kern Stem Care',
-    metaDescription: 'Meet Kern Stem Care: a bilingual medical-coordination agency in Cancún — not a clinic — that vets providers and guides U.S. & Canada patients from first call to follow-up.',
+    metaDescription: 'Meet Kern Stem Care: a bilingual medical-coordination agency in Cancún — not a clinic — that vets providers and guides international patients — including the U.S. and Canada — from first call to follow-up.',
     eyebrow: 'About Kern Stem Care',
     title: 'Your single, trusted point of contact in Mexico',
     lead: 'Kern Stem Care is the agency; the medical care is delivered by independent, licensed providers. <span class="ph">[Replace with your story.]</span>',
@@ -241,8 +241,8 @@ const en: PagesSet = {
     ],
   },
   process: {
-    metaTitle: 'Regenerative Care for U.S. & Canada Patients | Kern Stem Care',
-    metaDescription: 'How Kern Stem Care coordinates regenerative care for U.S. & Canada patients: evaluation, licensed clinic, travel, treatment and follow-up — one bilingual coordinator throughout.',
+    metaTitle: 'Regenerative Care for International Patients | Kern Stem Care',
+    metaDescription: 'How Kern Stem Care coordinates regenerative care for international patients: evaluation, licensed clinic, travel, treatment and follow-up — one bilingual coordinator throughout.',
     eyebrow: 'How It Works',
     title: 'Process for international patients',
     lead: 'From your first message to follow-up back home, here is how the journey works. <span class="ph">[Edit the overview.]</span>',
@@ -253,7 +253,7 @@ const en: PagesSet = {
       { title: 'Follow-Up at Home', body: 'We help coordinate remote check-ins and aftercare with the provider once you return home.' },
     ],
     sections: [
-      { h2: 'Travel & logistics', body: 'Cancún International (CUN) has direct flights from most major U.S. and Canadian cities. We provide flight guidance, airport pickup, and lodging near the partner clinic. <span class="ph">[Add travel times and what is included.]</span>' },
+      { h2: 'Travel & logistics', body: 'Cancún International (CUN) is a major hub with direct flights from cities across the Americas, Europe, and beyond — including most major U.S. and Canadian cities. We provide flight guidance, airport pickup, and lodging near the partner clinic. <span class="ph">[Add travel times and what is included.]</span>' },
       { h2: 'Costs & payments', body: 'You receive a transparent written quote before committing. Medical fees are set by and paid to the provider; our coordination fee and travel costs are itemized separately. <span class="ph">[Explain your fee model.]</span>' },
     ],
   },
@@ -301,7 +301,7 @@ const es: PagesSet = {
   },
   stemCells: {
     metaTitle: 'Terapia con Células Madre en Cancún, México | Kern Stem Care',
-    metaDescription: '¿Piensas en terapia con células madre en Cancún? Kern Stem Care coordina evaluación, tratamiento en clínicas certificadas, viaje y seguimiento para pacientes de EE.UU. y Canadá.',
+    metaDescription: '¿Piensas en terapia con células madre en Cancún? Kern Stem Care coordina evaluación, tratamiento en clínicas certificadas, viaje y seguimiento para pacientes internacionales.',
     eyebrow: 'Terapia Celular',
     title: 'Células Madre',
     lead: 'En qué consiste la terapia con células madre, para qué se estudia actualmente y cómo coordinamos tu acceso a ella con clínicas independientes y certificadas en Cancún.',
@@ -314,7 +314,7 @@ const es: PagesSet = {
   },
   exosomes: {
     metaTitle: 'Terapia con Exosomas en Cancún, México | Kern Stem Care',
-    metaDescription: 'Terapia con exosomas en Cancún, coordinada de principio a fin por Kern Stem Care con clínicas independientes y certificadas. Evaluación gratuita para pacientes de EE.UU. y Canadá.',
+    metaDescription: 'Terapia con exosomas en Cancún, coordinada de principio a fin por Kern Stem Care con clínicas independientes y certificadas. Evaluación gratuita para pacientes internacionales.',
     eyebrow: 'Terapia Celular',
     title: 'Exosomas',
     lead: 'En qué consiste la terapia con exosomas, en qué punto está la investigación y cómo coordinamos tu acceso a ella con clínicas independientes y certificadas en Cancún.',
@@ -327,7 +327,7 @@ const es: PagesSet = {
   },
   fibroblasts: {
     metaTitle: 'Terapia con Fibroblastos en Cancún, México | Kern Stem Care',
-    metaDescription: 'Terapia con fibroblastos en Cancún, coordinada por Kern Stem Care con clínicas independientes y certificadas. Guía bilingüe, viaje y seguimiento para pacientes de EE.UU. y Canadá.',
+    metaDescription: 'Terapia con fibroblastos en Cancún, coordinada por Kern Stem Care con clínicas independientes y certificadas. Guía bilingüe, viaje y seguimiento para pacientes internacionales.',
     eyebrow: 'Terapia Celular',
     title: 'Fibroblastos',
     lead: 'En qué consiste la terapia con fibroblastos, en qué aplicaciones se estudia y cómo coordinamos tu acceso a ella con clínicas independientes y certificadas en Cancún.',
@@ -340,7 +340,7 @@ const es: PagesSet = {
   },
   placenta: {
     metaTitle: 'Terapia con Placenta Liofilizada en Cancún, México | Kern Stem Care',
-    metaDescription: 'Terapia con tejido placentario liofilizado en Cancún, coordinada por Kern Stem Care con clínicas independientes y certificadas. Guía bilingüe para pacientes de EE.UU. y Canadá.',
+    metaDescription: 'Terapia con tejido placentario liofilizado en Cancún, coordinada por Kern Stem Care con clínicas independientes y certificadas. Guía bilingüe para pacientes internacionales.',
     eyebrow: 'Terapia Regenerativa',
     title: 'Placenta Liofilizada',
     lead: 'En qué consiste la terapia con placenta liofilizada, cómo se administra y cómo coordinamos tu acceso a ella con clínicas independientes y certificadas en Cancún.',
@@ -353,7 +353,7 @@ const es: PagesSet = {
   },
   about: {
     metaTitle: 'Sobre Nosotros | Kern Stem Care',
-    metaDescription: 'Conoce a Kern Stem Care: una agencia de coordinación médica bilingüe en Cancún — no una clínica — que verifica proveedores y guía a pacientes de EE.UU. y Canadá de principio a fin.',
+    metaDescription: 'Conoce a Kern Stem Care: una agencia de coordinación médica bilingüe en Cancún — no una clínica — que verifica proveedores y guía a pacientes internacionales — incluyendo EE.UU. y Canadá — de principio a fin.',
     eyebrow: 'Sobre Kern Stem Care',
     title: 'Tu único punto de contacto de confianza en México',
     lead: 'Kern Stem Care es la agencia; la atención médica la brindan proveedores independientes y certificados. <span class="ph">[Reemplazar con tu historia.]</span>',
@@ -364,8 +364,8 @@ const es: PagesSet = {
     ],
   },
   process: {
-    metaTitle: 'Atención Regenerativa para Pacientes de EE.UU. y Canadá | Kern Stem Care',
-    metaDescription: 'Cómo coordina Kern Stem Care la atención regenerativa para pacientes de EE.UU. y Canadá: evaluación, clínica certificada, viaje, tratamiento y seguimiento con un coordinador bilingüe.',
+    metaTitle: 'Atención Regenerativa para Pacientes Internacionales | Kern Stem Care',
+    metaDescription: 'Cómo coordina Kern Stem Care la atención regenerativa para pacientes internacionales: evaluación, clínica certificada, viaje, tratamiento y seguimiento con un coordinador bilingüe.',
     eyebrow: 'Cómo Funciona',
     title: 'Proceso para pacientes internacionales',
     lead: 'Desde tu primer mensaje hasta el seguimiento en casa, así funciona el proceso. <span class="ph">[Editar el resumen.]</span>',
@@ -376,7 +376,7 @@ const es: PagesSet = {
       { title: 'Seguimiento en Casa', body: 'Ayudamos a coordinar el seguimiento remoto y los cuidados posteriores con el proveedor al volver a casa.' },
     ],
     sections: [
-      { h2: 'Viaje y logística', body: 'El Aeropuerto Internacional de Cancún (CUN) tiene vuelos directos desde la mayoría de las ciudades de EE.UU. y Canadá. Ofrecemos guía de vuelos, traslado del aeropuerto y hospedaje cerca de la clínica aliada. <span class="ph">[Agrega tiempos de viaje y qué incluye.]</span>' },
+      { h2: 'Viaje y logística', body: 'El Aeropuerto Internacional de Cancún (CUN) es un hub importante con vuelos directos desde ciudades de toda América, Europa y más — incluyendo la mayoría de las ciudades de EE.UU. y Canadá. Ofrecemos guía de vuelos, traslado del aeropuerto y hospedaje cerca de la clínica aliada. <span class="ph">[Agrega tiempos de viaje y qué incluye.]</span>' },
       { h2: 'Costos y pagos', body: 'Recibes una cotización por escrito y transparente antes de comprometerte. Los honorarios médicos los fija y los cobra el proveedor; nuestra tarifa de coordinación y los costos de viaje se detallan por separado. <span class="ph">[Explica tu modelo de tarifa.]</span>' },
     ],
   },
