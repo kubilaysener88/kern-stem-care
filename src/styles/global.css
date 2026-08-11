@@ -390,6 +390,14 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
+.form-card .row > .field {
+  /* Grid tracks default to a content-based minimum, so a wide child (e.g. the
+     phone country-code <select>, whose longest option can be quite long) can
+     force its whole column wider than 50% and squeeze the sibling field down
+     to almost nothing. Allow tracks to shrink below their content's intrinsic
+     width so the 1fr/1fr split actually holds. */
+  min-width: 0;
+}
 @media (max-width: 560px) {
   .form-card .row {
     grid-template-columns: 1fr;
