@@ -12,7 +12,12 @@ export interface NavItem {
   label: string;
 }
 export interface IconCard {
-  icon: string;
+  /** Emoji icon. Omit when the card uses `image` instead. */
+  icon?: string;
+  /** Path under /public. When set, the card shows this photo instead of the emoji. */
+  image?: string;
+  /** Alt text — required whenever `image` is set. */
+  alt?: string;
   title: string;
   body: string;
   accent?: 'blue' | 'teal' | 'gold' | 'green' | 'teal-border';
@@ -310,9 +315,9 @@ const en: HomeContent = {
     note: '<strong>Note:</strong> These cellular therapies are provided by independent, licensed partner laboratories and clinics. Many such therapies are not approved by the U.S. FDA or Health Canada for specific diseases and are considered investigational. Descriptions here are educational and are not a promise of any result.',
   },
   about: {
-    eyebrow: 'Why Work With Kern Stem Care',
+    eyebrow: 'Stem Cells in Cancún: Why Choose Us',
     h2: 'Your single, trusted point of contact in Mexico',
-    p: 'Choosing a stem cell clinic from another country is the hardest part: promises you cannot verify, pricing that does not add up, and no one on your side when something changes. That work is already done for you. Every clinic, laboratory, and physician in our Cancún network passed our review before it ever reached you — so what would be a leap into the unknown becomes a few clear choices. Kern Stem Care is the agency that coordinates; the medical care is delivered by those independent providers.',
+    p: 'Your stem cell treatment in Cancún can be fully defined before you board the plane. Every clinic, laboratory, and physician in our network passed our review before it reached you, and one bilingual coordinator stays with you from the first call to your follow-up at home. Kern Stem Care is the agency that coordinates; the medical care is delivered by those independent, government-licensed providers.',
     checks: [
       'We connect you only with clinics and labs licensed under Mexican health authority (COFEPRIS)',
       'One bilingual coordinator from first call to follow-up',
@@ -328,17 +333,20 @@ const en: HomeContent = {
     lead: 'Traveling abroad for care is overwhelming on your own. As your coordination agency, we vet the providers, manage the logistics, and stay by your side — so you can focus on your health.',
     cards: [
       {
-        icon: '🔎',
+        image: '/assets/why/aliados-verificados.jpg',
+        alt: 'Physician shaking hands with a coordinator inside a clinic',
         title: 'Vetted Partners',
         body: 'We connect you only with licensed clinics, physicians, and labs in Cancún that we have personally worked with.',
       },
       {
-        icon: '💬',
+        image: '/assets/why/concierge-bilingue.jpg',
+        alt: 'Bilingual coordinator wearing a headset while assisting a patient',
         title: 'Bilingual Concierge',
         body: 'One English-speaking coordinator guides you and the providers through every step.',
       },
       {
-        icon: '✈️',
+        image: '/assets/why/logistica-completa.jpg',
+        alt: 'Driver welcoming a traveler with luggage at Cancún International Airport',
         title: 'Full Logistics',
         body: 'Flights guidance, airport pickup, lodging, and transport in Cancún — all arranged for you.',
       },
@@ -354,13 +362,13 @@ const en: HomeContent = {
     h2: 'Care we help you access through our partner network',
     lead: 'These are the areas of care offered by the independent clinics and physicians we partner with in Cancún — each one built on our four core therapies: stem cells, exosomes, fibroblasts, and placental implants. Every plan begins with a medical evaluation performed by the provider, not by us. We coordinate access, logistics, and support around it.',
     cards: [
-      { icon: '🦵', title: 'Joint & Orthopedic', body: 'Programs focused on joints, tendons, and musculoskeletal comfort and mobility. <span class="ph">[Edit description]</span>' },
-      { icon: '🏃', title: 'Sports Injury & Recovery', body: 'Recovery-focused programs for active patients and athletes. <span class="ph">[Edit description]</span>' },
-      { icon: '🛡️', title: 'Immune Wellness & Support', body: 'Wellness programs supporting immune health and resilience. <span class="ph">[Edit description]</span>' },
-      { icon: '✨', title: 'Anti-Aging & Longevity', body: 'Vitality and longevity-oriented wellness programs. <span class="ph">[Edit description]</span>' },
-      { icon: '🌿', title: 'Senior Health & Wellness', body: 'Wellness programs tailored to the needs of older adults. <span class="ph">[Edit description]</span>' },
-      { icon: '💆', title: 'Aesthetic & Skin', body: 'Skin, rejuvenation, and aesthetic wellness — a natural fit for fibroblast applications. <span class="ph">[Edit description]</span>' },
-      { icon: '🔬', title: 'Personalized Protocols', body: 'Custom evaluations for complex or combined cases. <span class="ph">[Edit description]</span>' },
+      { image: '/assets/treatments/articular-ortopedico.jpg', alt: 'Physician examining a patient\'s knee during a consultation', title: 'Joint & Orthopedic', body: 'Programs focused on joints, tendons, and musculoskeletal comfort and mobility. <span class="ph">[Edit description]</span>' },
+      { image: '/assets/treatments/lesiones-deportivas.jpg', alt: 'Tennis player holding a sore elbow on the court', title: 'Sports Injury & Recovery', body: 'Recovery-focused programs for active patients and athletes. <span class="ph">[Edit description]</span>' },
+      { image: '/assets/treatments/soporte-inmune.jpg', alt: 'Woman resting her hands over her abdomen outdoors', title: 'Immune Wellness & Support', body: 'Wellness programs supporting immune health and resilience. <span class="ph">[Edit description]</span>' },
+      { image: '/assets/treatments/antienvejecimiento.jpg', alt: 'Woman with healthy, luminous skin', title: 'Anti-Aging & Longevity', body: 'Vitality and longevity-oriented wellness programs. <span class="ph">[Edit description]</span>' },
+      { image: '/assets/treatments/adulto-mayor.jpg', alt: 'Older couple hiking together at sunset', title: 'Senior Health & Wellness', body: 'Wellness programs tailored to the needs of older adults. <span class="ph">[Edit description]</span>' },
+      { image: '/assets/treatments/estetica-piel.jpg', alt: 'Woman receiving a facial aesthetic treatment', title: 'Aesthetic & Skin', body: 'Skin, rejuvenation, and aesthetic wellness — a natural fit for fibroblast applications. <span class="ph">[Edit description]</span>' },
+      { image: '/assets/treatments/protocolos-personalizados.jpg', alt: 'Physician reviewing a personalized plan with an older patient', title: 'Personalized Protocols', body: 'Custom evaluations for complex or combined cases. <span class="ph">[Edit description]</span>' },
     ],
     note: '<strong>Important:</strong> Kern Stem Care is a coordination agency and does not provide medical treatment or advice. The therapies above are offered by independent licensed providers. Many regenerative and cellular therapies are not approved by the U.S. FDA or Health Canada for specific diseases and are considered investigational. Individual results vary. Neither we nor our partners guarantee outcomes or cures; the provider will discuss the current scientific evidence with you during your evaluation.',
   },
@@ -625,9 +633,9 @@ const es: HomeContent = {
     note: '<strong>Nota:</strong> Estas terapias celulares las brindan laboratorios y clínicas aliadas independientes y certificadas. Muchas de estas terapias no están aprobadas por la FDA de EE.UU. ni Health Canada para enfermedades específicas y se consideran de investigación. Las descripciones aquí son educativas y no son una promesa de ningún resultado.',
   },
   about: {
-    eyebrow: 'Por Qué Trabajar con Kern Stem Care',
+    eyebrow: 'Células Madre en Cancún: Por Qué Elegirnos',
     h2: 'Tu único punto de contacto de confianza en México',
-    p: 'Elegir una clínica de células madre desde otro país es la parte más difícil: promesas que no puedes verificar, precios que no cuadran y nadie de tu lado si algo cambia. Ese trabajo ya lo hicimos por ti. Cada clínica, laboratorio y médico de nuestra red en Cancún pasó por nuestra revisión antes de llegar a ti, así que lo que para otros es un salto al vacío, para ti se vuelve unas pocas decisiones claras. Kern Stem Care es la agencia que coordina; la atención médica la brindan esos proveedores independientes.',
+    p: 'Tu tratamiento con células madre en Cancún puede estar definido antes de que subas al avión. Cada clínica, laboratorio y médico de nuestra red pasó por nuestra revisión antes de llegar a ti, y un solo coordinador bilingüe te acompaña desde la primera llamada hasta el seguimiento en casa. Kern Stem Care es la agencia que coordina; la atención médica la brindan esos proveedores independientes con licencia sanitaria oficial.',
     checks: [
       'Te conectamos solo con clínicas y laboratorios certificados por la autoridad sanitaria mexicana (COFEPRIS)',
       'Un coordinador bilingüe desde la primera llamada hasta el seguimiento',
@@ -642,9 +650,9 @@ const es: HomeContent = {
     h2: 'Una agencia que elimina la incertidumbre del proceso',
     lead: 'Viajar al extranjero por atención médica es abrumador si lo haces solo. Como tu agencia de coordinación, evaluamos a los proveedores, gestionamos la logística y permanecemos a tu lado — para que te concentres en tu salud.',
     cards: [
-      { icon: '🔎', title: 'Aliados Verificados', body: 'Te conectamos solo con clínicas, médicos y laboratorios certificados en Cancún con los que ya hemos trabajado.' },
-      { icon: '💬', title: 'Concierge Bilingüe', body: 'Un coordinador que habla inglés te guía a ti y a los proveedores en cada paso.' },
-      { icon: '✈️', title: 'Logística Completa', body: 'Guía de vuelos, traslado del aeropuerto, hospedaje y transporte en Cancún — todo gestionado por nosotros.' },
+      { image: '/assets/why/aliados-verificados.jpg', alt: 'Médico dando la mano a una coordinadora dentro de una clínica', title: 'Aliados Verificados', body: 'Te conectamos solo con clínicas, médicos y laboratorios certificados en Cancún con los que ya hemos trabajado.' },
+      { image: '/assets/why/concierge-bilingue.jpg', alt: 'Coordinadora bilingüe con auriculares atendiendo a un paciente', title: 'Concierge Bilingüe', body: 'Un coordinador que habla inglés te guía a ti y a los proveedores en cada paso.' },
+      { image: '/assets/why/logistica-completa.jpg', alt: 'Chofer recibiendo a una viajera con equipaje en el Aeropuerto Internacional de Cancún', title: 'Logística Completa', body: 'Guía de vuelos, traslado del aeropuerto, hospedaje y transporte en Cancún — todo gestionado por nosotros.' },
       { icon: '🤝', title: 'Un Solo Contacto', body: 'Desde la primera pregunta hasta el seguimiento en casa, tratas con nosotros — no con una docena de desconocidos.' },
     ],
   },
@@ -653,13 +661,13 @@ const es: HomeContent = {
     h2: 'Atención a la que te ayudamos a acceder a través de nuestra red de aliados',
     lead: 'Estas son las áreas de atención que ofrecen las clínicas y médicos independientes con los que trabajamos en Cancún — cada una basada en nuestras cuatro terapias centrales: células madre, exosomas, fibroblastos e implantes de placenta. Cada plan inicia con una evaluación médica realizada por el proveedor, no por nosotros. Coordinamos el acceso, la logística y el acompañamiento.',
     cards: [
-      { icon: '🦵', title: 'Articular y Ortopédico', body: 'Programas enfocados en articulaciones, tendones y movilidad musculoesquelética. <span class="ph">[Editar descripción]</span>' },
-      { icon: '🏃', title: 'Lesiones Deportivas y Recuperación', body: 'Programas de recuperación para pacientes activos y atletas. <span class="ph">[Editar descripción]</span>' },
-      { icon: '🛡️', title: 'Bienestar y Soporte Inmune', body: 'Programas de bienestar que apoyan la salud y resiliencia inmune. <span class="ph">[Editar descripción]</span>' },
-      { icon: '✨', title: 'Antienvejecimiento y Longevidad', body: 'Programas de bienestar orientados a la vitalidad y la longevidad. <span class="ph">[Editar descripción]</span>' },
-      { icon: '🌿', title: 'Salud y Bienestar del Adulto Mayor', body: 'Programas de bienestar adaptados a las necesidades de los adultos mayores. <span class="ph">[Editar descripción]</span>' },
-      { icon: '💆', title: 'Estética y Piel', body: 'Piel, rejuvenecimiento y bienestar estético — encaja de forma natural con las aplicaciones de fibroblastos. <span class="ph">[Editar descripción]</span>' },
-      { icon: '🔬', title: 'Protocolos Personalizados', body: 'Evaluaciones a medida para casos complejos o combinados. <span class="ph">[Editar descripción]</span>' },
+      { image: '/assets/treatments/articular-ortopedico.jpg', alt: 'Médico examinando la rodilla de un paciente durante una consulta', title: 'Articular y Ortopédico', body: 'Programas enfocados en articulaciones, tendones y movilidad musculoesquelética. <span class="ph">[Editar descripción]</span>' },
+      { image: '/assets/treatments/lesiones-deportivas.jpg', alt: 'Tenista sujetándose el codo adolorido en la cancha', title: 'Lesiones Deportivas y Recuperación', body: 'Programas de recuperación para pacientes activos y atletas. <span class="ph">[Editar descripción]</span>' },
+      { image: '/assets/treatments/soporte-inmune.jpg', alt: 'Mujer con las manos sobre el abdomen al aire libre', title: 'Bienestar y Soporte Inmune', body: 'Programas de bienestar que apoyan la salud y resiliencia inmune. <span class="ph">[Editar descripción]</span>' },
+      { image: '/assets/treatments/antienvejecimiento.jpg', alt: 'Mujer con piel saludable y luminosa', title: 'Antienvejecimiento y Longevidad', body: 'Programas de bienestar orientados a la vitalidad y la longevidad. <span class="ph">[Editar descripción]</span>' },
+      { image: '/assets/treatments/adulto-mayor.jpg', alt: 'Pareja de adultos mayores caminando juntos al atardecer', title: 'Salud y Bienestar del Adulto Mayor', body: 'Programas de bienestar adaptados a las necesidades de los adultos mayores. <span class="ph">[Editar descripción]</span>' },
+      { image: '/assets/treatments/estetica-piel.jpg', alt: 'Mujer recibiendo un tratamiento estético facial', title: 'Estética y Piel', body: 'Piel, rejuvenecimiento y bienestar estético — encaja de forma natural con las aplicaciones de fibroblastos. <span class="ph">[Editar descripción]</span>' },
+      { image: '/assets/treatments/protocolos-personalizados.jpg', alt: 'Médica revisando un plan personalizado con un paciente mayor', title: 'Protocolos Personalizados', body: 'Evaluaciones a medida para casos complejos o combinados. <span class="ph">[Editar descripción]</span>' },
     ],
     note: '<strong>Importante:</strong> Kern Stem Care es una agencia de coordinación y no brinda tratamiento ni consejo médico. Las terapias anteriores las ofrecen proveedores independientes y certificados. Muchas terapias regenerativas y celulares no están aprobadas por la FDA de EE.UU. ni Health Canada para enfermedades específicas y se consideran de investigación. Los resultados individuales varían. Ni nosotros ni nuestros aliados garantizamos resultados ni curas; el proveedor discutirá contigo la evidencia científica actual durante tu evaluación.',
   },

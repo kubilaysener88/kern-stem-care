@@ -159,7 +159,15 @@ const newsletterSuccess =
     <p class="lead">{c.why.lead}</p>
     <div class="grid g4" style="margin-top:40px;text-align:left">
       {c.why.cards.map((card) => (
-        <div class="card"><div class="ico">{card.icon}</div><h3>{card.title}</h3><p>{card.body}</p></div>
+        <div class="card">
+          {card.image ? (
+            <img class="card-img" src={card.image} alt={card.alt} loading="lazy" decoding="async" />
+          ) : (
+            <div class="ico">{card.icon}</div>
+          )}
+          <h3>{card.title}</h3>
+          <p>{card.body}</p>
+        </div>
       ))}
     </div>
   </div>
@@ -176,7 +184,11 @@ const newsletterSuccess =
     <div class="grid g3" style="margin-top:42px">
       {c.treatments.cards.map((card) => (
         <div class="card" style={card.accent ? accentStyle[card.accent] : undefined}>
-          <div class="ico">{card.icon}</div>
+          {card.image ? (
+            <img class="card-img" src={card.image} alt={card.alt} loading="lazy" decoding="async" />
+          ) : (
+            <div class="ico">{card.icon}</div>
+          )}
           <h3>{card.title}</h3>
           <p set:html={card.body} />
         </div>
