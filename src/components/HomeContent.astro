@@ -212,15 +212,24 @@ const errorMsg =
 </section>
 
 <!-- ============ PATIENT JOURNEY ============ -->
-<section class="section alt" id="journey">
+<section class="section alt jsection" id="journey">
+  <div class="jblob jblob-1" aria-hidden="true"></div>
+  <div class="jblob jblob-2" aria-hidden="true"></div>
+  <div class="jblob jblob-3" aria-hidden="true"></div>
   <div class="wrap">
     <div class="center">
       <span class="eyebrow">{c.journey.eyebrow}</span>
       <h2>{c.journey.h2}</h2>
     </div>
-    <div class="steps" style="margin-top:48px">
-      {c.journey.steps.map((step) => (
-        <div class="step"><h3>{step.title}</h3><p>{step.body}</p></div>
+    <div class="jtimeline">
+      {c.journey.steps.map((step, i) => (
+        <div class="jstep">
+          <div class="jbadge">{i + 1}</div>
+          <div class="jglass">
+            <h3>{step.title}</h3>
+            <p>{step.body}</p>
+          </div>
+        </div>
       ))}
     </div>
   </div>
