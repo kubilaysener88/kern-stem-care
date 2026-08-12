@@ -347,6 +347,146 @@ p {
   margin: 0;
 }
 
+/* ===== Glassmorphism patient-journey timeline (home only) ===== */
+.jsection {
+  position: relative;
+  overflow: hidden;
+}
+/* Soft colored blobs give the frosted glass something to blur behind it */
+.jblob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(72px);
+  opacity: 0.6;
+  z-index: 0;
+  pointer-events: none;
+}
+.jblob-1 {
+  width: 360px;
+  height: 360px;
+  background: var(--blue-light);
+  top: -60px;
+  left: 4%;
+}
+.jblob-2 {
+  width: 320px;
+  height: 320px;
+  background: var(--teal);
+  bottom: -70px;
+  right: 6%;
+}
+.jblob-3 {
+  width: 300px;
+  height: 300px;
+  background: var(--blue);
+  top: 40%;
+  left: 44%;
+  opacity: 0.4;
+}
+.jsection .wrap {
+  position: relative;
+  z-index: 1;
+}
+.jtimeline {
+  margin-top: 60px;
+  display: flex;
+  gap: 34px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.jstep {
+  position: relative;
+  flex: 1 1 210px;
+  max-width: 250px;
+}
+/* Small gradient circle — the step number. Diagonal blue→teal, analogous. */
+.jbadge {
+  position: absolute;
+  top: 0;
+  left: 6px;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  z-index: 1;
+  box-shadow: 0 8px 22px rgba(21, 101, 192, 0.28);
+}
+/* Large frosted-glass circle. The badge behind it bleeds through the blur. */
+.jglass {
+  position: relative;
+  z-index: 2;
+  margin-top: 42px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  /* Gradient fill: brighter where light hits (top-left), more transparent
+     toward the bottom-right — mimics how light passes through real glass. */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0.22) 100%
+  );
+  backdrop-filter: blur(18px) saturate(165%) brightness(1.06);
+  -webkit-backdrop-filter: blur(18px) saturate(165%) brightness(1.06);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  /* Outer drop shadow for depth + inset rim highlights that read as a real
+     glass edge catching light (top-left) and shading (bottom-right). */
+  box-shadow:
+    0 14px 44px rgba(13, 42, 74, 0.14),
+    inset 1.5px 1.5px 1px rgba(255, 255, 255, 0.9),
+    inset -2px -3px 8px rgba(13, 42, 74, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12% 13% 12% 15%;
+}
+.jglass h3 {
+  font-size: 1rem;
+  color: var(--navy);
+  margin: 0 0 6px;
+  line-height: 1.25;
+}
+.jglass p {
+  font-size: 0.82rem;
+  color: var(--ink);
+  line-height: 1.45;
+  margin: 0;
+}
+/* Arrow connector between steps */
+.jstep:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  top: 60%;
+  right: -30px;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: var(--navy);
+  opacity: 0.45;
+  z-index: 3;
+}
+@media (max-width: 900px) {
+  .jtimeline {
+    gap: 46px 34px;
+  }
+  .jstep {
+    flex-basis: 40%;
+  }
+  .jstep:not(:last-child)::after {
+    display: none;
+  }
+}
+@media (max-width: 560px) {
+  .jstep {
+    flex-basis: 100%;
+    max-width: 300px;
+  }
+}
+
 /* Disclaimer box */
 .disclaimer {
   background: #fff7e6;
