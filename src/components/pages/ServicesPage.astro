@@ -28,7 +28,11 @@ const sectionHeading =
         {
           p.cards.map((card) => (
             <a class="card card-link" href={`/${lang}/services/${card.slug}`}>
-              <div class="ico" aria-hidden="true">{card.icon}</div>
+              {card.image ? (
+                <img class="card-img" src={card.image} alt={card.alt} loading="lazy" decoding="async" />
+              ) : (
+                <div class="ico" aria-hidden="true">{card.icon}</div>
+              )}
               <h3>{card.title}</h3>
               <p set:html={card.body} />
               <span class="card-more">{more} →</span>

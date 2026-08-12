@@ -28,7 +28,7 @@ const servicesLabel = lang === 'es' ? 'Servicios' : 'Services';
 <SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription}>
   <StructuredData slot="head" lang={lang} organization={false} procedures={procedures} />
   <Breadcrumbs lang={lang} items={[{ label: servicesLabel, href: `/${lang}/services` }, { label: p.title }]} />
-  <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} />
+  <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} image={p.heroImage} />
 
   <section class="section">
     <div class="wrap">

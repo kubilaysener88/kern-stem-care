@@ -366,6 +366,25 @@ p {
   color: #fff;
   padding: 64px 0;
 }
+/* Optional photo variant (PageHero's `image` prop): the photo is the CSS
+   background (set inline), this layers the same brand gradient on top as a
+   scrim so the white text keeps AA contrast — same treatment as the home hero. */
+.page-hero.has-photo {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.page-hero.has-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(9, 27, 48, 0.93) 0%, rgba(13, 42, 74, 0.87) 38%, rgba(10, 110, 116, 0.6) 100%);
+}
+.page-hero.has-photo .wrap {
+  position: relative;
+  z-index: 1;
+}
 .page-hero h1 {
   color: #fff;
   font-size: clamp(1.9rem, 3.6vw, 2.8rem);

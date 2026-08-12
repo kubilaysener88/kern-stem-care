@@ -11,7 +11,12 @@ export interface PageSection {
   body: string; // inline HTML allowed
 }
 export interface ServiceCard {
-  icon: string;
+  /** Emoji icon. Omit when the card uses `image` instead. */
+  icon?: string;
+  /** Path under /public. When set, the card shows this photo instead of the emoji. */
+  image?: string;
+  /** Alt text — required whenever `image` is set. */
+  alt?: string;
   slug: 'stem-cells' | 'exosomes' | 'fibroblasts' | 'placenta';
   title: string;
   body: string;
@@ -34,6 +39,8 @@ export interface SimplePage {
   lead: string;
   sections: PageSection[];
   disclaimer?: string;
+  /** Path under /public, shown as the page-hero background photo. */
+  heroImage?: string;
 }
 export interface ServicesIndexPage {
   metaTitle: string;
@@ -169,10 +176,10 @@ const en: PagesSet = {
     title: 'Services',
     lead: 'We coordinate access to the regenerative therapies offered by independent, COFEPRIS-licensed partner clinics and laboratories in Cancún. Each one sits at a different stage of research, and each page below sets out what it is, what it is currently studied for, and what the evidence does and does not show.',
     cards: [
-      { icon: '🧬', slug: 'stem-cells', title: 'Stem Cells', body: 'Cells that renew themselves and develop into other cell types. The most extensively studied of the therapies we coordinate.' },
-      { icon: '✨', slug: 'exosomes', title: 'Exosomes', body: 'Cell-released vesicles carrying signaling molecules. A cell-free approach, and a newer field with evidence still developing.' },
-      { icon: '🧫', slug: 'fibroblasts', title: 'Fibroblasts', body: 'Collagen-producing cells that build connective tissue. The most narrowly focused, concentrated on skin and wound applications.' },
-      { icon: '🌱', slug: 'placenta', title: 'Freeze-Dried Placenta', body: 'A freeze-dried placental-tissue preparation, given as subdermal injections. The least established of the therapies we coordinate.' },
+      { image: '/assets/services/stem-cells.jpg', alt: 'Microscopic render of stem cells', slug: 'stem-cells', title: 'Stem Cells', body: 'Cells that renew themselves and develop into other cell types. The most extensively studied of the therapies we coordinate.' },
+      { image: '/assets/services/exosomes.jpg', alt: 'Microscopic render of exosome vesicles', slug: 'exosomes', title: 'Exosomes', body: 'Cell-released vesicles carrying signaling molecules. A cell-free approach, and a newer field with evidence still developing.' },
+      { image: '/assets/services/fibroblasts.jpg', alt: 'Microscopic render of fibroblast cells and collagen fibers', slug: 'fibroblasts', title: 'Fibroblasts', body: 'Collagen-producing cells that build connective tissue. The most narrowly focused, concentrated on skin and wound applications.' },
+      { image: '/assets/services/placenta.jpg', alt: 'Vial of freeze-dried (lyophilized) human placenta', slug: 'placenta', title: 'Freeze-Dried Placenta', body: 'A freeze-dried placental-tissue preparation, given as subdermal injections. The least established of the therapies we coordinate.' },
     ],
     disclaimer: investigationalEN,
   },
@@ -182,6 +189,7 @@ const en: PagesSet = {
     eyebrow: 'Cellular Therapy',
     title: 'Stem Cells',
     lead: 'What stem cell therapy involves, what it is currently studied for, and how we coordinate your access to it through independent, licensed clinics in Cancún.',
+    heroImage: '/assets/services/stem-cells.jpg',
     sections: [
       { h2: 'What are stem cells?', body: 'Stem cells are the body\'s building blocks. They can renew themselves and develop into other cell types — bone, cartilage, skin, or muscle, among others — and your body uses them constantly to replace cells that wear out or become damaged. Of the cellular therapies coordinated in our network, they are the most extensively studied, with decades of published research behind them. The specific cell source is confirmed by the treating physician and varies by partner laboratory.' },
       { h2: 'How could they help you?', body: 'Research focuses on their role in supporting the body\'s own repair processes, particularly in tissue repair and in modulating inflammation. It is important to be clear about the status of this work: for most specific conditions, stem cell therapy remains investigational rather than an approved standard of care. The evidence is still developing, individual responses vary, and no outcome can be guaranteed — by us or by any provider.' },
@@ -195,6 +203,7 @@ const en: PagesSet = {
     eyebrow: 'Cellular Therapy',
     title: 'Exosomes',
     lead: 'What exosome therapy involves, where the research currently stands, and how we coordinate your access to it through independent, licensed clinics in Cancún.',
+    heroImage: '/assets/services/exosomes.jpg',
     sections: [
       { h2: 'What are exosomes?', body: 'Exosomes are microscopic vesicles released by cells that carry signaling molecules from one cell to another — essentially the messages cells use to communicate. What distinguishes them from the other therapies is that they contain no living cells: exosome preparations are studied as a cell-free approach, which is why they are sometimes described as carrying the signal without the cell that produced it.' },
       { h2: 'How could they help you?', body: 'Research focuses on their role in cell-to-cell communication and in the signaling involved in tissue repair. This is a more recent field than stem cell research, and the evidence base is correspondingly smaller and still developing. Exosome preparations are not approved for the treatment of specific diseases, and no outcome can be guaranteed. Your physician will review with you what current research does and does not show.' },
@@ -208,6 +217,7 @@ const en: PagesSet = {
     eyebrow: 'Cellular Therapy',
     title: 'Fibroblasts',
     lead: 'What fibroblast therapy involves, which applications it is studied for, and how we coordinate your access to it through independent, licensed clinics in Cancún.',
+    heroImage: '/assets/services/fibroblasts.jpg',
     sections: [
       { h2: 'What are fibroblasts?', body: 'Fibroblasts are the cells that produce collagen and build the connective tissue that gives skin its structure and firmness. They are the working cells of the dermis: when skin is injured, fibroblasts are largely responsible for rebuilding the tissue underneath. Of the four therapies coordinated in our network, this is the most narrowly focused — its research is concentrated in skin and wound applications rather than systemic conditions.' },
       { h2: 'How could they help you?', body: 'Research focuses on their role in collagen production and in the repair of skin and connective tissue. Because the field is concentrated on localized applications, fibroblast therapy is generally studied for the skin itself rather than for internal or systemic conditions. It is not approved as a treatment for specific diseases, individual responses vary, and no outcome can be guaranteed.' },
@@ -221,6 +231,7 @@ const en: PagesSet = {
     eyebrow: 'Regenerative Therapy',
     title: 'Freeze-Dried Placenta',
     lead: 'What freeze-dried placenta therapy involves, how it is administered, and how we coordinate your access to it through independent, licensed clinics in Cancún.',
+    heroImage: '/assets/services/placenta.jpg',
     sections: [
       { h2: 'What is freeze-dried placenta?', body: 'Freeze-dried (lyophilized) placenta is a placental-tissue preparation studied for its content of growth factors and signaling molecules involved in regenerative processes. Lyophilization removes the water from the tissue so it can be stored stably and reconstituted before use. Unlike the other therapies we coordinate, it is not administered by infusion: it is placed as subdermal injections in the lower abdomen. The specific tissue source varies by partner laboratory and is confirmed by the treating physician.' },
       { h2: 'How could it help you?', body: 'Research interest centres on the growth factors and signaling molecules the tissue contains. Of the therapies coordinated in our network, this is the least established: the published evidence is thinner than for stem cells or exosomes, and it is explored for general wellness support rather than for any specific diagnosis. It is not approved as a treatment for any condition, individual responses vary, and no outcome can be guaranteed.' },
@@ -292,10 +303,10 @@ const es: PagesSet = {
     title: 'Servicios',
     lead: 'Coordinamos el acceso a las terapias regenerativas que ofrecen clínicas y laboratorios aliados, independientes y con licencia COFEPRIS, en Cancún. Cada una se encuentra en una etapa distinta de investigación, y cada página explica qué es, para qué se estudia actualmente y qué muestra —y qué no— la evidencia.',
     cards: [
-      { icon: '🧬', slug: 'stem-cells', title: 'Células Madre', body: 'Células que se renuevan y se transforman en otros tipos celulares. La más estudiada de las terapias que coordinamos.' },
-      { icon: '✨', slug: 'exosomes', title: 'Exosomas', body: 'Vesículas liberadas por las células que transportan moléculas de señalización. Un enfoque libre de células y un campo más reciente, con evidencia en desarrollo.' },
-      { icon: '🧫', slug: 'fibroblasts', title: 'Fibroblastos', body: 'Células productoras de colágeno que construyen el tejido conectivo. La más acotada, centrada en aplicaciones de piel y cicatrización.' },
-      { icon: '🌱', slug: 'placenta', title: 'Placenta Liofilizada', body: 'Una preparación de tejido placentario liofilizado, aplicada mediante inyecciones subdérmicas. La menos consolidada de las terapias que coordinamos.' },
+      { image: '/assets/services/stem-cells.jpg', alt: 'Representación microscópica de células madre', slug: 'stem-cells', title: 'Células Madre', body: 'Células que se renuevan y se transforman en otros tipos celulares. La más estudiada de las terapias que coordinamos.' },
+      { image: '/assets/services/exosomes.jpg', alt: 'Representación microscópica de vesículas de exosomas', slug: 'exosomes', title: 'Exosomas', body: 'Vesículas liberadas por las células que transportan moléculas de señalización. Un enfoque libre de células y un campo más reciente, con evidencia en desarrollo.' },
+      { image: '/assets/services/fibroblasts.jpg', alt: 'Representación microscópica de fibroblastos y fibras de colágeno', slug: 'fibroblasts', title: 'Fibroblastos', body: 'Células productoras de colágeno que construyen el tejido conectivo. La más acotada, centrada en aplicaciones de piel y cicatrización.' },
+      { image: '/assets/services/placenta.jpg', alt: 'Frasco de placenta humana liofilizada', slug: 'placenta', title: 'Placenta Liofilizada', body: 'Una preparación de tejido placentario liofilizado, aplicada mediante inyecciones subdérmicas. La menos consolidada de las terapias que coordinamos.' },
     ],
     disclaimer: investigationalES,
   },
@@ -305,6 +316,7 @@ const es: PagesSet = {
     eyebrow: 'Terapia Celular',
     title: 'Células Madre',
     lead: 'En qué consiste la terapia con células madre, para qué se estudia actualmente y cómo coordinamos tu acceso a ella con clínicas independientes y certificadas en Cancún.',
+    heroImage: '/assets/services/stem-cells.jpg',
     sections: [
       { h2: '¿Qué son las células madre?', body: 'Las células madre son los ladrillos con los que se construye el cuerpo. Pueden renovarse a sí mismas y transformarse en otros tipos de células —hueso, cartílago, piel o músculo, entre otras— y tu cuerpo las usa constantemente para reemplazar las células que se desgastan o se dañan. De las terapias celulares que coordinamos, son las más estudiadas, con décadas de investigación publicada. El origen específico de las células lo confirma el médico tratante y varía según el laboratorio aliado.' },
       { h2: '¿Cómo podrían ayudarte?', body: 'La investigación se centra en su papel para apoyar los procesos naturales de reparación del cuerpo, en particular en la reparación de tejidos y en la modulación de la inflamación. Es importante ser claros sobre el estado de este trabajo: para la mayoría de las condiciones específicas, la terapia con células madre sigue siendo de carácter investigacional y no un tratamiento aprobado de referencia. La evidencia está en desarrollo, cada persona responde distinto y ningún resultado puede garantizarse — ni por nosotros ni por ningún proveedor.' },
@@ -318,6 +330,7 @@ const es: PagesSet = {
     eyebrow: 'Terapia Celular',
     title: 'Exosomas',
     lead: 'En qué consiste la terapia con exosomas, en qué punto está la investigación y cómo coordinamos tu acceso a ella con clínicas independientes y certificadas en Cancún.',
+    heroImage: '/assets/services/exosomes.jpg',
     sections: [
       { h2: '¿Qué son los exosomas?', body: 'Los exosomas son vesículas microscópicas que las células liberan para transportar moléculas de señalización de una célula a otra: son, en esencia, los mensajes que las células usan para comunicarse. Lo que los distingue de las otras terapias es que no contienen células vivas; las preparaciones de exosomas se estudian como un enfoque libre de células, por eso a veces se describen como la señal sin la célula que la produjo.' },
       { h2: '¿Cómo podrían ayudarte?', body: 'La investigación se centra en su papel en la comunicación entre células y en la señalización involucrada en la reparación de tejidos. Es un campo más reciente que el de las células madre, por lo que la base de evidencia es menor y sigue en desarrollo. Las preparaciones de exosomas no están aprobadas para tratar enfermedades específicas y ningún resultado puede garantizarse. Tu médico revisará contigo qué muestra y qué no muestra la investigación actual.' },
@@ -331,6 +344,7 @@ const es: PagesSet = {
     eyebrow: 'Terapia Celular',
     title: 'Fibroblastos',
     lead: 'En qué consiste la terapia con fibroblastos, en qué aplicaciones se estudia y cómo coordinamos tu acceso a ella con clínicas independientes y certificadas en Cancún.',
+    heroImage: '/assets/services/fibroblasts.jpg',
     sections: [
       { h2: '¿Qué son los fibroblastos?', body: 'Los fibroblastos son las células que producen colágeno y construyen el tejido conectivo que da estructura y firmeza a la piel. Son las células que trabajan en la dermis: cuando la piel se lesiona, los fibroblastos son en buena medida los responsables de reconstruir el tejido que hay debajo. De las cuatro terapias que coordinamos, esta es la más acotada — su investigación se concentra en aplicaciones de piel y cicatrización, más que en condiciones sistémicas.' },
       { h2: '¿Cómo podrían ayudarte?', body: 'La investigación se centra en su papel en la producción de colágeno y en la reparación de la piel y el tejido conectivo. Como el campo se concentra en aplicaciones localizadas, la terapia con fibroblastos se estudia en general para la piel misma, más que para condiciones internas o sistémicas. No está aprobada como tratamiento de enfermedades específicas, cada persona responde distinto y ningún resultado puede garantizarse.' },
@@ -344,6 +358,7 @@ const es: PagesSet = {
     eyebrow: 'Terapia Regenerativa',
     title: 'Placenta Liofilizada',
     lead: 'En qué consiste la terapia con placenta liofilizada, cómo se administra y cómo coordinamos tu acceso a ella con clínicas independientes y certificadas en Cancún.',
+    heroImage: '/assets/services/placenta.jpg',
     sections: [
       { h2: '¿Qué es la placenta liofilizada?', body: 'La placenta liofilizada (secada en frío) es una preparación de tejido placentario estudiada por su contenido de factores de crecimiento y moléculas de señalización involucradas en procesos regenerativos. La liofilización retira el agua del tejido para que pueda conservarse de forma estable y reconstituirse antes de su uso. A diferencia de las otras terapias que coordinamos, no se administra por infusión: se aplica mediante inyecciones subdérmicas en el abdomen bajo. El origen específico del tejido varía según el laboratorio aliado y lo confirma el médico tratante.' },
       { h2: '¿Cómo podría ayudarte?', body: 'El interés de la investigación se centra en los factores de crecimiento y las moléculas de señalización que contiene el tejido. De las terapias que coordinamos, esta es la menos consolidada: la evidencia publicada es más escasa que la de células madre o exosomas, y se explora como apoyo general al bienestar, no para un diagnóstico específico. No está aprobada como tratamiento de ninguna condición, cada persona responde distinto y ningún resultado puede garantizarse.' },

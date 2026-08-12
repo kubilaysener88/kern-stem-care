@@ -3,11 +3,14 @@ interface Props {
   eyebrow?: string;
   title: string;
   lead?: string; // inline HTML allowed (may contain placeholder spans)
+  /** Path under /public. When set, shown as the banner's background photo
+      (decorative — the gradient overlay keeps text at AA contrast). */
+  image?: string;
 }
-const { eyebrow, title, lead } = Astro.props;
+const { eyebrow, title, lead, image } = Astro.props;
 ---
 
-<section class="page-hero">
+<section class:list={['page-hero', { 'has-photo': !!image }]} style={image ? `background-image:url(${image})` : undefined}>
   <div class="wrap">
     {eyebrow && <span class="eyebrow">{eyebrow}</span>}
     <h1>{title}</h1>
