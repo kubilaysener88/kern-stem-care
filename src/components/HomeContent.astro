@@ -225,7 +225,10 @@ const errorMsg =
       {c.journey.steps.map((step, i) => (
         <div class="jstep">
           <div class="jbadge">{i + 1}</div>
-          <div class="jglass">
+          <div
+            class:list={['jglass', { 'has-photo': !!step.image }]}
+            style={step.image ? `background-image: linear-gradient(135deg, rgba(255,255,255,0.74) 0%, rgba(255,255,255,0.48) 100%), url(${step.image})` : undefined}
+          >
             <h3>{step.title}</h3>
             <p>{step.body}</p>
           </div>
