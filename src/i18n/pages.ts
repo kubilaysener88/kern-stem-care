@@ -174,7 +174,7 @@ const en: PagesSet = {
       'Compare the regenerative therapies we help international patients access in Cancún — stem cells, exosomes, fibroblasts and freeze-dried placenta — through independent, licensed clinics and labs.',
     eyebrow: 'What We Coordinate',
     title: 'Services',
-    lead: 'We coordinate access to the regenerative therapies offered by independent, COFEPRIS-licensed partner clinics and laboratories in Cancún. Each one sits at a different stage of research, and each page below sets out what it is, what it is currently studied for, and what the evidence does and does not show.',
+    lead: "Regenerative therapy in Cancún, Mexico is only as strong as the team behind it — and that's exactly what we take on. We vet and verify every independent, COFEPRIS-licensed clinic and laboratory we coordinate with, from stem cell therapy to exosomes, then facilitate every step from your first call to your follow-up at home.",
     cards: [
       { image: '/assets/services/stem-cells.jpg', alt: 'Microscopic render of stem cells', slug: 'stem-cells', title: 'Stem Cells', body: 'Cells that renew themselves and develop into other cell types. The most extensively studied of the therapies we coordinate.' },
       { image: '/assets/services/exosomes.jpg', alt: 'Microscopic render of exosome vesicles', slug: 'exosomes', title: 'Exosomes', body: 'Cell-released vesicles carrying signaling molecules. A cell-free approach, and a newer field with evidence still developing.' },
@@ -301,7 +301,7 @@ const es: PagesSet = {
       'Compara las terapias regenerativas a las que ayudamos a acceder en Cancún — células madre, exosomas, fibroblastos y placenta liofilizada — con clínicas y laboratorios independientes y certificados.',
     eyebrow: 'Qué Coordinamos',
     title: 'Servicios',
-    lead: 'Coordinamos el acceso a las terapias regenerativas que ofrecen clínicas y laboratorios aliados, independientes y con licencia COFEPRIS, en Cancún. Cada una se encuentra en una etapa distinta de investigación, y cada página explica qué es, para qué se estudia actualmente y qué muestra —y qué no— la evidencia.',
+    lead: 'Una terapia regenerativa en Cancún, México es tan sólida como el equipo que la respalda — y de eso justo nos encargamos. Verificamos y validamos cada clínica y laboratorio independiente con licencia COFEPRIS con el que coordinamos, desde la terapia con células madre hasta los exosomas, y luego facilitamos cada paso, desde tu primera llamada hasta tu seguimiento en casa.',
     cards: [
       { image: '/assets/services/stem-cells.jpg', alt: 'Representación microscópica de células madre', slug: 'stem-cells', title: 'Células Madre', body: 'Células que se renuevan y se transforman en otros tipos celulares. La más estudiada de las terapias que coordinamos.' },
       { image: '/assets/services/exosomes.jpg', alt: 'Representación microscópica de vesículas de exosomas', slug: 'exosomes', title: 'Exosomas', body: 'Vesículas liberadas por las células que transportan moléculas de señalización. Un enfoque libre de células y un campo más reciente, con evidencia en desarrollo.' },
