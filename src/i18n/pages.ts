@@ -247,7 +247,7 @@ const en: PagesSet = {
     lead: 'Kern Stem Care is the agency; the medical care is delivered by independent, licensed providers. <span class="ph">[Replace with your story.]</span>',
     sections: [
       { h2: 'Who we are', body: 'Kern Stem Care is a medical coordination agency operated by Kern Corsa, S.A. de C.V., a company legally registered in Cancún, Mexico. We guide patients from the United States and Canada from our office in Cancún. We are not a clinic and do not provide medical treatment: care is delivered by the independent, licensed clinics, physicians, and laboratories in our network.' },
-      { h2: 'What we do', body: 'We vet providers, match your case, and handle travel, lodging, transport, and appointments — one bilingual coordinator from first call to follow-up. <span class="ph">[Edit.]</span>' },
+      { h2: 'What we do', body: "Coordinating your trip is the easy part. The real work is done before you arrive. We vet our partner clinics in Cancún, confirm that every vial holds the correct stem cell count for your treatment, and verify that the right technology is in place to improve how it's applied. So when you land, the details that shape your stem cell therapy are already handled — you arrive to care that's ready for you, not just an appointment on a calendar." },
       { h2: 'Our network', body: 'We connect you only with clinics, physicians, and laboratories licensed under Mexico’s health authority (COFEPRIS). <span class="ph">[Describe your vetting and partners.]</span>' },
     ],
   },
@@ -374,7 +374,7 @@ const es: PagesSet = {
     lead: 'Kern Stem Care es la agencia; la atención médica la brindan proveedores independientes y certificados. <span class="ph">[Reemplazar con tu historia.]</span>',
     sections: [
       { h2: 'Quiénes somos', body: 'Kern Stem Care es una agencia de coordinación médica operada por Kern Corsa, S.A. de C.V., una empresa legalmente constituida en Cancún, México. Guiamos a pacientes de Estados Unidos y Canadá desde nuestra oficina en Cancún. No somos una clínica y no brindamos tratamiento médico: la atención la brindan clínicas, médicos y laboratorios independientes y certificados de nuestra red.' },
-      { h2: 'Qué hacemos', body: 'Verificamos proveedores, canalizamos tu caso y gestionamos viaje, hospedaje, transporte y citas — un coordinador bilingüe desde la primera llamada hasta el seguimiento. <span class="ph">[Editar.]</span>' },
+      { h2: 'Qué hacemos', body: 'Coordinar tu viaje es lo fácil. El verdadero trabajo está hecho antes de que llegues. Verificamos nuestras clínicas asociadas en Cancún, confirmamos que cada vial contenga el conteo correcto de células madre para tu tratamiento, y revisamos que la tecnología adecuada esté disponible para mejorar su aplicación. Así, cuando aterrizas, los detalles que definen tu terapia con células madre ya están resueltos — llegas a una atención lista para ti, no solo a una cita en el calendario.' },
       { h2: 'Nuestra red', body: 'Te conectamos solo con clínicas, médicos y laboratorios certificados por la autoridad sanitaria de México (COFEPRIS). <span class="ph">[Describe tu proceso de evaluación y aliados.]</span>' },
     ],
   },
