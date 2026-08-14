@@ -405,7 +405,7 @@ const en: HomeContent = {
     ],
     partnersTitle: 'Our Cancún Partner Network',
     partnersLead:
-      'Independent, COFEPRIS-licensed clinics and laboratories. Add each partner only with their written permission to display their name and logo.',
+      'More than simply creating partnerships, we continuously select, evaluate, and strengthen our network of leading specialists, clinics, and cutting-edge medical protocols, always seeking innovation and excellence for our patients.',
     partners: [
       { icon: '🏥', name: '[Partner Clinic]', detail: '[Specialty · COFEPRIS license #]' },
       { icon: '🏥', name: '[Partner Clinic]', detail: '[Specialty · COFEPRIS license #]' },
@@ -713,7 +713,7 @@ const es: HomeContent = {
     ],
     partnersTitle: 'Nuestra Red de Aliados en Cancún',
     partnersLead:
-      'Clínicas y laboratorios independientes certificados por COFEPRIS. Agrega a cada aliado solo con su permiso por escrito para mostrar su nombre y logo.',
+      'Más que simplemente crear alianzas, seleccionamos, evaluamos y fortalecemos continuamente nuestra red de especialistas líderes, clínicas y protocolos médicos de vanguardia, siempre buscando innovación y excelencia para nuestros pacientes.',
     partners: [
       { icon: '🏥', name: '[Partner Clinic]', detail: '[Especialidad · Cédula COFEPRIS #]' },
       { icon: '🏥', name: '[Partner Clinic]', detail: '[Especialidad · Cédula COFEPRIS #]' },
