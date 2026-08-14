@@ -1,0 +1,65 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import PageHero from '../PageHero.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import type { Lang } from '../../i18n/ui';
+import { homeContent } from '../../i18n/home';
+
+interface Props {
+  lang: Lang;
+  slug: string;
+}
+const { lang, slug } = Astro.props;
+const partner = homeContent[lang].team.partners.find((item) => item.slug === slug);
+if (!partner) {
+  throw new Error(`Unknown partner slug: ${slug}`);
+}
+
+const eyebrow = lang === 'es' ? 'Aliado de la Red' : 'Network Partner';
+const lead =
+  lang === 'es'
+    ? 'Instalación aliada dentro de la red de Kern Stem Care en Cancún. La atención médica es proporcionada por este proveedor independiente y licenciado — no por Kern Stem Care.'
+    : 'A partner facility within the Kern Stem Care network in Cancún. Medical care is provided by this independent, licensed provider — not by Kern Stem Care.';
+const galleryTitle = lang === 'es' ? 'Instalaciones' : 'Facility';
+const photoAltLabel = lang === 'es' ? 'Foto de la instalación' : 'Facility photo';
+const backLabel = lang === 'es' ? '← Volver al equipo y aliados' : '← Back to team & partners';
+const ctaLabel = lang === 'es' ? 'Hablar con un Coordinador' : 'Talk to a Coordinator';
+const metaTitle = `${partner.name} | Kern Stem Care`;
+---
+
+<SiteLayout lang={lang} title={metaTitle} description={lead}>
+  <Breadcrumbs lang={lang} items={[{ label: partner.name }]} />
+  <PageHero eyebrow={eyebrow} title={partner.name} lead={lead} image={partner.image} />
+
+  <section class="section">
+    <div class="wrap">
+      <p class="ph center">{partner.detail}</p>
+
+      {partner.photos && partner.photos.length > 0 && (
+        <>
+          <h2 style="margin:36px 0 20px">{galleryTitle}</h2>
+          <div class="grid g3">
+            {partner.photos.map((photo, i) => (
+              <img class="partner-photo" src={photo} alt={`${photoAltLabel} ${i + 1}`} loading="lazy" decoding="async" />
+            ))}
+          </div>
+        </>
+      )}
+
+      <div class="center" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:36px">
+        <a href={`/${lang}#team`} class="btn btn-outline">{backLabel}</a>
+        <a href={`/${lang}/contact`} class="btn btn-primary">{ctaLabel}</a>
+      </div>
+    </div>
+  </section>
+</SiteLayout>
+
+<style>
+  .partner-photo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+</style>

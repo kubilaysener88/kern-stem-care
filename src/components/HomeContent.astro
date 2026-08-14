@@ -258,7 +258,15 @@ const errorMsg =
     <p class="lead center" style="margin-bottom:24px">{c.team.partnersLead}</p>
     <div class="grid g4">
       {c.team.partners.map((p) => (
-        <div class="card center"><div class="ico" style="margin:0 auto 14px">{p.icon}</div><h3 class="ph">{p.name}</h3><p class="ph">{p.detail}</p></div>
+        <a class="card card-link center" href={`/${lang}/partners/${p.slug}`}>
+          {p.image ? (
+            <img class="card-img" src={p.image} alt={p.name} loading="lazy" decoding="async" />
+          ) : (
+            <div class="ico" style="margin:0 auto 14px">{p.icon}</div>
+          )}
+          <h3 class="ph">{p.name}</h3>
+          <p class="ph">{p.detail}</p>
+        </a>
       ))}
     </div>
   </div>
@@ -275,7 +283,13 @@ const errorMsg =
       <div class="kc-track" id="kc-track">
         {c.showcase.slides.map((s) => (
           <div class="kc-slide">
-            <div class="kc-ph">{s.emoji} <span class="ph">{s.ph}</span></div>
+            {s.video ? (
+              <video src={s.video} poster={s.poster} controls preload="none" playsinline aria-label={s.caption} />
+            ) : s.image ? (
+              <img src={s.image} alt={s.caption} loading="lazy" decoding="async" />
+            ) : (
+              <div class="kc-ph">{s.emoji} <span class="ph">{s.ph}</span></div>
+            )}
             <div class="kc-cap"><span>{s.caption}</span></div>
           </div>
         ))}
@@ -403,17 +417,25 @@ const errorMsg =
     color: #fff;
     font-size: clamp(2rem, 4.2vw, 3.2rem);
     margin-bottom: 0.4em;
+    text-shadow: 0 2px 4px rgba(2, 8, 16, 0.7), 0 0 24px rgba(2, 8, 16, 0.5);
   }
-  .hero p {
+  .hero > .wrap > div:first-child > p {
     color: #dce9f6;
     font-size: 1.15rem;
     max-width: 560px;
+    text-shadow:
+      0 0 3px rgba(2, 8, 16, 0.9),
+      0 0 3px rgba(2, 8, 16, 0.9),
+      0 0 8px rgba(2, 8, 16, 0.85),
+      0 0 8px rgba(2, 8, 16, 0.85),
+      0 2px 5px rgba(2, 8, 16, 0.7);
   }
   .hero-tagline {
     font-weight: 600;
     color: #eaf3fc !important;
     font-size: 1.05rem !important;
     letter-spacing: 0.01em;
+    text-shadow: 0 1px 3px rgba(2, 8, 16, 0.7), 0 0 16px rgba(2, 8, 16, 0.5);
   }
   /* Hero chips are links to each service page. */
   .pill-link {
@@ -935,7 +957,7 @@ const errorMsg =
         go(i - 1);
       }
       function start() {
-        timer = setInterval(next, 5000);
+        timer = setInterval(next, 9000);
       }
       function reset() {
         clearInterval(timer);

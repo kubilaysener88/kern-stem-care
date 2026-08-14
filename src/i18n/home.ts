@@ -28,6 +28,9 @@ export interface Slide {
   emoji: string;
   ph: string;
   caption: string;
+  image?: string;
+  video?: string;
+  poster?: string;
 }
 export interface Stat {
   num: string;
@@ -49,6 +52,9 @@ export interface Partner {
   icon: string;
   name: string;
   detail: string;
+  slug: string;
+  image?: string;
+  photos?: string[];
 }
 export interface Filter {
   key: string;
@@ -271,11 +277,24 @@ const en: HomeContent = {
     eyebrow: 'More Than Healthcare',
     h2: 'Every Moment of Your Care Matters',
     slides: [
-      { emoji: '🎥', ph: '[video-1.mp4 / YouTube ID]', caption: 'Stem cell application' },
-      { emoji: '📷', ph: '[photo-treatment-1.jpg]', caption: 'Exosome therapy at partner clinic' },
-      { emoji: '🎥', ph: '[video-2.mp4 / YouTube ID]', caption: 'Patient journey in Cancún' },
-      { emoji: '📷', ph: '[photo-lab-1.jpg]', caption: 'Partner cellular-therapy laboratory' },
-      { emoji: '📷', ph: '[photo-treatment-2.jpg]', caption: 'Fibroblast application' },
+      {
+        emoji: '📷',
+        ph: '[video-2.mp4 / YouTube ID]',
+        caption: 'Pre-treatment evaluation',
+        image: '/assets/showcase/ultrasonido-evaluacion.jpg',
+      },
+      {
+        emoji: '📷',
+        ph: '[photo-lab-1.jpg]',
+        caption: 'Partner cellular-therapy laboratory',
+        image: '/assets/partners/nao-laboratorio.jpg',
+      },
+      {
+        emoji: '📷',
+        ph: '[photo-treatment-2.jpg]',
+        caption: 'Patient during IV treatment',
+        image: '/assets/showcase/kubi-iv.jpg',
+      },
     ],
     ctaBook: '📅 Contact Us & Book Your Appointment',
   },
@@ -362,7 +381,8 @@ const en: HomeContent = {
         body: 'Flights guidance, airport pickup, lodging, and transport in Cancún — all arranged for you.',
       },
       {
-        icon: '🤝',
+        image: '/assets/why/one-point-of-contact.jpg',
+        alt: 'Smiling patient coordinator in scrubs with arms crossed',
         title: 'One Point of Contact',
         body: 'From first question to follow-up at home, you deal with us — not a dozen strangers.',
       },
@@ -407,10 +427,39 @@ const en: HomeContent = {
     partnersLead:
       'More than simply creating partnerships, we continuously select, evaluate, and strengthen our network of leading specialists, clinics, and cutting-edge medical protocols, always seeking innovation and excellence for our patients.',
     partners: [
-      { icon: '🏥', name: '[Partner Clinic]', detail: '[Specialty · COFEPRIS license #]' },
-      { icon: '🏥', name: '[Partner Clinic]', detail: '[Specialty · COFEPRIS license #]' },
-      { icon: '🔬', name: '[Partner Laboratory]', detail: '[Cellular therapy lab · accreditation]' },
-      { icon: '🔬', name: '[Partner Laboratory]', detail: '[Cellular therapy lab · accreditation]' },
+      {
+        icon: '🏥',
+        name: '[Partner Clinic]',
+        detail: '[Specialty · COFEPRIS license #]',
+        slug: 'partner-clinic-1',
+        image: '/assets/partners/luigi/luigi-1.jpg',
+        photos: [
+          '/assets/partners/luigi/luigi-1.jpg',
+          '/assets/partners/luigi/luigi-2.jpg',
+          '/assets/partners/luigi/luigi-3.jpg',
+          '/assets/partners/luigi/luigi-4.jpg',
+        ],
+      },
+      { icon: '🏥', name: '[Partner Clinic]', detail: '[Specialty · COFEPRIS license #]', slug: 'partner-clinic-2' },
+      {
+        icon: '🔬',
+        name: '[Partner Laboratory]',
+        detail: '[Cellular therapy lab · accreditation]',
+        slug: 'partner-lab-1',
+        image: '/assets/partners/nao-laboratorio.jpg',
+        photos: [
+          '/assets/partners/nao/nao-1.jpg',
+          '/assets/partners/nao/nao-2.jpg',
+          '/assets/partners/nao/nao-3.jpg',
+          '/assets/partners/nao/nao-4.jpg',
+          '/assets/partners/nao/nao-5.jpg',
+          '/assets/partners/nao/nao-6.jpg',
+          '/assets/partners/nao/nao-7.jpg',
+          '/assets/partners/nao/nao-8.jpg',
+          '/assets/partners/nao/nao-9.jpg',
+        ],
+      },
+      { icon: '🔬', name: '[Partner Laboratory]', detail: '[Cellular therapy lab · accreditation]', slug: 'partner-lab-2' },
     ],
   },
   testimonials: {
@@ -598,11 +647,24 @@ const es: HomeContent = {
     eyebrow: 'Más Que Atención Médica',
     h2: 'Cada Momento de Tu Atención Importa',
     slides: [
-      { emoji: '🎥', ph: '[video-1.mp4 / YouTube ID]', caption: 'Aplicación de células madre' },
-      { emoji: '📷', ph: '[photo-treatment-1.jpg]', caption: 'Terapia con exosomas en clínica aliada' },
-      { emoji: '🎥', ph: '[video-2.mp4 / YouTube ID]', caption: 'Experiencia del paciente en Cancún' },
-      { emoji: '📷', ph: '[photo-lab-1.jpg]', caption: 'Laboratorio de terapia celular aliado' },
-      { emoji: '📷', ph: '[photo-treatment-2.jpg]', caption: 'Aplicación de fibroblastos' },
+      {
+        emoji: '📷',
+        ph: '[video-2.mp4 / YouTube ID]',
+        caption: 'Evaluación previa al tratamiento',
+        image: '/assets/showcase/ultrasonido-evaluacion.jpg',
+      },
+      {
+        emoji: '📷',
+        ph: '[photo-lab-1.jpg]',
+        caption: 'Laboratorio de terapia celular aliado',
+        image: '/assets/partners/nao-laboratorio.jpg',
+      },
+      {
+        emoji: '📷',
+        ph: '[photo-treatment-2.jpg]',
+        caption: 'Paciente durante tratamiento intravenoso',
+        image: '/assets/showcase/kubi-iv.jpg',
+      },
     ],
     ctaBook: '📅 Contáctanos y Agenda Tu Cita',
   },
@@ -673,7 +735,7 @@ const es: HomeContent = {
       { image: '/assets/why/aliados-verificados.jpg', alt: 'Médico dando la mano a una coordinadora dentro de una clínica', title: 'Aliados Verificados', body: 'Te conectamos solo con clínicas, médicos y laboratorios certificados en Cancún con los que ya hemos trabajado.' },
       { image: '/assets/why/concierge-bilingue.jpg', alt: 'Coordinadora bilingüe con auriculares atendiendo a un paciente', title: 'Concierge Bilingüe', body: 'Un coordinador que habla inglés te guía a ti y a los proveedores en cada paso.' },
       { image: '/assets/why/logistica-completa.jpg', alt: 'Chofer recibiendo a una viajera con equipaje en el Aeropuerto Internacional de Cancún', title: 'Logística Completa', body: 'Guía de vuelos, traslado del aeropuerto, hospedaje y transporte en Cancún — todo gestionado por nosotros.' },
-      { icon: '🤝', title: 'Un Solo Contacto', body: 'Desde la primera pregunta hasta el seguimiento en casa, tratas con nosotros — no con una docena de desconocidos.' },
+      { image: '/assets/why/one-point-of-contact.jpg', alt: 'Coordinadora sonriente con bata clínica y brazos cruzados', title: 'Un Solo Contacto', body: 'Desde la primera pregunta hasta el seguimiento en casa, tratas con nosotros — no con una docena de desconocidos.' },
     ],
   },
   treatments: {
@@ -715,10 +777,39 @@ const es: HomeContent = {
     partnersLead:
       'Más que simplemente crear alianzas, seleccionamos, evaluamos y fortalecemos continuamente nuestra red de especialistas líderes, clínicas y protocolos médicos de vanguardia, siempre buscando innovación y excelencia para nuestros pacientes.',
     partners: [
-      { icon: '🏥', name: '[Partner Clinic]', detail: '[Especialidad · Cédula COFEPRIS #]' },
-      { icon: '🏥', name: '[Partner Clinic]', detail: '[Especialidad · Cédula COFEPRIS #]' },
-      { icon: '🔬', name: '[Partner Laboratory]', detail: '[Laboratorio de terapia celular · acreditación]' },
-      { icon: '🔬', name: '[Partner Laboratory]', detail: '[Laboratorio de terapia celular · acreditación]' },
+      {
+        icon: '🏥',
+        name: '[Partner Clinic]',
+        detail: '[Especialidad · Cédula COFEPRIS #]',
+        slug: 'partner-clinic-1',
+        image: '/assets/partners/luigi/luigi-1.jpg',
+        photos: [
+          '/assets/partners/luigi/luigi-1.jpg',
+          '/assets/partners/luigi/luigi-2.jpg',
+          '/assets/partners/luigi/luigi-3.jpg',
+          '/assets/partners/luigi/luigi-4.jpg',
+        ],
+      },
+      { icon: '🏥', name: '[Partner Clinic]', detail: '[Especialidad · Cédula COFEPRIS #]', slug: 'partner-clinic-2' },
+      {
+        icon: '🔬',
+        name: '[Partner Laboratory]',
+        detail: '[Laboratorio de terapia celular · acreditación]',
+        slug: 'partner-lab-1',
+        image: '/assets/partners/nao-laboratorio.jpg',
+        photos: [
+          '/assets/partners/nao/nao-1.jpg',
+          '/assets/partners/nao/nao-2.jpg',
+          '/assets/partners/nao/nao-3.jpg',
+          '/assets/partners/nao/nao-4.jpg',
+          '/assets/partners/nao/nao-5.jpg',
+          '/assets/partners/nao/nao-6.jpg',
+          '/assets/partners/nao/nao-7.jpg',
+          '/assets/partners/nao/nao-8.jpg',
+          '/assets/partners/nao/nao-9.jpg',
+        ],
+      },
+      { icon: '🔬', name: '[Partner Laboratory]', detail: '[Laboratorio de terapia celular · acreditación]', slug: 'partner-lab-2' },
     ],
   },
   testimonials: {
