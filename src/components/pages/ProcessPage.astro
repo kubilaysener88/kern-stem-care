@@ -25,7 +25,11 @@ const stepsHeading = lang === 'es' ? 'Proceso paso a paso' : 'Your step-by-step 
       <h2 id="process-steps-heading" class="sr-only">{stepsHeading}</h2>
       <div class="steps">
         {p.steps.map((step) => (
-          <div class="step"><h3>{step.title}</h3><p>{step.body}</p></div>
+          <div class="step">
+            {step.image && <img class="step-img" src={step.image} alt={step.title} loading="lazy" decoding="async" />}
+            <h3>{step.title}</h3>
+            <p>{step.body}</p>
+          </div>
         ))}
       </div>
     </div>

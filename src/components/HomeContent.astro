@@ -223,7 +223,7 @@ const errorMsg =
     </div>
     <div class="jtimeline">
       {c.journey.steps.map((step, i) => (
-        <div class="jstep">
+        <a class="jstep" href={`/${lang}/process`}>
           <div class="jbadge">{i + 1}</div>
           <div
             class:list={['jglass', { 'has-photo': !!step.image }]}
@@ -232,7 +232,7 @@ const errorMsg =
             <h3>{step.title}</h3>
             <p>{step.body}</p>
           </div>
-        </div>
+        </a>
       ))}
     </div>
   </div>

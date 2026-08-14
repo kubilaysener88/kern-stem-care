@@ -57,7 +57,7 @@ export interface ProcessPage {
   eyebrow: string;
   title: string;
   lead: string;
-  steps: { title: string; body: string }[];
+  steps: { title: string; body: string; image?: string }[];
   sections: PageSection[];
 }
 export interface TestimonialsPage {
@@ -258,10 +258,10 @@ const en: PagesSet = {
     title: 'Process for international patients',
     lead: 'From your first message to follow-up back home, here is how the journey works. <span class="ph">[Edit the overview.]</span>',
     steps: [
-      { title: 'Free Consultation', body: 'Share your history. We match your case to the right partner provider, who reviews it and explains realistic options.' },
-      { title: 'Plan, Quote & Itinerary', body: 'The provider sends a medical plan; we build your transparent quote and travel itinerary around it.' },
-      { title: 'Travel & Care in Cancún', body: 'We coordinate flights, lodging, and transport. You receive care at our partner clinic; we stay with you throughout.' },
-      { title: 'Follow-Up at Home', body: 'We help coordinate remote check-ins and aftercare with the provider once you return home.' },
+      { title: 'Free Consultation', body: 'Share your history. We match your case to the right partner provider, who reviews it and explains realistic options.', image: '/assets/journey/pre-consulta.jpg' },
+      { title: 'Plan, Quote & Itinerary', body: 'The provider sends a medical plan; we build your transparent quote and travel itinerary around it.', image: '/assets/journey/consulta.jpg' },
+      { title: 'Travel & Care in Cancún', body: 'We coordinate flights, lodging, and transport. You receive care at our partner clinic; we stay with you throughout.', image: '/assets/journey/welcome.jpg' },
+      { title: 'Follow-Up at Home', body: 'We help coordinate remote check-ins and aftercare with the provider once you return home.', image: '/assets/journey/post-tratamiento.jpg' },
     ],
     sections: [
       { h2: 'Travel & logistics', body: 'Cancún International (CUN) is a major hub with direct flights from cities across the Americas, Europe, and beyond — including most major U.S. and Canadian cities. We provide flight guidance, airport pickup, and lodging near the partner clinic. <span class="ph">[Add travel times and what is included.]</span>' },
@@ -385,10 +385,10 @@ const es: PagesSet = {
     title: 'Proceso para pacientes internacionales',
     lead: 'Desde tu primer mensaje hasta el seguimiento en casa, así funciona el proceso. <span class="ph">[Editar el resumen.]</span>',
     steps: [
-      { title: 'Consulta Gratis', body: 'Comparte tu historial. Canalizamos tu caso al proveedor aliado adecuado, que lo revisa y te explica opciones realistas.' },
-      { title: 'Plan, Cotización e Itinerario', body: 'El proveedor envía un plan médico; nosotros armamos tu cotización transparente y tu itinerario de viaje.' },
-      { title: 'Viaje y Atención en Cancún', body: 'Coordinamos vuelos, hospedaje y transporte. Recibes la atención en la clínica aliada; te acompañamos en todo momento.' },
-      { title: 'Seguimiento en Casa', body: 'Ayudamos a coordinar el seguimiento remoto y los cuidados posteriores con el proveedor al volver a casa.' },
+      { title: 'Consulta Gratis', body: 'Comparte tu historial. Canalizamos tu caso al proveedor aliado adecuado, que lo revisa y te explica opciones realistas.', image: '/assets/journey/pre-consulta.jpg' },
+      { title: 'Plan, Cotización e Itinerario', body: 'El proveedor envía un plan médico; nosotros armamos tu cotización transparente y tu itinerario de viaje.', image: '/assets/journey/consulta.jpg' },
+      { title: 'Viaje y Atención en Cancún', body: 'Coordinamos vuelos, hospedaje y transporte. Recibes la atención en la clínica aliada; te acompañamos en todo momento.', image: '/assets/journey/welcome.jpg' },
+      { title: 'Seguimiento en Casa', body: 'Ayudamos a coordinar el seguimiento remoto y los cuidados posteriores con el proveedor al volver a casa.', image: '/assets/journey/post-tratamiento.jpg' },
     ],
     sections: [
       { h2: 'Viaje y logística', body: 'El Aeropuerto Internacional de Cancún (CUN) es un hub importante con vuelos directos desde ciudades de toda América, Europa y más — incluyendo la mayoría de las ciudades de EE.UU. y Canadá. Ofrecemos guía de vuelos, traslado del aeropuerto y hospedaje cerca de la clínica aliada. <span class="ph">[Agrega tiempos de viaje y qué incluye.]</span>' },
