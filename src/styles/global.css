@@ -577,11 +577,42 @@ p {
   content: '';
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(100deg, rgba(9, 27, 48, 0.93) 0%, rgba(13, 42, 74, 0.87) 38%, rgba(10, 110, 116, 0.6) 100%);
 }
 .page-hero.has-photo .wrap {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+}
+/* Collage variant (PageHero's `images` prop): several photos side by side
+   filling the banner, with the same gradient scrim painted over them. */
+.hero-collage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+}
+.hero-collage img {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* A middle photo loses width to the blend on BOTH sides (edge photos only
+   lose it on one), so give it extra flex-grow to keep a similar amount of
+   itself actually visible instead of getting squeezed thin. */
+.hero-collage img:not(:first-child):not(:last-child) {
+  flex-grow: 1.5;
+}
+/* Feather each photo's leading edge so it dissolves into the one before it
+   instead of a hard seam — the browser's default paint order (later sibling
+   on top) does the actual crossfade; flex's auto-grow absorbs the overlap. */
+.hero-collage img:not(:first-child) {
+  margin-left: -50px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 50px);
+  mask-image: linear-gradient(to right, transparent 0, #000 50px);
 }
 .page-hero h1 {
   color: #fff;

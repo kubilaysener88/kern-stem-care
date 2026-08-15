@@ -23,7 +23,16 @@ const sectionHeading = lang === 'es' ? 'Testimonios en video de pacientes' : 'Pa
 
 <SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription}>
   <Breadcrumbs lang={lang} items={[{ label: navLabels[lang].testimonials }]} />
-  <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} />
+  <PageHero
+    eyebrow={p.eyebrow}
+    title={p.title}
+    lead={p.lead}
+    images={[
+      '/assets/showcase/ultrasonido-evaluacion.jpg',
+      '/assets/showcase/kubi-iv.jpg',
+      '/assets/showcase/facial-injection.jpg',
+    ]}
+  />
 
   <section class="section" aria-labelledby="testimonials-heading">
     <div class="wrap">

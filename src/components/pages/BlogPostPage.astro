@@ -119,6 +119,34 @@ const articleSchema = {
     color: var(--blue);
     text-decoration: underline;
   }
+  /* Markdown pipe-tables render with no default spacing, which reads as the
+     columns running into each other. Give them real cell borders/padding,
+     and let the table scroll on its own on narrow screens instead of
+     squeezing text. */
+  .post-body :global(table) {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 1.2em;
+    font-size: 0.92rem;
+  }
+  .post-body :global(th),
+  .post-body :global(td) {
+    padding: 10px 16px;
+    border: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+  }
+  .post-body :global(th) {
+    background: var(--bg-alt);
+    color: var(--navy);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .post-body :global(tr:nth-child(even) td) {
+    background: var(--bg-alt);
+  }
   .post-body :global(blockquote) {
     margin: 0 0 1.2em;
     padding: 14px 20px;

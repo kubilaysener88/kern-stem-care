@@ -31,6 +31,9 @@ export interface Slide {
   image?: string;
   video?: string;
   poster?: string;
+  /** Crops in on the image (e.g. 1.3 = 130%) to show less of the surrounding
+      background. Centered by default. */
+  zoom?: number;
 }
 export interface Stat {
   num: string;
@@ -284,6 +287,7 @@ const en: HomeContent = {
         ph: '[video-2.mp4 / YouTube ID]',
         caption: 'Pre-treatment evaluation',
         image: '/assets/showcase/ultrasonido-evaluacion.jpg',
+        zoom: 1.35,
       },
       {
         emoji: '📷',
@@ -666,6 +670,7 @@ const es: HomeContent = {
         ph: '[video-2.mp4 / YouTube ID]',
         caption: 'Evaluación previa al tratamiento',
         image: '/assets/showcase/ultrasonido-evaluacion.jpg',
+        zoom: 1.35,
       },
       {
         emoji: '📷',

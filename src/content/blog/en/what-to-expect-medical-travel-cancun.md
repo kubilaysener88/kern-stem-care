@@ -17,12 +17,17 @@ draft: false
 2. **Written, itemized quote.** You see exactly what's included and who you pay.
 3. **Plan the trip.** We coordinate flights guidance, lodging and appointment dates.
 
+For the full step-by-step breakdown, see our **[International Patients](/en/process)** page.
+
 ## In Cancún
 
 - **Arrival & pickup.** <span class="ph">[Airport pickup / transfer details.]</span>
-- **In-person consultation** at a government-licensed (COFEPRIS) clinic before any treatment.
+- **In-person consultation** at a **[government-licensed (COFEPRIS)](/en/about)** clinic
+  before any treatment.
 - **Treatment day(s).** <span class="ph">[Typical schedule, duration, what to bring.]</span>
 - A bilingual coordinator stays reachable throughout your stay.
+
+Ready to plan your trip? [Request a free evaluation →](/en/contact)
 
 ## After you return home
 
@@ -34,6 +39,21 @@ results vary from person to person and no outcome is guaranteed.
 - A valid passport and travel documents
 - Any recent medical records or imaging
 - <span class="ph">[Add your own checklist items.]</span>
+
+## Common questions
+
+### How long is a typical trip?
+Trip length depends on your specific protocol and provider. <span class="ph">[Add the typical stay length you coordinate, e.g. "Most patients plan for 3–5 days."]</span>
+
+### Do I need to speak Spanish?
+No — a bilingual coordinator is with you from your first call through follow-up, including
+at appointments.
+
+### Can someone travel with me?
+<span class="ph">[Confirm your policy on companions/guests during treatment and recovery.]</span>
+
+### Is Cancún safe for medical travel?
+<span class="ph">[Add your safety/logistics guidance — hotel areas, transport, etc.]</span>
 
 ## How Kern Stem Care helps
 

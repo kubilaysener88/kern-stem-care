@@ -286,7 +286,7 @@ const errorMsg =
             {s.video ? (
               <video src={s.video} poster={s.poster} controls preload="none" playsinline aria-label={s.caption} />
             ) : s.image ? (
-              <img src={s.image} alt={s.caption} loading="lazy" decoding="async" />
+              <img src={s.image} alt={s.caption} loading="lazy" decoding="async" style={s.zoom ? `transform: scale(${s.zoom})` : undefined} />
             ) : (
               <div class="kc-ph">{s.emoji} <span class="ph">{s.ph}</span></div>
             )}

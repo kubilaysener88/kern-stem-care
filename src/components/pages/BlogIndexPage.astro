@@ -53,18 +53,12 @@ const fmtDate = (d: Date) => new Intl.DateTimeFormat(lang, { year: 'numeric', mo
         posts.length ? (
           <div class="grid g3">
             {posts.map((post) => (
-              <article class="card">
+              <a class="card card-link" href={`/${lang}/blog/${slugOf(post.id)}`}>
                 <p class="post-date">{fmtDate(post.data.pubDate)}</p>
-                <h3 class="post-title">
-                  <a href={`/${lang}/blog/${slugOf(post.id)}`}>{post.data.title}</a>
-                </h3>
+                <h3 class="post-title">{post.data.title}</h3>
                 <p>{post.data.description}</p>
-                <p style="margin-top:14px">
-                  <a href={`/${lang}/blog/${slugOf(post.id)}`} aria-label={`${t.read}: ${post.data.title}`}>
-                    {t.read} →
-                  </a>
-                </p>
-              </article>
+                <span class="card-more">{t.read} →</span>
+              </a>
             ))}
           </div>
         ) : (
@@ -87,11 +81,9 @@ const fmtDate = (d: Date) => new Intl.DateTimeFormat(lang, { year: 'numeric', mo
   .post-title {
     margin: 0 0 0.4em;
     font-size: 1.15rem;
-  }
-  .post-title a {
     color: var(--navy);
   }
-  .post-title a:hover {
+  .card-link:hover .post-title {
     color: var(--blue);
   }
 </style>
