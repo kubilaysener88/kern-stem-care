@@ -25,6 +25,7 @@ const labels = {
     about: 'About',
     process: 'International Patients',
     testimonials: 'Testimonials',
+    blog: 'Blog',
     contact: 'Contact',
     consult: 'Book a Consultation',
   },
@@ -39,6 +40,7 @@ const labels = {
     about: 'Sobre Nosotros',
     process: 'Pacientes Internacionales',
     testimonials: 'Testimonios',
+    blog: 'Blog',
     contact: 'Contacto',
     consult: 'Agendar Consulta',
   },
@@ -65,6 +67,7 @@ export function getNav(lang: Lang): NavItem[] {
     { path: `${base}/about`, label: t.about },
     { path: `${base}/process`, label: t.process },
     { path: `${base}/testimonials`, label: t.testimonials },
+    { path: `${base}/blog`, label: t.blog },
     { path: `${base}/contact`, label: t.contact },
   ];
 }

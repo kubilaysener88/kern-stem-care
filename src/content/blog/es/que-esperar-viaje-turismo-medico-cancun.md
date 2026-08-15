@@ -20,7 +20,7 @@ draft: false
 ## En Cancún
 
 - **Llegada y traslado.** <span class="ph">[Detalles de recogida en el aeropuerto / traslado.]</span>
-- **Consulta presencial** en una clínica certificada por COFEPRIS antes de cualquier tratamiento.
+- **Consulta presencial** en una clínica con licencia gubernamental (COFEPRIS) antes de cualquier tratamiento.
 - **Día(s) de tratamiento.** <span class="ph">[Horario típico, duración, qué llevar.]</span>
 - Un coordinador bilingüe permanece disponible durante toda tu estancia.
 

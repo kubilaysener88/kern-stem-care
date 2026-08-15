@@ -12,8 +12,8 @@ draft: false
 
 ## Respuesta corta
 
-En México, las terapias regenerativas y celulares están reguladas por **COFEPRIS** (la
-autoridad sanitaria federal). Las clínicas, médicos y laboratorios de terapia celular
+En México, las terapias regenerativas y celulares están reguladas por la autoridad sanitaria
+federal del gobierno, conocida como **COFEPRIS**. Las clínicas, médicos y laboratorios de terapia celular
 deben estar certificados. Solo conectamos a pacientes con proveedores certificados por
 COFEPRIS. <span class="ph">[Amplía con detalles.]</span>
 

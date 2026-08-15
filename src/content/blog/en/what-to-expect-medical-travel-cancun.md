@@ -20,7 +20,7 @@ draft: false
 ## In Cancún
 
 - **Arrival & pickup.** <span class="ph">[Airport pickup / transfer details.]</span>
-- **In-person consultation** at a COFEPRIS-licensed clinic before any treatment.
+- **In-person consultation** at a government-licensed (COFEPRIS) clinic before any treatment.
 - **Treatment day(s).** <span class="ph">[Typical schedule, duration, what to bring.]</span>
 - A bilingual coordinator stays reachable throughout your stay.
 

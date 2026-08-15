@@ -174,7 +174,7 @@ const en: PagesSet = {
       'Compare the regenerative therapies we help international patients access in Cancún — stem cells, exosomes, fibroblasts and freeze-dried placenta — through independent, licensed clinics and labs.',
     eyebrow: 'What We Coordinate',
     title: 'Services',
-    lead: "Regenerative therapy in Cancún, Mexico is only as strong as the team behind it — and that's exactly what we take on. We vet and verify every independent, COFEPRIS-licensed clinic and laboratory we coordinate with, from stem cell therapy to exosomes, then facilitate every step from your first call to your follow-up at home.",
+    lead: "Regenerative therapy in Cancún, Mexico is only as strong as the team behind it — and that's exactly what we take on. We vet and verify every independent, government-licensed (COFEPRIS) clinic and laboratory we coordinate with, from stem cell therapy to exosomes, then facilitate every step from your first call to your follow-up at home.",
     cards: [
       { image: '/assets/services/stem-cells.jpg', alt: 'Microscopic render of stem cells', slug: 'stem-cells', title: 'Stem Cells', body: 'Cells that renew themselves and develop into other cell types. The most extensively studied of the therapies we coordinate.' },
       { image: '/assets/services/exosomes.jpg', alt: 'Microscopic render of exosome vesicles', slug: 'exosomes', title: 'Exosomes', body: 'Cell-released vesicles carrying signaling molecules. A cell-free approach, and a newer field with evidence still developing.' },
@@ -256,7 +256,7 @@ const en: PagesSet = {
     metaDescription: 'How Kern Stem Care coordinates regenerative care for international patients: evaluation, licensed clinic, travel, treatment and follow-up — one bilingual coordinator throughout.',
     eyebrow: 'How It Works',
     title: 'Process for international patients',
-    lead: 'From your first message to follow-up back home, here is how the journey works. <span class="ph">[Edit the overview.]</span>',
+    lead: "Your step-by-step guide as an international patient: from your first message with a bilingual coordinator, through a free consultation and transparent quote, to travel and care coordinated with independent, licensed providers in Cancún — plus follow-up support once you're home.",
     steps: [
       { title: 'Free Consultation', body: 'Share your history. We match your case to the right partner provider, who reviews it and explains realistic options.', image: '/assets/journey/pre-consulta.jpg' },
       { title: 'Plan, Quote & Itinerary', body: 'The provider sends a medical plan; we build your transparent quote and travel itinerary around it.', image: '/assets/journey/consulta.jpg' },
@@ -264,8 +264,8 @@ const en: PagesSet = {
       { title: 'Follow-Up at Home', body: 'We help coordinate remote check-ins and aftercare with the provider once you return home.', image: '/assets/journey/post-tratamiento.jpg' },
     ],
     sections: [
-      { h2: 'Travel & logistics', body: 'Cancún International (CUN) is a major hub with direct flights from cities across the Americas, Europe, and beyond — including most major U.S. and Canadian cities. We provide flight guidance, airport pickup, and lodging near the partner clinic. <span class="ph">[Add travel times and what is included.]</span>' },
-      { h2: 'Costs & payments', body: 'You receive a transparent written quote before committing. Medical fees are set by and paid to the provider; our coordination fee and travel costs are itemized separately. <span class="ph">[Explain your fee model.]</span>' },
+      { h2: 'Travel & logistics', body: 'Cancún International (CUN) is a major hub with direct flights from cities across the Americas, Europe, and beyond — including most major U.S. and Canadian cities. Nonstop flights run about 2 hours from Miami or Houston, and around 4 hours from New York or Toronto. We provide flight guidance, airport pickup, and lodging near the partner clinic, so travel logistics are one less thing to plan.' },
+      { h2: 'Costs & payments', body: "You receive one transparent, itemized quote before committing — medical, travel, and coordination costs clearly broken down. You pay Kern Stem Care directly, and we handle payment to your medical provider and other partners on your behalf, so you're never juggling multiple invoices in a foreign currency." },
     ],
   },
   testimonials: {
@@ -301,7 +301,7 @@ const es: PagesSet = {
       'Compara las terapias regenerativas a las que ayudamos a acceder en Cancún — células madre, exosomas, fibroblastos y placenta liofilizada — con clínicas y laboratorios independientes y certificados.',
     eyebrow: 'Qué Coordinamos',
     title: 'Servicios',
-    lead: 'Una terapia regenerativa en Cancún, México es tan sólida como el equipo que la respalda — y de eso justo nos encargamos. Verificamos y validamos cada clínica y laboratorio independiente con licencia COFEPRIS con el que coordinamos, desde la terapia con células madre hasta los exosomas, y luego facilitamos cada paso, desde tu primera llamada hasta tu seguimiento en casa.',
+    lead: 'Una terapia regenerativa en Cancún, México es tan sólida como el equipo que la respalda — y de eso justo nos encargamos. Verificamos y validamos cada clínica y laboratorio independiente con licencia gubernamental (COFEPRIS) con el que coordinamos, desde la terapia con células madre hasta los exosomas, y luego facilitamos cada paso, desde tu primera llamada hasta tu seguimiento en casa.',
     cards: [
       { image: '/assets/services/stem-cells.jpg', alt: 'Representación microscópica de células madre', slug: 'stem-cells', title: 'Células Madre', body: 'Células que se renuevan y se transforman en otros tipos celulares. La más estudiada de las terapias que coordinamos.' },
       { image: '/assets/services/exosomes.jpg', alt: 'Representación microscópica de vesículas de exosomas', slug: 'exosomes', title: 'Exosomas', body: 'Vesículas liberadas por las células que transportan moléculas de señalización. Un enfoque libre de células y un campo más reciente, con evidencia en desarrollo.' },
@@ -383,7 +383,7 @@ const es: PagesSet = {
     metaDescription: 'Cómo coordina Kern Stem Care la atención regenerativa para pacientes internacionales: evaluación, clínica certificada, viaje, tratamiento y seguimiento con un coordinador bilingüe.',
     eyebrow: 'Cómo Funciona',
     title: 'Proceso para pacientes internacionales',
-    lead: 'Desde tu primer mensaje hasta el seguimiento en casa, así funciona el proceso. <span class="ph">[Editar el resumen.]</span>',
+    lead: 'Tu guía paso a paso como paciente internacional: desde tu primer mensaje con un coordinador bilingüe, pasando por una consulta gratuita y una cotización transparente, hasta el viaje y la atención coordinados con proveedores independientes y certificados en Cancún — más el acompañamiento al volver a casa.',
     steps: [
       { title: 'Consulta Gratis', body: 'Comparte tu historial. Canalizamos tu caso al proveedor aliado adecuado, que lo revisa y te explica opciones realistas.', image: '/assets/journey/pre-consulta.jpg' },
       { title: 'Plan, Cotización e Itinerario', body: 'El proveedor envía un plan médico; nosotros armamos tu cotización transparente y tu itinerario de viaje.', image: '/assets/journey/consulta.jpg' },
@@ -391,8 +391,8 @@ const es: PagesSet = {
       { title: 'Seguimiento en Casa', body: 'Ayudamos a coordinar el seguimiento remoto y los cuidados posteriores con el proveedor al volver a casa.', image: '/assets/journey/post-tratamiento.jpg' },
     ],
     sections: [
-      { h2: 'Viaje y logística', body: 'El Aeropuerto Internacional de Cancún (CUN) es un hub importante con vuelos directos desde ciudades de toda América, Europa y más — incluyendo la mayoría de las ciudades de EE.UU. y Canadá. Ofrecemos guía de vuelos, traslado del aeropuerto y hospedaje cerca de la clínica aliada. <span class="ph">[Agrega tiempos de viaje y qué incluye.]</span>' },
-      { h2: 'Costos y pagos', body: 'Recibes una cotización por escrito y transparente antes de comprometerte. Los honorarios médicos los fija y los cobra el proveedor; nuestra tarifa de coordinación y los costos de viaje se detallan por separado. <span class="ph">[Explica tu modelo de tarifa.]</span>' },
+      { h2: 'Viaje y logística', body: 'El Aeropuerto Internacional de Cancún (CUN) es un hub importante con vuelos directos desde ciudades de toda América, Europa y más — incluyendo la mayoría de las ciudades de EE.UU. y Canadá. Los vuelos directos toman cerca de 2 horas desde Miami o Houston, y alrededor de 4 horas desde Nueva York o Toronto. Ofrecemos guía de vuelos, traslado del aeropuerto y hospedaje cerca de la clínica aliada, para que la logística del viaje sea una preocupación menos.' },
+      { h2: 'Costos y pagos', body: 'Recibes una sola cotización transparente y desglosada antes de comprometerte, con los costos médicos, de viaje y de coordinación claramente detallados. Pagas directamente a Kern Stem Care, y nosotros nos encargamos de pagar a tu proveedor médico y a los demás aliados en tu nombre, para que no tengas que lidiar con múltiples facturas en una moneda extranjera.' },
     ],
   },
   testimonials: {

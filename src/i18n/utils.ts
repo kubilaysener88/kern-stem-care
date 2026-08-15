@@ -20,3 +20,13 @@ export function getRouteFromUrl(url: URL): string {
   if (segments[0] in ui) segments.shift();
   return '/' + segments.join('/');
 }
+
+/** Turn a heading (EN or ES, accents included) into a stable anchor id. */
+export function slugify(text: string): string {
+  return text
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}

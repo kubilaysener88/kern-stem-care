@@ -58,6 +58,7 @@ const socialLinks = [
           <span class="mark" set:html={footMarkSvg} /> Kern Stem Care
         </div>
         <p class="blurb">{f.blurb}</p>
+        <p class="social-label">{lang === 'es' ? 'Redes Sociales' : 'Social Media'}</p>
         <div class="social-links">
           {socialLinks.map((s) => (
             <a href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.name} set:html={s.icon} />
@@ -167,10 +168,18 @@ const socialLinks = [
     max-width: 34ch;
     margin: 0;
   }
+  .social-label {
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 18px 0 0;
+  }
   .social-links {
     display: flex;
     gap: 10px;
-    margin-top: 18px;
+    margin-top: 10px;
   }
   .social-links a {
     display: grid;

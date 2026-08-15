@@ -6,6 +6,7 @@ import Breadcrumbs from '../Breadcrumbs.astro';
 import type { Lang } from '../../i18n/ui';
 import { pagesContent } from '../../i18n/pages';
 import { navLabels } from '../../i18n/nav';
+import { slugify } from '../../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -18,14 +19,14 @@ const stepsHeading = lang === 'es' ? 'Proceso paso a paso' : 'Your step-by-step 
 
 <SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription}>
   <Breadcrumbs lang={lang} items={[{ label: navLabels[lang].process }]} />
-  <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} />
+  <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} image="/assets/hero/airport-plane.jpg" imagePosition="center 35%" />
 
   <section class="section" aria-labelledby="process-steps-heading">
     <div class="wrap">
       <h2 id="process-steps-heading" class="sr-only">{stepsHeading}</h2>
       <div class="steps">
         {p.steps.map((step) => (
-          <div class="step">
+          <div class="step" id={slugify(step.title)}>
             {step.image && <img class="step-img" src={step.image} alt={step.title} loading="lazy" decoding="async" />}
             <h3>{step.title}</h3>
             <p>{step.body}</p>

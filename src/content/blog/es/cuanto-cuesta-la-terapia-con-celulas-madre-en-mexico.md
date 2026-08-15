@@ -20,7 +20,7 @@ laboratorio involucrados. <span class="ph">[Agrega el rango de precios que realm
 
 - La evaluación médica y la consulta con el médico
 - El producto celular y su preparación en laboratorio
-- La(s) sesión(es) de tratamiento en una clínica certificada por COFEPRIS
+- La(s) sesión(es) de tratamiento en una clínica con licencia gubernamental (COFEPRIS)
 - <span class="ph">[Enumera lo que Kern Stem Care incluye — coordinación, traslado del aeropuerto, ayuda con hospedaje.]</span>
 
 ## Qué *no* suele estar incluido

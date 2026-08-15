@@ -1,5 +1,6 @@
 ---
 import type { PageSection } from '../i18n/pages';
+import { slugify } from '../i18n/utils';
 
 interface Props {
   sections: PageSection[];
@@ -11,7 +12,7 @@ const { sections } = Astro.props;
   {
     sections.map((s) => (
       <div class="prose-block">
-        <h2>{s.h2}</h2>
+        <h2 id={slugify(s.h2)}>{s.h2}</h2>
         {/* A div, not a p: section bodies may contain <ul> lists, which are
             invalid inside a paragraph and get hoisted out by the browser. */}
         <div class="prose-body" set:html={s.body} />
@@ -29,6 +30,7 @@ const { sections } = Astro.props;
     margin-bottom: 28px;
   }
   .prose-block h2 {
+    scroll-margin-top: 90px;
     font-size: 1.4rem;
     margin-bottom: 0.4em;
   }

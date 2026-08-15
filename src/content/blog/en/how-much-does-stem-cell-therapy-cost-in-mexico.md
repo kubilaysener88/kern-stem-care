@@ -20,7 +20,7 @@ laboratory involved. <span class="ph">[Add the price range you actually quote, e
 
 - The medical evaluation and physician consultation
 - The cellular product and its laboratory preparation
-- The treatment session(s) at a COFEPRIS-licensed clinic
+- The treatment session(s) at a government-licensed (COFEPRIS) clinic
 - <span class="ph">[List anything Kern Stem Care bundles — coordination, airport pickup, lodging help.]</span>
 
 ## What's usually *not* included

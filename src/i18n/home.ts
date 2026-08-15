@@ -71,6 +71,8 @@ export interface VideoCard {
 export interface Faq {
   q: string;
   a: string;
+  /** Page (optionally with #anchor) that explains this question in full. */
+  href: string;
 }
 export interface Tier {
   eyebrow: string;
@@ -295,6 +297,18 @@ const en: HomeContent = {
         caption: 'Patient during IV treatment',
         image: '/assets/showcase/kubi-iv.jpg',
       },
+      {
+        emoji: '📷',
+        ph: '[photo-treatment-3.jpg]',
+        caption: 'Dermapen facial treatment',
+        image: '/assets/showcase/dermapen-treatment.jpg',
+      },
+      {
+        emoji: '📷',
+        ph: '[photo-treatment-4.jpg]',
+        caption: 'Facial rejuvenation injection',
+        image: '/assets/showcase/facial-injection.jpg',
+      },
     ],
     ctaBook: '📅 Contact Us & Book Your Appointment',
   },
@@ -307,7 +321,7 @@ const en: HomeContent = {
   therapies: {
     eyebrow: 'our treatments',
     h2: 'Our Regenerative Therapies. Care Designed Around You.',
-    lead: 'Regenerative therapies use specialized cells — and the molecules they release — to support the body\'s own repair processes. We vet the independent, COFEPRIS-licensed clinics and laboratories in Cancún that deliver them, arrange the logistics, and stay with you from the first call through your follow-up at home.',
+    lead: 'Regenerative therapies use specialized cells — and the molecules they release — to support the body\'s own repair processes. We vet the independent, government-licensed (COFEPRIS) clinics and laboratories in Cancún that deliver them, arrange the logistics, and stay with you from the first call through your follow-up at home.',
     cards: [
       {
         image: '/assets/services/stem-cells.jpg',
@@ -430,7 +444,7 @@ const en: HomeContent = {
       {
         icon: '🏥',
         name: '[Partner Clinic]',
-        detail: '[Specialty · COFEPRIS license #]',
+        detail: '[Specialty · Government (COFEPRIS) license #]',
         slug: 'partner-clinic-1',
         image: '/assets/partners/luigi/luigi-1.jpg',
         photos: [
@@ -440,7 +454,7 @@ const en: HomeContent = {
           '/assets/partners/luigi/luigi-4.jpg',
         ],
       },
-      { icon: '🏥', name: '[Partner Clinic]', detail: '[Specialty · COFEPRIS license #]', slug: 'partner-clinic-2' },
+      { icon: '🏥', name: '[Partner Clinic]', detail: '[Specialty · Government (COFEPRIS) license #]', slug: 'partner-clinic-2' },
       {
         icon: '🔬',
         name: '[Partner Laboratory]',
@@ -489,12 +503,12 @@ const en: HomeContent = {
     eyebrow: 'FAQ',
     h2: 'Questions patients ask us most',
     items: [
-      { q: 'Is this treatment approved by the FDA or Health Canada?', a: 'Many regenerative therapies are not FDA- or Health Canada-approved for specific diseases and are considered investigational. We are transparent about the regulatory and evidence status of every program during your consultation. <span class="ph">[Customize.]</span>' },
-      { q: 'Are you a clinic?', a: 'No. Kern Stem Care is a medical coordination agency legally registered in Cancún, Mexico. We guide you and arrange your travel, lodging, appointments, and support. The medical evaluation and treatment are provided by independent, licensed clinics and physicians in our Cancún network.' },
-      { q: 'How do I travel to Cancún?', a: 'Cancún International (CUN) is a major hub with direct flights from cities across the Americas, Europe, and beyond — including most major U.S. and Canadian cities. We provide flight guidance, airport pickup, and lodging near the partner clinic. <span class="ph">[Add travel times.]</span>' },
-      { q: 'How much does it cost, and who do I pay?', a: 'You receive a transparent written quote before committing. Medical fees are set by and paid to the provider; our coordination fee and travel costs are itemized separately so you always know what you are paying for. <span class="ph">[Explain your fee model.]</span>' },
-      { q: 'Are the clinics and labs licensed?', a: "We only connect patients with clinics, physicians, and laboratories licensed under Mexico's health authority (COFEPRIS). We can share each partner's credentials on request. <span class=\"ph\">[Describe your vetting.]</span>" },
-      { q: 'What support do I get after returning home?', a: 'We help coordinate remote follow-up with the provider and stay in contact with you. <span class="ph">[Describe your follow-up process.]</span>' },
+      { q: 'Is this treatment approved by the FDA or Health Canada?', a: 'Many regenerative therapies are not FDA- or Health Canada-approved for specific diseases and are considered investigational. We are transparent about the regulatory and evidence status of every program during your consultation. <span class="ph">[Customize.]</span>', href: '/en/blog/is-stem-cell-therapy-legal-in-mexico' },
+      { q: 'Are you a clinic?', a: 'No. Kern Stem Care is a medical coordination agency legally registered in Cancún, Mexico. We guide you and arrange your travel, lodging, appointments, and support. The medical evaluation and treatment are provided by independent, licensed clinics and physicians in our Cancún network.', href: '/en/about#who-we-are' },
+      { q: 'How do I travel to Cancún?', a: 'Cancún International (CUN) is a major hub with direct flights from cities across the Americas, Europe, and beyond — including most major U.S. and Canadian cities. We provide flight guidance, airport pickup, and lodging near the partner clinic. <span class="ph">[Add travel times.]</span>', href: '/en/process#travel-logistics' },
+      { q: 'How much does it cost, and who do I pay?', a: 'You receive a transparent written quote before committing. Medical fees are set by and paid to the provider; our coordination fee and travel costs are itemized separately so you always know what you are paying for. <span class="ph">[Explain your fee model.]</span>', href: '/en/process#costs-payments' },
+      { q: 'Are the clinics and labs licensed?', a: "We only connect patients with clinics, physicians, and laboratories licensed under Mexico's health authority (COFEPRIS). We can share each partner's credentials on request. <span class=\"ph\">[Describe your vetting.]</span>", href: '/en/about#our-network' },
+      { q: 'What support do I get after returning home?', a: 'We help coordinate remote follow-up with the provider and stay in contact with you. <span class="ph">[Describe your follow-up process.]</span>', href: '/en/process#follow-up-at-home' },
     ],
   },
   membership: {
@@ -665,6 +679,18 @@ const es: HomeContent = {
         caption: 'Paciente durante tratamiento intravenoso',
         image: '/assets/showcase/kubi-iv.jpg',
       },
+      {
+        emoji: '📷',
+        ph: '[photo-treatment-3.jpg]',
+        caption: 'Tratamiento facial con dermapen',
+        image: '/assets/showcase/dermapen-treatment.jpg',
+      },
+      {
+        emoji: '📷',
+        ph: '[photo-treatment-4.jpg]',
+        caption: 'Inyección de rejuvenecimiento facial',
+        image: '/assets/showcase/facial-injection.jpg',
+      },
     ],
     ctaBook: '📅 Contáctanos y Agenda Tu Cita',
   },
@@ -677,7 +703,7 @@ const es: HomeContent = {
   therapies: {
     eyebrow: 'nuestros tratamientos',
     h2: 'Nuestras Terapias Regenerativas. Atención Diseñada Para Ti.',
-    lead: 'Las terapias regenerativas usan células especializadas — y las moléculas que estas liberan — para apoyar los procesos de reparación del propio cuerpo. Verificamos las clínicas y laboratorios independientes con licencia COFEPRIS en Cancún que las aplican, coordinamos la logística y te acompañamos desde la primera llamada hasta tu seguimiento en casa.',
+    lead: 'Las terapias regenerativas usan células especializadas — y las moléculas que estas liberan — para apoyar los procesos de reparación del propio cuerpo. Verificamos las clínicas y laboratorios independientes con licencia gubernamental (COFEPRIS) en Cancún que las aplican, coordinamos la logística y te acompañamos desde la primera llamada hasta tu seguimiento en casa.',
     cards: [
       {
         image: '/assets/services/stem-cells.jpg',
@@ -780,7 +806,7 @@ const es: HomeContent = {
       {
         icon: '🏥',
         name: '[Partner Clinic]',
-        detail: '[Especialidad · Cédula COFEPRIS #]',
+        detail: '[Especialidad · Cédula gubernamental (COFEPRIS) #]',
         slug: 'partner-clinic-1',
         image: '/assets/partners/luigi/luigi-1.jpg',
         photos: [
@@ -790,7 +816,7 @@ const es: HomeContent = {
           '/assets/partners/luigi/luigi-4.jpg',
         ],
       },
-      { icon: '🏥', name: '[Partner Clinic]', detail: '[Especialidad · Cédula COFEPRIS #]', slug: 'partner-clinic-2' },
+      { icon: '🏥', name: '[Partner Clinic]', detail: '[Especialidad · Cédula gubernamental (COFEPRIS) #]', slug: 'partner-clinic-2' },
       {
         icon: '🔬',
         name: '[Partner Laboratory]',
@@ -839,12 +865,12 @@ const es: HomeContent = {
     eyebrow: 'Preguntas Frecuentes',
     h2: 'Las preguntas más frecuentes',
     items: [
-      { q: '¿Está aprobado este tratamiento por la FDA o Health Canada?', a: 'Muchas terapias regenerativas no están aprobadas por la FDA ni Health Canada para enfermedades específicas y se consideran de investigación. Somos transparentes sobre el estatus regulatorio y de evidencia de cada programa durante su consulta. <span class="ph">[Personalizar.]</span>' },
-      { q: '¿Ustedes son una clínica?', a: 'No. Kern Stem Care es una agencia de coordinación médica legalmente constituida en Cancún, México. Te guiamos y gestionamos tu viaje, hospedaje, citas y acompañamiento. La evaluación y el tratamiento médico los brindan clínicas y médicos independientes y certificados de nuestra red en Cancún.' },
-      { q: '¿Cómo viajo a Cancún?', a: 'El Aeropuerto Internacional de Cancún (CUN) es un hub importante con vuelos directos desde ciudades de toda América, Europa y más — incluyendo la mayoría de las ciudades de EE.UU. y Canadá. Ofrecemos guía de vuelos, traslado del aeropuerto y hospedaje cerca de la clínica aliada. <span class="ph">[Agregar tiempos.]</span>' },
-      { q: '¿Cuánto cuesta y a quién le pago?', a: 'Recibes una cotización por escrito y transparente antes de comprometerte. Los honorarios médicos los fija y los cobra el proveedor; nuestra tarifa de coordinación y los costos de viaje se detallan por separado para que siempre sepas qué pagas. <span class="ph">[Explicar tu modelo de tarifa.]</span>' },
-      { q: '¿Las clínicas y laboratorios están certificados?', a: 'Solo conectamos a los pacientes con clínicas, médicos y laboratorios certificados por la autoridad sanitaria de México (COFEPRIS). Podemos compartir las credenciales de cada aliado si lo solicitas. <span class="ph">[Describir tu proceso de evaluación.]</span>' },
-      { q: '¿Qué apoyo recibo al volver a casa?', a: 'Ayudamos a coordinar el seguimiento remoto con el proveedor y permanecemos en contacto contigo. <span class="ph">[Describir tu proceso de seguimiento.]</span>' },
+      { q: '¿Está aprobado este tratamiento por la FDA o Health Canada?', a: 'Muchas terapias regenerativas no están aprobadas por la FDA ni Health Canada para enfermedades específicas y se consideran de investigación. Somos transparentes sobre el estatus regulatorio y de evidencia de cada programa durante su consulta. <span class="ph">[Personalizar.]</span>', href: '/es/blog/es-legal-la-terapia-con-celulas-madre-en-mexico' },
+      { q: '¿Ustedes son una clínica?', a: 'No. Kern Stem Care es una agencia de coordinación médica legalmente constituida en Cancún, México. Te guiamos y gestionamos tu viaje, hospedaje, citas y acompañamiento. La evaluación y el tratamiento médico los brindan clínicas y médicos independientes y certificados de nuestra red en Cancún.', href: '/es/about#quienes-somos' },
+      { q: '¿Cómo viajo a Cancún?', a: 'El Aeropuerto Internacional de Cancún (CUN) es un hub importante con vuelos directos desde ciudades de toda América, Europa y más — incluyendo la mayoría de las ciudades de EE.UU. y Canadá. Ofrecemos guía de vuelos, traslado del aeropuerto y hospedaje cerca de la clínica aliada. <span class="ph">[Agregar tiempos.]</span>', href: '/es/process#viaje-y-logistica' },
+      { q: '¿Cuánto cuesta y a quién le pago?', a: 'Recibes una cotización por escrito y transparente antes de comprometerte. Los honorarios médicos los fija y los cobra el proveedor; nuestra tarifa de coordinación y los costos de viaje se detallan por separado para que siempre sepas qué pagas. <span class="ph">[Explicar tu modelo de tarifa.]</span>', href: '/es/process#costos-y-pagos' },
+      { q: '¿Las clínicas y laboratorios están certificados?', a: 'Solo conectamos a los pacientes con clínicas, médicos y laboratorios certificados por la autoridad sanitaria de México (COFEPRIS). Podemos compartir las credenciales de cada aliado si lo solicitas. <span class="ph">[Describir tu proceso de evaluación.]</span>', href: '/es/about#nuestra-red' },
+      { q: '¿Qué apoyo recibo al volver a casa?', a: 'Ayudamos a coordinar el seguimiento remoto con el proveedor y permanecemos en contacto contigo. <span class="ph">[Describir tu proceso de seguimiento.]</span>', href: '/es/process#seguimiento-en-casa' },
     ],
   },
   membership: {
