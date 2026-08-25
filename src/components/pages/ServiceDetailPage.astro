@@ -22,6 +22,7 @@ const procedures = procedureKeys.includes(service as (typeof procedureKeys)[numb
   : [];
 const backLabel = lang === 'es' ? '← Todos los servicios' : '← All services';
 const ctaLabel = lang === 'es' ? 'Solicitar Consulta Gratis' : 'Request Free Consultation';
+const quoteLabel = lang === 'es' ? 'Cotizar mi tratamiento' : 'Get My Treatment Quote';
 const servicesLabel = lang === 'es' ? 'Servicios' : 'Services';
 ---
 
@@ -33,6 +34,9 @@ const servicesLabel = lang === 'es' ? 'Servicios' : 'Services';
   <section class="section">
     <div class="wrap">
       <ProseSections sections={p.sections} />
+      <div style="display:flex;justify-content:center;margin-top:32px">
+        <a href={`/${lang}/contact`} class="btn btn-primary" data-analytics-event="Quote My Treatment">{quoteLabel}</a>
+      </div>
     </div>
   </section>
 
