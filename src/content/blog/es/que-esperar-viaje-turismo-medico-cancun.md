@@ -2,6 +2,7 @@
 title: 'Qué esperar en un viaje de turismo médico a Cancún'
 description: 'Un recorrido paso a paso por un viaje de medicina regenerativa a Cancún para pacientes internacionales — desde la primera llamada y la evaluación hasta el viaje, el día del tratamiento y el seguimiento en casa.'
 lang: 'es'
+translationKey: 'medical-travel-cancun'
 pubDate: 2026-06-24
 author: 'Kern Stem Care'
 reviewedBy: '[Nombre del revisor médico, credenciales]'

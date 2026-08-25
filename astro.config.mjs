@@ -36,11 +36,12 @@ export default defineConfig({
 
   integrations: [
     sitemap({
-      // Keep the bare root out of the sitemap: it's a noindex redirect to /en, so
-      // listing it told Google to index a page that asks not to be indexed —
-      // which is what Search Console reports as "Page with redirect" /
-      // "Excluded by 'noindex' tag".
-      filter: (page) => page !== `${SITE_URL}/`,
+      // Keep noindexed pages out of the sitemap — submitting a URL that also
+      // carries a noindex tag is a contradiction Search Console flags as
+      // "Excluded by 'noindex' tag". Covers: the bare root (noindex redirect
+      // to /en), and the partner detail pages that are still placeholder
+      // (no real business name yet — see PartnerDetailPage.astro).
+      filter: (page) => page !== `${SITE_URL}/` && !/\/partners\/(partner-clinic-2|partner-lab-1|partner-lab-2|partner-clinic-1)\/?$/.test(page),
       i18n: {
         defaultLocale: 'en',
         locales: {

@@ -1,7 +1,7 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
-import { render, type CollectionEntry } from 'astro:content';
+import { render, getCollection, type CollectionEntry } from 'astro:content';
 import type { Lang } from '../../i18n/ui';
 
 interface Props {
@@ -10,6 +10,15 @@ interface Props {
 }
 const { lang, post } = Astro.props;
 const { Content } = await render(post);
+
+// Find this post's translation (if any) so hreflang can point at its real
+// slug instead of guessing the same slug exists in the other language.
+const otherLang: Lang = lang === 'en' ? 'es' : 'en';
+const slugOf = (id: string) => id.replace(/^[a-z]{2}\//, '');
+const translation = post.data.translationKey
+  ? (await getCollection('blog', (p) => p.data.lang === otherLang && p.data.translationKey === post.data.translationKey && !p.data.draft))[0]
+  : undefined;
+const hreflangOverride = { [otherLang]: translation ? `/${otherLang}/blog/${slugOf(translation.id)}` : null };
 
 const t =
   lang === 'es'
@@ -40,7 +49,12 @@ const articleSchema = {
 };
 ---
 
-<SiteLayout lang={lang} title={`${post.data.title} | Kern Stem Care`} description={post.data.description}>
+<SiteLayout
+  lang={lang}
+  title={`${post.data.title} | Kern Stem Care`}
+  description={post.data.description}
+  hreflangOverride={hreflangOverride}
+>
   <script type="application/ld+json" slot="head" is:inline set:html={JSON.stringify(articleSchema)} />
   <Breadcrumbs lang={lang} items={[{ label: t.crumb, href: `/${lang}/blog` }, { label: post.data.title }]} />
 

@@ -26,4 +26,5 @@ export const ANALYTICS_EVENTS = {
   bookConsultation: 'Book Consultation',
   contactSubmit: 'Contact Form Submit',
   testimonialPlay: 'Testimonial Play',
+  estimateSubmit: 'Estimate Form Submit',
 } as const;

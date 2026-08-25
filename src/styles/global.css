@@ -569,6 +569,8 @@ p {
    scrim so the white text keeps AA contrast — same treatment as the home hero. */
 .page-hero.has-photo {
   position: relative;
+  background-color: var(--navy);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   overflow: hidden;

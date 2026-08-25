@@ -19,9 +19,15 @@ interface Props {
   type?: 'website' | 'article';
   /** Set true to keep the page out of search indexes. */
   noindex?: boolean;
+  /** Override the auto-derived alternate-language path for locales whose slug
+      differs from this page's own (e.g. blog posts, where EN/ES slugs aren't
+      the same). Maps a locale to its full path (e.g. "/es/blog/real-slug"),
+      or to `null` to omit that locale's hreflang entirely when no translation
+      exists yet — never point hreflang at a URL that doesn't exist. */
+  hreflangOverride?: Partial<Record<Lang, string | null>>;
 }
 
-const { lang, title, description, image = '/og-image.jpg', type = 'website', noindex = false } = Astro.props;
+const { lang, title, description, image = '/og-image.jpg', type = 'website', noindex = false, hreflangOverride } = Astro.props;
 
 // Astro.site comes from `site` in astro.config.mjs.
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -31,18 +37,29 @@ const socialImageURL = new URL(image, Astro.site);
 const ogLocale: Record<Lang, string> = { en: 'en_US', es: 'es_ES' };
 const ogAlternate = (Object.keys(languages) as Lang[]).filter((l) => l !== lang).map((l) => ogLocale[l]);
 
-// hreflang alternates for every locale + x-default.
+// hreflang alternates for every locale + x-default. A locale whose override
+// resolves to `null` (no translation exists yet) is dropped rather than
+// pointed at a guessed, possibly-nonexistent URL.
 const route = getRouteFromUrl(Astro.url);
-const hrefFor = (code: Lang) => new URL(`/${code}${route === '/' ? '' : route}`, Astro.site).href;
-const locales = Object.keys(languages) as Lang[];
-const xDefault = hrefFor(locales[0]);
+const hrefFor = (code: Lang): string | null => {
+  if (hreflangOverride && code in hreflangOverride) {
+    const override = hreflangOverride[code];
+    return override ? new URL(override, Astro.site).href : null;
+  }
+  return new URL(`/${code}${route === '/' ? '' : route}`, Astro.site).href;
+};
+const alternates = (Object.keys(languages) as Lang[])
+  .map((code) => ({ code, href: hrefFor(code) }))
+  .filter((a): a is { code: Lang; href: string } => a.href !== null);
+const defaultLocale = (Object.keys(languages) as Lang[])[0];
+const xDefault = hrefFor(defaultLocale) ?? canonicalURL.href;
 ---
 
 <!-- Global metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="apple-touch-icon" href="/favicon.svg" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Primary SEO -->
@@ -52,7 +69,7 @@ const xDefault = hrefFor(locales[0]);
 <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
 
 <!-- Language alternates (hreflang) -->
-{locales.map((code) => <link rel="alternate" hreflang={code} href={hrefFor(code)} />)}
+{alternates.map((a) => <link rel="alternate" hreflang={a.code} href={a.href} />)}
 <link rel="alternate" hreflang="x-default" href={xDefault} />
 
 <!-- Open Graph -->

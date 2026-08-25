@@ -13,17 +13,20 @@ interface Props {
   description: string;
   image?: string;
   noindex?: boolean;
+  hreflangOverride?: Partial<Record<Lang, string | null>>;
 }
 
-const { lang, title, description, image, noindex } = Astro.props;
+const { lang, title, description, image, noindex, hreflangOverride } = Astro.props;
 const skipLabel = lang === 'es' ? 'Saltar al contenido principal' : 'Skip to main content';
+const otherLang: Lang = lang === 'en' ? 'es' : 'en';
+const altLangPath = hreflangOverride && otherLang in hreflangOverride ? hreflangOverride[otherLang] : undefined;
 ---
 
-<BaseLayout lang={lang} title={title} description={description} image={image} noindex={noindex}>
+<BaseLayout lang={lang} title={title} description={description} image={image} noindex={noindex} hreflangOverride={hreflangOverride}>
   <slot name="head" slot="head" />
   <a href="#main-content" class="skip-link">{skipLabel}</a>
   <AnnouncementBar lang={lang} />
-  <SiteHeader lang={lang} />
+  <SiteHeader lang={lang} altLangPath={altLangPath} />
   <main id="main-content" tabindex="-1">
     <slot />
   </main>

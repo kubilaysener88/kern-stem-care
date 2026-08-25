@@ -37,8 +37,6 @@ const serviceLinks = [
 // The agency/medical notice that used to sit here now lives in the single site-wide
 // disclaimer rendered above the footer (LegalDisclaimer.astro), so it isn't repeated.
 
-const footMarkSvg = `<svg viewBox="0 0 30 30" width="23" height="23" aria-hidden="true"><defs><clipPath id="fm"><circle cx="11.5" cy="15" r="8"/></clipPath></defs><circle cx="18.5" cy="15" r="8" fill="#ffffff" opacity="0.28" clip-path="url(#fm)"/><circle cx="11.5" cy="15" r="8" fill="none" stroke="#ffffff" stroke-width="1.5"/><circle cx="18.5" cy="15" r="8" fill="none" stroke="#ffffff" stroke-width="1.5"/><circle cx="15" cy="15" r="2.3" fill="#f5cf52"/></svg>`;
-
 // Social links. Facebook and Instagram URLs pending from the client — add them
 // here (with the same icon shape) once confirmed; don't guess/invent a handle.
 const socialLinks = [
@@ -55,7 +53,7 @@ const socialLinks = [
     <div class="cols">
       <div class="brand-col">
         <div class="foot-brand">
-          <span class="mark" set:html={footMarkSvg} /> Kern Stem Care
+          <img class="mark" src="/assets/logo/kern-icon-white.png" alt="" width="34" height="34" /> Kern Stem Care
         </div>
         <p class="blurb">{f.blurb}</p>
         <p class="social-label">{lang === 'es' ? 'Redes Sociales' : 'Social Media'}</p>
@@ -156,10 +154,8 @@ const socialLinks = [
   .foot-brand .mark {
     width: 34px;
     height: 34px;
-    border-radius: 9px;
-    background: linear-gradient(135deg, var(--blue), var(--teal));
-    display: grid;
-    place-items: center;
+    object-fit: contain;
+    flex: none;
   }
   .blurb {
     font-size: 0.88rem;

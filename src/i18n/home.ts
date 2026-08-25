@@ -50,6 +50,22 @@ export interface Coordinator {
   name: string;
   role: string;
   bio: string;
+  slug: string;
+  /** Path under /public. When set, shown instead of the `photoPh` placeholder. */
+  image?: string;
+  /** Path under /public. When set, used as the detail-page hero background instead of `image`. */
+  heroImage?: string;
+  /** Override the detail page's <h1>/meta title when this entry represents a
+      team/department (e.g. "Logistics & Transportation") rather than one
+      named person — keeps the H1 and title tag aligned with what the page
+      actually covers instead of defaulting to `name`. */
+  pageTitle?: string;
+  /** Override the detail page's intro paragraph + meta description alongside `pageTitle`. */
+  pageLead?: string;
+  /** Team/driver photos (with name + role caption) shown in their own section on this member's detail page. */
+  teamPhotos?: { src: string; name: string; role?: string }[];
+  /** Vehicles (each with its own name + photos) shown in their own section on this member's detail page. */
+  vehicles?: { name: string; photos: string[] }[];
 }
 export interface Partner {
   icon: string;
@@ -109,18 +125,12 @@ export interface HomeContent {
     pills: { label: string; slug: 'stem-cells' | 'exosomes' | 'fibroblasts' | 'placenta' }[];
     ctaPrimary: string;
     ctaGhost: string;
+    /** Promo card next to the hero copy — links to the price-estimate page. */
     card: {
       title: string;
       subtitle: string;
-      labelName: string;
-      phName: string;
-      labelEmail: string;
-      phEmail: string;
-      labelCountry: string;
-      countryOptions: string[];
-      labelCondition: string;
-      phCondition: string;
-      submit: string;
+      bullets: string[];
+      ctaLabel: string;
       fineprint: string;
     };
   };
@@ -258,22 +268,14 @@ const en: HomeContent = {
       { label: '🧫 Fibroblasts', slug: 'fibroblasts' },
       { label: '🌱 Freeze-Dried Placenta', slug: 'placenta' },
     ],
-    ctaPrimary: 'Request Free Consultation',
+    ctaPrimary: 'Get Your Price Estimate',
     ctaGhost: 'What We Coordinate',
     card: {
-      title: 'Get a Free Case Review',
-      subtitle: 'A patient coordinator will reach out within 24 hours.',
-      labelName: 'Full name',
-      phName: 'Jane Doe',
-      labelEmail: 'Email',
-      phEmail: 'you@email.com',
-      labelCountry: 'Country',
-      countryOptions: ['United States', 'Canada', 'Mexico', 'Other'],
-      labelCondition: 'Condition / area of interest',
-      phCondition: 'e.g. knee osteoarthritis',
-      submit: 'Send Request',
-      fineprint:
-        'By submitting you agree to be contacted. This is an information request, not a medical guarantee.',
+      title: 'Get Your Personalized Price Estimate',
+      subtitle: 'Free, no-obligation — reviewed by a licensed physician.',
+      bullets: ['Itemized: medical, travel & coordination', 'Reply within 24 hours', 'No payment or commitment required'],
+      ctaLabel: 'Start My Estimate →',
+      fineprint: 'This is an information request, not a medical guarantee or final quote.',
     },
   },
   roleBanner:
@@ -317,7 +319,6 @@ const en: HomeContent = {
     ctaBook: '📅 Contact Us & Book Your Appointment',
   },
   trust: [
-    { num: '[XX]+', label: 'Patients guided to care', isPh: true },
     { num: '4', label: 'Partner clinics & physicians in Cancún' },
     { num: '3', label: 'Partner cellular-therapy labs' },
     { num: '🌎', label: 'Patients worldwide — including the U.S. & Canada' },
@@ -328,7 +329,7 @@ const en: HomeContent = {
     lead: 'Regenerative therapies use specialized cells — and the molecules they release — to support the body\'s own repair processes. We vet the independent, government-licensed (COFEPRIS) clinics and laboratories in Cancún that deliver them, arrange the logistics, and stay with you from the first call through your follow-up at home.',
     cards: [
       {
-        image: '/assets/services/stem-cells.jpg',
+        image: '/assets/services/stem-cells.webp',
         alt: 'Microscopic render of stem cells',
         title: 'Stem Cells',
         slug: 'stem-cells',
@@ -336,7 +337,7 @@ const en: HomeContent = {
         body: 'Cells that renew themselves and develop into other cell types. The most extensively studied therapy we coordinate — researched for tissue repair and inflammation.',
       },
       {
-        image: '/assets/services/exosomes.jpg',
+        image: '/assets/services/exosomes.webp',
         alt: 'Microscopic render of exosome vesicles',
         title: 'Exosomes',
         slug: 'exosomes',
@@ -344,7 +345,7 @@ const en: HomeContent = {
         body: 'Microscopic vesicles that carry signaling molecules between cells. A cell-free approach — no living cells — and a newer field, with evidence still developing.',
       },
       {
-        image: '/assets/services/fibroblasts.jpg',
+        image: '/assets/services/fibroblasts.webp',
         alt: 'Microscopic render of fibroblast cells and collagen fibers',
         title: 'Fibroblasts',
         slug: 'fibroblasts',
@@ -352,7 +353,7 @@ const en: HomeContent = {
         body: 'Cells that produce collagen and build connective tissue. The most narrowly focused: studied mainly for skin, wound, and aesthetic applications rather than systemic conditions.',
       },
       {
-        image: '/assets/services/placenta.jpg',
+        image: '/assets/services/placenta.webp',
         alt: 'Vial of freeze-dried (lyophilized) human placenta',
         title: 'Freeze-Dried Placenta',
         slug: 'placenta',
@@ -437,9 +438,38 @@ const en: HomeContent = {
     lead: 'You are guided by our patient coordinators. The medical care is delivered by the independent, licensed clinics, physicians, and laboratories in our Cancún network.',
     coordinatorsTitle: 'Our Patient Coordinators',
     coordinators: [
-      { photoPh: '📷 [coordinator-1.jpg]', name: '[Name]', role: '[Patient Coordinator]', bio: '[Languages, years helping international patients, role]' },
-      { photoPh: '📷 [coordinator-2.jpg]', name: '[Name]', role: '[Logistics & Travel]', bio: '[Languages, experience, role]' },
-      { photoPh: '📷 [coordinator-3.jpg]', name: '[Name]', role: '[Founder / Director]', bio: '[Background, why you started the agency]' },
+      { photoPh: '📷 [coordinator-1.jpg]', name: '[Name]', role: '[Patient Coordinator]', bio: '[Languages, years helping international patients, role]', slug: 'patient-coordinator' },
+      {
+        photoPh: '📷 [coordinator-2.jpg]',
+        name: 'Raquel Razo',
+        role: 'Logistics',
+        bio: 'Spanish, English · 12 years of experience · Driver',
+        slug: 'logistics-travel',
+        image: '/assets/team/driver-1.jpg',
+        heroImage: '/assets/team/vehicles/pasat-3.jpg',
+        pageTitle: 'Logistics & Transportation',
+        pageLead: "Airport pickups, ground transport, and every travel detail in Cancún — coordinated by our dedicated, bilingual logistics team.",
+        teamPhotos: [
+          { src: '/assets/team/driver-1.jpg', name: 'Raquel Razo', role: 'Spanish, English · 12 years of experience · Driver' },
+          { src: '/assets/team/driver-2.jpg', name: 'Anastacio Rodriguez', role: 'Spanish, English · 12 years of experience · Driver' },
+        ],
+        vehicles: [
+          {
+            name: 'Vehicle 1',
+            photos: [
+              '/assets/team/vehicles/pasat-1.jpg',
+              '/assets/team/vehicles/pasat-2.jpg',
+              '/assets/team/vehicles/pasat-3.jpg',
+              '/assets/team/vehicles/pasat-4.jpg',
+            ],
+          },
+          {
+            name: 'Vehicle 2',
+            photos: ['/assets/team/vehicles/van-1.jpg', '/assets/team/vehicles/van-2.jpg', '/assets/team/vehicles/van-3.jpg'],
+          },
+        ],
+      },
+      { photoPh: '📷 [coordinator-3.jpg]', name: '[Name]', role: '[Founder / Director]', bio: '[Background, why you started the agency]', slug: 'founder-director' },
     ],
     partnersTitle: 'Our Cancún Partner Network',
     partnersLead:
@@ -458,7 +488,7 @@ const en: HomeContent = {
           '/assets/partners/luigi/luigi-4.jpg',
         ],
       },
-      { icon: '🏥', name: '[Partner Clinic]', detail: '[Specialty · Government (COFEPRIS) license #]', slug: 'partner-clinic-2' },
+      { icon: '🏥', name: '[Partner Clinic]', detail: '[Specialty · Government (COFEPRIS) license #]', slug: 'partner-clinic-2', image: '/assets/partners/clinic-2/clinic-2-1.jpg', photos: ['/assets/partners/clinic-2/clinic-2-1.jpg', '/assets/partners/clinic-2/clinic-2-2.jpg'] },
       {
         icon: '🔬',
         name: '[Partner Laboratory]',
@@ -641,22 +671,14 @@ const es: HomeContent = {
       { label: '🧫 Fibroblastos', slug: 'fibroblasts' },
       { label: '🌱 Placenta Liofilizada', slug: 'placenta' },
     ],
-    ctaPrimary: 'Solicitar Consulta Gratis',
+    ctaPrimary: 'Obtén tu Cotización',
     ctaGhost: 'Qué Coordinamos',
     card: {
-      title: 'Revisión de Caso Gratis',
-      subtitle: 'Un coordinador le contactará en menos de 24 horas.',
-      labelName: 'Nombre completo',
-      phName: 'Jane Doe',
-      labelEmail: 'Correo electrónico',
-      phEmail: 'you@email.com',
-      labelCountry: 'País',
-      countryOptions: ['United States', 'Canada', 'Mexico'],
-      labelCondition: 'Condición / área de interés',
-      phCondition: 'e.g. knee osteoarthritis',
-      submit: 'Enviar Solicitud',
-      fineprint:
-        'Al enviar acepta ser contactado. Esto es una solicitud de información, no una garantía médica.',
+      title: 'Obtén tu Cotización Personalizada',
+      subtitle: 'Gratis, sin compromiso — revisada por un médico certificado.',
+      bullets: ['Desglosada: médico, viaje y coordinación', 'Respuesta en menos de 24 horas', 'Sin pago ni compromiso requerido'],
+      ctaLabel: 'Comenzar mi Cotización →',
+      fineprint: 'Esto es una solicitud de información, no una garantía médica ni cotización final.',
     },
   },
   roleBanner:
@@ -700,7 +722,6 @@ const es: HomeContent = {
     ctaBook: '📅 Contáctanos y Agenda Tu Cita',
   },
   trust: [
-    { num: '[XX]+', label: 'Pacientes guiados a su atención', isPh: true },
     { num: '4', label: 'Clínicas y médicos aliados en Cancún' },
     { num: '3', label: 'Laboratorios de terapia celular aliados' },
     { num: '🌎', label: 'Pacientes de todo el mundo — incluyendo EE.UU. y Canadá' },
@@ -711,7 +732,7 @@ const es: HomeContent = {
     lead: 'Las terapias regenerativas usan células especializadas — y las moléculas que estas liberan — para apoyar los procesos de reparación del propio cuerpo. Verificamos las clínicas y laboratorios independientes con licencia gubernamental (COFEPRIS) en Cancún que las aplican, coordinamos la logística y te acompañamos desde la primera llamada hasta tu seguimiento en casa.',
     cards: [
       {
-        image: '/assets/services/stem-cells.jpg',
+        image: '/assets/services/stem-cells.webp',
         alt: 'Representación microscópica de células madre',
         title: 'Células Madre',
         slug: 'stem-cells',
@@ -719,7 +740,7 @@ const es: HomeContent = {
         body: 'Células que se renuevan y se transforman en otros tipos celulares. La terapia más estudiada de las que coordinamos — investigada en reparación de tejidos e inflamación.',
       },
       {
-        image: '/assets/services/exosomes.jpg',
+        image: '/assets/services/exosomes.webp',
         alt: 'Representación microscópica de vesículas de exosomas',
         title: 'Exosomas',
         slug: 'exosomes',
@@ -727,7 +748,7 @@ const es: HomeContent = {
         body: 'Vesículas microscópicas que transportan moléculas de señalización entre células. Un enfoque libre de células — sin células vivas — y un campo más reciente, con evidencia aún en desarrollo.',
       },
       {
-        image: '/assets/services/fibroblasts.jpg',
+        image: '/assets/services/fibroblasts.webp',
         alt: 'Representación microscópica de fibroblastos y fibras de colágeno',
         title: 'Fibroblastos',
         slug: 'fibroblasts',
@@ -735,7 +756,7 @@ const es: HomeContent = {
         body: 'Células que producen colágeno y construyen el tejido conectivo. La más acotada: se estudia sobre todo en piel, cicatrización y estética, más que en condiciones sistémicas.',
       },
       {
-        image: '/assets/services/placenta.jpg',
+        image: '/assets/services/placenta.webp',
         alt: 'Frasco de placenta humana liofilizada',
         title: 'Placenta Liofilizada',
         slug: 'placenta',
@@ -800,9 +821,38 @@ const es: HomeContent = {
     lead: 'Te acompañan nuestros coordinadores de pacientes. La atención médica la brindan las clínicas, médicos y laboratorios independientes y certificados de nuestra red en Cancún.',
     coordinatorsTitle: 'Nuestros Coordinadores de Pacientes',
     coordinators: [
-      { photoPh: '📷 [coordinator-1.jpg]', name: '[Name]', role: '[Coordinador de Pacientes]', bio: '[Idiomas, años ayudando a pacientes internacionales, rol]' },
-      { photoPh: '📷 [coordinator-2.jpg]', name: '[Name]', role: '[Logística y Viajes]', bio: '[Idiomas, experiencia, rol]' },
-      { photoPh: '📷 [coordinator-3.jpg]', name: '[Name]', role: '[Fundador / Director]', bio: '[Trayectoria, por qué fundaste la agencia]' },
+      { photoPh: '📷 [coordinator-1.jpg]', name: '[Name]', role: '[Coordinador de Pacientes]', bio: '[Idiomas, años ayudando a pacientes internacionales, rol]', slug: 'patient-coordinator' },
+      {
+        photoPh: '📷 [coordinator-2.jpg]',
+        name: 'Raquel Razo',
+        role: 'Logística',
+        bio: 'Español, inglés · 12 años de experiencia · Chofer',
+        slug: 'logistics-travel',
+        image: '/assets/team/driver-1.jpg',
+        heroImage: '/assets/team/vehicles/pasat-3.jpg',
+        pageTitle: 'Logística y Transporte',
+        pageLead: 'Traslados al aeropuerto, transporte terrestre y cada detalle de viaje en Cancún — coordinados por nuestro equipo bilingüe de logística.',
+        teamPhotos: [
+          { src: '/assets/team/driver-1.jpg', name: 'Raquel Razo', role: 'Español, inglés · 12 años de experiencia · Chofer' },
+          { src: '/assets/team/driver-2.jpg', name: 'Anastacio Rodriguez', role: 'Español, inglés · 12 años de experiencia · Chofer' },
+        ],
+        vehicles: [
+          {
+            name: 'Vehículo 1',
+            photos: [
+              '/assets/team/vehicles/pasat-1.jpg',
+              '/assets/team/vehicles/pasat-2.jpg',
+              '/assets/team/vehicles/pasat-3.jpg',
+              '/assets/team/vehicles/pasat-4.jpg',
+            ],
+          },
+          {
+            name: 'Vehículo 2',
+            photos: ['/assets/team/vehicles/van-1.jpg', '/assets/team/vehicles/van-2.jpg', '/assets/team/vehicles/van-3.jpg'],
+          },
+        ],
+      },
+      { photoPh: '📷 [coordinator-3.jpg]', name: '[Name]', role: '[Fundador / Director]', bio: '[Trayectoria, por qué fundaste la agencia]', slug: 'founder-director' },
     ],
     partnersTitle: 'Nuestra Red de Aliados en Cancún',
     partnersLead:
@@ -821,7 +871,7 @@ const es: HomeContent = {
           '/assets/partners/luigi/luigi-4.jpg',
         ],
       },
-      { icon: '🏥', name: '[Partner Clinic]', detail: '[Especialidad · Cédula gubernamental (COFEPRIS) #]', slug: 'partner-clinic-2' },
+      { icon: '🏥', name: '[Partner Clinic]', detail: '[Especialidad · Cédula gubernamental (COFEPRIS) #]', slug: 'partner-clinic-2', image: '/assets/partners/clinic-2/clinic-2-1.jpg', photos: ['/assets/partners/clinic-2/clinic-2-1.jpg', '/assets/partners/clinic-2/clinic-2-2.jpg'] },
       {
         icon: '🔬',
         name: '[Partner Laboratory]',
@@ -939,7 +989,7 @@ const es: HomeContent = {
       labelCountry: 'País',
       countryOptions: ['United States', 'Canada', 'Mexico', 'Other'],
       labelArea: 'Área de interés',
-      areaOptions: ['Joint & Orthopedic', 'Sports Injury & Recovery', 'Immune Wellness & Support', 'Anti-Aging & Longevity', 'Senior Health & Wellness', 'Aesthetic & Skin', 'Metabolic & Hormonal Support', 'Placenta Implant Therapy', 'Personalized / Not sure yet'],
+      areaOptions: ['Articular y Ortopédico', 'Lesiones Deportivas y Recuperación', 'Bienestar y Soporte Inmune', 'Antienvejecimiento y Longevidad', 'Salud y Bienestar en Adultos Mayores', 'Estética y Piel', 'Soporte Metabólico y Hormonal', 'Terapia de Implante de Placenta', 'Personalizado / Aún no estoy seguro'],
       labelMessage: 'Cuéntenos su situación',
       submit: 'Solicitar Evaluación Gratis',
       fineprint: 'Respetamos su privacidad. Su información se usa solo para responder a su solicitud. Este formulario no brinda consejo médico ni garantiza tratamiento.',

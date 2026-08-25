@@ -1,0 +1,115 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import PageHero from '../PageHero.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import type { Lang } from '../../i18n/ui';
+import { homeContent } from '../../i18n/home';
+
+interface Props {
+  lang: Lang;
+  slug: string;
+}
+const { lang, slug } = Astro.props;
+const member = homeContent[lang].team.coordinators.find((item) => item.slug === slug);
+if (!member) {
+  throw new Error(`Unknown team member slug: ${slug}`);
+}
+
+const eyebrow = lang === 'es' ? 'Equipo de Kern Stem Care' : 'Kern Stem Care Team';
+const fallbackLead =
+  lang === 'es'
+    ? 'Parte del equipo de coordinación de Kern Stem Care en Cancún, dedicado a guiar a cada paciente internacional.'
+    : "Part of Kern Stem Care's coordination team in Cancún, dedicated to guiding every international patient.";
+const pageTitle = member.pageTitle ?? member.name;
+const lead = member.pageLead ?? fallbackLead;
+const teamTitle = lang === 'es' ? 'Choferes' : 'Drivers';
+const vehicleTitle = lang === 'es' ? 'Vehículos' : 'Vehicles';
+const backLabel = lang === 'es' ? '← Volver al equipo y aliados' : '← Back to team & partners';
+const ctaLabel = lang === 'es' ? 'Hablar con un Coordinador' : 'Talk to a Coordinator';
+const metaTitle = `${pageTitle} | Kern Stem Care`;
+---
+
+<SiteLayout lang={lang} title={metaTitle} description={lead}>
+  <Breadcrumbs lang={lang} items={[{ label: pageTitle }]} />
+  <PageHero
+    eyebrow={eyebrow}
+    title={pageTitle}
+    lead={lead}
+    image={member.heroImage || member.image}
+    imagePosition={member.heroImage ? 'center 70%' : undefined}
+  />
+
+  <section class="section">
+    <div class="wrap">
+      {!member.pageTitle && (
+        <>
+          <p class="ph center">{member.role}</p>
+          <p class="ph center">{member.bio}</p>
+        </>
+      )}
+
+      {member.teamPhotos && member.teamPhotos.length > 0 && (
+        <>
+          <h2 style="margin:36px 0 20px">{teamTitle}</h2>
+          <div class="grid g3">
+            {member.teamPhotos.map((photo) => (
+              <div>
+                <img class="member-photo" src={photo.src} alt={photo.name} loading="lazy" decoding="async" />
+                <p class="member-photo-name">{photo.name}</p>
+                {photo.role && <p class="member-photo-role">{photo.role}</p>}
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+
+      {member.vehicles && member.vehicles.length > 0 && (
+        <>
+          <h2 style="margin:36px 0 20px">{vehicleTitle}</h2>
+          {member.vehicles.map((vehicle) => (
+            <div style="margin-bottom:28px">
+              <h3 class="vehicle-name">{vehicle.name}</h3>
+              <div class="grid g3">
+                {vehicle.photos.map((photo, i) => (
+                  <img class="member-photo" src={photo} alt={`${vehicle.name} ${i + 1}`} loading="lazy" decoding="async" />
+                ))}
+              </div>
+            </div>
+          ))}
+        </>
+      )}
+
+      <div class="center" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:36px">
+        <a href={`/${lang}#team`} class="btn btn-outline">{backLabel}</a>
+        <a href={`/${lang}/contact`} class="btn btn-primary">{ctaLabel}</a>
+      </div>
+    </div>
+  </section>
+</SiteLayout>
+
+<style>
+  .member-photo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  .member-photo-name {
+    margin: 10px 0 0;
+    text-align: center;
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .member-photo-role {
+    margin: 2px 0 0;
+    text-align: center;
+    font-size: 0.86rem;
+    color: var(--muted);
+  }
+  .vehicle-name {
+    font-size: 1.1rem;
+    color: var(--teal-text);
+    margin: 0 0 14px;
+  }
+</style>

@@ -11,9 +11,10 @@ interface Props {
   description: string;
   image?: string;
   noindex?: boolean;
+  hreflangOverride?: Partial<Record<Lang, string | null>>;
 }
 
-const { lang, title, description, image, noindex } = Astro.props;
+const { lang, title, description, image, noindex, hreflangOverride } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,7 +22,7 @@ const { lang, title, description, image, noindex } = Astro.props;
   <head>
     <!-- Google Search Console verification -->
     <meta name="google-site-verification" content="egFDzlmGjCJIpFSdQ8LEvauT0uBfXjeTmSJZVmrCNyY" />
-    <Seo lang={lang} title={title} description={description} image={image} noindex={noindex} />
+    <Seo lang={lang} title={title} description={description} image={image} noindex={noindex} hreflangOverride={hreflangOverride} />
     <!-- Site-wide organization schema (Organization / TravelAgency) on every page -->
     <StructuredData lang={lang} />
     <!-- Consent-gated, privacy-friendly analytics (Plausible) -->

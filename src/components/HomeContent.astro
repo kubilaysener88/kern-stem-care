@@ -10,6 +10,7 @@ interface Props {
 }
 const { lang } = Astro.props;
 const c = homeContent[lang];
+const phClass = (s?: string) => (s && s.includes('[') ? 'ph' : '');
 
 const accentStyle: Record<string, string> = {
   blue: 'border-top:4px solid var(--blue)',
@@ -27,6 +28,8 @@ const errorMsg =
   lang === 'es'
     ? 'No se pudo enviar. Inténtalo de nuevo o escríbenos por WhatsApp.'
     : "Couldn't send. Please try again or message us on WhatsApp.";
+// EN/ES slugs differ ("estimate" vs "cotizacion").
+const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
 ---
 
 <!-- ============ HERO ============ -->
@@ -43,25 +46,18 @@ const errorMsg =
         ))}
       </div>
       <div class="hero-cta">
-        <a href={`/${lang}/contact`} class="btn btn-primary">{c.hero.ctaPrimary}</a>
+        <a href={estimateHref} class="btn btn-primary" data-analytics-event={ANALYTICS_EVENTS.bookConsultation}>{c.hero.ctaPrimary}</a>
         <a href={`/${lang}/services`} class="btn btn-ghost">{c.hero.ctaGhost}</a>
       </div>
     </div>
-    <div class="hero-card">
+    <div class="hero-card estimate-promo">
       <h2>{c.hero.card.title}</h2>
-      <p style="font-size:.85rem;color:var(--muted);margin-bottom:14px">{c.hero.card.subtitle}</p>
-      <form name="lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-success={successMsg} data-error={errorMsg} data-analytics-event={ANALYTICS_EVENTS.bookConsultation}>
-        <input type="hidden" name="form-name" value="lead" />
-        <input type="hidden" name="lang" value={lang} />
-        <p class="hp-field" aria-hidden="true"><label>{lang === 'es' ? 'No llenar' : 'Do not fill'}<input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
-        <div class="field"><label><span>{c.hero.card.labelName}</span><input name="full_name" required placeholder={c.hero.card.phName} /></label></div>
-        <div class="field"><label><span>{c.hero.card.labelEmail}</span><input name="email" type="email" required placeholder={c.hero.card.phEmail} /></label></div>
-        <div class="field"><label><span>{c.hero.card.labelCountry}</span>
-          <select name="country">{getCountries(lang).map((o) => <option value={o.en} selected={o.iso === 'US'}>{o[lang]}</option>)}</select></label></div>
-        <div class="field"><label><span>{c.hero.card.labelCondition}</span><input name="condition" placeholder={c.hero.card.phCondition} /></label></div>
-        <button class="btn btn-primary">{c.hero.card.submit}</button>
-        <p class="tiny">{c.hero.card.fineprint}</p>
-      </form>
+      <p class="estimate-promo-subtitle">{c.hero.card.subtitle}</p>
+      <ul class="estimate-promo-bullets">
+        {c.hero.card.bullets.map((b) => <li>{b}</li>)}
+      </ul>
+      <a href={estimateHref} class="btn btn-primary" style="width:100%;text-align:center" data-analytics-event={ANALYTICS_EVENTS.bookConsultation}>{c.hero.card.ctaLabel}</a>
+      <p class="tiny">{c.hero.card.fineprint}</p>
     </div>
   </div>
 </section>
@@ -124,10 +120,17 @@ const errorMsg =
     </div>
     <div class="vgrid" id="vgrid">
       {c.testimonials.cards.map((card) => (
-        <div class="vcard" data-seg={card.seg}>
+        <a
+          class="vcard"
+          data-seg={card.seg}
+          href="https://www.youtube.com/@KernStemCare"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={lang === 'es' ? 'Ver testimonios en YouTube (se abre en una pestaña nueva)' : 'Watch testimonials on YouTube (opens in a new tab)'}
+        >
           <div class="vthumb"><div class="tag">{card.tag}</div><div class="play">▶</div><div class="drop">{card.drop}</div></div>
           <div class="vbody"><h3 class="ph">{card.name}</h3><div class="meta ph">{card.meta}</div><p class="ph">{card.summary}</p></div>
-        </div>
+        </a>
       ))}
     </div>
     <div class="center" style="margin-top:24px">
@@ -137,7 +140,7 @@ const errorMsg =
 </section>
 
 <!-- ============ ABOUT ============ -->
-<section class="section" id="about">
+<section class="section about-section" id="about">
   <div class="wrap split">
     <div>
       <span class="eyebrow">{c.about.eyebrow}</span>
@@ -250,7 +253,12 @@ const errorMsg =
     <h3 style="text-align:center;margin:36px 0 18px;color:var(--teal-text)">{c.team.coordinatorsTitle}</h3>
     <div class="grid g3">
       {c.team.coordinators.map((p) => (
-        <div class="doc"><div class="photo">{p.photoPh}</div><div class="body"><h3 class="ph">{p.name}</h3><div class="role ph">{p.role}</div><p class="ph">{p.bio}</p></div></div>
+        <a class="doc doc-link" href={`/${lang}/team/${p.slug}`}>
+          <div class="photo">
+            {p.image ? <img src={p.image} alt={p.role} loading="lazy" decoding="async" /> : p.photoPh}
+          </div>
+          <div class="body"><h3 class:list={[phClass(p.name)]}>{p.name}</h3><div class:list={['role', phClass(p.role)]}>{p.role}</div><p class:list={[phClass(p.bio)]}>{p.bio}</p></div>
+        </a>
       ))}
     </div>
 
@@ -384,7 +392,7 @@ const errorMsg =
   .hero {
     position: relative;
     color: #fff;
-    background: url('/assets/hero/cancun-aerial.jpg') center 60% / cover no-repeat;
+    background: url('/assets/hero/cancun-aerial.webp') center 60% / cover no-repeat;
     overflow: hidden;
   }
   /* Brand-color gradient over the photo, dark enough on the left (where the
@@ -497,29 +505,6 @@ const errorMsg =
     color: var(--navy);
     font-size: 1.25rem;
   }
-  .hero-card .field {
-    margin-bottom: 12px;
-  }
-  .hero-card label {
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--muted);
-    display: block;
-  }
-  .hero-card label > span {
-    display: block;
-    margin-bottom: 4px;
-  }
-  .hero-card input,
-  .hero-card select,
-  .hero-card textarea {
-    width: 100%;
-    padding: 11px 13px;
-    border: 1px solid var(--line);
-    border-radius: 9px;
-    font-size: 0.92rem;
-    font-family: inherit;
-  }
   .hero-card .btn {
     width: 100%;
     margin-top: 6px;
@@ -529,10 +514,65 @@ const errorMsg =
     color: var(--muted);
     margin: 10px 0 0;
   }
+  .estimate-promo-subtitle {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 6px 0 16px;
+  }
+  .estimate-promo-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px;
+  }
+  .estimate-promo-bullets li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 8px;
+    font-size: 0.88rem;
+    color: var(--ink);
+  }
+  .estimate-promo-bullets li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--teal-text);
+    font-weight: 700;
+  }
   @media (max-width: 860px) {
     .hero .wrap {
       grid-template-columns: 1fr;
     }
+  }
+
+  /* ABOUT — subtle blurred logo watermark behind the whole section so the
+     content on top (text + placeholder card) stays easy to read. */
+  .about-section {
+    position: relative;
+    overflow: hidden;
+  }
+  .about-section::before {
+    content: '';
+    position: absolute;
+    inset: -10%;
+    background: url('/assets/logo/kern-icon-color.png') center / 55% no-repeat;
+    filter: blur(14px);
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  .about-section .wrap {
+    position: relative;
+    z-index: 1;
+  }
+  /* Soft white halo so the text stays crisp over the blurred logo watermark. */
+  .about-section .eyebrow,
+  .about-section h2,
+  .about-section > .wrap > div:first-child > p,
+  .about-section .check li {
+    text-shadow:
+      0 0 6px #fff,
+      0 0 6px #fff,
+      0 0 10px #fff,
+      0 0 10px #fff;
   }
 
   /* ROLE BANNER */
@@ -552,7 +592,7 @@ const errorMsg =
   }
   .trust .wrap {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 30px 22px;
     text-align: center;
@@ -575,11 +615,21 @@ const errorMsg =
 
   /* TEAM */
   .doc {
+    display: block;
     background: #fff;
     border: 1px solid var(--line);
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
+    color: inherit;
+    text-decoration: none;
+  }
+  .doc-link {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .doc-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(13, 42, 74, 0.12);
   }
   .doc .photo {
     aspect-ratio: 1/1;
@@ -588,6 +638,12 @@ const errorMsg =
     place-items: center;
     color: #4c6f86;
     font-weight: 600;
+    overflow: hidden;
+  }
+  .doc .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .doc .body {
     padding: 18px 20px;
@@ -649,11 +705,19 @@ const errorMsg =
     }
   }
   .vcard {
+    display: block;
     background: #fff;
     border: 1px solid var(--line);
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .vcard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(13, 42, 74, 0.12);
   }
   .vthumb {
     position: relative;

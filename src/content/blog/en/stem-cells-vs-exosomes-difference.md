@@ -2,6 +2,7 @@
 title: 'Stem cells vs. exosomes: what is the difference?'
 description: 'A plain-language comparison of stem cells and exosomes — what each one is, how they are studied in regenerative medicine, and how patients decide with their physician.'
 lang: 'en'
+translationKey: 'stem-cells-vs-exosomes'
 pubDate: 2026-06-18
 author: 'Kern Stem Care'
 reviewedBy: '[Medical reviewer name, credentials]'

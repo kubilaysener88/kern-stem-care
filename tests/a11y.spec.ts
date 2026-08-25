@@ -26,6 +26,8 @@ const ROUTES = [
   '/es/testimonials',
   '/en/contact',
   '/es/contact',
+  '/en/estimate',
+  '/es/cotizacion',
   '/en/privacy',
   '/es/privacy',
   '/en/terms',

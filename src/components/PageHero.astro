@@ -9,17 +9,21 @@ interface Props {
   /** CSS background-position for `image` (e.g. "center 20%" to favor the top
       of a portrait). Defaults to "center". */
   imagePosition?: string;
+  /** CSS background-size for `image` (e.g. "75%" to zoom out and show more of
+      the photo, at the cost of letterbox gaps filled by the navy background).
+      Defaults to "cover". */
+  imageZoom?: string;
   /** Alternative to `image`: a row of photos filling the banner side by side
       (a collage), with the same gradient overlay on top. Ignored if `image` is set. */
   images?: string[];
 }
-const { eyebrow, title, lead, image, imagePosition, images } = Astro.props;
+const { eyebrow, title, lead, image, imagePosition, imageZoom, images } = Astro.props;
 const hasCollage = !image && !!images && images.length > 0;
 ---
 
 <section
   class:list={['page-hero', { 'has-photo': !!image || hasCollage }]}
-  style={image ? `background-image:url(${image});background-position:${imagePosition || 'center'}` : undefined}
+  style={image ? `background-image:url(${image});background-position:${imagePosition || 'center'};background-size:${imageZoom || 'cover'}` : undefined}
 >
   {hasCollage && (
     <div class="hero-collage" aria-hidden="true">

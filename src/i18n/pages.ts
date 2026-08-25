@@ -76,6 +76,45 @@ export interface ContactPage {
   title: string;
   lead: string;
 }
+export interface EstimatePage {
+  metaTitle: string;
+  metaDescription: string;
+  eyebrow: string;
+  title: string;
+  lead: string;
+  steps: { title: string; body: string }[];
+  form: {
+    labelFirst: string;
+    labelLast: string;
+    labelEmail: string;
+    labelPhone: string;
+    labelCountry: string;
+    labelBirthdate: string;
+    addonsTitle: string;
+    addonTransport: string;
+    addonHotel: string;
+    labelGender: string;
+    genderOptions: string[];
+    labelWeight: string;
+    weightUnits: string[];
+    labelHeight: string;
+    heightUnits: string[];
+    conditionCategoriesTitle: string;
+    conditionCategories: string[];
+    labelCondition: string;
+    conditionPlaceholder: string;
+    labelId: string;
+    idHint: string;
+    labelFiles: string;
+    filesHint: string;
+    labelConsent: string;
+    submit: string;
+    fineprint: string;
+  };
+  whyTitle: string;
+  whyBody: string;
+  disclaimer: string;
+}
 
 export interface PagesSet {
   services: ServicesIndexPage;
@@ -87,6 +126,7 @@ export interface PagesSet {
   process: ProcessPage;
   testimonials: TestimonialsPage;
   contact: ContactPage;
+  estimate: EstimatePage;
 }
 
 const investigationalEN =
@@ -176,10 +216,10 @@ const en: PagesSet = {
     title: 'Services',
     lead: "Regenerative therapy in Cancún, Mexico is only as strong as the team behind it — and that's exactly what we take on. We vet and verify every independent, government-licensed (COFEPRIS) clinic and laboratory we coordinate with, from stem cell therapy to exosomes, then facilitate every step from your first call to your follow-up at home.",
     cards: [
-      { image: '/assets/services/stem-cells.jpg', alt: 'Microscopic render of stem cells', slug: 'stem-cells', title: 'Stem Cells', body: 'Cells that renew themselves and develop into other cell types. The most extensively studied of the therapies we coordinate.' },
-      { image: '/assets/services/exosomes.jpg', alt: 'Microscopic render of exosome vesicles', slug: 'exosomes', title: 'Exosomes', body: 'Cell-released vesicles carrying signaling molecules. A cell-free approach, and a newer field with evidence still developing.' },
-      { image: '/assets/services/fibroblasts.jpg', alt: 'Microscopic render of fibroblast cells and collagen fibers', slug: 'fibroblasts', title: 'Fibroblasts', body: 'Collagen-producing cells that build connective tissue. The most narrowly focused, concentrated on skin and wound applications.' },
-      { image: '/assets/services/placenta.jpg', alt: 'Vial of freeze-dried (lyophilized) human placenta', slug: 'placenta', title: 'Freeze-Dried Placenta', body: 'A freeze-dried placental-tissue preparation, given as subdermal injections. The least established of the therapies we coordinate.' },
+      { image: '/assets/services/stem-cells.webp', alt: 'Microscopic render of stem cells', slug: 'stem-cells', title: 'Stem Cells', body: 'Cells that renew themselves and develop into other cell types. The most extensively studied of the therapies we coordinate.' },
+      { image: '/assets/services/exosomes.webp', alt: 'Microscopic render of exosome vesicles', slug: 'exosomes', title: 'Exosomes', body: 'Cell-released vesicles carrying signaling molecules. A cell-free approach, and a newer field with evidence still developing.' },
+      { image: '/assets/services/fibroblasts.webp', alt: 'Microscopic render of fibroblast cells and collagen fibers', slug: 'fibroblasts', title: 'Fibroblasts', body: 'Collagen-producing cells that build connective tissue. The most narrowly focused, concentrated on skin and wound applications.' },
+      { image: '/assets/services/placenta.webp', alt: 'Vial of freeze-dried (lyophilized) human placenta', slug: 'placenta', title: 'Freeze-Dried Placenta', body: 'A freeze-dried placental-tissue preparation, given as subdermal injections. The least established of the therapies we coordinate.' },
     ],
     disclaimer: investigationalEN,
   },
@@ -189,7 +229,7 @@ const en: PagesSet = {
     eyebrow: 'Cellular Therapy',
     title: 'Stem Cells',
     lead: 'What stem cell therapy involves, what it is currently studied for, and how we coordinate your access to it through independent, licensed clinics in Cancún.',
-    heroImage: '/assets/services/stem-cells.jpg',
+    heroImage: '/assets/services/stem-cells.webp',
     sections: [
       { h2: 'What are stem cells?', body: 'Stem cells are the body\'s building blocks. They can renew themselves and develop into other cell types — bone, cartilage, skin, or muscle, among others — and your body uses them constantly to replace cells that wear out or become damaged. Of the cellular therapies coordinated in our network, they are the most extensively studied, with decades of published research behind them. The specific cell source is confirmed by the treating physician and varies by partner laboratory.' },
       { h2: 'How could they help you?', body: 'Research focuses on their role in supporting the body\'s own repair processes, particularly in tissue repair and in modulating inflammation. It is important to be clear about the status of this work: for most specific conditions, stem cell therapy remains investigational rather than an approved standard of care. The evidence is still developing, individual responses vary, and no outcome can be guaranteed — by us or by any provider.' },
@@ -203,7 +243,7 @@ const en: PagesSet = {
     eyebrow: 'Cellular Therapy',
     title: 'Exosomes',
     lead: 'What exosome therapy involves, where the research currently stands, and how we coordinate your access to it through independent, licensed clinics in Cancún.',
-    heroImage: '/assets/services/exosomes.jpg',
+    heroImage: '/assets/services/exosomes.webp',
     sections: [
       { h2: 'What are exosomes?', body: 'Exosomes are microscopic vesicles released by cells that carry signaling molecules from one cell to another — essentially the messages cells use to communicate. What distinguishes them from the other therapies is that they contain no living cells: exosome preparations are studied as a cell-free approach, which is why they are sometimes described as carrying the signal without the cell that produced it.' },
       { h2: 'How could they help you?', body: 'Research focuses on their role in cell-to-cell communication and in the signaling involved in tissue repair. This is a more recent field than stem cell research, and the evidence base is correspondingly smaller and still developing. Exosome preparations are not approved for the treatment of specific diseases, and no outcome can be guaranteed. Your physician will review with you what current research does and does not show.' },
@@ -217,7 +257,7 @@ const en: PagesSet = {
     eyebrow: 'Cellular Therapy',
     title: 'Fibroblasts',
     lead: 'What fibroblast therapy involves, which applications it is studied for, and how we coordinate your access to it through independent, licensed clinics in Cancún.',
-    heroImage: '/assets/services/fibroblasts.jpg',
+    heroImage: '/assets/services/fibroblasts.webp',
     sections: [
       { h2: 'What are fibroblasts?', body: 'Fibroblasts are the cells that produce collagen and build the connective tissue that gives skin its structure and firmness. They are the working cells of the dermis: when skin is injured, fibroblasts are largely responsible for rebuilding the tissue underneath. Of the four therapies coordinated in our network, this is the most narrowly focused — its research is concentrated in skin and wound applications rather than systemic conditions.' },
       { h2: 'How could they help you?', body: 'Research focuses on their role in collagen production and in the repair of skin and connective tissue. Because the field is concentrated on localized applications, fibroblast therapy is generally studied for the skin itself rather than for internal or systemic conditions. It is not approved as a treatment for specific diseases, individual responses vary, and no outcome can be guaranteed.' },
@@ -231,7 +271,7 @@ const en: PagesSet = {
     eyebrow: 'Regenerative Therapy',
     title: 'Freeze-Dried Placenta',
     lead: 'What freeze-dried placenta therapy involves, how it is administered, and how we coordinate your access to it through independent, licensed clinics in Cancún.',
-    heroImage: '/assets/services/placenta.jpg',
+    heroImage: '/assets/services/placenta.webp',
     sections: [
       { h2: 'What is freeze-dried placenta?', body: 'Freeze-dried (lyophilized) placenta is a placental-tissue preparation studied for its content of growth factors and signaling molecules involved in regenerative processes. Lyophilization removes the water from the tissue so it can be stored stably and reconstituted before use. Unlike the other therapies we coordinate, it is not administered by infusion: it is placed as subdermal injections in the lower abdomen. The specific tissue source varies by partner laboratory and is confirmed by the treating physician.' },
       { h2: 'How could it help you?', body: 'Research interest centres on the growth factors and signaling molecules the tissue contains. Of the therapies coordinated in our network, this is the least established: the published evidence is thinner than for stem cells or exosomes, and it is explored for general wellness support rather than for any specific diagnosis. It is not approved as a treatment for any condition, individual responses vary, and no outcome can be guaranteed.' },
@@ -273,7 +313,7 @@ const en: PagesSet = {
     metaDescription: 'Real patient stories, shared with written consent. Results are not typical and vary by person. See how Kern Stem Care supports patients traveling to Cancún.',
     eyebrow: 'Patient Stories',
     title: 'Real patients, real stories',
-    lead: 'Drop your edited videos or written stories into the placeholders below. <span class="ph">[Edit intro.]</span>',
+    lead: 'Real stories from real patients who traveled to Cancún for stem cell and regenerative therapy, shared with their written consent. Every journey is different — results vary and are not typical — but each story shows what coordinated care with Kern Stem Care actually looks like.',
     cards: [
       { provider: 'youtube', videoId: '[YOUTUBE_ID]', tag: '🇺🇸 U.S. · Orthopedic', name: '[Patient first name, State]', meta: '[Condition / program]', summary: '[One-line summary of their story]' },
       { provider: 'vimeo', videoId: '[VIMEO_ID]', tag: '🇨🇦 Canada · Neurological', name: '[Patient first name, Province]', meta: '[Condition / program]', summary: '[One-line summary of their story]' },
@@ -292,6 +332,54 @@ const en: PagesSet = {
     title: 'Request your free, no-obligation evaluation',
     lead: 'A patient coordinator will reach out within 24 hours. <span class="ph">[Edit.]</span>',
   },
+  estimate: {
+    metaTitle: 'Get Your Personalized Price Estimate | Kern Stem Care',
+    metaDescription:
+      'Share your case details and get a personalized, itemized price estimate for stem cell therapy in Cancún — reviewed by a licensed physician, no obligation.',
+    eyebrow: 'Free, No-Obligation Estimate',
+    title: 'Get Your Personalized Price Estimate',
+    lead: "Fill out the form below and our coordination team will prepare your personalized, itemized price estimate for stem cell and regenerative therapy in Cancún, Mexico — reviewed by a licensed physician before it reaches you. It only takes a few minutes.",
+    steps: [
+      { title: 'Tell us about your case', body: 'Share your basic info, your condition, and any recent lab studies or medical records you have.' },
+      { title: 'Our medical team reviews it', body: "A licensed physician at one of our partner clinics reviews your information to see what's realistic for your case." },
+      { title: 'Receive your itemized estimate', body: 'We send you a clear, written estimate — medical, travel, and coordination costs broken down separately — usually within 24 hours.' },
+    ],
+    form: {
+      labelFirst: 'First name',
+      labelLast: 'Last name',
+      labelEmail: 'Email',
+      labelPhone: 'Phone',
+      labelCountry: 'Country',
+      labelBirthdate: 'Date of birth',
+      addonsTitle: 'Additional services',
+      addonTransport: 'Airport-to-hotel transport',
+      addonHotel: 'Hotel room for 3 nights',
+      labelGender: 'Gender',
+      genderOptions: ['Female', 'Male', 'Other', 'Prefer not to say'],
+      labelWeight: 'Weight',
+      weightUnits: ['kg', 'lb'],
+      labelHeight: 'Height',
+      heightUnits: ['cm', 'in'],
+      conditionCategoriesTitle: 'Which best describes your condition or goal?',
+      conditionCategories: ['Joint & Orthopedic', 'Sports Injury & Recovery', 'Immune Wellness & Support', 'Anti-Aging & Longevity', 'Senior Health & Wellness', 'Aesthetic & Skin', 'Metabolic & Hormonal Support', 'Placenta Implant Therapy', 'Personalized / Not sure yet'],
+      labelCondition: 'Tell us about your condition or goal',
+      conditionPlaceholder: 'e.g. knee osteoarthritis, an autoimmune condition, anti-aging…',
+      labelId: 'Government ID or passport (to verify your identity)',
+      idHint: 'Used only to confirm your identity before your evaluation — stored securely and never shared without your consent.',
+      labelFiles: 'Lab studies or medical records (optional)',
+      filesHint: 'PDF, JPG, or PNG — you can also send these later by email if you prefer.',
+      labelConsent:
+        "I consent to Kern Stem Care's coordination team reviewing this information and identification document to prepare my estimate. This is not medical advice and does not create a doctor-patient relationship.",
+      submit: 'Submit My Information',
+      fineprint:
+        'This is an estimate request, not a medical diagnosis, treatment plan, or guarantee of price or outcome. Your final protocol and cost are confirmed by the treating physician during your evaluation.',
+    },
+    whyTitle: 'Why do we ask for weight and height?',
+    whyBody:
+      "Stem cell dosing is calculated by your treating physician based on body weight — sharing it upfront helps us prepare a more accurate initial estimate. Your final protocol is always confirmed by the physician during your evaluation, not by this form.",
+    disclaimer:
+      '<strong>Important:</strong> Kern Stem Care is a medical coordination agency, not a clinic, and does not provide medical treatment or advice. This estimate is prepared with guidance from independent, licensed partner physicians but is not a final quote, diagnosis, or guarantee — your treating physician confirms your protocol and final cost during your evaluation. Many regenerative therapies are not approved by the U.S. FDA or Health Canada for specific diseases and are considered investigational.',
+  },
 };
 
 const es: PagesSet = {
@@ -303,10 +391,10 @@ const es: PagesSet = {
     title: 'Servicios',
     lead: 'Una terapia regenerativa en Cancún, México es tan sólida como el equipo que la respalda — y de eso justo nos encargamos. Verificamos y validamos cada clínica y laboratorio independiente con licencia gubernamental (COFEPRIS) con el que coordinamos, desde la terapia con células madre hasta los exosomas, y luego facilitamos cada paso, desde tu primera llamada hasta tu seguimiento en casa.',
     cards: [
-      { image: '/assets/services/stem-cells.jpg', alt: 'Representación microscópica de células madre', slug: 'stem-cells', title: 'Células Madre', body: 'Células que se renuevan y se transforman en otros tipos celulares. La más estudiada de las terapias que coordinamos.' },
-      { image: '/assets/services/exosomes.jpg', alt: 'Representación microscópica de vesículas de exosomas', slug: 'exosomes', title: 'Exosomas', body: 'Vesículas liberadas por las células que transportan moléculas de señalización. Un enfoque libre de células y un campo más reciente, con evidencia en desarrollo.' },
-      { image: '/assets/services/fibroblasts.jpg', alt: 'Representación microscópica de fibroblastos y fibras de colágeno', slug: 'fibroblasts', title: 'Fibroblastos', body: 'Células productoras de colágeno que construyen el tejido conectivo. La más acotada, centrada en aplicaciones de piel y cicatrización.' },
-      { image: '/assets/services/placenta.jpg', alt: 'Frasco de placenta humana liofilizada', slug: 'placenta', title: 'Placenta Liofilizada', body: 'Una preparación de tejido placentario liofilizado, aplicada mediante inyecciones subdérmicas. La menos consolidada de las terapias que coordinamos.' },
+      { image: '/assets/services/stem-cells.webp', alt: 'Representación microscópica de células madre', slug: 'stem-cells', title: 'Células Madre', body: 'Células que se renuevan y se transforman en otros tipos celulares. La más estudiada de las terapias que coordinamos.' },
+      { image: '/assets/services/exosomes.webp', alt: 'Representación microscópica de vesículas de exosomas', slug: 'exosomes', title: 'Exosomas', body: 'Vesículas liberadas por las células que transportan moléculas de señalización. Un enfoque libre de células y un campo más reciente, con evidencia en desarrollo.' },
+      { image: '/assets/services/fibroblasts.webp', alt: 'Representación microscópica de fibroblastos y fibras de colágeno', slug: 'fibroblasts', title: 'Fibroblastos', body: 'Células productoras de colágeno que construyen el tejido conectivo. La más acotada, centrada en aplicaciones de piel y cicatrización.' },
+      { image: '/assets/services/placenta.webp', alt: 'Frasco de placenta humana liofilizada', slug: 'placenta', title: 'Placenta Liofilizada', body: 'Una preparación de tejido placentario liofilizado, aplicada mediante inyecciones subdérmicas. La menos consolidada de las terapias que coordinamos.' },
     ],
     disclaimer: investigationalES,
   },
@@ -316,7 +404,7 @@ const es: PagesSet = {
     eyebrow: 'Terapia Celular',
     title: 'Células Madre',
     lead: 'En qué consiste la terapia con células madre, para qué se estudia actualmente y cómo coordinamos tu acceso a ella con clínicas independientes y certificadas en Cancún.',
-    heroImage: '/assets/services/stem-cells.jpg',
+    heroImage: '/assets/services/stem-cells.webp',
     sections: [
       { h2: '¿Qué son las células madre?', body: 'Las células madre son los ladrillos con los que se construye el cuerpo. Pueden renovarse a sí mismas y transformarse en otros tipos de células —hueso, cartílago, piel o músculo, entre otras— y tu cuerpo las usa constantemente para reemplazar las células que se desgastan o se dañan. De las terapias celulares que coordinamos, son las más estudiadas, con décadas de investigación publicada. El origen específico de las células lo confirma el médico tratante y varía según el laboratorio aliado.' },
       { h2: '¿Cómo podrían ayudarte?', body: 'La investigación se centra en su papel para apoyar los procesos naturales de reparación del cuerpo, en particular en la reparación de tejidos y en la modulación de la inflamación. Es importante ser claros sobre el estado de este trabajo: para la mayoría de las condiciones específicas, la terapia con células madre sigue siendo de carácter investigacional y no un tratamiento aprobado de referencia. La evidencia está en desarrollo, cada persona responde distinto y ningún resultado puede garantizarse — ni por nosotros ni por ningún proveedor.' },
@@ -330,7 +418,7 @@ const es: PagesSet = {
     eyebrow: 'Terapia Celular',
     title: 'Exosomas',
     lead: 'En qué consiste la terapia con exosomas, en qué punto está la investigación y cómo coordinamos tu acceso a ella con clínicas independientes y certificadas en Cancún.',
-    heroImage: '/assets/services/exosomes.jpg',
+    heroImage: '/assets/services/exosomes.webp',
     sections: [
       { h2: '¿Qué son los exosomas?', body: 'Los exosomas son vesículas microscópicas que las células liberan para transportar moléculas de señalización de una célula a otra: son, en esencia, los mensajes que las células usan para comunicarse. Lo que los distingue de las otras terapias es que no contienen células vivas; las preparaciones de exosomas se estudian como un enfoque libre de células, por eso a veces se describen como la señal sin la célula que la produjo.' },
       { h2: '¿Cómo podrían ayudarte?', body: 'La investigación se centra en su papel en la comunicación entre células y en la señalización involucrada en la reparación de tejidos. Es un campo más reciente que el de las células madre, por lo que la base de evidencia es menor y sigue en desarrollo. Las preparaciones de exosomas no están aprobadas para tratar enfermedades específicas y ningún resultado puede garantizarse. Tu médico revisará contigo qué muestra y qué no muestra la investigación actual.' },
@@ -344,7 +432,7 @@ const es: PagesSet = {
     eyebrow: 'Terapia Celular',
     title: 'Fibroblastos',
     lead: 'En qué consiste la terapia con fibroblastos, en qué aplicaciones se estudia y cómo coordinamos tu acceso a ella con clínicas independientes y certificadas en Cancún.',
-    heroImage: '/assets/services/fibroblasts.jpg',
+    heroImage: '/assets/services/fibroblasts.webp',
     sections: [
       { h2: '¿Qué son los fibroblastos?', body: 'Los fibroblastos son las células que producen colágeno y construyen el tejido conectivo que da estructura y firmeza a la piel. Son las células que trabajan en la dermis: cuando la piel se lesiona, los fibroblastos son en buena medida los responsables de reconstruir el tejido que hay debajo. De las cuatro terapias que coordinamos, esta es la más acotada — su investigación se concentra en aplicaciones de piel y cicatrización, más que en condiciones sistémicas.' },
       { h2: '¿Cómo podrían ayudarte?', body: 'La investigación se centra en su papel en la producción de colágeno y en la reparación de la piel y el tejido conectivo. Como el campo se concentra en aplicaciones localizadas, la terapia con fibroblastos se estudia en general para la piel misma, más que para condiciones internas o sistémicas. No está aprobada como tratamiento de enfermedades específicas, cada persona responde distinto y ningún resultado puede garantizarse.' },
@@ -358,7 +446,7 @@ const es: PagesSet = {
     eyebrow: 'Terapia Regenerativa',
     title: 'Placenta Liofilizada',
     lead: 'En qué consiste la terapia con placenta liofilizada, cómo se administra y cómo coordinamos tu acceso a ella con clínicas independientes y certificadas en Cancún.',
-    heroImage: '/assets/services/placenta.jpg',
+    heroImage: '/assets/services/placenta.webp',
     sections: [
       { h2: '¿Qué es la placenta liofilizada?', body: 'La placenta liofilizada (secada en frío) es una preparación de tejido placentario estudiada por su contenido de factores de crecimiento y moléculas de señalización involucradas en procesos regenerativos. La liofilización retira el agua del tejido para que pueda conservarse de forma estable y reconstituirse antes de su uso. A diferencia de las otras terapias que coordinamos, no se administra por infusión: se aplica mediante inyecciones subdérmicas en el abdomen bajo. El origen específico del tejido varía según el laboratorio aliado y lo confirma el médico tratante.' },
       { h2: '¿Cómo podría ayudarte?', body: 'El interés de la investigación se centra en los factores de crecimiento y las moléculas de señalización que contiene el tejido. De las terapias que coordinamos, esta es la menos consolidada: la evidencia publicada es más escasa que la de células madre o exosomas, y se explora como apoyo general al bienestar, no para un diagnóstico específico. No está aprobada como tratamiento de ninguna condición, cada persona responde distinto y ningún resultado puede garantizarse.' },
@@ -400,7 +488,7 @@ const es: PagesSet = {
     metaDescription: 'Historias reales de pacientes, compartidas con consentimiento por escrito. Los resultados no son típicos y varían. Conoce cómo Kern Stem Care acompaña a quienes viajan a Cancún.',
     eyebrow: 'Historias de Pacientes',
     title: 'Pacientes reales, historias reales',
-    lead: 'Coloca tus videos editados o historias escritas en los espacios de abajo. <span class="ph">[Editar introducción.]</span>',
+    lead: 'Historias reales de pacientes que viajaron a Cancún para recibir terapia con células madre y medicina regenerativa, compartidas con su consentimiento por escrito. Cada camino es distinto — los resultados varían y no son típicos — pero cada historia muestra cómo es en la práctica la atención coordinada con Kern Stem Care.',
     cards: [
       { provider: 'youtube', videoId: '[YOUTUBE_ID]', tag: '🇺🇸 EE.UU. · Ortopédico', name: '[Patient first name, State]', meta: '[Condición / programa]', summary: '[Resumen de una línea de su historia]' },
       { provider: 'vimeo', videoId: '[VIMEO_ID]', tag: '🇨🇦 Canadá · Neurológico', name: '[Patient first name, Province]', meta: '[Condición / programa]', summary: '[Resumen de una línea de su historia]' },
@@ -418,6 +506,54 @@ const es: PagesSet = {
     eyebrow: 'Comenzar',
     title: 'Solicite su evaluación gratuita, sin compromiso',
     lead: 'Un coordinador le contactará en menos de 24 horas. <span class="ph">[Editar.]</span>',
+  },
+  estimate: {
+    metaTitle: 'Obtén tu Cotización Personalizada | Kern Stem Care',
+    metaDescription:
+      'Comparte los detalles de tu caso y obtén una cotización personalizada para terapia con células madre en Cancún — revisada por un médico certificado, sin compromiso.',
+    eyebrow: 'Cotización Gratuita, Sin Compromiso',
+    title: 'Obtén tu Cotización Personalizada',
+    lead: 'Llena el formulario a continuación y nuestro equipo de coordinación preparará tu cotización personalizada y detallada para terapia con células madre y medicina regenerativa en Cancún, México — revisada por un médico certificado antes de llegar a ti. Solo toma unos minutos.',
+    steps: [
+      { title: 'Cuéntanos sobre tu caso', body: 'Comparte tu información básica, tu condición y cualquier estudio de laboratorio o expediente médico reciente que tengas.' },
+      { title: 'Nuestro equipo médico lo revisa', body: 'Un médico certificado de una de nuestras clínicas aliadas revisa tu información para ver qué es realista para tu caso.' },
+      { title: 'Recibe tu cotización detallada', body: 'Te enviamos una cotización clara y por escrito — con los costos médicos, de viaje y de coordinación desglosados por separado — normalmente en menos de 24 horas.' },
+    ],
+    form: {
+      labelFirst: 'Nombre',
+      labelLast: 'Apellido',
+      labelEmail: 'Correo',
+      labelPhone: 'Teléfono',
+      labelCountry: 'País',
+      labelBirthdate: 'Fecha de nacimiento',
+      addonsTitle: 'Servicios adicionales',
+      addonTransport: 'Transporte del aeropuerto al hotel',
+      addonHotel: 'Habitación de hotel por 3 noches',
+      labelGender: 'Género',
+      genderOptions: ['Femenino', 'Masculino', 'Otro', 'Prefiero no decir'],
+      labelWeight: 'Peso',
+      weightUnits: ['kg', 'lb'],
+      labelHeight: 'Altura',
+      heightUnits: ['cm', 'in'],
+      conditionCategoriesTitle: '¿Qué describe mejor tu condición u objetivo?',
+      conditionCategories: ['Articular y Ortopédico', 'Lesiones Deportivas y Recuperación', 'Bienestar y Soporte Inmune', 'Antienvejecimiento y Longevidad', 'Salud y Bienestar en Adultos Mayores', 'Estética y Piel', 'Soporte Metabólico y Hormonal', 'Terapia de Implante de Placenta', 'Personalizado / Aún no estoy seguro'],
+      labelCondition: 'Cuéntanos sobre tu condición u objetivo',
+      conditionPlaceholder: 'ej. osteoartritis de rodilla, una condición autoinmune, antienvejecimiento…',
+      labelId: 'Identificación oficial o pasaporte (para verificar tu identidad)',
+      idHint: 'Se usa solo para confirmar tu identidad antes de tu evaluación — se guarda de forma segura y nunca se comparte sin tu consentimiento.',
+      labelFiles: 'Estudios de laboratorio o expediente médico (opcional)',
+      filesHint: 'PDF, JPG o PNG — también puedes enviarlos después por correo si prefieres.',
+      labelConsent:
+        'Doy mi consentimiento para que el equipo de coordinación de Kern Stem Care revise esta información y mi documento de identificación para preparar mi cotización. Esto no es un consejo médico ni crea una relación médico-paciente.',
+      submit: 'Enviar mi Información',
+      fineprint:
+        'Esta es una solicitud de cotización, no un diagnóstico médico, un plan de tratamiento ni una garantía de precio o resultado. Tu protocolo final y costo los confirma el médico tratante durante tu evaluación.',
+    },
+    whyTitle: '¿Por qué pedimos peso y altura?',
+    whyBody:
+      'La dosis de células madre la calcula tu médico tratante con base en el peso corporal — compartirlo desde ahora nos ayuda a preparar una cotización inicial más precisa. Tu protocolo final siempre lo confirma el médico durante tu evaluación, no este formulario.',
+    disclaimer:
+      '<strong>Importante:</strong> Kern Stem Care es una agencia de coordinación médica, no una clínica, y no brinda tratamiento ni consejo médico. Esta cotización se prepara con la guía de médicos aliados independientes y certificados, pero no es una cotización final, diagnóstico ni garantía — tu médico tratante confirma tu protocolo y costo final durante tu evaluación. Muchas terapias regenerativas no están aprobadas por la FDA de EE.UU. ni Health Canada para enfermedades específicas y se consideran de investigación.',
   },
 };
 

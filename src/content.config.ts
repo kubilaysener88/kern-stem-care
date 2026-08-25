@@ -13,6 +13,10 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     lang: z.enum(['en', 'es']),
+    /** Shared id linking this post to its translation in the other language
+        (EN/ES slugs usually differ, so this is how hreflang finds the pair).
+        Leave unset only if no translation exists yet. */
+    translationKey: z.string().optional(),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     author: z.string().default('Kern Stem Care'),

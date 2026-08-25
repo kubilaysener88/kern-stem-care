@@ -6,8 +6,13 @@ import { ANALYTICS_EVENTS } from '../config/analytics';
 
 interface Props {
   lang: Lang;
+  /** Override the language-switcher target when this page's slug differs
+      between locales (e.g. blog posts). `null` means no translation exists
+      yet, so the switcher falls back to the other language's home page
+      instead of a guessed (possibly nonexistent) URL. */
+  altLangPath?: string | null;
 }
-const { lang } = Astro.props;
+const { lang, altLangPath } = Astro.props;
 
 const nav = getNav(lang);
 const consult = getConsultLabel(lang);
@@ -16,20 +21,19 @@ const tagline = getTagline(lang);
 const current = Astro.url.pathname.replace(/\/+$/, '') || `/${lang}`;
 const route = getRouteFromUrl(Astro.url);
 const otherLang: Lang = lang === 'en' ? 'es' : 'en';
-const otherHref = `/${otherLang}${route === '/' ? '' : route}`;
+const otherHref = altLangPath !== undefined ? (altLangPath ?? `/${otherLang}`) : `/${otherLang}${route === '/' ? '' : route}`;
 const menuLabel = lang === 'es' ? 'Abrir menú' : 'Open menu';
 
 const isActive = (path: string, hasChildren = false) =>
   current === path || (hasChildren && current.startsWith(path + '/'));
 
-const markSvg = `<svg viewBox="0 0 30 30" width="24" height="24" aria-hidden="true"><defs><clipPath id="hm"><circle cx="11.5" cy="15" r="8"/></clipPath></defs><circle cx="18.5" cy="15" r="8" fill="#ffffff" opacity="0.28" clip-path="url(#hm)"/><circle cx="11.5" cy="15" r="8" fill="none" stroke="#ffffff" stroke-width="1.5"/><circle cx="18.5" cy="15" r="8" fill="none" stroke="#ffffff" stroke-width="1.5"/><circle cx="15" cy="15" r="2.3" fill="#f5cf52"/></svg>`;
 const calendarSvg = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>`;
 ---
 
 <header class="site-header" id="site-header">
   <div class="wrap bar">
     <a class="brand" href={`/${lang}`} aria-label="Kern Stem Care — home">
-      <span class="mark" set:html={markSvg} />
+      <img class="mark" src="/assets/logo/kern-icon-color.png" alt="" width="40" height="40" />
       <span class="brand-text">
         <span class="brand-name">Kern Stem Care</span>
         <span class="brand-tag">{tagline}</span>
@@ -131,11 +135,8 @@ const calendarSvg = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none"
   .brand .mark {
     width: 40px;
     height: 40px;
-    border-radius: 11px;
-    background: linear-gradient(135deg, var(--blue), var(--teal));
-    display: grid;
-    place-items: center;
-    box-shadow: 0 6px 16px rgba(21, 101, 192, 0.28);
+    object-fit: contain;
+    flex: none;
   }
   .brand-text {
     display: flex;

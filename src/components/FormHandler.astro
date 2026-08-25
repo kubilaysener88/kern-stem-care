@@ -2,12 +2,15 @@
 /**
  * Shared submit handler for Netlify Forms (AJAX, progressive enhancement).
  *
- * Any <form data-netlify="true"> on the page is submitted via fetch to "/" with a
- * URL-encoded body (Netlify intercepts it by the hidden `form-name` field), then the
- * form is replaced in place with an accessible success message (no page reload, no
- * alert). A honeypot field (`bot-field`) silently drops bots. On error we restore the
- * form so the visitor can retry. Without JS the native POST still works (Netlify shows
- * its default success page).
+ * Any <form data-netlify="true"> on the page is submitted via fetch to "/" (Netlify
+ * intercepts it by the hidden `form-name` field), then the form is replaced in place
+ * with an accessible success message (no page reload, no alert). A honeypot field
+ * (`bot-field`) silently drops bots. On error we restore the form so the visitor can
+ * retry. Without JS the native POST still works (Netlify shows its default success page).
+ *
+ * A form containing a file input is submitted as multipart/form-data (the FormData
+ * object as-is, letting the browser set the boundary) so uploaded files reach Netlify
+ * intact — URL-encoding a FormData silently drops File entries.
  */
 ---
 
@@ -34,10 +37,14 @@
         if (loading) btn.textContent = loading;
       }
 
+      var hasFile = !!form.querySelector('input[type="file"]');
+      var body = hasFile ? new FormData(form) : encode(form);
+      var headers = hasFile ? {} : { 'Content-Type': 'application/x-www-form-urlencoded' };
+
       fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode(form),
+        headers: headers,
+        body: body,
       })
         .then(function (res) {
           if (!res.ok) throw new Error('Bad status ' + res.status);

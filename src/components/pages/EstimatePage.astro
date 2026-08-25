@@ -1,0 +1,310 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import PageHero from '../PageHero.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import type { Lang } from '../../i18n/ui';
+import { pagesContent } from '../../i18n/pages';
+import { getCountries, getPhoneCodes, phoneCodeLabel } from '../../i18n/phoneCodes';
+import { ANALYTICS_EVENTS } from '../../config/analytics';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const p = pagesContent[lang].estimate;
+
+const successMsg =
+  lang === 'es'
+    ? '¡Gracias! Nuestro equipo de coordinación revisará tu información y te enviará tu cotización personalizada en menos de 24 horas.'
+    : 'Thank you! Our coordination team will review your information and send your personalized estimate within 24 hours.';
+const errorMsg =
+  lang === 'es'
+    ? 'No se pudo enviar. Inténtalo de nuevo o escríbenos por WhatsApp.'
+    : "Couldn't send. Please try again or message us on WhatsApp.";
+const stepsHeading = lang === 'es' ? 'Cómo funciona' : 'How it works';
+const formHeading = lang === 'es' ? 'Formulario de cotización' : 'Estimate form';
+const todayISO = new Date().toISOString().slice(0, 10);
+
+// EN and ES slugs differ ("estimate" vs "cotizacion") — point hreflang at the
+// real sibling instead of letting Seo.astro guess a same-slug URL.
+const hreflangOverride = { en: '/en/estimate', es: '/es/cotizacion' };
+---
+
+<SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription} hreflangOverride={hreflangOverride}>
+  <Breadcrumbs lang={lang} items={[{ label: p.title }]} />
+  <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} image="/assets/hero/laboratorio.webp" />
+
+  <section class="section">
+    <div class="wrap">
+      <h2 id="steps-heading" class="sr-only">{stepsHeading}</h2>
+      <div class="grid g3" aria-labelledby="steps-heading">
+        {p.steps.map((step, i) => (
+          <div class="step-simple">
+            <div class="step-num">{i + 1}</div>
+            <h3>{step.title}</h3>
+            <p>{step.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <div class="estimate-grid">
+        <div class="form-card">
+          <h2 id="estimate-form-heading" class="sr-only">{formHeading}</h2>
+          <form
+            name="estimate"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            enctype="multipart/form-data"
+            data-success={successMsg}
+            data-error={errorMsg}
+            aria-labelledby="estimate-form-heading"
+            data-analytics-event={ANALYTICS_EVENTS.estimateSubmit}
+          >
+            <input type="hidden" name="form-name" value="estimate" />
+            <input type="hidden" name="lang" value={lang} />
+            <p class="hp-field" aria-hidden="true"><label>{lang === 'es' ? 'No llenar' : 'Do not fill'}<input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+
+            <div class="row">
+              <div class="field"><label><span>{p.form.labelFirst}</span><input name="first_name" required /></label></div>
+              <div class="field"><label><span>{p.form.labelLast}</span><input name="last_name" required /></label></div>
+            </div>
+
+            <div class="row">
+              <div class="field"><label><span>{p.form.labelEmail}</span><input name="email" type="email" required /></label></div>
+              <div class="field">
+                <label for="est-phone"><span>{p.form.labelPhone}</span></label>
+                <div class="phone-group">
+                  <select name="phone_country_code" aria-label={phoneCodeLabel[lang]}>
+                    {getPhoneCodes(lang).map((c) => (
+                      <option value={c.dial} selected={c.iso === 'US'}>
+                        {c[lang]} {c.flag} {c.dial}
+                      </option>
+                    ))}
+                  </select>
+                  <input id="est-phone" name="phone" type="tel" autocomplete="tel" />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="field"><label><span>{p.form.labelCountry}</span><select name="country">{getCountries(lang).map((o) => <option value={o.en} selected={o.iso === 'US'}>{o[lang]}</option>)}</select></label></div>
+              <div class="field"><label><span>{p.form.labelBirthdate}</span><input name="birthdate" type="date" max={todayISO} required /></label></div>
+            </div>
+
+            <fieldset class="addons">
+              <legend>{p.form.addonsTitle}</legend>
+              <label class="addon-toggle">
+                <input type="checkbox" name="addon_transport" value="yes" />
+                <span>✈️ {p.form.addonTransport}</span>
+              </label>
+              <label class="addon-toggle">
+                <input type="checkbox" name="addon_hotel" value="yes" />
+                <span>🏨 {p.form.addonHotel}</span>
+              </label>
+            </fieldset>
+
+            <div class="row">
+              <div class="field"><label><span>{p.form.labelGender}</span>
+                <select name="gender">{p.form.genderOptions.map((o) => <option>{o}</option>)}</select>
+              </label></div>
+              <div class="field">
+                <label for="est-weight"><span>{p.form.labelWeight}</span></label>
+                <div class="unit-group">
+                  <input id="est-weight" name="weight" type="number" min="0" inputmode="decimal" required />
+                  <select name="weight_unit" aria-label={p.form.labelWeight}>{p.form.weightUnits.map((u) => <option>{u}</option>)}</select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="field">
+                <label for="est-height"><span>{p.form.labelHeight}</span></label>
+                <div class="unit-group">
+                  <input id="est-height" name="height" type="number" min="0" inputmode="decimal" required />
+                  <select name="height_unit" aria-label={p.form.labelHeight}>{p.form.heightUnits.map((u) => <option>{u}</option>)}</select>
+                </div>
+              </div>
+              <div class="field"><label><span>{p.form.labelId}</span>
+                <input name="id_document" type="file" accept="image/*,.pdf" required />
+                <span class="field-hint">{p.form.idHint}</span>
+              </label></div>
+            </div>
+
+            <div class="field"><label><span>{p.form.labelFiles}</span>
+              <input name="files" type="file" multiple accept=".pdf,.jpg,.jpeg,.png" />
+              <span class="field-hint">{p.form.filesHint}</span>
+            </label></div>
+
+            <fieldset class="addons">
+              <legend>{p.form.conditionCategoriesTitle}</legend>
+              {p.form.conditionCategories.map((cat) => (
+                <label class="addon-toggle">
+                  <input type="radio" name="condition_category" value={cat} />
+                  <span>{cat}</span>
+                </label>
+              ))}
+            </fieldset>
+
+            <div class="field"><label><span>{p.form.labelCondition}</span><textarea name="condition" rows="4" placeholder={p.form.conditionPlaceholder} required></textarea></label></div>
+
+            <label class="consent-field">
+              <input type="checkbox" name="consent" required />
+              <span>{p.form.labelConsent}</span>
+            </label>
+
+            <button class="btn btn-primary" style="width:100%">{p.form.submit}</button>
+            <p class="fineprint">{p.form.fineprint}</p>
+          </form>
+        </div>
+
+        <aside class="why-card">
+          <h2>{p.whyTitle}</h2>
+          <p>{p.whyBody}</p>
+        </aside>
+      </div>
+
+      <p class="disclaimer" style="margin-top:36px" set:html={p.disclaimer} />
+    </div>
+  </section>
+</SiteLayout>
+
+<style>
+  .step-simple {
+    text-align: center;
+    padding: 8px;
+  }
+  .step-num {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    background: var(--teal);
+    color: #fff;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+  }
+  .step-simple h3 {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+  }
+  .step-simple p {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  .estimate-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+  @media (max-width: 860px) {
+    .estimate-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .unit-group {
+    display: grid;
+    grid-template-columns: 1fr 84px;
+    gap: 8px;
+  }
+  .field-hint {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .addons {
+    border: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .addons legend {
+    width: 100%;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 8px;
+    padding: 0;
+  }
+  .addon-toggle {
+    position: relative;
+    cursor: pointer;
+  }
+  .addon-toggle input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+  }
+  .addon-toggle span {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1.5px solid var(--line);
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--ink);
+    transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+  }
+  .addon-toggle input:checked + span {
+    border-color: var(--teal);
+    background: var(--teal);
+    color: #fff;
+  }
+  .addon-toggle input:focus-visible + span {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+  }
+
+  .consent-field {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 4px 0 18px;
+    font-size: 0.86rem;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .consent-field input {
+    margin-top: 3px;
+    flex: none;
+    width: 18px;
+    height: 18px;
+  }
+
+  .fineprint {
+    font-size: 0.76rem;
+    color: var(--muted);
+    margin: 14px 0 0;
+  }
+
+  .why-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 26px;
+    box-shadow: var(--shadow);
+  }
+  .why-card h2 {
+    font-size: 1.15rem;
+    color: var(--teal-text);
+    margin-bottom: 10px;
+  }
+  .why-card p {
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+</style>

@@ -24,10 +24,21 @@ const galleryTitle = lang === 'es' ? 'Instalaciones' : 'Facility';
 const photoAltLabel = lang === 'es' ? 'Foto de la instalación' : 'Facility photo';
 const backLabel = lang === 'es' ? '← Volver al equipo y aliados' : '← Back to team & partners';
 const ctaLabel = lang === 'es' ? 'Hablar con un Coordinador' : 'Talk to a Coordinator';
-const metaTitle = `${partner.name} | Kern Stem Care`;
+
+// The partner's real name hasn't been filled in yet (still a "[bracket]"
+// placeholder) — every such page would otherwise share the exact same
+// title/description, a duplicate-content signal. Keep them out of the index
+// until real names replace the placeholders, and disambiguate the <title>
+// meanwhile using the slug rather than inventing a business name.
+const isPlaceholder = partner.name.startsWith('[');
+const slugLabel = slug
+  .replace(/-\d+$/, '')
+  .replace(/-/g, ' ')
+  .replace(/\b\w/g, (c) => c.toUpperCase());
+const metaTitle = isPlaceholder ? `${slugLabel} (${slug.match(/\d+$/)?.[0] ?? ''}) | Kern Stem Care` : `${partner.name} | Kern Stem Care`;
 ---
 
-<SiteLayout lang={lang} title={metaTitle} description={lead}>
+<SiteLayout lang={lang} title={metaTitle} description={lead} noindex={isPlaceholder}>
   <Breadcrumbs lang={lang} items={[{ label: partner.name }]} />
   <PageHero eyebrow={eyebrow} title={partner.name} lead={lead} image={partner.image} />
 
