@@ -594,10 +594,10 @@ const en: HomeContent = {
     eyebrow: 'Get Started',
     h2: 'Request your free, no-obligation evaluation',
     info: [
-      { icon: '📞', title: 'Call / WhatsApp', value: '[+1 toll-free number] · [WhatsApp]' },
-      { icon: '✉️', title: 'Email', value: '[patients@kernstemcare.com]' },
-      { icon: '📍', title: 'Agency Office', value: '[Street, Cancún, Mexico]' },
-      { icon: '🕐', title: 'Patient Line Hours', value: '[Mon–Sat, 8am–8pm CST]' },
+      { icon: '📞', title: 'Call / WhatsApp', value: '+52 998 767 8979' },
+      { icon: '✉️', title: 'Email', value: 'kernstemcare@gmail.com' },
+      { icon: '📍', title: 'Agency Office', value: 'Retorno Viento, SM 4, Núm. 10, Benito Juárez, Cancún, Q.R., México' },
+      { icon: '🕐', title: 'Patient Line Hours', value: 'Mon–Sat, 9am–6pm CST' },
     ],
     form: {
       labelFirst: 'First name',
@@ -635,13 +635,13 @@ const en: HomeContent = {
         ],
       },
     ],
-    contactCol: { title: 'Contact', links: ['[+1 toll-free]', '[patients@kernstemcare.com]', '[Cancún, Mexico]'] },
+    contactCol: { title: 'Contact', links: ['+52 998 767 8979', 'kernstemcare@gmail.com', 'Cancún, Q.R., México'] },
     disclaimer:
       '<strong>Important disclaimer:</strong> Kern Stem Care is a medical coordination and travel agency. We are <strong>not a clinic, hospital, or medical provider</strong> and we do not provide medical treatment, diagnosis, or advice. All medical care is delivered by independent, licensed clinics, physicians, and laboratories. The information on this website is for general educational purposes only. Many therapies coordinated are not approved by the U.S. FDA or Health Canada and are considered investigational. We make no guarantee of results or cure. Always consult a qualified physician before making medical decisions.',
     privacy: 'Privacy Policy',
     terms: 'Terms of Use',
     rights: 'All rights reserved.',
-    legalEntityPh: 'Kern Corsa, S.A. de C.V.',
+    legalEntityPh: 'Kern Corsa Medical Group, S.A. de C.V.',
   },
   whatsappLabel: 'Chat with us',
 };
@@ -978,10 +978,10 @@ const es: HomeContent = {
     eyebrow: 'Comenzar',
     h2: 'Solicite su evaluación gratuita, sin compromiso',
     info: [
-      { icon: '📞', title: 'Llamada / WhatsApp', value: '[+1 toll-free number] · [WhatsApp]' },
-      { icon: '✉️', title: 'Correo', value: '[patients@kernstemcare.com]' },
-      { icon: '📍', title: 'Oficina de la Agencia', value: '[Street, Cancún, Mexico]' },
-      { icon: '🕐', title: 'Horario', value: '[Lun–Sáb, 8am–8pm CST]' },
+      { icon: '📞', title: 'Llamada / WhatsApp', value: '+52 998 767 8979' },
+      { icon: '✉️', title: 'Correo', value: 'kernstemcare@gmail.com' },
+      { icon: '📍', title: 'Oficina de la Agencia', value: 'Retorno Viento, SM 4, Núm. 10, Benito Juárez, Cancún, Q.R., México' },
+      { icon: '🕐', title: 'Horario', value: 'Lun–Sáb, 9am–6pm CST' },
     ],
     form: {
       labelFirst: 'Nombre',
@@ -1019,13 +1019,13 @@ const es: HomeContent = {
         ],
       },
     ],
-    contactCol: { title: 'Contacto', links: ['[+1 toll-free]', '[patients@kernstemcare.com]', '[Cancún, Mexico]'] },
+    contactCol: { title: 'Contacto', links: ['+52 998 767 8979', 'kernstemcare@gmail.com', 'Cancún, Q.R., México'] },
     disclaimer:
       '<strong>Aviso importante:</strong> Kern Stem Care es una agencia de coordinación médica y de viajes. <strong>No somos una clínica, hospital ni proveedor médico</strong> y no brindamos tratamiento, diagnóstico ni consejo médico. Toda la atención médica la brindan clínicas, médicos y laboratorios independientes y certificados. La información de este sitio es solo para fines educativos generales. Muchas de las terapias que coordinamos no están aprobadas por la FDA de EE.UU. ni Health Canada y se consideran de investigación. No garantizamos resultados ni cura. Consulte siempre a un médico calificado antes de tomar decisiones médicas.',
     privacy: 'Política de Privacidad',
     terms: 'Términos de Uso',
     rights: 'Todos los derechos reservados.',
-    legalEntityPh: 'Kern Corsa, S.A. de C.V.',
+    legalEntityPh: 'Kern Corsa Medical Group, S.A. de C.V.',
   },
   whatsappLabel: 'Escríbenos',
 };
