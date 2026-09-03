@@ -21,7 +21,7 @@ addressed, and the clinic and laboratory involved. <span class="ph">[Add the pri
 
 - The medical evaluation and physician consultation
 - The cellular product and its laboratory preparation
-- The treatment session(s) at a **[government-licensed (COFEPRIS)](/en/about)** clinic
+- The treatment session(s) at a **[government-licensed (COFEPRIS)](/en/about#our-network)** clinic
 - <span class="ph">[List anything Kern Stem Care bundles — coordination, airport pickup, lodging help.]</span>
 
 ## What's usually *not* included
@@ -30,7 +30,7 @@ addressed, and the clinic and laboratory involved. <span class="ph">[Add the pri
 - Any follow-up care once you return home
 - <span class="ph">[Clarify your own inclusions/exclusions so there are no surprises.]</span>
 
-Want a number specific to your case? [Request a free evaluation →](/en/contact)
+Want a number specific to your case? [Request a free evaluation →](/en/estimate)
 
 ## What drives the price up or down
 

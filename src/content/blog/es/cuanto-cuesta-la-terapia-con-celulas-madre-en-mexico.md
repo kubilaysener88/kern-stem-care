@@ -21,7 +21,7 @@ tratar, y la clínica y el laboratorio involucrados. <span class="ph">[Agrega el
 
 - La evaluación médica y la consulta con el médico
 - El producto celular y su preparación en laboratorio
-- La(s) sesión(es) de tratamiento en una **[clínica con licencia gubernamental (COFEPRIS)](/es/about)**
+- La(s) sesión(es) de tratamiento en una **[clínica con licencia gubernamental (COFEPRIS)](/es/about#nuestra-red)**
 - <span class="ph">[Enumera lo que Kern Stem Care incluye — coordinación, traslado del aeropuerto, ayuda con hospedaje.]</span>
 
 ## Qué *no* suele estar incluido
@@ -30,7 +30,7 @@ tratar, y la clínica y el laboratorio involucrados. <span class="ph">[Agrega el
 - Cualquier seguimiento una vez que regresas a casa
 - <span class="ph">[Aclara tus inclusiones/exclusiones para que no haya sorpresas.]</span>
 
-¿Quieres un número específico para tu caso? [Solicita una evaluación gratuita →](/es/contact)
+¿Quieres un número específico para tu caso? [Solicita una evaluación gratuita →](/es/cotizacion)
 
 ## Qué sube o baja el precio
 

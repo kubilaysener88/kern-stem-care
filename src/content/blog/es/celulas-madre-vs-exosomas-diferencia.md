@@ -30,7 +30,7 @@ el otro es un mensajero que la célula envía.
 
 <span class="ph">[Reemplaza el contenido de la tabla con detalles que confirmen tus clínicas aliadas.]</span>
 
-¿No sabes cuál aplica a tu caso? [Solicita una evaluación gratuita →](/es/contact)
+¿No sabes cuál aplica a tu caso? [Solicita una evaluación gratuita →](/es/cotizacion)
 
 ## ¿Cuál podría ser para ti?
 
@@ -76,6 +76,10 @@ en desarrollo. Ninguno es más ni menos "real" — simplemente están en etapas 
 
 La opción correcta depende de tu condición, la evaluación de tu médico y el protocolo que
 ofrezca una clínica certificada — no de cuál suene más nuevo. <span class="ph">[Explica cómo tus coordinadores plantean la conversación.]</span>
+
+## Para saber más
+
+- [Comparing the Therapeutic Potential of Stem Cells and Their Secretory Products in Regenerative Medicine](https://pmc.ncbi.nlm.nih.gov/articles/PMC8378970/) — revisado por pares, Institutos Nacionales de Salud de EE. UU. (NIH, en inglés)
 
 ## Cómo ayuda Kern Stem Care
 

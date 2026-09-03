@@ -23,12 +23,12 @@ For the full step-by-step breakdown, see our **[International Patients](/en/proc
 ## In Cancún
 
 - **Arrival & pickup.** <span class="ph">[Airport pickup / transfer details.]</span>
-- **In-person consultation** at a **[government-licensed (COFEPRIS)](/en/about)** clinic
+- **In-person consultation** at a **[government-licensed (COFEPRIS)](/en/about#our-network)** clinic
   before any treatment.
 - **Treatment day(s).** <span class="ph">[Typical schedule, duration, what to bring.]</span>
 - A bilingual coordinator stays reachable throughout your stay.
 
-Ready to plan your trip? [Request a free evaluation →](/en/contact)
+Ready to plan your trip? [Request a free evaluation →](/en/estimate)
 
 ## After you return home
 
@@ -55,6 +55,10 @@ at appointments.
 
 ### Is Cancún safe for medical travel?
 <span class="ph">[Add your safety/logistics guidance — hotel areas, transport, etc.]</span>
+
+## Further reading
+
+- [Verify a physician's Cédula Profesional](https://www.gob.mx/cedulaprofesional) — official Mexican government portal, if you want to independently check a doctor's credentials
 
 ## How Kern Stem Care helps
 

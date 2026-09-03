@@ -44,6 +44,12 @@ const ROUTES = [
   '/es/blog/cuanto-cuesta-la-terapia-con-celulas-madre-en-mexico',
   '/es/blog/celulas-madre-vs-exosomas-diferencia',
   '/es/blog/que-esperar-viaje-turismo-medico-cancun',
+  '/en/blog/is-stem-cell-therapy-safe',
+  '/es/blog/es-segura-la-terapia-con-celulas-madre',
+  '/en/blog/stem-cell-therapy-results-timeline',
+  '/es/blog/cuanto-tarda-en-verse-resultados-celulas-madre',
+  '/en/blog/pain-worse-before-better-stem-cell-therapy',
+  '/es/blog/es-normal-que-duela-mas-antes-de-mejorar',
 ];
 
 const WCAG_AA_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'];

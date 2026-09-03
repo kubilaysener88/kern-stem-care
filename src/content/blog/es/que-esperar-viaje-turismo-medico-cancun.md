@@ -24,12 +24,12 @@ Para el recorrido completo paso a paso, visita nuestra página de
 ## En Cancún
 
 - **Llegada y traslado.** <span class="ph">[Detalles de recogida en el aeropuerto / traslado.]</span>
-- **Consulta presencial** en una **[clínica con licencia gubernamental (COFEPRIS)](/es/about)**
+- **Consulta presencial** en una **[clínica con licencia gubernamental (COFEPRIS)](/es/about#nuestra-red)**
   antes de cualquier tratamiento.
 - **Día(s) de tratamiento.** <span class="ph">[Horario típico, duración, qué llevar.]</span>
 - Un coordinador bilingüe permanece disponible durante toda tu estancia.
 
-¿Listo para planear tu viaje? [Solicita una evaluación gratuita →](/es/contact)
+¿Listo para planear tu viaje? [Solicita una evaluación gratuita →](/es/cotizacion)
 
 ## Después de regresar a casa
 
@@ -56,6 +56,10 @@ incluyendo en tus citas.
 
 ### ¿Es seguro Cancún para el turismo médico?
 <span class="ph">[Agrega tu guía de seguridad/logística — zonas de hotel, transporte, etc.]</span>
+
+## Para saber más
+
+- [Verifica la cédula profesional de un médico](https://www.gob.mx/cedulaprofesional) — portal oficial del gobierno de México, si quieres confirmar las credenciales de un médico por tu cuenta
 
 ## Cómo ayuda Kern Stem Care
 

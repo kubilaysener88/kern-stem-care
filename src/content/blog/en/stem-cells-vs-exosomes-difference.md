@@ -29,7 +29,7 @@ cell-to-cell signaling. One is a cell; the other is a messenger the cell sends.
 
 <span class="ph">[Replace the table contents with details your partner clinics confirm.]</span>
 
-Not sure which applies to your case? [Request a free evaluation →](/en/contact)
+Not sure which applies to your case? [Request a free evaluation →](/en/estimate)
 
 ## Which one might be right for you?
 
@@ -73,6 +73,10 @@ developing. Neither is more or less "real" — they're simply at different stage
 
 The right choice depends on your condition, your physician's assessment, and the protocol a
 licensed clinic offers — not on which sounds newer. <span class="ph">[Explain how your coordinators frame the conversation.]</span>
+
+## Further reading
+
+- [Comparing the Therapeutic Potential of Stem Cells and Their Secretory Products in Regenerative Medicine](https://pmc.ncbi.nlm.nih.gov/articles/PMC8378970/) — peer-reviewed, National Institutes of Health (NIH)
 
 ## How Kern Stem Care helps
 
