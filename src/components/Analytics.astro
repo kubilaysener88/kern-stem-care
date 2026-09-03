@@ -2,29 +2,47 @@
 import { analytics } from '../config/analytics';
 
 /**
- * Consent-gated, privacy-friendly analytics (Plausible).
+ * Consent-gated, privacy-friendly analytics (Plausible + GA4, side by side).
  *
  * - Nothing loads until the visitor accepts cookies. We read the choice from
  *   localStorage['ksc-cookie-consent'] and also react live to the 'cookie-consent'
  *   event dispatched by CookieConsent.astro, so accepting starts tracking at once.
  * - Exposes window.kscTrack(name, props) — a no-op without consent — used by tagged
- *   CTAs/forms (data-analytics-event="…") and by VideoTestimonial for plays.
- * - Plausible is cookieless and needs no consent legally; we gate it anyway to fully
- *   respect the banner. To swap to GA4: load gtag here instead, and gate it the same
- *   way (only initialize after consentGranted()).
+ *   CTAs/forms (data-analytics-event="…") and by VideoTestimonial for plays. It
+ *   forwards the event to every enabled provider.
+ * - Both providers are gated the same way (only initialize after consent), even
+ *   though Plausible is cookieless and technically needs no consent.
  */
-const { enabled, domain, src } = analytics;
+const { plausible, ga } = analytics;
 const consentKey = 'ksc-cookie-consent';
 ---
 
 {
-  enabled && (
-    <script is:inline define:vars={{ domain, src, consentKey }}>
+  (plausible.enabled || ga.enabled) && (
+    <script
+      is:inline
+      define:vars={{
+        plausibleEnabled: plausible.enabled,
+        domain: plausible.domain,
+        src: plausible.src,
+        gaEnabled: ga.enabled,
+        measurementId: ga.measurementId,
+        consentKey,
+      }}
+    >
       // Plausible queue stub so plausible() is callable before the script loads.
       window.plausible =
         window.plausible ||
         function () {
           (window.plausible.q = window.plausible.q || []).push(arguments);
+        };
+
+      // gtag queue stub so gtag() is callable before the script loads.
+      window.dataLayer = window.dataLayer || [];
+      window.gtag =
+        window.gtag ||
+        function () {
+          window.dataLayer.push(arguments);
         };
 
       function kscConsentGranted() {
@@ -35,10 +53,10 @@ const consentKey = 'ksc-cookie-consent';
         }
       }
 
-      var kscLoaded = false;
+      var kscPlausibleLoaded = false;
       function kscLoadPlausible() {
-        if (kscLoaded || !kscConsentGranted()) return;
-        kscLoaded = true;
+        if (!plausibleEnabled || kscPlausibleLoaded || !kscConsentGranted()) return;
+        kscPlausibleLoaded = true;
         var s = document.createElement('script');
         s.defer = true;
         s.setAttribute('data-domain', domain);
@@ -46,20 +64,38 @@ const consentKey = 'ksc-cookie-consent';
         document.head.appendChild(s);
       }
 
+      var kscGaLoaded = false;
+      function kscLoadGa() {
+        if (!gaEnabled || kscGaLoaded || !kscConsentGranted()) return;
+        kscGaLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + measurementId;
+        document.head.appendChild(s);
+        window.gtag('js', new Date());
+        window.gtag('config', measurementId);
+      }
+
+      function kscLoadAll() {
+        kscLoadPlausible();
+        kscLoadGa();
+      }
+
       // Public helper — safe no-op until the visitor consents.
       window.kscTrack = function (name, props) {
         if (!name || !kscConsentGranted()) return;
-        kscLoadPlausible();
-        window.plausible(name, props ? { props: props } : undefined);
+        kscLoadAll();
+        if (plausibleEnabled) window.plausible(name, props ? { props: props } : undefined);
+        if (gaEnabled) window.gtag('event', name, props || {});
       };
 
       // Side effects deferred off the critical path (kscTrack above stays available
       // immediately for early calls; the banner is clicked far later than idle).
       function initAnalytics() {
         // Load now if consent was given on a previous page, and react to the banner.
-        kscLoadPlausible();
+        kscLoadAll();
         document.addEventListener('cookie-consent', function (e) {
-          if (e && e.detail === 'accepted') kscLoadPlausible();
+          if (e && e.detail === 'accepted') kscLoadAll();
         });
 
         // Delegated tracking for tagged links (CTAs) and forms.

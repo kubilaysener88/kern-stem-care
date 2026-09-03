@@ -140,14 +140,17 @@ npm run test:a11y # axe-core WCAG 2.1 AA scan of every route (Playwright)
 9. **Motion:** scroll-reveal animations were removed (they read as the page
    "re-opening" on navigation). Only subtle CSS hovers remain. Clicking a nav link
    for the page you're already on scrolls to top instead of reloading (`SiteHeader`).
-8. **Analytics (privacy-friendly, consent-gated):** Plausible, configured in
-   `src/config/analytics.ts` and loaded by `src/components/Analytics.astro`. It loads
-   ONLY after the visitor accepts cookies, and `window.kscTrack(name, props)` is a
-   no-op without consent. Track a new event by adding `data-analytics-event="…"` to a
-   link/form, or calling `window.kscTrack('…')` from a script. Current events:
-   `Book Consultation` (header CTA), `Contact Form Submit`, `Testimonial Play`.
-   Before going live: register the domain in Plausible (or set `enabled: false`), and
-   mention the analytics tool in the Privacy Policy.
+8. **Analytics (privacy-friendly, consent-gated):** Plausible + Google Analytics 4,
+   configured in `src/config/analytics.ts` (each provider has its own `enabled` flag)
+   and loaded by `src/components/Analytics.astro`. GA4 is live (`ga.enabled: true`,
+   measurement ID `G-FJ5KMGCBDS`); Plausible stays `enabled: false` until the domain
+   is registered at plausible.io. Both load ONLY after the visitor accepts cookies,
+   and `window.kscTrack(name, props)` is a no-op without consent and forwards to
+   every enabled provider. Track a new event by adding `data-analytics-event="…"` to
+   a link/form, or calling `window.kscTrack('…')` from a script. Current events:
+   `Book Consultation` (header CTA), `Contact Form Submit`, `Testimonial Play`,
+   `Estimate Form Submit`. The Privacy Policy's cookies/analytics section already
+   mentions Google Analytics — update it if the provider mix changes.
 10. **SEO extras:** breadcrumbs (`Breadcrumbs.astro`, visible + `BreadcrumbList` JSON-LD)
     on every interior page; per-keyword meta titles in `src/i18n/pages.ts`; social image
     at `public/og-image.jpg` (regenerate with `node scripts/gen-og.mjs`). NOTE: services
