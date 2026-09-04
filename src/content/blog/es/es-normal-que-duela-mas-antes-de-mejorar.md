@@ -3,7 +3,7 @@ title: '¿Es normal que el dolor empeore antes de mejorar después de la terapia
 description: 'Por qué un brote temporal de dolor, inflamación o rigidez después de una inyección articular es común, cuánto suele durar, y las señales de alerta que indican que algo más está pasando.'
 lang: 'es'
 translationKey: 'flare-before-improvement'
-pubDate: 2026-09-10
+pubDate: 2026-09-03
 author: 'Kern Stem Care'
 reviewedBy: '[Nombre del revisor médico, credenciales]'
 tags: ['recuperación', 'células madre', 'inyecciones articulares', 'cuidados posteriores']

@@ -3,7 +3,7 @@ title: "Is It Normal for Pain to Get Worse Before It Gets Better After Stem Cell
 description: 'Why a temporary flare of pain, swelling, or stiffness after a joint injection is common, how long it typically lasts, and the warning signs that mean something else is going on.'
 lang: 'en'
 translationKey: 'flare-before-improvement'
-pubDate: 2026-09-10
+pubDate: 2026-09-03
 author: 'Kern Stem Care'
 reviewedBy: '[Medical reviewer name, credentials]'
 tags: ['recovery', 'stem cells', 'joint injections', 'aftercare']

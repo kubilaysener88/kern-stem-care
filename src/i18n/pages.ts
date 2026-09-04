@@ -25,9 +25,9 @@ export interface TestimonialCard {
   provider: 'youtube' | 'vimeo';
   videoId: string;
   thumbnail?: string;
-  tag: string;
+  tag?: string;
   name: string;
-  meta: string;
+  meta?: string;
   summary: string;
 }
 
@@ -315,12 +315,9 @@ const en: PagesSet = {
     title: 'Real patients, real stories',
     lead: 'Real stories from real patients who traveled to Cancún for stem cell and regenerative therapy, shared with their written consent. Every journey is different — results vary and are not typical — but each story shows what coordinated care with Kern Stem Care actually looks like.',
     cards: [
-      { provider: 'youtube', videoId: '[YOUTUBE_ID]', tag: '🇺🇸 U.S. · Orthopedic', name: '[Patient first name, State]', meta: '[Condition / program]', summary: '[One-line summary of their story]' },
-      { provider: 'vimeo', videoId: '[VIMEO_ID]', tag: '🇨🇦 Canada · Neurological', name: '[Patient first name, Province]', meta: '[Condition / program]', summary: '[One-line summary of their story]' },
-      { provider: 'youtube', videoId: '[YOUTUBE_ID]', tag: '🇺🇸 U.S. · Wellness', name: '[Patient first name, State]', meta: '[Condition / program]', summary: '[One-line summary of their story]' },
-      { provider: 'vimeo', videoId: '[VIMEO_ID]', tag: '🇨🇦 Canada · Autoimmune', name: '[Patient first name, Province]', meta: '[Condition / program]', summary: '[One-line summary of their story]' },
-      { provider: 'youtube', videoId: '[YOUTUBE_ID]', tag: '🇺🇸 U.S. · Orthopedic', name: '[Patient first name, State]', meta: '[Condition / program]', summary: '[One-line summary of their story]' },
-      { provider: 'youtube', videoId: '[YOUTUBE_ID]', tag: '🇨🇦 Canada · Orthopedic', name: '[Patient first name, Province]', meta: '[Condition / program]', summary: '[One-line summary of their story]' },
+      { provider: 'youtube', videoId: '[YOUTUBE_ID]', name: '[Patient first name, State]', summary: '[One-line summary of their story]' },
+      { provider: 'vimeo', videoId: '[VIMEO_ID]', name: '[Patient first name, Province]', summary: '[One-line summary of their story]' },
+      { provider: 'youtube', videoId: '[YOUTUBE_ID]', name: '[Patient first name, State]', summary: '[One-line summary of their story]' },
     ],
     disclaimer:
       '<strong>Testimonial disclaimer:</strong> Testimonials reflect individual experiences and are not a promise of results. Patients shown gave written consent to share their stories. Results are not typical and will vary from person to person.',
@@ -490,12 +487,9 @@ const es: PagesSet = {
     title: 'Pacientes reales, historias reales',
     lead: 'Historias reales de pacientes que viajaron a Cancún para recibir terapia con células madre y medicina regenerativa, compartidas con su consentimiento por escrito. Cada camino es distinto — los resultados varían y no son típicos — pero cada historia muestra cómo es en la práctica la atención coordinada con Kern Stem Care.',
     cards: [
-      { provider: 'youtube', videoId: '[YOUTUBE_ID]', tag: '🇺🇸 EE.UU. · Ortopédico', name: '[Patient first name, State]', meta: '[Condición / programa]', summary: '[Resumen de una línea de su historia]' },
-      { provider: 'vimeo', videoId: '[VIMEO_ID]', tag: '🇨🇦 Canadá · Neurológico', name: '[Patient first name, Province]', meta: '[Condición / programa]', summary: '[Resumen de una línea de su historia]' },
-      { provider: 'youtube', videoId: '[YOUTUBE_ID]', tag: '🇺🇸 EE.UU. · Bienestar', name: '[Patient first name, State]', meta: '[Condición / programa]', summary: '[Resumen de una línea de su historia]' },
-      { provider: 'vimeo', videoId: '[VIMEO_ID]', tag: '🇨🇦 Canadá · Autoinmune', name: '[Patient first name, Province]', meta: '[Condición / programa]', summary: '[Resumen de una línea de su historia]' },
-      { provider: 'youtube', videoId: '[YOUTUBE_ID]', tag: '🇺🇸 EE.UU. · Ortopédico', name: '[Patient first name, State]', meta: '[Condición / programa]', summary: '[Resumen de una línea de su historia]' },
-      { provider: 'youtube', videoId: '[YOUTUBE_ID]', tag: '🇨🇦 Canadá · Ortopédico', name: '[Patient first name, Province]', meta: '[Condición / programa]', summary: '[Resumen de una línea de su historia]' },
+      { provider: 'youtube', videoId: '[YOUTUBE_ID]', name: '[Patient first name, State]', summary: '[Resumen de una línea de su historia]' },
+      { provider: 'vimeo', videoId: '[VIMEO_ID]', name: '[Patient first name, Province]', summary: '[Resumen de una línea de su historia]' },
+      { provider: 'youtube', videoId: '[YOUTUBE_ID]', name: '[Patient first name, State]', summary: '[Resumen de una línea de su historia]' },
     ],
     disclaimer:
       '<strong>Aviso sobre testimonios:</strong> Los testimonios reflejan experiencias individuales y no son una promesa de resultados. Los pacientes mostrados dieron consentimiento por escrito para compartir su historia. Los resultados no son típicos y varían de persona a persona.',

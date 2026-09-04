@@ -18,8 +18,8 @@ if (!partner) {
 const eyebrow = lang === 'es' ? 'Aliado de la Red' : 'Network Partner';
 const lead =
   lang === 'es'
-    ? 'Instalación aliada dentro de la red de Kern Stem Care en Cancún. La atención médica es proporcionada por este proveedor independiente y licenciado — no por Kern Stem Care.'
-    : 'A partner facility within the Kern Stem Care network in Cancún. Medical care is provided by this independent, licensed provider — not by Kern Stem Care.';
+    ? 'Instalación aliada dentro de la red de Kern Stem Care en Cancún. La atención médica la brinda directamente este proveedor independiente y licenciado, mientras Kern Stem Care coordina el acceso, el viaje y el acompañamiento.'
+    : 'A partner facility within the Kern Stem Care network in Cancún. Medical care is delivered directly by this independent, licensed provider, while Kern Stem Care coordinates access, travel, and support.';
 const galleryTitle = lang === 'es' ? 'Instalaciones' : 'Facility';
 const photoAltLabel = lang === 'es' ? 'Foto de la instalación' : 'Facility photo';
 const backLabel = lang === 'es' ? '← Volver al equipo y aliados' : '← Back to team & partners';
@@ -36,6 +36,8 @@ const slugLabel = slug
   .replace(/-/g, ' ')
   .replace(/\b\w/g, (c) => c.toUpperCase());
 const metaTitle = isPlaceholder ? `${slugLabel} (${slug.match(/\d+$/)?.[0] ?? ''}) | Kern Stem Care` : `${partner.name} | Kern Stem Care`;
+const qualityLeadLabel = lang === 'es' ? 'Responsable de calidad' : 'Quality lead';
+const physiciansTitle = lang === 'es' ? 'Médicos' : 'Physicians';
 ---
 
 <SiteLayout lang={lang} title={metaTitle} description={lead} noindex={isPlaceholder}>
@@ -45,6 +47,29 @@ const metaTitle = isPlaceholder ? `${slugLabel} (${slug.match(/\d+$/)?.[0] ?? ''
   <section class="section">
     <div class="wrap">
       <p class="ph center">{partner.detail}</p>
+
+      {partner.body && <p class="partner-body">{partner.body}</p>}
+
+      {partner.qualityLead && (
+        <div class="quality-lead">
+          <p class="quality-lead-name"><span aria-hidden="true">✓</span> {partner.qualityLead.name} · {partner.qualityLead.credential}</p>
+          <p class="quality-lead-role">{qualityLeadLabel}: {partner.qualityLead.role}</p>
+        </div>
+      )}
+
+      {partner.physicians && partner.physicians.length > 0 && (
+        <>
+          <h2 class="sr-only">{physiciansTitle}</h2>
+          <div class="physician-row">
+            {partner.physicians.map((doc) => (
+              <div class="quality-lead">
+                <p class="quality-lead-name"><span aria-hidden="true">✓</span> {doc.name} · {doc.credential}</p>
+                <p class="quality-lead-role">{doc.role}</p>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
 
       {partner.photos && partner.photos.length > 0 && (
         <>
@@ -72,5 +97,46 @@ const metaTitle = isPlaceholder ? `${slugLabel} (${slug.match(/\d+$/)?.[0] ?? ''
     object-fit: cover;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+  }
+  .partner-body {
+    max-width: 720px;
+    margin: 18px auto 0;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.6;
+  }
+  .physician-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 20px;
+  }
+  .physician-row .quality-lead {
+    margin-top: 0;
+  }
+  .quality-lead {
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    max-width: 380px;
+    margin: 20px auto 0;
+    padding: 12px 16px;
+  }
+  .quality-lead-name {
+    margin: 0;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .quality-lead-name span {
+    color: var(--teal-text);
+  }
+  .quality-lead-role {
+    margin: 3px 0 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--muted);
   }
 </style>

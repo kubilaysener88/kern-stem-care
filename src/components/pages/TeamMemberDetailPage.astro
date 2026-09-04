@@ -57,6 +57,15 @@ const metaTitle = `${pageTitle} | Kern Stem Care`;
                 <img class="member-photo" src={photo.src} alt={photo.name} loading="lazy" decoding="async" />
                 <p class="member-photo-name">{photo.name}</p>
                 {photo.role && <p class="member-photo-role">{photo.role}</p>}
+                {photo.license && (
+                  <div class="license-badge">
+                    <p class="license-type">
+                      <span aria-hidden="true">✓</span> {photo.license.type} · {photo.license.number}
+                    </p>
+                    <p class="license-detail">{photo.license.category}</p>
+                    <p class="license-detail">{photo.license.validThrough} · {photo.license.issuer}</p>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -111,5 +120,29 @@ const metaTitle = `${pageTitle} | Kern Stem Care`;
     font-size: 1.1rem;
     color: var(--teal-text);
     margin: 0 0 14px;
+  }
+  .license-badge {
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    margin: 12px auto 0;
+    padding: 10px 14px;
+    max-width: 340px;
+  }
+  .license-type {
+    margin: 0;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-align: center;
+  }
+  .license-type span {
+    color: var(--teal-text);
+  }
+  .license-detail {
+    margin: 3px 0 0;
+    font-size: 0.76rem;
+    color: var(--muted);
+    text-align: center;
   }
 </style>

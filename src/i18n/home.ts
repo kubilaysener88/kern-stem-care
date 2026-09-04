@@ -63,7 +63,14 @@ export interface Coordinator {
   /** Override the detail page's intro paragraph + meta description alongside `pageTitle`. */
   pageLead?: string;
   /** Team/driver photos (with name + role caption) shown in their own section on this member's detail page. */
-  teamPhotos?: { src: string; name: string; role?: string }[];
+  teamPhotos?: {
+    src: string;
+    name: string;
+    role?: string;
+    /** Verified professional license, shown as a text badge (never the scanned document —
+        it would expose CURP, ID photo, signature, and medical data). */
+    license?: { type: string; number: string; category: string; validThrough: string; issuer: string };
+  }[];
   /** Vehicles (each with its own name + photos) shown in their own section on this member's detail page. */
   vehicles?: { name: string; photos: string[] }[];
 }
@@ -74,6 +81,12 @@ export interface Partner {
   slug: string;
   image?: string;
   photos?: string[];
+  /** Longer description paragraph shown on the partner's detail page. */
+  body?: string;
+  /** Named professional responsible for quality/testing sign-off, shown as a credibility badge. */
+  qualityLead?: { name: string; credential: string; role: string };
+  /** Named, licensed physicians at this partner clinic, shown as credibility badges. */
+  physicians?: { name: string; credential: string; role: string }[];
 }
 export interface Filter {
   key: string;
@@ -81,10 +94,8 @@ export interface Filter {
 }
 export interface VideoCard {
   seg: string;
-  tag: string;
   drop: string;
   name: string;
-  meta: string;
   summary: string;
 }
 export interface Faq {
@@ -412,13 +423,13 @@ const en: HomeContent = {
     h2: 'Care we help you access through our partner network',
     lead: 'These are the areas of care offered by the independent clinics and physicians we partner with in Cancún — each one built on our four core therapies: stem cells, exosomes, fibroblasts, and placental implants. Every plan begins with a medical evaluation performed by the provider, not by us. We coordinate access, logistics, and support around it.',
     cards: [
-      { image: '/assets/treatments/articular-ortopedico.jpg', alt: 'Physician examining a patient\'s knee during a consultation', title: 'Joint & Orthopedic', slug: 'stem-cells', body: 'Programs focused on joints, tendons, and musculoskeletal comfort and mobility. <span class="ph">[Edit description]</span>' },
-      { image: '/assets/treatments/lesiones-deportivas.jpg', alt: 'Tennis player holding a sore elbow on the court', title: 'Sports Injury & Recovery', slug: 'stem-cells', body: 'Recovery-focused programs for active patients and athletes. <span class="ph">[Edit description]</span>' },
-      { image: '/assets/treatments/soporte-inmune.jpg', alt: 'Woman resting her hands over her abdomen outdoors', title: 'Immune Wellness & Support', slug: 'placenta', body: 'Wellness programs supporting immune health and resilience. <span class="ph">[Edit description]</span>' },
-      { image: '/assets/treatments/antienvejecimiento.jpg', alt: 'Woman with healthy, luminous skin', title: 'Anti-Aging & Longevity', slug: 'stem-cells', body: 'Vitality and longevity-oriented wellness programs. <span class="ph">[Edit description]</span>' },
-      { image: '/assets/treatments/adulto-mayor.jpg', alt: 'Older couple hiking together at sunset', title: 'Senior Health & Wellness', slug: 'stem-cells', body: 'Wellness programs tailored to the needs of older adults. <span class="ph">[Edit description]</span>' },
-      { image: '/assets/treatments/estetica-piel.jpg', alt: 'Woman receiving a facial aesthetic treatment', title: 'Aesthetic & Skin', slug: 'fibroblasts', body: 'Skin, rejuvenation, and aesthetic wellness — a natural fit for fibroblast applications. <span class="ph">[Edit description]</span>' },
-      { image: '/assets/treatments/protocolos-personalizados.jpg', alt: 'Physician reviewing a personalized plan with an older patient', title: 'Personalized Protocols', body: 'Custom evaluations for complex or combined cases. <span class="ph">[Edit description]</span>' },
+      { image: '/assets/treatments/articular-ortopedico.jpg', alt: 'Physician examining a patient\'s knee during a consultation', title: 'Joint & Orthopedic', slug: 'stem-cells', body: 'Programs focused on joints, tendons, and musculoskeletal comfort and mobility.' },
+      { image: '/assets/treatments/lesiones-deportivas.jpg', alt: 'Tennis player holding a sore elbow on the court', title: 'Sports Injury & Recovery', slug: 'stem-cells', body: 'Recovery-focused programs for active patients and athletes.' },
+      { image: '/assets/treatments/soporte-inmune.jpg', alt: 'Woman resting her hands over her abdomen outdoors', title: 'Immune Wellness & Support', slug: 'placenta', body: 'Wellness programs supporting immune health and resilience.' },
+      { image: '/assets/treatments/antienvejecimiento.jpg', alt: 'Woman with healthy, luminous skin', title: 'Anti-Aging & Longevity', slug: 'stem-cells', body: 'Vitality and longevity-oriented wellness programs.' },
+      { image: '/assets/treatments/adulto-mayor.jpg', alt: 'Older couple hiking together at sunset', title: 'Senior Health & Wellness', slug: 'stem-cells', body: 'Wellness programs tailored to the needs of older adults.' },
+      { image: '/assets/treatments/estetica-piel.jpg', alt: 'Woman receiving a facial aesthetic treatment', title: 'Aesthetic & Skin', slug: 'fibroblasts', body: 'Skin, rejuvenation, and aesthetic wellness — a natural fit for fibroblast applications.' },
+      { image: '/assets/treatments/protocolos-personalizados.jpg', alt: 'Physician reviewing a personalized plan with an older patient', title: 'Personalized Protocols', body: 'Custom evaluations for complex or combined cases.' },
     ],
     note: '<strong>Important:</strong> Kern Stem Care is a coordination agency and does not provide medical treatment or advice. The therapies above are offered by independent licensed providers. Many regenerative and cellular therapies are not approved by the U.S. FDA or Health Canada for specific diseases and are considered investigational. Individual results vary. Neither we nor our partners guarantee outcomes or cures; the provider will discuss the current scientific evidence with you during your evaluation.',
   },
@@ -443,15 +454,37 @@ const en: HomeContent = {
         photoPh: '📷 [coordinator-2.jpg]',
         name: 'Raquel Razo',
         role: 'Logistics',
-        bio: 'Spanish, English · 12 years of experience · Driver',
+        bio: 'Spanish, English · 10 years of experience · Driver',
         slug: 'logistics-travel',
         image: '/assets/team/driver-1.jpg',
         heroImage: '/assets/team/vehicles/pasat-3.jpg',
         pageTitle: 'Logistics & Transportation',
         pageLead: "Airport pickups, ground transport, and every travel detail in Cancún — coordinated by our dedicated, bilingual logistics team.",
         teamPhotos: [
-          { src: '/assets/team/driver-1.jpg', name: 'Raquel Razo', role: 'Spanish, English · 12 years of experience · Driver' },
-          { src: '/assets/team/driver-2.jpg', name: 'Anastacio Rodriguez', role: 'Spanish, English · 12 years of experience · Driver' },
+          {
+            src: '/assets/team/driver-1.jpg',
+            name: 'Raquel Razo',
+            role: 'Spanish, English · 10 years of experience · Driver',
+            license: {
+              type: "Federal Driver's License",
+              number: 'LFD01069386',
+              category: 'Category A, F — Passenger/Tourism · Passenger, Ports & Airports',
+              validThrough: 'Valid through April 2027',
+              issuer: 'Secretaría de Comunicaciones y Transportes (SCT)',
+            },
+          },
+          {
+            src: '/assets/team/driver-2.jpg',
+            name: 'Anastacio Rodriguez',
+            role: 'Spanish, English · 12 years of experience · Driver',
+            license: {
+              type: "Federal Driver's License",
+              number: 'QRO0042573',
+              category: 'Category A, F — Passenger/Tourism · Passenger, Ports & Airports',
+              validThrough: 'Valid through April 2027',
+              issuer: 'Secretaría de Comunicaciones y Transportes (SCT)',
+            },
+          },
         ],
         vehicles: [
           {
@@ -469,7 +502,6 @@ const en: HomeContent = {
           },
         ],
       },
-      { photoPh: '📷 [coordinator-3.jpg]', name: '[Name]', role: '[Founder / Director]', bio: '[Background, why you started the agency]', slug: 'founder-director' },
     ],
     partnersTitle: 'Our Cancún Partner Network',
     partnersLead:
@@ -477,10 +509,15 @@ const en: HomeContent = {
     partners: [
       {
         icon: '🏥',
-        name: '[Partner Clinic]',
-        detail: '[Specialty · Government (COFEPRIS) license #]',
+        name: 'Timeless Beauty',
+        detail: 'Aesthetic, regenerative & longevity medicine · Playa del Carmen, Quintana Roo',
         slug: 'partner-clinic-1',
         image: '/assets/partners/luigi/luigi-1.jpg',
+        body: 'Timeless Beauty is an integrative medical center in the Riviera Maya covering four disciplines: aesthetic medicine, regenerative medicine (exosomes, PRP, and cellular therapies), longevity medicine, and human performance. Led by Dr. Luigi Palermo, an Allergan Aesthetics Faculty Expert, alongside board-certified plastic surgeon Dr. Fernando José Núñez Prouxl.',
+        physicians: [
+          { name: 'Dr. Luigi Palermo', credential: 'Cédula Profesional 7606055', role: 'Medical Director · Aesthetic & Regenerative Medicine' },
+          { name: 'Dr. Fernando José Núñez Prouxl', credential: 'Cédula Profesional 10566813', role: 'Plastic, Aesthetic & Reconstructive Surgery' },
+        ],
         photos: [
           '/assets/partners/luigi/luigi-1.jpg',
           '/assets/partners/luigi/luigi-2.jpg',
@@ -491,10 +528,12 @@ const en: HomeContent = {
       { icon: '🏥', name: '[Partner Clinic]', detail: '[Specialty · Government (COFEPRIS) license #]', slug: 'partner-clinic-2', image: '/assets/partners/clinic-2/clinic-2-1.jpg', photos: ['/assets/partners/clinic-2/clinic-2-1.jpg', '/assets/partners/clinic-2/clinic-2-2.jpg'] },
       {
         icon: '🔬',
-        name: '[Partner Laboratory]',
-        detail: '[Cellular therapy lab · accreditation]',
+        name: 'NAO Biotechnology',
+        detail: 'Cellular therapy laboratory · Licencia Sanitaria No. 2414150080080416',
         slug: 'partner-lab-1',
         image: '/assets/partners/nao-laboratorio.jpg',
+        body: 'NAO Biotechnology processes and tests every cell batch before it ships: microbiological screening (bacteria, mycoplasma, fungi/yeast), a full infectious-disease serology panel (Hepatitis B/C, HIV I/II, SARS-CoV-2, Chlamydia, VDRL), flow cytometry for cell viability and identity markers, karyotype analysis for genetic stability, and oncogene-expression screening. Each batch ships with its own signed Certificate of Quality.',
+        qualityLead: { name: 'Iraís Álvarez', credential: 'Cédula Profesional 10506533', role: 'Biologist' },
         photos: [
           '/assets/partners/nao/nao-1.jpg',
           '/assets/partners/nao/nao-2.jpg',
@@ -524,12 +563,9 @@ const en: HomeContent = {
       { key: 'wellness', label: 'Wellness & Anti-Aging' },
     ],
     cards: [
-      { seg: 'usa ortho', tag: '🇺🇸 U.S. · Orthopedic', drop: '[embed: video-1.mp4 / YouTube ID]', name: '[Patient first name, State]', meta: '[Condition / program]', summary: '[One-line summary of their story]' },
-      { seg: 'usa neuro', tag: '🇺🇸 U.S. · Neurological', drop: '[embed: video-2.mp4 / YouTube ID]', name: '[Patient first name, State]', meta: '[Condition / program]', summary: '[One-line summary of their story]' },
-      { seg: 'canada ortho', tag: '🇨🇦 Canada · Orthopedic', drop: '[embed: video-3.mp4 / YouTube ID]', name: '[Patient first name, Province]', meta: '[Condition / program]', summary: '[One-line summary of their story]' },
-      { seg: 'canada auto', tag: '🇨🇦 Canada · Autoimmune', drop: '[embed: video-4.mp4 / YouTube ID]', name: '[Patient first name, Province]', meta: '[Condition / program]', summary: '[One-line summary of their story]' },
-      { seg: 'usa wellness', tag: '🇺🇸 U.S. · Wellness', drop: '[embed: video-5.mp4 / YouTube ID]', name: '[Patient first name, State]', meta: '[Condition / program]', summary: '[One-line summary of their story]' },
-      { seg: 'canada neuro', tag: '🇨🇦 Canada · Neurological', drop: '[embed: video-6.mp4 / YouTube ID]', name: '[Patient first name, Province]', meta: '[Condition / program]', summary: '[One-line summary of their story]' },
+      { seg: 'usa ortho', drop: '[embed: video-1.mp4 / YouTube ID]', name: '[Patient first name, State]', summary: '[One-line summary of their story]' },
+      { seg: 'canada neuro', drop: '[embed: video-2.mp4 / YouTube ID]', name: '[Patient first name, Province]', summary: '[One-line summary of their story]' },
+      { seg: 'usa wellness', drop: '[embed: video-3.mp4 / YouTube ID]', name: '[Patient first name, State]', summary: '[One-line summary of their story]' },
     ],
     note: '<strong>Testimonial disclaimer:</strong> Testimonials reflect individual experiences and are not a promise of results. Patients shown gave written consent to share their stories. Results are not typical and will vary from person to person.',
   },
@@ -796,13 +832,13 @@ const es: HomeContent = {
     h2: 'Atención a la que te ayudamos a acceder a través de nuestra red de aliados',
     lead: 'Estas son las áreas de atención que ofrecen las clínicas y médicos independientes con los que trabajamos en Cancún — cada una basada en nuestras cuatro terapias centrales: células madre, exosomas, fibroblastos e implantes de placenta. Cada plan inicia con una evaluación médica realizada por el proveedor, no por nosotros. Coordinamos el acceso, la logística y el acompañamiento.',
     cards: [
-      { image: '/assets/treatments/articular-ortopedico.jpg', alt: 'Médico examinando la rodilla de un paciente durante una consulta', title: 'Articular y Ortopédico', slug: 'stem-cells', body: 'Programas enfocados en articulaciones, tendones y movilidad musculoesquelética. <span class="ph">[Editar descripción]</span>' },
-      { image: '/assets/treatments/lesiones-deportivas.jpg', alt: 'Tenista sujetándose el codo adolorido en la cancha', title: 'Lesiones Deportivas y Recuperación', slug: 'stem-cells', body: 'Programas de recuperación para pacientes activos y atletas. <span class="ph">[Editar descripción]</span>' },
-      { image: '/assets/treatments/soporte-inmune.jpg', alt: 'Mujer con las manos sobre el abdomen al aire libre', title: 'Bienestar y Soporte Inmune', slug: 'placenta', body: 'Programas de bienestar que apoyan la salud y resiliencia inmune. <span class="ph">[Editar descripción]</span>' },
-      { image: '/assets/treatments/antienvejecimiento.jpg', alt: 'Mujer con piel saludable y luminosa', title: 'Antienvejecimiento y Longevidad', slug: 'stem-cells', body: 'Programas de bienestar orientados a la vitalidad y la longevidad. <span class="ph">[Editar descripción]</span>' },
-      { image: '/assets/treatments/adulto-mayor.jpg', alt: 'Pareja de adultos mayores caminando juntos al atardecer', title: 'Salud y Bienestar del Adulto Mayor', slug: 'stem-cells', body: 'Programas de bienestar adaptados a las necesidades de los adultos mayores. <span class="ph">[Editar descripción]</span>' },
-      { image: '/assets/treatments/estetica-piel.jpg', alt: 'Mujer recibiendo un tratamiento estético facial', title: 'Estética y Piel', slug: 'fibroblasts', body: 'Piel, rejuvenecimiento y bienestar estético — encaja de forma natural con las aplicaciones de fibroblastos. <span class="ph">[Editar descripción]</span>' },
-      { image: '/assets/treatments/protocolos-personalizados.jpg', alt: 'Médica revisando un plan personalizado con un paciente mayor', title: 'Protocolos Personalizados', body: 'Evaluaciones a medida para casos complejos o combinados. <span class="ph">[Editar descripción]</span>' },
+      { image: '/assets/treatments/articular-ortopedico.jpg', alt: 'Médico examinando la rodilla de un paciente durante una consulta', title: 'Articular y Ortopédico', slug: 'stem-cells', body: 'Programas enfocados en articulaciones, tendones y movilidad musculoesquelética.' },
+      { image: '/assets/treatments/lesiones-deportivas.jpg', alt: 'Tenista sujetándose el codo adolorido en la cancha', title: 'Lesiones Deportivas y Recuperación', slug: 'stem-cells', body: 'Programas de recuperación para pacientes activos y atletas.' },
+      { image: '/assets/treatments/soporte-inmune.jpg', alt: 'Mujer con las manos sobre el abdomen al aire libre', title: 'Bienestar y Soporte Inmune', slug: 'placenta', body: 'Programas de bienestar que apoyan la salud y resiliencia inmune.' },
+      { image: '/assets/treatments/antienvejecimiento.jpg', alt: 'Mujer con piel saludable y luminosa', title: 'Antienvejecimiento y Longevidad', slug: 'stem-cells', body: 'Programas de bienestar orientados a la vitalidad y la longevidad.' },
+      { image: '/assets/treatments/adulto-mayor.jpg', alt: 'Pareja de adultos mayores caminando juntos al atardecer', title: 'Salud y Bienestar del Adulto Mayor', slug: 'stem-cells', body: 'Programas de bienestar adaptados a las necesidades de los adultos mayores.' },
+      { image: '/assets/treatments/estetica-piel.jpg', alt: 'Mujer recibiendo un tratamiento estético facial', title: 'Estética y Piel', slug: 'fibroblasts', body: 'Piel, rejuvenecimiento y bienestar estético — encaja de forma natural con las aplicaciones de fibroblastos.' },
+      { image: '/assets/treatments/protocolos-personalizados.jpg', alt: 'Médica revisando un plan personalizado con un paciente mayor', title: 'Protocolos Personalizados', body: 'Evaluaciones a medida para casos complejos o combinados.' },
     ],
     note: '<strong>Importante:</strong> Kern Stem Care es una agencia de coordinación y no brinda tratamiento ni consejo médico. Las terapias anteriores las ofrecen proveedores independientes y certificados. Muchas terapias regenerativas y celulares no están aprobadas por la FDA de EE.UU. ni Health Canada para enfermedades específicas y se consideran de investigación. Los resultados individuales varían. Ni nosotros ni nuestros aliados garantizamos resultados ni curas; el proveedor discutirá contigo la evidencia científica actual durante tu evaluación.',
   },
@@ -827,15 +863,37 @@ const es: HomeContent = {
         photoPh: '📷 [coordinator-2.jpg]',
         name: 'Raquel Razo',
         role: 'Logística',
-        bio: 'Español, inglés · 12 años de experiencia · Chofer',
+        bio: 'Español, inglés · 10 años de experiencia · Chofer',
         slug: 'logistics-travel',
         image: '/assets/team/driver-1.jpg',
         heroImage: '/assets/team/vehicles/pasat-3.jpg',
         pageTitle: 'Logística y Transporte',
         pageLead: 'Traslados al aeropuerto, transporte terrestre y cada detalle de viaje en Cancún — coordinados por nuestro equipo bilingüe de logística.',
         teamPhotos: [
-          { src: '/assets/team/driver-1.jpg', name: 'Raquel Razo', role: 'Español, inglés · 12 años de experiencia · Chofer' },
-          { src: '/assets/team/driver-2.jpg', name: 'Anastacio Rodriguez', role: 'Español, inglés · 12 años de experiencia · Chofer' },
+          {
+            src: '/assets/team/driver-1.jpg',
+            name: 'Raquel Razo',
+            role: 'Español, inglés · 10 años de experiencia · Chofer',
+            license: {
+              type: 'Licencia Federal de Conductor',
+              number: 'LFD01069386',
+              category: 'Categoría A, F — Pasaje y Turismo · Pasaje, Puertos y Aeropuertos',
+              validThrough: 'Vigente hasta abril de 2027',
+              issuer: 'Secretaría de Comunicaciones y Transportes (SCT)',
+            },
+          },
+          {
+            src: '/assets/team/driver-2.jpg',
+            name: 'Anastacio Rodriguez',
+            role: 'Español, inglés · 12 años de experiencia · Chofer',
+            license: {
+              type: 'Licencia Federal de Conductor',
+              number: 'QRO0042573',
+              category: 'Categoría A, F — Pasaje y Turismo · Pasaje, Puertos y Aeropuertos',
+              validThrough: 'Vigente hasta abril de 2027',
+              issuer: 'Secretaría de Comunicaciones y Transportes (SCT)',
+            },
+          },
         ],
         vehicles: [
           {
@@ -853,7 +911,6 @@ const es: HomeContent = {
           },
         ],
       },
-      { photoPh: '📷 [coordinator-3.jpg]', name: '[Name]', role: '[Fundador / Director]', bio: '[Trayectoria, por qué fundaste la agencia]', slug: 'founder-director' },
     ],
     partnersTitle: 'Nuestra Red de Aliados en Cancún',
     partnersLead:
@@ -861,10 +918,15 @@ const es: HomeContent = {
     partners: [
       {
         icon: '🏥',
-        name: '[Partner Clinic]',
-        detail: '[Especialidad · Cédula gubernamental (COFEPRIS) #]',
+        name: 'Timeless Beauty',
+        detail: 'Medicina estética, regenerativa y de longevidad · Playa del Carmen, Quintana Roo',
         slug: 'partner-clinic-1',
         image: '/assets/partners/luigi/luigi-1.jpg',
+        body: 'Timeless Beauty es un centro médico integral en la Riviera Maya con cuatro disciplinas: medicina estética, medicina regenerativa (exosomas, PRP y terapias celulares), medicina de longevidad, y rendimiento humano. Liderado por el Dr. Luigi Palermo, Educador recomendado por Allergan Aesthetics, junto con el cirujano plástico certificado Dr. Fernando José Núñez Prouxl.',
+        physicians: [
+          { name: 'Dr. Luigi Palermo', credential: 'Cédula Profesional 7606055', role: 'Director Médico · Medicina Estética y Regenerativa' },
+          { name: 'Dr. Fernando José Núñez Prouxl', credential: 'Cédula Profesional 10566813', role: 'Cirugía Plástica, Estética y Reconstructiva' },
+        ],
         photos: [
           '/assets/partners/luigi/luigi-1.jpg',
           '/assets/partners/luigi/luigi-2.jpg',
@@ -875,10 +937,12 @@ const es: HomeContent = {
       { icon: '🏥', name: '[Partner Clinic]', detail: '[Especialidad · Cédula gubernamental (COFEPRIS) #]', slug: 'partner-clinic-2', image: '/assets/partners/clinic-2/clinic-2-1.jpg', photos: ['/assets/partners/clinic-2/clinic-2-1.jpg', '/assets/partners/clinic-2/clinic-2-2.jpg'] },
       {
         icon: '🔬',
-        name: '[Partner Laboratory]',
-        detail: '[Laboratorio de terapia celular · acreditación]',
+        name: 'NAO Biotechnology',
+        detail: 'Laboratorio de terapia celular · Licencia Sanitaria No. 2414150080080416',
         slug: 'partner-lab-1',
         image: '/assets/partners/nao-laboratorio.jpg',
+        body: 'NAO Biotechnology procesa y analiza cada lote de células antes de enviarlo: tamizaje microbiológico (bacterias, micoplasma, hongos y levaduras), panel completo de serología para enfermedades infecciosas (Hepatitis B/C, VIH I/II, SARS-CoV-2, Chlamydia, VDRL), citometría de flujo para viabilidad e identidad celular, análisis de cariotipo para estabilidad genética, y tamizaje de expresión de oncogenes. Cada lote se entrega con su propio Certificado de Calidad firmado.',
+        qualityLead: { name: 'Iraís Álvarez', credential: 'Cédula Profesional 10506533', role: 'Bióloga' },
         photos: [
           '/assets/partners/nao/nao-1.jpg',
           '/assets/partners/nao/nao-2.jpg',
@@ -908,12 +972,9 @@ const es: HomeContent = {
       { key: 'wellness', label: 'Bienestar y Antiedad' },
     ],
     cards: [
-      { seg: 'usa ortho', tag: '🇺🇸 EE.UU. · Ortopédico', drop: '[embed: video-1.mp4 / YouTube ID]', name: '[Patient first name, State]', meta: '[Condición / programa]', summary: '[Resumen de una línea de su historia]' },
-      { seg: 'usa neuro', tag: '🇺🇸 EE.UU. · Neurológico', drop: '[embed: video-2.mp4 / YouTube ID]', name: '[Patient first name, State]', meta: '[Condición / programa]', summary: '[Resumen de una línea de su historia]' },
-      { seg: 'canada ortho', tag: '🇨🇦 Canadá · Ortopédico', drop: '[embed: video-3.mp4 / YouTube ID]', name: '[Patient first name, Province]', meta: '[Condición / programa]', summary: '[Resumen de una línea de su historia]' },
-      { seg: 'canada auto', tag: '🇨🇦 Canadá · Autoinmune', drop: '[embed: video-4.mp4 / YouTube ID]', name: '[Patient first name, Province]', meta: '[Condición / programa]', summary: '[Resumen de una línea de su historia]' },
-      { seg: 'usa wellness', tag: '🇺🇸 EE.UU. · Bienestar', drop: '[embed: video-5.mp4 / YouTube ID]', name: '[Patient first name, State]', meta: '[Condición / programa]', summary: '[Resumen de una línea de su historia]' },
-      { seg: 'canada neuro', tag: '🇨🇦 Canadá · Neurológico', drop: '[embed: video-6.mp4 / YouTube ID]', name: '[Patient first name, Province]', meta: '[Condición / programa]', summary: '[Resumen de una línea de su historia]' },
+      { seg: 'usa ortho', drop: '[embed: video-1.mp4 / YouTube ID]', name: '[Patient first name, State]', summary: '[Resumen de una línea de su historia]' },
+      { seg: 'canada neuro', drop: '[embed: video-2.mp4 / YouTube ID]', name: '[Patient first name, Province]', summary: '[Resumen de una línea de su historia]' },
+      { seg: 'usa wellness', drop: '[embed: video-3.mp4 / YouTube ID]', name: '[Patient first name, State]', summary: '[Resumen de una línea de su historia]' },
     ],
     note: '<strong>Aviso sobre testimonios:</strong> Los testimonios reflejan experiencias individuales y no son una promesa de resultados. Los pacientes mostrados dieron consentimiento por escrito para compartir su historia. Los resultados no son típicos y varían de persona a persona.',
   },

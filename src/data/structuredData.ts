@@ -90,10 +90,10 @@ export function organizationNode(site: string, lang: Lang) {
       streetAddress: 'Retorno Viento, SM 4, Núm. 10',
       addressLocality: 'Cancún',
       addressRegion: 'Quintana Roo',
-      postalCode: '[ZIP]',
+      postalCode: '77500',
       addressCountry: 'MX',
     },
-    geo: { '@type': 'GeoCoordinates', latitude: '[00.000000]', longitude: '[-00.000000]' },
+    geo: { '@type': 'GeoCoordinates', latitude: '21.152350', longitude: '-86.823734' },
     areaServed: [
       { '@type': 'Country', name: 'United States' },
       { '@type': 'Country', name: 'Canada' },
@@ -111,7 +111,8 @@ export function organizationNode(site: string, lang: Lang) {
     sameAs: [
       '[https://www.facebook.com/yourpage]',
       '[https://www.instagram.com/yourpage]',
-      '[https://www.youtube.com/yourchannel]',
+      'https://www.youtube.com/@KernStemCare',
+      'https://www.tiktok.com/@kernstemcare',
     ],
   };
 }

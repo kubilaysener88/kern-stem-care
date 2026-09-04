@@ -128,8 +128,8 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
           rel="noopener noreferrer"
           aria-label={lang === 'es' ? 'Ver testimonios en YouTube (se abre en una pestaña nueva)' : 'Watch testimonials on YouTube (opens in a new tab)'}
         >
-          <div class="vthumb"><div class="tag">{card.tag}</div><div class="play">▶</div><div class="drop">{card.drop}</div></div>
-          <div class="vbody"><h3 class="ph">{card.name}</h3><div class="meta ph">{card.meta}</div><p class="ph">{card.summary}</p></div>
+          <div class="vthumb"><div class="play">▶</div><div class="drop">{card.drop}</div></div>
+          <div class="vbody"><h3 class="ph">{card.name}</h3><p class="ph">{card.summary}</p></div>
         </a>
       ))}
     </div>
@@ -251,7 +251,7 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
     </div>
 
     <h3 style="text-align:center;margin:36px 0 18px;color:var(--teal-text)">{c.team.coordinatorsTitle}</h3>
-    <div class="grid g3">
+    <div class:list={['grid', c.team.coordinators.length >= 3 ? 'g3' : 'g2']}>
       {c.team.coordinators.map((p) => (
         <a class="doc doc-link" href={`/${lang}/team/${p.slug}`}>
           <div class="photo">
