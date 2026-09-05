@@ -27,12 +27,14 @@ at your medical evaluation — not before it, and not by us.
 - The medical evaluation and physician consultation
 - The cellular product and its laboratory preparation
 - The treatment session(s) at a **[government-licensed (COFEPRIS)](/en/about/#our-network)** clinic
-- Kern Stem Care's coordination: provider matching, appointment booking, airport pickup,
-  help arranging lodging, and a bilingual coordinator with you through the stay
+- Kern Stem Care's coordination: provider matching, appointment booking, and a bilingual
+  coordinator with you through the stay
 
 ## What's usually *not* included
 
-- Flights and most meals
+- Flights and most meals. We help you pick timings and routes, and you book and pay for them
+- Your hotel. We can find you an economical option close to the clinic, and you pay it directly
+- Airport transfers to and from your hotel, available as an add-on service at its own cost
 - Any follow-up care once you return home
 - Any additional applications your physician may recommend later, which are quoted separately
 
@@ -75,10 +77,12 @@ Yes — your written, itemized quote comes after your free evaluation and before
 to travel, so you know the cost before making any travel plans.
 
 ### Does the quote include my flights and hotel?
-Flights are booked by you — we advise on timing and routes so they fit around your treatment
-day. Lodging and ground transport in Cancún are arranged by us and itemised separately from
-the medical cost, so you can always see which part of the number is treatment and which part
-is travel.
+Your quote covers the medical side and our coordination. Flights are yours to book — we advise
+on timings and routes so they fit around your treatment day. The hotel sits outside the quote
+too, though we can find you an economical option close to the clinic. Airport transfers to and
+from your hotel are available as an add-on, priced separately. Anything you ask us to arrange
+appears as its own line, so you can always see which part of the number is treatment and which
+part is travel.
 
 ## How Kern Stem Care helps
 

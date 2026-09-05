@@ -27,13 +27,14 @@ médica — no antes, y no lo decidimos nosotros.
 - La evaluación médica y la consulta con el médico
 - El producto celular y su preparación en laboratorio
 - La(s) sesión(es) de tratamiento en una **[clínica con licencia gubernamental (COFEPRIS)](/es/about/#nuestra-red)**
-- La coordinación de Kern Stem Care: selección del proveedor, agenda de citas, traslado del
-  aeropuerto, apoyo para conseguir hospedaje y un coordinador bilingüe contigo durante toda
-  la estancia
+- La coordinación de Kern Stem Care: selección del proveedor, agenda de citas y un coordinador
+  bilingüe contigo durante toda la estancia
 
 ## Qué *no* suele estar incluido
 
-- Vuelos y la mayoría de las comidas
+- Los vuelos y la mayoría de las comidas. Te ayudamos a elegir horarios y rutas, y tú los reservas y los pagas
+- El hotel. Podemos conseguirte una opción económica cerca de la clínica, y lo pagas directamente
+- El traslado del aeropuerto al hotel y de regreso, disponible como servicio adicional con su costo aparte
 - Cualquier seguimiento una vez que regresas a casa
 - Las aplicaciones adicionales que tu médico llegue a recomendar después, que se cotizan aparte
 
@@ -77,10 +78,12 @@ Sí — tu cotización por escrito y detallada llega después de tu evaluación 
 de que te comprometas a viajar, así conoces el costo antes de hacer planes de viaje.
 
 ### ¿La cotización incluye vuelos y hotel?
-Los vuelos los reservas tú — nosotros te asesoramos con horarios y rutas para que encajen
-alrededor de tu día de tratamiento. El hospedaje y el transporte en Cancún los gestionamos
-nosotros y se detallan aparte del costo médico, para que siempre veas qué parte del número
-es tratamiento y qué parte es viaje.
+Tu cotización cubre la parte médica y nuestra coordinación. Los vuelos los reservas tú —
+nosotros te asesoramos con horarios y rutas para que encajen alrededor de tu día de tratamiento.
+El hotel también va por tu cuenta, aunque podemos conseguirte una opción económica cerca de la
+clínica. Y el traslado del aeropuerto al hotel y de regreso está disponible como servicio
+adicional, con su costo por separado. Todo lo que nos pidas gestionar aparece como su propia
+línea, para que siempre veas qué parte del número es tratamiento y qué parte es viaje.
 
 ## Cómo ayuda Kern Stem Care
 
