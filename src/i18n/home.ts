@@ -844,7 +844,7 @@ const es: HomeContent = {
   },
   journey: {
     eyebrow: 'Cómo Funciona',
-    h2: 'Su proceso como paciente, paso a paso',
+    h2: 'Tu proceso como paciente, paso a paso',
     steps: [
       { title: 'Consulta Gratis', body: 'Comparte tu historial con nosotros. Lo canalizamos al proveedor aliado adecuado, que lo revisa y te explica opciones realistas.', image: '/assets/journey/pre-consulta.jpg' },
       { title: 'Plan, Cotización e Itinerario', body: 'El proveedor envía un plan médico; nosotros armamos tu cotización transparente y tu itinerario de viaje.', image: '/assets/journey/consulta.jpg' },
@@ -1037,7 +1037,7 @@ const es: HomeContent = {
   },
   contact: {
     eyebrow: 'Comenzar',
-    h2: 'Solicite su evaluación gratuita, sin compromiso',
+    h2: 'Solicita tu evaluación gratuita, sin compromiso',
     info: [
       { icon: '📞', title: 'Llamada / WhatsApp', value: '+52 998 767 8979' },
       { icon: '✉️', title: 'Correo', value: 'kernstemcare@gmail.com' },

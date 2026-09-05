@@ -89,7 +89,10 @@ npm run test:a11y # axe-core WCAG 2.1 AA scan of every route, desktop + mobile (
 - `src/pages/robots.txt.ts` — dynamically generated `/robots.txt` (Sitemap from `site`).
 - `public/favicon.svg` — Genesis mark.
 - `public/assets/logo/` — brand logos (Genesis primary, Union secondary).
-- `docs/` — non-site reference material (advertising guide, testimonial script).
+- `docs/` — non-site reference material. `voz-de-marca.md` is the **brand voice file**:
+  read it before writing any patient-facing copy, blog post, or social/Google Business
+  post. Also: advertising guide (`guia-publicidad-eeuu-canada.md`) and testimonial
+  script (`guion-testimoniales.md`).
 
 ## Brand
 

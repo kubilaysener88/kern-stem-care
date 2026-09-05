@@ -327,7 +327,7 @@ const en: PagesSet = {
     metaDescription: 'Request a free, no-obligation evaluation. A bilingual Kern Stem Care coordinator replies within 24 hours to guide your regenerative-care options in Cancún.',
     eyebrow: 'Get Started',
     title: 'Request your free, no-obligation evaluation',
-    lead: 'A patient coordinator will reach out within 24 hours. <span class="ph">[Edit.]</span>',
+    lead: 'A bilingual patient coordinator replies within 24 hours, Monday through Saturday. Tell us what you are dealing with and what you would like to know — the first conversation is free and carries no obligation.',
   },
   estimate: {
     metaTitle: 'Get Your Personalized Price Estimate | Kern Stem Care',
@@ -498,8 +498,8 @@ const es: PagesSet = {
     metaTitle: 'Contacto | Kern Stem Care',
     metaDescription: 'Solicita tu evaluación gratuita y sin compromiso. Un coordinador bilingüe de Kern Stem Care te responde en menos de 24 horas para guiar tus opciones de atención en Cancún.',
     eyebrow: 'Comenzar',
-    title: 'Solicite su evaluación gratuita, sin compromiso',
-    lead: 'Un coordinador le contactará en menos de 24 horas. <span class="ph">[Editar.]</span>',
+    title: 'Solicita tu evaluación gratuita, sin compromiso',
+    lead: 'Un coordinador bilingüe te responde en menos de 24 horas, de lunes a sábado. Cuéntanos qué estás viviendo y qué te gustaría saber — la primera conversación es gratuita y sin compromiso.',
   },
   estimate: {
     metaTitle: 'Obtén tu Cotización Personalizada | Kern Stem Care',
