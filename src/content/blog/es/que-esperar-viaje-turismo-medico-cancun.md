@@ -4,6 +4,7 @@ description: 'Un recorrido paso a paso por un viaje de medicina regenerativa a C
 lang: 'es'
 translationKey: 'medical-travel-cancun'
 pubDate: 2026-06-24
+updatedDate: 2026-09-05
 author: 'Kern Stem Care'
 reviewedBy: '[Nombre del revisor médico, credenciales]'
 tags: ['turismo médico', 'cancún', 'proceso', 'planificación']
@@ -13,8 +14,10 @@ draft: false
 
 ## Antes de viajar
 
-1. **Evaluación gratuita.** Compartes tu historial y objetivos; los revisamos con médicos
-   certificados. <span class="ph">[Describe tu proceso de admisión.]</span>
+1. **Evaluación gratuita.** Compartes tu historial y objetivos — por el formulario, por
+   WhatsApp o en una llamada — y un coordinador bilingüe te responde en menos de 24 horas, de
+   lunes a sábado. Canalizamos tu caso al médico aliado más adecuado, que lo revisa y te
+   explica qué es realista para tu situación.
 2. **Cotización detallada por escrito.** Ves exactamente qué incluye y a quién le pagas.
 3. **Planear el viaje.** Coordinamos orientación de vuelos, hospedaje y fechas de citas.
 
@@ -23,7 +26,11 @@ Para el recorrido completo paso a paso, visita nuestra página de
 
 ## En Cancún
 
-- **Llegada y traslado.** <span class="ph">[Detalles de recogida en el aeropuerto / traslado.]</span>
+- **Llegada y traslado.** El traslado entre el aeropuerto y tu hotel está disponible como
+  servicio adicional con su propio costo, con nuestros choferes — ambos tienen licencia federal
+  de transporte de pasajeros, y puedes verlos por nombre en nuestra página de equipo.
+  Contratado con anticipación, significa que alguien te está esperando en vez de que tengas que
+  resolver el transporte después de un vuelo largo.
 - **Consulta presencial** en una **[clínica con licencia gubernamental (COFEPRIS)](/es/about/#nuestra-red)**
   antes de cualquier tratamiento.
 - **Día(s) de tratamiento.** <span class="ph">[Horario típico, duración, qué llevar.]</span>
@@ -45,7 +52,9 @@ Recuerda que los resultados varían de persona a persona y no se garantiza ning�
 ## Preguntas frecuentes
 
 ### ¿Cuánto dura un viaje típico?
-La duración depende de tu protocolo y proveedor específicos. <span class="ph">[Agrega la duración típica que coordinas, p. ej. "La mayoría de los pacientes planea de 3 a 5 días."]</span>
+La mayoría de los pacientes planea tres días: llegas y te instalas el día uno, el tratamiento
+es el día dos, y vuelas de regreso el día tres. Si tu plan médico requiere algo distinto, lo
+sabrás antes de reservar tus vuelos.
 
 ### ¿Necesito hablar español?
 No — un coordinador bilingüe te acompaña desde tu primera llamada hasta el seguimiento,
@@ -55,7 +64,11 @@ incluyendo en tus citas.
 <span class="ph">[Confirma tu política sobre acompañantes durante el tratamiento y la recuperación.]</span>
 
 ### ¿Es seguro Cancún para el turismo médico?
-<span class="ph">[Agrega tu guía de seguridad/logística — zonas de hotel, transporte, etc.]</span>
+Cancún es el principal destino turístico internacional de México, con vuelos directos de dos a
+cuatro horas desde la mayoría de las ciudades grandes de EE.UU. y Canadá — una ciudad construida
+alrededor del visitante internacional, con la infraestructura que eso implica. Tu coordinador
+gestiona el hospedaje cerca de la clínica y permanece disponible durante toda tu estancia, así
+que no andas resolviendo una ciudad desconocida por tu cuenta.
 
 ## Para saber más
 

@@ -4,6 +4,7 @@ description: 'A step-by-step look at a regenerative-medicine trip to Cancún for
 lang: 'en'
 translationKey: 'medical-travel-cancun'
 pubDate: 2026-06-24
+updatedDate: 2026-09-05
 author: 'Kern Stem Care'
 reviewedBy: '[Medical reviewer name, credentials]'
 tags: ['medical travel', 'cancun', 'process', 'planning']
@@ -13,8 +14,10 @@ draft: false
 
 ## Before you travel
 
-1. **Free evaluation.** You share your history and goals; we review them with licensed
-   physicians. <span class="ph">[Describe your intake.]</span>
+1. **Free evaluation.** You share your history and goals — through the form, by WhatsApp, or
+   on a call — and a bilingual coordinator replies within 24 hours, Monday to Saturday. We
+   route your case to the partner physician best suited to it, who reviews it and explains
+   what is realistic for your situation.
 2. **Written, itemized quote.** You see exactly what's included and who you pay.
 3. **Plan the trip.** We coordinate flights guidance, lodging and appointment dates.
 
@@ -22,7 +25,10 @@ For the full step-by-step breakdown, see our **[International Patients](/en/proc
 
 ## In Cancún
 
-- **Arrival & pickup.** <span class="ph">[Airport pickup / transfer details.]</span>
+- **Arrival & pickup.** Transfers between the airport and your hotel are available as an
+  add-on at their own cost, with our own drivers — both hold federal passenger-transport
+  licences, and you can see them by name on our team page. Arranged in advance, it means
+  someone is waiting for you rather than you sorting out transport after a long flight.
 - **In-person consultation** at a **[government-licensed (COFEPRIS)](/en/about/#our-network)** clinic
   before any treatment.
 - **Treatment day(s).** <span class="ph">[Typical schedule, duration, what to bring.]</span>
@@ -44,7 +50,9 @@ results vary from person to person and no outcome is guaranteed.
 ## Common questions
 
 ### How long is a typical trip?
-Trip length depends on your specific protocol and provider. <span class="ph">[Add the typical stay length you coordinate, e.g. "Most patients plan for 3–5 days."]</span>
+Most patients plan for three days: you arrive and settle in on day one, treatment is day two,
+and you fly home on day three. If your medical plan calls for something different, you will
+know before you book your flights.
 
 ### Do I need to speak Spanish?
 No — a bilingual coordinator is with you from your first call through follow-up, including
@@ -54,7 +62,11 @@ at appointments.
 <span class="ph">[Confirm your policy on companions/guests during treatment and recovery.]</span>
 
 ### Is Cancún safe for medical travel?
-<span class="ph">[Add your safety/logistics guidance — hotel areas, transport, etc.]</span>
+Cancún is Mexico's leading international tourist destination, with direct flights of two to
+four hours from most major U.S. and Canadian cities — a city built around international
+visitors, with the infrastructure that comes with that. Your coordinator arranges lodging near
+the clinic and stays reachable throughout your stay, so you are not navigating an unfamiliar
+city on your own.
 
 ## Further reading
 
