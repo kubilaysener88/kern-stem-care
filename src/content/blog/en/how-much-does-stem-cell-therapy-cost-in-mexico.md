@@ -13,7 +13,7 @@ draft: false
 
 ## Short answer
 
-There is no single price — the cost of **[stem cell therapy](/en/services/stem-cells)** in
+There is no single price — the cost of **[stem cell therapy](/en/services/stem-cells/)** in
 Mexico depends on the cell type and dose, the number of sessions, the condition being
 addressed, and the clinic and laboratory involved. <span class="ph">[Add the price range you actually quote, e.g. "Most protocols we coordinate fall between $X and $Y USD."]</span>
 
@@ -21,7 +21,7 @@ addressed, and the clinic and laboratory involved. <span class="ph">[Add the pri
 
 - The medical evaluation and physician consultation
 - The cellular product and its laboratory preparation
-- The treatment session(s) at a **[government-licensed (COFEPRIS)](/en/about#our-network)** clinic
+- The treatment session(s) at a **[government-licensed (COFEPRIS)](/en/about/#our-network)** clinic
 - <span class="ph">[List anything Kern Stem Care bundles — coordination, airport pickup, lodging help.]</span>
 
 ## What's usually *not* included
@@ -30,7 +30,7 @@ addressed, and the clinic and laboratory involved. <span class="ph">[Add the pri
 - Any follow-up care once you return home
 - <span class="ph">[Clarify your own inclusions/exclusions so there are no surprises.]</span>
 
-Want a number specific to your case? [Request a free evaluation →](/en/estimate)
+Want a number specific to your case? [Request a free evaluation →](/en/estimate/)
 
 ## What drives the price up or down
 
@@ -70,4 +70,4 @@ to travel, so you know the cost before making any travel plans.
 
 We request transparent, itemized quotes from licensed partner clinics, explain each line in
 plain English, and coordinate travel and appointments — at no markup surprises. [Get your free,
-personalized price estimate](/en/estimate) for your situation.
+personalized price estimate](/en/estimate/) for your situation.

@@ -18,17 +18,17 @@ draft: false
 2. **Written, itemized quote.** You see exactly what's included and who you pay.
 3. **Plan the trip.** We coordinate flights guidance, lodging and appointment dates.
 
-For the full step-by-step breakdown, see our **[International Patients](/en/process)** page.
+For the full step-by-step breakdown, see our **[International Patients](/en/process/)** page.
 
 ## In Cancún
 
 - **Arrival & pickup.** <span class="ph">[Airport pickup / transfer details.]</span>
-- **In-person consultation** at a **[government-licensed (COFEPRIS)](/en/about#our-network)** clinic
+- **In-person consultation** at a **[government-licensed (COFEPRIS)](/en/about/#our-network)** clinic
   before any treatment.
 - **Treatment day(s).** <span class="ph">[Typical schedule, duration, what to bring.]</span>
 - A bilingual coordinator stays reachable throughout your stay.
 
-Ready to plan your trip? [Request a free evaluation →](/en/estimate)
+Ready to plan your trip? [Request a free evaluation →](/en/estimate/)
 
 ## After you return home
 

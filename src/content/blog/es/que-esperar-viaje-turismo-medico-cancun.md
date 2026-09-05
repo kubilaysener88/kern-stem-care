@@ -19,17 +19,17 @@ draft: false
 3. **Planear el viaje.** Coordinamos orientación de vuelos, hospedaje y fechas de citas.
 
 Para el recorrido completo paso a paso, visita nuestra página de
-**[Pacientes Internacionales](/es/process)**.
+**[Pacientes Internacionales](/es/process/)**.
 
 ## En Cancún
 
 - **Llegada y traslado.** <span class="ph">[Detalles de recogida en el aeropuerto / traslado.]</span>
-- **Consulta presencial** en una **[clínica con licencia gubernamental (COFEPRIS)](/es/about#nuestra-red)**
+- **Consulta presencial** en una **[clínica con licencia gubernamental (COFEPRIS)](/es/about/#nuestra-red)**
   antes de cualquier tratamiento.
 - **Día(s) de tratamiento.** <span class="ph">[Horario típico, duración, qué llevar.]</span>
 - Un coordinador bilingüe permanece disponible durante toda tu estancia.
 
-¿Listo para planear tu viaje? [Solicita una evaluación gratuita →](/es/cotizacion)
+¿Listo para planear tu viaje? [Solicita una evaluación gratuita →](/es/cotizacion/)
 
 ## Después de regresar a casa
 

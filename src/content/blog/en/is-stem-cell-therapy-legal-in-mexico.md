@@ -15,7 +15,7 @@ draft: false
 
 Regenerative and cellular therapies in Mexico are regulated by the country's federal health
 authority, known as **COFEPRIS**. Clinics, physicians and cellular-therapy laboratories must
-be licensed. We only connect patients with **[government-licensed (COFEPRIS) providers](/en/about#our-network)**.
+be licensed. We only connect patients with **[government-licensed (COFEPRIS) providers](/en/about/#our-network)**.
 <span class="ph">[Expand with specifics.]</span>
 
 ## What "investigational" means
@@ -34,7 +34,7 @@ guaranteed. <span class="ph">[Explain the evidence/regulatory status you communi
 
 <span class="ph">[Add your full FAQ / checklist here.]</span>
 
-Want us to vet this for you instead? [Request a free evaluation →](/en/estimate)
+Want us to vet this for you instead? [Request a free evaluation →](/en/estimate/)
 
 ## Common questions
 

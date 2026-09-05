@@ -1,6 +1,6 @@
 ---
 import { languages, type Lang } from '../i18n/ui';
-import { getRouteFromUrl } from '../i18n/utils';
+import { getRouteFromUrl, withSlash } from '../i18n/utils';
 
 /**
  * Reusable SEO head component.
@@ -44,9 +44,9 @@ const route = getRouteFromUrl(Astro.url);
 const hrefFor = (code: Lang): string | null => {
   if (hreflangOverride && code in hreflangOverride) {
     const override = hreflangOverride[code];
-    return override ? new URL(override, Astro.site).href : null;
+    return override ? new URL(withSlash(override), Astro.site).href : null;
   }
-  return new URL(`/${code}${route === '/' ? '' : route}`, Astro.site).href;
+  return new URL(withSlash(`/${code}${route === '/' ? '' : route}`), Astro.site).href;
 };
 const alternates = (Object.keys(languages) as Lang[])
   .map((code) => ({ code, href: hrefFor(code) }))

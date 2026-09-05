@@ -1,5 +1,6 @@
 ---
 import type { Lang } from '../i18n/ui';
+import { withSlash } from '../i18n/utils';
 
 /**
  * Simple, accessible cookie-consent banner.
@@ -35,7 +36,7 @@ const t =
 <section id="cookie-consent" class="cookie-consent" role="region" aria-label={t.label} aria-live="polite" hidden>
   <div class="cc-inner wrap">
     <p class="cc-text">
-      {t.message} <a href={`/${lang}/privacy`}>{t.policy}</a>.
+      {t.message} <a href={withSlash(`/${lang}/privacy`)}>{t.policy}</a>.
     </p>
     <div class="cc-actions">
       <button type="button" class="cc-btn cc-decline" data-consent="declined">{t.decline}</button>

@@ -3,6 +3,7 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
 import { render, getCollection, type CollectionEntry } from 'astro:content';
 import type { Lang } from '../../i18n/ui';
+import { withSlash } from '../../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -22,8 +23,25 @@ const hreflangOverride = { [otherLang]: translation ? `/${otherLang}/blog/${slug
 
 const t =
   lang === 'es'
-    ? { crumb: 'Blog', by: 'Por', reviewed: 'Revisado por', updated: 'Actualizado' }
-    : { crumb: 'Blog', by: 'By', reviewed: 'Reviewed by', updated: 'Updated' };
+    ? { crumb: 'Blog', by: 'Por', reviewed: 'Revisado por', updated: 'Actualizado', related: 'Sigue leyendo', all: 'Ver todos los artículos' }
+    : { crumb: 'Blog', by: 'By', reviewed: 'Reviewed by', updated: 'Updated', related: 'Keep reading', all: 'See all articles' };
+
+// "Keep reading" — up to three other posts in this language.
+//
+// Until this existed every post was a dead end: the only internal link into an
+// article came from /blog/, and nothing linked back out. Search Console had
+// three of the older English posts sitting at "Discovered - currently not
+// indexed", which is what a page with a single weak internal link looks like.
+// Ranking by shared tags keeps the suggestions relevant, with recency as the
+// tie-break so a post never links only to the oldest three.
+const siblings = (await getCollection('blog', (p) => p.data.lang === lang && !p.data.draft && p.id !== post.id))
+  .map((p) => ({
+    post: p,
+    shared: p.data.tags.filter((tag) => post.data.tags.includes(tag)).length,
+  }))
+  .sort((a, b) => b.shared - a.shared || b.post.data.pubDate.getTime() - a.post.data.pubDate.getTime())
+  .slice(0, 3)
+  .map((entry) => entry.post);
 
 const site = Astro.site?.href.replace(/\/$/, '') ?? 'https://kernstemcare.com';
 const slug = post.id.replace(/^[a-z]{2}\//, '');
@@ -77,9 +95,61 @@ const articleSchema = {
       </article>
     </div>
   </section>
+
+  {
+    siblings.length > 0 && (
+      <section class="section related" aria-labelledby="related-heading">
+        <div class="wrap">
+          <h2 id="related-heading">{t.related}</h2>
+          <div class="grid g3">
+            {siblings.map((s) => (
+              <a class="card card-link" href={withSlash(`/${lang}/blog/${slugOf(s.id)}`)}>
+                <p class="post-date">{fmtDate(s.data.pubDate)}</p>
+                <h3 class="post-title">{s.data.title}</h3>
+                <p>{s.data.description}</p>
+              </a>
+            ))}
+          </div>
+          <p class="related-all">
+            <a href={withSlash(`/${lang}/blog`)}>{t.all} →</a>
+          </p>
+        </div>
+      </section>
+    )
+  }
 </SiteLayout>
 
 <style>
+  .related {
+    background: var(--bg-alt);
+  }
+  .related h2 {
+    font-size: 1.5rem;
+    margin: 0 0 22px;
+  }
+  .related .post-date {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--teal-text);
+    margin: 0 0 0.5em;
+  }
+  .related .post-title {
+    font-size: 1.05rem;
+    margin: 0 0 0.5em;
+  }
+  .related-all {
+    margin: 26px 0 0;
+  }
+  .related-all a {
+    color: var(--blue);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .related-all a:hover {
+    text-decoration: underline;
+  }
   .post {
     max-width: 760px;
     margin: 0 auto;

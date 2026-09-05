@@ -13,7 +13,7 @@ draft: true
 
 ## Respuesta corta
 
-La **[terapia con células madre mesenquimales (MSC)](/es/services/stem-cells)** para la artritis de rodilla y
+La **[terapia con células madre mesenquimales (MSC)](/es/services/stem-cells/)** para la artritis de rodilla y
 articulaciones es una de las aplicaciones más estudiadas de la terapia celular. Varias revisiones sistemáticas
 y metaanálisis de ensayos clínicos reportan mejoras significativas en dolor y función física tras la inyección
 intraarticular de MSC — pero los investigadores también son claros en que parte de esa mejora puede provenir
@@ -35,7 +35,7 @@ determina un médico certificado.
   estos factores y no solo de las MSC. Esto no significa que la terapia con MSC no funcione; significa que el
   tamaño del efecto celular específico todavía se está precisando con investigación en curso.
 - **Perfil de seguridad.** Los eventos adversos reportados suelen ser leves — dolor, hinchazón o rigidez en el
-  sitio de inyección (consulta nuestra guía sobre [por qué el dolor puede empeorar antes de mejorar](/es/blog/es-normal-que-duela-mas-antes-de-mejorar)).
+  sitio de inyección (consulta nuestra guía sobre [por qué el dolor puede empeorar antes de mejorar](/es/blog/es-normal-que-duela-mas-antes-de-mejorar/)).
   Las revisiones señalan de forma consistente que aún se necesitan más datos de largo plazo de ensayos grandes.
 
 <span class="ph">[Agrega aquí matices específicos de la condición que tus médicos aliados quieran incluir — p. ej. qué grados de osteoartritis responden mejor, cuándo la terapia con MSC no es adecuada.]</span>
@@ -47,14 +47,14 @@ Un médico revisa tus estudios de imagen e historial durante tu evaluación para
 terapia celular es una opción razonable para tu caso específico, qué esperar realistamente y cuáles son las
 alternativas.
 
-¿No sabes si esto aplica a tu caso? [Solicita una evaluación gratuita →](/es/cotizacion)
+¿No sabes si esto aplica a tu caso? [Solicita una evaluación gratuita →](/es/cotizacion/)
 
 ## Preguntas antes de viajar
 
 - ¿Qué muestran realmente los estudios de imagen y el examen clínico sobre mi articulación?
 - ¿Mi caso es un candidato razonable para terapia celular, o sería más adecuado otro tratamiento?
 - ¿Qué resultado es realista para alguien con mi diagnóstico específico?
-- ¿Quién realiza la inyección, y la clínica tiene **[licencia gubernamental (COFEPRIS)](/es/about#nuestra-red)**?
+- ¿Quién realiza la inyección, y la clínica tiene **[licencia gubernamental (COFEPRIS)](/es/about/#nuestra-red)**?
 
 ## Preguntas frecuentes
 
@@ -72,11 +72,11 @@ promesas de marketing.
 ### ¿Está aprobado por la FDA?
 No — como otras terapias celulares, el tratamiento con MSC para artritis no está aprobado por la FDA de
 EE.UU. ni por Health Canada para condiciones específicas y se considera de investigación. Consulta nuestra
-guía sobre [qué significa "de investigación" y cómo lo regula México](/es/blog/es-legal-la-terapia-con-celulas-madre-en-mexico).
+guía sobre [qué significa "de investigación" y cómo lo regula México](/es/blog/es-legal-la-terapia-con-celulas-madre-en-mexico/).
 
 ### ¿Cómo se compara con la terapia con exosomas para articulaciones?
 Ambas se estudian para molestias articulares, pero son enfoques biológicos distintos. Consulta nuestra
-[comparación entre células madre y exosomas](/es/blog/celulas-madre-vs-exosomas-diferencia) para entender la
+[comparación entre células madre y exosomas](/es/blog/celulas-madre-vs-exosomas-diferencia/) para entender la
 diferencia.
 
 ## Para saber más

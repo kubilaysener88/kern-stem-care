@@ -4,6 +4,7 @@ import { homeContent } from '../i18n/home';
 import { ANALYTICS_EVENTS } from '../config/analytics';
 import { getPhoneCodes, getCountries, phoneCodeLabel } from '../i18n/phoneCodes';
 import LegalDisclaimer from './LegalDisclaimer.astro';
+import { withSlash } from '../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -42,12 +43,12 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
       {c.hero.p && <p>{c.hero.p}</p>}
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
         {c.hero.pills.map((pill) => (
-          <a class="hero-flags pill-link" style="margin:0" href={`/${lang}/services/${pill.slug}`}>{pill.label}</a>
+          <a class="hero-flags pill-link" style="margin:0" href={withSlash(`/${lang}/services/${pill.slug}`)}>{pill.label}</a>
         ))}
       </div>
       <div class="hero-cta">
-        <a href={estimateHref} class="btn btn-primary" data-analytics-event={ANALYTICS_EVENTS.bookConsultation}>{c.hero.ctaPrimary}</a>
-        <a href={`/${lang}/services`} class="btn btn-ghost">{c.hero.ctaGhost}</a>
+        <a href={withSlash(estimateHref)} class="btn btn-primary" data-analytics-event={ANALYTICS_EVENTS.bookConsultation}>{c.hero.ctaPrimary}</a>
+        <a href={withSlash(`/${lang}/services`)} class="btn btn-ghost">{c.hero.ctaGhost}</a>
       </div>
     </div>
     <div class="hero-card estimate-promo">
@@ -56,7 +57,7 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
       <ul class="estimate-promo-bullets">
         {c.hero.card.bullets.map((b) => <li>{b}</li>)}
       </ul>
-      <a href={estimateHref} class="btn btn-primary" style="width:100%;text-align:center" data-analytics-event={ANALYTICS_EVENTS.bookConsultation}>{c.hero.card.ctaLabel}</a>
+      <a href={withSlash(estimateHref)} class="btn btn-primary" style="width:100%;text-align:center" data-analytics-event={ANALYTICS_EVENTS.bookConsultation}>{c.hero.card.ctaLabel}</a>
       <p class="tiny">{c.hero.card.fineprint}</p>
     </div>
   </div>
@@ -75,7 +76,7 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
     <div class="grid g4" style="margin-top:44px">
       {c.therapies.cards.map((card) =>
         card.slug ? (
-          <a class="card card-link" href={`/${lang}/services/${card.slug}`} style={card.accent ? accentStyle[card.accent] : undefined}>
+          <a class="card card-link" href={withSlash(`/${lang}/services/${card.slug}`)} style={card.accent ? accentStyle[card.accent] : undefined}>
             {card.image ? (
               <img class="card-img" src={card.image} alt={card.alt} loading="lazy" decoding="async" />
             ) : (
@@ -134,7 +135,7 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
       ))}
     </div>
     <div class="center" style="margin-top:24px">
-      <a href={`/${lang}/testimonials`} class="btn btn-outline">{c.testimonials.eyebrow}</a>
+      <a href={withSlash(`/${lang}/testimonials`)} class="btn btn-outline">{c.testimonials.eyebrow}</a>
     </div>
   </div>
 </section>
@@ -149,7 +150,7 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
       <ul class="check">
         {c.about.checks.map((li) => <li>{li}</li>)}
       </ul>
-      <a href={`/${lang}/about`} class="btn btn-outline">{c.about.cta}</a>
+      <a href={withSlash(`/${lang}/about`)} class="btn btn-outline">{c.about.cta}</a>
     </div>
     <div class="media-ph"><span set:html={c.about.mediaPh} /></div>
   </div>
@@ -188,7 +189,7 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
     <div class="grid g3" style="margin-top:42px">
       {c.treatments.cards.map((card) =>
         card.slug ? (
-          <a class="card card-link" href={`/${lang}/services/${card.slug}`} style={card.accent ? accentStyle[card.accent] : undefined}>
+          <a class="card card-link" href={withSlash(`/${lang}/services/${card.slug}`)} style={card.accent ? accentStyle[card.accent] : undefined}>
             {card.image ? (
               <img class="card-img" src={card.image} alt={card.alt} loading="lazy" decoding="async" />
             ) : (
@@ -226,7 +227,7 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
     </div>
     <div class="jtimeline">
       {c.journey.steps.map((step, i) => (
-        <a class="jstep" href={`/${lang}/process`}>
+        <a class="jstep" href={withSlash(`/${lang}/process`)}>
           <div class="jbadge">{i + 1}</div>
           <div
             class:list={['jglass', { 'has-photo': !!step.image }]}
@@ -253,7 +254,7 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
     <h3 style="text-align:center;margin:36px 0 18px;color:var(--teal-text)">{c.team.coordinatorsTitle}</h3>
     <div class:list={['grid', c.team.coordinators.length >= 3 ? 'g3' : 'g2']}>
       {c.team.coordinators.map((p) => (
-        <a class="doc doc-link" href={`/${lang}/team/${p.slug}`}>
+        <a class="doc doc-link" href={withSlash(`/${lang}/team/${p.slug}`)}>
           <div class="photo">
             {p.image ? <img src={p.image} alt={p.role} loading="lazy" decoding="async" /> : p.photoPh}
           </div>
@@ -266,7 +267,7 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
     <p class="lead center" style="margin-bottom:24px">{c.team.partnersLead}</p>
     <div class="grid g4">
       {c.team.partners.map((p) => (
-        <a class="card card-link center" href={`/${lang}/partners/${p.slug}`}>
+        <a class="card card-link center" href={withSlash(`/${lang}/partners/${p.slug}`)}>
           {p.image ? (
             <img class="card-img" src={p.image} alt={p.name} loading="lazy" decoding="async" />
           ) : (
@@ -307,7 +308,7 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
       <div class="kc-dots" id="kc-dots"></div>
     </div>
     <div class="center" style="margin-top:26px">
-      <a href={`/${lang}/contact`} class="btn btn-primary" style="font-size:1.05rem;padding:16px 34px">{c.showcase.ctaBook}</a>
+      <a href={withSlash(`/${lang}/contact`)} class="btn btn-primary" style="font-size:1.05rem;padding:16px 34px">{c.showcase.ctaBook}</a>
     </div>
   </div>
 </section>
@@ -321,7 +322,7 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
     </div>
     <div class="faq" style="margin-top:38px">
       {c.faq.items.map((item) => (
-        <a class="qa" href={item.href}>
+        <a class="qa" href={withSlash(item.href)}>
           <div class="qa-head"><span>{item.q}</span><span class="pm">→</span></div>
           <p class="ans" set:html={item.a} />
         </a>

@@ -16,7 +16,7 @@ draft: false
 En México, las terapias regenerativas y celulares están reguladas por la autoridad sanitaria
 federal del gobierno, conocida como **COFEPRIS**. Las clínicas, médicos y laboratorios de
 terapia celular deben tener licencia gubernamental. Solo conectamos a pacientes con
-**[proveedores con licencia gubernamental (COFEPRIS)](/es/about#nuestra-red)**. <span class="ph">[Amplía con detalles.]</span>
+**[proveedores con licencia gubernamental (COFEPRIS)](/es/about/#nuestra-red)**. <span class="ph">[Amplía con detalles.]</span>
 
 ## Qué significa "de investigación"
 
@@ -34,7 +34,7 @@ varían y no se garantiza ninguno. <span class="ph">[Explica el estatus de evide
 
 <span class="ph">[Agrega aquí tu FAQ / checklist completo.]</span>
 
-¿Prefieres que nosotros lo verifiquemos por ti? [Solicita una evaluación gratuita →](/es/cotizacion)
+¿Prefieres que nosotros lo verifiquemos por ti? [Solicita una evaluación gratuita →](/es/cotizacion/)
 
 ## Preguntas frecuentes
 

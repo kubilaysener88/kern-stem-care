@@ -1,6 +1,7 @@
 ---
 import type { Lang } from '../i18n/ui';
 import { pathToTreatment } from '../i18n/pages';
+import { withSlash } from '../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -28,7 +29,7 @@ const p = pathToTreatment[lang];
     </ol>
 
     <div class="center" style="margin-top:34px">
-      <a href={`/${lang}/contact`} class="btn btn-primary">{p.ctaLabel}</a>
+      <a href={withSlash(`/${lang}/contact`)} class="btn btn-primary">{p.ctaLabel}</a>
     </div>
   </div>
 </section>

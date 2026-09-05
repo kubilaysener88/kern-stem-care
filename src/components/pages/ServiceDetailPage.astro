@@ -7,6 +7,7 @@ import StructuredData from '../StructuredData.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
 import type { Lang } from '../../i18n/ui';
 import { pagesContent } from '../../i18n/pages';
+import { withSlash } from '../../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -35,7 +36,7 @@ const servicesLabel = lang === 'es' ? 'Servicios' : 'Services';
     <div class="wrap">
       <ProseSections sections={p.sections} />
       <div style="display:flex;justify-content:center;margin-top:32px">
-        <a href={`/${lang}/contact`} class="btn btn-primary" data-analytics-event="Quote My Treatment">{quoteLabel}</a>
+        <a href={withSlash(`/${lang}/contact`)} class="btn btn-primary" data-analytics-event="Quote My Treatment">{quoteLabel}</a>
       </div>
     </div>
   </section>
@@ -45,8 +46,8 @@ const servicesLabel = lang === 'es' ? 'Servicios' : 'Services';
   <section class="section">
     <div class="wrap">
       <div class="center" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-        <a href={`/${lang}/services`} class="btn btn-outline">{backLabel}</a>
-        <a href={`/${lang}/contact`} class="btn btn-primary">{ctaLabel}</a>
+        <a href={withSlash(`/${lang}/services`)} class="btn btn-outline">{backLabel}</a>
+        <a href={withSlash(`/${lang}/contact`)} class="btn btn-primary">{ctaLabel}</a>
       </div>
     </div>
   </section>

@@ -1,5 +1,6 @@
 ---
 import type { Lang } from '../i18n/ui';
+import { withSlash } from '../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -15,7 +16,7 @@ const t =
 <div class="announce">
   <p class="wrap">
     <span>🇲🇽 {t.msg}</span>
-    <a href={`/${lang}/contact`}>{t.cta} →</a>
+    <a href={withSlash(`/${lang}/contact`)}>{t.cta} →</a>
   </p>
 </div>
 

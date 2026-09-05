@@ -5,6 +5,7 @@ import StructuredData from '../StructuredData.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
 import type { Lang } from '../../i18n/ui';
 import { pagesContent } from '../../i18n/pages';
+import { withSlash } from '../../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -27,7 +28,7 @@ const sectionHeading =
       <div class="grid g4">
         {
           p.cards.map((card) => (
-            <a class="card card-link" href={`/${lang}/services/${card.slug}`}>
+            <a class="card card-link" href={withSlash(`/${lang}/services/${card.slug}`)}>
               {card.image ? (
                 <img class="card-img" src={card.image} alt={card.alt} loading="lazy" decoding="async" />
               ) : (

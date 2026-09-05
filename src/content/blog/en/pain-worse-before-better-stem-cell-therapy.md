@@ -44,13 +44,13 @@ These aren't typical of a normal post-injection flare, and a physician should ev
 ## Frequently asked questions
 
 ### How is a normal flare different from an infection?
-A flare is generally localized soreness, stiffness, or mild swelling that trends toward improvement, without fever or spreading redness. An infection more often comes with fever, spreading warmth/redness, or pain that keeps escalating rather than easing — see [our full breakdown of real risks and red flags →](/en/blog/is-stem-cell-therapy-safe).
+A flare is generally localized soreness, stiffness, or mild swelling that trends toward improvement, without fever or spreading redness. An infection more often comes with fever, spreading warmth/redness, or pain that keeps escalating rather than easing — see [our full breakdown of real risks and red flags →](/en/blog/is-stem-cell-therapy-safe/).
 
 ### Does everyone experience a flare?
 No — patient reports vary widely; some notice a flare, others don't notice much of anything unusual after the procedure. Neither pattern by itself tells you whether the treatment is "working."
 
 ### If I have a flare, does that mean the treatment is working better?
-Not necessarily — a flare reflects the local inflammatory response to the injection itself, not a guarantee of your eventual outcome. For a realistic sense of when results typically appear, see [how long stem cell therapy results take →](/en/blog/stem-cell-therapy-results-timeline).
+Not necessarily — a flare reflects the local inflammatory response to the injection itself, not a guarantee of your eventual outcome. For a realistic sense of when results typically appear, see [how long stem cell therapy results take →](/en/blog/stem-cell-therapy-results-timeline/).
 
 ### Should I take time off work or activities after treatment?
 That depends on your specific procedure, the joint treated, and your physician's guidance — ask during your evaluation so you can plan your trip and recovery time accordingly.
@@ -62,4 +62,4 @@ That depends on your specific procedure, the joint treated, and your physician's
 
 ## Not sure what to expect for your specific case?
 
-A physician who's actually evaluated you is the right person to tell you what's normal for your situation — not a generic article. [Get your free evaluation →](/en/estimate)
+A physician who's actually evaluated you is the right person to tell you what's normal for your situation — not a generic article. [Get your free evaluation →](/en/estimate/)

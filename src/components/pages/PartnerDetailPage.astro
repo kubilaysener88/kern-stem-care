@@ -4,6 +4,7 @@ import PageHero from '../PageHero.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
 import type { Lang } from '../../i18n/ui';
 import { homeContent } from '../../i18n/home';
+import { withSlash } from '../../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -83,8 +84,8 @@ const physiciansTitle = lang === 'es' ? 'Médicos' : 'Physicians';
       )}
 
       <div class="center" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:36px">
-        <a href={`/${lang}#team`} class="btn btn-outline">{backLabel}</a>
-        <a href={`/${lang}/contact`} class="btn btn-primary">{ctaLabel}</a>
+        <a href={withSlash(`/${lang}#team`)} class="btn btn-outline">{backLabel}</a>
+        <a href={withSlash(`/${lang}/contact`)} class="btn btn-primary">{ctaLabel}</a>
       </div>
     </div>
   </section>

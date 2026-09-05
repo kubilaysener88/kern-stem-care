@@ -79,7 +79,7 @@ export function organizationNode(site: string, lang: Lang) {
     '@id': `${site}/${ORG_ID}`,
     name: 'Kern Stem Care',
     description: orgDescription[lang],
-    url: `${site}/${lang}`,
+    url: `${site}/${lang}/`,
     logo: `${site}/assets/logo/kern-icon-color.png`,
     image: `${site}/og-image.jpg`,
     telephone: '+52 998 767 8979',
@@ -126,7 +126,7 @@ export function medicalProcedureNode(site: string, lang: Lang, key: ProcedureKey
     '@id': `${site}/${lang}/services/${meta.slug}#procedure`,
     name: t.name,
     description: t.description,
-    url: `${site}/${lang}/services/${meta.slug}`,
+    url: `${site}/${lang}/services/${meta.slug}/`,
     procedureType: 'https://schema.org/PercutaneousProcedure',
     // Care is delivered by independent licensed providers, coordinated by the agency.
     provider: { '@type': 'MedicalBusiness', name: '[Independent licensed partner provider]' },

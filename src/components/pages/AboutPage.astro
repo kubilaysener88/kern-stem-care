@@ -6,6 +6,7 @@ import Breadcrumbs from '../Breadcrumbs.astro';
 import type { Lang } from '../../i18n/ui';
 import { pagesContent } from '../../i18n/pages';
 import { navLabels } from '../../i18n/nav';
+import { withSlash } from '../../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -31,7 +32,7 @@ const mediaPh =
       <div class="media-ph"><span set:html={mediaPh} /></div>
     </div>
     <div class="wrap center" style="margin-top:36px">
-      <a href={`/${lang}/contact`} class="btn btn-primary">{ctaLabel}</a>
+      <a href={withSlash(`/${lang}/contact`)} class="btn btn-primary">{ctaLabel}</a>
     </div>
   </section>
 </SiteLayout>

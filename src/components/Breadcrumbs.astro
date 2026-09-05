@@ -1,5 +1,6 @@
 ---
 import type { Lang } from '../i18n/ui';
+import { withSlash } from '../i18n/utils';
 
 /**
  * Visible breadcrumb trail + BreadcrumbList JSON-LD (SEO).
@@ -27,7 +28,7 @@ const jsonld = {
     '@type': 'ListItem',
     position: i + 1,
     name: c.label,
-    ...(c.href ? { item: `${site}${c.href}` } : {}),
+    ...(c.href ? { item: `${site}${withSlash(c.href)}` } : {}),
   })),
 };
 ---
@@ -39,7 +40,7 @@ const jsonld = {
         const isLast = i === trail.length - 1;
         return (
           <li>
-            {c.href && !isLast ? <a href={c.href}>{c.label}</a> : <span aria-current="page">{c.label}</span>}
+            {c.href && !isLast ? <a href={withSlash(c.href)}>{c.label}</a> : <span aria-current="page">{c.label}</span>}
             {!isLast && <span class="sep" aria-hidden="true">›</span>}
           </li>
         );

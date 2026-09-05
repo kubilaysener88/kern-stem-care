@@ -3,7 +3,7 @@
 // Rendered as a full HTML page (instead of Astro.redirect) so the Google Search
 // Console verification tag is present on the exact property URL
 // (https://kernstemcare.com/), which GSC fetches to verify ownership.
-const target = '/en';
+const target = '/en/';
 ---
 
 <!doctype html>
@@ -16,10 +16,10 @@ const target = '/en';
     <link rel="canonical" href="https://kernstemcare.com/en/" />
     <title>Kern Stem Care</title>
     <script is:inline>
-      window.location.replace('/en');
+      window.location.replace('/en/');
     </script>
   </head>
   <body>
-    <p>Redirecting to <a href="/en">Kern Stem Care</a>…</p>
+    <p>Redirecting to <a href="/en/">Kern Stem Care</a>…</p>
   </body>
 </html>

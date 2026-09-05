@@ -6,6 +6,7 @@ import Breadcrumbs from '../Breadcrumbs.astro';
 import type { Lang } from '../../i18n/ui';
 import { pagesContent } from '../../i18n/pages';
 import { navLabels } from '../../i18n/nav';
+import { withSlash } from '../../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -55,7 +56,7 @@ const sectionHeading = lang === 'es' ? 'Testimonios en video de pacientes' : 'Pa
         }
       </div>
       <div class="center" style="margin-top:28px">
-        <a href={`/${lang}/contact`} class="btn btn-primary">{ctaLabel}</a>
+        <a href={withSlash(`/${lang}/contact`)} class="btn btn-primary">{ctaLabel}</a>
       </div>
     </div>
   </section>

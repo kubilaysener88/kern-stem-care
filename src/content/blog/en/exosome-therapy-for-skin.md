@@ -13,7 +13,7 @@ draft: true
 
 ## Short answer
 
-**[Exosome therapy](/en/services/exosomes)** for skin is a cell-free treatment: tiny vesicles released by
+**[Exosome therapy](/en/services/exosomes/)** for skin is a cell-free treatment: tiny vesicles released by
 cells, delivered to the skin (often alongside microneedling or similar procedures), studied for their role
 in signaling skin cells to reduce inflammation and support collagen production. It's a newer field than
 stem cell therapy, with a smaller but growing body of research on outcomes like fine lines, texture, and
@@ -35,7 +35,7 @@ hydration. It is not FDA-approved for any specific condition and results vary.
 ## What affects the cost
 
 Exosome therapy pricing depends on factors similar to other regenerative treatments — see our full breakdown
-in [how much stem cell and regenerative therapy costs in Mexico](/en/blog/how-much-does-stem-cell-therapy-cost-in-mexico).
+in [how much stem cell and regenerative therapy costs in Mexico](/en/blog/how-much-does-stem-cell-therapy-cost-in-mexico/).
 For skin-specific protocols, the main variables are:
 
 - The exosome product and dose used
@@ -46,13 +46,13 @@ For skin-specific protocols, the main variables are:
 Only your treating physician can confirm both what's appropriate for your skin and the exact price, based on
 their evaluation.
 
-Want a written, itemized estimate? [Request a free evaluation →](/en/estimate)
+Want a written, itemized estimate? [Request a free evaluation →](/en/estimate/)
 
 ## Exosomes vs. stem cells for skin
 
 Both are studied for skin and aesthetic applications, but they work differently — exosomes are cell-free
 signaling vesicles, while stem cell therapy uses living cells. See our full
-[stem cells vs. exosomes comparison](/en/blog/stem-cells-vs-exosomes-difference) to understand which one a
+[stem cells vs. exosomes comparison](/en/blog/stem-cells-vs-exosomes-difference/) to understand which one a
 physician might consider for your case.
 
 ## Common questions
@@ -60,7 +60,7 @@ physician might consider for your case.
 ### How long do results last?
 Duration varies by individual, protocol, and how many sessions are done. Ask your treating physician what to
 expect for your specific skin and goals — see our general guide on
-[results and timelines for cellular therapies](/en/blog/stem-cell-therapy-results-timeline).
+[results and timelines for cellular therapies](/en/blog/stem-cell-therapy-results-timeline/).
 
 ### Is exosome therapy for skin FDA-approved?
 No — like other regenerative therapies, it is not approved by the U.S. FDA or Health Canada for specific

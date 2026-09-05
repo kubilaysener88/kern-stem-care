@@ -13,7 +13,7 @@ draft: false
 
 ## Respuesta corta
 
-No hay un precio único — el costo de la **[terapia con células madre](/es/services/stem-cells)**
+No hay un precio único — el costo de la **[terapia con células madre](/es/services/stem-cells/)**
 en México depende del tipo de célula y la dosis, el número de sesiones, la condición a
 tratar, y la clínica y el laboratorio involucrados. <span class="ph">[Agrega el rango de precios que realmente cotizas, p. ej. "La mayoría de los protocolos que coordinamos están entre $X y $Y USD."]</span>
 
@@ -21,7 +21,7 @@ tratar, y la clínica y el laboratorio involucrados. <span class="ph">[Agrega el
 
 - La evaluación médica y la consulta con el médico
 - El producto celular y su preparación en laboratorio
-- La(s) sesión(es) de tratamiento en una **[clínica con licencia gubernamental (COFEPRIS)](/es/about#nuestra-red)**
+- La(s) sesión(es) de tratamiento en una **[clínica con licencia gubernamental (COFEPRIS)](/es/about/#nuestra-red)**
 - <span class="ph">[Enumera lo que Kern Stem Care incluye — coordinación, traslado del aeropuerto, ayuda con hospedaje.]</span>
 
 ## Qué *no* suele estar incluido
@@ -30,7 +30,7 @@ tratar, y la clínica y el laboratorio involucrados. <span class="ph">[Agrega el
 - Cualquier seguimiento una vez que regresas a casa
 - <span class="ph">[Aclara tus inclusiones/exclusiones para que no haya sorpresas.]</span>
 
-¿Quieres un número específico para tu caso? [Solicita una evaluación gratuita →](/es/cotizacion)
+¿Quieres un número específico para tu caso? [Solicita una evaluación gratuita →](/es/cotizacion/)
 
 ## Qué sube o baja el precio
 
@@ -71,4 +71,4 @@ de que te comprometas a viajar, así conoces el costo antes de hacer planes de v
 
 Solicitamos cotizaciones transparentes y detalladas a clínicas aliadas certificadas, te
 explicamos cada línea en español claro y coordinamos viaje y citas. [Obtén tu cotización
-personalizada y gratuita](/es/cotizacion) para tu caso.
+personalizada y gratuita](/es/cotizacion/) para tu caso.

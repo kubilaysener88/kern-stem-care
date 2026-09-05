@@ -44,13 +44,13 @@ Esto no es típico de un brote normal después de la inyección, y un médico de
 ## Preguntas frecuentes
 
 ### ¿Cómo distingo un brote normal de una infección?
-Un brote generalmente es molestia localizada, rigidez o inflamación leve que tiende a mejorar, sin fiebre ni enrojecimiento que se extiende. Una infección suele venir acompañada de fiebre, calor/enrojecimiento que se propaga, o dolor que sigue escalando en vez de ceder — mira [nuestro desglose completo de riesgos reales y señales de alerta →](/es/blog/es-segura-la-terapia-con-celulas-madre).
+Un brote generalmente es molestia localizada, rigidez o inflamación leve que tiende a mejorar, sin fiebre ni enrojecimiento que se extiende. Una infección suele venir acompañada de fiebre, calor/enrojecimiento que se propaga, o dolor que sigue escalando en vez de ceder — mira [nuestro desglose completo de riesgos reales y señales de alerta →](/es/blog/es-segura-la-terapia-con-celulas-madre/).
 
 ### ¿A todos les da un brote?
 No — los reportes de pacientes varían mucho; algunos notan un brote, otros no notan casi nada distinto después del procedimiento. Ninguno de los dos patrones por sí solo te dice si el tratamiento está "funcionando".
 
 ### Si tengo un brote, ¿significa que el tratamiento está funcionando mejor?
-No necesariamente — un brote refleja la respuesta inflamatoria local a la inyección misma, no una garantía de tu resultado final. Para una idea realista de cuándo suelen aparecer los resultados, mira [cuánto tarda en verse resultados con la terapia con células madre →](/es/blog/cuanto-tarda-en-verse-resultados-celulas-madre).
+No necesariamente — un brote refleja la respuesta inflamatoria local a la inyección misma, no una garantía de tu resultado final. Para una idea realista de cuándo suelen aparecer los resultados, mira [cuánto tarda en verse resultados con la terapia con células madre →](/es/blog/cuanto-tarda-en-verse-resultados-celulas-madre/).
 
 ### ¿Debo tomar días libres del trabajo o de mis actividades después del tratamiento?
 Eso depende de tu procedimiento específico, la articulación tratada y las indicaciones de tu médico — pregunta durante tu evaluación para poder planear tu viaje y tiempo de recuperación en consecuencia.
@@ -62,4 +62,4 @@ Eso depende de tu procedimiento específico, la articulación tratada y las indi
 
 ## ¿No sabes qué esperar para tu caso específico?
 
-Un médico que realmente te haya evaluado es la persona indicada para decirte qué es normal en tu situación — no un artículo genérico. [Obtén tu evaluación gratuita →](/es/cotizacion)
+Un médico que realmente te haya evaluado es la persona indicada para decirte qué es normal en tu situación — no un artículo genérico. [Obtén tu evaluación gratuita →](/es/cotizacion/)

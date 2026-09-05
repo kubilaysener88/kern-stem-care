@@ -13,8 +13,8 @@ draft: false
 
 ## La versión simple
 
-Las **[células madre](/es/services/stem-cells)** son células vivas que se estudian por su papel en la reparación y
-regeneración de tejidos. Los **[exosomas](/es/services/exosomes)** son vesículas diminutas *liberadas por* las
+Las **[células madre](/es/services/stem-cells/)** son células vivas que se estudian por su papel en la reparación y
+regeneración de tejidos. Los **[exosomas](/es/services/exosomes/)** son vesículas diminutas *liberadas por* las
 células que se estudian por su papel en la comunicación célula a célula. Una es una célula;
 el otro es un mensajero que la célula envía.
 <span class="ph">[Refina estas definiciones con tu revisor clínico.]</span>
@@ -30,7 +30,7 @@ el otro es un mensajero que la célula envía.
 
 <span class="ph">[Reemplaza el contenido de la tabla con detalles que confirmen tus clínicas aliadas.]</span>
 
-¿No sabes cuál aplica a tu caso? [Solicita una evaluación gratuita →](/es/cotizacion)
+¿No sabes cuál aplica a tu caso? [Solicita una evaluación gratuita →](/es/cotizacion/)
 
 ## ¿Cuál podría ser para ti?
 
@@ -39,10 +39,10 @@ certificado en tu evaluación. Como patrón general en nuestra red:
 
 - La **terapia con células madre** se considera más a menudo para molestias articulares y
   ortopédicas, recuperación de lesiones deportivas y vitalidad general — es la más estudiada de
-  las terapias celulares que coordinamos. [Conoce cómo funciona →](/es/services/stem-cells)
+  las terapias celulares que coordinamos. [Conoce cómo funciona →](/es/services/stem-cells/)
 - La **terapia con exosomas** se considera más a menudo para calidad de piel, apoyo a la
   recuperación junto con otras terapias y bienestar inmunológico — un enfoque más reciente y
-  libre de células, con evidencia menor pero en crecimiento. [Conoce cómo funciona →](/es/services/exosomes)
+  libre de células, con evidencia menor pero en crecimiento. [Conoce cómo funciona →](/es/services/exosomes/)
 
 Algunos protocolos combinan ambas. Tu médico confirma qué es adecuado para ti durante tu
 evaluación — no es un menú del que elijas por tu cuenta.

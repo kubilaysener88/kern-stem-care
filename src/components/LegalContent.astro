@@ -3,6 +3,7 @@ import PageHero from './PageHero.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import type { Lang } from '../i18n/ui';
 import { legalNav, type LegalDoc } from '../i18n/legal';
+import { withSlash } from '../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -39,8 +40,8 @@ const updatedLead = `${doc.updatedLabel} <span class="ph">${datePh}</span>`;
       ))}
 
       <nav class="legal-links" aria-label={moreLabel}>
-        <a href={`/${lang}`}>{doc.backHome}</a>
-        {related.map((l) => <a href={`/${lang}/${l.slug}`}>{l.label}</a>)}
+        <a href={withSlash(`/${lang}`)}>{doc.backHome}</a>
+        {related.map((l) => <a href={withSlash(`/${lang}/${l.slug}`)}>{l.label}</a>)}
       </nav>
     </div>
   </div>

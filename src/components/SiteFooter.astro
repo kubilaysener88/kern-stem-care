@@ -3,6 +3,7 @@ import type { Lang } from '../i18n/ui';
 import { navLabels } from '../i18n/nav';
 import { homeContent } from '../i18n/home';
 import { legalNav } from '../i18n/legal';
+import { withSlash } from '../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -71,12 +72,12 @@ const socialLinks = [
 
       <nav class="col" aria-label={navTitle}>
         <h2>{navTitle}</h2>
-        {exploreLinks.map((l) => <a href={l.href}>{l.label}</a>)}
+        {exploreLinks.map((l) => <a href={withSlash(l.href)}>{l.label}</a>)}
       </nav>
 
       <nav class="col" aria-label={t.services}>
         <h2>{t.services}</h2>
-        {serviceLinks.map((l) => <a href={l.href}>{l.label}</a>)}
+        {serviceLinks.map((l) => <a href={withSlash(l.href)}>{l.label}</a>)}
       </nav>
 
       <div class="col contact-col">
@@ -100,7 +101,7 @@ const socialLinks = [
             legal.map((l, i) => (
               <>
                 {i > 0 && <span class="sep" aria-hidden="true">·</span>}
-                <a href={`${base}/${l.slug}`}>{l.label}</a>
+                <a href={withSlash(`${base}/${l.slug}`)}>{l.label}</a>
               </>
             ))
           }

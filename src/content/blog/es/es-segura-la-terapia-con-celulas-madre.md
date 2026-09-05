@@ -16,7 +16,7 @@ Sí — cuando la realiza un médico con licencia, usando células con origen y 
 
 ## Qué significa realmente "terapia con células madre" aquí
 
-Vale la pena aclarar algo primero: muchos resultados de búsqueda sobre "trasplante de células madre" en realidad hablan de trasplantes de médula ósea (hematopoyéticos) usados para tratar cánceres de la sangre — un procedimiento completamente distinto, con otro perfil de riesgo que incluye quimioterapia y hospitalización prolongada. Eso **no** es lo que ofrecen las clínicas de medicina regenerativa de nuestra red. Este artículo trata sobre la **terapia con células madre mesenquimales (MSC)** — el tipo que se usa en aplicaciones articulares, ortopédicas y de bienestar. [Conoce cómo funciona →](/es/services/stem-cells)
+Vale la pena aclarar algo primero: muchos resultados de búsqueda sobre "trasplante de células madre" en realidad hablan de trasplantes de médula ósea (hematopoyéticos) usados para tratar cánceres de la sangre — un procedimiento completamente distinto, con otro perfil de riesgo que incluye quimioterapia y hospitalización prolongada. Eso **no** es lo que ofrecen las clínicas de medicina regenerativa de nuestra red. Este artículo trata sobre la **terapia con células madre mesenquimales (MSC)** — el tipo que se usa en aplicaciones articulares, ortopédicas y de bienestar. [Conoce cómo funciona →](/es/services/stem-cells/)
 
 ## Los riesgos reales
 
@@ -67,4 +67,4 @@ No — son cosas distintas. Una licencia gubernamental (como COFEPRIS en México
 
 ## Que alguien más revise tu caso
 
-Si estás evaluando a un proveedor — el nuestro o cualquier otro — con gusto te ayudamos a saber qué buscar. [Obtén tu evaluación gratuita →](/es/cotizacion)
+Si estás evaluando a un proveedor — el nuestro o cualquier otro — con gusto te ayudamos a saber qué buscar. [Obtén tu evaluación gratuita →](/es/cotizacion/)

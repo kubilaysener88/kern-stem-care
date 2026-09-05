@@ -16,7 +16,7 @@ Yes — when it's performed by a licensed physician, using properly sourced cell
 
 ## What "stem cell therapy" actually means here
 
-One thing worth clearing up first: a lot of search results for "stem cell transplant" are actually about bone marrow (hematopoietic) transplants used to treat blood cancers — a completely different procedure, with a different risk profile involving chemotherapy and extended hospital stays. That's not what regenerative medicine clinics like the ones in our network offer. This article is about **mesenchymal stem cell (MSC) therapy** — the kind used for joint, orthopedic, and wellness applications. [See how it works →](/en/services/stem-cells)
+One thing worth clearing up first: a lot of search results for "stem cell transplant" are actually about bone marrow (hematopoietic) transplants used to treat blood cancers — a completely different procedure, with a different risk profile involving chemotherapy and extended hospital stays. That's not what regenerative medicine clinics like the ones in our network offer. This article is about **mesenchymal stem cell (MSC) therapy** — the kind used for joint, orthopedic, and wellness applications. [See how it works →](/en/services/stem-cells/)
 
 ## The real risks
 
@@ -67,4 +67,4 @@ No — those are different things. A government license (like COFEPRIS in Mexico
 
 ## Get a second set of eyes on your case
 
-If you're evaluating a provider — ours or anyone else's — we're happy to walk you through what to look for. [Get your free evaluation →](/en/estimate)
+If you're evaluating a provider — ours or anyone else's — we're happy to walk you through what to look for. [Get your free evaluation →](/en/estimate/)

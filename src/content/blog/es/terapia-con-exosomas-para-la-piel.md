@@ -13,7 +13,7 @@ draft: true
 
 ## Respuesta corta
 
-La **[terapia con exosomas](/es/services/exosomes)** para la piel es un tratamiento libre de células: vesículas
+La **[terapia con exosomas](/es/services/exosomes/)** para la piel es un tratamiento libre de células: vesículas
 diminutas liberadas por células, aplicadas en la piel (a menudo junto con microneedling u otros procedimientos
 similares), estudiadas por su papel en señalizar a las células de la piel para reducir la inflamación y apoyar
 la producción de colágeno. Es un campo más reciente que la terapia con células madre, con un cuerpo de
@@ -38,7 +38,7 @@ aprobada por la FDA para ninguna condición específica y los resultados varían
 ## Qué afecta el costo
 
 El precio de la terapia con exosomas depende de factores similares a otros tratamientos regenerativos —
-consulta el desglose completo en [cuánto cuesta la terapia con células madre y regenerativa en México](/es/blog/cuanto-cuesta-la-terapia-con-celulas-madre-en-mexico).
+consulta el desglose completo en [cuánto cuesta la terapia con células madre y regenerativa en México](/es/blog/cuanto-cuesta-la-terapia-con-celulas-madre-en-mexico/).
 Para protocolos específicos de piel, las variables principales son:
 
 - El producto de exosomas y la dosis utilizada
@@ -49,13 +49,13 @@ Para protocolos específicos de piel, las variables principales son:
 Solo tu médico tratante puede confirmar tanto lo que es adecuado para tu piel como el precio exacto, según su
 evaluación.
 
-¿Quieres una cotización por escrito y detallada? [Solicita una evaluación gratuita →](/es/cotizacion)
+¿Quieres una cotización por escrito y detallada? [Solicita una evaluación gratuita →](/es/cotizacion/)
 
 ## Exosomas vs. células madre para la piel
 
 Ambos se estudian para aplicaciones de piel y estética, pero funcionan de forma distinta — los exosomas son
 vesículas de señalización libres de células, mientras que la terapia con células madre usa células vivas.
-Consulta nuestra [comparación completa entre células madre y exosomas](/es/blog/celulas-madre-vs-exosomas-diferencia)
+Consulta nuestra [comparación completa entre células madre y exosomas](/es/blog/celulas-madre-vs-exosomas-diferencia/)
 para entender cuál podría considerar un médico para tu caso.
 
 ## Preguntas frecuentes
@@ -63,7 +63,7 @@ para entender cuál podría considerar un médico para tu caso.
 ### ¿Cuánto duran los resultados?
 La duración varía según la persona, el protocolo y cuántas sesiones se realicen. Pregúntale a tu médico
 tratante qué esperar para tu piel y objetivos específicos — consulta nuestra guía general sobre
-[resultados y tiempos de las terapias celulares](/es/blog/cuanto-tarda-en-verse-resultados-celulas-madre).
+[resultados y tiempos de las terapias celulares](/es/blog/cuanto-tarda-en-verse-resultados-celulas-madre/).
 
 ### ¿La terapia con exosomas para piel está aprobada por la FDA?
 No — como otras terapias regenerativas, no está aprobada por la FDA de EE.UU. ni por Health Canada para

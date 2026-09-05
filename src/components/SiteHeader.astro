@@ -1,7 +1,7 @@
 ---
 import type { Lang } from '../i18n/ui';
 import { getNav, getConsultLabel, getTagline } from '../i18n/nav';
-import { getRouteFromUrl } from '../i18n/utils';
+import { getRouteFromUrl, withSlash } from '../i18n/utils';
 import { ANALYTICS_EVENTS } from '../config/analytics';
 
 interface Props {
@@ -21,7 +21,7 @@ const tagline = getTagline(lang);
 const current = Astro.url.pathname.replace(/\/+$/, '') || `/${lang}`;
 const route = getRouteFromUrl(Astro.url);
 const otherLang: Lang = lang === 'en' ? 'es' : 'en';
-const otherHref = altLangPath !== undefined ? (altLangPath ?? `/${otherLang}`) : `/${otherLang}${route === '/' ? '' : route}`;
+const otherHref = withSlash(altLangPath !== undefined ? (altLangPath ?? `/${otherLang}`) : `/${otherLang}${route === '/' ? '' : route}`);
 const menuLabel = lang === 'es' ? 'Abrir menú' : 'Open menu';
 
 const isActive = (path: string, hasChildren = false) =>
@@ -32,7 +32,7 @@ const calendarSvg = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none"
 
 <header class="site-header" id="site-header">
   <div class="wrap bar">
-    <a class="brand" href={`/${lang}`} aria-label="Kern Stem Care — home">
+    <a class="brand" href={withSlash(`/${lang}`)} aria-label="Kern Stem Care — home">
       <img class="mark" src="/assets/logo/kern-icon-color.png" alt="" width="40" height="40" />
       <span class="brand-text">
         <span class="brand-name">Kern Stem Care</span>
@@ -46,13 +46,13 @@ const calendarSvg = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none"
           nav.map((item) =>
             item.children ? (
               <li class="has-sub">
-                <a href={item.path} class:list={['nav-link', { active: isActive(item.path, true) }]} aria-current={isActive(item.path) ? 'page' : undefined}>
+                <a href={withSlash(item.path)} class:list={['nav-link', { active: isActive(item.path, true) }]} aria-current={isActive(item.path) ? 'page' : undefined}>
                   {item.label} <span class="caret" aria-hidden="true">▾</span>
                 </a>
                 <ul class="submenu">
                   {item.children.map((child) => (
                     <li>
-                      <a href={child.path} class:list={{ active: isActive(child.path) }} aria-current={isActive(child.path) ? 'page' : undefined}>
+                      <a href={withSlash(child.path)} class:list={{ active: isActive(child.path) }} aria-current={isActive(child.path) ? 'page' : undefined}>
                         {child.label}
                       </a>
                     </li>
@@ -61,7 +61,7 @@ const calendarSvg = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none"
               </li>
             ) : (
               <li>
-                <a href={item.path} class:list={['nav-link', { active: isActive(item.path) }]} aria-current={isActive(item.path) ? 'page' : undefined}>
+                <a href={withSlash(item.path)} class:list={['nav-link', { active: isActive(item.path) }]} aria-current={isActive(item.path) ? 'page' : undefined}>
                   {item.label}
                 </a>
               </li>
@@ -69,7 +69,7 @@ const calendarSvg = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none"
           )
         }
         <li class="menu-cta">
-          <a href={`/${lang}/contact`} class="cta-mobile" data-analytics-event={ANALYTICS_EVENTS.bookConsultation}>
+          <a href={withSlash(`/${lang}/contact`)} class="cta-mobile" data-analytics-event={ANALYTICS_EVENTS.bookConsultation}>
             <span class="cta-ico" set:html={calendarSvg} />{consult}
           </a>
         </li>
@@ -81,7 +81,7 @@ const calendarSvg = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none"
         <a href={lang === 'en' ? '#' : otherHref} class:list={{ active: lang === 'en' }} aria-current={lang === 'en' ? 'true' : undefined}>EN</a>
         <a href={lang === 'es' ? '#' : otherHref} class:list={{ active: lang === 'es' }} aria-current={lang === 'es' ? 'true' : undefined}>ES</a>
       </div>
-      <a href={`/${lang}/contact`} class="cta" data-analytics-event={ANALYTICS_EVENTS.bookConsultation}>
+      <a href={withSlash(`/${lang}/contact`)} class="cta" data-analytics-event={ANALYTICS_EVENTS.bookConsultation}>
         <span class="cta-ico" set:html={calendarSvg} />{consult}
       </a>
       <button

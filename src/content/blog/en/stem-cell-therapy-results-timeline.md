@@ -53,7 +53,7 @@ Not necessarily. Several patient accounts describe the most noticeable change ap
 That's a decision for your treating physician, based on your specific case and how your body responded the first time. It's a reasonable question to ask during your evaluation, before you commit to a first treatment.
 
 ### Does a higher price mean better or faster results?
-Not reliably. What matters more is whether the clinic and lab are government-licensed, how the cells are sourced and tested, and whether a physician is actually evaluating your case — not the price tag alone. [See how to vet a legitimate clinic →](/en/blog/is-stem-cell-therapy-safe)
+Not reliably. What matters more is whether the clinic and lab are government-licensed, how the cells are sourced and tested, and whether a physician is actually evaluating your case — not the price tag alone. [See how to vet a legitimate clinic →](/en/blog/is-stem-cell-therapy-safe/)
 
 ## Further reading
 
@@ -61,4 +61,4 @@ Not reliably. What matters more is whether the clinic and lab are government-lic
 
 ## Talk to a coordinator about what's realistic for your case
 
-We can't promise you a timeline — nobody honestly can — but we can connect you with a physician who will evaluate your specific case and tell you what to realistically expect. [Get your free evaluation →](/en/estimate)
+We can't promise you a timeline — nobody honestly can — but we can connect you with a physician who will evaluate your specific case and tell you what to realistically expect. [Get your free evaluation →](/en/estimate/)

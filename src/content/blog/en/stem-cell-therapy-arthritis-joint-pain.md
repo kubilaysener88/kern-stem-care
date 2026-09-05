@@ -13,7 +13,7 @@ draft: true
 
 ## Short answer
 
-**[Mesenchymal stem cell (MSC) therapy](/en/services/stem-cells)** for knee and joint arthritis is one of the
+**[Mesenchymal stem cell (MSC) therapy](/en/services/stem-cells/)** for knee and joint arthritis is one of the
 more extensively studied applications of cellular therapy. Multiple systematic reviews and meta-analyses of
 clinical trials report meaningful improvements in pain and physical function after intra-articular MSC
 injection — but researchers are also clear that some of that improvement may come from placebo and other
@@ -34,7 +34,7 @@ It is not a guaranteed cure, and it is not right for every case — a licensed p
   MSCs alone. This doesn't mean MSC therapy doesn't work; it means the size of the specific cellular effect
   is still being refined by ongoing research.
 - **Safety profile.** Reported adverse events are generally mild — pain, swelling, or stiffness at the
-  injection site (see our guide on [why pain can flare before it improves](/en/blog/pain-worse-before-better-stem-cell-therapy)).
+  injection site (see our guide on [why pain can flare before it improves](/en/blog/pain-worse-before-better-stem-cell-therapy/)).
   Reviewers consistently note that long-term data from larger trials is still needed.
 
 <span class="ph">[Add any condition-specific nuance your partner physicians want included — e.g. which grades of osteoarthritis respond best, when MSC therapy is not appropriate.]</span>
@@ -45,14 +45,14 @@ Arthritis and joint pain vary enormously by cause, severity, and joint involved.
 imaging and history during your evaluation to explain whether a cellular therapy protocol is a reasonable
 option for your specific case, what to realistically expect, and what the alternatives are.
 
-Not sure if this applies to you? [Request a free evaluation →](/en/estimate)
+Not sure if this applies to you? [Request a free evaluation →](/en/estimate/)
 
 ## Questions to ask before you travel
 
 - What does the imaging and clinical exam actually show about my joint?
 - Is my case a reasonable candidate for cellular therapy, or would another treatment be more appropriate?
 - What outcome is realistic for someone with my specific diagnosis?
-- Who performs the injection, and is the clinic **[government-licensed (COFEPRIS)](/en/about#our-network)**?
+- Who performs the injection, and is the clinic **[government-licensed (COFEPRIS)](/en/about/#our-network)**?
 
 ## Common questions
 
@@ -69,11 +69,11 @@ reason realistic expectations, set by a licensed physician, matter more than mar
 ### Is this approved by the FDA?
 No — like other cellular therapies, MSC treatment for arthritis is not approved by the U.S. FDA or Health
 Canada for specific conditions and is considered investigational. See our guide on
-[what "investigational" means and how Mexico regulates this](/en/blog/is-stem-cell-therapy-legal-in-mexico).
+[what "investigational" means and how Mexico regulates this](/en/blog/is-stem-cell-therapy-legal-in-mexico/).
 
 ### How does this compare to exosome therapy for joints?
 Both are studied for joint-related concerns, but they're different biological approaches. See our
-[stem cells vs. exosomes comparison](/en/blog/stem-cells-vs-exosomes-difference) for the distinction.
+[stem cells vs. exosomes comparison](/en/blog/stem-cells-vs-exosomes-difference/) for the distinction.
 
 ## Further reading
 

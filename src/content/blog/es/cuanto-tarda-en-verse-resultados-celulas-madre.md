@@ -53,7 +53,7 @@ No necesariamente. Varios relatos de pacientes describen que el cambio más nota
 Esa es una decisión de tu médico tratante, basada en tu caso específico y en cómo respondió tu cuerpo la primera vez. Es una pregunta razonable para hacer durante tu evaluación, antes de comprometerte con un primer tratamiento.
 
 ### ¿Un precio más alto significa resultados mejores o más rápidos?
-No de forma confiable. Lo que importa más es si la clínica y el laboratorio tienen licencia gubernamental, cómo se obtienen y prueban las células, y si un médico realmente está evaluando tu caso — no solo el precio. [Mira cómo elegir una clínica legítima →](/es/blog/es-segura-la-terapia-con-celulas-madre)
+No de forma confiable. Lo que importa más es si la clínica y el laboratorio tienen licencia gubernamental, cómo se obtienen y prueban las células, y si un médico realmente está evaluando tu caso — no solo el precio. [Mira cómo elegir una clínica legítima →](/es/blog/es-segura-la-terapia-con-celulas-madre/)
 
 ## Para saber más
 
@@ -61,4 +61,4 @@ No de forma confiable. Lo que importa más es si la clínica y el laboratorio ti
 
 ## Habla con un coordinador sobre qué es realista para tu caso
 
-No podemos prometerte una línea de tiempo — honestamente nadie puede — pero sí podemos conectarte con un médico que evalúe tu caso específico y te diga qué esperar de forma realista. [Obtén tu evaluación gratuita →](/es/cotizacion)
+No podemos prometerte una línea de tiempo — honestamente nadie puede — pero sí podemos conectarte con un médico que evalúe tu caso específico y te diga qué esperar de forma realista. [Obtén tu evaluación gratuita →](/es/cotizacion/)
