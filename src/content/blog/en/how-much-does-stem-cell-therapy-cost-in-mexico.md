@@ -18,15 +18,26 @@ There is no single price — the cost of **[stem cell therapy](/en/services/stem
 Mexico depends on the cell type and dose, the number of sessions, the condition being
 addressed, and the clinic and laboratory involved.
 
-In practice, the programs Kern Stem Care coordinates in Cancún are quoted between
-**$2,300 and $8,200 USD**, depending on which therapy the treating physician recommends
-and how many applications your plan calls for. Where you land inside that range is decided
-at your medical evaluation — not before it, and not by us.
+In practice, most of what Kern Stem Care coordinates in Cancún falls between **$850 and
+$8,200 USD**. Rather than leave you guessing where inside that band you sit, here is what each
+application is quoted at:
 
-Broadly: the lower end is a single therapy aimed at one area in one visit. The upper end is a
-plan that combines more than one therapy, a larger cell dose, or several applications staged
-across your stay. That one figure covers the medical program and our coordination together —
-there is no separate coordination charge added afterwards.
+| Application | Quoted at |
+| --- | --- |
+| One joint — knee, elbow, shoulder or hip | $2,300 |
+| Two joints — knees, elbows or shoulders | $4,250 |
+| Half the face | $850 |
+| Full face and neck | $1,500 |
+| Placenta application | $880 |
+| Anti-aging / overall wellness | $2,300 – $7,500, scaled to body weight |
+| A serious or complex condition | Quoted after evaluation — the protocol is built for your case |
+
+Every figure above covers the medical program and our coordination together; there is no
+separate coordination charge added afterwards. Travel sits outside it — flights, your hotel,
+and airport transfers if you ask us to arrange them.
+
+One thing a price list cannot tell you: whether any of this suits your case. That is decided
+at your medical evaluation, by the treating physician — not by us, and not before.
 
 ## What's usually included
 

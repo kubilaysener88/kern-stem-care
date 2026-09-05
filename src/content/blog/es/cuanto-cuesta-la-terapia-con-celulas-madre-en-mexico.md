@@ -18,15 +18,27 @@ No hay un precio único — el costo de la **[terapia con células madre](/es/se
 en México depende del tipo de célula y la dosis, el número de sesiones, la condición a
 tratar, y la clínica y el laboratorio involucrados.
 
-En la práctica, los programas que Kern Stem Care coordina en Cancún se cotizan entre
-**$2,300 y $8,200 USD**, según la terapia que recomiende el médico tratante y cuántas
-aplicaciones requiera tu plan. En qué punto de ese rango caes se define en tu evaluación
-médica — no antes, y no lo decidimos nosotros.
+En la práctica, la mayoría de lo que Kern Stem Care coordina en Cancún está entre **$850 y
+$8,200 USD**. En vez de dejarte adivinando en qué punto de ese rango caes, aquí está lo que se
+cotiza cada aplicación:
 
-A grandes rasgos: el extremo bajo es una sola terapia dirigida a una zona en una sola visita.
-El extremo alto es un plan que combina más de una terapia, una dosis celular mayor, o varias
-aplicaciones repartidas durante tu estancia. Ese número cubre el programa médico y nuestra
-coordinación juntos — no se agrega ninguna tarifa de coordinación después.
+| Aplicación | Precio |
+| --- | --- |
+| Una articulación — rodilla, codo, hombro o cadera | $2,300 |
+| Dos articulaciones — rodillas, codos u hombros | $4,250 |
+| Media cara | $850 |
+| Rostro completo y cuello | $1,500 |
+| Aplicación de placenta | $880 |
+| Antienvejecimiento / bienestar general | $2,300 – $7,500, según el peso del paciente |
+| Una condición grave o compleja | Se cotiza tras la evaluación — el protocolo se arma para tu caso |
+
+Cada cifra de arriba cubre el programa médico y nuestra coordinación juntos; no se agrega
+ninguna tarifa de coordinación después. El viaje queda fuera — los vuelos, tu hotel, y los
+traslados del aeropuerto si nos pides gestionarlos.
+
+Hay algo que una lista de precios no te puede decir: si algo de esto es adecuado para tu caso.
+Eso se define en tu evaluación médica, con el médico tratante — no lo decidimos nosotros, ni
+antes de verte.
 
 ## Qué suele estar incluido
 
