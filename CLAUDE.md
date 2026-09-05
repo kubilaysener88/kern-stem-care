@@ -155,16 +155,29 @@ npm run test:a11y # axe-core WCAG 2.1 AA scan of every route, desktop + mobile (
    `Book Consultation` (header CTA), `Contact Form Submit`, `Testimonial Play`,
    `Estimate Form Submit`. The Privacy Policy's cookies/analytics section already
    mentions Google Analytics — update it if the provider mix changes.
-10. **SEO extras:** breadcrumbs (`Breadcrumbs.astro`, visible + `BreadcrumbList` JSON-LD)
+10. **Internal links carry a trailing slash.** Astro builds every route as a
+    directory, so `/en/about/` is the canonical URL — the canonical tag, the
+    sitemap and the hreflang alternates all use it, and Netlify 301s the
+    slashless form. Never hand-write `href="/en/about"`; wrap the path in
+    `withSlash()` from `src/i18n/utils.ts` at the point where the `<a>` is
+    rendered (so nav.ts and the i18n dictionaries stay free of the
+    bookkeeping), and end markdown links in blog posts with the slash.
+11. **SEO extras:** breadcrumbs (`Breadcrumbs.astro`, visible + `BreadcrumbList` JSON-LD)
     on every interior page; per-keyword meta titles in `src/i18n/pages.ts`; social image
     at `public/og-image.jpg` (regenerate with `node scripts/gen-og.mjs`). NOTE: services
     use `MedicalProcedure` (provider = independent clinic), not `Service`, to keep the
     "agency, not a clinic" framing — don't add `Service` schema for the therapies.
-11. **Blog / resources** (`src/content/blog/`): add a post by dropping
+12. **Blog / resources** (`src/content/blog/`): add a post by dropping
     `src/content/blog/<en|es>/<slug>.md` with the frontmatter from `src/content.config.ts`
     (`title, description, lang, pubDate, reviewedBy, …`). It auto-appears on `/<lang>/blog`,
     at `/<lang>/blog/<slug>`, in the sitemap, and emits `BlogPosting` JSON-LD. For health
-    content set `reviewedBy` (E-E-A-T). `draft: true` hides it.
+    content set `reviewedBy` (E-E-A-T). `draft: true` hides it. Every post ends
+    with a "Keep reading" block of up to 3 sibling posts, chosen by shared
+    `tags` with recency as the tie-break — so `tags` are the internal-linking
+    mechanism between posts, not decoration. Before this existed each post had
+    a single inbound link (from `/blog/`) and none outbound, and Search Console
+    was reporting the older English posts as "Discovered - currently not
+    indexed".
 
 ## TODO backlog (carried over)
 
