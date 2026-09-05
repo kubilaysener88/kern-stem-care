@@ -444,10 +444,28 @@ const calendarSvg = `<svg viewBox="0 0 24 24" width="17" height="17" fill="none"
   (function () {
     var h = document.getElementById('site-header');
     if (h) {
-      var onScroll = function () {
-        h.classList.toggle('scrolled', window.scrollY > 8);
+      // Reading window.scrollY straight out of the scroll event forces the
+      // browser to flush layout on every tick (Lighthouse: "forced reflow").
+      // Coalesce to one read per frame, and only touch the DOM when the state
+      // actually flips — .scrolled only changes shadow/background, so there is
+      // nothing to update while the flag stays the same.
+      var scrolled = null;
+      var ticking = false;
+      var apply = function () {
+        ticking = false;
+        var next = window.scrollY > 8;
+        if (next !== scrolled) {
+          scrolled = next;
+          h.classList.toggle('scrolled', next);
+        }
       };
-      onScroll();
+      var onScroll = function () {
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(apply);
+        }
+      };
+      apply();
       window.addEventListener('scroll', onScroll, { passive: true });
     }
     var menu = document.getElementById('menu');
