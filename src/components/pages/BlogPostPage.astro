@@ -87,7 +87,13 @@ const articleSchema = {
         <p class="lead">{post.data.description}</p>
         <p class="byline">
           {t.by} {post.data.author}
-          {post.data.reviewedBy && <span> · {t.reviewed} <span class="ph">{post.data.reviewedBy}</span></span>}
+          {/* `reviewedBy` is a "[bracketed]" placeholder until a real medical reviewer
+              signs off. Rendering the placeholder puts "Reviewed by [Medical reviewer
+              name, credentials]" under the headline of a health article, which reads
+              worse than showing no reviewer at all — so hide it until it is real. */}
+          {post.data.reviewedBy && !post.data.reviewedBy.startsWith('[') && (
+            <span> · {t.reviewed} {post.data.reviewedBy}</span>
+          )}
         </p>
         <div class="post-body">
           <Content />

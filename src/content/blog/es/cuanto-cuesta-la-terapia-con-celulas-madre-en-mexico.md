@@ -4,6 +4,7 @@ description: 'Qué influye en el precio de la terapia con células madre en Méx
 lang: 'es'
 translationKey: 'stem-cell-therapy-cost'
 pubDate: 2026-06-10
+updatedDate: 2026-09-05
 author: 'Kern Stem Care'
 reviewedBy: '[Nombre del revisor médico, credenciales]'
 tags: ['costo', 'células madre', 'méxico', 'planificación']
@@ -21,6 +22,11 @@ En la práctica, los programas que Kern Stem Care coordina en Cancún se cotizan
 **$2,300 y $8,200 USD**, según la terapia que recomiende el médico tratante y cuántas
 aplicaciones requiera tu plan. En qué punto de ese rango caes se define en tu evaluación
 médica — no antes, y no lo decidimos nosotros.
+
+A grandes rasgos: el extremo bajo es una sola terapia dirigida a una zona en una sola visita.
+El extremo alto es un plan que combina más de una terapia, una dosis celular mayor, o varias
+aplicaciones repartidas durante tu estancia. Ese número cubre el programa médico y nuestra
+coordinación juntos — no se agrega ninguna tarifa de coordinación después.
 
 ## Qué suele estar incluido
 
@@ -46,7 +52,7 @@ médica — no antes, y no lo decidimos nosotros.
 | --- | --- |
 | Tipo de célula y dosis | Una preparación celular más grande o compleja cuesta más producir |
 | Número de sesiones | Algunos protocolos son una sola visita; otros se hacen por etapas |
-| Acreditación del laboratorio | Los laboratorios certificados por COFEPRIS con controles de calidad más estrictos suelen costar más que los no certificados |
+| Licencia del laboratorio | Un laboratorio con licencia gubernamental (COFEPRIS) vigente carga costos que uno sin licencia simplemente se salta — pruebas del lote, trazabilidad, control de esterilidad |
 | Experiencia del médico | Los médicos con más experiencia pueden cobrar más por el mismo protocolo |
 
 ## Por qué varían las cotizaciones
@@ -64,14 +70,16 @@ origen del tejido, el conteo celular, la viabilidad y las pruebas de esterilidad
 ## Preguntas frecuentes
 
 ### ¿Una cotización más barata siempre es peor negocio?
-No necesariamente, pero un precio mucho más bajo es motivo para hacer más preguntas —
-sobre conteo celular, acreditación del laboratorio y qué está realmente incluido. Te
-ayudamos a comparar cotizaciones de forma equivalente.
+No necesariamente — pero sí es motivo para hacer tres preguntas concretas: cuántas células
+estás recibiendo realmente, si el laboratorio tiene licencia gubernamental (COFEPRIS) vigente,
+y qué deja fuera la cotización. Un precio más bajo porque se salta alguna de esas tres no es
+un descuento.
 
 ### ¿A quién le pago — a Kern Stem Care o a la clínica?
-Los honorarios médicos los fija y los cobra el proveedor tratante. Nuestra tarifa de
-coordinación y los costos de viaje que gestionamos se detallan por separado, para que
-quede claro a quién le pagas cada cosa.
+Los honorarios médicos son del proveedor tratante y la coordinación es nuestra, y tu
+cotización por escrito desglosa ambos línea por línea — pero los dos van dentro del mismo
+número cotizado, así que nada se suma encima después. Lo que queda fuera es el viaje: los
+vuelos, tu hotel, y los traslados del aeropuerto si nos pides gestionarlos.
 
 ### ¿Puedo obtener un precio antes de reservar un vuelo?
 Sí — tu cotización por escrito y detallada llega después de tu evaluación gratuita y antes
@@ -87,6 +95,8 @@ línea, para que siempre veas qué parte del número es tratamiento y qué parte
 
 ## Cómo ayuda Kern Stem Care
 
-Solicitamos cotizaciones transparentes y detalladas a clínicas aliadas certificadas, te
-explicamos cada línea en español claro y coordinamos viaje y citas. [Obtén tu cotización
-personalizada y gratuita](/es/cotizacion/) para tu caso.
+Solicitamos cotizaciones detalladas a clínicas aliadas con licencia gubernamental (COFEPRIS)
+vigente, te explicamos cada línea en español claro y coordinamos tus citas y tu viaje
+alrededor de tu día de tratamiento. Ves el número por escrito, con sus partes desglosadas,
+antes de comprometerte a nada. [Obtén tu cotización personalizada y gratuita](/es/cotizacion/)
+para tu caso.

@@ -4,6 +4,7 @@ description: 'What goes into the price of stem cell therapy in Mexico, why quote
 lang: 'en'
 translationKey: 'stem-cell-therapy-cost'
 pubDate: 2026-06-10
+updatedDate: 2026-09-05
 author: 'Kern Stem Care'
 reviewedBy: '[Medical reviewer name, credentials]'
 tags: ['cost', 'stem cells', 'mexico', 'planning']
@@ -21,6 +22,11 @@ In practice, the programs Kern Stem Care coordinates in Cancún are quoted betwe
 **$2,300 and $8,200 USD**, depending on which therapy the treating physician recommends
 and how many applications your plan calls for. Where you land inside that range is decided
 at your medical evaluation — not before it, and not by us.
+
+Broadly: the lower end is a single therapy aimed at one area in one visit. The upper end is a
+plan that combines more than one therapy, a larger cell dose, or several applications staged
+across your stay. That one figure covers the medical program and our coordination together —
+there is no separate coordination charge added afterwards.
 
 ## What's usually included
 
@@ -46,7 +52,7 @@ Want a number specific to your case? [Request a free evaluation →](/en/estimat
 | --- | --- |
 | Cell type & dose | A larger or more complex cell preparation costs more to produce |
 | Number of sessions | Some protocols are a single visit; others are staged over time |
-| Lab accreditation | COFEPRIS-licensed labs with stricter quality controls typically cost more than unlicensed ones |
+| Lab licensing | A laboratory holding a current government (COFEPRIS) licence carries costs an unlicensed one simply skips — batch testing, traceability, sterility control |
 | Physician experience | More experienced providers may charge more for the same protocol |
 
 ## Why quotes differ between clinics
@@ -64,13 +70,16 @@ source, cell count, viability, and sterility testing.
 ## Common questions
 
 ### Is a cheaper quote always a worse deal?
-Not necessarily, but a much lower price is a reason to ask more questions — about cell
-count, lab accreditation, and what's actually included. We help you compare quotes like
-for like.
+Not necessarily — but it is a reason to ask three specific questions: how many cells you are
+actually getting, whether the laboratory holds a current government (COFEPRIS) licence, and
+what the quote leaves out. A price that is lower because it skips one of those is not a
+discount.
 
 ### Who do I pay — Kern Stem Care or the clinic?
-Medical fees are set by and paid to the treating provider. Our coordination fee and any
-travel costs we arrange are itemized separately, so it's clear who you're paying for what.
+The medical fees belong to the treating provider and the coordination is ours, and your
+written quote breaks both out line by line — but they sit inside the same quoted figure, so
+nothing is added on top afterwards. What sits outside it is travel: flights, your hotel, and
+airport transfers if you ask us to arrange them.
 
 ### Can I get a price before I book a flight?
 Yes — your written, itemized quote comes after your free evaluation and before you commit
@@ -86,6 +95,7 @@ part is travel.
 
 ## How Kern Stem Care helps
 
-We request transparent, itemized quotes from licensed partner clinics, explain each line in
-plain English, and coordinate travel and appointments — at no markup surprises. [Get your free,
-personalized price estimate](/en/estimate/) for your situation.
+We request itemized quotes from partner clinics with current government (COFEPRIS) licences,
+explain each line in plain English, and coordinate your appointments and travel around your
+treatment day. You see the figure in writing, with its parts broken out, before you commit to
+anything. [Get your free, personalized price estimate](/en/estimate/) for your situation.

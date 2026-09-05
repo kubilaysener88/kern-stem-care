@@ -82,6 +82,6 @@ Both are studied for joint-related concerns, but they're different biological ap
 
 ## How Kern Stem Care helps
 
-We connect you with COFEPRIS-licensed physicians who review your specific case, explain realistic outcomes,
+We connect you with government-licensed (COFEPRIS) physicians who review your specific case, explain realistic outcomes,
 and coordinate every part of the trip — so you get a straight answer before you travel, not a sales pitch.
 Request a free evaluation to start.

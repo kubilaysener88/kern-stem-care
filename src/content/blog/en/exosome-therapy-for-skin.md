@@ -82,6 +82,6 @@ different mechanism. Ask your physician which fits your goals and case.
 
 ## How Kern Stem Care helps
 
-We connect you with COFEPRIS-licensed clinics for exosome and other regenerative skin protocols, give you a
+We connect you with government-licensed (COFEPRIS) clinics for exosome and other regenerative skin protocols, give you a
 transparent itemized quote in writing, and coordinate travel and appointments — so you know exactly what
 you're paying for before you book anything. Request a free evaluation to start.
