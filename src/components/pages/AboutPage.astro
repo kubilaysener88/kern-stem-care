@@ -3,6 +3,7 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 import PageHero from '../PageHero.astro';
 import ProseSections from '../ProseSections.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
+import NetworkCredentials from '../NetworkCredentials.astro';
 import type { Lang } from '../../i18n/ui';
 import { pagesContent } from '../../i18n/pages';
 import { navLabels } from '../../i18n/nav';
@@ -31,7 +32,12 @@ const mediaPh =
       </div>
       <div class="media-ph"><span set:html={mediaPh} /></div>
     </div>
-    <div class="wrap center" style="margin-top:36px">
+  </section>
+
+  <NetworkCredentials lang={lang} />
+
+  <section class="section">
+    <div class="wrap center">
       <a href={withSlash(`/${lang}/contact`)} class="btn btn-primary">{ctaLabel}</a>
     </div>
   </section>

@@ -4,6 +4,7 @@ description: 'How regenerative and stem cell therapy is regulated in Mexico (COF
 lang: 'en'
 translationKey: 'is-stem-cell-therapy-legal'
 pubDate: 2026-06-01
+updatedDate: 2026-09-05
 author: 'Kern Stem Care'
 reviewedBy: '[Medical reviewer name, credentials]'
 tags: ['regulation', 'stem cells', 'mexico']
@@ -16,13 +17,23 @@ draft: false
 Regenerative and cellular therapies in Mexico are regulated by the country's federal health
 authority, known as **COFEPRIS**. Clinics, physicians and cellular-therapy laboratories must
 be licensed. We only connect patients with **[government-licensed (COFEPRIS) providers](/en/about/#our-network)**.
-<span class="ph">[Expand with specifics.]</span>
+
+A licence is only worth something if you can check it, so we publish ours rather than just
+claiming it. The laboratory that prepares the cells, NAO Biotechnology, operates under
+**Sanitary Licence No. 2414150080080416**, and every treating physician in the network is
+named with their *cédula profesional*. You can look all of it up yourself before you speak to
+anyone — the numbers are listed on [what you can verify](/en/about/#our-network).
 
 ## What "investigational" means
 
 Many regenerative therapies are **not approved by the U.S. FDA or Health Canada** for
 specific diseases and are considered investigational. Outcomes vary and no result is
-guaranteed. <span class="ph">[Explain the evidence/regulatory status you communicate to patients.]</span>
+guaranteed.
+
+That is not a caveat we bury. Being legal in Mexico and being proven for your condition are
+two different questions, and the treating physician is the one who answers the second — during
+your evaluation, going through what the current evidence does and does not show for your case.
+Any provider who skips that conversation is telling you something about how they work.
 
 ## Questions to ask before you travel
 
@@ -32,7 +43,9 @@ guaranteed. <span class="ph">[Explain the evidence/regulatory status you communi
 - Is the therapy approved for your specific condition, or is it investigational?
 - Who is legally responsible for your care once you're at the clinic?
 
-<span class="ph">[Add your full FAQ / checklist here.]</span>
+On the first question, you can start with us: our network's licence and *cédula* numbers are
+published at [what you can verify](/en/about/#our-network). A provider who cannot answer that
+same question in writing is the one to be careful with.
 
 Want us to vet this for you instead? [Request a free evaluation →](/en/estimate/)
 

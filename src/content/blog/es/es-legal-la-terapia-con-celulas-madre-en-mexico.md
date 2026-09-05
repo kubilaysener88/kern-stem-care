@@ -4,6 +4,7 @@ description: 'Cómo se regula la medicina regenerativa y la terapia con células
 lang: 'es'
 translationKey: 'is-stem-cell-therapy-legal'
 pubDate: 2026-06-01
+updatedDate: 2026-09-05
 author: 'Kern Stem Care'
 reviewedBy: '[Nombre del revisor médico, credenciales]'
 tags: ['regulación', 'células madre', 'méxico']
@@ -16,13 +17,24 @@ draft: false
 En México, las terapias regenerativas y celulares están reguladas por la autoridad sanitaria
 federal del gobierno, conocida como **COFEPRIS**. Las clínicas, médicos y laboratorios de
 terapia celular deben tener licencia gubernamental. Solo conectamos a pacientes con
-**[proveedores con licencia gubernamental (COFEPRIS)](/es/about/#nuestra-red)**. <span class="ph">[Amplía con detalles.]</span>
+**[proveedores con licencia gubernamental (COFEPRIS)](/es/about/#nuestra-red)**.
+
+Una licencia sirve de algo solo si la puedes comprobar, así que publicamos las nuestras en
+lugar de solo afirmarlas. El laboratorio que prepara las células, NAO Biotechnology, opera con
+**Licencia Sanitaria No. 2414150080080416**, y cada médico tratante de la red aparece con su
+nombre y su *cédula profesional*. Puedes verificarlo todo por tu cuenta antes de hablar con
+nadie — los números están en [lo que puedes verificar](/es/about/#nuestra-red).
 
 ## Qué significa "de investigación"
 
 Muchas terapias regenerativas **no están aprobadas por la FDA de EE.UU. ni por Health
 Canada** para enfermedades específicas y se consideran de investigación. Los resultados
-varían y no se garantiza ninguno. <span class="ph">[Explica el estatus de evidencia/regulatorio que comunicas.]</span>
+varían y no se garantiza ninguno.
+
+Eso no lo escondemos en letra chica. Que algo sea legal en México y que esté probado para tu
+condición son dos preguntas distintas, y la segunda la responde el médico tratante — en tu
+evaluación, repasando qué muestra y qué no muestra la evidencia actual para tu caso. Un
+proveedor que se salta esa conversación te está diciendo algo sobre cómo trabaja.
 
 ## Preguntas antes de viajar
 
@@ -32,7 +44,10 @@ varían y no se garantiza ninguno. <span class="ph">[Explica el estatus de evide
 - ¿La terapia está aprobada para tu condición específica, o es de investigación?
 - ¿Quién es legalmente responsable de tu atención una vez que estás en la clínica?
 
-<span class="ph">[Agrega aquí tu FAQ / checklist completo.]</span>
+La primera pregunta puedes empezar a responderla con nosotros: los números de licencia y de
+*cédula* de nuestra red están publicados en [lo que puedes verificar](/es/about/#nuestra-red).
+El proveedor que no pueda contestar esa misma pregunta por escrito es del que hay que
+cuidarse.
 
 ¿Prefieres que nosotros lo verifiquemos por ti? [Solicita una evaluación gratuita →](/es/cotizacion/)
 
