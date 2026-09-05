@@ -9,6 +9,10 @@ const lang = 'en' as const;
 ---
 
 <SiteLayout lang={lang} title={ui[lang]['site.title']} description={ui[lang]['site.description']}>
+  {/* The hero's photo is a CSS background, so the preload scanner can't find it —
+      and on mobile it IS the LCP element. Preload it so it starts downloading with
+      the HTML instead of waiting for the CSS to apply. */}
+  <link slot="head" rel="preload" as="image" href="/assets/hero/cancun-aerial.webp" fetchpriority="high" />
   <HomeSchema slot="head" lang={lang} />
   <StructuredData slot="head" lang={lang} organization={false} procedures={['stemCells', 'exosomes', 'fibroblasts']} />
   <HomeContent lang={lang} />

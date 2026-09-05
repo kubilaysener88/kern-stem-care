@@ -134,13 +134,16 @@ const articleSchema = {
     text-decoration: underline;
   }
   /* Markdown pipe-tables render with no default spacing, which reads as the
-     columns running into each other. Give them real cell borders/padding,
-     and let the table scroll on its own on narrow screens instead of
-     squeezing text. */
+     columns running into each other. Give them real cell borders/padding.
+
+     Note the table is deliberately NOT a `display: block; overflow-x: auto`
+     scroll box: that reads as a scrollable region a keyboard can't reach
+     (axe: scrollable-region-focusable) and drops the table's own semantics.
+     Instead the cells wrap and tighten on narrow screens so the table simply
+     fits — see the media query below. */
   .post-body :global(table) {
-    display: block;
-    overflow-x: auto;
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
     margin: 0 0 1.2em;
     font-size: 0.92rem;
@@ -156,10 +159,21 @@ const articleSchema = {
     background: var(--bg-alt);
     color: var(--navy);
     font-weight: 700;
-    white-space: nowrap;
   }
   .post-body :global(tr:nth-child(even) td) {
     background: var(--bg-alt);
+  }
+  /* Phones: tighten the cells so a 3-column comparison table still fits the
+     viewport instead of overflowing into a scroll box. */
+  @media (max-width: 620px) {
+    .post-body :global(table) {
+      font-size: 0.82rem;
+    }
+    .post-body :global(th),
+    .post-body :global(td) {
+      padding: 8px 9px;
+      overflow-wrap: anywhere;
+    }
   }
   .post-body :global(blockquote) {
     margin: 0 0 1.2em;

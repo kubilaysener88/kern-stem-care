@@ -537,6 +537,13 @@ p {
   .jstep:not(:last-child)::after {
     display: none;
   }
+  /* Narrow screens stack the section into one centred column, so this blob ends
+     up right behind the eyebrow/H2 and drags the teal heading text below the AA
+     contrast threshold. Push it down behind the frosted cards — where it is
+     actually needed — instead of dimming it. */
+  .jblob-1 {
+    top: 300px;
+  }
 }
 @media (max-width: 560px) {
   .jstep {

@@ -34,11 +34,15 @@ npm install      # first time (needs Node >= 22.12.0)
 npm run dev      # dev server at localhost:4321 ( /  ->  /en )
 npm run build    # astro check + build to ./dist
 npm run preview  # preview the production build
-npm run test:a11y # axe-core WCAG 2.1 AA scan of every route (Playwright)
+npm run test:a11y # axe-core WCAG 2.1 AA scan of every route, desktop + mobile (Playwright)
 ```
 
 > First-time a11y setup: `npx playwright install chromium`. The test builds + serves
-> the site and fails on any WCAG 2.1 A/AA violation (incl. color contrast).
+> the site and fails on any WCAG 2.1 A/AA violation (incl. color contrast). Every
+> route runs twice — `desktop` and `mobile` projects (see `playwright.config.ts`) —
+> because some violations only exist at one width: a decorative blob that sits
+> behind a heading once the layout stacks, or a table that only overflows in the
+> longer Spanish copy. Desktop-only runs missed both.
 
 ## File map
 
