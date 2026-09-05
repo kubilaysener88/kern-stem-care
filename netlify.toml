@@ -11,3 +11,31 @@
 # Static site (no SSR) — Netlify serves ./dist directly.
 # Netlify Forms are detected automatically from the built HTML
 # (forms tagged data-netlify="true" with a hidden form-name input).
+
+# Security response headers.
+#
+# This is a static site on a CDN — there is no server or database to inject
+# into — so the risk that actually matters is someone framing our pages to
+# phish the patients who submit health information through our forms.
+# Netlify already sends HSTS; these are the ones it does not.
+#
+# Deliberately NOT set here: a full Content-Security-Policy. It is the
+# strongest header of the set, but this site inlines its CSS and some scripts
+# and loads Google Analytics plus YouTube embeds, so a policy needs to be
+# written and tested against those before it can be turned on without
+# silently breaking analytics or the testimonial videos.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Block cross-origin framing (clickjacking). 'self' rather than DENY so
+    # Netlify's own preview tooling keeps working; an attacker's site is not
+    # same-origin either way.
+    X-Frame-Options = "SAMEORIGIN"
+    Content-Security-Policy = "frame-ancestors 'self'"
+    # Stop browsers guessing a MIME type other than the one we send.
+    X-Content-Type-Options = "nosniff"
+    # Send the full URL only to ourselves; other origins get the origin alone,
+    # so a patient's page path never leaks to a third party.
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # The site uses none of these APIs; deny them outright.
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
