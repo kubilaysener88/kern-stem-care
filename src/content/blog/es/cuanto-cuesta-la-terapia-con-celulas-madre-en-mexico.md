@@ -26,7 +26,7 @@ cotiza cada aplicación:
 | --- | --- |
 | Una articulación — rodilla, codo, hombro o cadera | $2,300 |
 | Dos articulaciones — rodillas, codos u hombros | $4,250 |
-| Media cara | $850 |
+| Una zona del rostro | $850 |
 | Rostro completo y cuello | $1,500 |
 | Aplicación de placenta | $880 |
 | Antienvejecimiento / bienestar general | $2,300 – $7,500, según el peso del paciente |

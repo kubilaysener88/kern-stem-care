@@ -26,7 +26,7 @@ application is quoted at:
 | --- | --- |
 | One joint — knee, elbow, shoulder or hip | $2,300 |
 | Two joints — knees, elbows or shoulders | $4,250 |
-| Half the face | $850 |
+| One area of the face | $850 |
 | Full face and neck | $1,500 |
 | Placenta application | $880 |
 | Anti-aging / overall wellness | $2,300 – $7,500, scaled to body weight |
