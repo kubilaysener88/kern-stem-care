@@ -33,7 +33,11 @@ Para el recorrido completo paso a paso, visita nuestra página de
   resolver el transporte después de un vuelo largo.
 - **Consulta presencial** en una **[clínica con licencia gubernamental (COFEPRIS)](/es/about/#nuestra-red)**
   antes de cualquier tratamiento.
-- **Día(s) de tratamiento.** <span class="ph">[Horario típico, duración, qué llevar.]</span>
+- **Día del tratamiento.** La aplicación dura entre 30 minutos y hora y media, según lo que se
+  vaya a tratar. Come algo ligero antes. La mayoría de los pacientes regresa al hotel
+  enseguida y deja libre el resto del día — la clínica normalmente pide reposo, evitar
+  actividad física y dejar el alcohol y el cigarro para otro día. Tus indicaciones de cuidado
+  posterior te las da el médico tratante antes de que salgas.
 - Un coordinador bilingüe permanece disponible durante toda tu estancia.
 
 ¿Listo para planear tu viaje? [Solicita una evaluación gratuita →](/es/cotizacion/)
@@ -47,7 +51,9 @@ Recuerda que los resultados varían de persona a persona y no se garantiza ning�
 
 - Pasaporte vigente y documentos de viaje
 - Cualquier expediente médico o estudio de imagen reciente
-- <span class="ph">[Agrega tus propios puntos de la lista.]</span>
+- Ropa cómoda que le dé acceso fácil al médico a la zona a tratar — short o bermuda si es en
+  las rodillas
+- La tarde y la noche libres, porque después de la aplicación vas a estar en reposo
 
 ## Preguntas frecuentes
 
@@ -61,7 +67,9 @@ No — un coordinador bilingüe te acompaña desde tu primera llamada hasta el s
 incluyendo en tus citas.
 
 ### ¿Puede alguien viajar conmigo?
-<span class="ph">[Confirma tu política sobre acompañantes durante el tratamiento y la recuperación.]</span>
+Sí — puedes venir con un acompañante el día del tratamiento. La mayoría lo hace, y ayuda:
+después vas a estar en reposo el resto del día, y tener a alguien contigo para el regreso al
+hotel hace todo más llevadero.
 
 ### ¿Es seguro Cancún para el turismo médico?
 Cancún es el principal destino turístico internacional de México, con vuelos directos de dos a

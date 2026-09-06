@@ -31,7 +31,11 @@ For the full step-by-step breakdown, see our **[International Patients](/en/proc
   someone is waiting for you rather than you sorting out transport after a long flight.
 - **In-person consultation** at a **[government-licensed (COFEPRIS)](/en/about/#our-network)** clinic
   before any treatment.
-- **Treatment day(s).** <span class="ph">[Typical schedule, duration, what to bring.]</span>
+- **Treatment day.** The application itself runs from about 30 minutes to an hour and a half,
+  depending on what is being treated. Eat something light beforehand. Most patients head back
+  to the hotel straight afterwards and keep the rest of the day clear — the clinic normally
+  asks you to rest, skip physical activity, and leave alcohol and cigarettes alone that day.
+  Your own aftercare instructions come from the treating physician before you leave.
 - A bilingual coordinator stays reachable throughout your stay.
 
 Ready to plan your trip? [Request a free evaluation →](/en/estimate/)
@@ -45,7 +49,9 @@ results vary from person to person and no outcome is guaranteed.
 
 - A valid passport and travel documents
 - Any recent medical records or imaging
-- <span class="ph">[Add your own checklist items.]</span>
+- Comfortable clothing that gives the physician easy access to the area being treated — shorts
+  if it is your knees
+- A free afternoon and evening, since you will be resting after the application
 
 ## Common questions
 
@@ -59,7 +65,9 @@ No — a bilingual coordinator is with you from your first call through follow-u
 at appointments.
 
 ### Can someone travel with me?
-<span class="ph">[Confirm your policy on companions/guests during treatment and recovery.]</span>
+Yes — you can bring a companion with you on treatment day. Most patients do, and it tends to
+help: you will be resting for the rest of the day afterwards, and having someone with you for
+the trip back to the hotel makes the whole thing easier.
 
 ### Is Cancún safe for medical travel?
 Cancún is Mexico's leading international tourist destination, with direct flights of two to
