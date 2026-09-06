@@ -46,7 +46,26 @@ Regulators and patient-safety organizations have repeatedly flagged "stem cell t
 
 ## How Kern Stem Care reduces this risk for you
 
-We're a coordination agency, not a clinic — we don't perform treatments ourselves. What we do is the vetting: we only work with independent, government-licensed (COFEPRIS) physicians and laboratories, and your treatment plan is confirmed by the treating physician during an in-person evaluation — not decided by us or by a form. <span class="ph">[Add specifics about your vetting process if you'd like to expand this section.]</span>
+We're a coordination agency, not a clinic — we don't perform treatments ourselves. What we do is the vetting: we only work with independent, government-licensed (COFEPRIS) physicians and laboratories, and your treatment plan is confirmed by the treating physician during an in-person evaluation — not decided by us or by a form.
+
+Concretely, we answer the four questions in the table above about our own network, in public,
+before asking you to trust anyone:
+
+- **The licences.** The laboratory that prepares the cells, NAO Biotechnology, operates under
+  Sanitary Licence No. 2414150080080416. We re-check that each partner's licence is still
+  current rather than verifying it once and filing it away.
+- **The batch testing.** Every batch NAO releases is screened for bacteria, mycoplasma, fungi
+  and yeast, runs a full infectious-disease serology panel, and is checked by flow cytometry
+  for viability and cell identity, karyotype analysis for genetic stability, and
+  oncogene-expression screening. Each one ships with its own signed Certificate of Quality.
+- **The physicians.** Every treating physician in the network is named with their *cédula
+  profesional* — Dr. Luigi Palermo (7606055) and Dr. Fernando José Núñez Prouxl (10566813) —
+  so you can look them up on the government registry without asking us.
+- **The evaluation.** It happens in person, with the treating physician, before anything is
+  decided. That is the step where a physician catches the cases a therapy is wrong for.
+
+All of those numbers are listed on [what you can verify](/en/about/#our-network). A provider
+who will not put the equivalent in writing is the one to be careful with.
 
 ## Frequently asked questions
 

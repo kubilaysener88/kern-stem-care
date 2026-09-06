@@ -46,7 +46,27 @@ Autoridades reguladoras y organizaciones de seguridad del paciente han señalado
 
 ## Cómo Kern Stem Care reduce ese riesgo por ti
 
-Somos una agencia de coordinación, no una clínica — nosotros no aplicamos los tratamientos directamente. Lo que hacemos es la verificación: solo trabajamos con médicos y laboratorios independientes con licencia gubernamental (COFEPRIS), y tu plan de tratamiento lo confirma el médico tratante durante una evaluación presencial — no lo decidimos nosotros ni un formulario. <span class="ph">[Agrega detalles específicos de tu proceso de verificación si quieres ampliar esta sección.]</span>
+Somos una agencia de coordinación, no una clínica — nosotros no aplicamos los tratamientos directamente. Lo que hacemos es la verificación: solo trabajamos con médicos y laboratorios independientes con licencia gubernamental (COFEPRIS), y tu plan de tratamiento lo confirma el médico tratante durante una evaluación presencial — no lo decidimos nosotros ni un formulario.
+
+En concreto, contestamos públicamente las cuatro preguntas de la tabla de arriba sobre nuestra
+propia red, antes de pedirte que confíes en nadie:
+
+- **Las licencias.** El laboratorio que prepara las células, NAO Biotechnology, opera con
+  Licencia Sanitaria No. 2414150080080416. Volvemos a comprobar que la licencia de cada aliado
+  siga vigente, en vez de verificarla una vez y archivarla.
+- **Las pruebas del lote.** Cada lote que libera NAO pasa por tamizaje microbiológico
+  (bacterias, micoplasma, hongos y levaduras), un panel completo de serología para
+  enfermedades infecciosas, citometría de flujo para viabilidad e identidad celular, análisis
+  de cariotipo para estabilidad genética y tamizaje de expresión de oncogenes. Cada uno se
+  entrega con su propio Certificado de Calidad firmado.
+- **Los médicos.** Cada médico tratante de la red aparece con su *cédula profesional* — el
+  Dr. Luigi Palermo (7606055) y el Dr. Fernando José Núñez Prouxl (10566813) — para que puedas
+  consultarlos en el registro del gobierno sin preguntarnos.
+- **La evaluación.** Es presencial, con el médico tratante, antes de decidir nada. Ese es el
+  paso donde un médico detecta los casos en que una terapia no es adecuada.
+
+Todos esos números están en [lo que puedes verificar](/es/about/#nuestra-red). El proveedor que
+no ponga el equivalente por escrito es del que hay que cuidarse.
 
 ## Preguntas frecuentes
 
