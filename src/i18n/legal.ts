@@ -17,6 +17,9 @@ export interface LegalDoc {
   metaTitle: string;
   h1: string;
   updatedLabel: string;
+  /** Real "last updated" date, shown under the H1. Written out per language so
+      it reads naturally; bump it whenever the document's substance changes. */
+  updated: string;
   templateNoticeLabel: string;
   templateNotice: string;
   intro: string;
@@ -36,6 +39,7 @@ const en: LegalSet = {
     metaTitle: 'Privacy Policy | Kern Stem Care',
     h1: 'Privacy Policy',
     updatedLabel: 'Last updated:',
+    updated: 'September 5, 2026',
     templateNoticeLabel: 'Template notice:',
     templateNotice:
       ' This is a starting template. Have a qualified attorney review it for your jurisdiction (Mexico, U.S., Canada) before publishing, especially given you handle patient health information.',
@@ -45,8 +49,8 @@ const en: LegalSet = {
       { h2: '1. Information we collect', body: 'When you submit a form or contact us, we may collect: your name, email, phone number, country, and the health-related information you choose to share so a coordinator or physician can respond to your request. We also collect standard technical data (IP address, browser type, pages visited) through cookies and analytics tools.' },
       { h2: '2. How we use your information', body: 'We use your information to respond to your inquiry, schedule consultations, arrange travel and treatment logistics, provide follow-up, and improve our website. We do not sell your personal information.' },
       { h2: '3. Health information', body: 'Any health information you provide is treated as confidential and shared only with the medical and coordination staff involved in responding to your request. This website is for information requests only and is not a substitute for a medical consultation or a secure medical records system.' },
-      { h2: '4. Cookies and analytics', body: 'We use cookies and analytics tools — currently Google Analytics — to understand site usage, only after you accept cookies in the banner. You can disable cookies in your browser settings or decline the banner.' },
-      { h2: '5. Sharing with third parties', body: 'We may share information with service providers who help us operate (hosting, CRM, communications, travel partners), and when required by law. These providers are expected to protect your information.' },
+      { h2: '4. Cookies and analytics', body: 'We use cookies and analytics tools — currently Google Analytics — to understand site usage, and they load only after you accept cookies in the banner. Your choice is stored in your own browser rather than on our servers, so clearing your browsing data resets it. Testimonial videos load nothing from YouTube until you press play. You can also disable cookies in your browser settings or decline the banner.' },
+      { h2: '5. Sharing with third parties', body: 'This website is hosted by Netlify, which also receives and stores whatever you send through the forms on this site. If you write to us using the WhatsApp button, that conversation takes place on WhatsApp and is covered by its own privacy terms. We may also share information with other service providers who help us operate (communications, travel partners), and when required by law. These providers are expected to protect your information.' },
       { h2: '6. International transfers', body: 'We are based in Mexico and serve patients worldwide, including the U.S. and Canada. Your information may be processed in Mexico and other countries. By using this site, you consent to such transfers.' },
       { h2: '7. Your rights', body: 'Depending on your location, you may have rights to access, correct, or delete your data, or object to its processing (for example under Mexico’s data-protection law, Canada’s PIPEDA, or applicable U.S. state laws). To exercise these rights, contact us at kernstemcare@gmail.com.' },
       { h2: '8. Data retention & security', body: 'We retain your information only as long as needed for the purposes described, and use reasonable safeguards to protect it. No method of transmission over the internet is 100% secure.' },
@@ -63,6 +67,7 @@ const en: LegalSet = {
     metaTitle: 'Terms & Conditions | Kern Stem Care',
     h1: 'Terms & Conditions',
     updatedLabel: 'Last updated:',
+    updated: 'September 5, 2026',
     templateNoticeLabel: 'Template notice:',
     templateNotice:
       ' Have a qualified attorney adapt these terms to your jurisdiction and services before publishing.',
@@ -91,6 +96,7 @@ const en: LegalSet = {
     metaTitle: 'Medical Disclaimer | Kern Stem Care',
     h1: 'Medical Disclaimer',
     updatedLabel: 'Last updated:',
+    updated: 'September 5, 2026',
     templateNoticeLabel: 'Scaffold notice:',
     templateNotice:
       ' This page is a structured scaffold. Replace each section with your attorney-reviewed wording for Mexico, the U.S., Canada, and the other markets you serve before publishing. Keep the "agency, not a clinic" framing.',
@@ -122,6 +128,7 @@ const es: LegalSet = {
     metaTitle: 'Política de Privacidad | Kern Stem Care',
     h1: 'Política de Privacidad',
     updatedLabel: 'Última actualización:',
+    updated: '5 de septiembre de 2026',
     templateNoticeLabel: 'Aviso de plantilla:',
     templateNotice:
       ' Esta es una plantilla inicial. Pida a un abogado calificado que la revise para su jurisdicción (México, EE.UU., Canadá) antes de publicar, sobre todo porque maneja información de salud de pacientes.',
@@ -131,8 +138,8 @@ const es: LegalSet = {
       { h2: '1. Información que recopilamos', body: 'Cuando envía un formulario o nos contacta, podemos recopilar: su nombre, correo, teléfono, país y la información de salud que decida compartir para que un coordinador o médico responda a su solicitud. También recopilamos datos técnicos estándar (dirección IP, tipo de navegador, páginas visitadas) mediante cookies y herramientas de análisis.' },
       { h2: '2. Cómo usamos su información', body: 'Usamos su información para responder a su consulta, agendar citas, coordinar la logística de viaje y tratamiento, dar seguimiento y mejorar nuestro sitio. No vendemos su información personal.' },
       { h2: '3. Información de salud', body: 'Toda información de salud que proporcione se trata como confidencial y se comparte solo con el personal médico y de coordinación involucrado en responder a su solicitud. Este sitio es solo para solicitudes de información y no sustituye una consulta médica ni un sistema seguro de expedientes clínicos.' },
-      { h2: '4. Cookies y análisis', body: 'Usamos cookies y herramientas de análisis — actualmente Google Analytics — para entender el uso del sitio, solo después de que acepte las cookies en el aviso. Puede desactivar las cookies en la configuración de su navegador o rechazar el aviso.' },
-      { h2: '5. Compartir con terceros', body: 'Podemos compartir información con proveedores que nos ayudan a operar (hospedaje, CRM, comunicaciones, socios de viaje) y cuando lo exija la ley. Se espera que estos proveedores protejan su información.' },
+      { h2: '4. Cookies y análisis', body: 'Usamos cookies y herramientas de análisis — actualmente Google Analytics — para entender el uso del sitio, y se cargan solo después de que acepte las cookies en el aviso. Su elección se guarda en su propio navegador, no en nuestros servidores, así que al borrar los datos de navegación se reinicia. Los videos de testimonios no cargan nada de YouTube hasta que usted presiona reproducir. También puede desactivar las cookies en la configuración de su navegador o rechazar el aviso.' },
+      { h2: '5. Compartir con terceros', body: 'Este sitio está alojado en Netlify, que también recibe y almacena lo que usted envía por los formularios del sitio. Si nos escribe por el botón de WhatsApp, esa conversación ocurre en WhatsApp y se rige por sus propios términos de privacidad. También podemos compartir información con otros proveedores que nos ayudan a operar (comunicaciones, socios de viaje) y cuando lo exija la ley. Se espera que estos proveedores protejan su información.' },
       { h2: '6. Transferencias internacionales', body: 'Estamos en México y atendemos a pacientes de todo el mundo, incluyendo EE.UU. y Canadá. Su información puede procesarse en México y otros países. Al usar este sitio, usted consiente dichas transferencias.' },
       { h2: '7. Sus derechos', body: 'Según su ubicación, puede tener derecho a acceder, corregir o eliminar sus datos, u oponerse a su tratamiento (por ejemplo, bajo la ley de protección de datos de México, PIPEDA de Canadá, o leyes estatales aplicables de EE.UU.). Para ejercer estos derechos, contáctenos en kernstemcare@gmail.com.' },
       { h2: '8. Conservación y seguridad', body: 'Conservamos su información solo el tiempo necesario para los fines descritos y usamos medidas razonables para protegerla. Ningún método de transmisión por internet es 100% seguro.' },
@@ -149,6 +156,7 @@ const es: LegalSet = {
     metaTitle: 'Términos y Condiciones | Kern Stem Care',
     h1: 'Términos y Condiciones',
     updatedLabel: 'Última actualización:',
+    updated: '5 de septiembre de 2026',
     templateNoticeLabel: 'Aviso de plantilla:',
     templateNotice:
       ' Pida a un abogado calificado que adapte estos términos a su jurisdicción y servicios antes de publicar.',
@@ -177,6 +185,7 @@ const es: LegalSet = {
     metaTitle: 'Aviso Médico | Kern Stem Care',
     h1: 'Aviso Médico',
     updatedLabel: 'Última actualización:',
+    updated: '5 de septiembre de 2026',
     templateNoticeLabel: 'Aviso de plantilla:',
     templateNotice:
       ' Esta página es una estructura base. Reemplace cada sección con la redacción revisada por su abogado para México, EE.UU., Canadá y los demás mercados que atiende antes de publicar. Conserve el enfoque de "agencia, no clínica".',

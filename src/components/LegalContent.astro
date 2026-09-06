@@ -14,8 +14,7 @@ const { lang, doc } = Astro.props;
 // Links to the other two legal pages.
 const related = legalNav(lang).filter((l) => l.slug !== doc.slug);
 const moreLabel = lang === 'es' ? 'Más documentos legales' : 'More legal documents';
-const datePh = lang === 'es' ? '[fecha]' : '[date]';
-const updatedLead = `${doc.updatedLabel} <span class="ph">${datePh}</span>`;
+const updatedLead = `${doc.updatedLabel} ${doc.updated}`;
 ---
 
 <Breadcrumbs lang={lang} items={[{ label: doc.h1 }]} />
