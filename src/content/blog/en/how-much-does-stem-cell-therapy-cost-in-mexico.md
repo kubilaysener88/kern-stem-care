@@ -98,10 +98,11 @@ what the quote leaves out. A price that is lower because it skips one of those i
 discount.
 
 ### Who do I pay — Kern Stem Care or the clinic?
-The medical fees belong to the treating provider and the coordination is ours, and your
-written quote breaks both out line by line — but they sit inside the same quoted figure, so
-nothing is added on top afterwards. What sits outside it is travel: flights, your hotel, and
-airport transfers if you ask us to arrange them.
+You pay us, and we pay the treating provider and the other partners on your behalf, so you get
+one invoice instead of several. The medical fees still belong to the provider and the
+coordination is ours, and your written quote breaks both out line by line, but they sit inside
+the same figure, so nothing is added on top afterwards. What sits outside it is travel:
+flights, your hotel, and airport transfers if you choose to book them.
 
 ### Can I get a price before I book a flight?
 Yes — your written, itemized quote comes after your free evaluation and before you commit

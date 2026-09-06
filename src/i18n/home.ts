@@ -62,6 +62,10 @@ export interface Coordinator {
   pageTitle?: string;
   /** Override the detail page's intro paragraph + meta description alongside `pageTitle`. */
   pageLead?: string;
+  /** Note rendered below the intro on the detail page. Used where a service is
+      optional and priced separately, so the page cannot be read as "this is
+      included" just because the team behind it is shown with their licences. */
+  pageNote?: string;
   /** Team/driver photos (with name + role caption) shown in their own section on this member's detail page. */
   teamPhotos?: {
     src: string;
@@ -460,6 +464,7 @@ const en: HomeContent = {
         heroImage: '/assets/team/vehicles/pasat-3.jpg',
         pageTitle: 'Logistics & Transportation',
         pageLead: "Airport pickups, ground transport, and every travel detail in Cancún — coordinated by our dedicated, bilingual logistics team.",
+        pageNote: 'Airport transfers to and from your hotel are an <strong>optional service at their own cost</strong>, and are not part of the treatment price. Book them with us, or make your own way in — plenty of patients who already know Cancún prefer that, and it changes nothing about your care. The option is here for whoever wants it.',
         teamPhotos: [
           {
             src: '/assets/team/driver-1.jpg',
@@ -869,6 +874,7 @@ const es: HomeContent = {
         heroImage: '/assets/team/vehicles/pasat-3.jpg',
         pageTitle: 'Logística y Transporte',
         pageLead: 'Traslados al aeropuerto, transporte terrestre y cada detalle de viaje en Cancún — coordinados por nuestro equipo bilingüe de logística.',
+        pageNote: 'El traslado del aeropuerto al hotel y de regreso es un <strong>servicio opcional con costo aparte</strong>, y no viene incluido en el precio del tratamiento. Puedes contratarlo con nosotros o llegar por tu cuenta — muchos pacientes que ya conocen Cancún lo prefieren así, y eso no cambia nada de tu atención. La opción está aquí para quien la quiera.',
         teamPhotos: [
           {
             src: '/assets/team/driver-1.jpg',

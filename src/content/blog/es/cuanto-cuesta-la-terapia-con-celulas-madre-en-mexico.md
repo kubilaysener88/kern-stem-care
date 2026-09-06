@@ -99,10 +99,12 @@ y qué deja fuera la cotización. Un precio más bajo porque se salta alguna de 
 un descuento.
 
 ### ¿A quién le pago — a Kern Stem Care o a la clínica?
-Los honorarios médicos son del proveedor tratante y la coordinación es nuestra, y tu
-cotización por escrito desglosa ambos línea por línea — pero los dos van dentro del mismo
-número cotizado, así que nada se suma encima después. Lo que queda fuera es el viaje: los
-vuelos, tu hotel, y los traslados del aeropuerto si nos pides gestionarlos.
+Nos pagas a nosotros, y nosotros le pagamos al proveedor médico y a los demás aliados en tu
+nombre — así recibes una sola factura en vez de varias. Los honorarios médicos siguen siendo
+del proveedor tratante y la coordinación es nuestra, y tu cotización por escrito desglosa
+ambos línea por línea, pero los dos van dentro del mismo número, así que nada se suma encima
+después. Lo que queda fuera es el viaje: los vuelos, tu hotel, y los traslados del aeropuerto
+si decides contratarlos.
 
 ### ¿Puedo obtener un precio antes de reservar un vuelo?
 Sí — tu cotización por escrito y detallada llega después de tu evaluación gratuita y antes
