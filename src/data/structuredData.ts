@@ -84,7 +84,7 @@ export function organizationNode(site: string, lang: Lang) {
     image: `${site}/og-image.jpg`,
     telephone: '+52 998 767 8979',
     email: 'kernstemcare@gmail.com',
-    priceRange: '[$$]',
+    priceRange: '$850 - $8200',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Retorno Viento, SM 4, Núm. 10',
@@ -109,8 +109,7 @@ export function organizationNode(site: string, lang: Lang) {
       },
     ],
     sameAs: [
-      '[https://www.facebook.com/yourpage]',
-      '[https://www.instagram.com/yourpage]',
+      'https://www.instagram.com/kernstemcare/',
       'https://www.youtube.com/@KernStemCare',
       'https://www.tiktok.com/@kernstemcare',
     ],
@@ -128,8 +127,8 @@ export function medicalProcedureNode(site: string, lang: Lang, key: ProcedureKey
     description: t.description,
     url: `${site}/${lang}/services/${meta.slug}/`,
     procedureType: 'https://schema.org/PercutaneousProcedure',
-    // Care is delivered by independent licensed providers, coordinated by the agency.
-    provider: { '@type': 'MedicalBusiness', name: '[Independent licensed partner provider]' },
+    // Care is delivered by an independent licensed provider, chosen per patient and
+    // named on that patient's own quote — so no single provider is asserted here.
     relevantSpecialty: { '@type': 'MedicalSpecialty', name: 'Regenerative Medicine' },
   };
 }
