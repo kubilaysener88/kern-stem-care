@@ -50,16 +50,21 @@ at your medical evaluation, by the treating physician — not by us, and not bef
 ## What's usually *not* included
 
 - Flights and most meals. We help you pick timings and routes, and you book and pay for them
-- Your hotel. We find you a trusted, economical option close to the clinic, and you pay it directly
-- Airport transfers to and from your hotel, as an add-on at its own cost, with our own drivers
+- Your hotel. Book wherever you like — or, if you prefer, we find you a trusted, economical option close to the clinic and you pay it directly
+- Airport transfers to and from your hotel: optional, an add-on at its own cost, with our own drivers
 - Any follow-up care once you return home
 - Any additional applications your physician may recommend later, which are quoted separately
 
-Sitting outside the quote does not mean sorting it out alone, and this is a good part of what
-an agency is for. For most of our patients this is a first trip to Cancún. The person collecting
-you at the airport is one of our own drivers — named, with a federal passenger-transport licence,
-[on their team page](/en/team/logistics-travel/) — and the hotel is one we already work with. You know who is
-meeting you, what it costs, and where you are sleeping before you board the plane.
+Both are optional, and plenty of patients would rather arrange them themselves — particularly
+those who already know Cancún or travel often. That is entirely fine, and it changes neither
+your treatment nor your price.
+
+The option is there for whoever wants it. For many of our patients this is a first trip to
+Cancún, and that is where an agency earns its place: take the transfer and the person meeting
+you at the airport is one of our own drivers — named, with a federal passenger-transport
+licence, [on their team page](/en/team/logistics-travel/) — and leave us the hotel and it is
+one we already work with. You know who is meeting you, what it costs, and where you are
+sleeping before you board the plane. How much of that you hand to us is your call.
 
 Want a number specific to your case? [Request a free evaluation →](/en/estimate/)
 
@@ -105,8 +110,9 @@ to travel, so you know the cost before making any travel plans.
 ### Does the quote include my flights and hotel?
 Your quote covers the medical side and our coordination. Flights are yours to book — we advise
 on timings and routes so they fit around your treatment day. The hotel sits outside the quote
-too, though we find you a trusted, economical option close to the clinic. Airport transfers to
-and from your hotel are available as an add-on, priced separately, with our own drivers.
+too: book it wherever you prefer, or ask us to find you a trusted option close to the clinic.
+Airport transfers to and from your hotel are optional, an add-on priced separately, with our
+own drivers.
 Anything you ask us to arrange appears as its own line, so you can always see which part of the
 number is treatment and which part is travel — and none of it is yours to work out on landing.
 

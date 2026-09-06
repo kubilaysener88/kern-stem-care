@@ -51,17 +51,21 @@ antes de verte.
 ## Qué *no* suele estar incluido
 
 - Los vuelos y la mayoría de las comidas. Te ayudamos a elegir horarios y rutas, y tú los reservas y los pagas
-- El hotel. Te conseguimos una opción de confianza y económica cerca de la clínica, y la pagas directamente
-- El traslado del aeropuerto al hotel y de regreso, como servicio adicional con su costo aparte, con nuestros propios choferes
+- El hotel. Lo reservas donde tú quieras — y si prefieres, te conseguimos una opción de confianza y económica cerca de la clínica, que pagas directamente
+- El traslado del aeropuerto al hotel y de regreso, opcional, como servicio adicional con su costo aparte y con nuestros propios choferes
 - Cualquier seguimiento una vez que regresas a casa
 - Las aplicaciones adicionales que tu médico llegue a recomendar después, que se cotizan aparte
 
-Que el hotel y el traslado vayan aparte no significa que los resuelvas solo, y ahí está buena
-parte de lo que hace una agencia. Para la mayoría de nuestros pacientes es su primera vez en
-Cancún. Quien te recoge en el aeropuerto son nuestros choferes — los conoces por nombre y con
-su licencia federal de transporte de pasajeros [en su página de equipo](/es/team/logistics-travel/) — y el
-hotel es uno con el que ya trabajamos. Sabes quién te espera, cuánto cuesta y dónde vas a
-dormir antes de subirte al avión.
+Los dos son opcionales, y muchos pacientes prefieren organizarlos por su cuenta — sobre todo
+quienes ya conocen Cancún o viajan seguido. Eso está perfectamente bien y no cambia en nada tu
+tratamiento ni tu precio.
+
+La opción existe para quien la quiera. Para buena parte de nuestros pacientes es su primera vez
+en Cancún, y ahí es donde una agencia sirve: si contratas el traslado, quien te recibe en el
+aeropuerto son nuestros propios choferes — los conoces por nombre y con su licencia federal de
+transporte de pasajeros [en su página de equipo](/es/team/logistics-travel/) — y si nos dejas
+el hotel, es uno con el que ya trabajamos. Sabes quién te espera, cuánto cuesta y dónde vas a
+dormir antes de subirte al avión. Tú decides cuánto de eso quieres en nuestras manos.
 
 ¿Quieres un número específico para tu caso? [Solicita una evaluación gratuita →](/es/cotizacion/)
 
@@ -107,9 +111,9 @@ de que te comprometas a viajar, así conoces el costo antes de hacer planes de v
 ### ¿La cotización incluye vuelos y hotel?
 Tu cotización cubre la parte médica y nuestra coordinación. Los vuelos los reservas tú —
 nosotros te asesoramos con horarios y rutas para que encajen alrededor de tu día de tratamiento.
-El hotel también va por tu cuenta, aunque podemos conseguirte una opción económica cerca de la
-clínica. Y el traslado del aeropuerto al hotel y de regreso está disponible como servicio
-adicional, con su costo por separado, con nuestros propios choferes. Todo lo que nos pidas
+El hotel también va por tu cuenta: lo reservas donde prefieras, o nos pides que te consigamos
+una opción de confianza cerca de la clínica. Y el traslado del aeropuerto al hotel y de regreso
+es opcional, como servicio adicional con su costo por separado y con nuestros propios choferes. Todo lo que nos pidas
 gestionar aparece como su propia línea, para que siempre veas qué parte del número es
 tratamiento y qué parte es viaje — y para que nada de eso lo tengas que resolver por tu cuenta
 al aterrizar.
