@@ -62,4 +62,13 @@ const { sections } = Astro.props;
   .prose-body :global(ul + p) {
     margin-top: 14px;
   }
+  /* Inline links need the underline, not just the blue. axe measures a link's
+     colour against the text around it (--blue on --muted body copy falls under
+     the 3:1 minimum), so colour alone leaves the link invisible to anyone who
+     cannot separate those two hues. Lives here rather than on one page so every
+     component rendering ProseSections gets it. */
+  .prose-body :global(a) {
+    color: var(--blue);
+    text-decoration: underline;
+  }
 </style>

@@ -13,6 +13,14 @@ const SITE_URL = 'https://kernstemcare.com';
 // reads the same content so the two can never drift apart again.
 const PLACEHOLDER_PARTNERS = homeContent.en.team.partners.filter((p) => p.name.startsWith('[')).map((p) => p.slug);
 
+// Same idea for the team detail pages: a coordinator whose name is still a
+// placeholder is noindexed by TeamMemberDetailPage, so it must not be in the
+// sitemap either. `pageTitle ?? name` matches what that component checks — a
+// department page (Logistics & Transportation) has a real title and stays in.
+const PLACEHOLDER_TEAM = homeContent.en.team.coordinators
+  .filter((c) => (c.pageTitle ?? c.name).startsWith('['))
+  .map((c) => c.slug);
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE_URL,
@@ -53,7 +61,10 @@ export default defineConfig({
       // did not — partner-clinic-1 and partner-lab-1 got real names (Timeless
       // Beauty, NAO Biotechnology) and stayed excluded here, which is why
       // Search Console reported them "Discovered - currently not indexed".
-      filter: (page) => page !== `${SITE_URL}/` && !PLACEHOLDER_PARTNERS.some((slug) => new RegExp(`/partners/${slug}/?$`).test(page)),
+      filter: (page) =>
+        page !== `${SITE_URL}/` &&
+        !PLACEHOLDER_PARTNERS.some((slug) => new RegExp(`/partners/${slug}/?$`).test(page)) &&
+        !PLACEHOLDER_TEAM.some((slug) => new RegExp(`/team/${slug}/?$`).test(page)),
       i18n: {
         defaultLocale: 'en',
         locales: {

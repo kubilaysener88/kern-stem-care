@@ -27,7 +27,8 @@ For the full step-by-step breakdown, see our **[International Patients](/en/proc
 
 - **Arrival & pickup.** Transfers between the airport and your hotel are available as an
   add-on at their own cost, with our own drivers — both hold federal passenger-transport
-  licences, and you can see them by name on our team page. Arranged in advance, it means
+  licences, and you can see them by name on
+  [Logistics & Transportation](/en/team/logistics-travel/). Arranged in advance, it means
   someone is waiting for you rather than you sorting out transport after a long flight.
 - **In-person consultation** at a **[government-licensed (COFEPRIS)](/en/about/#our-network)** clinic
   before any treatment.

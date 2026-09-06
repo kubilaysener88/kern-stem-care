@@ -37,11 +37,21 @@ const slugLabel = slug
   .replace(/-/g, ' ')
   .replace(/\b\w/g, (c) => c.toUpperCase());
 const metaTitle = isPlaceholder ? `${slugLabel} (${slug.match(/\d+$/)?.[0] ?? ''}) | Kern Stem Care` : `${partner.name} | Kern Stem Care`;
+// The on-page lead is the same paragraph for every partner, which is fine as
+// body copy but made two different partner pages share one meta description —
+// indistinguishable to a search engine. Build it from the partner's own name
+// and `detail` instead, which are unique per partner.
+const metaDescription = isPlaceholder
+  ? lead
+  : lang === 'es'
+    ? `${partner.name}: ${partner.detail}. Aliado independiente y con licencia dentro de la red de Kern Stem Care en Cancún.`
+    : `${partner.name}: ${partner.detail}. An independent, licensed partner within the Kern Stem Care network in Cancún.`;
+
 const qualityLeadLabel = lang === 'es' ? 'Responsable de calidad' : 'Quality lead';
 const physiciansTitle = lang === 'es' ? 'Médicos' : 'Physicians';
 ---
 
-<SiteLayout lang={lang} title={metaTitle} description={lead} noindex={isPlaceholder}>
+<SiteLayout lang={lang} title={metaTitle} description={metaDescription} noindex={isPlaceholder}>
   <Breadcrumbs lang={lang} items={[{ label: partner.name }]} />
   <PageHero eyebrow={eyebrow} title={partner.name} lead={lead} image={partner.image} />
 

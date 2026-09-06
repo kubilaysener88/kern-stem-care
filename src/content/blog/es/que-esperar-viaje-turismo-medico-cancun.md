@@ -28,7 +28,8 @@ Para el recorrido completo paso a paso, visita nuestra página de
 
 - **Llegada y traslado.** El traslado entre el aeropuerto y tu hotel está disponible como
   servicio adicional con su propio costo, con nuestros choferes — ambos tienen licencia federal
-  de transporte de pasajeros, y puedes verlos por nombre en nuestra página de equipo.
+  de transporte de pasajeros, y puedes verlos por nombre en
+  [Logística y Transporte](/es/team/logistics-travel/).
   Contratado con anticipación, significa que alguien te está esperando en vez de que tengas que
   resolver el transporte después de un vuelo largo.
 - **Consulta presencial** en una **[clínica con licencia gubernamental (COFEPRIS)](/es/about/#nuestra-red)**

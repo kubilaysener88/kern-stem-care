@@ -27,10 +27,20 @@ const teamTitle = lang === 'es' ? 'Choferes' : 'Drivers';
 const vehicleTitle = lang === 'es' ? 'Vehículos' : 'Vehicles';
 const backLabel = lang === 'es' ? '← Volver al equipo y aliados' : '← Back to team & partners';
 const ctaLabel = lang === 'es' ? 'Hablar con un Coordinador' : 'Talk to a Coordinator';
-const metaTitle = `${pageTitle} | Kern Stem Care`;
+// The coordinator's real name hasn't been filled in yet (still a "[bracket]"
+// placeholder), so this page would go to Google titled "[Name] | Kern Stem Care".
+// Keep it out of the index until a real person is behind it — the same test
+// PartnerDetailPage applies, and astro.config's sitemap filter reads it too.
+// `pageTitle` is checked rather than `name` because a department page (Logistics
+// & Transportation) legitimately has no single person's name.
+const isPlaceholder = pageTitle.startsWith('[');
+const slugLabel = slug
+  .replace(/-/g, ' ')
+  .replace(/\b\w/g, (c) => c.toUpperCase());
+const metaTitle = isPlaceholder ? `${slugLabel} | Kern Stem Care` : `${pageTitle} | Kern Stem Care`;
 ---
 
-<SiteLayout lang={lang} title={metaTitle} description={lead}>
+<SiteLayout lang={lang} title={metaTitle} description={lead} noindex={isPlaceholder}>
   <Breadcrumbs lang={lang} items={[{ label: pageTitle }]} />
   <PageHero
     eyebrow={eyebrow}
