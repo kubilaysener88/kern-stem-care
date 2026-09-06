@@ -4,7 +4,9 @@ import type { Lang } from './ui';
  * Privacy Policy, Terms & Conditions and Medical Disclaimer content, per language.
  * These are TEMPLATES / SCAFFOLDS — have a qualified attorney review and replace the
  * text for your jurisdiction (MX/US/CA) before publishing. [bracketed] text and the
- * "[Paste your attorney-reviewed text here.]" markers are where your final copy goes.
+ * The wording here is the site's own, not an attorney's. It is still on the TODO
+ * backlog in CLAUDE.md to have a lawyer review these three documents for MX/US/CA;
+ * bump each doc's `updated` date when that review lands.
  */
 
 export interface LegalSection {
@@ -20,8 +22,6 @@ export interface LegalDoc {
   /** Real "last updated" date, shown under the H1. Written out per language so
       it reads naturally; bump it whenever the document's substance changes. */
   updated: string;
-  templateNoticeLabel: string;
-  templateNotice: string;
   intro: string;
   medDisclaimer?: string; // terms only
   sections: LegalSection[];
@@ -40,9 +40,6 @@ const en: LegalSet = {
     h1: 'Privacy Policy',
     updatedLabel: 'Last updated:',
     updated: 'September 5, 2026',
-    templateNoticeLabel: 'Template notice:',
-    templateNotice:
-      ' This is a starting template. Have a qualified attorney review it for your jurisdiction (Mexico, U.S., Canada) before publishing, especially given you handle patient health information.',
     intro:
       'Kern Stem Care (“we,” “us,” “our”) respects your privacy. This policy explains what information we collect through our website and how we use it.',
     sections: [
@@ -68,9 +65,6 @@ const en: LegalSet = {
     h1: 'Terms & Conditions',
     updatedLabel: 'Last updated:',
     updated: 'September 5, 2026',
-    templateNoticeLabel: 'Template notice:',
-    templateNotice:
-      ' Have a qualified attorney adapt these terms to your jurisdiction and services before publishing.',
     intro:
       'Welcome to the Kern Stem Care website. By accessing or using this site, you agree to these Terms of Use. If you do not agree, please do not use the site.',
     medDisclaimer:
@@ -97,23 +91,20 @@ const en: LegalSet = {
     h1: 'Medical Disclaimer',
     updatedLabel: 'Last updated:',
     updated: 'September 5, 2026',
-    templateNoticeLabel: 'Scaffold notice:',
-    templateNotice:
-      ' This page is a structured scaffold. Replace each section with your attorney-reviewed wording for Mexico, the U.S., Canada, and the other markets you serve before publishing. Keep the "agency, not a clinic" framing.',
     intro:
       'Please read this Medical Disclaimer carefully before relying on any information on this website or engaging our coordination services.',
     medDisclaimer:
       '<strong>Kern Stem Care is a medical coordination and travel agency — not a clinic, hospital, or medical provider.</strong> We do not provide medical treatment, diagnosis, or advice. All medical care is delivered by independent, licensed clinics, physicians, and laboratories. Information here is general and educational only.',
     sections: [
-      { h2: '1. Agency role, not a clinic', body: 'Kern Stem Care coordinates travel, lodging, appointments and support and connects you with independent, licensed providers. We do not practice medicine. <span class="ph">[Paste your attorney-reviewed text here.]</span>' },
-      { h2: '2. Not medical advice', body: 'The content on this website is for general informational and educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. <span class="ph">[Paste your attorney-reviewed text here.]</span>' },
-      { h2: '3. No doctor–patient relationship', body: 'Using this site, contacting us, or submitting a form does not create a doctor–patient relationship. That relationship is formed only with a licensed provider after a formal evaluation. <span class="ph">[Paste your attorney-reviewed text here.]</span>' },
-      { h2: '4. Investigational therapies & regulatory status', body: 'Many regenerative and cellular therapies are not approved by the U.S. FDA or Health Canada for specific diseases and are considered investigational. <span class="ph">[Paste your attorney-reviewed text here.]</span>' },
-      { h2: '5. No guarantee of results', body: 'Neither we nor our partner providers guarantee any outcome or cure. Individual results vary. <span class="ph">[Paste your attorney-reviewed text here.]</span>' },
-      { h2: '6. Testimonials', body: 'Testimonials reflect individual experiences shared with written consent; results are not typical and will vary from person to person. <span class="ph">[Paste your attorney-reviewed text here.]</span>' },
-      { h2: '7. Medical emergencies', body: 'This website is not for medical emergencies. If you are experiencing one, call your local emergency number immediately. <span class="ph">[Paste your attorney-reviewed text here.]</span>' },
-      { h2: '8. Always consult your physician', body: 'Always seek the advice of a qualified physician before making any medical decision or starting any therapy. <span class="ph">[Paste your attorney-reviewed text here.]</span>' },
-      { h2: '9. Contact', body: 'Questions about this disclaimer? Contact kernstemcare@gmail.com. <span class="ph">[Paste your attorney-reviewed text here.]</span>' },
+      { h2: '1. Agency role, not a clinic', body: 'Kern Stem Care coordinates travel, lodging, appointments and support and connects you with independent, licensed providers. We do not practice medicine.' },
+      { h2: '2. Not medical advice', body: 'The content on this website is for general informational and educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment.' },
+      { h2: '3. No doctor–patient relationship', body: 'Using this site, contacting us, or submitting a form does not create a doctor–patient relationship. That relationship is formed only with a licensed provider after a formal evaluation.' },
+      { h2: '4. Investigational therapies & regulatory status', body: 'Many regenerative and cellular therapies are not approved by the U.S. FDA or Health Canada for specific diseases and are considered investigational.' },
+      { h2: '5. No guarantee of results', body: 'Neither we nor our partner providers guarantee any outcome or cure. Individual results vary.' },
+      { h2: '6. Testimonials', body: 'Testimonials reflect individual experiences shared with written consent; results are not typical and will vary from person to person.' },
+      { h2: '7. Medical emergencies', body: 'This website is not for medical emergencies. If you are experiencing one, call your local emergency number immediately.' },
+      { h2: '8. Always consult your physician', body: 'Always seek the advice of a qualified physician before making any medical decision or starting any therapy.' },
+      { h2: '9. Contact', body: 'Questions about this disclaimer? Contact kernstemcare@gmail.com.' },
     ],
     backHome: '← Back to home',
     otherLabel: 'Privacy Policy',
@@ -129,9 +120,6 @@ const es: LegalSet = {
     h1: 'Política de Privacidad',
     updatedLabel: 'Última actualización:',
     updated: '5 de septiembre de 2026',
-    templateNoticeLabel: 'Aviso de plantilla:',
-    templateNotice:
-      ' Esta es una plantilla inicial. Pida a un abogado calificado que la revise para su jurisdicción (México, EE.UU., Canadá) antes de publicar, sobre todo porque maneja información de salud de pacientes.',
     intro:
       'Kern Stem Care (“nosotros”) respeta su privacidad. Esta política explica qué información recopilamos a través de nuestro sitio web y cómo la usamos.',
     sections: [
@@ -157,9 +145,6 @@ const es: LegalSet = {
     h1: 'Términos y Condiciones',
     updatedLabel: 'Última actualización:',
     updated: '5 de septiembre de 2026',
-    templateNoticeLabel: 'Aviso de plantilla:',
-    templateNotice:
-      ' Pida a un abogado calificado que adapte estos términos a su jurisdicción y servicios antes de publicar.',
     intro:
       'Bienvenido al sitio web de Kern Stem Care. Al acceder o usar este sitio, usted acepta estos Términos de Uso. Si no está de acuerdo, no utilice el sitio.',
     medDisclaimer:
@@ -186,23 +171,20 @@ const es: LegalSet = {
     h1: 'Aviso Médico',
     updatedLabel: 'Última actualización:',
     updated: '5 de septiembre de 2026',
-    templateNoticeLabel: 'Aviso de plantilla:',
-    templateNotice:
-      ' Esta página es una estructura base. Reemplace cada sección con la redacción revisada por su abogado para México, EE.UU., Canadá y los demás mercados que atiende antes de publicar. Conserve el enfoque de "agencia, no clínica".',
     intro:
       'Lea este Aviso Médico con atención antes de basarse en cualquier información de este sitio o de contratar nuestros servicios de coordinación.',
     medDisclaimer:
       '<strong>Kern Stem Care es una agencia de coordinación médica y de viajes — no una clínica, hospital ni proveedor médico.</strong> No brindamos tratamiento, diagnóstico ni consejo médico. Toda la atención médica la brindan clínicas, médicos y laboratorios independientes y certificados. La información aquí es general y educativa.',
     sections: [
-      { h2: '1. Rol de agencia, no clínica', body: 'Kern Stem Care coordina viaje, hospedaje, citas y acompañamiento, y le conecta con proveedores independientes y certificados. No ejercemos la medicina. <span class="ph">[Pegue aquí el texto revisado por su abogado.]</span>' },
-      { h2: '2. No es consejo médico', body: 'El contenido de este sitio es solo para fines informativos y educativos generales y no sustituye el consejo, diagnóstico o tratamiento médico profesional. <span class="ph">[Pegue aquí el texto revisado por su abogado.]</span>' },
-      { h2: '3. Sin relación médico–paciente', body: 'Usar este sitio, contactarnos o enviar un formulario no crea una relación médico–paciente. Dicha relación se forma solo con un proveedor certificado tras una evaluación formal. <span class="ph">[Pegue aquí el texto revisado por su abogado.]</span>' },
-      { h2: '4. Terapias de investigación y estatus regulatorio', body: 'Muchas terapias regenerativas y celulares no están aprobadas por la FDA de EE.UU. ni por Health Canada para enfermedades específicas y se consideran de investigación. <span class="ph">[Pegue aquí el texto revisado por su abogado.]</span>' },
-      { h2: '5. Sin garantía de resultados', body: 'Ni nosotros ni nuestros proveedores aliados garantizamos ningún resultado ni cura. Los resultados individuales varían. <span class="ph">[Pegue aquí el texto revisado por su abogado.]</span>' },
-      { h2: '6. Testimonios', body: 'Los testimonios reflejan experiencias individuales compartidas con consentimiento por escrito; los resultados no son típicos y varían de persona a persona. <span class="ph">[Pegue aquí el texto revisado por su abogado.]</span>' },
-      { h2: '7. Emergencias médicas', body: 'Este sitio no es para emergencias médicas. Si tiene una, llame de inmediato a su número local de emergencias. <span class="ph">[Pegue aquí el texto revisado por su abogado.]</span>' },
-      { h2: '8. Consulte siempre a su médico', body: 'Busque siempre el consejo de un médico calificado antes de tomar cualquier decisión médica o iniciar cualquier terapia. <span class="ph">[Pegue aquí el texto revisado por su abogado.]</span>' },
-      { h2: '9. Contacto', body: '¿Dudas sobre este aviso? Contacte a kernstemcare@gmail.com. <span class="ph">[Pegue aquí el texto revisado por su abogado.]</span>' },
+      { h2: '1. Rol de agencia, no clínica', body: 'Kern Stem Care coordina viaje, hospedaje, citas y acompañamiento, y le conecta con proveedores independientes y certificados. No ejercemos la medicina.' },
+      { h2: '2. No es consejo médico', body: 'El contenido de este sitio es solo para fines informativos y educativos generales y no sustituye el consejo, diagnóstico o tratamiento médico profesional.' },
+      { h2: '3. Sin relación médico–paciente', body: 'Usar este sitio, contactarnos o enviar un formulario no crea una relación médico–paciente. Dicha relación se forma solo con un proveedor certificado tras una evaluación formal.' },
+      { h2: '4. Terapias de investigación y estatus regulatorio', body: 'Muchas terapias regenerativas y celulares no están aprobadas por la FDA de EE.UU. ni por Health Canada para enfermedades específicas y se consideran de investigación.' },
+      { h2: '5. Sin garantía de resultados', body: 'Ni nosotros ni nuestros proveedores aliados garantizamos ningún resultado ni cura. Los resultados individuales varían.' },
+      { h2: '6. Testimonios', body: 'Los testimonios reflejan experiencias individuales compartidas con consentimiento por escrito; los resultados no son típicos y varían de persona a persona.' },
+      { h2: '7. Emergencias médicas', body: 'Este sitio no es para emergencias médicas. Si tiene una, llame de inmediato a su número local de emergencias.' },
+      { h2: '8. Consulte siempre a su médico', body: 'Busque siempre el consejo de un médico calificado antes de tomar cualquier decisión médica o iniciar cualquier terapia.' },
+      { h2: '9. Contacto', body: '¿Dudas sobre este aviso? Contacte a kernstemcare@gmail.com.' },
     ],
     backHome: '← Volver al inicio',
     otherLabel: 'Política de Privacidad',
