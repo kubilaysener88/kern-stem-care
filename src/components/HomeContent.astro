@@ -142,7 +142,7 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
 
 <!-- ============ ABOUT ============ -->
 <section class="section about-section" id="about">
-  <div class="wrap split">
+  <div class:list={['wrap', c.about.image && 'split']}>
     <div>
       <span class="eyebrow">{c.about.eyebrow}</span>
       <h2>{c.about.h2}</h2>
@@ -152,7 +152,7 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
       </ul>
       <a href={withSlash(`/${lang}/about`)} class="btn btn-outline">{c.about.cta}</a>
     </div>
-    <div class="media-ph"><span set:html={c.about.mediaPh} /></div>
+    {c.about.image && <img class="split-media" src={c.about.image} alt={c.about.imageAlt ?? ''} loading="lazy" decoding="async" />}
   </div>
 </section>
 

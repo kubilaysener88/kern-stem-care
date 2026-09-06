@@ -246,6 +246,11 @@ p {
 }
 
 /* Split (text + media) */
+.split-media {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -256,18 +261,6 @@ p {
   .split {
     grid-template-columns: 1fr;
   }
-}
-.media-ph {
-  background: linear-gradient(135deg, #dceaf7, #cfeae8);
-  border: 2px dashed #9fc3d6;
-  border-radius: var(--radius);
-  min-height: 320px;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  color: #4c6f86;
-  font-weight: 600;
-  padding: 20px;
 }
 
 /* Checklist */

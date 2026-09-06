@@ -15,10 +15,6 @@ interface Props {
 const { lang } = Astro.props;
 const p = pagesContent[lang].about;
 const ctaLabel = lang === 'es' ? 'Hablar con un Coordinador' : 'Talk to a Coordinator';
-const mediaPh =
-  lang === 'es'
-    ? '📷 Reemplazar con foto del equipo / Cancún<br><span class="ph">[equipo-cancun.jpg]</span>'
-    : '📷 Replace with photo of your team / Cancún<br><span class="ph">[team-cancun.jpg]</span>';
 ---
 
 <SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription}>
@@ -26,11 +22,8 @@ const mediaPh =
   <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} image="/assets/hero/cancun-aerial.webp" />
 
   <section class="section">
-    <div class="wrap split">
-      <div>
-        <ProseSections sections={p.sections} />
-      </div>
-      <div class="media-ph"><span set:html={mediaPh} /></div>
+    <div class="wrap">
+      <ProseSections sections={p.sections} />
     </div>
   </section>
 

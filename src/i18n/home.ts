@@ -170,7 +170,12 @@ export interface HomeContent {
     p: string;
     checks: string[];
     cta: string;
-    mediaPh: string;
+    /** Team/Cancún photo beside the text. While it is absent the section drops
+        the two-column split and runs full width — an empty half column reads as
+        a broken page, and a dashed "[photo.jpg]" box reads as an unfinished one.
+        Set both fields when the real photo arrives and the split returns. */
+    image?: string;
+    imageAlt?: string;
   };
   why: {
     eyebrow: string;
@@ -389,7 +394,6 @@ const en: HomeContent = {
       'You contract care directly with the medical provider — we coordinate, transparently',
     ],
     cta: 'Talk to a Coordinator',
-    mediaPh: '📷 Replace with photo of your team / Cancún<br><span class="ph">[team-cancun.jpg]</span>',
   },
   why: {
     eyebrow: 'What We Do For You',
@@ -819,7 +823,6 @@ const es: HomeContent = {
       'Tú contratas la atención directamente con el proveedor médico — nosotros coordinamos, con transparencia',
     ],
     cta: 'Hablar con un Coordinador',
-    mediaPh: '📷 Reemplazar con foto de tu equipo / Cancún<br><span class="ph">[equipo-cancun.jpg]</span>',
   },
   why: {
     eyebrow: 'Lo Que Hacemos Por Ti',
