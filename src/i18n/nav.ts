@@ -25,6 +25,7 @@ const labels = {
     about: 'About',
     process: 'International Patients',
     testimonials: 'Testimonials',
+    chooseClinic: 'How to Choose a Clinic',
     blog: 'Blog',
     contact: 'Contact',
     consult: 'Book a Consultation',
@@ -40,6 +41,7 @@ const labels = {
     about: 'Sobre Nosotros',
     process: 'Pacientes Internacionales',
     testimonials: 'Testimonios',
+    chooseClinic: 'Cómo Elegir una Clínica',
     blog: 'Blog',
     contact: 'Contacto',
     consult: 'Agendar Consulta',
@@ -67,6 +69,7 @@ export function getNav(lang: Lang): NavItem[] {
     { path: `${base}/about`, label: t.about },
     { path: `${base}/process`, label: t.process },
     { path: `${base}/testimonials`, label: t.testimonials },
+    { path: lang === 'es' ? `${base}/como-elegir-clinica` : `${base}/how-to-choose-a-clinic`, label: t.chooseClinic },
     { path: `${base}/blog`, label: t.blog },
     { path: `${base}/contact`, label: t.contact },
   ];

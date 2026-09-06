@@ -80,11 +80,21 @@ npm run test:a11y # axe-core WCAG 2.1 AA scan of every route, desktop + mobile (
 - `src/components/CookieConsent.astro` — accessible cookie-consent banner (shown on
   every page via `SiteLayout`; choice persists in `localStorage['ksc-cookie-consent']`).
 - `src/components/pages/*.astro` — one component per interior page type
-  (Services, ServiceDetail, About, Process, Testimonials, Contact).
+  (Services, ServiceDetail, About, Process, Testimonials, Contact, ChooseClinic).
+- `src/components/NetworkCredentials.astro` — the partner network's verifiable
+  licence and *cédula* numbers, read from `homeContent` (never retyped) and
+  skipping partners whose name is still a `[placeholder]`. Rendered in the About
+  page's "our network" section.
 - `src/pages/index.astro` — redirects `/` → `/en`.
 - `src/pages/{en,es}/index.astro` — home pages.
 - `src/pages/{en,es}/services/` — `index` + `stem-cells` / `exosomes` / `fibroblasts`.
 - `src/pages/{en,es}/{about,process,testimonials,contact}.astro` — interior pages.
+- `src/pages/en/how-to-choose-a-clinic.astro` + `src/pages/es/como-elegir-clinica.astro`
+  — the verification guide. **The slugs differ per language**, so the component passes
+  `hreflangOverride` explicitly (same as the estimate/cotización pair); hreflang cannot
+  be derived from the path here. It is the canonical page for "how do I pick a clinic":
+  the safety and legality posts carry shorter checklists and link into it, so keep new
+  content pointing here rather than growing a fourth version of the same advice.
 - `src/pages/{en,es}/{privacy,terms,medical-disclaimer}.astro` — legal pages.
 - `src/pages/robots.txt.ts` — dynamically generated `/robots.txt` (Sitemap from `site`).
 - `public/favicon.svg` — Genesis mark.
@@ -135,6 +145,12 @@ npm run test:a11y # axe-core WCAG 2.1 AA scan of every route, desktop + mobile (
      `<h2 class="sr-only">` for a visually-headless section.
    - Decorative icons/emoji get `aria-hidden="true"`; meaningful links need a
      descriptive name (e.g. `aria-label`), not just "Learn more".
+   - An inline link inside a paragraph needs `text-decoration: underline`, not just
+     the blue: axe measures link colour against the *surrounding text* (`--blue` on
+     body copy is 1.81:1, under the 3:1 minimum). When the paragraph comes from
+     `set:html`, the rule must be written `p :global(a)` — Astro never stamps its
+     scope attribute onto markup it did not author, so a plain selector silently
+     misses.
 7. **Performance / Core Web Vitals:**
    - Fonts are a **system stack** (no web fonts) — keep it that way, or load any
      web font with `font-display: swap` + `preload` to avoid blocking/CLS.

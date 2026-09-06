@@ -44,6 +44,9 @@ proveedor que se salta esa conversación te está diciendo algo sobre cómo trab
 - ¿La terapia está aprobada para tu condición específica, o es de investigación?
 - ¿Quién es legalmente responsable de tu atención una vez que estás en la clínica?
 
+Cada una de estas merece su propio paso — las recorremos las cinco, con los registros
+oficiales, en **[cómo elegir una clínica de células madre en México](/es/como-elegir-clinica/)**.
+
 La primera pregunta puedes empezar a responderla con nosotros: los números de licencia y de
 *cédula* de nuestra red están publicados en [lo que puedes verificar](/es/about/#nuestra-red).
 El proveedor que no pueda contestar esa misma pregunta por escrito es del que hay que

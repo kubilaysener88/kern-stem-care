@@ -116,6 +116,22 @@ export interface EstimatePage {
   disclaimer: string;
 }
 
+export interface ChooseClinicPage {
+  metaTitle: string;
+  metaDescription: string;
+  eyebrow: string;
+  title: string;
+  lead: string;
+  stepsTitle: string;
+  steps: { title: string; body: string; link?: { label: string; href: string } }[];
+  redFlagsTitle: string;
+  redFlags: string[];
+  worked: { title: string; body: string; ctaLabel: string; ctaHref: string };
+  faqTitle: string;
+  faq: { q: string; a: string }[];
+  disclaimer: string;
+}
+
 export interface PagesSet {
   services: ServicesIndexPage;
   stemCells: SimplePage;
@@ -127,6 +143,7 @@ export interface PagesSet {
   testimonials: TestimonialsPage;
   contact: ContactPage;
   estimate: EstimatePage;
+  chooseClinic: ChooseClinicPage;
 }
 
 const investigationalEN =
@@ -377,6 +394,76 @@ const en: PagesSet = {
     disclaimer:
       '<strong>Important:</strong> Kern Stem Care is a medical coordination agency, not a clinic, and does not provide medical treatment or advice. This estimate is prepared with guidance from independent, licensed partner physicians but is not a final quote, diagnosis, or guarantee — your treating physician confirms your protocol and final cost during your evaluation. Many regenerative therapies are not approved by the U.S. FDA or Health Canada for specific diseases and are considered investigational.',
   },
+  chooseClinic: {
+    metaTitle: 'How to Choose a Stem Cell Clinic in Mexico | Kern Stem Care',
+    metaDescription:
+      "Five things you can verify yourself before choosing a stem cell clinic in Mexico — the physician's licence, the facility's sanitary document, the batch certificate — with the official government links.",
+    eyebrow: 'Verification Guide',
+    title: 'How to choose a stem cell clinic in Mexico',
+    lead: 'The difference between a legitimate provider and a risky one is almost never the price or how polished the website looks. It is what they can show you in writing — and you can check most of it yourself, in a few minutes, without asking anyone permission.',
+    stepsTitle: 'Five things you can verify before you decide',
+    steps: [
+      {
+        title: "Verify the treating physician's licence",
+        body: "Ask for the full name and <em>cédula profesional</em> of the <strong>physician who will treat you</strong> — not the coordinator answering your messages. Look it up on Mexico's public professional registry: their name should come back with their qualification. It is free, it takes under a minute, and nobody needs to know you did it.",
+        link: { label: 'National registry of professionals (SEP)', href: 'https://www.gob.mx/cedulaprofesional' },
+      },
+      {
+        title: "Ask for the facility's sanitary document",
+        body: 'Health establishments in Mexico operate under an <strong>aviso de funcionamiento</strong> or, for higher-risk activities, a <strong>sanitary licence</strong> issued by COFEPRIS. It is worth being straight about one thing: there is no public search where you type a clinic name and its permit appears. That is exactly why the document itself is the evidence. Ask for the PDF and check that the legal name, the address, and the authorised activity match the clinic that will actually treat you.',
+        link: { label: 'Sanitary licensing — COFEPRIS', href: 'https://www.gob.mx/cofepris/acciones-y-programas/licenciamiento' },
+      },
+      {
+        title: 'Ask for the certificate of analysis for your batch',
+        body: 'For the cells going into you, not a general laboratory brochure. It should document the tissue source, the cell count, viability, and sterility testing. If the laboratory does not issue a certificate for every batch, you already have your answer.',
+      },
+      {
+        title: 'Insist on an in-person evaluation with the treating physician',
+        body: 'Before you pay, and before you book flights you cannot change. A phone call or a web form is not an evaluation. That is the step where a physician catches the cases a therapy is wrong for — and where a legitimate provider tells you no.',
+      },
+      {
+        title: 'Get the itemized quote in writing',
+        body: 'What it covers, what it leaves out, and who you pay for each part. A round number over WhatsApp is not a quote. Compare like for like: a lower price that skips the licensed laboratory or the in-person evaluation is not a discount.',
+        link: { label: 'What it costs and what goes into the price', href: '/en/blog/how-much-does-stem-cell-therapy-cost-in-mexico/' },
+      },
+    ],
+    redFlagsTitle: 'Reasons to walk away',
+    redFlags: [
+      'They promise to cure a disease, or quote you a success percentage.',
+      'They quote a treatment before any physician has evaluated you.',
+      'They say "COFEPRIS certified" but produce no number and no document.',
+      'The price drops if you decide today.',
+      'They will not tell you the name of the physician who will treat you.',
+      'They suggest you keep this from your doctor at home.',
+    ],
+    worked: {
+      title: 'Start with us',
+      body: 'This list is worth nothing if you do not also point it at whoever handed it to you. Our network’s numbers are published: the sanitary licence of the laboratory that prepares the cells, and the <em>cédula profesional</em> of every treating physician, with their full name. Check those before believing anything else we tell you.',
+      ctaLabel: 'See what you can verify',
+      ctaHref: '/en/about/#our-network',
+    },
+    faqTitle: 'Common questions',
+    faq: [
+      {
+        q: 'Is stem cell therapy legal in Mexico?',
+        a: 'Yes, within Mexico’s regulatory framework and at government-licensed (COFEPRIS) establishments. That is a different question from whether it is approved for your specific condition: many regenerative therapies are considered investigational and are not approved by the U.S. FDA or Health Canada for specific diseases. <a href="/en/blog/is-stem-cell-therapy-legal-in-mexico/">We explain the distinction here</a>.',
+      },
+      {
+        q: 'What if I cannot read the laboratory certificate?',
+        a: 'You do not need to interpret it like a specialist. Look for four things: a batch number, where the cells came from, a viability figure, and sterility testing. That it exists, is signed, and matches your batch already tells you most of what you need.',
+      },
+      {
+        q: 'Will they be offended if I ask all this?',
+        a: 'A serious provider expects these questions and has the documents ready. How they react to being asked is itself part of the information you are gathering.',
+      },
+      {
+        q: 'You coordinate clinics. Can you be impartial?',
+        a: 'We have an obvious interest and would rather say so: we earn when a treatment is coordinated. That is precisely why this guide is written so you can verify anyone, us included, using documents that do not depend on our word. If we ever fail one of the five points above, this page is the argument for not hiring us.',
+      },
+    ],
+    disclaimer:
+      '<strong>Important:</strong> Kern Stem Care is a medical coordination agency, not a clinic, and does not provide medical treatment or advice. This guide is general information to help you evaluate providers; it is not a diagnosis, a recommendation of any specific treatment, or a substitute for a medical evaluation. Many regenerative therapies are not approved by the U.S. FDA or Health Canada for specific diseases and are considered investigational.',
+  },
 };
 
 const es: PagesSet = {
@@ -548,6 +635,76 @@ const es: PagesSet = {
       'La dosis de células madre la calcula tu médico tratante con base en el peso corporal — compartirlo desde ahora nos ayuda a preparar una cotización inicial más precisa. Tu protocolo final siempre lo confirma el médico durante tu evaluación, no este formulario.',
     disclaimer:
       '<strong>Importante:</strong> Kern Stem Care es una agencia de coordinación médica, no una clínica, y no brinda tratamiento ni consejo médico. Esta cotización se prepara con la guía de médicos aliados independientes y certificados, pero no es una cotización final, diagnóstico ni garantía — tu médico tratante confirma tu protocolo y costo final durante tu evaluación. Muchas terapias regenerativas no están aprobadas por la FDA de EE.UU. ni Health Canada para enfermedades específicas y se consideran de investigación.',
+  },
+  chooseClinic: {
+    metaTitle: 'Cómo Elegir una Clínica de Células Madre en México | Kern Stem Care',
+    metaDescription:
+      'Cinco cosas que puedes verificar tú mismo antes de elegir una clínica de células madre en México — la cédula del médico, el documento sanitario del establecimiento, el certificado del lote — con los enlaces oficiales del gobierno.',
+    eyebrow: 'Guía de Verificación',
+    title: 'Cómo elegir una clínica de células madre en México',
+    lead: 'La diferencia entre un proveedor legítimo y uno riesgoso casi nunca está en el precio ni en lo bonita que se vea su página. Está en lo que te pueden mostrar por escrito — y buena parte lo puedes comprobar tú mismo, en unos minutos, sin pedirle permiso a nadie.',
+    stepsTitle: 'Cinco cosas que puedes verificar antes de decidir',
+    steps: [
+      {
+        title: 'Verifica la cédula del médico que te va a tratar',
+        body: 'Pide el nombre completo y la <em>cédula profesional</em> del <strong>médico tratante</strong>, no la del coordinador que te contesta los mensajes. Búscalo en el registro público de profesionistas: debe aparecer su nombre con su título. Es gratis, tarda menos de un minuto, y nadie tiene que enterarse de que lo hiciste.',
+        link: { label: 'Registro Nacional de Profesionistas (SEP)', href: 'https://www.gob.mx/cedulaprofesional' },
+      },
+      {
+        title: 'Pide el documento sanitario del establecimiento',
+        body: 'En México los establecimientos de salud operan con un <strong>aviso de funcionamiento</strong> o, para actividades de mayor riesgo, una <strong>licencia sanitaria</strong> emitida por COFEPRIS. Vale la pena ser franco en algo: no existe un buscador público donde escribas el nombre de una clínica y aparezca su permiso. Justo por eso el documento en sí es la prueba. Pídelo en PDF y revisa que el nombre legal, el domicilio y la actividad autorizada coincidan con la clínica donde de verdad te van a atender.',
+        link: { label: 'Licencias sanitarias — COFEPRIS', href: 'https://www.gob.mx/cofepris/acciones-y-programas/licenciamiento' },
+      },
+      {
+        title: 'Pide el certificado de análisis de tu lote',
+        body: 'De las células que te van a aplicar a ti, no un folleto general del laboratorio. Debe documentar el origen del tejido, el conteo celular, la viabilidad y las pruebas de esterilidad. Si el laboratorio no emite un certificado por cada lote, ya tienes tu respuesta.',
+      },
+      {
+        title: 'Exige una evaluación presencial con el médico tratante',
+        body: 'Antes de pagar, y antes de comprar vuelos que no puedas cambiar. Una llamada o un formulario no son una evaluación. Ese es el paso donde un médico detecta los casos en que una terapia no es adecuada — y donde un proveedor legítimo te dice que no.',
+      },
+      {
+        title: 'Pide la cotización desglosada por escrito',
+        body: 'Qué incluye, qué deja fuera, y a quién le pagas cada parte. Un número redondo por WhatsApp no es una cotización. Compara lo equivalente con lo equivalente: un precio más bajo que se salta el laboratorio con licencia o la evaluación presencial no es un descuento.',
+        link: { label: 'Qué cuesta y qué entra en el precio', href: '/es/blog/cuanto-cuesta-la-terapia-con-celulas-madre-en-mexico/' },
+      },
+    ],
+    redFlagsTitle: 'Razones para retirarte',
+    redFlags: [
+      'Prometen curar una enfermedad, o te dan un porcentaje de éxito.',
+      'Te cotizan un tratamiento antes de que un médico te haya evaluado.',
+      'Dicen "certificados por COFEPRIS" pero no te dan número ni documento.',
+      'El precio baja si decides hoy.',
+      'No te dicen el nombre del médico que te va a aplicar el tratamiento.',
+      'Te sugieren que no lo comentes con tu médico de casa.',
+    ],
+    worked: {
+      title: 'Empieza por nosotros',
+      body: 'Esta lista no sirve de nada si no la aplicas también a quien te la dio. Los números de nuestra red están publicados: la licencia sanitaria del laboratorio que prepara las células, y la <em>cédula profesional</em> de cada médico tratante, con nombre y apellido. Compruébalos antes de creernos cualquier otra cosa.',
+      ctaLabel: 'Ver lo que puedes verificar',
+      ctaHref: '/es/about/#nuestra-red',
+    },
+    faqTitle: 'Preguntas frecuentes',
+    faq: [
+      {
+        q: '¿Es legal la terapia con células madre en México?',
+        a: 'Sí, dentro del marco regulatorio mexicano y en establecimientos con licencia gubernamental (COFEPRIS). Esa es una pregunta distinta a si está aprobada para tu condición específica: muchas terapias regenerativas se consideran de investigación y no están aprobadas por la FDA de EE.UU. ni por Health Canada para enfermedades concretas. <a href="/es/blog/es-legal-la-terapia-con-celulas-madre-en-mexico/">Aquí explicamos la diferencia</a>.',
+      },
+      {
+        q: '¿Y si no entiendo el certificado del laboratorio?',
+        a: 'No necesitas interpretarlo como especialista. Fíjate en cuatro cosas: que traiga número de lote, que diga de dónde vienen las células, que reporte viabilidad, y que incluya pruebas de esterilidad. Que exista, esté firmado y corresponda a tu lote ya te dice casi todo.',
+      },
+      {
+        q: '¿Se van a molestar si pregunto todo esto?',
+        a: 'Un proveedor serio espera estas preguntas y tiene los documentos a la mano. Cómo reaccionan ante la pregunta es, en sí mismo, parte de la información que estás buscando.',
+      },
+      {
+        q: 'Ustedes coordinan clínicas. ¿Pueden ser imparciales?',
+        a: 'Tenemos un interés evidente y preferimos decirlo: ganamos cuando se coordina un tratamiento. Precisamente por eso esta guía está escrita para que verifiques a cualquiera, nosotros incluidos, con documentos que no dependen de nuestra palabra. Si algún día fallamos en alguno de los cinco puntos de arriba, esta misma página es el argumento para no contratarnos.',
+      },
+    ],
+    disclaimer:
+      '<strong>Importante:</strong> Kern Stem Care es una agencia de coordinación médica, no una clínica, y no brinda tratamiento ni consejo médico. Esta guía es información general para ayudarte a evaluar proveedores; no es un diagnóstico, ni una recomendación de ningún tratamiento específico, ni sustituye una evaluación médica. Muchas terapias regenerativas no están aprobadas por la FDA de EE.UU. ni Health Canada para enfermedades específicas y se consideran de investigación.',
   },
 };
 

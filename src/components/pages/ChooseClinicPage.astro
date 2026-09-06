@@ -1,0 +1,258 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import PageHero from '../PageHero.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import type { Lang } from '../../i18n/ui';
+import { pagesContent } from '../../i18n/pages';
+import { withSlash } from '../../i18n/utils';
+
+/**
+ * "How to choose a stem cell clinic" — the verification guide.
+ *
+ * This page exists because of a gap the AI-visibility check turned up: asked
+ * which Cancún providers are legitimate, assistants answer with a due-diligence
+ * framing (check the cédula, ask for the permit) and cite clinics that publish
+ * checkable numbers. Nobody occupies the neutral "here is how to verify any of
+ * them" position, which is the one an agency can hold credibly and a clinic
+ * cannot.
+ *
+ * The page is the canonical home for that intent. The safety and legality
+ * articles both carry shorter versions of the same checklist and link here, so
+ * the three do not compete for it.
+ */
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const p = pagesContent[lang].chooseClinic;
+
+// The slug differs per language, so hreflang has to be told explicitly rather
+// than derived from the current path (same pattern as the estimate page).
+const hreflangOverride = { en: '/en/how-to-choose-a-clinic', es: '/es/como-elegir-clinica' };
+
+const site = Astro.site?.href.replace(/\/$/, '') ?? 'https://kernstemcare.com';
+const stripTags = (html: string) => html.replace(/<[^>]+>/g, '');
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  inLanguage: lang,
+  mainEntity: p.faq.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: stripTags(item.a) },
+  })),
+};
+
+const crumb = lang === 'es' ? 'Cómo elegir una clínica' : 'How to choose a clinic';
+const ctaLabel = lang === 'es' ? 'Solicita una evaluación gratuita' : 'Request a free evaluation';
+const ctaHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
+const externalNote = lang === 'es' ? 'se abre en una pestaña nueva' : 'opens in a new tab';
+---
+
+<SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription} hreflangOverride={hreflangOverride}>
+  <script type="application/ld+json" slot="head" is:inline set:html={JSON.stringify(faqSchema)} />
+  <Breadcrumbs lang={lang} items={[{ label: crumb }]} />
+  <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} image="/assets/why/aliados-verificados.jpg" imagePosition="center 30%" />
+
+  <section class="section" aria-labelledby="steps-heading">
+    <div class="wrap">
+      <h2 id="steps-heading">{p.stepsTitle}</h2>
+      <ol class="checks">
+        {
+          p.steps.map((step) => (
+            <li class="check">
+              <h3>{step.title}</h3>
+              <p set:html={step.body} />
+              {step.link &&
+                (step.link.href.startsWith('http') ? (
+                  <a class="check-link" href={step.link.href} target="_blank" rel="noopener noreferrer">
+                    {step.link.label} <span aria-hidden="true">↗</span>
+                    <span class="sr-only"> ({externalNote})</span>
+                  </a>
+                ) : (
+                  <a class="check-link" href={withSlash(step.link.href)}>
+                    {step.link.label} <span aria-hidden="true">→</span>
+                  </a>
+                ))}
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section alt" aria-labelledby="flags-heading">
+    <div class="wrap">
+      <h2 id="flags-heading">{p.redFlagsTitle}</h2>
+      <ul class="flags">
+        {
+          p.redFlags.map((flag) => (
+            <li>
+              <span class="flag-mark" aria-hidden="true">!</span>
+              {flag}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="worked-heading">
+    <div class="wrap">
+      <div class="worked">
+        <h2 id="worked-heading">{p.worked.title}</h2>
+        <p set:html={p.worked.body} />
+        <a class="btn btn-primary" href={withSlash(p.worked.ctaHref)}>{p.worked.ctaLabel}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" aria-labelledby="faq-heading">
+    <div class="wrap">
+      <h2 id="faq-heading">{p.faqTitle}</h2>
+      {
+        p.faq.map((item) => (
+          <div class="qa">
+            <h3>{item.q}</h3>
+            <p set:html={item.a} />
+          </div>
+        ))
+      }
+      <p class="note" set:html={p.disclaimer} />
+      <div class="center" style="margin-top:30px">
+        <a class="btn btn-primary" href={withSlash(ctaHref)}>{ctaLabel}</a>
+      </div>
+    </div>
+  </section>
+</SiteLayout>
+
+<style>
+  .checks {
+    list-style: none;
+    counter-reset: check;
+    padding: 0;
+    margin: 28px 0 0;
+    max-width: 78ch;
+  }
+  .check {
+    counter-increment: check;
+    position: relative;
+    padding: 0 0 0 58px;
+    margin: 0 0 30px;
+  }
+  .check::before {
+    content: counter(check);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--teal-text);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .check h3 {
+    color: var(--navy);
+    font-size: 1.12rem;
+    margin: 4px 0 0.5em;
+  }
+  .check p {
+    color: #33414f;
+    margin: 0 0 0.6em;
+  }
+  .check-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--blue);
+    text-decoration: none;
+  }
+  .check-link:hover {
+    text-decoration: underline;
+  }
+  .flags {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+    max-width: 78ch;
+  }
+  .flags li {
+    position: relative;
+    padding: 0 0 0 40px;
+    margin: 0 0 14px;
+    color: #33414f;
+  }
+  .flag-mark {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 24px;
+    height: 24px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #fff2e6;
+    border: 1px solid #f0c48c;
+    color: #8a5310;
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+  .worked {
+    max-width: 78ch;
+    padding: 28px 30px;
+    background: #f2f8f8;
+    border: 1px solid #d3e7e7;
+    border-radius: 14px;
+  }
+  .worked h2 {
+    margin: 0 0 0.4em;
+    font-size: 1.4rem;
+  }
+  .worked p {
+    color: #33414f;
+    margin: 0 0 20px;
+  }
+  .qa {
+    max-width: 78ch;
+    padding: 0 0 18px;
+    margin: 0 0 18px;
+    border-bottom: 1px solid var(--line);
+  }
+  .qa h3 {
+    color: var(--navy);
+    font-size: 1.05rem;
+    margin: 0 0 0.4em;
+  }
+  .qa p {
+    color: #33414f;
+    margin: 0;
+  }
+  /* Inline links inside prose need the underline, not just the blue: axe's
+     link-in-text-block measures the link colour against the surrounding text
+     (#1565c0 on #33414f is 1.81:1, below the 3:1 minimum), so colour alone
+     leaves the link invisible to anyone who cannot separate those two hues.
+     `:global` is required because these anchors come from `set:html`, so Astro
+     never stamps them with the scope attribute a plain selector would need. */
+  .qa p :global(a),
+  .check p :global(a),
+  .worked p :global(a),
+  .note :global(a) {
+    color: var(--blue);
+    text-decoration: underline;
+  }
+  .note {
+    max-width: 78ch;
+    margin: 26px 0 0;
+    padding: 16px 20px;
+    background: #fff7e6;
+    border: 1px solid #f0d98c;
+    border-radius: 12px;
+    color: #6b5a1e;
+    font-size: 0.9rem;
+  }
+</style>

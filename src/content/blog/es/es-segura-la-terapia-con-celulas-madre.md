@@ -44,6 +44,9 @@ Autoridades reguladoras y organizaciones de seguridad del paciente han señalado
 | ¿Recibes una evaluación médica presencial antes del tratamiento — no solo una llamada? | Una evaluación real es cómo el médico detecta cuándo una terapia no es adecuada para ti. |
 | ¿Quién te va a tratar realmente? | Pide el nombre y las credenciales del médico tratante, no solo del coordinador. |
 
+¿Quieres la versión larga, con los registros oficiales y qué debe decir cada documento? Mira
+**[Cómo elegir una clínica de células madre en México](/es/como-elegir-clinica/)**.
+
 ## Cómo Kern Stem Care reduce ese riesgo por ti
 
 Somos una agencia de coordinación, no una clínica — nosotros no aplicamos los tratamientos directamente. Lo que hacemos es la verificación: solo trabajamos con médicos y laboratorios independientes con licencia gubernamental (COFEPRIS), y tu plan de tratamiento lo confirma el médico tratante durante una evaluación presencial — no lo decidimos nosotros ni un formulario.

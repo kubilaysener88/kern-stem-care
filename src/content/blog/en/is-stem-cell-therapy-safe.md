@@ -44,6 +44,9 @@ Regulators and patient-safety organizations have repeatedly flagged "stem cell t
 | Do you get a physical evaluation before treatment — not just a phone call? | A real evaluation is how a physician catches when a therapy isn't right for you. |
 | Who is actually treating you? | Ask for the treating physician's name and credentials, not just the coordinator's. |
 
+Want the long version, with the official registries and what each document should say? See
+**[How to choose a stem cell clinic in Mexico](/en/how-to-choose-a-clinic/)**.
+
 ## How Kern Stem Care reduces this risk for you
 
 We're a coordination agency, not a clinic — we don't perform treatments ourselves. What we do is the vetting: we only work with independent, government-licensed (COFEPRIS) physicians and laboratories, and your treatment plan is confirmed by the treating physician during an in-person evaluation — not decided by us or by a form.

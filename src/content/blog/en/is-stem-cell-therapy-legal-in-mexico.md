@@ -43,6 +43,9 @@ Any provider who skips that conversation is telling you something about how they
 - Is the therapy approved for your specific condition, or is it investigational?
 - Who is legally responsible for your care once you're at the clinic?
 
+Each of these is worth a step of its own — we walk through all five, with the official
+registries, in **[how to choose a stem cell clinic in Mexico](/en/how-to-choose-a-clinic/)**.
+
 On the first question, you can start with us: our network's licence and *cédula* numbers are
 published at [what you can verify](/en/about/#our-network). A provider who cannot answer that
 same question in writing is the one to be careful with.
