@@ -279,9 +279,9 @@ const en: HomeContent = {
   hero: {
     flagsPre: 'Coordination agency in Cancún',
     flagsMid: 'Guiding patients from',
-    h1: 'Your Trusted Guide to the Best Stem Cell Care in Cancún',
-    tagline: 'Vetted clinics | Transparent pricing | Complete care',
-    p: "",
+    h1: 'Your Trusted Guide to Stem Cell Therapy in Cancún',
+    tagline: 'The clinic handles the medicine. We handle the journey.',
+    p: 'From your first question to your flight home.',
     pills: [
       { label: '🧬 Stem Cells', slug: 'stem-cells' },
       { label: '✨ Exosomes', slug: 'exosomes' },
@@ -708,9 +708,9 @@ const es: HomeContent = {
   hero: {
     flagsPre: 'Agencia en Cancún',
     flagsMid: 'Guiando a pacientes de',
-    h1: 'Tu Guía de Confianza para la Mejor Atención en Células Madre en Cancún',
-    tagline: 'Clínicas verificadas | Precios transparentes | Atención completa',
-    p: '',
+    h1: 'Tu Guía de Confianza para la Terapia con Células Madre en Cancún',
+    tagline: 'La clínica se encarga de la medicina. Nosotros del viaje.',
+    p: 'Desde tu primera pregunta hasta tu vuelo de regreso.',
     pills: [
       { label: '🧬 Células Madre', slug: 'stem-cells' },
       { label: '✨ Exosomas', slug: 'exosomes' },

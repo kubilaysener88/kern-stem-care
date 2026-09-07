@@ -317,7 +317,7 @@ const en: PagesSet = {
     steps: [
       { title: 'Free Consultation', body: 'Share your history. We match your case to the right partner provider, who reviews it and explains realistic options.', image: '/assets/journey/pre-consulta.jpg' },
       { title: 'Plan, Quote & Itinerary', body: 'The provider sends a medical plan; we build your transparent quote and travel itinerary around it.', image: '/assets/journey/consulta.jpg' },
-      { title: 'Travel & Care in Cancún', body: 'We coordinate flights, lodging, and transport. You receive care at our partner clinic; we stay with you throughout.', image: '/assets/journey/welcome.jpg' },
+      { title: 'Travel & Care in Cancún', body: 'We guide your flight, and lodging and airport transfers are there if you want them. You receive care at our partner clinic; we stay with you throughout.', image: '/assets/journey/welcome.jpg' },
       { title: 'Follow-Up at Home', body: 'We help coordinate remote check-ins and aftercare with the provider once you return home.', image: '/assets/journey/post-tratamiento.jpg' },
     ],
     sections: [
@@ -559,7 +559,7 @@ const es: PagesSet = {
     steps: [
       { title: 'Consulta Gratis', body: 'Comparte tu historial. Canalizamos tu caso al proveedor aliado adecuado, que lo revisa y te explica opciones realistas.', image: '/assets/journey/pre-consulta.jpg' },
       { title: 'Plan, Cotización e Itinerario', body: 'El proveedor envía un plan médico; nosotros armamos tu cotización transparente y tu itinerario de viaje.', image: '/assets/journey/consulta.jpg' },
-      { title: 'Viaje y Atención en Cancún', body: 'Coordinamos vuelos, hospedaje y transporte. Recibes la atención en la clínica aliada; te acompañamos en todo momento.', image: '/assets/journey/welcome.jpg' },
+      { title: 'Viaje y Atención en Cancún', body: 'Te orientamos con el vuelo; el hospedaje y los traslados están ahí si los quieres. Recibes la atención en la clínica aliada; te acompañamos en todo momento.', image: '/assets/journey/welcome.jpg' },
       { title: 'Seguimiento en Casa', body: 'Ayudamos a coordinar el seguimiento remoto y los cuidados posteriores con el proveedor al volver a casa.', image: '/assets/journey/post-tratamiento.jpg' },
     ],
     sections: [
