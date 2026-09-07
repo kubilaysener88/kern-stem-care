@@ -7,7 +7,7 @@ pubDate: 2026-09-07
 author: 'Kern Stem Care'
 reviewedBy: '[Medical reviewer name, credentials]'
 tags: ['arthritis', 'joint pain', 'stem cells', 'orthopedic']
-draft: true
+draft: false
 ---
 
 

@@ -52,8 +52,10 @@ const ROUTES = [
   '/es/blog/cuanto-tarda-en-verse-resultados-celulas-madre',
   '/en/blog/pain-worse-before-better-stem-cell-therapy',
   '/es/blog/es-normal-que-duela-mas-antes-de-mejorar',
-  // stem-cell-therapy-arthritis-joint-pain and exosome-therapy-for-skin (+ ES) are
-  // queued as draft: true — add their routes back here once the weekly task publishes them.
+  '/en/blog/stem-cell-therapy-arthritis-joint-pain',
+  '/es/blog/terapia-con-celulas-madre-para-artritis-dolor-articular',
+  // exosome-therapy-for-skin (+ ES) is queued as draft: true — add its routes back
+  // here once the weekly task publishes it.
 ];
 
 const WCAG_AA_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'];

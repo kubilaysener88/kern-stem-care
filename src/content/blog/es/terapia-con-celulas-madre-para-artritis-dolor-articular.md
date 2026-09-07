@@ -7,7 +7,7 @@ pubDate: 2026-09-07
 author: 'Kern Stem Care'
 reviewedBy: '[Nombre del revisor médico, credenciales]'
 tags: ['artritis', 'dolor articular', 'células madre', 'ortopedia']
-draft: true
+draft: false
 ---
 
 
