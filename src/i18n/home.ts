@@ -280,8 +280,8 @@ const en: HomeContent = {
     flagsPre: 'Coordination agency in Cancún',
     flagsMid: 'Guiding patients from',
     h1: 'Your Trusted Guide to Stem Cell Therapy in Cancún',
-    tagline: 'The clinic handles the medicine. We handle the journey.',
-    p: 'From your first question to your flight home.',
+    tagline: 'Vetted clinics. Transparent pricing. One coordinator.',
+    p: 'We stay with you from your first question to your flight home.',
     pills: [
       { label: '🧬 Stem Cells', slug: 'stem-cells' },
       { label: '✨ Exosomes', slug: 'exosomes' },
@@ -416,7 +416,7 @@ const en: HomeContent = {
         image: '/assets/why/logistica-completa.jpg',
         alt: 'Driver welcoming a traveler with luggage at Cancún International Airport',
         title: 'Full Logistics',
-        body: 'Flights guidance, airport pickup, lodging, and transport in Cancún — all arranged for you.',
+        body: 'Flight guidance, plus airport pickup, lodging and transport in Cancún whenever you want us to arrange them.',
       },
       {
         image: '/assets/why/one-point-of-contact.jpg',
@@ -447,7 +447,7 @@ const en: HomeContent = {
     steps: [
       { title: 'Free Consultation', body: 'Share your history with us. We match your case to the right partner provider, who reviews it and explains realistic options.', image: '/assets/journey/pre-consulta.jpg' },
       { title: 'Plan, Quote & Itinerary', body: 'The provider sends a medical plan; we build your transparent quote and travel itinerary around it.', image: '/assets/journey/consulta.jpg' },
-      { title: 'Travel & Care in Cancún', body: 'We coordinate flights, lodging, and transport. You receive care at our partner clinic; we stay with you throughout.', image: '/assets/journey/welcome.jpg' },
+      { title: 'Travel & Care in Cancún', body: 'We guide your flight, and lodging and airport transfers are there if you want them. You receive care at our partner clinic; we stay with you throughout.', image: '/assets/journey/welcome.jpg' },
       { title: 'Follow-Up at Home', body: 'We help coordinate remote check-ins and aftercare with the provider once you return home.', image: '/assets/journey/post-tratamiento.jpg' },
     ],
   },
@@ -709,8 +709,8 @@ const es: HomeContent = {
     flagsPre: 'Agencia en Cancún',
     flagsMid: 'Guiando a pacientes de',
     h1: 'Tu Guía de Confianza para la Terapia con Células Madre en Cancún',
-    tagline: 'La clínica se encarga de la medicina. Nosotros del viaje.',
-    p: 'Desde tu primera pregunta hasta tu vuelo de regreso.',
+    tagline: 'Clínicas verificadas. Precios transparentes. Un solo coordinador.',
+    p: 'Te acompañamos desde tu primera duda hasta tu vuelo de vuelta.',
     pills: [
       { label: '🧬 Células Madre', slug: 'stem-cells' },
       { label: '✨ Exosomas', slug: 'exosomes' },
@@ -728,7 +728,7 @@ const es: HomeContent = {
     },
   },
   roleBanner:
-    'ℹ️ <strong>Kern Stem Care es una agencia de coordinación médica legalmente constituida en Cancún, no una clínica.</strong> Toda la atención médica la brindan clínicas, médicos y laboratorios independientes y certificados en Cancún, México. Nosotros coordinamos y guiamos tu proceso.',
+    'ℹ️ <strong>Kern Stem Care es una agencia de coordinación médica legalmente constituida en Cancún, no una clínica.</strong> Toda la atención médica la brindan clínicas, médicos y laboratorios independientes y con licencia en Cancún, México. Nosotros coordinamos y guiamos tu proceso.',
   showcase: {
     eyebrow: 'Más Que Atención Médica',
     h2: 'Cada Momento de Tu Atención Importa',
@@ -831,7 +831,7 @@ const es: HomeContent = {
     cards: [
       { image: '/assets/why/aliados-verificados.jpg', alt: 'Médico dando la mano a una coordinadora dentro de una clínica', title: 'Aliados Verificados', body: 'Te conectamos solo con clínicas, médicos y laboratorios certificados en Cancún con los que ya hemos trabajado.' },
       { image: '/assets/why/concierge-bilingue.jpg', alt: 'Coordinadora bilingüe con auriculares atendiendo a un paciente', title: 'Concierge Bilingüe', body: 'Un coordinador que habla inglés te guía a ti y a los proveedores en cada paso.' },
-      { image: '/assets/why/logistica-completa.jpg', alt: 'Chofer recibiendo a una viajera con equipaje en el Aeropuerto Internacional de Cancún', title: 'Logística Completa', body: 'Guía de vuelos, traslado del aeropuerto, hospedaje y transporte en Cancún — todo gestionado por nosotros.' },
+      { image: '/assets/why/logistica-completa.jpg', alt: 'Chofer recibiendo a una viajera con equipaje en el Aeropuerto Internacional de Cancún', title: 'Logística Completa', body: 'Guía de vuelos, y traslado del aeropuerto, hospedaje y transporte en Cancún cuando quieras que los gestionemos.' },
       { image: '/assets/why/one-point-of-contact.jpg', alt: 'Coordinadora sonriente con bata clínica y brazos cruzados', title: 'Un Solo Contacto', body: 'Desde la primera pregunta hasta el seguimiento en casa, tratas con nosotros — no con una docena de desconocidos.' },
     ],
   },
@@ -848,7 +848,7 @@ const es: HomeContent = {
       { image: '/assets/treatments/estetica-piel.jpg', alt: 'Mujer recibiendo un tratamiento estético facial', title: 'Estética y Piel', slug: 'fibroblasts', body: 'Piel, rejuvenecimiento y bienestar estético — encaja de forma natural con las aplicaciones de fibroblastos.' },
       { image: '/assets/treatments/protocolos-personalizados.jpg', alt: 'Médica revisando un plan personalizado con un paciente mayor', title: 'Protocolos Personalizados', body: 'Evaluaciones a medida para casos complejos o combinados.' },
     ],
-    note: '<strong>Importante:</strong> Kern Stem Care es una agencia de coordinación y no brinda tratamiento ni consejo médico. Las terapias anteriores las ofrecen proveedores independientes y certificados. Muchas terapias regenerativas y celulares no están aprobadas por la FDA de EE.UU. ni Health Canada para enfermedades específicas y se consideran de investigación. Los resultados individuales varían. Ni nosotros ni nuestros aliados garantizamos resultados ni curas; el proveedor discutirá contigo la evidencia científica actual durante tu evaluación.',
+    note: '<strong>Importante:</strong> Kern Stem Care es una agencia de coordinación y no brinda tratamiento ni consejo médico. Las terapias anteriores las ofrecen proveedores independientes y con licencia. Muchas terapias regenerativas y celulares no están aprobadas por la FDA de EE.UU. ni Health Canada para enfermedades específicas y se consideran de investigación. Los resultados individuales varían. Ni nosotros ni nuestros aliados garantizamos resultados ni curas; el proveedor discutirá contigo la evidencia científica actual durante tu evaluación.',
   },
   journey: {
     eyebrow: 'Cómo Funciona',
@@ -856,14 +856,14 @@ const es: HomeContent = {
     steps: [
       { title: 'Consulta Gratis', body: 'Comparte tu historial con nosotros. Lo canalizamos al proveedor aliado adecuado, que lo revisa y te explica opciones realistas.', image: '/assets/journey/pre-consulta.jpg' },
       { title: 'Plan, Cotización e Itinerario', body: 'El proveedor envía un plan médico; nosotros armamos tu cotización transparente y tu itinerario de viaje.', image: '/assets/journey/consulta.jpg' },
-      { title: 'Viaje y Atención en Cancún', body: 'Coordinamos vuelos, hospedaje y transporte. Recibes la atención en la clínica aliada; te acompañamos en todo momento.', image: '/assets/journey/welcome.jpg' },
+      { title: 'Viaje y Atención en Cancún', body: 'Te orientamos con el vuelo; el hospedaje y los traslados están ahí si los quieres. Recibes la atención en la clínica aliada; te acompañamos en todo momento.', image: '/assets/journey/welcome.jpg' },
       { title: 'Seguimiento en Casa', body: 'Ayudamos a coordinar el seguimiento remoto y los cuidados posteriores con el proveedor al volver a casa.', image: '/assets/journey/post-tratamiento.jpg' },
     ],
   },
   team: {
     eyebrow: 'Equipo y Aliados',
     h2: 'Tu equipo de coordinación — y los aliados con los que trabajamos',
-    lead: 'Te acompañan nuestros coordinadores de pacientes. La atención médica la brindan las clínicas, médicos y laboratorios independientes y certificados de nuestra red en Cancún.',
+    lead: 'Te acompañan nuestros coordinadores de pacientes. La atención médica la brindan las clínicas, médicos y laboratorios independientes y con licencia de nuestra red en Cancún.',
     coordinatorsTitle: 'Nuestros Coordinadores de Pacientes',
     coordinators: [
       { photoPh: '📷 [coordinator-1.jpg]', name: '[Name]', role: '[Coordinador de Pacientes]', bio: '[Idiomas, años ayudando a pacientes internacionales, rol]', slug: 'patient-coordinator' },
@@ -992,7 +992,7 @@ const es: HomeContent = {
     h2: 'Las preguntas más frecuentes',
     items: [
       { q: '¿Las células madre realmente pueden ayudar con mi dolor de espalda?', a: 'Las células madre mesenquimales pueden ayudar a pacientes con lesiones o condiciones musculoesqueléticas. Para ello es importante una evaluación que personalice el tratamiento a tu caso específico.', href: '/es/services/stem-cells' },
-      { q: '¿Cuáles son los riesgos reales de los tratamientos con células madre?', a: 'Como todo procedimiento médico, los tratamientos con células madre tienen riesgos reales — los más comunes son dolor temporal, inflamación o infección en la zona tratada. Los riesgos más serios de este campo vienen de proveedores no regulados: fuentes celulares sin verificar, malas prácticas de laboratorio o clínicas sin licencia. Para reducir exactamente eso existe nuestro proceso de verificación — solo coordinamos con clínicas con licencia COFEPRIS y laboratorios certificados — y el médico tratante revisa contigo los riesgos específicos de tu caso antes de decidir nada. Ningún proveedor legítimo te dirá que un procedimiento está libre de riesgos.', href: '/es/about#nuestra-red' },
+      { q: '¿Cuáles son los riesgos reales de los tratamientos con células madre?', a: 'Como todo procedimiento médico, los tratamientos con células madre tienen riesgos reales — los más comunes son dolor temporal, inflamación o infección en la zona tratada. Los riesgos más serios de este campo vienen de proveedores no regulados: fuentes celulares sin verificar, malas prácticas de laboratorio o clínicas sin licencia. Para reducir exactamente eso existe nuestro proceso de verificación — solo coordinamos con clínicas con licencia gubernamental (COFEPRIS) y laboratorios certificados — y el médico tratante revisa contigo los riesgos específicos de tu caso antes de decidir nada. Ningún proveedor legítimo te dirá que un procedimiento está libre de riesgos.', href: '/es/about#nuestra-red' },
       { q: '¿Cuántos días de estancia se necesitan para la aplicación de células madre en Cancún con Kern Stem Care?', a: 'Una estancia típica es de tres días: el día uno llegas y te instalas, el día dos es tu tratamiento en la clínica, y el día tres vuelas de regreso a casa. Coordinamos tu traslado del aeropuerto, hospedaje y citas para que toda la estancia corra con un solo itinerario claro — y si tu plan médico requiere algo distinto, lo sabrás antes de comprar tus vuelos.', href: '/es/process' },
       { q: '¿Es seguro viajar a Cancún para esto?', a: 'Cancún es el principal destino turístico internacional de México, con vuelos directos de 2 a 4 horas desde las principales ciudades de EE.UU. y Canadá. Coordinamos traslado del aeropuerto, hospedaje y citas, y tu coordinador bilingüe te acompaña durante toda la estancia.', href: '/es/process#viaje-y-logistica' },
       { q: '¿Por qué la terapia con células madre es legal en México y no en Estados Unidos?', a: 'Sí es legal en ambos marcos, pero distinto: en México, COFEPRIS —la autoridad sanitaria federal— permite el acceso a terapias celulares en clínicas y laboratorios con licencia, mientras que en EE.UU. la FDA las limita a ensayos clínicos. No es un vacío legal: es un marco regulatorio diferente, y por eso solo coordinamos con establecimientos licenciados.', href: '/es/blog/es-legal-la-terapia-con-celulas-madre-en-mexico' },
@@ -1069,7 +1069,7 @@ const es: HomeContent = {
   },
   footer: {
     blurb:
-      'Agencia de coordinación médica legalmente constituida en Cancún, que guía a pacientes de todo el mundo — incluyendo Estados Unidos y Canadá — hacia clínicas, médicos y laboratoriosindependientes y certificados.',
+      'Agencia de coordinación médica legalmente constituida en Cancún, que guía a pacientes de todo el mundo — incluyendo Estados Unidos y Canadá — hacia clínicas, médicos y laboratorios independientes y con licencia.',
     cols: [
       {
         title: 'Explorar',
@@ -1091,7 +1091,7 @@ const es: HomeContent = {
     ],
     contactCol: { title: 'Contacto', links: ['+52 998 767 8979', 'kernstemcare@gmail.com', 'Cancún, Q.R., México'] },
     disclaimer:
-      '<strong>Aviso importante:</strong> Kern Stem Care es una agencia de coordinación médica y de viajes. <strong>No somos una clínica, hospital ni proveedor médico</strong> y no brindamos tratamiento, diagnóstico ni consejo médico. Toda la atención médica la brindan clínicas, médicos y laboratorios independientes y certificados. La información de este sitio es solo para fines educativos generales. Muchas de las terapias que coordinamos no están aprobadas por la FDA de EE.UU. ni Health Canada y se consideran de investigación. No garantizamos resultados ni cura. Consulte siempre a un médico calificado antes de tomar decisiones médicas.',
+      '<strong>Aviso importante:</strong> Kern Stem Care es una agencia de coordinación médica y de viajes. <strong>No somos una clínica, hospital ni proveedor médico</strong> y no brindamos tratamiento, diagnóstico ni consejo médico. Toda la atención médica la brindan clínicas, médicos y laboratorios independientes y con licencia. La información de este sitio es solo para fines educativos generales. Muchas de las terapias que coordinamos no están aprobadas por la FDA de EE.UU. ni Health Canada y se consideran de investigación. No garantizamos resultados ni cura. Consulte siempre a un médico calificado antes de tomar decisiones médicas.',
     privacy: 'Política de Privacidad',
     terms: 'Términos de Uso',
     rights: 'Todos los derechos reservados.',

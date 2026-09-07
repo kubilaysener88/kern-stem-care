@@ -149,7 +149,7 @@ export interface PagesSet {
 const investigationalEN =
   '<strong>Important:</strong> Kern Stem Care is a coordination agency and does not provide medical treatment or advice. These therapies are offered by independent, licensed providers. Many regenerative and cellular therapies are not approved by the U.S. FDA or Health Canada for specific diseases and are considered investigational. Individual results vary; no outcome or cure is guaranteed.';
 const investigationalES =
-  '<strong>Importante:</strong> Kern Stem Care es una agencia de coordinación y no brinda tratamiento ni consejo médico. Estas terapias las ofrecen proveedores independientes y certificados. Muchas terapias regenerativas y celulares no están aprobadas por la FDA de EE.UU. ni Health Canada para enfermedades específicas y se consideran de investigación. Los resultados individuales varían; no se garantiza ningún resultado ni cura.';
+  '<strong>Importante:</strong> Kern Stem Care es una agencia de coordinación y no brinda tratamiento ni consejo médico. Estas terapias las ofrecen proveedores independientes y con licencia. Muchas terapias regenerativas y celulares no están aprobadas por la FDA de EE.UU. ni Health Canada para enfermedades específicas y se consideran de investigación. Los resultados individuales varían; no se garantiza ningún resultado ni cura.';
 
 /**
  * The five-step path is the same for every therapy — it describes how Kern
@@ -186,7 +186,7 @@ export const pathToTreatment: Record<Lang, PathToTreatmentContent> = {
       },
       {
         title: 'Arrive in Cancún',
-        body: 'Our team meets you at the airport and takes you to your hotel and to the clinic. You never have to think about logistics on the day of your treatment.',
+        body: 'If you book our transfer, one of our own drivers meets you at the airport and takes you to your hotel and to the clinic — so the day of your treatment is not the day you work out logistics.',
       },
       {
         title: 'Return home',
@@ -213,7 +213,7 @@ export const pathToTreatment: Record<Lang, PathToTreatmentContent> = {
       },
       {
         title: 'Llegada a Cancún',
-        body: 'Nuestro equipo te recibe en el aeropuerto y te lleva a tu hotel y a la clínica. No tienes que ocuparte de la logística el día de tu aplicación.',
+        body: 'Si contratas nuestro traslado, uno de nuestros choferes te recibe en el aeropuerto y te lleva a tu hotel y a la clínica — para que el día de tu aplicación no sea el día de resolver logística.',
       },
       {
         title: 'Regreso a casa',
@@ -470,7 +470,7 @@ const es: PagesSet = {
   services: {
     metaTitle: 'Terapias Regenerativas en Cancún, México | Kern Stem Care',
     metaDescription:
-      'Compara las terapias regenerativas a las que ayudamos a acceder en Cancún — células madre, exosomas, fibroblastos y placenta liofilizada — con clínicas y laboratorios independientes y certificados.',
+      'Compara las terapias regenerativas a las que ayudamos a acceder en Cancún — células madre, exosomas, fibroblastos y placenta liofilizada — con clínicas y laboratorios independientes y con licencia.',
     eyebrow: 'Qué Coordinamos',
     title: 'Servicios',
     lead: 'Una terapia regenerativa en Cancún, México es tan sólida como el equipo que la respalda — y de eso justo nos encargamos. Verificamos y validamos cada clínica y laboratorio independiente con licencia gubernamental (COFEPRIS) con el que coordinamos, desde la terapia con células madre hasta los exosomas, y luego facilitamos cada paso, desde tu primera llamada hasta tu seguimiento en casa.',
@@ -555,7 +555,7 @@ const es: PagesSet = {
     metaDescription: 'Cómo coordina Kern Stem Care la atención regenerativa para pacientes internacionales: evaluación, clínica certificada, viaje, tratamiento y seguimiento con un coordinador bilingüe.',
     eyebrow: 'Cómo Funciona',
     title: 'Proceso para pacientes internacionales',
-    lead: 'Tu guía paso a paso como paciente internacional: desde tu primer mensaje con un coordinador bilingüe, pasando por una consulta gratuita y una cotización transparente, hasta el viaje y la atención coordinados con proveedores independientes y certificados en Cancún — más el acompañamiento al volver a casa.',
+    lead: 'Tu guía paso a paso como paciente internacional: desde tu primer mensaje con un coordinador bilingüe, pasando por una consulta gratuita y una cotización transparente, hasta el viaje y la atención coordinados con proveedores independientes y con licencia en Cancún — más el acompañamiento al volver a casa.',
     steps: [
       { title: 'Consulta Gratis', body: 'Comparte tu historial. Canalizamos tu caso al proveedor aliado adecuado, que lo revisa y te explica opciones realistas.', image: '/assets/journey/pre-consulta.jpg' },
       { title: 'Plan, Cotización e Itinerario', body: 'El proveedor envía un plan médico; nosotros armamos tu cotización transparente y tu itinerario de viaje.', image: '/assets/journey/consulta.jpg' },
@@ -634,7 +634,7 @@ const es: PagesSet = {
     whyBody:
       'La dosis de células madre la calcula tu médico tratante con base en el peso corporal — compartirlo desde ahora nos ayuda a preparar una cotización inicial más precisa. Tu protocolo final siempre lo confirma el médico durante tu evaluación, no este formulario.',
     disclaimer:
-      '<strong>Importante:</strong> Kern Stem Care es una agencia de coordinación médica, no una clínica, y no brinda tratamiento ni consejo médico. Esta cotización se prepara con la guía de médicos aliados independientes y certificados, pero no es una cotización final, diagnóstico ni garantía — tu médico tratante confirma tu protocolo y costo final durante tu evaluación. Muchas terapias regenerativas no están aprobadas por la FDA de EE.UU. ni Health Canada para enfermedades específicas y se consideran de investigación.',
+      '<strong>Importante:</strong> Kern Stem Care es una agencia de coordinación médica, no una clínica, y no brinda tratamiento ni consejo médico. Esta cotización se prepara con la guía de médicos aliados independientes y con licencia, pero no es una cotización final, diagnóstico ni garantía — tu médico tratante confirma tu protocolo y costo final durante tu evaluación. Muchas terapias regenerativas no están aprobadas por la FDA de EE.UU. ni Health Canada para enfermedades específicas y se consideran de investigación.',
   },
   chooseClinic: {
     metaTitle: 'Cómo Elegir una Clínica de Células Madre en México | Kern Stem Care',
@@ -709,3 +709,15 @@ const es: PagesSet = {
 };
 
 export const pagesContent: Record<Lang, PagesSet> = { en, es };
+
+/**
+ * Are there any real patient testimonials yet?
+ *
+ * Until a patient video exists, the testimonials page has nothing on it but
+ * "[Patient first name, State]" three times. The nav link, the sitemap entry
+ * and the page's own robots directive all read this one value, so the page
+ * comes back the moment a real card is added — and cannot come back half-way.
+ */
+export const HAS_TESTIMONIALS = pagesContent.en.testimonials.cards.some(
+  (card) => !card.name.trimStart().startsWith('['),
+);

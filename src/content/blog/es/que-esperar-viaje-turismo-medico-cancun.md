@@ -7,6 +7,7 @@ pubDate: 2026-06-24
 updatedDate: 2026-09-05
 author: 'Kern Stem Care'
 reviewedBy: '[Nombre del revisor médico, credenciales]'
+scienceReviewedBy: 'Biól. Teresita Irais Álvarez Olvera — Cédula profesional 10506533'
 tags: ['turismo médico', 'cancún', 'proceso', 'planificación']
 draft: false
 ---

@@ -6,6 +6,7 @@ translationKey: 'stem-cell-therapy-arthritis-joint-pain'
 pubDate: 2026-09-07
 author: 'Kern Stem Care'
 reviewedBy: '[Medical reviewer name, credentials]'
+scienceReviewedBy: 'Teresita Irais Álvarez Olvera, BSc Biology — Professional licence 10506533'
 tags: ['arthritis', 'joint pain', 'stem cells', 'orthopedic']
 draft: false
 ---
@@ -37,7 +38,7 @@ It is not a guaranteed cure, and it is not right for every case — a licensed p
   injection site (see our guide on [why pain can flare before it improves](/en/blog/pain-worse-before-better-stem-cell-therapy/)).
   Reviewers consistently note that long-term data from larger trials is still needed.
 
-<span class="ph">[Add any condition-specific nuance your partner physicians want included — e.g. which grades of osteoarthritis respond best, when MSC therapy is not appropriate.]</span>
+<!-- PENDIENTE: Add any condition-specific nuance your partner physicians want included — e.g. which grades of osteoarthritis respond best, when MSC therapy is not appropriate. -->
 
 ## Is it right for your case?
 

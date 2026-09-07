@@ -6,6 +6,7 @@ translationKey: 'stem-cell-therapy-results-timeline'
 pubDate: 2026-09-03
 author: 'Kern Stem Care'
 reviewedBy: '[Medical reviewer name, credentials]'
+scienceReviewedBy: 'Teresita Irais Álvarez Olvera, BSc Biology — Professional licence 10506533'
 tags: ['results', 'stem cells', 'recovery timeline', 'expectations']
 draft: false
 ---

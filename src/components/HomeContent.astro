@@ -4,7 +4,7 @@ import { homeContent } from '../i18n/home';
 import { ANALYTICS_EVENTS } from '../config/analytics';
 import { getPhoneCodes, getCountries, phoneCodeLabel } from '../i18n/phoneCodes';
 import LegalDisclaimer from './LegalDisclaimer.astro';
-import { withSlash } from '../i18n/utils';
+import { withSlash, isPlaceholder } from '../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -12,6 +12,14 @@ interface Props {
 const { lang } = Astro.props;
 const c = homeContent[lang];
 const phClass = (s?: string) => (s && s.includes('[') ? 'ph' : '');
+
+// Anything still standing in for data we do not have yet is filtered out rather
+// than shown. See `isPlaceholder` for why. When the real entries land, these
+// sections fill back in on their own.
+const testimonials = c.testimonials.cards.filter((card) => !isPlaceholder(card.name));
+const coordinators = c.team.coordinators.filter((p) => !isPlaceholder(p.pageTitle ?? p.name));
+const partners = c.team.partners.filter((p) => !isPlaceholder(p.name));
+const gridCols = (n: number) => (n >= 4 ? 'g4' : n === 3 ? 'g3' : 'g2');
 
 const accentStyle: Record<string, string> = {
   blue: 'border-top:4px solid var(--blue)',
@@ -112,6 +120,7 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
 </section>
 
 <!-- ============ TESTIMONIALS ============ -->
+{testimonials.length > 0 && (
 <section class="section alt" id="testimonials">
   <div class="wrap">
     <div class="center">
@@ -120,7 +129,7 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
       <p class="lead" set:html={c.testimonials.lead} />
     </div>
     <div class="vgrid" id="vgrid">
-      {c.testimonials.cards.map((card) => (
+      {testimonials.map((card) => (
         <a
           class="vcard"
           data-seg={card.seg}
@@ -139,6 +148,7 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
     </div>
   </div>
 </section>
+)}
 
 <!-- ============ ABOUT ============ -->
 <section class="section about-section" id="about">
@@ -252,8 +262,8 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
     </div>
 
     <h3 style="text-align:center;margin:36px 0 18px;color:var(--teal-text)">{c.team.coordinatorsTitle}</h3>
-    <div class:list={['grid', c.team.coordinators.length >= 3 ? 'g3' : 'g2']}>
-      {c.team.coordinators.map((p) => (
+    <div class:list={['grid', gridCols(coordinators.length)]}>
+      {coordinators.map((p) => (
         <a class="doc doc-link" href={withSlash(`/${lang}/team/${p.slug}`)}>
           <div class="photo">
             {p.image ? <img src={p.image} alt={p.role} loading="lazy" decoding="async" /> : p.photoPh}
@@ -265,8 +275,8 @@ const estimateHref = lang === 'es' ? '/es/cotizacion' : '/en/estimate';
 
     <h3 style="text-align:center;margin:48px 0 8px;color:var(--teal-text)">{c.team.partnersTitle}</h3>
     <p class="lead center" style="margin-bottom:24px">{c.team.partnersLead}</p>
-    <div class="grid g4">
-      {c.team.partners.map((p) => (
+    <div class:list={['grid', gridCols(partners.length)]}>
+      {partners.map((p) => (
         <a class="card card-link center" href={withSlash(`/${lang}/partners/${p.slug}`)}>
           {p.image ? (
             <img class="card-img" src={p.image} alt={p.name} loading="lazy" decoding="async" />

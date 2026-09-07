@@ -1,4 +1,5 @@
 import type { Lang } from './ui';
+import { HAS_TESTIMONIALS } from './pages';
 
 /**
  * Shared navigation model. The site is multi-page: every page uses the same
@@ -68,7 +69,7 @@ export function getNav(lang: Lang): NavItem[] {
     },
     { path: `${base}/about`, label: t.about },
     { path: `${base}/process`, label: t.process },
-    { path: `${base}/testimonials`, label: t.testimonials },
+    ...(HAS_TESTIMONIALS ? [{ path: `${base}/testimonials`, label: t.testimonials }] : []),
     { path: lang === 'es' ? `${base}/como-elegir-clinica` : `${base}/how-to-choose-a-clinic`, label: t.chooseClinic },
     { path: `${base}/blog`, label: t.blog },
     { path: `${base}/contact`, label: t.contact },

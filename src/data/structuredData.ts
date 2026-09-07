@@ -116,6 +116,42 @@ export function organizationNode(site: string, lang: Lang) {
   };
 }
 
+/**
+ * The site's scientific reviewer.
+ *
+ * Kept here, in one place, so the credential published in the byline and the
+ * one sent to Google can never drift apart. She reviews the laboratory science
+ * — what the cells are, how they are sourced and processed — which is what a
+ * biology credential stands behind. The clinical claims wait on a physician,
+ * which is why `reviewedBy` in the post frontmatter is a separate field.
+ */
+export const SCIENCE_REVIEWER = {
+  name: 'Teresita Irais Álvarez Olvera',
+  /** Cédula profesional, verifiable at cedulaprofesional.sep.gob.mx. */
+  licence: '10506533',
+  jobTitle: { en: 'Biologist', es: 'Bióloga' },
+} as const;
+
+/** Schema.org Person for the scientific reviewer, credential spelled out. */
+export function scienceReviewerNode(lang: Lang) {
+  return {
+    '@type': 'Person',
+    name: SCIENCE_REVIEWER.name,
+    jobTitle: SCIENCE_REVIEWER.jobTitle[lang],
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: lang === 'es' ? 'Cédula profesional' : 'Professional licence',
+      identifier: SCIENCE_REVIEWER.licence,
+      educationalLevel: lang === 'es' ? 'Licenciatura en Biología' : "Bachelor's degree in Biology",
+      recognizedBy: {
+        '@type': 'GovernmentOrganization',
+        name: 'Secretaría de Educación Pública',
+        url: 'https://cedulaprofesional.sep.gob.mx/',
+      },
+    },
+  };
+}
+
 /** A cellular therapy described as a Schema.org MedicalProcedure. */
 export function medicalProcedureNode(site: string, lang: Lang, key: ProcedureKey) {
   const meta = procedureMeta[key];

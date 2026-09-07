@@ -6,6 +6,7 @@ translationKey: 'exosome-therapy-skin'
 pubDate: 2026-09-14
 author: 'Kern Stem Care'
 reviewedBy: '[Nombre del revisor médico, credenciales]'
+scienceReviewedBy: 'Biól. Teresita Irais Álvarez Olvera — Cédula profesional 10506533'
 tags: ['exosomas', 'piel', 'estética', 'costo']
 draft: true
 ---
@@ -33,7 +34,7 @@ aprobada por la FDA para ninguna condición específica y los resultados varían
   estandarizados más grandes y con seguimiento más largo para confirmar el tamaño del efecto y la duración de
   los resultados.
 
-<span class="ph">[Agrega aquí detalles específicos del protocolo que tus clínicas aliadas quieran incluir — p. ej. método de aplicación típico, número de sesiones.]</span>
+<!-- PENDIENTE: Agrega aquí detalles específicos del protocolo que tus clínicas aliadas quieran incluir — p. ej. método de aplicación típico, número de sesiones. -->
 
 ## Qué afecta el costo
 

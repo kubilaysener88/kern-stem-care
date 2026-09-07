@@ -6,6 +6,7 @@ translationKey: 'stem-cells-vs-exosomes'
 pubDate: 2026-06-18
 author: 'Kern Stem Care'
 reviewedBy: '[Nombre del revisor médico, credenciales]'
+scienceReviewedBy: 'Biól. Teresita Irais Álvarez Olvera — Cédula profesional 10506533'
 tags: ['células madre', 'exosomas', 'educación']
 draft: false
 ---
@@ -17,7 +18,7 @@ Las **[células madre](/es/services/stem-cells/)** son células vivas que se est
 regeneración de tejidos. Los **[exosomas](/es/services/exosomes/)** son vesículas diminutas *liberadas por* las
 células que se estudian por su papel en la comunicación célula a célula. Una es una célula;
 el otro es un mensajero que la célula envía.
-<span class="ph">[Refina estas definiciones con tu revisor clínico.]</span>
+<!-- PENDIENTE: Refina estas definiciones con tu revisor clínico. -->
 
 ## Cómo se estudian
 
@@ -26,9 +27,9 @@ el otro es un mensajero que la célula envía.
 | Qué es | Una célula viva | Una vesícula liberada por la célula |
 | Se estudia por | Reparación y regeneración | Señalización y comunicación |
 | Historial de investigación | Décadas de investigación publicada | Un campo más nuevo y en crecimiento |
-| Vía típica | <span class="ph">[según la clínica]</span> | <span class="ph">[según la clínica]</span> |
+| Vía típica | Según la clínica | Según la clínica |
 
-<span class="ph">[Reemplaza el contenido de la tabla con detalles que confirmen tus clínicas aliadas.]</span>
+<!-- PENDIENTE: Reemplaza el contenido de la tabla con detalles que confirmen tus clínicas aliadas. -->
 
 ¿No sabes cuál aplica a tu caso? [Solicita una evaluación gratuita →](/es/cotizacion/)
 
@@ -75,7 +76,7 @@ en desarrollo. Ninguno es más ni menos "real" — simplemente están en etapas 
 ## Cómo suelen decidir los pacientes
 
 La opción correcta depende de tu condición, la evaluación de tu médico y el protocolo que
-ofrezca una clínica certificada — no de cuál suene más nuevo. <span class="ph">[Explica cómo tus coordinadores plantean la conversación.]</span>
+ofrezca una clínica certificada — no de cuál suene más nuevo. <!-- PENDIENTE: Explica cómo tus coordinadores plantean la conversación. -->
 
 ## Para saber más
 

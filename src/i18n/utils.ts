@@ -58,3 +58,18 @@ export function slugify(text: string): string {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
 }
+
+/**
+ * Is this content still an unfilled "[bracket]" placeholder?
+ *
+ * The site ships with placeholder entries standing in for data we do not have
+ * yet — patient testimonials, the second partner clinic and lab, the patient
+ * coordinator. They are useful as a record of what is pending, but a visitor
+ * should never meet "[Patient first name, State]" on the homepage. Every
+ * surface that renders such content filters through this one predicate, so
+ * when the real data lands the section reappears on its own, with nothing to
+ * remember to switch back on.
+ */
+export function isPlaceholder(value?: string): boolean {
+  return !!value && value.trimStart().startsWith('[');
+}

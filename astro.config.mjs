@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import { homeContent } from './src/i18n/home.ts';
+import { HAS_TESTIMONIALS } from './src/i18n/pages.ts';
 
 // Production domain — must match Netlify's PRIMARY domain (apex, no www; www 301s here).
 // `site` is required for the sitemap and for absolute canonical/OG URLs.
@@ -20,6 +21,11 @@ const PLACEHOLDER_PARTNERS = homeContent.en.team.partners.filter((p) => p.name.s
 const PLACEHOLDER_TEAM = homeContent.en.team.coordinators
   .filter((c) => (c.pageTitle ?? c.name).startsWith('['))
   .map((c) => c.slug);
+
+// The testimonials page is noindexed and unlinked while every card is still a
+// placeholder, so it must stay out of the sitemap too. Same source of truth.
+const TESTIMONIAL_PATHS = HAS_TESTIMONIALS ? [] : ['testimonials'];
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -64,7 +70,8 @@ export default defineConfig({
       filter: (page) =>
         page !== `${SITE_URL}/` &&
         !PLACEHOLDER_PARTNERS.some((slug) => new RegExp(`/partners/${slug}/?$`).test(page)) &&
-        !PLACEHOLDER_TEAM.some((slug) => new RegExp(`/team/${slug}/?$`).test(page)),
+        !PLACEHOLDER_TEAM.some((slug) => new RegExp(`/team/${slug}/?$`).test(page)) &&
+      !TESTIMONIAL_PATHS.some((p) => new RegExp(`/${p}/?$`).test(page)),
       i18n: {
         defaultLocale: 'en',
         locales: {

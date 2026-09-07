@@ -6,6 +6,7 @@ translationKey: 'exosome-therapy-skin'
 pubDate: 2026-09-14
 author: 'Kern Stem Care'
 reviewedBy: '[Medical reviewer name, credentials]'
+scienceReviewedBy: 'Teresita Irais Álvarez Olvera, BSc Biology — Professional licence 10506533'
 tags: ['exosomes', 'skin', 'aesthetic', 'cost']
 draft: true
 ---
@@ -30,7 +31,7 @@ hydration. It is not FDA-approved for any specific condition and results vary.
   (exosome source, concentration, delivery method), and larger standardized trials with longer follow-up are
   still needed to confirm effect sizes and durability of results.
 
-<span class="ph">[Add any protocol-specific detail your partner clinics want included — e.g. typical delivery method, number of sessions.]</span>
+<!-- PENDIENTE: Add any protocol-specific detail your partner clinics want included — e.g. typical delivery method, number of sessions. -->
 
 ## What affects the cost
 

@@ -4,6 +4,7 @@ import Breadcrumbs from '../Breadcrumbs.astro';
 import { render, getCollection, type CollectionEntry } from 'astro:content';
 import type { Lang } from '../../i18n/ui';
 import { withSlash } from '../../i18n/utils';
+import { SCIENCE_REVIEWER, scienceReviewerNode } from '../../data/structuredData';
 
 interface Props {
   lang: Lang;
@@ -23,8 +24,8 @@ const hreflangOverride = { [otherLang]: translation ? `/${otherLang}/blog/${slug
 
 const t =
   lang === 'es'
-    ? { crumb: 'Blog', by: 'Por', reviewed: 'Revisado por', updated: 'Actualizado', related: 'Sigue leyendo', all: 'Ver todos los artículos' }
-    : { crumb: 'Blog', by: 'By', reviewed: 'Reviewed by', updated: 'Updated', related: 'Keep reading', all: 'See all articles' };
+    ? { crumb: 'Blog', by: 'Por', reviewed: 'Revisado por', scienceReviewed: 'Revisión científica', updated: 'Actualizado', related: 'Sigue leyendo', all: 'Ver todos los artículos' }
+    : { crumb: 'Blog', by: 'By', reviewed: 'Reviewed by', scienceReviewed: 'Scientific review', updated: 'Updated', related: 'Keep reading', all: 'See all articles' };
 
 // "Keep reading" — up to three other posts in this language.
 //
@@ -48,6 +49,14 @@ const slug = post.id.replace(/^[a-z]{2}\//, '');
 const url = `${site}/${lang}/blog/${slug}`;
 const fmtDate = (d: Date) => new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'long', day: 'numeric' }).format(d);
 
+// Only emit the reviewer node when the post's byline actually names this
+// reviewer's licence — otherwise editing the frontmatter to a different person
+// would leave the structured data still claiming the old one.
+const hasScienceReviewer =
+  !!post.data.scienceReviewedBy &&
+  !post.data.scienceReviewedBy.startsWith('[') &&
+  post.data.scienceReviewedBy.includes(SCIENCE_REVIEWER.licence);
+
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
@@ -64,6 +73,7 @@ const articleSchema = {
   },
   image: `${site}/og-image.jpg`,
   mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+  ...(hasScienceReviewer ? { reviewedBy: scienceReviewerNode(lang) } : {}),
 };
 ---
 
@@ -93,6 +103,9 @@ const articleSchema = {
               worse than showing no reviewer at all — so hide it until it is real. */}
           {post.data.reviewedBy && !post.data.reviewedBy.startsWith('[') && (
             <span> · {t.reviewed} {post.data.reviewedBy}</span>
+          )}
+          {hasScienceReviewer && (
+            <span> · {t.scienceReviewed}: {post.data.scienceReviewedBy}</span>
           )}
         </p>
         <div class="post-body">

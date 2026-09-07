@@ -20,8 +20,12 @@ const blog = defineCollection({
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     author: z.string().default('Kern Stem Care'),
-    /** Medical reviewer (E-E-A-T) — recommended for health content. */
+    /** Medical reviewer (E-E-A-T) — a physician, for the clinical claims. */
     reviewedBy: z.string().optional(),
+    /** Scientific reviewer — the laboratory side (what the cells are, how they
+        are sourced and processed). Kept separate from `reviewedBy` because a
+        science credential does not stand behind a clinical judgement. */
+    scienceReviewedBy: z.string().optional(),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
   }),

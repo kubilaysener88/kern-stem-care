@@ -6,6 +6,7 @@ translationKey: 'stem-cell-therapy-arthritis-joint-pain'
 pubDate: 2026-09-07
 author: 'Kern Stem Care'
 reviewedBy: '[Nombre del revisor médico, credenciales]'
+scienceReviewedBy: 'Biól. Teresita Irais Álvarez Olvera — Cédula profesional 10506533'
 tags: ['artritis', 'dolor articular', 'células madre', 'ortopedia']
 draft: false
 ---
@@ -38,7 +39,7 @@ determina un médico certificado.
   sitio de inyección (consulta nuestra guía sobre [por qué el dolor puede empeorar antes de mejorar](/es/blog/es-normal-que-duela-mas-antes-de-mejorar/)).
   Las revisiones señalan de forma consistente que aún se necesitan más datos de largo plazo de ensayos grandes.
 
-<span class="ph">[Agrega aquí matices específicos de la condición que tus médicos aliados quieran incluir — p. ej. qué grados de osteoartritis responden mejor, cuándo la terapia con MSC no es adecuada.]</span>
+<!-- PENDIENTE: Agrega aquí matices específicos de la condición que tus médicos aliados quieran incluir — p. ej. qué grados de osteoartritis responden mejor, cuándo la terapia con MSC no es adecuada. -->
 
 ## ¿Es adecuada para tu caso?
 

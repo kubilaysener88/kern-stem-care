@@ -6,6 +6,7 @@ translationKey: 'stem-cells-vs-exosomes'
 pubDate: 2026-06-18
 author: 'Kern Stem Care'
 reviewedBy: '[Medical reviewer name, credentials]'
+scienceReviewedBy: 'Teresita Irais Álvarez Olvera, BSc Biology — Professional licence 10506533'
 tags: ['stem cells', 'exosomes', 'education']
 draft: false
 ---
@@ -16,7 +17,7 @@ draft: false
 **[Stem cells](/en/services/stem-cells/)** are living cells studied for their role in tissue repair and regeneration.
 **[Exosomes](/en/services/exosomes/)** are tiny vesicles *released by* cells that are studied for their role in
 cell-to-cell signaling. One is a cell; the other is a messenger the cell sends.
-<span class="ph">[Refine these definitions with your clinical reviewer.]</span>
+<!-- PENDIENTE: Refine these definitions with your clinical reviewer. -->
 
 ## How they're studied
 
@@ -25,9 +26,9 @@ cell-to-cell signaling. One is a cell; the other is a messenger the cell sends.
 | What it is | A living cell | A cell-released vesicle |
 | Studied for | Repair & regeneration | Signaling & communication |
 | Research history | Decades of published research | A newer, fast-growing field |
-| Typical delivery | <span class="ph">[clinic-specific]</span> | <span class="ph">[clinic-specific]</span> |
+| Typical delivery | Clinic-specific | Clinic-specific |
 
-<span class="ph">[Replace the table contents with details your partner clinics confirm.]</span>
+<!-- PENDIENTE: Replace the table contents with details your partner clinics confirm. -->
 
 Not sure which applies to your case? [Request a free evaluation →](/en/estimate/)
 
@@ -72,7 +73,7 @@ developing. Neither is more or less "real" — they're simply at different stage
 ## How patients usually decide
 
 The right choice depends on your condition, your physician's assessment, and the protocol a
-licensed clinic offers — not on which sounds newer. <span class="ph">[Explain how your coordinators frame the conversation.]</span>
+licensed clinic offers — not on which sounds newer. <!-- PENDIENTE: Explain how your coordinators frame the conversation. -->
 
 ## Further reading
 

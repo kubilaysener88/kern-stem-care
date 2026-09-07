@@ -4,7 +4,7 @@ import PageHero from '../PageHero.astro';
 import VideoTestimonial from '../VideoTestimonial.astro';
 import Breadcrumbs from '../Breadcrumbs.astro';
 import type { Lang } from '../../i18n/ui';
-import { pagesContent } from '../../i18n/pages';
+import { pagesContent, HAS_TESTIMONIALS } from '../../i18n/pages';
 import { navLabels } from '../../i18n/nav';
 import { withSlash } from '../../i18n/utils';
 
@@ -20,9 +20,18 @@ const placeholderLabel =
     ? 'Coloca el ID del video (YouTube o Vimeo) para habilitar la reproducción.'
     : 'Set the video ID (YouTube or Vimeo) to enable playback.';
 const sectionHeading = lang === 'es' ? 'Testimonios en video de pacientes' : 'Patient video testimonials';
+
+// Only cards backed by a real patient video. Until one exists the page is
+// noindexed and unlinked (see HAS_TESTIMONIALS) — an empty page offered to
+// Google is worse than no page, and a visitor should never meet a placeholder.
+const cards = p.cards.filter((card) => !card.name.trimStart().startsWith('['));
+const emptyNote =
+  lang === 'es'
+    ? 'Estamos grabando los testimonios de nuestros pacientes y los publicaremos aquí en cuanto tengamos su consentimiento por escrito. Mientras tanto, con gusto te ponemos en contacto con un coordinador que responde tus dudas.'
+    : 'We are recording our patients’ stories and will publish them here as soon as we have their written consent. In the meantime, a coordinator is glad to answer your questions directly.';
 ---
 
-<SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription}>
+<SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription} noindex={!HAS_TESTIMONIALS}>
   <Breadcrumbs lang={lang} items={[{ label: navLabels[lang].testimonials }]} />
   <PageHero
     eyebrow={p.eyebrow}
@@ -38,9 +47,12 @@ const sectionHeading = lang === 'es' ? 'Testimonios en video de pacientes' : 'Pa
   <section class="section" aria-labelledby="testimonials-heading">
     <div class="wrap">
       <h2 id="testimonials-heading" class="sr-only">{sectionHeading}</h2>
+      {cards.length === 0 ? (
+        <p class="lead center">{emptyNote}</p>
+      ) : (
       <div class="grid g3">
         {
-          p.cards.map((card) => (
+          cards.map((card) => (
             <VideoTestimonial
               provider={card.provider}
               videoId={card.videoId}
@@ -55,6 +67,7 @@ const sectionHeading = lang === 'es' ? 'Testimonios en video de pacientes' : 'Pa
           ))
         }
       </div>
+      )}
       <div class="center" style="margin-top:28px">
         <a href={withSlash(`/${lang}/contact`)} class="btn btn-primary">{ctaLabel}</a>
       </div>

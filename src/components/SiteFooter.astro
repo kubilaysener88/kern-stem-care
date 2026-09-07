@@ -1,6 +1,7 @@
 ---
 import type { Lang } from '../i18n/ui';
 import { navLabels } from '../i18n/nav';
+import { HAS_TESTIMONIALS } from '../i18n/pages';
 import { homeContent } from '../i18n/home';
 import { legalNav } from '../i18n/legal';
 import { withSlash } from '../i18n/utils';
@@ -23,7 +24,7 @@ const exploreLinks = [
   { href: base, label: t.home },
   { href: `${base}/about`, label: t.about },
   { href: `${base}/process`, label: t.process },
-  { href: `${base}/testimonials`, label: t.testimonials },
+  ...(HAS_TESTIMONIALS ? [{ href: `${base}/testimonials`, label: t.testimonials }] : []),
   { href: `${base}/blog`, label: lang === 'es' ? 'Blog y Recursos' : 'Blog & Resources' },
   { href: `${base}/contact`, label: t.contact },
 ];
