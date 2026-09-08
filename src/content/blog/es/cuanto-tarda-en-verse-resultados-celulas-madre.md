@@ -5,7 +5,7 @@ lang: 'es'
 translationKey: 'stem-cell-therapy-results-timeline'
 pubDate: 2026-09-03
 author: 'Kern Stem Care'
-reviewedBy: '[Nombre del revisor médico, credenciales]'
+reviewedBy: 'Dra. Beleguí Sánchez Guzmán — Cédula profesional 11082915'
 scienceReviewedBy: 'Biól. Teresita Irais Álvarez Olvera — Cédula profesional 10506533'
 tags: ['resultados', 'células madre', 'línea de tiempo de recuperación', 'expectativas']
 draft: false

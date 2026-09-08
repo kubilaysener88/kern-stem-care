@@ -5,7 +5,7 @@ lang: 'en'
 translationKey: 'stem-cell-therapy-arthritis-joint-pain'
 pubDate: 2026-09-07
 author: 'Kern Stem Care'
-reviewedBy: '[Medical reviewer name, credentials]'
+reviewedBy: 'Beleguí Sánchez Guzmán, MD — Professional licence 11082915'
 scienceReviewedBy: 'Teresita Irais Álvarez Olvera, BSc Biology — Professional licence 10506533'
 tags: ['arthritis', 'joint pain', 'stem cells', 'orthopedic']
 draft: false

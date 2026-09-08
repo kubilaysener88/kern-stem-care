@@ -6,7 +6,7 @@ translationKey: 'is-stem-cell-therapy-legal'
 pubDate: 2026-06-01
 updatedDate: 2026-09-05
 author: 'Kern Stem Care'
-reviewedBy: '[Medical reviewer name, credentials]'
+reviewedBy: 'Beleguí Sánchez Guzmán, MD — Professional licence 11082915'
 scienceReviewedBy: 'Teresita Irais Álvarez Olvera, BSc Biology — Professional licence 10506533'
 tags: ['regulation', 'stem cells', 'mexico']
 draft: false

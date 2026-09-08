@@ -54,6 +54,19 @@ const ROUTES = [
   '/es/blog/es-normal-que-duela-mas-antes-de-mejorar',
   '/en/blog/stem-cell-therapy-arthritis-joint-pain',
   '/es/blog/terapia-con-celulas-madre-para-artritis-dolor-articular',
+  // Partner and team detail pages. These were never covered: the partner pages
+  // are photo galleries and credential badges, which is exactly where contrast
+  // and alt-text problems hide, and Y&H Clinic went public with six photos.
+  // Only the entries with real data are listed — the placeholder ones are
+  // noindexed and unlinked, so they are not part of the public site.
+  '/en/partners/partner-clinic-1',
+  '/es/partners/partner-clinic-1',
+  '/en/partners/partner-clinic-2',
+  '/es/partners/partner-clinic-2',
+  '/en/partners/partner-lab-1',
+  '/es/partners/partner-lab-1',
+  '/en/team/logistics-travel',
+  '/es/team/logistics-travel',
   // exosome-therapy-for-skin (+ ES) is queued as draft: true — add its routes back
   // here once the weekly task publishes it.
 ];
@@ -73,6 +86,12 @@ function format(violations: Result[]): string {
 for (const route of ROUTES) {
   test(`a11y (WCAG 2.1 AA): ${route}`, async ({ page }) => {
     await page.goto(route, { waitUntil: 'load' });
+    // The home page defers its non-critical JS (carousel, testimonial filters),
+    // so at the `load` event the DOM is still being written to. Injecting axe
+    // into a page mid-mutation failed intermittently — three times in eight full
+    // runs, always on /en, always inside AxeBuilder.analyze rather than as a
+    // rule violation. Wait for the page to go quiet first.
+    await page.waitForLoadState('networkidle');
     const { violations } = await new AxeBuilder({ page }).withTags(WCAG_AA_TAGS).analyze();
     if (violations.length) {
       console.log(`\n✗ ${route}\n${format(violations)}\n`);

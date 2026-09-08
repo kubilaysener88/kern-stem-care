@@ -117,6 +117,45 @@ export function organizationNode(site: string, lang: Lang) {
 }
 
 /**
+ * The site's medical reviewer.
+ *
+ * A physician, which is what the clinical claims need standing behind them —
+ * which grades of osteoarthritis respond, when a therapy is not appropriate,
+ * whether something is safe. Her cédula is a *Médico Cirujano* licence with no
+ * specialty registered on top of it, and the schema below says exactly that so
+ * nothing more can be read into it.
+ *
+ * Named only because she confirmed in writing that she reviewed the articles.
+ * `reviewedBy` asserts a review happened; it is not a way to borrow a name.
+ */
+export const MEDICAL_REVIEWER = {
+  name: 'Beleguí Sánchez Guzmán',
+  /** Cédula profesional, verifiable at cedulaprofesional.sep.gob.mx. */
+  licence: '11082915',
+  jobTitle: { en: 'Physician', es: 'Médica' },
+} as const;
+
+/** Schema.org Person for the medical reviewer, credential spelled out. */
+export function medicalReviewerNode(lang: Lang) {
+  return {
+    '@type': 'Person',
+    name: MEDICAL_REVIEWER.name,
+    jobTitle: MEDICAL_REVIEWER.jobTitle[lang],
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: lang === 'es' ? 'Cédula profesional' : 'Professional licence',
+      identifier: MEDICAL_REVIEWER.licence,
+      educationalLevel: lang === 'es' ? 'Licenciatura como Médico Cirujano' : 'Doctor of Medicine (Médico Cirujano)',
+      recognizedBy: {
+        '@type': 'GovernmentOrganization',
+        name: 'Secretaría de Educación Pública',
+        url: 'https://cedulaprofesional.sep.gob.mx/',
+      },
+    },
+  };
+}
+
+/**
  * The site's scientific reviewer.
  *
  * Kept here, in one place, so the credential published in the byline and the

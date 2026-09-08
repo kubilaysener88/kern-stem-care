@@ -5,7 +5,7 @@ lang: 'es'
 translationKey: 'stem-cells-vs-exosomes'
 pubDate: 2026-06-18
 author: 'Kern Stem Care'
-reviewedBy: '[Nombre del revisor médico, credenciales]'
+reviewedBy: 'Dra. Beleguí Sánchez Guzmán — Cédula profesional 11082915'
 scienceReviewedBy: 'Biól. Teresita Irais Álvarez Olvera — Cédula profesional 10506533'
 tags: ['células madre', 'exosomas', 'educación']
 draft: false

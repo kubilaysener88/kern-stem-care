@@ -4,7 +4,12 @@ import Breadcrumbs from '../Breadcrumbs.astro';
 import { render, getCollection, type CollectionEntry } from 'astro:content';
 import type { Lang } from '../../i18n/ui';
 import { withSlash } from '../../i18n/utils';
-import { SCIENCE_REVIEWER, scienceReviewerNode } from '../../data/structuredData';
+import {
+  SCIENCE_REVIEWER,
+  scienceReviewerNode,
+  MEDICAL_REVIEWER,
+  medicalReviewerNode,
+} from '../../data/structuredData';
 
 interface Props {
   lang: Lang;
@@ -56,6 +61,18 @@ const hasScienceReviewer =
   !!post.data.scienceReviewedBy &&
   !post.data.scienceReviewedBy.startsWith('[') &&
   post.data.scienceReviewedBy.includes(SCIENCE_REVIEWER.licence);
+const hasMedicalReviewer =
+  !!post.data.reviewedBy &&
+  !post.data.reviewedBy.startsWith('[') &&
+  post.data.reviewedBy.includes(MEDICAL_REVIEWER.licence);
+
+// The physician leads: for health content it is the medical review Google and
+// the AI crawlers weigh, and the biologist stands behind the laboratory science
+// rather than the clinical judgement.
+const reviewers = [
+  ...(hasMedicalReviewer ? [medicalReviewerNode(lang)] : []),
+  ...(hasScienceReviewer ? [scienceReviewerNode(lang)] : []),
+];
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -73,7 +90,7 @@ const articleSchema = {
   },
   image: `${site}/og-image.jpg`,
   mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-  ...(hasScienceReviewer ? { reviewedBy: scienceReviewerNode(lang) } : {}),
+  ...(reviewers.length ? { reviewedBy: reviewers } : {}),
 };
 ---
 

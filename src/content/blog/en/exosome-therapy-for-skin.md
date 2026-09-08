@@ -5,7 +5,7 @@ lang: 'en'
 translationKey: 'exosome-therapy-skin'
 pubDate: 2026-09-14
 author: 'Kern Stem Care'
-reviewedBy: '[Medical reviewer name, credentials]'
+reviewedBy: 'Beleguí Sánchez Guzmán, MD — Professional licence 11082915'
 scienceReviewedBy: 'Teresita Irais Álvarez Olvera, BSc Biology — Professional licence 10506533'
 tags: ['exosomes', 'skin', 'aesthetic', 'cost']
 draft: true

@@ -5,7 +5,7 @@ lang: 'en'
 translationKey: 'flare-before-improvement'
 pubDate: 2026-09-03
 author: 'Kern Stem Care'
-reviewedBy: '[Medical reviewer name, credentials]'
+reviewedBy: 'Beleguí Sánchez Guzmán, MD — Professional licence 11082915'
 scienceReviewedBy: 'Teresita Irais Álvarez Olvera, BSc Biology — Professional licence 10506533'
 tags: ['recovery', 'stem cells', 'joint injections', 'aftercare']
 draft: false

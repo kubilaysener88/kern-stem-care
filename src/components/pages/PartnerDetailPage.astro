@@ -19,8 +19,8 @@ if (!partner) {
 const eyebrow = lang === 'es' ? 'Aliado de la Red' : 'Network Partner';
 const lead =
   lang === 'es'
-    ? 'Instalación aliada dentro de la red de Kern Stem Care en Cancún. La atención médica la brinda directamente este proveedor independiente y licenciado, mientras Kern Stem Care coordina el acceso, el viaje y el acompañamiento.'
-    : 'A partner facility within the Kern Stem Care network in Cancún. Medical care is delivered directly by this independent, licensed provider, while Kern Stem Care coordinates access, travel, and support.';
+    ? 'Instalación aliada dentro de la red de Kern Stem Care. La atención médica la brinda directamente este proveedor independiente y con licencia, mientras Kern Stem Care coordina el acceso, el viaje y el acompañamiento.'
+    : 'A partner facility within the Kern Stem Care network. Medical care is delivered directly by this independent, licensed provider, while Kern Stem Care coordinates access, travel, and support.';
 const galleryTitle = lang === 'es' ? 'Instalaciones' : 'Facility';
 const photoAltLabel = lang === 'es' ? 'Foto de la instalación' : 'Facility photo';
 const backLabel = lang === 'es' ? '← Volver al equipo y aliados' : '← Back to team & partners';
@@ -36,7 +36,19 @@ const slugLabel = slug
   .replace(/-\d+$/, '')
   .replace(/-/g, ' ')
   .replace(/\b\w/g, (c) => c.toUpperCase());
-const metaTitle = isPlaceholder ? `${slugLabel} (${slug.match(/\d+$/)?.[0] ?? ''}) | Kern Stem Care` : `${partner.name} | Kern Stem Care`;
+// A partner's business name is the same in both languages, so the two pages
+// shipped the identical <title>. Add the kind of facility in the page's own
+// language — taken from the slug, not invented — so each title is distinct.
+const kind = slug.includes('lab')
+  ? lang === 'es'
+    ? 'Laboratorio aliado'
+    : 'Partner laboratory'
+  : lang === 'es'
+    ? 'Clínica aliada'
+    : 'Partner clinic';
+const metaTitle = isPlaceholder
+  ? `${slugLabel} (${slug.match(/\d+$/)?.[0] ?? ''}) | Kern Stem Care`
+  : `${partner.name} — ${kind} | Kern Stem Care`;
 // The on-page lead is the same paragraph for every partner, which is fine as
 // body copy but made two different partner pages share one meta description —
 // indistinguishable to a search engine. Build it from the partner's own name

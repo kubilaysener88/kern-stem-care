@@ -512,7 +512,7 @@ const en: HomeContent = {
         ],
       },
     ],
-    partnersTitle: 'Our Cancún Partner Network',
+    partnersTitle: 'Our partner network — Cancún and the Riviera Maya',
     partnersLead:
       'More than simply creating partnerships, we continuously select, evaluate, and strengthen our network of leading specialists, clinics, and cutting-edge medical protocols, always seeking innovation and excellence for our patients.',
     partners: [
@@ -534,7 +534,28 @@ const en: HomeContent = {
           '/assets/partners/luigi/luigi-4.jpg',
         ],
       },
-      { icon: '🏥', name: '[Partner Clinic]', detail: '[Specialty · Government (COFEPRIS) license #]', slug: 'partner-clinic-2', image: '/assets/partners/clinic-2/clinic-2-1.jpg', photos: ['/assets/partners/clinic-2/clinic-2-1.jpg', '/assets/partners/clinic-2/clinic-2-2.jpg'] },
+      {
+        icon: '🏥',
+        name: 'Y&H Clinic',
+        detail: 'Regenerative medicine & cellular therapy · Cancún, Quintana Roo',
+        slug: 'partner-clinic-2',
+        image: '/assets/partners/yh/yh-1.jpg',
+      photos: [
+        '/assets/partners/yh/yh-exterior-1.jpg',
+        '/assets/partners/yh/yh-exterior-2.jpg',
+        '/assets/partners/yh/yh-1.jpg',
+        '/assets/partners/yh/yh-2.jpg',
+        '/assets/partners/yh/yh-3.jpg',
+        '/assets/partners/yh/yh-4.jpg',
+        '/assets/partners/yh/yh-5.jpg',
+        '/assets/partners/yh/yh-6.jpg',
+      ],
+        body:
+          'Y&H Clinic works in regenerative and cellular medicine, with consulting rooms in Cancún and in Zapopan, Jalisco. Its published programme covers mesenchymal stem cell therapy, fibroblasts, exosomes, hormone replacement pellets, intravenous and chelation therapy, and platelet-rich plasma. Care in Cancún is delivered by Dr. Beleguí Sánchez Guzmán, whose licence you can check yourself on Mexico’s SEP registry.',
+        physicians: [
+          { name: 'Dra. Beleguí Sánchez Guzmán', credential: 'Cédula Profesional 11082915', role: 'Physician · Médico Cirujano' },
+        ],
+      },
       {
         icon: '🔬',
         name: 'NAO Biotechnology',
@@ -542,7 +563,7 @@ const en: HomeContent = {
         slug: 'partner-lab-1',
         image: '/assets/partners/nao-laboratorio.jpg',
         body: 'NAO Biotechnology processes and tests every cell batch before it ships: microbiological screening (bacteria, mycoplasma, fungi/yeast), a full infectious-disease serology panel (Hepatitis B/C, HIV I/II, SARS-CoV-2, Chlamydia, VDRL), flow cytometry for cell viability and identity markers, karyotype analysis for genetic stability, and oncogene-expression screening. Each batch ships with its own signed Certificate of Quality.',
-        qualityLead: { name: 'Iraís Álvarez', credential: 'Cédula Profesional 10506533', role: 'Biologist' },
+        qualityLead: { name: 'Teresita Irais Álvarez Olvera', credential: 'Cédula Profesional 10506533', role: 'Biologist' },
         photos: [
           '/assets/partners/nao/nao-1.jpg',
           '/assets/partners/nao/nao-2.jpg',
@@ -921,7 +942,7 @@ const es: HomeContent = {
         ],
       },
     ],
-    partnersTitle: 'Nuestra Red de Aliados en Cancún',
+    partnersTitle: 'Nuestra red de aliados — Cancún y la Riviera Maya',
     partnersLead:
       'Más que simplemente crear alianzas, seleccionamos, evaluamos y fortalecemos continuamente nuestra red de especialistas líderes, clínicas y protocolos médicos de vanguardia, siempre buscando innovación y excelencia para nuestros pacientes.',
     partners: [
@@ -943,7 +964,28 @@ const es: HomeContent = {
           '/assets/partners/luigi/luigi-4.jpg',
         ],
       },
-      { icon: '🏥', name: '[Partner Clinic]', detail: '[Especialidad · Cédula gubernamental (COFEPRIS) #]', slug: 'partner-clinic-2', image: '/assets/partners/clinic-2/clinic-2-1.jpg', photos: ['/assets/partners/clinic-2/clinic-2-1.jpg', '/assets/partners/clinic-2/clinic-2-2.jpg'] },
+      {
+        icon: '🏥',
+        name: 'Y&H Clinic',
+        detail: 'Medicina regenerativa y terapia celular · Cancún, Quintana Roo',
+        slug: 'partner-clinic-2',
+        image: '/assets/partners/yh/yh-1.jpg',
+      photos: [
+        '/assets/partners/yh/yh-exterior-1.jpg',
+        '/assets/partners/yh/yh-exterior-2.jpg',
+        '/assets/partners/yh/yh-1.jpg',
+        '/assets/partners/yh/yh-2.jpg',
+        '/assets/partners/yh/yh-3.jpg',
+        '/assets/partners/yh/yh-4.jpg',
+        '/assets/partners/yh/yh-5.jpg',
+        '/assets/partners/yh/yh-6.jpg',
+      ],
+        body:
+          'Y&H Clinic trabaja en medicina regenerativa y terapia celular, con consultorios en Cancún y en Zapopan, Jalisco. Su programa publicado incluye terapia con células madre mesenquimales, fibroblastos, exosomas, pellets de reemplazo hormonal, sueroterapia y quelación, y plasma rico en plaquetas. En Cancún la atención la brinda la Dra. Beleguí Sánchez Guzmán, cuya cédula puedes verificar tú mismo en el registro de la SEP.',
+        physicians: [
+          { name: 'Dra. Beleguí Sánchez Guzmán', credential: 'Cédula Profesional 11082915', role: 'Médica · Médico Cirujano' },
+        ],
+      },
       {
         icon: '🔬',
         name: 'NAO Biotechnology',
@@ -951,7 +993,7 @@ const es: HomeContent = {
         slug: 'partner-lab-1',
         image: '/assets/partners/nao-laboratorio.jpg',
         body: 'NAO Biotechnology procesa y analiza cada lote de células antes de enviarlo: tamizaje microbiológico (bacterias, micoplasma, hongos y levaduras), panel completo de serología para enfermedades infecciosas (Hepatitis B/C, VIH I/II, SARS-CoV-2, Chlamydia, VDRL), citometría de flujo para viabilidad e identidad celular, análisis de cariotipo para estabilidad genética, y tamizaje de expresión de oncogenes. Cada lote se entrega con su propio Certificado de Calidad firmado.',
-        qualityLead: { name: 'Iraís Álvarez', credential: 'Cédula Profesional 10506533', role: 'Bióloga' },
+        qualityLead: { name: 'Teresita Irais Álvarez Olvera', credential: 'Cédula Profesional 10506533', role: 'Bióloga' },
         photos: [
           '/assets/partners/nao/nao-1.jpg',
           '/assets/partners/nao/nao-2.jpg',

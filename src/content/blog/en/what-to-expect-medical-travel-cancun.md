@@ -6,7 +6,7 @@ translationKey: 'medical-travel-cancun'
 pubDate: 2026-06-24
 updatedDate: 2026-09-05
 author: 'Kern Stem Care'
-reviewedBy: '[Medical reviewer name, credentials]'
+reviewedBy: 'Beleguí Sánchez Guzmán, MD — Professional licence 11082915'
 scienceReviewedBy: 'Teresita Irais Álvarez Olvera, BSc Biology — Professional licence 10506533'
 tags: ['medical travel', 'cancun', 'process', 'planning']
 draft: false
