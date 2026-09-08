@@ -26,7 +26,7 @@ interface Localized {
 
 const orgDescription: Record<Lang, string> = {
   en: 'Medical coordination agency based in Cancún, Mexico. We guide patients from the United States and Canada and coordinate travel, lodging, appointments, and bilingual support with independent, licensed clinics, physicians, and cellular-therapy laboratories. We are not a clinic and do not provide medical treatment; all care is delivered by independent, government-licensed (COFEPRIS) providers.',
-  es: 'Agencia de coordinación médica con sede en Cancún, México. Guiamos a pacientes de Estados Unidos y Canadá y coordinamos viaje, hospedaje, citas y acompañamiento bilingüe con clínicas, médicos y laboratorios de terapia celular independientes y certificados. No somos una clínica y no brindamos tratamiento médico; toda la atención la brindan proveedores independientes con licencia gubernamental (COFEPRIS).',
+  es: 'Agencia de coordinación médica con sede en Cancún, México. Guiamos a pacientes de Estados Unidos y Canadá y coordinamos viaje, hospedaje, citas y acompañamiento bilingüe con clínicas, médicos y laboratorios de terapia celular independientes y con licencia. No somos una clínica y no brindamos tratamiento médico; toda la atención la brindan proveedores independientes con licencia gubernamental (COFEPRIS).',
 };
 
 const procedureMeta: Record<ProcedureKey, { slug: string; en: Localized; es: Localized }> = {
