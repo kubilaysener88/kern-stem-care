@@ -19,6 +19,9 @@ There is no single price — the cost of **[stem cell therapy](/en/services/stem
 Mexico depends on the cell type and dose, the number of sessions, the condition being
 addressed, and the clinic and laboratory involved.
 
+> Looking for the figures rather than the explanation? The full list, by application, is on the **[prices page](/en/pricing/)**.
+
+
 In practice, most of what Kern Stem Care coordinates in Cancún falls between **$850 and
 $8,200 USD**. Rather than leave you guessing where inside that band you sit, here is what each
 application is quoted at:

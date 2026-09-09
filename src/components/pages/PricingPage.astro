@@ -1,0 +1,220 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import PageHero from '../PageHero.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import type { Lang } from '../../i18n/ui';
+import { pagesContent } from '../../i18n/pages';
+import { withSlash } from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const p = pagesContent[lang].pricing;
+
+// The slugs differ per language (/en/pricing vs /es/precios), so hreflang cannot
+// be derived from the path — same as the estimate and choose-a-clinic pairs.
+const hreflangOverride = { en: '/en/pricing', es: '/es/precios' };
+
+// A price list is exactly what an AI assistant is asked to summarise when
+// someone types "how much does stem cell therapy cost in Cancún", so the rows
+// go out as structured data too, not just as a table a crawler has to parse.
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [...p.drivers, ...p.faq].map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+---
+
+<SiteLayout lang={lang} title={p.metaTitle} description={p.metaDescription} hreflangOverride={hreflangOverride}>
+  <script type="application/ld+json" slot="head" is:inline set:html={JSON.stringify(faqSchema)} />
+  <Breadcrumbs lang={lang} items={[{ label: p.eyebrow }]} />
+  <PageHero eyebrow={p.eyebrow} title={p.title} lead={p.lead} />
+
+  <section class="section">
+    <div class="wrap">
+      <h2>{p.tableTitle}</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>{p.tableHead.item}</th><th>{p.tableHead.price}</th></tr>
+          </thead>
+          <tbody>
+            {p.rows.map((r) => (
+              <tr><td>{r.item}</td><td class="price">{r.price}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="note">{p.tableNote}</p>
+
+      <div class="two">
+        <div>
+          <h3>{p.includedTitle}</h3>
+          <ul class="ticks">{p.included.map((i) => <li>{i}</li>)}</ul>
+        </div>
+        <div>
+          <h3>{p.excludedTitle}</h3>
+          <ul class="dashes">{p.excluded.map((i) => <li>{i}</li>)}</ul>
+        </div>
+      </div>
+      <p class="note">{p.excludedNote}</p>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <h2>{p.driversTitle}</h2>
+      <p class="lead">{p.driversLead}</p>
+      {p.drivers.map((d) => (
+        <div class="qa">
+          <h3>{d.q}</h3>
+          <p>{d.a}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="low">
+        <h2>{p.lowTitle}</h2>
+        <p>{p.lowBody}</p>
+      </div>
+
+      <h2>{p.marketTitle}</h2>
+      <p class="lead">{p.marketLead}</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>{p.marketHead.provider}</th><th>{p.marketHead.range}</th></tr>
+          </thead>
+          <tbody>
+            {p.market.map((m) => (
+              <tr><td>{m.provider}</td><td>{m.range}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <h2>{p.faqTitle}</h2>
+      {p.faq.map((f) => (
+        <div class="qa">
+          <h3>{f.q}</h3>
+          <p>{f.a}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap center">
+      <h2>{p.cta.title}</h2>
+      <p class="lead">{p.cta.body}</p>
+      <a href={withSlash(p.cta.href)} class="btn btn-primary">{p.cta.label}</a>
+      <p class="note" style="margin-top:28px">{p.disclaimer}</p>
+    </div>
+  </section>
+</SiteLayout>
+
+<style>
+  /* Deliberately not a `overflow-x: auto` scroll box — that reads as a
+     scrollable region a keyboard cannot reach (axe: scrollable-region-focusable,
+     and it only shows up at mobile width). Same approach the blog tables use:
+     the cells wrap and tighten so the table simply fits. */
+  .table-wrap {
+    margin: 18px 0;
+  }
+  table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+  th,
+  td {
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+  }
+  th {
+    background: #f1f5f9;
+    color: var(--navy);
+    font-weight: 700;
+  }
+  td.price {
+    font-weight: 700;
+    color: var(--navy);
+  }
+  @media (max-width: 560px) {
+    th,
+    td {
+      padding: 9px 10px;
+      font-size: 0.9rem;
+    }
+  }
+  .note {
+    color: #475569;
+    font-size: 0.95rem;
+    margin-top: 14px;
+  }
+  .two {
+    display: grid;
+    gap: 28px;
+    margin-top: 36px;
+  }
+  @media (min-width: 760px) {
+    .two {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .ticks,
+  .dashes {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+  }
+  .ticks li,
+  .dashes li {
+    padding-left: 26px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .ticks li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--teal-text);
+    font-weight: 700;
+  }
+  .dashes li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: #94a3b8;
+  }
+  .qa {
+    margin-top: 26px;
+  }
+  .qa h3 {
+    margin-bottom: 6px;
+    color: var(--navy);
+  }
+  .low {
+    border-left: 4px solid var(--gold);
+    padding: 4px 0 4px 20px;
+    margin-bottom: 46px;
+  }
+  .low h2 {
+    margin-top: 0;
+  }
+</style>

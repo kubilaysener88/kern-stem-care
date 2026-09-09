@@ -24,6 +24,7 @@ const exploreLinks = [
   { href: base, label: t.home },
   { href: `${base}/about`, label: t.about },
   { href: `${base}/process`, label: t.process },
+  { href: lang === 'es' ? `${base}/precios` : `${base}/pricing`, label: t.pricing },
   ...(HAS_TESTIMONIALS ? [{ href: `${base}/testimonials`, label: t.testimonials }] : []),
   { href: `${base}/blog`, label: lang === 'es' ? 'Blog y Recursos' : 'Blog & Resources' },
   { href: `${base}/contact`, label: t.contact },

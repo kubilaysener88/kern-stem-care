@@ -19,6 +19,9 @@ No hay un precio único — el costo de la **[terapia con células madre](/es/se
 en México depende del tipo de célula y la dosis, el número de sesiones, la condición a
 tratar, y la clínica y el laboratorio involucrados.
 
+> ¿Buscas las cifras y no la explicación? La lista completa, por aplicación, está en la **[página de precios](/es/precios/)**.
+
+
 En la práctica, la mayoría de lo que Kern Stem Care coordina en Cancún está entre **$850 y
 $8,200 USD**. En vez de dejarte adivinando en qué punto de ese rango caes, aquí está lo que se
 cotiza cada aplicación:

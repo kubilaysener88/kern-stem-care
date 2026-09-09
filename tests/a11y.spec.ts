@@ -24,6 +24,8 @@ const ROUTES = [
   '/es/process',
   '/en/testimonials',
   '/es/testimonials',
+  '/en/pricing',
+  '/es/precios',
   '/en/how-to-choose-a-clinic',
   '/es/como-elegir-clinica',
   '/en/contact',

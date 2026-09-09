@@ -116,6 +116,36 @@ export interface EstimatePage {
   disclaimer: string;
 }
 
+export interface PricingPage {
+  metaTitle: string;
+  metaDescription: string;
+  eyebrow: string;
+  title: string;
+  lead: string;
+  tableTitle: string;
+  tableHead: { item: string; price: string };
+  rows: { item: string; price: string }[];
+  tableNote: string;
+  includedTitle: string;
+  included: string[];
+  excludedTitle: string;
+  excluded: string[];
+  excludedNote: string;
+  driversTitle: string;
+  driversLead: string;
+  drivers: { q: string; a: string }[];
+  lowTitle: string;
+  lowBody: string;
+  marketTitle: string;
+  marketLead: string;
+  marketHead: { provider: string; range: string };
+  market: { provider: string; range: string }[];
+  faqTitle: string;
+  faq: { q: string; a: string }[];
+  cta: { title: string; body: string; label: string; href: string };
+  disclaimer: string;
+}
+
 export interface ChooseClinicPage {
   metaTitle: string;
   metaDescription: string;
@@ -144,6 +174,7 @@ export interface PagesSet {
   contact: ContactPage;
   estimate: EstimatePage;
   chooseClinic: ChooseClinicPage;
+  pricing: PricingPage;
 }
 
 const investigationalEN =
@@ -394,6 +425,108 @@ const en: PagesSet = {
     disclaimer:
       '<strong>Important:</strong> Kern Stem Care is a medical coordination agency, not a clinic, and does not provide medical treatment or advice. This estimate is prepared with guidance from independent, licensed partner physicians but is not a final quote, diagnosis, or guarantee — your treating physician confirms your protocol and final cost during your evaluation. Many regenerative therapies are not approved by the U.S. FDA or Health Canada for specific diseases and are considered investigational.',
   },
+  pricing: {
+    metaTitle: 'Stem cell therapy prices in Cancún | Kern Stem Care',
+    metaDescription:
+      'What each application actually costs in Cancún — the full price list, from $850 to $8,200 USD, what the figure includes, what it does not, and what drives the number up or down.',
+    eyebrow: 'Prices',
+    title: 'What it costs, before you ask',
+    lead: 'The most common question patients ask other patients online is simply "what did you pay?" — and it is usually the hardest one to get answered. Here is our full list. No form, no call, no "contact us for pricing".',
+    tableTitle: 'Price per application',
+    tableHead: { item: 'Application', price: 'Price (USD)' },
+    rows: [
+      { item: 'One joint — knee, elbow, shoulder or hip', price: '$2,300' },
+      { item: 'Two joints — knees, elbows or shoulders', price: '$4,250' },
+      { item: 'One area of the face', price: '$850' },
+      { item: 'Full face and neck', price: '$1,500' },
+      { item: 'Placenta application', price: '$880' },
+      { item: 'Anti-aging / overall well-being', price: '$2,300 – $7,500, by patient weight' },
+      { item: 'A serious or complex condition', price: 'Quoted after evaluation' },
+    ],
+    tableNote:
+      'Serious conditions carry no figure on purpose. The protocol is built for the individual case, and putting a price on it before a physician has seen you would be the opposite of what this site tells you to demand from a clinic.',
+    includedTitle: 'What the figure includes',
+    included: [
+      'The medical evaluation and the consultation with the physician',
+      'The cellular product and its laboratory preparation',
+      'The treatment session or sessions at a government-licensed (COFEPRIS) clinic',
+      'Coordination: provider matching, appointment scheduling, and a bilingual coordinator throughout your stay',
+    ],
+    excludedTitle: 'What sits outside it',
+    excluded: [
+      'Flights and most meals. We advise on timings and routes; you book and pay.',
+      'Your hotel. Book it wherever you prefer, or ask us to find a trusted option near the clinic.',
+      'Airport transfers, which are an optional add-on priced separately, with our own drivers.',
+      'Follow-up once you are home, and any additional applications a physician may recommend later.',
+    ],
+    excludedNote:
+      'Both the hotel and the transfer are optional. Plenty of patients arrange their own, especially those who already know Cancún — it changes nothing about the treatment or the price.',
+    driversTitle: 'What moves the number',
+    driversLead: 'These are the questions we are asked most often once someone has seen the list.',
+    drivers: [
+      {
+        q: 'Why does one joint cost more than a full face?',
+        a: 'The cellular product and the dose differ. A joint application is a different preparation from an aesthetic one, and the quantity is not comparable — which is why the list is by application rather than a single per-session rate.',
+      },
+      {
+        q: 'Why is anti-aging a range instead of a figure?',
+        a: 'Because it is dosed by body weight. A systemic application is calculated for the patient, so a lighter patient sits near $2,300 and a heavier one nearer $7,500. Your evaluation produces the exact number before you commit to anything.',
+      },
+      {
+        q: 'Does Kern Stem Care add a fee on top?',
+        a: 'No. The coordination is inside the figure you see. You pay us, and we pay the provider — there is no second invoice and no commission added at the end.',
+      },
+      {
+        q: 'Is the quote final?',
+        a: 'The written quote you receive after your evaluation is the figure. What can change it is a physician recommending something different from what you asked about — and you would know that before booking flights.',
+      },
+    ],
+    lowTitle: 'Our prices are low for this market. That deserves an answer.',
+    lowBody:
+      'Patients comparing clinics in Mexico routinely see quotes of $20,000 and up, and a much lower figure invites a fair question: what is missing? The honest answer is that a coordination agency does not carry a clinic\'s overhead and does not mark the provider up — you are seeing the provider\'s price plus our coordination, not a resale. But you should not take that on trust. Check the laboratory\'s sanitary licence number and the treating physician\'s cédula, both of which we publish, and ask any clinic quoting you five figures to do the same.',
+    marketTitle: 'What others in Cancún publish',
+    marketLead:
+      'Ranges other providers published as of September 2026. They are here to show where we sit, not as a judgement of quality — a higher price is not evidence of worse care, and a lower one is not evidence of better.',
+    marketHead: { provider: 'Provider', range: 'Published range (USD)' },
+    market: [
+      { provider: 'Regeneris Therapy', range: '$5,000 – $15,000 · knee $2,500 – $5,500' },
+      { provider: 'Cellular Hope Institute', range: '$10,000 – $25,000' },
+      { provider: 'GIOSTAR', range: '$6,900 – $18,968' },
+      { provider: 'MER Clinic', range: '$3,408 – $5,812' },
+      { provider: 'StemLife', range: '$2,500 – $25,000' },
+    ],
+    faqTitle: 'Common questions',
+    faq: [
+      {
+        q: 'How many cells does an application contain?',
+        a: 'Ask this at your evaluation, and ask any clinic you compare us against. Cell count and viability are what actually determine what you are paying for, and they vary by protocol — the treating physician gives you the figure for your case in writing. The laboratory that prepares them, NAO Biotechnology, ships every batch with a signed Certificate of Quality.',
+      },
+      {
+        q: 'Do I pay the clinic or Kern Stem Care?',
+        a: 'You pay us, and we pay the provider. One transaction, one itemized quote.',
+      },
+      {
+        q: 'Is a deposit required to get a quote?',
+        a: 'No. The evaluation and the quote cost nothing and carry no obligation.',
+      },
+      {
+        q: 'Can I bring someone with me?',
+        a: 'Yes. Patients usually do, and on treatment day it helps — you will be resting afterwards, and having someone for the trip back to the hotel makes the day easier.',
+      },
+      {
+        q: 'Does a lower price mean fewer cells or a lesser product?',
+        a: 'Not on its own, and you should not settle for anyone\'s word on it — ours included. The way to answer it is the certificate of quality for your batch and the licence numbers behind the lab and the physician. We publish ours so you can start there.',
+      },
+    ],
+    cta: {
+      title: 'Get your own number',
+      body: 'Tell us the condition or goal and we come back with an itemized quote, reviewed by a licensed physician, within 24 hours. Free, and with no obligation.',
+      label: 'Request your quote →',
+      href: '/en/estimate/',
+    },
+    disclaimer:
+      'Kern Stem Care is a medical coordination agency, not a clinic, and does not provide treatment or medical advice. No figure here is a diagnosis or a treatment recommendation. Which therapy suits a patient, and whether any does, is decided by the treating physician during the medical evaluation. Many regenerative therapies are not approved by the U.S. FDA or Health Canada for specific diseases and are considered investigational. Results vary from person to person.',
+  },
   chooseClinic: {
     metaTitle: 'How to Choose a Stem Cell Clinic in Mexico | Kern Stem Care',
     metaDescription:
@@ -635,6 +768,108 @@ const es: PagesSet = {
       'La dosis de células madre la calcula tu médico tratante con base en el peso corporal — compartirlo desde ahora nos ayuda a preparar una cotización inicial más precisa. Tu protocolo final siempre lo confirma el médico durante tu evaluación, no este formulario.',
     disclaimer:
       '<strong>Importante:</strong> Kern Stem Care es una agencia de coordinación médica, no una clínica, y no brinda tratamiento ni consejo médico. Esta cotización se prepara con la guía de médicos aliados independientes y con licencia, pero no es una cotización final, diagnóstico ni garantía — tu médico tratante confirma tu protocolo y costo final durante tu evaluación. Muchas terapias regenerativas no están aprobadas por la FDA de EE.UU. ni Health Canada para enfermedades específicas y se consideran de investigación.',
+  },
+  pricing: {
+    metaTitle: 'Precios de terapia con células madre en Cancún | Kern Stem Care',
+    metaDescription:
+      'Cuánto cuesta cada aplicación en Cancún — la lista completa, de $850 a $8,200 USD, qué incluye la cifra, qué no, y qué la sube o la baja.',
+    eyebrow: 'Precios',
+    title: 'Cuánto cuesta, antes de que preguntes',
+    lead: 'La pregunta que los pacientes más se hacen entre ellos en internet es simplemente "¿tú cuánto pagaste?" — y suele ser la más difícil de que alguien conteste. Aquí está nuestra lista completa. Sin formulario, sin llamada, sin "contáctanos para conocer precios".',
+    tableTitle: 'Precio por aplicación',
+    tableHead: { item: 'Aplicación', price: 'Precio (USD)' },
+    rows: [
+      { item: 'Una articulación — rodilla, codo, hombro o cadera', price: '$2,300' },
+      { item: 'Dos articulaciones — rodillas, codos u hombros', price: '$4,250' },
+      { item: 'Una zona del rostro', price: '$850' },
+      { item: 'Rostro completo y cuello', price: '$1,500' },
+      { item: 'Aplicación de placenta', price: '$880' },
+      { item: 'Antienvejecimiento / bienestar general', price: '$2,300 – $7,500, según el peso' },
+      { item: 'Una condición grave o compleja', price: 'Se cotiza tras la evaluación' },
+    ],
+    tableNote:
+      'Las condiciones graves no llevan cifra a propósito. El protocolo se arma para cada caso, y ponerle precio antes de que un médico te vea sería lo contrario de lo que este sitio te pide exigirle a una clínica.',
+    includedTitle: 'Qué incluye la cifra',
+    included: [
+      'La evaluación médica y la consulta con el médico',
+      'El producto celular y su preparación en laboratorio',
+      'La sesión o sesiones de tratamiento en una clínica con licencia gubernamental (COFEPRIS)',
+      'La coordinación: selección del proveedor, agenda de citas y un coordinador bilingüe durante toda tu estancia',
+    ],
+    excludedTitle: 'Qué queda fuera',
+    excluded: [
+      'Los vuelos y la mayoría de las comidas. Te asesoramos con horarios y rutas; tú reservas y pagas.',
+      'El hotel. Lo reservas donde prefieras, o nos pides una opción de confianza cerca de la clínica.',
+      'El traslado del aeropuerto, que es un servicio opcional con su propio costo, con nuestros choferes.',
+      'El seguimiento una vez que vuelves a casa, y las aplicaciones adicionales que un médico llegue a recomendar después.',
+    ],
+    excludedNote:
+      'El hotel y el traslado son opcionales. Muchos pacientes lo resuelven por su cuenta, sobre todo quienes ya conocen Cancún — eso no cambia nada de su tratamiento ni de su precio.',
+    driversTitle: 'Qué mueve la cifra',
+    driversLead: 'Éstas son las preguntas que más nos hacen en cuanto alguien ve la lista.',
+    drivers: [
+      {
+        q: '¿Por qué una articulación cuesta más que el rostro completo?',
+        a: 'El producto celular y la dosis son distintos. Una aplicación articular es una preparación diferente a una estética, y la cantidad no es comparable — por eso la lista va por aplicación y no por un precio único de sesión.',
+      },
+      {
+        q: '¿Por qué antienvejecimiento es un rango y no una cifra?',
+        a: 'Porque se dosifica según el peso corporal. Una aplicación sistémica se calcula para el paciente, así que alguien de menor peso queda cerca de $2,300 y alguien de mayor peso cerca de $7,500. Tu evaluación produce la cifra exacta antes de que te comprometas a nada.',
+      },
+      {
+        q: '¿Kern Stem Care cobra algo aparte?',
+        a: 'No. La coordinación va dentro de la cifra que ves. Tú nos pagas a nosotros y nosotros al proveedor — no hay segunda factura ni comisión agregada al final.',
+      },
+      {
+        q: '¿La cotización es definitiva?',
+        a: 'La cotización por escrito que recibes después de tu evaluación es la cifra. Lo que puede cambiarla es que el médico recomiende algo distinto de lo que preguntaste — y eso lo sabrías antes de comprar vuelos.',
+      },
+    ],
+    lowTitle: 'Nuestros precios son bajos para este mercado. Eso merece una respuesta.',
+    lowBody:
+      'Quien compara clínicas en México ve con frecuencia cotizaciones de $20,000 para arriba, y una cifra mucho menor invita una pregunta justa: ¿qué le falta? La respuesta honesta es que una agencia de coordinación no carga con los gastos fijos de una clínica y no le pone sobreprecio al proveedor — estás viendo el precio del proveedor más nuestra coordinación, no una reventa. Pero no te lo creas por nuestra palabra. Comprueba el número de licencia sanitaria del laboratorio y la cédula del médico tratante, que publicamos los dos, y pídele lo mismo a cualquier clínica que te cotice cinco cifras.',
+    marketTitle: 'Lo que publican otros en Cancún',
+    marketLead:
+      'Rangos que otros proveedores publicaban en septiembre de 2026. Están aquí para ubicar dónde estamos, no como juicio de calidad — un precio más alto no prueba peor atención, y uno más bajo no prueba mejor.',
+    marketHead: { provider: 'Proveedor', range: 'Rango publicado (USD)' },
+    market: [
+      { provider: 'Regeneris Therapy', range: '$5,000 – $15,000 · rodilla $2,500 – $5,500' },
+      { provider: 'Cellular Hope Institute', range: '$10,000 – $25,000' },
+      { provider: 'GIOSTAR', range: '$6,900 – $18,968' },
+      { provider: 'MER Clinic', range: '$3,408 – $5,812' },
+      { provider: 'StemLife', range: '$2,500 – $25,000' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faq: [
+      {
+        q: '¿Cuántas células trae una aplicación?',
+        a: 'Pregúntalo en tu evaluación, y pregúntalo también a cualquier clínica con la que nos compares. El conteo celular y la viabilidad son lo que de verdad determina qué estás pagando, y varían según el protocolo — el médico tratante te da la cifra de tu caso por escrito. El laboratorio que las prepara, NAO Biotechnology, envía cada lote con su Certificado de Calidad firmado.',
+      },
+      {
+        q: '¿Le pago a la clínica o a Kern Stem Care?',
+        a: 'Nos pagas a nosotros y nosotros al proveedor. Una sola transacción y una cotización desglosada.',
+      },
+      {
+        q: '¿Hay que dar anticipo para recibir una cotización?',
+        a: 'No. La evaluación y la cotización no cuestan nada ni comprometen a nada.',
+      },
+      {
+        q: '¿Puedo venir acompañado?',
+        a: 'Sí. La mayoría lo hace, y el día del tratamiento ayuda — vas a estar en reposo después, y tener a alguien para el regreso al hotel hace el día más llevadero.',
+      },
+      {
+        q: '¿Un precio más bajo significa menos células o un producto inferior?',
+        a: 'Por sí solo no, y no deberías conformarte con la palabra de nadie — la nuestra incluida. La forma de contestarlo es el certificado de calidad de tu lote y los números de licencia del laboratorio y del médico. Publicamos los nuestros para que empieces por ahí.',
+      },
+    ],
+    cta: {
+      title: 'Obtén tu propia cifra',
+      body: 'Cuéntanos la condición o el objetivo y te devolvemos una cotización desglosada, revisada por un médico con licencia, en menos de 24 horas. Gratis y sin compromiso.',
+      label: 'Solicita tu cotización →',
+      href: '/es/cotizacion/',
+    },
+    disclaimer:
+      'Kern Stem Care es una agencia de coordinación médica, no una clínica, y no brinda tratamiento ni consejo médico. Ninguna cifra de esta página constituye un diagnóstico ni una recomendación de tratamiento. Qué terapia corresponde a cada paciente, y si alguna corresponde, lo define el médico tratante durante la evaluación médica. Muchas terapias regenerativas no están aprobadas por la FDA de EE.UU. ni por Health Canada para enfermedades específicas y se consideran de investigación. Los resultados varían de una persona a otra.',
   },
   chooseClinic: {
     metaTitle: 'Cómo Elegir una Clínica de Células Madre en México | Kern Stem Care',
