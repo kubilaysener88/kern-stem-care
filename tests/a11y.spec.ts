@@ -54,6 +54,8 @@ const ROUTES = [
   '/es/blog/es-normal-que-duela-mas-antes-de-mejorar',
   '/en/blog/stem-cell-therapy-arthritis-joint-pain',
   '/es/blog/terapia-con-celulas-madre-para-artritis-dolor-articular',
+  '/en/blog/stem-cell-therapy-cost-cancun-tijuana-usa',
+  '/es/blog/costo-terapia-celulas-madre-cancun-tijuana-eeuu',
   // Partner and team detail pages. These were never covered: the partner pages
   // are photo galleries and credential badges, which is exactly where contrast
   // and alt-text problems hide, and Y&H Clinic went public with six photos.
