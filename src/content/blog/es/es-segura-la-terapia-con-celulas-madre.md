@@ -42,7 +42,7 @@ Autoridades reguladoras y organizaciones de seguridad del paciente han señalado
 |---|---|
 | ¿La clínica y el laboratorio tienen licencia gubernamental? (En México, eso es COFEPRIS.) | Confirma una supervisión regulatoria básica de las instalaciones. |
 | ¿Pueden mostrar un certificado de análisis del lote celular? | Documenta el origen, conteo, viabilidad y pruebas de esterilidad de las células. |
-| ¿Recibes una evaluación médica presencial antes del tratamiento — no solo una llamada? | Una evaluación real es cómo el médico detecta cuándo una terapia no es adecuada para ti. |
+| ¿Te evalúa un médico antes del tratamiento — el que te va a tratar, no un coordinador? | Una evaluación real, que parta de tu historial y tus estudios, es cómo el médico detecta cuándo una terapia no es adecuada para ti. Presencial o por video, lo que importa es que pueda terminar en un no. |
 | ¿Quién te va a tratar realmente? | Pide el nombre y las credenciales del médico tratante, no solo del coordinador. |
 
 ¿Quieres la versión larga, con los registros oficiales y qué debe decir cada documento? Mira
@@ -50,7 +50,7 @@ Autoridades reguladoras y organizaciones de seguridad del paciente han señalado
 
 ## Cómo Kern Stem Care reduce ese riesgo por ti
 
-Somos una agencia de coordinación, no una clínica — nosotros no aplicamos los tratamientos directamente. Lo que hacemos es la verificación: solo trabajamos con médicos y laboratorios independientes con licencia gubernamental (COFEPRIS), y tu plan de tratamiento lo confirma el médico tratante durante una evaluación presencial — no lo decidimos nosotros ni un formulario.
+Somos una agencia de coordinación, no una clínica — nosotros no aplicamos los tratamientos directamente. Lo que hacemos es la verificación: solo trabajamos con médicos y laboratorios independientes con licencia gubernamental (COFEPRIS), y tu plan de tratamiento lo confirma el médico tratante en una videoevaluación antes de que viajes — no lo decidimos nosotros ni un formulario.
 
 En concreto, contestamos públicamente las cuatro preguntas de la tabla de arriba sobre nuestra
 propia red, antes de pedirte que confíes en nadie:
@@ -66,8 +66,9 @@ propia red, antes de pedirte que confíes en nadie:
 - **Los médicos.** Cada médico tratante de la red aparece con su *cédula profesional* — el
   Dr. Luigi Palermo (7606055) y el Dr. Fernando José Núñez Prouxl (10566813) — para que puedas
   consultarlos en el registro del gobierno sin preguntarnos.
-- **La evaluación.** Es presencial, con el médico tratante, antes de decidir nada. Ese es el
-  paso donde un médico detecta los casos en que una terapia no es adecuada.
+- **La evaluación.** Es con el médico tratante, en videoconsulta, antes de que pagues y antes
+  de que compres un vuelo. Ese es el paso donde un médico detecta los casos en que una terapia
+  no es adecuada — y si la respuesta es no, no te costó nada.
 
 Todos esos números están en [lo que puedes verificar](/es/about/#nuestra-red). El proveedor que
 no ponga el equivalente por escrito es del que hay que cuidarse.

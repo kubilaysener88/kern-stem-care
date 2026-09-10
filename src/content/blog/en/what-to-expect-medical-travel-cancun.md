@@ -31,8 +31,9 @@ For the full step-by-step breakdown, see our **[International Patients](/en/proc
   licences, and you can see them by name on
   [Logistics & Transportation](/en/team/logistics-travel/). Arranged in advance, it means
   someone is waiting for you rather than you sorting out transport after a long flight.
-- **In-person consultation** at a **[government-licensed (COFEPRIS)](/en/about/#our-network)** clinic
-  before any treatment.
+- **Your medical evaluation has already happened** — a video consultation with the treating
+  physician, before this trip, so nobody flies to Cancún to be told they are not a candidate.
+  Treatment itself is at a **[government-licensed (COFEPRIS)](/en/about/#our-network)** clinic.
 - **Treatment day.** The application itself runs from about 30 minutes to an hour and a half,
   depending on what is being treated. Eat something light beforehand. Most patients head back
   to the hotel straight afterwards and keep the rest of the day clear — the clinic normally

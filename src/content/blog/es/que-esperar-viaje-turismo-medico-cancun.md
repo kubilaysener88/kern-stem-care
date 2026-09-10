@@ -33,8 +33,9 @@ Para el recorrido completo paso a paso, visita nuestra página de
   [Logística y Transporte](/es/team/logistics-travel/).
   Contratado con anticipación, significa que alguien te está esperando en vez de que tengas que
   resolver el transporte después de un vuelo largo.
-- **Consulta presencial** en una **[clínica con licencia gubernamental (COFEPRIS)](/es/about/#nuestra-red)**
-  antes de cualquier tratamiento.
+- **Tu evaluación médica ya ocurrió** — una videoconsulta con el médico tratante, antes de este
+  viaje, para que nadie vuele a Cancún a enterarse de que no es candidato. El tratamiento sí es
+  en una **[clínica con licencia gubernamental (COFEPRIS)](/es/about/#nuestra-red)**.
 - **Día del tratamiento.** La aplicación dura entre 30 minutos y hora y media, según lo que se
   vaya a tratar. Come algo ligero antes. La mayoría de los pacientes regresa al hotel
   enseguida y deja libre el resto del día — la clínica normalmente pide reposo, evitar

@@ -42,7 +42,7 @@ Regulators and patient-safety organizations have repeatedly flagged "stem cell t
 |---|---|
 | Is the clinic and lab government-licensed? (In Mexico, that's COFEPRIS.) | Confirms basic regulatory oversight of the facility. |
 | Can they show a Certificate of Analysis for the cell batch? | Documents cell source, count, viability, and sterility testing. |
-| Do you get a physical evaluation before treatment — not just a phone call? | A real evaluation is how a physician catches when a therapy isn't right for you. |
+| Does a physician evaluate you before treatment — the one who will treat you, not a coordinator? | A real evaluation, working from your history and lab studies, is how a physician catches when a therapy isn't right for you. Video or in person, what matters is that it can end in a no. |
 | Who is actually treating you? | Ask for the treating physician's name and credentials, not just the coordinator's. |
 
 Want the long version, with the official registries and what each document should say? See
@@ -50,7 +50,7 @@ Want the long version, with the official registries and what each document shoul
 
 ## How Kern Stem Care reduces this risk for you
 
-We're a coordination agency, not a clinic — we don't perform treatments ourselves. What we do is the vetting: we only work with independent, government-licensed (COFEPRIS) physicians and laboratories, and your treatment plan is confirmed by the treating physician during an in-person evaluation — not decided by us or by a form.
+We're a coordination agency, not a clinic — we don't perform treatments ourselves. What we do is the vetting: we only work with independent, government-licensed (COFEPRIS) physicians and laboratories, and your treatment plan is confirmed by the treating physician during a video evaluation before you travel — not decided by us or by a form.
 
 Concretely, we answer the four questions in the table above about our own network, in public,
 before asking you to trust anyone:
@@ -65,8 +65,9 @@ before asking you to trust anyone:
 - **The physicians.** Every treating physician in the network is named with their *cédula
   profesional* — Dr. Luigi Palermo (7606055) and Dr. Fernando José Núñez Prouxl (10566813) —
   so you can look them up on the government registry without asking us.
-- **The evaluation.** It happens in person, with the treating physician, before anything is
-  decided. That is the step where a physician catches the cases a therapy is wrong for.
+- **The evaluation.** It happens with the treating physician, on a video consultation, before
+  you pay and before you book a flight. That is the step where a physician catches the cases a
+  therapy is wrong for — and if the answer is no, it has cost you nothing.
 
 All of those numbers are listed on [what you can verify](/en/about/#our-network). A provider
 who will not put the equivalent in writing is the one to be careful with.

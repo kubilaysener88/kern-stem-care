@@ -456,7 +456,7 @@ const en: PagesSet = {
       { item: 'Full face and neck', detail: 'The same fibroblast treatment, covering the whole face and the neck.', price: '$1,500' },
       { item: 'Exosomes — 5 billion', detail: 'A cell-free preparation: the signalling vesicles cells use to communicate, without the cells themselves. Priced by particle count rather than by treated area.', price: '$970' },
       { item: 'Ultrapurified exosomes — 15 billion', detail: 'Three times the particle count of the entry preparation, and ultrapurified.', price: '$2,490' },
-      { item: 'Exosomes — 20 billion', detail: 'The highest particle count we coordinate.', price: '$2,630' },
+      { item: 'Exosomes — 20 billion', detail: 'A standard preparation, not ultrapurified, at the highest particle count we coordinate.', price: '$2,630' },
       { item: 'Placenta implant', detail: 'Freeze-dried placental tissue, placed as subdermal injections in the lower abdomen.', price: '$880' },
       { item: 'Anti-aging / overall well-being', detail: 'Stem cells given intravenously, dosed at 2 million cells per kilogram of body weight — which is why it is a range rather than a figure.', price: '$2,300 – $7,500, by patient weight' },
       { item: 'A serious or complex condition', detail: 'Which therapy, and how many applications, is decided by the treating physician at your evaluation.', price: 'Quoted after evaluation' },
@@ -496,7 +496,7 @@ const en: PagesSet = {
       },
       {
         q: 'Why are exosomes priced by particle count and everything else by area?',
-        a: 'Because that is the unit the product comes in. An exosome preparation contains no living cells — it is the signalling vesicles on their own — so what you are paying for is a number of particles rather than a treated area. Which count suits your case, if any does, is decided by the treating physician at your evaluation.',
+        a: 'Because that is the unit the product comes in. An exosome preparation contains no living cells — it is the signalling vesicles on their own — so what you are paying for is a number of particles rather than a treated area. It is also why the 15 billion preparation costs close to the 20 billion one: ultrapurification is an extra processing step rather than a larger quantity, so the counts and the prices do not track each other. Which one suits your case, if any does, is decided by the treating physician at your evaluation.',
       },
       {
         q: 'Does Kern Stem Care add a fee on top?',
@@ -513,11 +513,11 @@ const en: PagesSet = {
     payment: [
       {
         title: 'A physician reviews your case before you travel',
-        body: 'Your history goes to the treating physician and the answer comes back before you book anything. If you are not a candidate, that is where it ends and it has cost you nothing — no deposit, no ticket, and no flight to Cancún to be turned away at the door.',
+        body: 'Your history and your lab studies go to the treating physician, and you meet them on a video consultation. The answer comes back before you book anything. If you are not a candidate, that is where it ends and it has cost you nothing — no deposit, no ticket, and no flight to Cancún to be turned away at the door.',
       },
       {
         title: 'You pay once you have the green light',
-        body: 'In full, in a single payment, by 4pm the day before your application. The deadline is not administrative: it is the cut-off for placing the order with the laboratory.',
+        body: 'In full, in a single payment, by 4pm the day before your application — by bank transfer, in cash, or with a debit or credit card. The deadline is not administrative: it is the cut-off for placing the order with the laboratory.',
       },
       {
         title: 'The laboratory prepares your product and sends it to the clinic',
@@ -559,6 +559,14 @@ const en: PagesSet = {
       {
         q: 'Do I have to pay anything before I get a number?',
         a: 'No. The first consultation is remote and free: you send your history, a partner physician reviews it, and an itemized quote comes back, usually within 24 hours. No deposit, no obligation. Payment comes later, and only once a physician has confirmed you are a candidate — the sequence is set out above.',
+      },
+      {
+        q: 'Is the evaluation in person?',
+        a: 'No. It is a video consultation with the treating physician, before you travel, based on your history and the lab studies we tell you to arrange. That order is the point: an evaluation that only happens once you have paid for flights is not much of a gate. What matters is that it is the physician who will treat you, that it works from your studies, and that it can end in a no.',
+      },
+      {
+        q: 'Will my insurance cover any of this?',
+        a: 'Plan for it as an out-of-pocket cost. Regenerative therapies are investigational rather than approved standard care for specific diseases, which is the usual reason insurers decline them, and that applies just as much to a clinic at home as to one in Mexico. Ask your own insurer rather than taking our word for it — and ask before you commit to anything.',
       },
       {
         q: 'How many days do I need to be in Cancún?',
@@ -606,12 +614,12 @@ const en: PagesSet = {
         body: 'For the cells going into you, not a general laboratory brochure. It should document the tissue source, the cell count, viability, and sterility testing. If the laboratory does not issue a certificate for every batch, you already have your answer.',
       },
       {
-        title: 'Insist on an in-person evaluation with the treating physician',
-        body: 'Before you pay, and before you book flights you cannot change. A phone call or a web form is not an evaluation. That is the step where a physician catches the cases a therapy is wrong for — and where a legitimate provider tells you no.',
+        title: 'Insist on an evaluation by the treating physician, not the coordinator',
+        body: 'Before you pay, and before you book flights you cannot change. It can be a video consultation — what it cannot be is a chat with whoever answers the WhatsApp, or a web form. It should be the physician who will actually treat you, it should work from your history and your lab studies, and it has to be able to end in a no. That is the step where a physician catches the cases a therapy is wrong for, and where a legitimate provider turns a patient away.',
       },
       {
         title: 'Get the itemized quote in writing',
-        body: 'What it covers, what it leaves out, and who you pay for each part. A round number over WhatsApp is not a quote. Compare like for like: a lower price that skips the licensed laboratory or the in-person evaluation is not a discount.',
+        body: 'What it covers, what it leaves out, and who you pay for each part. A round number over WhatsApp is not a quote. Compare like for like: a lower price that skips the licensed laboratory or the evaluation by a physician is not a discount.',
         link: { label: 'What it costs and what goes into the price', href: '/en/blog/how-much-does-stem-cell-therapy-cost-in-mexico/' },
       },
     ],
@@ -850,7 +858,7 @@ const es: PagesSet = {
       { item: 'Rostro completo y cuello', detail: 'El mismo tratamiento con fibroblastos, en todo el rostro y el cuello.', price: '$1,500' },
       { item: 'Exosomas — 5 mil millones', detail: 'Una preparación libre de células: las vesículas de señalización que las células usan para comunicarse, sin las células mismas. Se cotiza por número de partículas y no por zona tratada.', price: '$970' },
       { item: 'Exosomas ultrapurificados — 15 mil millones', detail: 'El triple de partículas que la preparación de entrada, y ultrapurificada.', price: '$2,490' },
-      { item: 'Exosomas — 20 mil millones', detail: 'El conteo de partículas más alto que coordinamos.', price: '$2,630' },
+      { item: 'Exosomas — 20 mil millones', detail: 'Una preparación estándar, no ultrapurificada, con el conteo de partículas más alto que coordinamos.', price: '$2,630' },
       { item: 'Implante de placenta', detail: 'Tejido placentario liofilizado, aplicado en inyecciones subdérmicas en el abdomen bajo.', price: '$880' },
       { item: 'Antienvejecimiento / bienestar general', detail: 'Células madre por vía intravenosa, a razón de 2 millones de células por kilogramo de peso corporal — por eso es un rango y no una cifra.', price: '$2,300 – $7,500, según el peso' },
       { item: 'Una condición grave o compleja', detail: 'Qué terapia, y cuántas aplicaciones, lo decide el médico tratante en tu evaluación.', price: 'Se cotiza tras la evaluación' },
@@ -890,7 +898,7 @@ const es: PagesSet = {
       },
       {
         q: '¿Por qué los exosomas se cotizan por número de partículas y lo demás por zona?',
-        a: 'Porque ésa es la unidad en la que viene el producto. Una preparación de exosomas no contiene células vivas — son las vesículas de señalización solas — así que lo que pagas es una cantidad de partículas y no una zona tratada. Cuál de los conteos corresponde a tu caso, si alguno corresponde, lo decide el médico tratante en tu evaluación.',
+        a: 'Porque ésa es la unidad en la que viene el producto. Una preparación de exosomas no contiene células vivas — son las vesículas de señalización solas — así que lo que pagas es una cantidad de partículas y no una zona tratada. Es también la razón de que la preparación de 15 mil millones cueste casi lo mismo que la de 20 mil millones: la ultrapurificación es un paso adicional de procesamiento, no una cantidad mayor, así que los conteos y los precios no van a la par. Cuál corresponde a tu caso, si alguno corresponde, lo decide el médico tratante en tu evaluación.',
       },
       {
         q: '¿Kern Stem Care cobra algo aparte?',
@@ -907,11 +915,11 @@ const es: PagesSet = {
     payment: [
       {
         title: 'Un médico revisa tu caso antes de que viajes',
-        body: 'Tu historial va al médico tratante y la respuesta llega antes de que reserves nada. Si no eres candidato, ahí termina y no te costó nada — sin anticipo, sin boleto y sin volar a Cancún para que te digan que no en la puerta.',
+        body: 'Tu historial y tus estudios de laboratorio van al médico tratante, y lo ves en una videoconsulta. La respuesta llega antes de que reserves nada. Si no eres candidato, ahí termina y no te costó nada — sin anticipo, sin boleto y sin volar a Cancún para que te digan que no en la puerta.',
       },
       {
         title: 'Pagas cuando ya tienes el visto bueno',
-        body: 'Completo, en un solo pago, antes de las 4 pm del día anterior a tu aplicación. Esa hora no es un trámite: es el corte para hacerle el pedido al laboratorio.',
+        body: 'Completo, en un solo pago, antes de las 4 pm del día anterior a tu aplicación — por transferencia, en efectivo, o con tarjeta de débito o crédito. Esa hora no es un trámite: es el corte para hacerle el pedido al laboratorio.',
       },
       {
         title: 'El laboratorio prepara tu producto y lo envía a la clínica',
@@ -953,6 +961,14 @@ const es: PagesSet = {
       {
         q: '¿Tengo que pagar algo antes de recibir una cifra?',
         a: 'No. La primera consulta es a distancia y gratuita: nos mandas tu historial, un médico aliado lo revisa y te devolvemos una cotización desglosada, normalmente en menos de 24 horas. Sin anticipo y sin compromiso. El pago viene después, y sólo cuando un médico confirmó que eres candidato — la secuencia está más arriba.',
+      },
+      {
+        q: '¿La evaluación es presencial?',
+        a: 'No. Es una videoconsulta con el médico tratante, antes de que viajes, a partir de tu historial y de los estudios de laboratorio que te indicamos. Ese orden es justo el punto: una evaluación que sólo ocurre cuando ya pagaste vuelos no filtra gran cosa. Lo que importa es que sea el médico que te va a tratar, que parta de tus estudios y que pueda terminar en un no.',
+      },
+      {
+        q: '¿Mi seguro médico cubre algo de esto?',
+        a: 'Cuenta con que sale de tu bolsillo. Las terapias regenerativas son de investigación y no un tratamiento aprobado de referencia para enfermedades específicas, que es la razón habitual por la que las aseguradoras las rechazan, y eso aplica igual en una clínica de tu país que en una de México. Pregúntale a tu aseguradora en vez de creernos a nosotros — y pregunta antes de comprometerte a nada.',
       },
       {
         q: '¿Cuántos días necesito estar en Cancún?',
@@ -1000,12 +1016,12 @@ const es: PagesSet = {
         body: 'De las células que te van a aplicar a ti, no un folleto general del laboratorio. Debe documentar el origen del tejido, el conteo celular, la viabilidad y las pruebas de esterilidad. Si el laboratorio no emite un certificado por cada lote, ya tienes tu respuesta.',
       },
       {
-        title: 'Exige una evaluación presencial con el médico tratante',
-        body: 'Antes de pagar, y antes de comprar vuelos que no puedas cambiar. Una llamada o un formulario no son una evaluación. Ese es el paso donde un médico detecta los casos en que una terapia no es adecuada — y donde un proveedor legítimo te dice que no.',
+        title: 'Exige una evaluación con el médico tratante, no con el coordinador',
+        body: 'Antes de pagar, y antes de comprar vuelos que no puedas cambiar. Puede ser una videoconsulta — lo que no puede ser es una plática con quien conteste el WhatsApp, ni un formulario. Debe ser el médico que de verdad te va a tratar, debe partir de tu historial y de tus estudios de laboratorio, y tiene que poder terminar en un no. Ése es el paso donde un médico detecta los casos en que una terapia no es adecuada, y donde un proveedor legítimo rechaza a un paciente.',
       },
       {
         title: 'Pide la cotización desglosada por escrito',
-        body: 'Qué incluye, qué deja fuera, y a quién le pagas cada parte. Un número redondo por WhatsApp no es una cotización. Compara lo equivalente con lo equivalente: un precio más bajo que se salta el laboratorio con licencia o la evaluación presencial no es un descuento.',
+        body: 'Qué incluye, qué deja fuera, y a quién le pagas cada parte. Un número redondo por WhatsApp no es una cotización. Compara lo equivalente con lo equivalente: un precio más bajo que se salta el laboratorio con licencia o la evaluación del médico no es un descuento.',
         link: { label: 'Qué cuesta y qué entra en el precio', href: '/es/blog/cuanto-cuesta-la-terapia-con-celulas-madre-en-mexico/' },
       },
     ],
