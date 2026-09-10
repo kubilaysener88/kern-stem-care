@@ -308,7 +308,7 @@ const en: PagesSet = {
       {
         h2: 'How much is actually administered?',
         body:
-          'Exosome preparations are measured in particles rather than cells. The two counts coordinated in our network are <strong>5 billion</strong> and <strong>15 billion</strong>, the second ultrapurified, and both sit next to their figures on our <a href="/en/pricing/">prices page</a>. Which count suits your case, if either does, is confirmed by the treating physician at your evaluation.',
+          'Exosome preparations are measured in particles rather than cells. The counts coordinated in our network are <strong>5 billion</strong>, <strong>15 billion</strong> ultrapurified, and <strong>20 billion</strong>, and each sits next to its figure on our <a href="/en/pricing/">prices page</a>. Which one suits your case, if any does, is confirmed by the treating physician at your evaluation.',
       },
       { h2: 'Ideal for those who:', body: '<ul><li><strong>Want to boost their recovery</strong> — often alongside other cellular therapies.</li><li><strong>Want to improve their skin quality</strong> — glow, texture, and rejuvenation.</li><li><strong>Want to support their immune wellness</strong> — to feel more resilient and energetic.</li><li><strong>Want to slow aging and gain vitality</strong> — energy and overall wellbeing.</li></ul><p>If you recognize yourself in any of these, the treating physician will confirm it with you during your evaluation.</p>' },
     ],
@@ -455,7 +455,8 @@ const en: PagesSet = {
       { item: 'One area of the face', detail: 'Aesthetic treatment with fibroblasts, the cells that produce collagen, injected into the area being treated.', price: '$850' },
       { item: 'Full face and neck', detail: 'The same fibroblast treatment, covering the whole face and the neck.', price: '$1,500' },
       { item: 'Exosomes — 5 billion', detail: 'A cell-free preparation: the signalling vesicles cells use to communicate, without the cells themselves. Priced by particle count rather than by treated area.', price: '$970' },
-      { item: 'Ultrapurified exosomes — 15 billion', detail: 'Three times the particle count, in an ultrapurified preparation.', price: '$2,490' },
+      { item: 'Ultrapurified exosomes — 15 billion', detail: 'Three times the particle count of the entry preparation, and ultrapurified.', price: '$2,490' },
+      { item: 'Exosomes — 20 billion', detail: 'The highest particle count we coordinate.', price: '$2,630' },
       { item: 'Placenta implant', detail: 'Freeze-dried placental tissue, placed as subdermal injections in the lower abdomen.', price: '$880' },
       { item: 'Anti-aging / overall well-being', detail: 'Stem cells given intravenously, dosed at 2 million cells per kilogram of body weight — which is why it is a range rather than a figure.', price: '$2,300 – $7,500, by patient weight' },
       { item: 'A serious or complex condition', detail: 'Which therapy, and how many applications, is decided by the treating physician at your evaluation.', price: 'Quoted after evaluation' },
@@ -495,7 +496,7 @@ const en: PagesSet = {
       },
       {
         q: 'Why are exosomes priced by particle count and everything else by area?',
-        a: 'Because that is the unit the product comes in. An exosome preparation contains no living cells — it is the signalling vesicles on their own — so what you are paying for is a number of particles rather than a treated area. Which of the two counts suits your case, if either does, is decided by the treating physician at your evaluation.',
+        a: 'Because that is the unit the product comes in. An exosome preparation contains no living cells — it is the signalling vesicles on their own — so what you are paying for is a number of particles rather than a treated area. Which count suits your case, if any does, is decided by the treating physician at your evaluation.',
       },
       {
         q: 'Does Kern Stem Care add a fee on top?',
@@ -701,7 +702,7 @@ const es: PagesSet = {
       {
         h2: '¿Cuánto se aplica en realidad?',
         body:
-          'Las preparaciones de exosomas se miden en partículas, no en células. Los dos conteos que coordinamos en nuestra red son <strong>5 mil millones</strong> y <strong>15 mil millones</strong>, este último ultrapurificado, y ambos aparecen con su cifra en nuestra <a href="/es/precios/">página de precios</a>. Cuál corresponde a tu caso, si alguno corresponde, lo confirma el médico tratante en tu evaluación.',
+          'Las preparaciones de exosomas se miden en partículas, no en células. Los conteos que coordinamos en nuestra red son <strong>5 mil millones</strong>, <strong>15 mil millones</strong> ultrapurificados y <strong>20 mil millones</strong>, y cada uno aparece con su cifra en nuestra <a href="/es/precios/">página de precios</a>. Cuál corresponde a tu caso, si alguno corresponde, lo confirma el médico tratante en tu evaluación.',
       },
       { h2: 'Ideal para quienes:', body: '<ul><li><strong>Buscan potenciar su recuperación</strong> — a menudo en combinación con otras terapias celulares.</li><li><strong>Quieren mejorar la calidad de su piel</strong> — luminosidad, textura y rejuvenecimiento.</li><li><strong>Quieren apoyar su bienestar inmunológico</strong> — para sentirse con más defensas y energía.</li><li><strong>Buscan frenar el envejecimiento y ganar vitalidad</strong> — energía y bienestar general.</li></ul><p>Si te identificas con alguno de estos casos, el médico tratante lo confirmará contigo durante tu evaluación.</p>' },
     ],
@@ -848,7 +849,8 @@ const es: PagesSet = {
       { item: 'Una zona del rostro', detail: 'Tratamiento estético con fibroblastos, las células que producen colágeno, aplicados en la zona que se trata.', price: '$850' },
       { item: 'Rostro completo y cuello', detail: 'El mismo tratamiento con fibroblastos, en todo el rostro y el cuello.', price: '$1,500' },
       { item: 'Exosomas — 5 mil millones', detail: 'Una preparación libre de células: las vesículas de señalización que las células usan para comunicarse, sin las células mismas. Se cotiza por número de partículas y no por zona tratada.', price: '$970' },
-      { item: 'Exosomas ultrapurificados — 15 mil millones', detail: 'El triple de partículas, en una preparación ultrapurificada.', price: '$2,490' },
+      { item: 'Exosomas ultrapurificados — 15 mil millones', detail: 'El triple de partículas que la preparación de entrada, y ultrapurificada.', price: '$2,490' },
+      { item: 'Exosomas — 20 mil millones', detail: 'El conteo de partículas más alto que coordinamos.', price: '$2,630' },
       { item: 'Implante de placenta', detail: 'Tejido placentario liofilizado, aplicado en inyecciones subdérmicas en el abdomen bajo.', price: '$880' },
       { item: 'Antienvejecimiento / bienestar general', detail: 'Células madre por vía intravenosa, a razón de 2 millones de células por kilogramo de peso corporal — por eso es un rango y no una cifra.', price: '$2,300 – $7,500, según el peso' },
       { item: 'Una condición grave o compleja', detail: 'Qué terapia, y cuántas aplicaciones, lo decide el médico tratante en tu evaluación.', price: 'Se cotiza tras la evaluación' },
@@ -888,7 +890,7 @@ const es: PagesSet = {
       },
       {
         q: '¿Por qué los exosomas se cotizan por número de partículas y lo demás por zona?',
-        a: 'Porque ésa es la unidad en la que viene el producto. Una preparación de exosomas no contiene células vivas — son las vesículas de señalización solas — así que lo que pagas es una cantidad de partículas y no una zona tratada. Cuál de los dos conteos corresponde a tu caso, si alguno corresponde, lo decide el médico tratante en tu evaluación.',
+        a: 'Porque ésa es la unidad en la que viene el producto. Una preparación de exosomas no contiene células vivas — son las vesículas de señalización solas — así que lo que pagas es una cantidad de partículas y no una zona tratada. Cuál de los conteos corresponde a tu caso, si alguno corresponde, lo decide el médico tratante en tu evaluación.',
       },
       {
         q: '¿Kern Stem Care cobra algo aparte?',

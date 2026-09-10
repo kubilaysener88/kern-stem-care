@@ -33,7 +33,8 @@ cotiza cada aplicación:
 | Una zona del rostro. Tratamiento estético con fibroblastos, las células que producen el colágeno de la piel. | $850 |
 | Rostro completo y cuello. El mismo tratamiento con fibroblastos, en una zona más amplia. | $1,500 |
 | Exosomas — 5 mil millones. Una preparación libre de células, cotizada por número de partículas. | $970 |
-| Exosomas ultrapurificados — 15 mil millones. El triple de partículas. | $2,490 |
+| Exosomas ultrapurificados — 15 mil millones, ultrapurificados. | $2,490 |
+| Exosomas — 20 mil millones. El conteo de partículas más alto que coordinamos. | $2,630 |
 | Implante de placenta. Tejido placentario liofilizado, en inyecciones subdérmicas. | $880 |
 | Antienvejecimiento / bienestar general. Células madre por vía intravenosa, 2 millones por kilogramo de peso corporal. | $2,300 – $7,500, según el peso del paciente |
 | Una condición grave o compleja | Se cotiza tras la evaluación — el protocolo se arma para tu caso |
