@@ -56,7 +56,7 @@ antes de verte.
 
 ## Qué *no* suele estar incluido
 
-- Los vuelos y la mayoría de las comidas. Te ayudamos a elegir horarios y rutas, y tú los reservas y los pagas
+- Los vuelos y la mayoría de las comidas. Te ayudamos a elegir horarios y rutas, y podemos reservártelos si nos lo pides — el costo del boleto corre por tu cuenta en cualquier caso
 - El hotel. Lo reservas donde tú quieras — y si prefieres, te conseguimos una opción de confianza y económica cerca de la clínica, que pagas directamente
 - El traslado del aeropuerto al hotel y de regreso, opcional, como servicio adicional con su costo aparte y con nuestros propios choferes
 - Cualquier seguimiento una vez que regresas a casa
@@ -117,8 +117,9 @@ Sí — tu cotización por escrito y detallada llega después de tu evaluación 
 de que te comprometas a viajar, así conoces el costo antes de hacer planes de viaje.
 
 ### ¿La cotización incluye vuelos y hotel?
-Tu cotización cubre la parte médica y nuestra coordinación. Los vuelos los reservas tú —
-nosotros te asesoramos con horarios y rutas para que encajen alrededor de tu día de tratamiento.
+Tu cotización cubre la parte médica y nuestra coordinación. El costo del boleto es tuyo —
+lo reservas tú, o nos pides que lo hagamos nosotros. En cualquier caso te asesoramos con
+horarios y rutas para que encajen alrededor de tu día de tratamiento.
 El hotel también va por tu cuenta: lo reservas donde prefieras, o nos pides que te consigamos
 una opción de confianza cerca de la clínica. Y el traslado del aeropuerto al hotel y de regreso
 es opcional, como servicio adicional con su costo por separado y con nuestros propios choferes. Todo lo que nos pidas

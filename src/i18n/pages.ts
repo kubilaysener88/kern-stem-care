@@ -136,6 +136,9 @@ export interface PricingPage {
   driversTitle: string;
   driversLead: string;
   drivers: { q: string; a: string }[];
+  paymentTitle: string;
+  paymentLead: string;
+  payment: { title: string; body: string }[];
   lowTitle: string;
   lowBody: string;
   marketTitle: string;
@@ -364,7 +367,7 @@ const en: PagesSet = {
       { title: 'Follow-Up at Home', body: 'We help coordinate remote check-ins and aftercare with the provider once you return home.', image: '/assets/journey/post-tratamiento.jpg' },
     ],
     sections: [
-      { h2: 'Travel & logistics', body: 'Cancún International (CUN) is a major hub with direct flights from cities across the Americas, Europe, and beyond — including most major U.S. and Canadian cities. Nonstop flights run about 2 hours from Miami or Houston, and around 4 hours from New York or Toronto. We provide flight guidance as part of coordinating your trip. Airport transfers and lodging near the partner clinic are <strong>optional services with their own cost</strong>, quoted separately from your treatment — take them and travel logistics become one less thing to plan, or arrange your own and nothing about your care changes. The person collecting you at the airport is one of our own drivers, named with their federal licence on <a href="/en/team/logistics-travel/">Logistics &amp; Transportation</a>. For the trip narrated day by day, read <a href="/en/blog/what-to-expect-medical-travel-cancun/">what to expect on a medical travel trip to Cancún</a>.' },
+      { h2: 'Travel & logistics', body: 'Cancún International (CUN) is a major hub with direct flights from cities across the Americas, Europe, and beyond — including most major U.S. and Canadian cities. Nonstop flights run about 2 hours from Miami or Houston, and around 4 hours from New York or Toronto. We give you flight guidance as part of coordinating your trip, and we can book the flights for you if you ask — the fare stays yours either way. Airport transfers and lodging near the partner clinic are <strong>optional services with their own cost</strong>, quoted separately from your treatment — take them and travel logistics become one less thing to plan, or arrange your own and nothing about your care changes. The person collecting you at the airport is one of our own drivers, named with their federal licence on <a href="/en/team/logistics-travel/">Logistics &amp; Transportation</a>. For the trip narrated day by day, read <a href="/en/blog/what-to-expect-medical-travel-cancun/">what to expect on a medical travel trip to Cancún</a>.' },
       { h2: 'Costs & payments', body: "You receive one transparent, itemized quote before committing — medical, travel, and coordination costs clearly broken down. You pay Kern Stem Care directly, and we handle payment to your medical provider and other partners on your behalf, so you're never juggling multiple invoices in a foreign currency." },
     ],
   },
@@ -465,14 +468,14 @@ const en: PagesSet = {
       'If your case is already on this list, you do not need to read the rest of the page to start. Send it to us and the exact figure comes back in writing.',
     includedTitle: 'What the figure includes',
     included: [
-      'The in-person medical evaluation and the consultation with the treating physician',
+      'The medical evaluation and the consultation with the treating physician',
       'The cellular product and its laboratory preparation',
       'The treatment session or sessions at a government-licensed (COFEPRIS) clinic',
       'Coordination: provider matching, appointment scheduling, and a bilingual coordinator throughout your stay',
     ],
     excludedTitle: 'What sits outside it',
     excluded: [
-      'Flights and most meals. We advise on timings and routes; you book and pay.',
+      'Flights and most meals. We advise on timings and routes, and we can book the flights for you if you would rather we did — either way the fare is yours.',
       'Your hotel. Book it wherever you prefer, or ask us to find a trusted option near the clinic.',
       'Airport transfers, which are an optional add-on priced separately, with our own drivers.',
       'Follow-up once you are home, and any additional applications a physician may recommend later.',
@@ -501,6 +504,27 @@ const en: PagesSet = {
       {
         q: 'Is the quote final?',
         a: 'The written quote you receive after your evaluation is the figure. What can change it is a physician recommending something different from what you asked about — and you would know that before booking flights.',
+      },
+    ],
+    paymentTitle: 'When you pay, and what happens if the answer is no',
+    paymentLead:
+      'The order of these steps is the part that protects you, so it is worth setting out plainly.',
+    payment: [
+      {
+        title: 'A physician reviews your case before you travel',
+        body: 'Your history goes to the treating physician and the answer comes back before you book anything. If you are not a candidate, that is where it ends and it has cost you nothing — no deposit, no ticket, and no flight to Cancún to be turned away at the door.',
+      },
+      {
+        title: 'You pay once you have the green light',
+        body: 'In full, in a single payment, by 4pm the day before your application. The deadline is not administrative: it is the cut-off for placing the order with the laboratory.',
+      },
+      {
+        title: 'The laboratory prepares your product and sends it to the clinic',
+        body: 'The order goes in, your preparation is made, and it is delivered to the clinic for your appointment. That is why the payment deadline is a time of day rather than just a date — the schedule works backwards from it.',
+      },
+      {
+        title: 'The application is the following afternoon',
+        body: 'You rest for the remainder of that day afterwards, which is the other reason patients usually bring someone.',
       },
     ],
     lowTitle: 'Our prices are low for this market. That deserves an answer.',
@@ -533,7 +557,7 @@ const en: PagesSet = {
       },
       {
         q: 'Do I have to pay anything before I get a number?',
-        a: 'No. The first consultation is remote and free: you send your history, a partner physician reviews it, and an itemized quote comes back, usually within 24 hours. No deposit, no obligation. The medical evaluation listed inside the price is the in-person one at the clinic on your treatment trip — not a paid step you have to clear before anyone will quote you.',
+        a: 'No. The first consultation is remote and free: you send your history, a partner physician reviews it, and an itemized quote comes back, usually within 24 hours. No deposit, no obligation. Payment comes later, and only once a physician has confirmed you are a candidate — the sequence is set out above.',
       },
       {
         q: 'How many days do I need to be in Cancún?',
@@ -736,7 +760,7 @@ const es: PagesSet = {
       { title: 'Seguimiento en Casa', body: 'Ayudamos a coordinar el seguimiento remoto y los cuidados posteriores con el proveedor al volver a casa.', image: '/assets/journey/post-tratamiento.jpg' },
     ],
     sections: [
-      { h2: 'Viaje y logística', body: 'El Aeropuerto Internacional de Cancún (CUN) es un hub importante con vuelos directos desde ciudades de toda América, Europa y más — incluyendo la mayoría de las ciudades de EE.UU. y Canadá. Los vuelos directos toman cerca de 2 horas desde Miami o Houston, y alrededor de 4 horas desde Nueva York o Toronto. Te damos guía de vuelos como parte de la coordinación de tu viaje. El traslado del aeropuerto y el hospedaje cerca de la clínica aliada son <strong>servicios opcionales con costo aparte</strong>, cotizados por separado del tratamiento — si los tomas, la logística del viaje deja de ser tu preocupación; si prefieres organizarlos tú, tu atención no cambia en nada. Quien te recoge en el aeropuerto son nuestros propios choferes, con nombre y licencia federal publicados en <a href="/es/team/logistics-travel/">Logística y Transporte</a>. Si quieres el recorrido narrado día por día, léelo en <a href="/es/blog/que-esperar-viaje-turismo-medico-cancun/">qué esperar en un viaje médico a Cancún</a>.' },
+      { h2: 'Viaje y logística', body: 'El Aeropuerto Internacional de Cancún (CUN) es un hub importante con vuelos directos desde ciudades de toda América, Europa y más — incluyendo la mayoría de las ciudades de EE.UU. y Canadá. Los vuelos directos toman cerca de 2 horas desde Miami o Houston, y alrededor de 4 horas desde Nueva York o Toronto. Te damos guía de vuelos como parte de la coordinación de tu viaje, y podemos reservártelos si nos lo pides — el costo del boleto corre por tu cuenta en cualquier caso. El traslado del aeropuerto y el hospedaje cerca de la clínica aliada son <strong>servicios opcionales con costo aparte</strong>, cotizados por separado del tratamiento — si los tomas, la logística del viaje deja de ser tu preocupación; si prefieres organizarlos tú, tu atención no cambia en nada. Quien te recoge en el aeropuerto son nuestros propios choferes, con nombre y licencia federal publicados en <a href="/es/team/logistics-travel/">Logística y Transporte</a>. Si quieres el recorrido narrado día por día, léelo en <a href="/es/blog/que-esperar-viaje-turismo-medico-cancun/">qué esperar en un viaje médico a Cancún</a>.' },
       { h2: 'Costos y pagos', body: 'Recibes una sola cotización transparente y desglosada antes de comprometerte, con los costos médicos, de viaje y de coordinación claramente detallados. Pagas directamente a Kern Stem Care, y nosotros nos encargamos de pagar a tu proveedor médico y a los demás aliados en tu nombre, para que no tengas que lidiar con múltiples facturas en una moneda extranjera.' },
     ],
   },
@@ -837,14 +861,14 @@ const es: PagesSet = {
       'Si tu caso ya está en esta lista, no necesitas leer el resto de la página para empezar. Mándanoslo y te devolvemos la cifra exacta por escrito.',
     includedTitle: 'Qué incluye la cifra',
     included: [
-      'La evaluación médica presencial y la consulta con el médico tratante',
+      'La evaluación médica y la consulta con el médico tratante',
       'El producto celular y su preparación en laboratorio',
       'La sesión o sesiones de tratamiento en una clínica con licencia gubernamental (COFEPRIS)',
       'La coordinación: selección del proveedor, agenda de citas y un coordinador bilingüe durante toda tu estancia',
     ],
     excludedTitle: 'Qué queda fuera',
     excluded: [
-      'Los vuelos y la mayoría de las comidas. Te asesoramos con horarios y rutas; tú reservas y pagas.',
+      'Los vuelos y la mayoría de las comidas. Te asesoramos con horarios y rutas, y podemos reservarlos nosotros si lo prefieres — el costo corre por tu cuenta en cualquier caso.',
       'El hotel. Lo reservas donde prefieras, o nos pides una opción de confianza cerca de la clínica.',
       'El traslado del aeropuerto, que es un servicio opcional con su propio costo, con nuestros choferes.',
       'El seguimiento una vez que vuelves a casa, y las aplicaciones adicionales que un médico llegue a recomendar después.',
@@ -873,6 +897,27 @@ const es: PagesSet = {
       {
         q: '¿La cotización es definitiva?',
         a: 'La cotización por escrito que recibes después de tu evaluación es la cifra. Lo que puede cambiarla es que el médico recomiende algo distinto de lo que preguntaste — y eso lo sabrías antes de comprar vuelos.',
+      },
+    ],
+    paymentTitle: 'Cuándo se paga, y qué pasa si la respuesta es no',
+    paymentLead:
+      'El orden de estos pasos es lo que te protege, así que vale la pena decirlo sin rodeos.',
+    payment: [
+      {
+        title: 'Un médico revisa tu caso antes de que viajes',
+        body: 'Tu historial va al médico tratante y la respuesta llega antes de que reserves nada. Si no eres candidato, ahí termina y no te costó nada — sin anticipo, sin boleto y sin volar a Cancún para que te digan que no en la puerta.',
+      },
+      {
+        title: 'Pagas cuando ya tienes el visto bueno',
+        body: 'Completo, en un solo pago, antes de las 4 pm del día anterior a tu aplicación. Esa hora no es un trámite: es el corte para hacerle el pedido al laboratorio.',
+      },
+      {
+        title: 'El laboratorio prepara tu producto y lo envía a la clínica',
+        body: 'Entra el pedido, se prepara lo tuyo y se entrega en la clínica para tu cita. Por eso la fecha límite de pago es una hora del día y no nada más un día — el calendario corre hacia atrás desde ahí.',
+      },
+      {
+        title: 'La aplicación es la tarde del día siguiente',
+        body: 'El resto de ese día lo pasas en reposo, que es la otra razón por la que los pacientes suelen venir acompañados.',
       },
     ],
     lowTitle: 'Nuestros precios son bajos para este mercado. Eso merece una respuesta.',
@@ -905,7 +950,7 @@ const es: PagesSet = {
       },
       {
         q: '¿Tengo que pagar algo antes de recibir una cifra?',
-        a: 'No. La primera consulta es a distancia y gratuita: nos mandas tu historial, un médico aliado lo revisa y te devolvemos una cotización desglosada, normalmente en menos de 24 horas. Sin anticipo y sin compromiso. La evaluación médica que aparece dentro del precio es la presencial, en la clínica, durante tu viaje de tratamiento — no es un paso pagado que tengas que cubrir antes de que alguien te cotice.',
+        a: 'No. La primera consulta es a distancia y gratuita: nos mandas tu historial, un médico aliado lo revisa y te devolvemos una cotización desglosada, normalmente en menos de 24 horas. Sin anticipo y sin compromiso. El pago viene después, y sólo cuando un médico confirmó que eres candidato — la secuencia está más arriba.',
       },
       {
         q: '¿Cuántos días necesito estar en Cancún?',

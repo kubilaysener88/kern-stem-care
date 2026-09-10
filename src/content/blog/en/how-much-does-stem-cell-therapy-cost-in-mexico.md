@@ -55,7 +55,7 @@ at your medical evaluation, by the treating physician — not by us, and not bef
 
 ## What's usually *not* included
 
-- Flights and most meals. We help you pick timings and routes, and you book and pay for them
+- Flights and most meals. We help you pick timings and routes, and we can book the flights for you if you ask — the fare is yours either way
 - Your hotel. Book wherever you like — or, if you prefer, we find you a trusted, economical option close to the clinic and you pay it directly
 - Airport transfers to and from your hotel: optional, an add-on at its own cost, with our own drivers
 - Any follow-up care once you return home
@@ -115,8 +115,9 @@ Yes — your written, itemized quote comes after your free evaluation and before
 to travel, so you know the cost before making any travel plans.
 
 ### Does the quote include my flights and hotel?
-Your quote covers the medical side and our coordination. Flights are yours to book — we advise
-on timings and routes so they fit around your treatment day. The hotel sits outside the quote
+Your quote covers the medical side and our coordination. The fare is yours — book it yourself,
+or ask us to arrange it. Either way we advise on timings and routes so they fit around your
+treatment day. The hotel sits outside the quote
 too: book it wherever you prefer, or ask us to find you a trusted option close to the clinic.
 Airport transfers to and from your hotel are optional, an add-on priced separately, with our
 own drivers.
