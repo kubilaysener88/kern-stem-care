@@ -23,17 +23,17 @@ addressed, and the clinic and laboratory involved.
 
 
 In practice, most of what Kern Stem Care coordinates in Cancún falls between **$850 and
-$8,200 USD**. Rather than leave you guessing where inside that band you sit, here is what each
+$7,500 USD**. Rather than leave you guessing where inside that band you sit, here is what each
 application is quoted at:
 
 | Application | Quoted at |
 | --- | --- |
-| One joint — knee, elbow, shoulder or hip | $2,300 |
-| Two joints — knees, elbows or shoulders | $4,250 |
-| One area of the face | $850 |
-| Full face and neck | $1,500 |
-| Placenta application | $880 |
-| Anti-aging / overall wellness | $2,300 – $7,500, scaled to body weight |
+| One joint — knee, elbow, shoulder or hip. Stem cells, 56 million per joint. | $2,300 |
+| Two joints — knees, elbows or shoulders. Stem cells, 112 million in total. | $4,250 |
+| One area of the face. Aesthetic treatment with fibroblasts, the collagen-producing cells of the skin. | $850 |
+| Full face and neck. The same fibroblast treatment, over a wider area. | $1,500 |
+| Placenta implant. Freeze-dried placental tissue, as subdermal injections. | $880 |
+| Anti-aging / overall wellness. Stem cells given intravenously, 2 million per kilogram of body weight. | $2,300 – $7,500, scaled to body weight |
 | A serious or complex condition | Quoted after evaluation — the protocol is built for your case |
 
 Every figure above covers the medical program and our coordination together; there is no

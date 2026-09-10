@@ -124,8 +124,10 @@ export interface PricingPage {
   lead: string;
   tableTitle: string;
   tableHead: { item: string; price: string };
-  rows: { item: string; price: string }[];
+  rows: { item: string; detail: string; price: string }[];
   tableNote: string;
+  productNote: string;
+  tableCta: string;
   includedTitle: string;
   included: string[];
   excludedTitle: string;
@@ -433,26 +435,30 @@ const en: PagesSet = {
   pricing: {
     metaTitle: 'Stem cell therapy prices in Cancún | Kern Stem Care',
     metaDescription:
-      'What each application actually costs in Cancún — the full price list, from $850 to $8,200 USD, what the figure includes, what it does not, and what drives the number up or down.',
+      'What each application actually costs in Cancún — the full price list, from $850 to $7,500 USD, what the figure includes, what it does not, and what drives the number up or down.',
     eyebrow: 'Prices',
     title: 'What it costs, before you ask',
     lead: 'The most common question patients ask other patients online is simply "what did you pay?" — and it is usually the hardest one to get answered. Here is our full list. No form, no call, no "contact us for pricing".',
     tableTitle: 'Price per application',
     tableHead: { item: 'Application', price: 'Price (USD)' },
     rows: [
-      { item: 'One joint — knee, elbow, shoulder or hip', price: '$2,300' },
-      { item: 'Two joints — knees, elbows or shoulders', price: '$4,250' },
-      { item: 'One area of the face', price: '$850' },
-      { item: 'Full face and neck', price: '$1,500' },
-      { item: 'Placenta application', price: '$880' },
-      { item: 'Anti-aging / overall well-being', price: '$2,300 – $7,500, by patient weight' },
-      { item: 'A serious or complex condition', price: 'Quoted after evaluation' },
+      { item: 'One joint — knee, elbow, shoulder or hip', detail: 'Stem cells, 56 million per joint, injected into the joint. Ultrasound-guided depending on the area.', price: '$2,300' },
+      { item: 'Two joints — knees, elbows or shoulders', detail: 'Stem cells, 112 million in total — 56 million per joint treated.', price: '$4,250' },
+      { item: 'One area of the face', detail: 'Aesthetic treatment with fibroblasts, the cells that produce collagen, injected into the area being treated.', price: '$850' },
+      { item: 'Full face and neck', detail: 'The same fibroblast treatment, covering the whole face and the neck.', price: '$1,500' },
+      { item: 'Placenta implant', detail: 'Freeze-dried placental tissue, placed as subdermal injections in the lower abdomen.', price: '$880' },
+      { item: 'Anti-aging / overall well-being', detail: 'Stem cells given intravenously, dosed at 2 million cells per kilogram of body weight — which is why it is a range rather than a figure.', price: '$2,300 – $7,500, by patient weight' },
+      { item: 'A serious or complex condition', detail: 'Which therapy, and how many applications, is decided by the treating physician at your evaluation.', price: 'Quoted after evaluation' },
     ],
     tableNote:
       'Serious conditions carry no figure on purpose. The protocol is built for the individual case, and putting a price on it before a physician has seen you would be the opposite of what this site tells you to demand from a clinic.',
+    productNote:
+      'Each product has its own page if you want to know what is actually being applied: <a href="/en/services/stem-cells/">stem cells</a>, <a href="/en/services/fibroblasts/">fibroblasts</a>, and <a href="/en/services/placenta/">freeze-dried placenta</a>.',
+    tableCta:
+      'If your case is already on this list, you do not need to read the rest of the page to start. Send it to us and the exact figure comes back in writing.',
     includedTitle: 'What the figure includes',
     included: [
-      'The medical evaluation and the consultation with the physician',
+      'The in-person medical evaluation and the consultation with the treating physician',
       'The cellular product and its laboratory preparation',
       'The treatment session or sessions at a government-licensed (COFEPRIS) clinic',
       'Coordination: provider matching, appointment scheduling, and a bilingual coordinator throughout your stay',
@@ -471,7 +477,7 @@ const en: PagesSet = {
     drivers: [
       {
         q: 'Why does one joint cost more than a full face?',
-        a: 'The cellular product and the dose differ. A joint application is a different preparation from an aesthetic one, and the quantity is not comparable — which is why the list is by application rather than a single per-session rate.',
+        a: 'Different cells and a different dose. A joint application is stem cells, at 56 million per joint treated. A facial one is fibroblasts — the cells that build collagen in the skin — and the quantity is not comparable. That is why the list runs by application rather than a single per-session rate.',
       },
       {
         q: 'Why is anti-aging a range instead of a figure?',
@@ -515,8 +521,12 @@ const en: PagesSet = {
         a: 'You pay us, and we pay the provider. One transaction, one itemized quote.',
       },
       {
-        q: 'Is a deposit required to get a quote?',
-        a: 'No. The evaluation and the quote cost nothing and carry no obligation.',
+        q: 'Do I have to pay anything before I get a number?',
+        a: 'No. The first consultation is remote and free: you send your history, a partner physician reviews it, and an itemized quote comes back, usually within 24 hours. No deposit, no obligation. The medical evaluation listed inside the price is the in-person one at the clinic on your treatment trip — not a paid step you have to clear before anyone will quote you.',
+      },
+      {
+        q: 'How many days do I need to be in Cancún?',
+        a: 'Three, for a standard plan: you arrive and settle in on day one, the application is on day two, and you fly home on day three. You rest for the remainder of treatment day. If your medical plan calls for something different, you know that before you book flights.',
       },
       {
         q: 'Can I bring someone with me?',
@@ -786,26 +796,30 @@ const es: PagesSet = {
   pricing: {
     metaTitle: 'Precios de terapia con células madre en Cancún | Kern Stem Care',
     metaDescription:
-      'Cuánto cuesta cada aplicación en Cancún — la lista completa, de $850 a $8,200 USD, qué incluye la cifra, qué no, y qué la sube o la baja.',
+      'Cuánto cuesta cada aplicación en Cancún — la lista completa, de $850 a $7,500 USD, qué incluye la cifra, qué no, y qué la sube o la baja.',
     eyebrow: 'Precios',
     title: 'Cuánto cuesta, antes de que preguntes',
     lead: 'La pregunta que los pacientes más se hacen entre ellos en internet es simplemente "¿tú cuánto pagaste?" — y suele ser la más difícil de que alguien conteste. Aquí está nuestra lista completa. Sin formulario, sin llamada, sin "contáctanos para conocer precios".',
     tableTitle: 'Precio por aplicación',
     tableHead: { item: 'Aplicación', price: 'Precio (USD)' },
     rows: [
-      { item: 'Una articulación — rodilla, codo, hombro o cadera', price: '$2,300' },
-      { item: 'Dos articulaciones — rodillas, codos u hombros', price: '$4,250' },
-      { item: 'Una zona del rostro', price: '$850' },
-      { item: 'Rostro completo y cuello', price: '$1,500' },
-      { item: 'Aplicación de placenta', price: '$880' },
-      { item: 'Antienvejecimiento / bienestar general', price: '$2,300 – $7,500, según el peso' },
-      { item: 'Una condición grave o compleja', price: 'Se cotiza tras la evaluación' },
+      { item: 'Una articulación — rodilla, codo, hombro o cadera', detail: 'Células madre, 56 millones por articulación, aplicadas en la articulación. Con guía por ultrasonido según la zona.', price: '$2,300' },
+      { item: 'Dos articulaciones — rodillas, codos u hombros', detail: 'Células madre, 112 millones en total — 56 millones por articulación tratada.', price: '$4,250' },
+      { item: 'Una zona del rostro', detail: 'Tratamiento estético con fibroblastos, las células que producen colágeno, aplicados en la zona que se trata.', price: '$850' },
+      { item: 'Rostro completo y cuello', detail: 'El mismo tratamiento con fibroblastos, en todo el rostro y el cuello.', price: '$1,500' },
+      { item: 'Implante de placenta', detail: 'Tejido placentario liofilizado, aplicado en inyecciones subdérmicas en el abdomen bajo.', price: '$880' },
+      { item: 'Antienvejecimiento / bienestar general', detail: 'Células madre por vía intravenosa, a razón de 2 millones de células por kilogramo de peso corporal — por eso es un rango y no una cifra.', price: '$2,300 – $7,500, según el peso' },
+      { item: 'Una condición grave o compleja', detail: 'Qué terapia, y cuántas aplicaciones, lo decide el médico tratante en tu evaluación.', price: 'Se cotiza tras la evaluación' },
     ],
     tableNote:
       'Las condiciones graves no llevan cifra a propósito. El protocolo se arma para cada caso, y ponerle precio antes de que un médico te vea sería lo contrario de lo que este sitio te pide exigirle a una clínica.',
+    productNote:
+      'Cada producto tiene su propia página si quieres saber qué es exactamente lo que se aplica: <a href="/es/services/stem-cells/">células madre</a>, <a href="/es/services/fibroblasts/">fibroblastos</a> y <a href="/es/services/placenta/">placenta liofilizada</a>.',
+    tableCta:
+      'Si tu caso ya está en esta lista, no necesitas leer el resto de la página para empezar. Mándanoslo y te devolvemos la cifra exacta por escrito.',
     includedTitle: 'Qué incluye la cifra',
     included: [
-      'La evaluación médica y la consulta con el médico',
+      'La evaluación médica presencial y la consulta con el médico tratante',
       'El producto celular y su preparación en laboratorio',
       'La sesión o sesiones de tratamiento en una clínica con licencia gubernamental (COFEPRIS)',
       'La coordinación: selección del proveedor, agenda de citas y un coordinador bilingüe durante toda tu estancia',
@@ -824,7 +838,7 @@ const es: PagesSet = {
     drivers: [
       {
         q: '¿Por qué una articulación cuesta más que el rostro completo?',
-        a: 'El producto celular y la dosis son distintos. Una aplicación articular es una preparación diferente a una estética, y la cantidad no es comparable — por eso la lista va por aplicación y no por un precio único de sesión.',
+        a: 'Son células distintas y una dosis distinta. Una aplicación articular es de células madre, 56 millones por articulación tratada. Una facial es de fibroblastos — las células que forman el colágeno de la piel — y la cantidad no es comparable. Por eso la lista va por aplicación y no por un precio único de sesión.',
       },
       {
         q: '¿Por qué antienvejecimiento es un rango y no una cifra?',
@@ -868,8 +882,12 @@ const es: PagesSet = {
         a: 'Nos pagas a nosotros y nosotros al proveedor. Una sola transacción y una cotización desglosada.',
       },
       {
-        q: '¿Hay que dar anticipo para recibir una cotización?',
-        a: 'No. La evaluación y la cotización no cuestan nada ni comprometen a nada.',
+        q: '¿Tengo que pagar algo antes de recibir una cifra?',
+        a: 'No. La primera consulta es a distancia y gratuita: nos mandas tu historial, un médico aliado lo revisa y te devolvemos una cotización desglosada, normalmente en menos de 24 horas. Sin anticipo y sin compromiso. La evaluación médica que aparece dentro del precio es la presencial, en la clínica, durante tu viaje de tratamiento — no es un paso pagado que tengas que cubrir antes de que alguien te cotice.',
+      },
+      {
+        q: '¿Cuántos días necesito estar en Cancún?',
+        a: 'Tres, en un plan estándar: el día uno llegas y te instalas, el día dos es la aplicación y el día tres vuelas de regreso. El resto del día del tratamiento lo pasas en reposo. Si tu plan médico requiere algo distinto, lo sabes antes de comprar vuelos.',
       },
       {
         q: '¿Puedo venir acompañado?',

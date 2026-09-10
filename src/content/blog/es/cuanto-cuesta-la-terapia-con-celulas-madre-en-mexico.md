@@ -23,17 +23,17 @@ tratar, y la clínica y el laboratorio involucrados.
 
 
 En la práctica, la mayoría de lo que Kern Stem Care coordina en Cancún está entre **$850 y
-$8,200 USD**. En vez de dejarte adivinando en qué punto de ese rango caes, aquí está lo que se
+$7,500 USD**. En vez de dejarte adivinando en qué punto de ese rango caes, aquí está lo que se
 cotiza cada aplicación:
 
 | Aplicación | Precio |
 | --- | --- |
-| Una articulación — rodilla, codo, hombro o cadera | $2,300 |
-| Dos articulaciones — rodillas, codos u hombros | $4,250 |
-| Una zona del rostro | $850 |
-| Rostro completo y cuello | $1,500 |
-| Aplicación de placenta | $880 |
-| Antienvejecimiento / bienestar general | $2,300 – $7,500, según el peso del paciente |
+| Una articulación — rodilla, codo, hombro o cadera. Células madre, 56 millones por articulación. | $2,300 |
+| Dos articulaciones — rodillas, codos u hombros. Células madre, 112 millones en total. | $4,250 |
+| Una zona del rostro. Tratamiento estético con fibroblastos, las células que producen el colágeno de la piel. | $850 |
+| Rostro completo y cuello. El mismo tratamiento con fibroblastos, en una zona más amplia. | $1,500 |
+| Implante de placenta. Tejido placentario liofilizado, en inyecciones subdérmicas. | $880 |
+| Antienvejecimiento / bienestar general. Células madre por vía intravenosa, 2 millones por kilogramo de peso corporal. | $2,300 – $7,500, según el peso del paciente |
 | Una condición grave o compleja | Se cotiza tras la evaluación — el protocolo se arma para tu caso |
 
 Cada cifra de arriba cubre el programa médico y nuestra coordinación juntos; no se agrega

@@ -84,7 +84,7 @@ export function organizationNode(site: string, lang: Lang) {
     image: `${site}/og-image.jpg`,
     telephone: '+52 998 767 8979',
     email: 'kernstemcare@gmail.com',
-    priceRange: '$850 - $8200',
+    priceRange: '$850 - $7500',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Retorno Viento, SM 4, Núm. 10',
@@ -104,8 +104,11 @@ export function organizationNode(site: string, lang: Lang) {
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        opens: '08:00',
-        closes: '20:00',
+        // The contact page has always said 9am–6pm; the schema said 8am–8pm.
+        // Google reads both, and a Business Profile would have made a third
+        // version. 9–6 is the real one.
+        opens: '09:00',
+        closes: '18:00',
       },
     ],
     sameAs: [
