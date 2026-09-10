@@ -113,7 +113,7 @@ flights, your hotel, and airport transfers if you choose to book them.
 
 ### Can I get a price before I book a flight?
 Yes — your written, itemized quote comes after your free evaluation and before you commit
-to travel, so you know the cost before making any travel plans.
+to travel, so you know the cost before making any travel plans. It holds for 30 days.
 
 ### Does the quote include my flights and hotel?
 Your quote covers the medical side and our coordination. The fare is yours — book it yourself,

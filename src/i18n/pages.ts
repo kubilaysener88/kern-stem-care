@@ -467,7 +467,7 @@ const en: PagesSet = {
     productNote:
       'Each product has its own page if you want to know what is actually being applied: <a href="/en/services/stem-cells/">stem cells</a>, <a href="/en/services/exosomes/">exosomes</a>, <a href="/en/services/fibroblasts/">fibroblasts</a>, and <a href="/en/services/placenta/">freeze-dried placenta</a>.',
     fxNote:
-      'Figures are in U.S. dollars and were last reviewed on 10 September 2026. Our own costs are in Mexican pesos, so the dollar figures get revisited when the exchange rate moves materially. What holds for your case is the written quote from your evaluation, not this page.',
+      'Figures are in U.S. dollars and were last reviewed on 10 September 2026. Our own costs are in Mexican pesos, so the dollar figures get revisited when the exchange rate moves materially. What holds for your case is the written quote from your evaluation, which is good for 30 days — not this page.',
     tableCta:
       'If your case is already on this list, you do not need to read the rest of the page to start. Send it to us and the exact figure comes back in writing.',
     includedTitle: 'What the figure includes',
@@ -507,7 +507,7 @@ const en: PagesSet = {
       },
       {
         q: 'Is the quote final?',
-        a: 'The written quote you receive after your evaluation is the figure. What can change it is a physician recommending something different from what you asked about — and you would know that before booking flights.',
+        a: 'The written quote you receive after your evaluation is the figure, and it holds for 30 days. What can change it inside that window is a physician recommending something different from what you asked about — and you would know that before booking flights.',
       },
     ],
     paymentTitle: 'When you pay, and what happens if the answer is no',
@@ -871,7 +871,7 @@ const es: PagesSet = {
     productNote:
       'Cada producto tiene su propia página si quieres saber qué es exactamente lo que se aplica: <a href="/es/services/stem-cells/">células madre</a>, <a href="/es/services/exosomes/">exosomas</a>, <a href="/es/services/fibroblasts/">fibroblastos</a> y <a href="/es/services/placenta/">placenta liofilizada</a>.',
     fxNote:
-      'Las cifras están en dólares estadounidenses y se revisaron por última vez el 10 de septiembre de 2026. Nuestros costos son en pesos mexicanos, así que las cifras en dólares se revisan cuando el tipo de cambio se mueve de forma significativa. Lo que vale para tu caso es la cotización por escrito de tu evaluación, no esta página.',
+      'Las cifras están en dólares estadounidenses y se revisaron por última vez el 10 de septiembre de 2026. Nuestros costos son en pesos mexicanos, así que las cifras en dólares se revisan cuando el tipo de cambio se mueve de forma significativa. Lo que vale para tu caso es la cotización por escrito de tu evaluación, con vigencia de 30 días, no esta página.',
     tableCta:
       'Si tu caso ya está en esta lista, no necesitas leer el resto de la página para empezar. Mándanoslo y te devolvemos la cifra exacta por escrito.',
     includedTitle: 'Qué incluye la cifra',
@@ -911,7 +911,7 @@ const es: PagesSet = {
       },
       {
         q: '¿La cotización es definitiva?',
-        a: 'La cotización por escrito que recibes después de tu evaluación es la cifra. Lo que puede cambiarla es que el médico recomiende algo distinto de lo que preguntaste — y eso lo sabrías antes de comprar vuelos.',
+        a: 'La cotización por escrito que recibes después de tu evaluación es la cifra, y tiene una vigencia de 30 días. Lo que puede cambiarla dentro de ese plazo es que el médico recomiende algo distinto de lo que preguntaste — y eso lo sabrías antes de comprar vuelos.',
       },
     ],
     paymentTitle: 'Cuándo se paga, y qué pasa si la respuesta es no',

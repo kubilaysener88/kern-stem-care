@@ -115,7 +115,8 @@ si decides contratarlos.
 
 ### ¿Puedo obtener un precio antes de reservar un vuelo?
 Sí — tu cotización por escrito y detallada llega después de tu evaluación gratuita y antes
-de que te comprometas a viajar, así conoces el costo antes de hacer planes de viaje.
+de que te comprometas a viajar, así conoces el costo antes de hacer planes de viaje. Tiene una
+vigencia de 30 días.
 
 ### ¿La cotización incluye vuelos y hotel?
 Tu cotización cubre la parte médica y nuestra coordinación. El costo del boleto es tuyo —
