@@ -57,7 +57,7 @@ antes de verte.
 
 ## Qué *no* suele estar incluido
 
-- Los vuelos y la mayoría de las comidas. Te ayudamos a elegir horarios y rutas, y podemos reservártelos si nos lo pides — el costo del boleto corre por tu cuenta en cualquier caso
+- Los vuelos y las comidas — no incluimos ninguno de los dos. Te ayudamos a elegir horarios y rutas, y podemos reservarte los vuelos si nos lo pides; el costo del boleto sigue siendo tuyo
 - El hotel. Lo reservas donde tú quieras — y si prefieres, te conseguimos una opción de confianza y económica cerca de la clínica, que pagas directamente
 - El traslado del aeropuerto al hotel y de regreso, opcional, como servicio adicional con su costo aparte y con nuestros propios choferes
 - Cualquier seguimiento una vez que regresas a casa

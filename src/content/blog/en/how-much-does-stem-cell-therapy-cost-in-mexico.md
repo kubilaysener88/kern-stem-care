@@ -56,7 +56,7 @@ at your medical evaluation, by the treating physician — not by us, and not bef
 
 ## What's usually *not* included
 
-- Flights and most meals. We help you pick timings and routes, and we can book the flights for you if you ask — the fare is yours either way
+- Flights and meals — neither is included. We help you pick timings and routes, and we can book the flights for you if you ask; the fare is still yours
 - Your hotel. Book wherever you like — or, if you prefer, we find you a trusted, economical option close to the clinic and you pay it directly
 - Airport transfers to and from your hotel: optional, an add-on at its own cost, with our own drivers
 - Any follow-up care once you return home

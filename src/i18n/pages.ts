@@ -479,7 +479,7 @@ const en: PagesSet = {
     ],
     excludedTitle: 'What sits outside it',
     excluded: [
-      'Flights and most meals. We advise on timings and routes, and we can book the flights for you if you would rather we did — either way the fare is yours.',
+      'Flights and meals — we do not include either. We advise on timings and routes, and we can book the flights for you if you would rather we did; the fare is still yours.',
       'Your hotel. Book it wherever you prefer, or ask us to find a trusted option near the clinic.',
       'Airport transfers, which are an optional add-on priced separately, with our own drivers.',
       'Follow-up once you are home, and any additional applications a physician may recommend later.',
@@ -883,7 +883,7 @@ const es: PagesSet = {
     ],
     excludedTitle: 'Qué queda fuera',
     excluded: [
-      'Los vuelos y la mayoría de las comidas. Te asesoramos con horarios y rutas, y podemos reservarlos nosotros si lo prefieres — el costo corre por tu cuenta en cualquier caso.',
+      'Los vuelos y las comidas — no incluimos ninguno de los dos. Te asesoramos con horarios y rutas, y podemos reservarte los vuelos si lo prefieres; el costo sigue siendo tuyo.',
       'El hotel. Lo reservas donde prefieras, o nos pides una opción de confianza cerca de la clínica.',
       'El traslado del aeropuerto, que es un servicio opcional con su propio costo, con nuestros choferes.',
       'El seguimiento una vez que vuelves a casa, y las aplicaciones adicionales que un médico llegue a recomendar después.',
