@@ -127,6 +127,7 @@ export interface PricingPage {
   rows: { item: string; detail: string; price: string }[];
   tableNote: string;
   productNote: string;
+  fxNote: string;
   tableCta: string;
   includedTitle: string;
   included: string[];
@@ -465,6 +466,8 @@ const en: PagesSet = {
       'Serious conditions carry no figure on purpose. The protocol is built for the individual case, and putting a price on it before a physician has seen you would be the opposite of what this site tells you to demand from a clinic.',
     productNote:
       'Each product has its own page if you want to know what is actually being applied: <a href="/en/services/stem-cells/">stem cells</a>, <a href="/en/services/exosomes/">exosomes</a>, <a href="/en/services/fibroblasts/">fibroblasts</a>, and <a href="/en/services/placenta/">freeze-dried placenta</a>.',
+    fxNote:
+      'Figures are in U.S. dollars and were last reviewed on 10 September 2026. Our own costs are in Mexican pesos, so the dollar figures get revisited when the exchange rate moves materially. What holds for your case is the written quote from your evaluation, not this page.',
     tableCta:
       'If your case is already on this list, you do not need to read the rest of the page to start. Send it to us and the exact figure comes back in writing.',
     includedTitle: 'What the figure includes',
@@ -566,7 +569,7 @@ const en: PagesSet = {
       },
       {
         q: 'Will my insurance cover any of this?',
-        a: 'Plan for it as an out-of-pocket cost. Regenerative therapies are investigational rather than approved standard care for specific diseases, which is the usual reason insurers decline them, and that applies just as much to a clinic at home as to one in Mexico. Ask your own insurer rather than taking our word for it — and ask before you commit to anything.',
+        a: 'Plan for it as an out-of-pocket cost. Regenerative therapies are investigational rather than approved standard care for specific diseases, which is the usual reason insurers decline them, and that applies just as much to a clinic at home as to one in Mexico. Ask your own insurer rather than taking our word for it — and ask before you commit to anything. Every patient receives an itemized invoice, so if an insurer or a health-spending account will consider a claim, you will have the paperwork to put in front of them.',
       },
       {
         q: 'How many days do I need to be in Cancún?',
@@ -867,6 +870,8 @@ const es: PagesSet = {
       'Las condiciones graves no llevan cifra a propósito. El protocolo se arma para cada caso, y ponerle precio antes de que un médico te vea sería lo contrario de lo que este sitio te pide exigirle a una clínica.',
     productNote:
       'Cada producto tiene su propia página si quieres saber qué es exactamente lo que se aplica: <a href="/es/services/stem-cells/">células madre</a>, <a href="/es/services/exosomes/">exosomas</a>, <a href="/es/services/fibroblasts/">fibroblastos</a> y <a href="/es/services/placenta/">placenta liofilizada</a>.',
+    fxNote:
+      'Las cifras están en dólares estadounidenses y se revisaron por última vez el 10 de septiembre de 2026. Nuestros costos son en pesos mexicanos, así que las cifras en dólares se revisan cuando el tipo de cambio se mueve de forma significativa. Lo que vale para tu caso es la cotización por escrito de tu evaluación, no esta página.',
     tableCta:
       'Si tu caso ya está en esta lista, no necesitas leer el resto de la página para empezar. Mándanoslo y te devolvemos la cifra exacta por escrito.',
     includedTitle: 'Qué incluye la cifra',
@@ -968,7 +973,7 @@ const es: PagesSet = {
       },
       {
         q: '¿Mi seguro médico cubre algo de esto?',
-        a: 'Cuenta con que sale de tu bolsillo. Las terapias regenerativas son de investigación y no un tratamiento aprobado de referencia para enfermedades específicas, que es la razón habitual por la que las aseguradoras las rechazan, y eso aplica igual en una clínica de tu país que en una de México. Pregúntale a tu aseguradora en vez de creernos a nosotros — y pregunta antes de comprometerte a nada.',
+        a: 'Cuenta con que sale de tu bolsillo. Las terapias regenerativas son de investigación y no un tratamiento aprobado de referencia para enfermedades específicas, que es la razón habitual por la que las aseguradoras las rechazan, y eso aplica igual en una clínica de tu país que en una de México. Pregúntale a tu aseguradora en vez de creernos a nosotros — y pregunta antes de comprometerte a nada. Todos los pacientes reciben una factura desglosada, así que si una aseguradora o una cuenta de gastos médicos acepta considerar el reembolso, vas a tener el documento para presentarlo.',
       },
       {
         q: '¿Cuántos días necesito estar en Cancún?',
