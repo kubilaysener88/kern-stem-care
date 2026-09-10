@@ -201,6 +201,12 @@ npm run test:a11y # axe-core WCAG 2.1 AA scan of every route, desktop + mobile (
 ## TODO backlog (carried over)
 
 - Replace all `[bracketed]` placeholders with real client data.
+- **Swap the remaining stock photos for the client's own.** Agreed 2026-09-10:
+  budget comes later, own photography is the goal. `journey/consulta.jpg` is the
+  one to watch — it shipped with a visible watermark and a mouse cursor baked in
+  until it was replaced with a cleaned copy. When shooting, the gap to fill is a
+  consultation with people in it: every 16:9 photo the client owns is a room, a
+  building, a vehicle or a procedure, and none shows two people talking.
 - Replace the placeholder blog posts with real, keyword-targeted articles (set `reviewedBy`).
 - Add real carousel/testimonial media (`og-image.jpg` is now generated).
 - Fill in partner clinics/labs and coordinator profiles (with written permission).
