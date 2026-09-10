@@ -499,7 +499,11 @@ const en: PagesSet = {
     faq: [
       {
         q: 'How many cells does an application contain?',
-        a: 'Ask this at your evaluation, and ask any clinic you compare us against. Cell count and viability are what actually determine what you are paying for, and they vary by protocol — the treating physician gives you the figure for your case in writing. The laboratory that prepares them, NAO Biotechnology, ships every batch with a signed Certificate of Quality.',
+        a: 'A joint application uses 56 million cells per joint treated, so a two-joint application is 112 million. An intravenous application is dosed by body weight, at 2 million cells per kilogram — so a 70 kg (154 lb) patient receives around 140 million. Those are the protocol figures; the treating physician confirms the number for your own case in writing at your evaluation. The laboratory that prepares them, NAO Biotechnology, ships every batch with a signed Certificate of Quality.',
+      },
+      {
+        q: 'Are the injections ultrasound-guided?',
+        a: 'They can be, depending on the area being treated. Ask which applies to your case at your evaluation. It is worth asking anywhere you compare us against — patients online raise it constantly, and a clinic that cannot answer it plainly is telling you something.',
       },
       {
         q: 'Do I pay the clinic or Kern Stem Care?',
@@ -843,7 +847,11 @@ const es: PagesSet = {
     faq: [
       {
         q: '¿Cuántas células trae una aplicación?',
-        a: 'Pregúntalo en tu evaluación, y pregúntalo también a cualquier clínica con la que nos compares. El conteo celular y la viabilidad son lo que de verdad determina qué estás pagando, y varían según el protocolo — el médico tratante te da la cifra de tu caso por escrito. El laboratorio que las prepara, NAO Biotechnology, envía cada lote con su Certificado de Calidad firmado.',
+        a: 'Una aplicación articular usa 56 millones de células por articulación tratada, así que una de dos articulaciones son 112 millones. La aplicación intravenosa se dosifica por peso corporal, a razón de 2 millones de células por kilogramo — así que un paciente de 70 kg (154 lb) recibe alrededor de 140 millones. Ésas son las cifras del protocolo; el médico tratante te confirma por escrito la de tu caso durante la evaluación. El laboratorio que las prepara, NAO Biotechnology, envía cada lote con su Certificado de Calidad firmado.',
+      },
+      {
+        q: '¿Las inyecciones son guiadas por ultrasonido?',
+        a: 'Pueden serlo, según la zona que se vaya a tratar. Pregunta cuál aplica a tu caso en la evaluación. Vale la pena preguntarlo en cualquier lugar con el que nos compares — los pacientes lo plantean constantemente en internet, y una clínica que no lo conteste con claridad te está diciendo algo.',
       },
       {
         q: '¿Le pago a la clínica o a Kern Stem Care?',
