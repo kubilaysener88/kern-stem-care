@@ -302,6 +302,11 @@ const en: PagesSet = {
     sections: [
       { h2: 'What are exosomes?', body: 'Exosomes are microscopic vesicles released by cells that carry signaling molecules from one cell to another — essentially the messages cells use to communicate. What distinguishes them from the other therapies is that they contain no living cells: exosome preparations are studied as a cell-free approach, which is why they are sometimes described as carrying the signal without the cell that produced it.' },
       { h2: 'How could they help you?', body: 'Research focuses on their role in cell-to-cell communication and in the signaling involved in tissue repair. This is a more recent field than stem cell research, and the evidence base is correspondingly smaller and still developing. Exosome preparations are not approved for the treatment of specific diseases, and no outcome can be guaranteed. Your physician will review with you what current research does and does not show.' },
+      {
+        h2: 'How much is actually administered?',
+        body:
+          'Exosome preparations are measured in particles rather than cells. The two counts coordinated in our network are <strong>5 billion</strong> and <strong>15 billion</strong>, the second ultrapurified, and both sit next to their figures on our <a href="/en/pricing/">prices page</a>. Which count suits your case, if either does, is confirmed by the treating physician at your evaluation.',
+      },
       { h2: 'Ideal for those who:', body: '<ul><li><strong>Want to boost their recovery</strong> — often alongside other cellular therapies.</li><li><strong>Want to improve their skin quality</strong> — glow, texture, and rejuvenation.</li><li><strong>Want to support their immune wellness</strong> — to feel more resilient and energetic.</li><li><strong>Want to slow aging and gain vitality</strong> — energy and overall wellbeing.</li></ul><p>If you recognize yourself in any of these, the treating physician will confirm it with you during your evaluation.</p>' },
     ],
     disclaimer: investigationalEN,
@@ -446,6 +451,8 @@ const en: PagesSet = {
       { item: 'Two joints — knees, elbows or shoulders', detail: 'Stem cells, 112 million in total — 56 million per joint treated.', price: '$4,250' },
       { item: 'One area of the face', detail: 'Aesthetic treatment with fibroblasts, the cells that produce collagen, injected into the area being treated.', price: '$850' },
       { item: 'Full face and neck', detail: 'The same fibroblast treatment, covering the whole face and the neck.', price: '$1,500' },
+      { item: 'Exosomes — 5 billion', detail: 'A cell-free preparation: the signalling vesicles cells use to communicate, without the cells themselves. Priced by particle count rather than by treated area.', price: '$970' },
+      { item: 'Ultrapurified exosomes — 15 billion', detail: 'Three times the particle count, in an ultrapurified preparation.', price: '$2,490' },
       { item: 'Placenta implant', detail: 'Freeze-dried placental tissue, placed as subdermal injections in the lower abdomen.', price: '$880' },
       { item: 'Anti-aging / overall well-being', detail: 'Stem cells given intravenously, dosed at 2 million cells per kilogram of body weight — which is why it is a range rather than a figure.', price: '$2,300 – $7,500, by patient weight' },
       { item: 'A serious or complex condition', detail: 'Which therapy, and how many applications, is decided by the treating physician at your evaluation.', price: 'Quoted after evaluation' },
@@ -453,7 +460,7 @@ const en: PagesSet = {
     tableNote:
       'Serious conditions carry no figure on purpose. The protocol is built for the individual case, and putting a price on it before a physician has seen you would be the opposite of what this site tells you to demand from a clinic.',
     productNote:
-      'Each product has its own page if you want to know what is actually being applied: <a href="/en/services/stem-cells/">stem cells</a>, <a href="/en/services/fibroblasts/">fibroblasts</a>, and <a href="/en/services/placenta/">freeze-dried placenta</a>.',
+      'Each product has its own page if you want to know what is actually being applied: <a href="/en/services/stem-cells/">stem cells</a>, <a href="/en/services/exosomes/">exosomes</a>, <a href="/en/services/fibroblasts/">fibroblasts</a>, and <a href="/en/services/placenta/">freeze-dried placenta</a>.',
     tableCta:
       'If your case is already on this list, you do not need to read the rest of the page to start. Send it to us and the exact figure comes back in writing.',
     includedTitle: 'What the figure includes',
@@ -482,6 +489,10 @@ const en: PagesSet = {
       {
         q: 'Why is anti-aging a range instead of a figure?',
         a: 'Because it is dosed by body weight. A systemic application is calculated for the patient, so a lighter patient sits near $2,300 and a heavier one nearer $7,500. Your evaluation produces the exact number before you commit to anything.',
+      },
+      {
+        q: 'Why are exosomes priced by particle count and everything else by area?',
+        a: 'Because that is the unit the product comes in. An exosome preparation contains no living cells — it is the signalling vesicles on their own — so what you are paying for is a number of particles rather than a treated area. Which of the two counts suits your case, if either does, is decided by the treating physician at your evaluation.',
       },
       {
         q: 'Does Kern Stem Care add a fee on top?',
@@ -663,6 +674,11 @@ const es: PagesSet = {
     sections: [
       { h2: '¿Qué son los exosomas?', body: 'Los exosomas son vesículas microscópicas que las células liberan para transportar moléculas de señalización de una célula a otra: son, en esencia, los mensajes que las células usan para comunicarse. Lo que los distingue de las otras terapias es que no contienen células vivas; las preparaciones de exosomas se estudian como un enfoque libre de células, por eso a veces se describen como la señal sin la célula que la produjo.' },
       { h2: '¿Cómo podrían ayudarte?', body: 'La investigación se centra en su papel en la comunicación entre células y en la señalización involucrada en la reparación de tejidos. Es un campo más reciente que el de las células madre, por lo que la base de evidencia es menor y sigue en desarrollo. Las preparaciones de exosomas no están aprobadas para tratar enfermedades específicas y ningún resultado puede garantizarse. Tu médico revisará contigo qué muestra y qué no muestra la investigación actual.' },
+      {
+        h2: '¿Cuánto se aplica en realidad?',
+        body:
+          'Las preparaciones de exosomas se miden en partículas, no en células. Los dos conteos que coordinamos en nuestra red son <strong>5 mil millones</strong> y <strong>15 mil millones</strong>, este último ultrapurificado, y ambos aparecen con su cifra en nuestra <a href="/es/precios/">página de precios</a>. Cuál corresponde a tu caso, si alguno corresponde, lo confirma el médico tratante en tu evaluación.',
+      },
       { h2: 'Ideal para quienes:', body: '<ul><li><strong>Buscan potenciar su recuperación</strong> — a menudo en combinación con otras terapias celulares.</li><li><strong>Quieren mejorar la calidad de su piel</strong> — luminosidad, textura y rejuvenecimiento.</li><li><strong>Quieren apoyar su bienestar inmunológico</strong> — para sentirse con más defensas y energía.</li><li><strong>Buscan frenar el envejecimiento y ganar vitalidad</strong> — energía y bienestar general.</li></ul><p>Si te identificas con alguno de estos casos, el médico tratante lo confirmará contigo durante tu evaluación.</p>' },
     ],
     disclaimer: investigationalES,
@@ -807,6 +823,8 @@ const es: PagesSet = {
       { item: 'Dos articulaciones — rodillas, codos u hombros', detail: 'Células madre, 112 millones en total — 56 millones por articulación tratada.', price: '$4,250' },
       { item: 'Una zona del rostro', detail: 'Tratamiento estético con fibroblastos, las células que producen colágeno, aplicados en la zona que se trata.', price: '$850' },
       { item: 'Rostro completo y cuello', detail: 'El mismo tratamiento con fibroblastos, en todo el rostro y el cuello.', price: '$1,500' },
+      { item: 'Exosomas — 5 mil millones', detail: 'Una preparación libre de células: las vesículas de señalización que las células usan para comunicarse, sin las células mismas. Se cotiza por número de partículas y no por zona tratada.', price: '$970' },
+      { item: 'Exosomas ultrapurificados — 15 mil millones', detail: 'El triple de partículas, en una preparación ultrapurificada.', price: '$2,490' },
       { item: 'Implante de placenta', detail: 'Tejido placentario liofilizado, aplicado en inyecciones subdérmicas en el abdomen bajo.', price: '$880' },
       { item: 'Antienvejecimiento / bienestar general', detail: 'Células madre por vía intravenosa, a razón de 2 millones de células por kilogramo de peso corporal — por eso es un rango y no una cifra.', price: '$2,300 – $7,500, según el peso' },
       { item: 'Una condición grave o compleja', detail: 'Qué terapia, y cuántas aplicaciones, lo decide el médico tratante en tu evaluación.', price: 'Se cotiza tras la evaluación' },
@@ -814,7 +832,7 @@ const es: PagesSet = {
     tableNote:
       'Las condiciones graves no llevan cifra a propósito. El protocolo se arma para cada caso, y ponerle precio antes de que un médico te vea sería lo contrario de lo que este sitio te pide exigirle a una clínica.',
     productNote:
-      'Cada producto tiene su propia página si quieres saber qué es exactamente lo que se aplica: <a href="/es/services/stem-cells/">células madre</a>, <a href="/es/services/fibroblasts/">fibroblastos</a> y <a href="/es/services/placenta/">placenta liofilizada</a>.',
+      'Cada producto tiene su propia página si quieres saber qué es exactamente lo que se aplica: <a href="/es/services/stem-cells/">células madre</a>, <a href="/es/services/exosomes/">exosomas</a>, <a href="/es/services/fibroblasts/">fibroblastos</a> y <a href="/es/services/placenta/">placenta liofilizada</a>.',
     tableCta:
       'Si tu caso ya está en esta lista, no necesitas leer el resto de la página para empezar. Mándanoslo y te devolvemos la cifra exacta por escrito.',
     includedTitle: 'Qué incluye la cifra',
@@ -843,6 +861,10 @@ const es: PagesSet = {
       {
         q: '¿Por qué antienvejecimiento es un rango y no una cifra?',
         a: 'Porque se dosifica según el peso corporal. Una aplicación sistémica se calcula para el paciente, así que alguien de menor peso queda cerca de $2,300 y alguien de mayor peso cerca de $7,500. Tu evaluación produce la cifra exacta antes de que te comprometas a nada.',
+      },
+      {
+        q: '¿Por qué los exosomas se cotizan por número de partículas y lo demás por zona?',
+        a: 'Porque ésa es la unidad en la que viene el producto. Una preparación de exosomas no contiene células vivas — son las vesículas de señalización solas — así que lo que pagas es una cantidad de partículas y no una zona tratada. Cuál de los dos conteos corresponde a tu caso, si alguno corresponde, lo decide el médico tratante en tu evaluación.',
       },
       {
         q: '¿Kern Stem Care cobra algo aparte?',

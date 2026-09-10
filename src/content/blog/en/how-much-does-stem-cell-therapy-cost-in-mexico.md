@@ -32,6 +32,8 @@ application is quoted at:
 | Two joints — knees, elbows or shoulders. Stem cells, 112 million in total. | $4,250 |
 | One area of the face. Aesthetic treatment with fibroblasts, the collagen-producing cells of the skin. | $850 |
 | Full face and neck. The same fibroblast treatment, over a wider area. | $1,500 |
+| Exosomes — 5 billion. A cell-free preparation of signalling vesicles, priced by particle count. | $970 |
+| Ultrapurified exosomes — 15 billion. Three times the particle count. | $2,490 |
 | Placenta implant. Freeze-dried placental tissue, as subdermal injections. | $880 |
 | Anti-aging / overall wellness. Stem cells given intravenously, 2 million per kilogram of body weight. | $2,300 – $7,500, scaled to body weight |
 | A serious or complex condition | Quoted after evaluation — the protocol is built for your case |
