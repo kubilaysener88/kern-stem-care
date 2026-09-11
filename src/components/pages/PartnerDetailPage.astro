@@ -21,6 +21,11 @@ const lead =
   lang === 'es'
     ? 'Instalación aliada dentro de la red de Kern Stem Care. La atención médica la brinda directamente este proveedor independiente y con licencia, mientras Kern Stem Care coordina el acceso, el viaje y el acompañamiento.'
     : 'A partner facility within the Kern Stem Care network. Medical care is delivered directly by this independent, licensed provider, while Kern Stem Care coordinates access, travel, and support.';
+// Every partner page shipped this same paragraph as its lead, so six pages
+// opened with identical copy. Google crawled two of them and declined to index
+// them. `role` is per-partner; the boilerplate is only the fallback for a
+// partner whose own text has not been written yet.
+const heroLead = partner.role ?? lead;
 const galleryTitle = lang === 'es' ? 'Instalaciones' : 'Facility';
 const photoAltLabel = lang === 'es' ? 'Foto de la instalación' : 'Facility photo';
 const backLabel = lang === 'es' ? '← Volver al equipo y aliados' : '← Back to team & partners';
@@ -65,7 +70,7 @@ const physiciansTitle = lang === 'es' ? 'Médicos' : 'Physicians';
 
 <SiteLayout lang={lang} title={metaTitle} description={metaDescription} noindex={isPlaceholder}>
   <Breadcrumbs lang={lang} items={[{ label: partner.name }]} />
-  <PageHero eyebrow={eyebrow} title={partner.name} lead={lead} image={partner.image} />
+  <PageHero eyebrow={eyebrow} title={partner.name} lead={heroLead} image={partner.image} />
 
   <section class="section">
     <div class="wrap">
@@ -94,6 +99,41 @@ const physiciansTitle = lang === 'es' ? 'Médicos' : 'Physicians';
         </>
       )}
 
+      {partner.handles && (
+        <section class="block">
+          <h2>{partner.handles.title}</h2>
+          <p set:html={partner.handles.body} />
+        </section>
+      )}
+
+      {partner.tests && (
+        <section class="block">
+          <h2>{partner.tests.title}</h2>
+          <p class="block-lead">{partner.tests.lead}</p>
+          <dl class="tests">
+            {partner.tests.items.map((t) => (
+              <div class="test">
+                <dt>{t.name}</dt>
+                <dd>{t.purpose}</dd>
+              </div>
+            ))}
+          </dl>
+          <p class="block-note">{partner.tests.note}</p>
+        </section>
+      )}
+
+      {partner.verify && (
+        <section class="block verify">
+          <h2>{partner.verify.title}</h2>
+          <p set:html={partner.verify.body} />
+          {partner.verify.link && (
+            <p class="block-note">
+              <a href={partner.verify.link.href} target="_blank" rel="noopener">{partner.verify.link.label}</a>
+            </p>
+          )}
+        </section>
+      )}
+
       {partner.photos && partner.photos.length > 0 && (
         <>
           <h2 style="margin:36px 0 20px">{galleryTitle}</h2>
@@ -114,6 +154,57 @@ const physiciansTitle = lang === 'es' ? 'Médicos' : 'Physicians';
 </SiteLayout>
 
 <style>
+  .block {
+    max-width: 720px;
+    margin: 46px auto 0;
+  }
+  .block h2 {
+    margin-bottom: 10px;
+  }
+  .block-lead {
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .block-note {
+    margin-top: 16px;
+    font-size: 0.93rem;
+    color: var(--muted);
+  }
+  /* The licence numbers are the page's whole argument, so the block that tells
+     you how to check them gets the gold rule the prices page uses for the
+     claim it most wants read. */
+  .verify {
+    border-left: 4px solid var(--gold);
+    padding-left: 20px;
+  }
+  .verify p {
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  /* set:html sits outside Astro's scoping, and an inline link needs 3:1
+     against the body copy around it, not just the brand blue. */
+  .block p :global(a),
+  .verify p :global(a),
+  .block-note a {
+    color: #0f5f6b;
+    text-decoration: underline;
+  }
+  .tests {
+    margin: 18px 0 0;
+  }
+  .test {
+    padding: 14px 0;
+    border-top: 1px solid var(--line);
+  }
+  .test dt {
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .test dd {
+    margin: 5px 0 0;
+    color: var(--muted);
+    line-height: 1.55;
+  }
   .partner-photo {
     width: 100%;
     aspect-ratio: 4 / 3;

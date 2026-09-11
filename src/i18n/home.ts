@@ -91,6 +91,20 @@ export interface Partner {
   qualityLead?: { name: string; credential: string; role: string };
   /** Named, licensed physicians at this partner clinic, shown as credibility badges. */
   physicians?: { name: string; credential: string; role: string }[];
+  /** What this partner actually does in a patient's treatment. Replaces the
+      shared boilerplate lead, which was identical on every partner page — thin
+      content on top of duplicate content, and two of these pages were being
+      crawled and refused by Google because of it. */
+  role?: string;
+  /** Which of our therapies this partner works with, linked. Unique per
+      partner, and it gives these otherwise-isolated pages outbound links. */
+  handles?: { title: string; body: string };
+  /** The specific credential numbers on THIS page and what each one proves.
+      Deliberately short: the method belongs on the verification guide, and
+      restating it here just puts near-identical copy on six pages. */
+  verify?: { title: string; body: string; link?: { label: string; href: string } };
+  /** For the laboratory: what each batch is screened for, and what that rules out. */
+  tests?: { title: string; lead: string; items: { name: string; purpose: string }[]; note: string };
 }
 export interface Filter {
   key: string;
@@ -527,6 +541,17 @@ const en: HomeContent = {
           { name: 'Dr. Luigi Palermo', credential: 'Cédula Profesional 7606055', role: 'Medical Director · Aesthetic & Regenerative Medicine' },
           { name: 'Dr. Fernando José Núñez Prouxl', credential: 'Cédula Profesional 10566813', role: 'Plastic, Aesthetic & Reconstructive Surgery' },
         ],
+        role:
+          'This is where treatment happens for aesthetic and regenerative cases — the room, the equipment, and the physicians are theirs. Kern Stem Care treats nobody: we match your case to the right provider, coordinate the appointment and the travel around it, and stay with you through the stay. The medical decisions belong to the physicians named below.',
+        handles: {
+          title: 'The therapies this clinic works with',
+          body: 'Aesthetic and regenerative medicine, which on this site means <a href="/en/services/fibroblasts/">fibroblasts</a> — the cells that build collagen in the skin — and <a href="/en/services/exosomes/">exosomes</a>. Note the address: this clinic is in Playa del Carmen, not Cancún. What each application costs is on the <a href="/en/pricing/">prices page</a>.',
+        },
+        verify: {
+          title: 'The two numbers on this page',
+          body: 'Each physician above carries a <em>cédula profesional</em> — 7606055 and 10566813. That is two separate lookups in the federal registry, and each should return its own name with the qualification attached.',
+          link: { label: 'National registry of professionals (SEP)', href: 'https://www.gob.mx/cedulaprofesional' },
+        },
         photos: [
           '/assets/partners/luigi/luigi-1.jpg',
           '/assets/partners/luigi/luigi-2.jpg',
@@ -555,6 +580,17 @@ const en: HomeContent = {
         physicians: [
           { name: 'Dra. Beleguí Sánchez Guzmán', credential: 'Cédula Profesional 11082915', role: 'Physician · Médico Cirujano' },
         ],
+        role:
+          'The Cancún consulting rooms where patients we coordinate are treated. Care here is given by Dra. Beleguí Sánchez Guzmán, named below with her licence number. Kern Stem Care treats nobody: we match your case, coordinate the appointment and the travel around it, and stay with you through the stay.',
+        handles: {
+          title: 'The therapies this clinic works with',
+          body: 'Of the programme listed above, three have their own page here: <a href="/en/services/stem-cells/">stem cells</a>, <a href="/en/services/fibroblasts/">fibroblasts</a> and <a href="/en/services/exosomes/">exosomes</a>. Hormone pellets, chelation and platelet-rich plasma are part of what this clinic does but sit outside what Kern Stem Care coordinates. Which provider treats your own case is the physician\'s decision at your evaluation, never settled in advance. Prices are <a href="/en/pricing/">here</a>.',
+        },
+        verify: {
+          title: 'The number on this page',
+          body: 'Dra. Sánchez Guzmán carries <em>cédula profesional</em> 11082915, and she is the physician who treats the patients we coordinate here. One lookup in the federal registry returns her name and her qualification: Médico Cirujano.',
+          link: { label: 'National registry of professionals (SEP)', href: 'https://www.gob.mx/cedulaprofesional' },
+        },
       },
       {
         icon: '🔬',
@@ -564,6 +600,29 @@ const en: HomeContent = {
         image: '/assets/partners/nao-laboratorio.jpg',
         body: 'NAO Biotechnology processes and tests every cell batch before it ships: microbiological screening (bacteria, mycoplasma, fungi/yeast), a full infectious-disease serology panel (Hepatitis B/C, HIV I/II, SARS-CoV-2, Chlamydia, VDRL), flow cytometry for cell viability and identity markers, karyotype analysis for genetic stability, and oncogene-expression screening. Each batch ships with its own signed Certificate of Quality.',
         qualityLead: { name: 'Teresita Irais Álvarez Olvera', credential: 'Cédula Profesional 10506533', role: 'Biologist' },
+        role:
+          'The laboratory that prepares the cells before they ever reach a clinic. The order is placed once your treatment is paid for, your batch is prepared, and it is delivered to the clinic for your appointment with its own signed Certificate of Quality. The cell counts quoted on our prices page — 56 million per joint treated, or 2 million per kilogram of body weight for an anti-aging application — are prepared and verified here.',
+        tests: {
+          title: 'What every batch is tested for',
+          lead: 'This is the part of a treatment a patient almost never gets to see, so it is worth setting out in full. Each of these runs before a batch ships, and the results go on the certificate that travels with it.',
+          items: [
+            { name: 'Microbiological screening', purpose: 'Bacteria, mycoplasma, fungi and yeast. Contamination that would be invisible in the vial.' },
+            { name: 'Infectious-disease serology', purpose: 'A full panel on the donor material: Hepatitis B and C, HIV I/II, SARS-CoV-2, Chlamydia, and syphilis (VDRL).' },
+            { name: 'Flow cytometry', purpose: 'Counts the cells that are actually alive and confirms they carry the identity markers of the cell type they are meant to be. This is where the viability and the count on your certificate come from.' },
+            { name: 'Karyotype analysis', purpose: 'Examines the chromosomes for genetic stability — how a laboratory detects that a cultured batch has drifted.' },
+            { name: 'Oncogene-expression screening', purpose: 'Screens for expression of genes associated with uncontrolled cell growth.' },
+          ],
+          note: 'Every batch leaving this laboratory carries its own signed certificate. Ask for the one belonging to your batch — not a general brochure — and read it against the list above.',
+        },
+        handles: {
+          title: 'What this laboratory prepares',
+          body: 'Every cellular product we coordinate starts here: <a href="/en/services/stem-cells/">stem cells</a> for the joint and intravenous applications, <a href="/en/services/exosomes/">exosomes</a>, <a href="/en/services/fibroblasts/">fibroblasts</a> for aesthetic work, and <a href="/en/services/placenta/">freeze-dried placenta</a>. The count for your own case is set by the treating physician and printed on the certificate that travels with the batch; the figure each application costs is on the <a href="/en/pricing/">prices page</a>.',
+        },
+        verify: {
+          title: 'The two numbers on this page',
+          body: 'Two different things, checked two different ways. The <em>cédula profesional</em> above — 10506533 — belongs to the biologist who signs off on quality, and the federal registry will confirm it in under a minute. Sanitary licence 2414150080080416 belongs to the laboratory itself, and there is no public search for it: the PDF is the evidence, so ask for it.',
+          link: { label: 'How to check a provider, step by step', href: '/en/how-to-choose-a-clinic/' },
+        },
         photos: [
           '/assets/partners/nao/nao-1.jpg',
           '/assets/partners/nao/nao-2.jpg',
@@ -957,6 +1016,17 @@ const es: HomeContent = {
           { name: 'Dr. Luigi Palermo', credential: 'Cédula Profesional 7606055', role: 'Director Médico · Medicina Estética y Regenerativa' },
           { name: 'Dr. Fernando José Núñez Prouxl', credential: 'Cédula Profesional 10566813', role: 'Cirugía Plástica, Estética y Reconstructiva' },
         ],
+        role:
+          'Aquí se realiza el tratamiento en los casos estéticos y regenerativos — el consultorio, el equipo y los médicos son suyos. Kern Stem Care no trata a nadie: canalizamos tu caso al proveedor adecuado, coordinamos la cita y el viaje alrededor de ella, y te acompañamos durante la estancia. Las decisiones médicas son de los médicos que aparecen abajo.',
+        handles: {
+          title: 'Las terapias con las que trabaja esta clínica',
+          body: 'Medicina estética y regenerativa, que en este sitio significa <a href="/es/services/fibroblasts/">fibroblastos</a> — las células que forman el colágeno de la piel — y <a href="/es/services/exosomes/">exosomas</a>. Fíjate en el domicilio: esta clínica está en Playa del Carmen, no en Cancún. Lo que cuesta cada aplicación está en la <a href="/es/precios/">página de precios</a>.',
+        },
+        verify: {
+          title: 'Los dos números de esta página',
+          body: 'Cada médico de arriba tiene su <em>cédula profesional</em> — 7606055 y 10566813. Son dos búsquedas distintas en el registro federal, y cada una debe regresar su propio nombre con su título.',
+          link: { label: 'Registro Nacional de Profesionistas (SEP)', href: 'https://www.gob.mx/cedulaprofesional' },
+        },
         photos: [
           '/assets/partners/luigi/luigi-1.jpg',
           '/assets/partners/luigi/luigi-2.jpg',
@@ -985,6 +1055,17 @@ const es: HomeContent = {
         physicians: [
           { name: 'Dra. Beleguí Sánchez Guzmán', credential: 'Cédula Profesional 11082915', role: 'Médica · Médico Cirujano' },
         ],
+        role:
+          'Los consultorios de Cancún donde se atiende a los pacientes que coordinamos. Aquí la atención la brinda la Dra. Beleguí Sánchez Guzmán, que aparece abajo con su número de cédula. Kern Stem Care no trata a nadie: canalizamos tu caso, coordinamos la cita y el viaje alrededor de ella, y te acompañamos durante la estancia.',
+        handles: {
+          title: 'Las terapias con las que trabaja esta clínica',
+          body: 'Del programa que aparece arriba, tres tienen su propia página aquí: <a href="/es/services/stem-cells/">células madre</a>, <a href="/es/services/fibroblasts/">fibroblastos</a> y <a href="/es/services/exosomes/">exosomas</a>. Los pellets hormonales, la quelación y el plasma rico en plaquetas son parte de lo que hace esta clínica, pero quedan fuera de lo que coordina Kern Stem Care. Qué proveedor atiende tu caso lo decide el médico en tu evaluación, nunca se define de antemano. Los precios están <a href="/es/precios/">aquí</a>.',
+        },
+        verify: {
+          title: 'El número de esta página',
+          body: 'La Dra. Sánchez Guzmán tiene <em>cédula profesional</em> 11082915, y es la médica que atiende aquí a los pacientes que coordinamos. Una sola búsqueda en el registro federal regresa su nombre y su título: Médico Cirujano.',
+          link: { label: 'Registro Nacional de Profesionistas (SEP)', href: 'https://www.gob.mx/cedulaprofesional' },
+        },
       },
       {
         icon: '🔬',
@@ -994,6 +1075,29 @@ const es: HomeContent = {
         image: '/assets/partners/nao-laboratorio.jpg',
         body: 'NAO Biotechnology procesa y analiza cada lote de células antes de enviarlo: tamizaje microbiológico (bacterias, micoplasma, hongos y levaduras), panel completo de serología para enfermedades infecciosas (Hepatitis B/C, VIH I/II, SARS-CoV-2, Chlamydia, VDRL), citometría de flujo para viabilidad e identidad celular, análisis de cariotipo para estabilidad genética, y tamizaje de expresión de oncogenes. Cada lote se entrega con su propio Certificado de Calidad firmado.',
         qualityLead: { name: 'Teresita Irais Álvarez Olvera', credential: 'Cédula Profesional 10506533', role: 'Bióloga' },
+        role:
+          'El laboratorio que prepara las células antes de que lleguen a una clínica. El pedido entra cuando tu tratamiento está pagado, tu lote se prepara y se entrega en la clínica para tu cita con su propio Certificado de Calidad firmado. Los conteos celulares que publicamos en la página de precios — 56 millones por articulación tratada, o 2 millones por kilogramo de peso corporal en una aplicación de antienvejecimiento — se preparan y se verifican aquí.',
+        tests: {
+          title: 'Qué se le analiza a cada lote',
+          lead: 'Ésta es la parte del tratamiento que un paciente casi nunca alcanza a ver, así que vale la pena ponerla completa. Todo esto corre antes de que un lote salga, y los resultados van en el certificado que viaja con él.',
+          items: [
+            { name: 'Tamizaje microbiológico', purpose: 'Bacterias, micoplasma, hongos y levaduras. Contaminación que sería invisible dentro del frasco.' },
+            { name: 'Serología de enfermedades infecciosas', purpose: 'Panel completo sobre el material del donante: Hepatitis B y C, VIH I/II, SARS-CoV-2, Chlamydia y sífilis (VDRL).' },
+            { name: 'Citometría de flujo', purpose: 'Cuenta las células que de verdad están vivas y confirma que llevan los marcadores de identidad del tipo celular que deben ser. De aquí salen la viabilidad y el conteo que aparecen en tu certificado.' },
+            { name: 'Análisis de cariotipo', purpose: 'Revisa los cromosomas para comprobar estabilidad genética — así detecta un laboratorio que un lote cultivado se desvió.' },
+            { name: 'Tamizaje de expresión de oncogenes', purpose: 'Busca expresión de genes asociados al crecimiento celular descontrolado.' },
+          ],
+          note: 'Cada lote que sale de este laboratorio lleva el suyo, firmado. Pide el que corresponde a tu lote — no un folleto general — y léelo contra la lista de arriba.',
+        },
+        handles: {
+          title: 'Qué prepara este laboratorio',
+          body: 'Todo producto celular que coordinamos empieza aquí: <a href="/es/services/stem-cells/">células madre</a> para las aplicaciones articulares e intravenosas, <a href="/es/services/exosomes/">exosomas</a>, <a href="/es/services/fibroblasts/">fibroblastos</a> para el trabajo estético y <a href="/es/services/placenta/">placenta liofilizada</a>. El conteo de tu caso lo define el médico tratante y queda impreso en el certificado que viaja con el lote; la cifra que cuesta cada aplicación está en la <a href="/es/precios/">página de precios</a>.',
+        },
+        verify: {
+          title: 'Los dos números de esta página',
+          body: 'Son dos cosas distintas y se comprueban distinto. La <em>cédula profesional</em> de arriba — 10506533 — es de la bióloga que firma la calidad, y el registro federal te la confirma en menos de un minuto. La licencia sanitaria 2414150080080416 es del laboratorio, y para ésa no existe buscador público: el PDF es la prueba, así que pídelo.',
+          link: { label: 'Cómo comprobar a un proveedor, paso a paso', href: '/es/como-elegir-clinica/' },
+        },
         photos: [
           '/assets/partners/nao/nao-1.jpg',
           '/assets/partners/nao/nao-2.jpg',
