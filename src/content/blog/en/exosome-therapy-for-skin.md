@@ -1,6 +1,6 @@
 ---
 title: 'Exosome therapy for skin: what it is, what it costs, and what to expect'
-description: 'What exosome therapy for skin rejuvenation actually is, what the research says about results like fine lines and texture, typical cost factors, and how it compares to stem cell therapy.'
+description: 'What exosome therapy for skin is, what the research says about fine lines and texture, what drives the cost, and how it compares to stem cell therapy.'
 lang: 'en'
 translationKey: 'exosome-therapy-skin'
 pubDate: 2026-09-14

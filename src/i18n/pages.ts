@@ -42,6 +42,13 @@ export interface SimplePage {
   /** Path under /public, shown as the page-hero background photo. */
   heroImage?: string;
 }
+export interface ComparePage {
+  title: string;
+  lead: string;
+  head: { therapy: string; studied: string; from: string };
+  rows: { therapy: string; studied: string; from: string }[];
+  note: string;
+}
 export interface ServicesIndexPage {
   metaTitle: string;
   metaDescription: string;
@@ -49,6 +56,10 @@ export interface ServicesIndexPage {
   title: string;
   lead: string;
   cards: ServiceCard[];
+  /** A hub page with four cards and nothing else was 151 words — too thin to
+      earn indexing, and it left the reader no way to tell the four apart
+      without opening each one. */
+  compare: ComparePage;
   disclaimer: string;
 }
 export interface ProcessPage {
@@ -263,9 +274,9 @@ export const pathToTreatment: Record<Lang, PathToTreatmentContent> = {
 
 const en: PagesSet = {
   services: {
-    metaTitle: 'Regenerative Therapies in Cancún, Mexico | Kern Stem Care',
+    metaTitle: 'Regenerative Therapies in Cancún | Kern Stem Care',
     metaDescription:
-      'Compare the regenerative therapies we help international patients access in Cancún — stem cells, exosomes, fibroblasts and freeze-dried placenta — through independent, licensed clinics and labs.',
+      'The four regenerative therapies we coordinate in Cancún — stem cells, exosomes, fibroblasts and freeze-dried placenta — with prices published for each.',
     eyebrow: 'What We Coordinate',
     title: 'Services',
     lead: "Regenerative therapy in Cancún, Mexico is only as strong as the team behind it — and that's exactly what we take on. We vet and verify every independent, government-licensed (COFEPRIS) clinic and laboratory we coordinate with, from stem cell therapy to exosomes, then facilitate every step from your first call to your follow-up at home.",
@@ -275,11 +286,23 @@ const en: PagesSet = {
       { image: '/assets/services/fibroblasts.webp', alt: 'Microscopic render of fibroblast cells and collagen fibers', slug: 'fibroblasts', title: 'Fibroblasts', body: 'Collagen-producing cells that build connective tissue. The most narrowly focused, concentrated on skin and wound applications.' },
       { image: '/assets/services/placenta.webp', alt: 'Vial of freeze-dried (lyophilized) human placenta', slug: 'placenta', title: 'Freeze-Dried Placenta', body: 'A freeze-dried placental-tissue preparation, given as subdermal injections. The least established of the therapies we coordinate.' },
     ],
+    compare: {
+      title: 'Telling the four apart',
+      lead: 'The names sound interchangeable and they are not. What separates them is the cell — or, for exosomes, the absence of one — and that is what decides which is studied for what.',
+      head: { therapy: 'Therapy', studied: 'Studied mainly for', from: 'From' },
+      rows: [
+        { therapy: 'Stem cells', studied: 'Joint and orthopedic cases, and systemic wellness given intravenously', from: '$2,300' },
+        { therapy: 'Exosomes', studied: 'Recovery, skin quality, immune wellness. Contains no living cells', from: '$970' },
+        { therapy: 'Fibroblasts', studied: 'Skin quality and facial work — these are the cells that build collagen', from: '$850' },
+        { therapy: 'Freeze-dried placenta', studied: 'Placed as subdermal injections rather than infused', from: '$880' },
+      ],
+      note: 'Which one suits your case, if any does, is the treating physician\'s decision at your evaluation — not something to settle from a table. Every figure and what it includes is on the prices page.',
+    },
     disclaimer: investigationalEN,
   },
   stemCells: {
     metaTitle: 'Stem Cell Therapy in Cancún, Mexico | Kern Stem Care',
-    metaDescription: 'Considering stem cell therapy in Cancún? Kern Stem Care coordinates evaluation, licensed-clinic treatment, travel and follow-up for international patients. Free evaluation.',
+    metaDescription: 'Stem cell therapy in Cancún: 56 million cells per joint treated, licensed clinics, published prices, and a physician who reviews your case before you fly.',
     eyebrow: 'Cellular Therapy',
     title: 'Stem Cells',
     lead: 'What stem cell therapy involves, what it is currently studied for, and how we coordinate your access to it through independent, licensed clinics in Cancún.',
@@ -298,7 +321,7 @@ const en: PagesSet = {
   },
   exosomes: {
     metaTitle: 'Exosome Therapy in Cancún, Mexico | Kern Stem Care',
-    metaDescription: 'Exosome therapy in Cancún, coordinated end-to-end by Kern Stem Care with independent, licensed clinics. Bilingual guidance and a free evaluation for international patients.',
+    metaDescription: 'Exosome therapy in Cancún, from $970. What exosomes are, the particle counts we coordinate, and the licensed clinics that administer them.',
     eyebrow: 'Cellular Therapy',
     title: 'Exosomes',
     lead: 'What exosome therapy involves, where the research currently stands, and how we coordinate your access to it through independent, licensed clinics in Cancún.',
@@ -317,7 +340,7 @@ const en: PagesSet = {
   },
   fibroblasts: {
     metaTitle: 'Fibroblast Therapy in Cancún, Mexico | Kern Stem Care',
-    metaDescription: 'Fibroblast therapy in Cancún, coordinated by Kern Stem Care with independent, licensed clinics. Bilingual guidance, travel and follow-up for international patients.',
+    metaDescription: 'Fibroblast therapy in Cancún, from $850. The collagen-producing cells used for facial and skin work, with prices published per area treated.',
     eyebrow: 'Cellular Therapy',
     title: 'Fibroblasts',
     lead: 'What fibroblast therapy involves, which applications it is studied for, and how we coordinate your access to it through independent, licensed clinics in Cancún.',
@@ -330,8 +353,8 @@ const en: PagesSet = {
     disclaimer: investigationalEN,
   },
   placenta: {
-    metaTitle: 'Freeze-Dried Placenta Therapy in Cancún, Mexico | Kern Stem Care',
-    metaDescription: 'Freeze-dried (lyophilized) placental-tissue therapy in Cancún, coordinated by Kern Stem Care with independent, licensed clinics. Bilingual guidance for international patients.',
+    metaTitle: 'Freeze-Dried Placenta Therapy in Cancún | Kern Stem Care',
+    metaDescription: 'Freeze-dried placenta therapy in Cancún, $880. What the preparation is, how it is administered, and the licensed clinics that carry it out.',
     eyebrow: 'Regenerative Therapy',
     title: 'Freeze-Dried Placenta',
     lead: 'What freeze-dried placenta therapy involves, how it is administered, and how we coordinate your access to it through independent, licensed clinics in Cancún.',
@@ -344,8 +367,8 @@ const en: PagesSet = {
     disclaimer: investigationalEN,
   },
   about: {
-    metaTitle: 'About | Kern Stem Care',
-    metaDescription: 'Meet Kern Stem Care: a bilingual medical-coordination agency in Cancún — not a clinic — that vets providers and guides international patients — including the U.S. and Canada — from first call to follow-up.',
+    metaTitle: 'About Kern Stem Care — Agency in Cancún',
+    metaDescription: 'A bilingual medical-coordination agency in Cancún — not a clinic. We vet the providers, publish their licence numbers, and guide you from first message to home.',
     eyebrow: 'About Kern Stem Care',
     title: 'Your single, trusted point of contact in Mexico',
     lead: 'Kern Stem Care is your coordination agency for regenerative and stem cell therapy in Cancún, Mexico. We verify, we coordinate, and we stay with you at every stage — every clinic, physician, and laboratory in our network passes our verification before you ever meet them.',
@@ -356,8 +379,8 @@ const en: PagesSet = {
     ],
   },
   process: {
-    metaTitle: 'Regenerative Care for International Patients | Kern Stem Care',
-    metaDescription: 'How Kern Stem Care coordinates regenerative care for international patients: evaluation, licensed clinic, travel, treatment and follow-up — one bilingual coordinator throughout.',
+    metaTitle: 'How It Works — Stem Cell Therapy in Cancún | Kern Stem Care',
+    metaDescription: 'How it works, step by step: a physician reviews your case before you travel, then a three-day stay in Cancún with one bilingual coordinator throughout.',
     eyebrow: 'How It Works',
     title: 'Process for international patients',
     lead: "Your step-by-step guide as an international patient: from your first message with a bilingual coordinator, through a free consultation and transparent quote, to travel and care coordinated with independent, licensed providers in Cancún — plus follow-up support once you're home.",
@@ -373,7 +396,7 @@ const en: PagesSet = {
     ],
   },
   testimonials: {
-    metaTitle: 'Testimonials | Kern Stem Care',
+    metaTitle: 'Patient Stories — Stem Cell Therapy Cancún',
     metaDescription: 'Real patient stories, shared with written consent. Results are not typical and vary by person. See how Kern Stem Care supports patients traveling to Cancún.',
     eyebrow: 'Patient Stories',
     title: 'Real patients, real stories',
@@ -387,14 +410,14 @@ const en: PagesSet = {
       '<strong>Testimonial disclaimer:</strong> Testimonials reflect individual experiences and are not a promise of results. Patients shown gave written consent to share their stories. Results are not typical and will vary from person to person.',
   },
   contact: {
-    metaTitle: 'Contact | Kern Stem Care',
+    metaTitle: 'Contact Kern Stem Care — Cancún, Mexico',
     metaDescription: 'Request a free, no-obligation evaluation. A bilingual Kern Stem Care coordinator replies within 24 hours to guide your regenerative-care options in Cancún.',
     eyebrow: 'Get Started',
     title: 'Request your free, no-obligation evaluation',
     lead: 'A bilingual patient coordinator replies within 24 hours, Monday through Saturday. Tell us what you are dealing with and what you would like to know — the first conversation is free and carries no obligation.',
   },
   estimate: {
-    metaTitle: 'Get Your Personalized Price Estimate | Kern Stem Care',
+    metaTitle: 'Free Stem Cell Therapy Quote — Cancún | Kern Stem Care',
     metaDescription:
       'Share your case details and get a personalized, itemized price estimate for stem cell therapy in Cancún — reviewed by a licensed physician, no obligation.',
     eyebrow: 'Free, No-Obligation Estimate',
@@ -442,9 +465,9 @@ const en: PagesSet = {
       '<strong>Important:</strong> Kern Stem Care is a medical coordination agency, not a clinic, and does not provide medical treatment or advice. This estimate is prepared with guidance from independent, licensed partner physicians but is not a final quote, diagnosis, or guarantee — your treating physician confirms your protocol and final cost during your evaluation. Many regenerative therapies are not approved by the U.S. FDA or Health Canada for specific diseases and are considered investigational.',
   },
   pricing: {
-    metaTitle: 'Stem cell therapy prices in Cancún | Kern Stem Care',
+    metaTitle: 'Stem Cell Therapy Prices in Cancún | Kern Stem Care',
     metaDescription:
-      'What each application actually costs in Cancún — the full price list, from $850 to $7,500 USD, what the figure includes, what it does not, and what drives the number up or down.',
+      'The full price list, $850 to $7,500 USD, application by application — what each figure includes, what it does not, and when you pay. No form, no call.',
     eyebrow: 'Prices',
     title: 'What it costs, before you ask',
     lead: 'The most common question patients ask other patients online is simply "what did you pay?" — and it is usually the hardest one to get answered. Here is our full list. No form, no call, no "contact us for pricing".',
@@ -596,7 +619,7 @@ const en: PagesSet = {
   chooseClinic: {
     metaTitle: 'How to Choose a Stem Cell Clinic in Mexico | Kern Stem Care',
     metaDescription:
-      "Five things you can verify yourself before choosing a stem cell clinic in Mexico — the physician's licence, the facility's sanitary document, the batch certificate — with the official government links.",
+      "Five things you can check yourself before choosing a stem cell clinic in Mexico: the physician's licence, the sanitary permit, and your batch certificate.",
     eyebrow: 'Verification Guide',
     title: 'How to choose a stem cell clinic in Mexico',
     lead: 'The difference between a legitimate provider and a risky one is almost never the price or how polished the website looks. It is what they can show you in writing — and you can check most of it yourself, in a few minutes, without asking anyone permission.',
@@ -667,9 +690,9 @@ const en: PagesSet = {
 
 const es: PagesSet = {
   services: {
-    metaTitle: 'Terapias Regenerativas en Cancún, México | Kern Stem Care',
+    metaTitle: 'Terapias Regenerativas en Cancún | Kern Stem Care',
     metaDescription:
-      'Compara las terapias regenerativas a las que ayudamos a acceder en Cancún — células madre, exosomas, fibroblastos y placenta liofilizada — con clínicas y laboratorios independientes y con licencia.',
+      'Las cuatro terapias regenerativas que coordinamos en Cancún — células madre, exosomas, fibroblastos y placenta liofilizada — con el precio de cada una.',
     eyebrow: 'Qué Coordinamos',
     title: 'Servicios',
     lead: 'Una terapia regenerativa en Cancún, México es tan sólida como el equipo que la respalda — y de eso justo nos encargamos. Verificamos y validamos cada clínica y laboratorio independiente con licencia gubernamental (COFEPRIS) con el que coordinamos, desde la terapia con células madre hasta los exosomas, y luego facilitamos cada paso, desde tu primera llamada hasta tu seguimiento en casa.',
@@ -679,11 +702,23 @@ const es: PagesSet = {
       { image: '/assets/services/fibroblasts.webp', alt: 'Representación microscópica de fibroblastos y fibras de colágeno', slug: 'fibroblasts', title: 'Fibroblastos', body: 'Células productoras de colágeno que construyen el tejido conectivo. La más acotada, centrada en aplicaciones de piel y cicatrización.' },
       { image: '/assets/services/placenta.webp', alt: 'Frasco de placenta humana liofilizada', slug: 'placenta', title: 'Placenta Liofilizada', body: 'Una preparación de tejido placentario liofilizado, aplicada mediante inyecciones subdérmicas. La menos consolidada de las terapias que coordinamos.' },
     ],
+    compare: {
+      title: 'Cómo distinguir las cuatro',
+      lead: 'Los nombres suenan intercambiables y no lo son. Lo que las separa es la célula — o, en el caso de los exosomas, la ausencia de ella — y eso es lo que define para qué se estudia cada una.',
+      head: { therapy: 'Terapia', studied: 'Se estudia sobre todo para', from: 'Desde' },
+      rows: [
+        { therapy: 'Células madre', studied: 'Casos articulares y ortopédicos, y bienestar sistémico por vía intravenosa', from: '$2,300' },
+        { therapy: 'Exosomas', studied: 'Recuperación, calidad de la piel, bienestar inmune. No contiene células vivas', from: '$970' },
+        { therapy: 'Fibroblastos', studied: 'Calidad de la piel y trabajo facial — son las células que forman el colágeno', from: '$850' },
+        { therapy: 'Placenta liofilizada', studied: 'Se aplica en inyecciones subdérmicas, no en infusión', from: '$880' },
+      ],
+      note: 'Cuál corresponde a tu caso, si alguna corresponde, lo decide el médico tratante en tu evaluación — no se resuelve con una tabla. Cada cifra y lo que incluye está en la página de precios.',
+    },
     disclaimer: investigationalES,
   },
   stemCells: {
     metaTitle: 'Terapia con Células Madre en Cancún, México | Kern Stem Care',
-    metaDescription: '¿Piensas en terapia con células madre en Cancún? Kern Stem Care coordina evaluación, tratamiento en clínicas certificadas, viaje y seguimiento para pacientes internacionales.',
+    metaDescription: 'Terapia con células madre en Cancún: 56 millones de células por articulación, clínicas con licencia, precios publicados y un médico que revisa tu caso antes.',
     eyebrow: 'Terapia Celular',
     title: 'Células Madre',
     lead: 'En qué consiste la terapia con células madre, para qué se estudia actualmente y cómo coordinamos tu acceso a ella con clínicas independientes y certificadas en Cancún.',
@@ -702,7 +737,7 @@ const es: PagesSet = {
   },
   exosomes: {
     metaTitle: 'Terapia con Exosomas en Cancún, México | Kern Stem Care',
-    metaDescription: 'Terapia con exosomas en Cancún, coordinada de principio a fin por Kern Stem Care con clínicas independientes y certificadas. Evaluación gratuita para pacientes internacionales.',
+    metaDescription: 'Terapia con exosomas en Cancún, desde $970. Qué son, los conteos de partículas que coordinamos y las clínicas con licencia que los aplican.',
     eyebrow: 'Terapia Celular',
     title: 'Exosomas',
     lead: 'En qué consiste la terapia con exosomas, en qué punto está la investigación y cómo coordinamos tu acceso a ella con clínicas independientes y certificadas en Cancún.',
@@ -721,7 +756,7 @@ const es: PagesSet = {
   },
   fibroblasts: {
     metaTitle: 'Terapia con Fibroblastos en Cancún, México | Kern Stem Care',
-    metaDescription: 'Terapia con fibroblastos en Cancún, coordinada por Kern Stem Care con clínicas independientes y certificadas. Guía bilingüe, viaje y seguimiento para pacientes internacionales.',
+    metaDescription: 'Terapia con fibroblastos en Cancún, desde $850. Las células que producen colágeno, usadas en rostro y piel, con precio publicado por zona tratada.',
     eyebrow: 'Terapia Celular',
     title: 'Fibroblastos',
     lead: 'En qué consiste la terapia con fibroblastos, en qué aplicaciones se estudia y cómo coordinamos tu acceso a ella con clínicas independientes y certificadas en Cancún.',
@@ -734,8 +769,8 @@ const es: PagesSet = {
     disclaimer: investigationalES,
   },
   placenta: {
-    metaTitle: 'Terapia con Placenta Liofilizada en Cancún, México | Kern Stem Care',
-    metaDescription: 'Terapia con tejido placentario liofilizado en Cancún, coordinada por Kern Stem Care con clínicas independientes y certificadas. Guía bilingüe para pacientes internacionales.',
+    metaTitle: 'Placenta Liofilizada en Cancún | Kern Stem Care',
+    metaDescription: 'Terapia con placenta liofilizada en Cancún, $880. Qué es la preparación, cómo se aplica y las clínicas con licencia que la realizan.',
     eyebrow: 'Terapia Regenerativa',
     title: 'Placenta Liofilizada',
     lead: 'En qué consiste la terapia con placenta liofilizada, cómo se administra y cómo coordinamos tu acceso a ella con clínicas independientes y certificadas en Cancún.',
@@ -748,8 +783,8 @@ const es: PagesSet = {
     disclaimer: investigationalES,
   },
   about: {
-    metaTitle: 'Sobre Nosotros | Kern Stem Care',
-    metaDescription: 'Conoce a Kern Stem Care: una agencia de coordinación médica bilingüe en Cancún — no una clínica — que verifica proveedores y guía a pacientes internacionales — incluyendo EE.UU. y Canadá — de principio a fin.',
+    metaTitle: 'Sobre Kern Stem Care — Agencia en Cancún',
+    metaDescription: 'Una agencia de coordinación médica bilingüe en Cancún — no una clínica. Verificamos proveedores, publicamos sus licencias y te acompañamos de principio a fin.',
     eyebrow: 'Sobre Kern Stem Care',
     title: 'Tu único punto de contacto de confianza en México',
     lead: 'Kern Stem Care es tu agencia de coordinación para terapias regenerativas y con células madre en Cancún, México. Verificamos, coordinamos y te acompañamos en cada etapa — cada clínica, médico y laboratorio de nuestra red pasa por nuestra verificación antes de que los conozcas.',
@@ -760,8 +795,8 @@ const es: PagesSet = {
     ],
   },
   process: {
-    metaTitle: 'Atención Regenerativa para Pacientes Internacionales | Kern Stem Care',
-    metaDescription: 'Cómo coordina Kern Stem Care la atención regenerativa para pacientes internacionales: evaluación, clínica certificada, viaje, tratamiento y seguimiento con un coordinador bilingüe.',
+    metaTitle: 'Cómo Funciona — Células Madre en Cancún | Kern Stem Care',
+    metaDescription: 'Cómo funciona, paso a paso: un médico revisa tu caso antes de que viajes, y después una estancia de tres días en Cancún con un solo coordinador bilingüe.',
     eyebrow: 'Cómo Funciona',
     title: 'Proceso para pacientes internacionales',
     lead: 'Tu guía paso a paso como paciente internacional: desde tu primer mensaje con un coordinador bilingüe, pasando por una consulta gratuita y una cotización transparente, hasta el viaje y la atención coordinados con proveedores independientes y con licencia en Cancún — más el acompañamiento al volver a casa.',
@@ -777,8 +812,8 @@ const es: PagesSet = {
     ],
   },
   testimonials: {
-    metaTitle: 'Testimonios | Kern Stem Care',
-    metaDescription: 'Historias reales de pacientes, compartidas con consentimiento por escrito. Los resultados no son típicos y varían. Conoce cómo Kern Stem Care acompaña a quienes viajan a Cancún.',
+    metaTitle: 'Testimonios — Células Madre en Cancún',
+    metaDescription: 'Historias de pacientes compartidas con consentimiento por escrito. Los resultados varían y no son típicos. Así acompañamos a quienes viajan a Cancún.',
     eyebrow: 'Historias de Pacientes',
     title: 'Pacientes reales, historias reales',
     lead: 'Historias reales de pacientes que viajaron a Cancún para recibir terapia con células madre y medicina regenerativa, compartidas con su consentimiento por escrito. Cada camino es distinto — los resultados varían y no son típicos — pero cada historia muestra cómo es en la práctica la atención coordinada con Kern Stem Care.',
@@ -791,16 +826,16 @@ const es: PagesSet = {
       '<strong>Aviso sobre testimonios:</strong> Los testimonios reflejan experiencias individuales y no son una promesa de resultados. Los pacientes mostrados dieron consentimiento por escrito para compartir su historia. Los resultados no son típicos y varían de persona a persona.',
   },
   contact: {
-    metaTitle: 'Contacto | Kern Stem Care',
-    metaDescription: 'Solicita tu evaluación gratuita y sin compromiso. Un coordinador bilingüe de Kern Stem Care te responde en menos de 24 horas para guiar tus opciones de atención en Cancún.',
+    metaTitle: 'Contacto — Kern Stem Care, Cancún',
+    metaDescription: 'Escríbenos y un coordinador bilingüe te responde en menos de 24 horas. Evaluación gratuita y sin compromiso para tu tratamiento en Cancún.',
     eyebrow: 'Comenzar',
     title: 'Solicita tu evaluación gratuita, sin compromiso',
     lead: 'Un coordinador bilingüe te responde en menos de 24 horas, de lunes a sábado. Cuéntanos qué estás viviendo y qué te gustaría saber — la primera conversación es gratuita y sin compromiso.',
   },
   estimate: {
-    metaTitle: 'Obtén tu Cotización Personalizada | Kern Stem Care',
+    metaTitle: 'Cotización Gratis — Células Madre Cancún | Kern Stem Care',
     metaDescription:
-      'Comparte los detalles de tu caso y obtén una cotización personalizada para terapia con células madre en Cancún — revisada por un médico certificado, sin compromiso.',
+      'Cuéntanos tu caso y recibe una cotización desglosada para células madre en Cancún, revisada por un médico con licencia. Gratis y sin compromiso.',
     eyebrow: 'Cotización Gratuita, Sin Compromiso',
     title: 'Obtén tu Cotización Personalizada',
     lead: 'Llena el formulario a continuación y nuestro equipo de coordinación preparará tu cotización personalizada y detallada para terapia con células madre y medicina regenerativa en Cancún, México — revisada por un médico certificado antes de llegar a ti. Solo toma unos minutos.',
@@ -846,7 +881,7 @@ const es: PagesSet = {
       '<strong>Importante:</strong> Kern Stem Care es una agencia de coordinación médica, no una clínica, y no brinda tratamiento ni consejo médico. Esta cotización se prepara con la guía de médicos aliados independientes y con licencia, pero no es una cotización final, diagnóstico ni garantía — tu médico tratante confirma tu protocolo y costo final durante tu evaluación. Muchas terapias regenerativas no están aprobadas por la FDA de EE.UU. ni Health Canada para enfermedades específicas y se consideran de investigación.',
   },
   pricing: {
-    metaTitle: 'Precios de terapia con células madre en Cancún | Kern Stem Care',
+    metaTitle: 'Precios de Células Madre en Cancún | Kern Stem Care',
     metaDescription:
       'Cuánto cuesta cada aplicación en Cancún — la lista completa, de $850 a $7,500 USD, qué incluye la cifra, qué no, y qué la sube o la baja.',
     eyebrow: 'Precios',
@@ -998,9 +1033,9 @@ const es: PagesSet = {
       'Kern Stem Care es una agencia de coordinación médica, no una clínica, y no brinda tratamiento ni consejo médico. Ninguna cifra de esta página constituye un diagnóstico ni una recomendación de tratamiento. Qué terapia corresponde a cada paciente, y si alguna corresponde, lo define el médico tratante durante la evaluación médica. Muchas terapias regenerativas no están aprobadas por la FDA de EE.UU. ni por Health Canada para enfermedades específicas y se consideran de investigación. Los resultados varían de una persona a otra.',
   },
   chooseClinic: {
-    metaTitle: 'Cómo Elegir una Clínica de Células Madre en México | Kern Stem Care',
+    metaTitle: 'Cómo Elegir una Clínica de Células Madre | Kern Stem Care',
     metaDescription:
-      'Cinco cosas que puedes verificar tú mismo antes de elegir una clínica de células madre en México — la cédula del médico, el documento sanitario del establecimiento, el certificado del lote — con los enlaces oficiales del gobierno.',
+      'Cinco cosas que puedes verificar tú mismo antes de elegir clínica en México: la cédula del médico, el permiso sanitario y el certificado de tu lote.',
     eyebrow: 'Guía de Verificación',
     title: 'Cómo elegir una clínica de células madre en México',
     lead: 'La diferencia entre un proveedor legítimo y uno riesgoso casi nunca está en el precio ni en lo bonita que se vea su página. Está en lo que te pueden mostrar por escrito — y buena parte lo puedes comprobar tú mismo, en unos minutos, sin pedirle permiso a nadie.',

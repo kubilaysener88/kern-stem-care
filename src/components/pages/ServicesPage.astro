@@ -43,4 +43,49 @@ const sectionHeading =
       </div>
     </div>
   </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <h2>{p.compare.title}</h2>
+      <p class="lead">{p.compare.lead}</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>{p.compare.head.therapy}</th><th>{p.compare.head.studied}</th><th>{p.compare.head.from}</th></tr>
+          </thead>
+          <tbody>
+            {p.compare.rows.map((r) => (
+              <tr><td class="th-name">{r.therapy}</td><td>{r.studied}</td><td class="th-from">{r.from}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="note">{p.compare.note}</p>
+      <p class="note">
+        <a href={withSlash(`/${lang}/${lang === 'es' ? 'precios' : 'pricing'}`)}>{lang === 'es' ? 'Ver todos los precios →' : 'See every price →'}</a>
+      </p>
+    </div>
+  </section>
 </SiteLayout>
+
+<style>
+  /* Same approach the prices and blog tables use: cells wrap so the table fits
+     rather than becoming a scroll box a keyboard cannot reach. */
+  .table-wrap { margin: 18px 0; }
+  table { width: 100%; table-layout: fixed; border-collapse: collapse; }
+  th, td {
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+  }
+  th { background: #f1f5f9; color: var(--navy); font-weight: 700; }
+  .th-name { font-weight: 600; color: var(--navy); }
+  .th-from { font-weight: 700; color: var(--navy); }
+  .note { color: #475569; font-size: 0.95rem; margin-top: 14px; }
+  .note a { color: #0f5f6b; text-decoration: underline; }
+  @media (max-width: 560px) {
+    th, td { padding: 9px 8px; font-size: 0.88rem; }
+  }
+</style>

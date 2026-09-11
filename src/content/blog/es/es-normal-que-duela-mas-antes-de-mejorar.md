@@ -1,6 +1,7 @@
 ---
 title: '¿Es normal que el dolor empeore antes de mejorar después de la terapia con células madre?'
-description: 'Por qué un brote temporal de dolor, inflamación o rigidez después de una inyección articular es común, cuánto suele durar, y las señales de alerta que indican que algo más está pasando.'
+metaTitle: '¿El dolor empeora antes de mejorar?'
+description: 'Por qué es común un brote temporal de dolor o inflamación tras una inyección articular, cuánto suele durar y qué señales indican que es otra cosa.'
 lang: 'es'
 translationKey: 'flare-before-improvement'
 pubDate: 2026-09-03

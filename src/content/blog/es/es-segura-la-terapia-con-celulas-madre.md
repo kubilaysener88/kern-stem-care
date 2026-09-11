@@ -1,6 +1,7 @@
 ---
 title: '¿Es segura la terapia con células madre? Riesgos reales y cómo elegir una clínica legítima'
-description: 'Cuáles son los riesgos reales y efectos secundarios de la terapia con células madre, por qué algunas clínicas son más riesgosas que otras, y qué preguntar antes de elegir un proveedor.'
+metaTitle: '¿Es segura la terapia con células madre?'
+description: 'Cuáles son los riesgos reales de la terapia con células madre, por qué unas clínicas son más riesgosas que otras y qué preguntar antes de elegir.'
 lang: 'es'
 translationKey: 'stem-cell-therapy-safety'
 pubDate: 2026-09-03

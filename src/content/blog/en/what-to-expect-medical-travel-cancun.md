@@ -1,6 +1,7 @@
 ---
 title: 'What to expect on a medical travel trip to Cancún'
-description: 'A step-by-step look at a regenerative-medicine trip to Cancún for international patients — from first call and evaluation to travel, treatment day, and follow-up at home.'
+metaTitle: 'What to Expect on a Medical Trip to Cancún'
+description: 'A regenerative-medicine trip to Cancún, step by step: evaluation before you fly, the three-day stay, treatment day, and follow-up once you are home.'
 lang: 'en'
 translationKey: 'medical-travel-cancun'
 pubDate: 2026-06-24

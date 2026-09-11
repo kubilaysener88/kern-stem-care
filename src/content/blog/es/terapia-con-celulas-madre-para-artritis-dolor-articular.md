@@ -1,6 +1,7 @@
 ---
 title: 'Terapia con células madre para artritis y dolor articular: qué muestra la investigación'
-description: 'Cómo se estudia la terapia con células madre mesenquimales (MSC) para la artritis de rodilla y articulaciones, qué muestra realmente la investigación sobre dolor y función, y qué preguntar antes de viajar.'
+metaTitle: 'Células madre para artritis y dolor articular'
+description: 'Qué muestra realmente la investigación sobre células madre mesenquimales para artritis de rodilla y articulaciones, y qué preguntar antes de viajar.'
 lang: 'es'
 translationKey: 'stem-cell-therapy-arthritis-joint-pain'
 pubDate: 2026-09-07

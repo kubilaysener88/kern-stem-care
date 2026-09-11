@@ -10,15 +10,15 @@ export type Lang = keyof typeof languages;
 // Site-level UI strings (titles, meta). Page content lives in home.ts / legal.ts.
 export const ui = {
   en: {
-    'site.title': 'Kern Stem Care | Regenerative Medicine in Mexico for International Patients',
+    'site.title': 'Kern Stem Care — Stem Cell Therapy in Cancún, Mexico',
     'site.description':
-      'Kern Stem Care coordinates stem cell & regenerative care in Cancún, Mexico for patients worldwide — including the U.S. and Canada. Vetted, licensed clinics, plus travel and appointments. Not a clinic; your trusted guide.',
+      'Stem cell therapy in Cancún, Mexico, coordinated for patients from the U.S. and Canada. Vetted licensed clinics, published prices, one bilingual coordinator.',
     'site.shortTitle': 'Kern Stem Care',
   },
   es: {
-    'site.title': 'Kern Stem Care | Medicina Regenerativa en México para Pacientes Internacionales',
+    'site.title': 'Kern Stem Care — Células Madre en Cancún, México',
     'site.description':
-      'Kern Stem Care coordina atención con células madre y regenerativa en Cancún, México para pacientes de todo el mundo — incluyendo EE.UU. y Canadá. Clínicas certificadas, viaje y citas. No es una clínica; tu guía de confianza.',
+      'Terapia con células madre en Cancún, México, coordinada para pacientes de EE.UU. y Canadá. Clínicas con licencia, precios publicados y un coordinador bilingüe.',
     'site.shortTitle': 'Kern Stem Care',
   },
 } as const satisfies Record<Lang, Record<string, string>>;

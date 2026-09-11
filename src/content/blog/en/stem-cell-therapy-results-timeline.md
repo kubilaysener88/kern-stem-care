@@ -1,5 +1,6 @@
 ---
 title: 'How Long Does It Take to See Results From Stem Cell Therapy?'
+metaTitle: 'How Long Until Stem Cell Therapy Works?'
 description: 'What patients actually report about their recovery timeline after stem cell therapy, why results vary so much, and what realistically influences your odds.'
 lang: 'en'
 translationKey: 'stem-cell-therapy-results-timeline'

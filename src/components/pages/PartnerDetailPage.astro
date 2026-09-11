@@ -58,11 +58,19 @@ const metaTitle = isPlaceholder
 // body copy but made two different partner pages share one meta description —
 // indistinguishable to a search engine. Build it from the partner's own name
 // and `detail` instead, which are unique per partner.
-const metaDescription = isPlaceholder
-  ? lead
-  : lang === 'es'
-    ? `${partner.name}: ${partner.detail}. Aliado independiente y con licencia dentro de la red de Kern Stem Care en Cancún.`
-    : `${partner.name}: ${partner.detail}. An independent, licensed partner within the Kern Stem Care network in Cancún.`;
+// `detail` can run long (it carries a full sanitary-licence number), and the
+// suffix pushed several of these past the ~160 characters Google shows. Trim
+// the detail rather than the sentence that identifies what the page is.
+const partnerSuffix =
+  lang === 'es'
+    ? '. Aliado independiente y con licencia de la red de Kern Stem Care.'
+    : '. An independent, licensed partner in the Kern Stem Care network.';
+const detailBudget = 158 - partner.name.length - 2 - partnerSuffix.length;
+const shortDetail =
+  partner.detail.length > detailBudget
+    ? partner.detail.slice(0, Math.max(0, detailBudget - 1)).replace(/[\s·,-]+$/, '') + '…'
+    : partner.detail;
+const metaDescription = isPlaceholder ? lead : `${partner.name}: ${shortDetail}${partnerSuffix}`;
 
 const qualityLeadLabel = lang === 'es' ? 'Responsable de calidad' : 'Quality lead';
 const physiciansTitle = lang === 'es' ? 'Médicos' : 'Physicians';

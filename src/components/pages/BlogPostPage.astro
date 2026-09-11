@@ -96,7 +96,7 @@ const articleSchema = {
 
 <SiteLayout
   lang={lang}
-  title={`${post.data.title} | Kern Stem Care`}
+  title={`${post.data.metaTitle ?? post.data.title} | Kern Stem Care`}
   description={post.data.description}
   hreflangOverride={hreflangOverride}
 >

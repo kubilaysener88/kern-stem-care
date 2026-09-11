@@ -1,6 +1,6 @@
 ---
 title: 'Is stem cell therapy legal in Mexico?'
-description: 'How regenerative and stem cell therapy is regulated in Mexico (COFEPRIS), what that means for international patients, and the questions to ask before you travel.'
+description: 'How stem cell therapy is regulated in Mexico under COFEPRIS, what that means for international patients, and how to check a provider before you travel.'
 lang: 'en'
 translationKey: 'is-stem-cell-therapy-legal'
 pubDate: 2026-06-01

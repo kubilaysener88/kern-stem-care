@@ -1,6 +1,7 @@
 ---
 title: '¿Cuánto tiempo tarda en verse resultados con la terapia con células madre?'
-description: 'Qué reportan realmente los pacientes sobre su línea de tiempo de recuperación tras la terapia con células madre, por qué los resultados varían tanto, y qué influye de verdad en tus probabilidades.'
+metaTitle: '¿Cuánto tardan en verse los resultados?'
+description: 'Qué reportan los pacientes sobre su recuperación tras la terapia con células madre, por qué los resultados varían tanto y qué influye de verdad.'
 lang: 'es'
 translationKey: 'stem-cell-therapy-results-timeline'
 pubDate: 2026-09-03

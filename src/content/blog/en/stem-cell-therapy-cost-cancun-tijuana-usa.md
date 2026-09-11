@@ -1,6 +1,7 @@
 ---
 title: 'Stem cell therapy cost: Cancún vs. Tijuana vs. the U.S. — what actually drives the price'
-description: 'Why stem cell therapy quotes vary so widely between Cancún, Tijuana, and the United States — the real cost drivers behind the numbers, and what to check regardless of which city you compare.'
+metaTitle: 'Stem Cell Cost: Cancún vs Tijuana vs U.S.'
+description: 'Why stem cell therapy quotes differ so widely between Cancún, Tijuana and the United States, and what to check whichever city you are comparing.'
 lang: 'en'
 translationKey: 'stem-cell-cost-destination-comparison'
 pubDate: 2026-09-09

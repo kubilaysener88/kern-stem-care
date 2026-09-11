@@ -11,6 +11,11 @@ const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
   schema: z.object({
     title: z.string(),
+    /** Short form for the <title> tag only. The `title` above stays long and
+        descriptive because it is the H1; Google truncates a search result at
+        roughly 60 characters including the " | Kern Stem Care" suffix, so any
+        post whose H1 runs past that needs a tighter one here. */
+    metaTitle: z.string().optional(),
     description: z.string(),
     lang: z.enum(['en', 'es']),
     /** Shared id linking this post to its translation in the other language

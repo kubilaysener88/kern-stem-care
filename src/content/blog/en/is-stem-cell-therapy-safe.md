@@ -1,5 +1,6 @@
 ---
 title: 'Is Stem Cell Therapy Safe? Real Risks and How to Choose a Legitimate Clinic'
+metaTitle: 'Is Stem Cell Therapy Safe? Risks Explained'
 description: 'What the real risks and side effects of stem cell therapy are, why some clinics are riskier than others, and the questions to ask before choosing a provider.'
 lang: 'en'
 translationKey: 'stem-cell-therapy-safety'

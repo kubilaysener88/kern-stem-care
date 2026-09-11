@@ -1,6 +1,7 @@
 ---
 title: 'Stem cell therapy for arthritis and joint pain: what the research shows'
-description: 'How mesenchymal stem cell (MSC) therapy is studied for knee and joint arthritis, what the research actually shows about pain and function, and questions to ask before you travel for treatment.'
+metaTitle: 'Stem Cell Therapy for Arthritis & Joint Pain'
+description: 'What the research actually shows about mesenchymal stem cell therapy for knee and joint arthritis, and the questions to ask before travelling for it.'
 lang: 'en'
 translationKey: 'stem-cell-therapy-arthritis-joint-pain'
 pubDate: 2026-09-07

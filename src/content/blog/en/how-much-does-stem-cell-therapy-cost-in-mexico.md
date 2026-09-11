@@ -1,6 +1,7 @@
 ---
 title: 'How much does stem cell therapy cost in Mexico?'
-description: 'What goes into the price of stem cell therapy in Mexico, why quotes differ between clinics, and how Kern Stem Care gives international patients a clear, itemized estimate.'
+metaTitle: 'Stem Cell Therapy Cost in Mexico'
+description: 'What stem cell therapy costs in Mexico, application by application, why quotes differ between clinics, and what the figure does and does not include.'
 lang: 'en'
 translationKey: 'stem-cell-therapy-cost'
 pubDate: 2026-06-10

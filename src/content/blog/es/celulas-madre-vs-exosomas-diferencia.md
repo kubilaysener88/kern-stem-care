@@ -1,6 +1,7 @@
 ---
 title: 'Células madre vs. exosomas: ¿cuál es la diferencia?'
-description: 'Una comparación en lenguaje sencillo entre células madre y exosomas — qué es cada uno, cómo se estudian en medicina regenerativa, y cómo decidir junto a tu médico.'
+metaTitle: 'Células madre vs. exosomas: la diferencia'
+description: 'Comparación en lenguaje sencillo entre células madre y exosomas: qué es cada uno, cómo se estudian, y cómo decidir entre ellos junto a tu médico.'
 lang: 'es'
 translationKey: 'stem-cells-vs-exosomes'
 pubDate: 2026-06-18

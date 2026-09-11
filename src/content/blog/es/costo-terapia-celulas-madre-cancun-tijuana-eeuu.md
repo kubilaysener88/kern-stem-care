@@ -1,6 +1,7 @@
 ---
 title: 'Costo de la terapia con células madre: Cancún vs. Tijuana vs. EE.UU. — qué determina realmente el precio'
-description: 'Por qué las cotizaciones de terapia con células madre varían tanto entre Cancún, Tijuana y Estados Unidos, qué factores reales explican esa diferencia, y qué verificar sin importar la ciudad que estés comparando.'
+metaTitle: 'Costo de células madre: Cancún vs EE.UU.'
+description: 'Por qué las cotizaciones de células madre varían tanto entre Cancún, Tijuana y Estados Unidos, y qué verificar sin importar la ciudad que compares.'
 lang: 'es'
 translationKey: 'stem-cell-cost-destination-comparison'
 pubDate: 2026-09-09
