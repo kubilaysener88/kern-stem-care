@@ -3,12 +3,12 @@ title: 'Exosome therapy for skin: what it is, what it costs, and what to expect'
 description: 'What exosome therapy for skin is, what the research says about fine lines and texture, what drives the cost, and how it compares to stem cell therapy.'
 lang: 'en'
 translationKey: 'exosome-therapy-skin'
-pubDate: 2026-09-14
+pubDate: 2026-09-15
 author: 'Kern Stem Care'
 reviewedBy: 'Beleguí Sánchez Guzmán, MD — Professional licence 11082915'
 scienceReviewedBy: 'Teresita Irais Álvarez Olvera, BSc Biology — Professional licence 10506533'
 tags: ['exosomes', 'skin', 'aesthetic', 'cost']
-draft: true
+draft: false
 ---
 
 

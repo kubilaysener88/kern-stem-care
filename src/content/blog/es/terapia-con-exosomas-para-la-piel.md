@@ -3,12 +3,12 @@ title: 'Terapia con exosomas para la piel: qué es, cuánto cuesta y qué espera
 description: 'Qué es la terapia con exosomas para la piel, qué dice la investigación sobre líneas finas y textura, qué determina el costo y cómo se compara con células madre.'
 lang: 'es'
 translationKey: 'exosome-therapy-skin'
-pubDate: 2026-09-14
+pubDate: 2026-09-15
 author: 'Kern Stem Care'
 reviewedBy: 'Dra. Beleguí Sánchez Guzmán — Cédula profesional 11082915'
 scienceReviewedBy: 'Biól. Teresita Irais Álvarez Olvera — Cédula profesional 10506533'
 tags: ['exosomas', 'piel', 'estética', 'costo']
-draft: true
+draft: false
 ---
 
 
