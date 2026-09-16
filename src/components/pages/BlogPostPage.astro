@@ -86,7 +86,11 @@ const articleSchema = {
   publisher: {
     '@type': 'Organization',
     name: 'Kern Stem Care',
-    logo: { '@type': 'ImageObject', url: `${site}/assets/logo/kern-genesis.svg` },
+    // kern-genesis.svg is the pre-brand approximation — a rounded tile with two
+    // outlined circles. The rest of the site (header, footer, favicon, the
+    // Organization node in structuredData.ts) uses the real mark; this was the
+    // last reference to the old one.
+    logo: { '@type': 'ImageObject', url: `${site}/assets/logo/kern-icon-color.png` },
   },
   image: `${site}/og-image.jpg`,
   mainEntityOfPage: { '@type': 'WebPage', '@id': url },
