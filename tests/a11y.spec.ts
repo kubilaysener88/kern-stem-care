@@ -60,6 +60,8 @@ const ROUTES = [
   '/es/blog/costo-terapia-celulas-madre-cancun-tijuana-eeuu',
   '/en/blog/exosome-therapy-for-skin',
   '/es/blog/terapia-con-exosomas-para-la-piel',
+  '/en/blog/fibroblast-therapy-for-skin',
+  '/es/blog/terapia-con-fibroblastos-para-la-piel',
   // Partner and team detail pages. These were never covered: the partner pages
   // are photo galleries and credential badges, which is exactly where contrast
   // and alt-text problems hide, and Y&H Clinic went public with six photos.
@@ -73,8 +75,6 @@ const ROUTES = [
   '/es/partners/partner-lab-1',
   '/en/team/logistics-travel',
   '/es/team/logistics-travel',
-  // exosome-therapy-for-skin (+ ES) is queued as draft: true — add its routes back
-  // here once the weekly task publishes it.
 ];
 
 const WCAG_AA_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'];
