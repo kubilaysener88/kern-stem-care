@@ -1,6 +1,6 @@
 ---
 title: 'Freeze-dried placenta therapy: what it is, what the research says, and what it costs'
-metaTitle: 'Freeze-dried placenta therapy: what it is and what it costs'
+metaTitle: 'Freeze-dried placenta: what it is and costs'
 description: 'What freeze-dried placenta therapy is, what the published research actually covers, what it costs in Cancún, and who explores it.'
 lang: 'en'
 translationKey: 'freeze-dried-placenta-therapy'
@@ -14,7 +14,7 @@ draft: false
 
 ## Short answer
 
-**[Freeze-dried placenta therapy](/en/services/placenta/)** is a lyophilized (freeze-dried) placental-tissue preparation, given as subdermal injections in the lower abdomen — unlike the other therapies we coordinate, it is not delivered by infusion. It's the least established of the four: the published evidence is thinner than for stem cells or exosomes, and much of the research that exists studies an **oral** product — usually pig-derived — not the injectable human-tissue implant used in Mexican regenerative clinics. It costs **$880 USD** per application and is not approved for any specific condition.
+**[Freeze-dried placenta therapy](/en/services/placenta/)** is a lyophilized (freeze-dried) placental-tissue preparation, given as subdermal injections in the lower abdomen — unlike the other therapies we coordinate, it is not delivered by infusion. It's the least established of the four: the published evidence is thinner than for stem cells or exosomes, and the trials we were able to check in detail studied an **oral**, pig-derived product — not the injectable human-tissue implant used in Mexican regenerative clinics. It costs **$880 USD** per application and is not approved for any specific condition.
 
 ## What freeze-dried placenta actually is
 
@@ -22,9 +22,9 @@ Lyophilization removes the water from placental tissue so it can be stored stabl
 
 ## What the research says — and what it doesn't
 
-A 2025 systematic review published in *Nutrients* examined 11 randomized controlled trials on placental extract for menopausal symptoms and found improvements in menopausal severity indices, vasomotor and somatic symptoms, and some skin measures, with good tolerability and no significant reported adverse effects. That's a real finding — and it's worth reading with the right caveat attached: most of those 11 trials tested an **oral** placental-extract supplement, often **porcine**-derived, not the subdermal **human** lyophilized implant coordinated here. A 2017 randomized trial using oral porcine placental extract, for example, showed improvement in the Simplified Menopausal Index versus placebo in climacteric women in Japan.
+A 2025 systematic review published in *Nutrients* examined 11 randomized controlled trials on placental extract — porcine or human, per the review itself — for menopausal symptoms, and found improvements in menopausal severity indices, vasomotor and somatic symptoms, and some skin measures, with good tolerability and no significant reported adverse effects. That's a real finding — and it's worth reading with the right caveat attached: the individual trials we were able to check within that literature, such as a 2017 randomized trial in climacteric women in Japan, tested an **oral** placental-extract supplement, **porcine**-derived, not the subdermal **human** lyophilized implant coordinated here. We did not verify the route of administration or tissue source for all 11 trials — only the ones we reviewed directly.
 
-What that means for you: the underlying mechanism — growth factors and signaling molecules from placental tissue — has a real research base, but controlled evidence specific to the **injectable, human-derived format** is considerably thinner than what exists for oral capsules. That's exactly why, of the four therapies we coordinate, this is the one we present with the least certainty — not because it lacks a rationale, but because the rationale that exists isn't yet backed by the same evidence base as the product actually applied here.
+What that means for you: the underlying mechanism — growth factors and signaling molecules from placental tissue — has a real research base, but the controlled evidence we were able to verify in detail is for the oral format, not the injectable, human-derived implant applied here. That's exactly why, of the four therapies we coordinate, this is the one we present with the least certainty — not because it lacks a rationale, but because the rationale we could confirm isn't yet backed by the same evidence base as the product actually applied here.
 
 ## What it costs
 
@@ -46,7 +46,7 @@ Want a written, itemized quote? [Request a free evaluation →](/en/estimate/)
 These are areas of exploration, not established medical indications:
 
 - **Metabolic support** — wellness related to metabolism and energy levels.
-- **Hormonal balance** — the area with the most published research, though mostly for the oral format rather than the injectable one (see above).
+- **Hormonal balance** — the area with the most published research, though what we could verify in detail is for the oral format rather than the injectable one (see above).
 - **Vitality and longevity** — often combined with other therapies in the network.
 
 If you recognize yourself in any of these, the treating physician confirms it with you during your evaluation — not a form, and not a coordinator.

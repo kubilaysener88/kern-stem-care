@@ -1,6 +1,6 @@
 ---
 title: 'Implante de placenta liofilizada: qué es, qué dice la investigación y cuánto cuesta'
-metaTitle: 'Implante de placenta liofilizada: qué es y cuánto cuesta'
+metaTitle: 'Placenta liofilizada: qué es y cuánto cuesta'
 description: 'Qué es el implante de placenta liofilizada, qué muestra la investigación publicada — y qué no —, cuánto cuesta en Cancún y para quién se explora.'
 lang: 'es'
 translationKey: 'freeze-dried-placenta-therapy'
@@ -14,7 +14,7 @@ draft: false
 
 ## Respuesta corta
 
-El **[implante de placenta liofilizada](/es/services/placenta/)** es una preparación de tejido placentario deshidratado en frío, aplicada mediante inyecciones subdérmicas en el abdomen bajo — a diferencia de las otras terapias que coordinamos, no se administra por infusión. Es la menos consolidada de las cuatro: la evidencia publicada es más delgada que la de células madre o exosomas, y buena parte de los estudios disponibles evalúan un producto **oral** — casi siempre de origen porcino —, no el implante inyectable de tejido humano que se usa en clínicas mexicanas. Cuesta **$880 USD** por aplicación y no está aprobado para ninguna condición específica.
+El **[implante de placenta liofilizada](/es/services/placenta/)** es una preparación de tejido placentario deshidratado en frío, aplicada mediante inyecciones subdérmicas en el abdomen bajo — a diferencia de las otras terapias que coordinamos, no se administra por infusión. Es la menos consolidada de las cuatro: la evidencia publicada es más delgada que la de células madre o exosomas, y los ensayos que pudimos verificar en detalle evalúan un producto **oral** de origen porcino, no el implante inyectable de tejido humano que se usa en clínicas mexicanas. Cuesta **$880 USD** por aplicación y no está aprobado para ninguna condición específica.
 
 ## Qué es el implante de placenta liofilizada
 
@@ -22,9 +22,9 @@ La liofilización retira el agua del tejido placentario para que pueda conservar
 
 ## Qué dice la investigación — y qué no dice
 
-Una revisión sistemática de 2025 publicada en *Nutrients* analizó 11 ensayos clínicos aleatorizados sobre extracto placentario para síntomas de la menopausia y encontró mejoras en índices de severidad menopáusica, síntomas vasomotores y somáticos, y algunos indicadores de piel, con buena tolerancia y sin efectos adversos significativos reportados. Es un hallazgo real — y vale la pena leerlo con el detalle correcto: la mayoría de esos 11 estudios evaluaron un **suplemento oral** de extracto placentario, con frecuencia de origen **porcino**, no el implante subdérmico de tejido **humano** liofilizado que coordinamos nosotros. Un ensayo aleatorizado de 2017 con extracto oral porcino, por ejemplo, mostró mejoras en el índice menopáusico simplificado frente a placebo en mujeres climatéricas japonesas.
+Una revisión sistemática de 2025 publicada en *Nutrients* analizó 11 ensayos clínicos aleatorizados sobre extracto placentario —de origen porcino o humano, según la propia revisión— para síntomas de la menopausia, y encontró mejoras en índices de severidad menopáusica, síntomas vasomotores y somáticos, y algunos indicadores de piel, con buena tolerancia y sin efectos adversos significativos reportados. Es un hallazgo real — y vale la pena leerlo con el detalle correcto: los ensayos individuales que pudimos revisar dentro de esa literatura, como uno aleatorizado de 2017 en mujeres climatéricas japonesas, evaluaron un **suplemento oral** de extracto **porcino**, no el implante subdérmico de tejido **humano** liofilizado que coordinamos nosotros. No verificamos la vía de administración ni el origen del tejido en cada uno de los 11 estudios — solo en los que pudimos revisar directamente.
 
-¿Qué significa esto para ti? Que el mecanismo — factores de crecimiento y moléculas de señalización del tejido placentario — tiene una base de investigación real, pero la evidencia controlada específica del **formato inyectable de origen humano** es considerablemente más delgada que la que existe para cápsulas orales. Es exactamente la razón por la que, de las cuatro terapias que coordinamos, esta es la que presentamos con menos certeza — no porque carezca de fundamento, sino porque el fundamento que existe no es todavía el mismo que el del producto que se aplica aquí.
+¿Qué significa esto para ti? Que el mecanismo — factores de crecimiento y moléculas de señalización del tejido placentario — tiene una base de investigación real, pero la evidencia controlada que pudimos verificar en detalle corresponde al formato oral, no al implante inyectable de origen humano que se aplica aquí. Es exactamente la razón por la que, de las cuatro terapias que coordinamos, esta es la que presentamos con menos certeza — no porque carezca de fundamento, sino porque el fundamento que pudimos confirmar no es todavía el mismo que el del producto que se aplica aquí.
 
 ## Cuánto cuesta
 
@@ -46,7 +46,7 @@ El implante de placenta liofilizada cuesta **$880 USD** por aplicación en nuest
 Estas son áreas de exploración, no indicaciones médicas establecidas:
 
 - **Soporte metabólico** — bienestar relacionado con el metabolismo y los niveles de energía.
-- **Balance hormonal** — es el área donde existe más investigación publicada, aunque mayormente sobre el formato oral, no el inyectable (ver arriba).
+- **Balance hormonal** — es el área con más investigación publicada, aunque la que pudimos verificar en detalle es sobre el formato oral, no el inyectable (ver arriba).
 - **Vitalidad y longevidad** — con frecuencia se combina con otras terapias de la red.
 
 Si te reconoces en alguna de estas, el médico tratante lo confirma contigo durante tu evaluación — no un formulario ni un coordinador.
@@ -62,8 +62,8 @@ Como con cualquier inyección, dolor, inflamación leve o moretones en el sitio 
 ### ¿Cuánto tarda en notarse algún efecto?
 Varía por persona, por el objetivo del tratamiento y por si se combina con otras terapias. Ningún proveedor serio puede prometerte un plazo exacto; para un panorama general de cómo suelen evolucionar los tratamientos celulares, consulta [cuánto tiempo tarda en verse resultados con la terapia con células madre](/es/blog/cuanto-tarda-en-verse-resultados-celulas-madre/).
 
-### ¿Es lo mismo que el implante de placenta que se usa en ginecología?
-No. "Implante" aquí se refiere a la aplicación subdérmica de tejido placentario liofilizado con fines de medicina regenerativa — nada que ver con anticonceptivos hormonales ni con procedimientos obstétricos, aunque el nombre coincida.
+### ¿Es lo mismo que el implante anticonceptivo?
+No. "Implante" aquí se refiere a la aplicación subdérmica de tejido placentario liofilizado con fines de medicina regenerativa — nada que ver con el implante anticonceptivo hormonal (como Implanon o Nexplanon) ni con ningún procedimiento obstétrico, aunque el nombre coincida.
 
 ### ¿Está aprobado por la FDA?
 No — como las demás terapias que coordinamos, se considera de investigación y no está aprobada por la FDA de EE. UU. ni por Health Canada para ninguna condición específica. Los resultados varían de persona a persona y ningún proveedor debería garantizarte uno.
