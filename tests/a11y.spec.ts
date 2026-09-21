@@ -62,6 +62,8 @@ const ROUTES = [
   '/es/blog/terapia-con-exosomas-para-la-piel',
   '/en/blog/fibroblast-therapy-for-skin',
   '/es/blog/terapia-con-fibroblastos-para-la-piel',
+  '/en/blog/freeze-dried-placenta-therapy',
+  '/es/blog/implante-de-placenta-liofilizada',
   // Partner and team detail pages. These were never covered: the partner pages
   // are photo galleries and credential badges, which is exactly where contrast
   // and alt-text problems hide, and Y&H Clinic went public with six photos.
