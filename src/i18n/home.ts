@@ -274,6 +274,14 @@ export interface HomeContent {
     legalEntityPh: string;
   };
   whatsappLabel: string;
+  /** Pre-typed message the WhatsApp chat opens with. Was hard-coded in English,
+      so a visitor on the Spanish site tapped "Escríbenos" and got an English
+      message waiting in the box. */
+  whatsappMessage: string;
+  /** Accessible name for the floating button. Must contain the visible label
+      (WCAG 2.5.3, label in name): it read "Chat on WhatsApp" while the button
+      said "Chat with us", which Lighthouse flagged as a name mismatch. */
+  whatsappAria: string;
 }
 
 const en: HomeContent = {
@@ -769,6 +777,8 @@ const en: HomeContent = {
     legalEntityPh: 'Kern Corsa Medical Group, S.A. de C.V.',
   },
   whatsappLabel: 'Chat with us',
+  whatsappMessage: "Hi Kern Stem Care, I'd like a free consultation.",
+  whatsappAria: 'Chat with us on WhatsApp',
 };
 
 const es: HomeContent = {
@@ -1244,6 +1254,8 @@ const es: HomeContent = {
     legalEntityPh: 'Kern Corsa Medical Group, S.A. de C.V.',
   },
   whatsappLabel: 'Escríbenos',
+  whatsappMessage: 'Hola Kern Stem Care, me gustaría una consulta gratuita.',
+  whatsappAria: 'Escríbenos por WhatsApp',
 };
 
 export const homeContent: Record<Lang, HomeContent> = { en, es };

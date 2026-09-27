@@ -85,7 +85,10 @@ npm run test:a11y # axe-core WCAG 2.1 AA scan of every route, desktop + mobile (
   licence and *cédula* numbers, read from `homeContent` (never retyped) and
   skipping partners whose name is still a `[placeholder]`. Rendered in the About
   page's "our network" section.
-- `src/pages/index.astro` — redirects `/` → `/en`.
+- `src/pages/index.astro` — redirects `/` → `/en`. **Deliberately a full HTML page
+  (meta refresh + noindex + canonical), not a server 301**: it carries the Google
+  Search Console verification tag on the exact property URL, and a 301 risks
+  losing ownership verification. Do not "improve" it into a redirect rule.
 - `src/pages/{en,es}/index.astro` — home pages.
 - `src/pages/{en,es}/services/` — `index` + `stem-cells` / `exosomes` / `fibroblasts`.
 - `src/pages/{en,es}/{about,process,testimonials,contact}.astro` — interior pages.
@@ -200,20 +203,24 @@ npm run test:a11y # axe-core WCAG 2.1 AA scan of every route, desktop + mobile (
 
 ## TODO backlog (carried over)
 
-- Replace all `[bracketed]` placeholders with real client data.
+- Replace the remaining `[bracketed]` placeholders with real client data. As of
+  2026-09-27 none are visible on an indexed page: they sit only on sections that
+  stay hidden until the real data exists (testimonials, the patient coordinator,
+  the second partner lab), and nothing links to those pages.
 - **Swap the remaining stock photos for the client's own.** Agreed 2026-09-10:
   budget comes later, own photography is the goal. `journey/consulta.jpg` is the
   one to watch — it shipped with a visible watermark and a mouse cursor baked in
   until it was replaced with a cleaned copy. When shooting, the gap to fill is a
   consultation with people in it: every 16:9 photo the client owns is a room, a
   building, a vehicle or a procedure, and none shows two people talking.
-- Replace the placeholder blog posts with real, keyword-targeted articles (set `reviewedBy`).
-- Add real carousel/testimonial media (`og-image.jpg` is now generated).
-- Fill in partner clinics/labs and coordinator profiles (with written permission).
-- Forms are wired to **Netlify Forms** (`data-netlify`, names: `contact`, `lead`,
-  `newsletter`; shared AJAX handler in `FormHandler.astro`, deploy config in
-  `netlify.toml`). After the first deploy, set up notifications in the Netlify UI
-  (Forms → Settings → email/Slack/webhook). To use a different backend instead,
-  point `FormHandler.astro`'s `fetch` at it.
-- Set the real WhatsApp number in the floating button (`wa.me/1XXXXXXXXXX`).
-- Have a lawyer review `src/i18n/legal.ts` (Privacy/Terms) for MX/US/CA.
+- Add real testimonial videos, with written consent. The testimonials page and
+  its menu entry appear on their own once `HAS_TESTIMONIALS` is true.
+- Fill in the patient coordinator profile and the second partner lab. The three
+  real partners (Timeless Beauty, Y&H Clinic, NAO Biotechnology) are done.
+- **Confirm form submissions actually reach someone.** Forms are wired to
+  **Netlify Forms** (`data-netlify`, names: `contact`, `lead`, `newsletter`;
+  shared AJAX handler in `FormHandler.astro`). Email notifications have to be
+  switched on in the Netlify UI (Forms → Settings → email/Slack/webhook), and as
+  of 2026-09-27 nobody has confirmed they are — if not, a patient's quote
+  request goes nowhere. To use a different backend, point `FormHandler.astro`'s
+  `fetch` at it.
