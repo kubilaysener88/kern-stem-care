@@ -66,6 +66,8 @@ const ROUTES = [
   '/es/blog/implante-de-placenta-liofilizada',
   '/en/blog/stem-cell-therapy-for-bone-regeneration',
   '/es/blog/celulas-madre-para-regeneracion-osea',
+  '/en/blog/stem-cell-iv-vs-joint-injection',
+  '/es/blog/celulas-madre-intravenosas-o-inyeccion-articular',
   // Partner and team detail pages. These were never covered: the partner pages
   // are photo galleries and credential badges, which is exactly where contrast
   // and alt-text problems hide, and Y&H Clinic went public with six photos.
