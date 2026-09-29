@@ -1,0 +1,37 @@
+# IndexNow: avisa a Bing (y a DuckDuckGo, Yandex, Naver, Seznam) cada vez que se
+# publica algo en main. Google NO usa IndexNow; para Google sigue valiendo Search Console.
+# Espera a que Netlify despliegue, lee el sitemap EN VIVO y envía todas sus URLs
+# (el sitio es chico; IndexNow acepta hasta 10,000 por aviso).
+# La llave vive en public/68e205f1180196d42c019cb177e65995.txt (Bing la lee para comprobar que el aviso viene
+# del dueño del dominio). No hay secretos.
+name: IndexNow (Bing)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Esperar el deploy de Netlify
+        run: sleep 180
+
+      - name: Enviar todas las URLs del sitemap a IndexNow
+        run: |
+          HOST="kernstemcare.com"
+          KEY="68e205f1180196d42c019cb177e65995"
+          curl -fsS "https://$HOST/sitemap-0.xml" | grep -o '<loc>[^<]*</loc>' | sed -E 's#</?loc>##g' > urls.txt
+          echo "URLs: $(wc -l < urls.txt)"
+          python3 - <<'PY'
+          import json
+          urls=[u.strip() for u in open("urls.txt") if u.strip()]
+          json.dump({"host":"kernstemcare.com","key":"68e205f1180196d42c019cb177e65995","keyLocation":"https://kernstemcare.com/68e205f1180196d42c019cb177e65995.txt","urlList":urls},open("body.json","w"))
+          PY
+          code=$(curl -s -o resp.txt -w "%{http_code}" -H "Content-Type: application/json; charset=utf-8" --data @body.json https://api.indexnow.org/indexnow)
+          echo "IndexNow respondió $code"; cat resp.txt || true
+          case "$code" in 200|202) ;; *) exit 1 ;; esac
