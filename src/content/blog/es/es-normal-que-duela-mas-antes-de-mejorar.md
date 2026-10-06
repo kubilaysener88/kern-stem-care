@@ -52,7 +52,7 @@ Un brote generalmente es molestia localizada, rigidez o inflamación leve que ti
 No — los reportes de pacientes varían mucho; algunos notan un brote, otros no notan casi nada distinto después del procedimiento. Ninguno de los dos patrones por sí solo te dice si el tratamiento está "funcionando".
 
 ### Si tengo un brote, ¿significa que el tratamiento está funcionando mejor?
-No necesariamente — un brote refleja la respuesta inflamatoria local a la inyección misma, no una garantía de tu resultado final. Para una idea realista de cuándo suelen aparecer los resultados, mira [cuánto tarda en verse resultados con la terapia con células madre →](/es/blog/cuanto-tarda-en-verse-resultados-celulas-madre/).
+No necesariamente — un brote refleja la respuesta inflamatoria local a la inyección misma, no una garantía de tu resultado final. Para una idea realista de cuándo suelen aparecer los resultados, mira [cuánto tardan en verse los resultados con la terapia con células madre →](/es/blog/cuanto-tarda-en-verse-resultados-celulas-madre/).
 
 ### ¿Debo tomar días libres del trabajo o de mis actividades después del tratamiento?
 Eso depende de tu procedimiento específico, la articulación tratada y las indicaciones de tu médico — pregunta durante tu evaluación para poder planear tu viaje y tiempo de recuperación en consecuencia.

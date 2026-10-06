@@ -60,7 +60,7 @@ $880 USD por aplicación en nuestra red de clínicas en Cancún. La cifra incluy
 Como con cualquier inyección, dolor, inflamación leve o moretones en el sitio de aplicación son los efectos más reportados y suelen resolverse en pocos días. Tu médico tratante revisa los riesgos específicos de tu caso antes del procedimiento — no un coordinador.
 
 ### ¿Cuánto tarda en notarse algún efecto?
-Varía por persona, por el objetivo del tratamiento y por si se combina con otras terapias. Ningún proveedor serio puede prometerte un plazo exacto; para un panorama general de cómo suelen evolucionar los tratamientos celulares, consulta [cuánto tiempo tarda en verse resultados con la terapia con células madre](/es/blog/cuanto-tarda-en-verse-resultados-celulas-madre/).
+Varía por persona, por el objetivo del tratamiento y por si se combina con otras terapias. Ningún proveedor serio puede prometerte un plazo exacto; para un panorama general de cómo suelen evolucionar los tratamientos celulares, consulta [cuánto tiempo tardan en verse los resultados con la terapia con células madre](/es/blog/cuanto-tarda-en-verse-resultados-celulas-madre/).
 
 ### ¿Es lo mismo que el implante anticonceptivo?
 No. "Implante" aquí se refiere a la aplicación subdérmica de tejido placentario liofilizado con fines de medicina regenerativa — nada que ver con el implante anticonceptivo hormonal (como Implanon o Nexplanon) ni con ningún procedimiento obstétrico, aunque el nombre coincida.

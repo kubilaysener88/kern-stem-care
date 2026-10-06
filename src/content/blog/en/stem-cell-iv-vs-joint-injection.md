@@ -100,8 +100,8 @@ for the vague part too.
 ## Common questions
 
 ### Is IV stem cell therapy good for knee pain?
-The knee research mostly uses injection into the joint, and animal studies comparing the two routes
-favor the injection. An IV infusion sends most cells to the lungs first, not to the knee. For a painful
+The knee research mostly uses injection into the joint, and an animal study comparing the two routes
+favored the injection. An IV infusion sends most cells to the lungs first, not to the knee. For a painful
 joint, ask the physician why IV would be preferred over a local injection in your case. Our article on
 [stem cell therapy for arthritis and joint pain](/en/blog/stem-cell-therapy-arthritis-joint-pain/) covers
 what the joint research shows.
@@ -132,7 +132,7 @@ you decide.
 - [Pulmonary passage is a major obstacle for intravenous stem cell delivery: the pulmonary first-pass effect](https://doi.org/10.1089/scd.2008.0253) — Fischer et al., *Stem Cells and Development*, 2009
 - [Cell therapy with intravascular administration of mesenchymal stromal cells continues to appear safe: an updated systematic review and meta-analysis](https://doi.org/10.1016/j.eclinm.2019.100249) — Thompson et al., *EClinicalMedicine*, 2020
 - [Safety of intravascular administration of umbilical-cord-derived mesenchymal stromal cells: an updated systematic review and meta-analysis](https://doi.org/10.1093/stcltm/szag029) — Hum et al., *Stem Cells Translational Medicine*, 2026
-- [The effect of intra-articular versus intravenous injection of mesenchymal stem cells on experimentally induced knee osteoarthritis](https://doi.org/10.4103/JMAU.JMAU_2_20) — Mostafa et al., *Journal of Microscopy and Ultrastructure*, 2020
+- [The effect of intra-articular versus intravenous injection of mesenchymal stem cells on experimentally induced knee osteoarthritis](https://doi.org/10.4103/JMAU.JMAU_2_20) — Mostafa et al., *Journal of Microscopy and Ultrastructure*, 2021
 
 ## How Kern Stem Care helps
 

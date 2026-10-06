@@ -132,7 +132,7 @@ licenciado, y nosotros coordinamos el acceso, el viaje y el acompañamiento.
 
 ### ¿Dónde se aplican células madre en México?
 En clínicas de medicina regenerativa con licencia gubernamental (COFEPRIS), por un médico con cédula
-profesional. Hay en varias ciudades — Cancún, Tijuana, Guadalajara, Ciudad de México, Monterrey —; lo
+profesional. Hay en varias ciudades — Cancún, Tijuana, Guadalajara, Ciudad de México, Monterrey. Lo
 que cambia de un lugar a otro es la clínica, el laboratorio que la surte y el médico. Si estás
 comparando destinos, mira
 [costo en Cancún, Tijuana y EE.UU.](/es/blog/costo-terapia-celulas-madre-cancun-tijuana-eeuu/).
@@ -147,7 +147,7 @@ La investigación sugiere que la mayoría de las células mesenquimales aplicada
 tiempo — de días a semanas — y que buena parte de su efecto se debe a las señales que liberan
 mientras están ahí, más que a que se queden a formar tejido nuevo. Por eso los cambios, cuando
 aparecen, suelen tardar semanas o meses; lo explicamos en
-[cuánto tarda en verse resultados](/es/blog/cuanto-tarda-en-verse-resultados-celulas-madre/).
+[cuánto tardan en verse los resultados](/es/blog/cuanto-tarda-en-verse-resultados-celulas-madre/).
 
 ### ¿Qué tan recomendable es inyectarse células madre?
 Depende de tu caso, y esa es justamente la pregunta que contesta el médico tratante en la evaluación.

@@ -105,8 +105,8 @@ vaga, también estás pagando la parte vaga.
 ## Preguntas frecuentes
 
 ### ¿El suero de células madre sirve para el dolor de rodilla?
-La investigación en rodilla usa sobre todo la inyección dentro de la articulación, y los estudios en
-animales que comparan las dos vías favorecen la inyección. Por vena, la mayoría de las células pasa
+La investigación en rodilla usa sobre todo la inyección dentro de la articulación, y un estudio en
+animales que comparó las dos vías favoreció la inyección. Por vena, la mayoría de las células pasa
 primero por los pulmones, no por la rodilla. Si te duele una articulación, pregúntale al médico por qué
 preferiría la vía intravenosa en tu caso. En nuestro artículo sobre
 [terapia con células madre para artritis y dolor articular](/es/blog/terapia-con-celulas-madre-para-artritis-dolor-articular/)
@@ -138,7 +138,7 @@ dice con claridad antes de que decidas.
 - [Pulmonary passage is a major obstacle for intravenous stem cell delivery: the pulmonary first-pass effect](https://doi.org/10.1089/scd.2008.0253) — Fischer et al., *Stem Cells and Development*, 2009 (en inglés)
 - [Cell therapy with intravascular administration of mesenchymal stromal cells continues to appear safe](https://doi.org/10.1016/j.eclinm.2019.100249) — Thompson et al., *EClinicalMedicine*, 2020 (en inglés)
 - [Safety of intravascular administration of umbilical-cord-derived mesenchymal stromal cells](https://doi.org/10.1093/stcltm/szag029) — Hum et al., *Stem Cells Translational Medicine*, 2026 (en inglés)
-- [The effect of intra-articular versus intravenous injection of mesenchymal stem cells on experimentally induced knee osteoarthritis](https://doi.org/10.4103/JMAU.JMAU_2_20) — Mostafa et al., *Journal of Microscopy and Ultrastructure*, 2020 (en inglés)
+- [The effect of intra-articular versus intravenous injection of mesenchymal stem cells on experimentally induced knee osteoarthritis](https://doi.org/10.4103/JMAU.JMAU_2_20) — Mostafa et al., *Journal of Microscopy and Ultrastructure*, 2021 (en inglés)
 
 ## Cómo ayuda Kern Stem Care
 

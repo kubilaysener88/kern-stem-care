@@ -1,5 +1,5 @@
 ---
-title: '¿Cuánto tiempo tarda en verse resultados con la terapia con células madre?'
+title: '¿Cuánto tiempo tardan en verse los resultados con la terapia con células madre?'
 metaTitle: '¿Cuánto tardan en verse los resultados?'
 description: 'Qué reportan los pacientes sobre su recuperación tras la terapia con células madre, por qué los resultados varían tanto y qué influye de verdad.'
 lang: 'es'
