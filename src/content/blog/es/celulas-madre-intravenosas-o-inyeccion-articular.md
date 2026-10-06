@@ -113,8 +113,8 @@ preferiría la vía intravenosa en tu caso. En nuestro artículo sobre
 está lo que muestra la investigación en articulaciones.
 
 ### ¿Cuánto dura una aplicación intravenosa de células madre?
-Es una sola visita a la clínica: el suero y luego un rato de vigilancia. El tiempo exacto depende de la
-dosis y del protocolo, y la clínica te lo dice con anticipación para que organices el día.
+Como máximo 30 minutos, en una sola visita a la clínica — el suero y la vigilancia posterior incluidos.
+La clínica te confirma el horario con anticipación para que organices el día.
 
 ### ¿Son seguras las células madre por vena?
 En ensayos controlados que suman miles de pacientes, el efecto más frecuente asociado a las células

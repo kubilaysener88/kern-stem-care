@@ -107,9 +107,8 @@ joint, ask the physician why IV would be preferred over a local injection in you
 what the joint research shows.
 
 ### How long does a stem cell IV take?
-It is a single clinic visit: the drip itself, plus a period of monitoring afterwards. The exact timing
-depends on the dose and the protocol, and the clinic gives it to you in advance so you can plan the day
-around it.
+No more than 30 minutes, in a single clinic visit — the drip itself plus the monitoring afterwards.
+The clinic confirms your timing in advance so you can plan the day around it.
 
 ### Is IV stem cell therapy safe?
 In controlled trials pooling thousands of patients, the most common effect linked to IV mesenchymal stem
