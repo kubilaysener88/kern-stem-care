@@ -5,6 +5,7 @@ description: 'What freeze-dried placenta therapy is, what the published research
 lang: 'en'
 translationKey: 'freeze-dried-placenta-therapy'
 pubDate: 2026-09-21
+updatedDate: 2026-10-21
 author: 'Kern Stem Care'
 reviewedBy: 'Beleguí Sánchez Guzmán, MD — Professional licence 11082915'
 scienceReviewedBy: 'Teresita Irais Álvarez Olvera, BSc Biology — Professional licence 10506533'
@@ -14,7 +15,7 @@ draft: false
 
 ## Short answer
 
-**[Freeze-dried placenta therapy](/en/services/placenta/)** is a lyophilized (freeze-dried) placental-tissue preparation, given as subdermal injections in the lower abdomen — unlike the other therapies we coordinate, it is not delivered by infusion. It's the least established of the four: the published evidence is thinner than for stem cells or exosomes, and the trials we were able to check in detail studied an **oral**, pig-derived product — not the injectable human-tissue implant used in Mexican regenerative clinics. It costs **$880 USD** per application and is not approved for any specific condition.
+**[Freeze-dried placenta therapy](/en/services/placenta/)** is a lyophilized (freeze-dried) placental-tissue preparation, given as subdermal injections in the lower abdomen rather than intravenously. It's the least established of the four: the published evidence is thinner than for stem cells or exosomes, and comes mostly from small trials of placental extract for menopausal symptoms — most of them with an **oral**, pig-derived supplement, and a few with an **injected human** extract, usually given several times a week. None of that transfers automatically to the product and schedule applied here. It costs **$880 USD** per application and is not approved for any specific condition.
 
 ## What freeze-dried placenta actually is
 
@@ -22,9 +23,11 @@ Lyophilization removes the water from placental tissue so it can be stored stabl
 
 ## What the research says — and what it doesn't
 
-A 2025 systematic review published in *Nutrients* examined 11 randomized controlled trials on placental extract — porcine or human, per the review itself — for menopausal symptoms, and found improvements in menopausal severity indices, vasomotor and somatic symptoms, and some skin measures, with good tolerability and no significant reported adverse effects. That's a real finding — and it's worth reading with the right caveat attached: the individual trials we were able to check within that literature, such as a 2017 randomized trial in climacteric women in Japan, tested an **oral** placental-extract supplement, **porcine**-derived, not the subdermal **human** lyophilized implant coordinated here. We did not verify the route of administration or tissue source for all 11 trials — only the ones we reviewed directly.
+A 2025 systematic review published in *Nutrients* gathered 11 randomized controlled trials of placental extract for menopausal symptoms, 988 patients in all. Seven tested an **oral**, **pig-derived** supplement. The other four tested **human** placental extract **injected under the skin**, usually two or three times a week — the closest thing in that literature to what is applied here. Across the trials, the review found improvements in menopausal severity scores, hot flashes, somatic symptoms such as joint pain and fatigue, and some skin measures, and reported that the extract was well tolerated, with no significant side effects recorded.
 
-What that means for you: the underlying mechanism — growth factors and signaling molecules from placental tissue — has a real research base, but the controlled evidence we were able to verify in detail is for the oral format, not the injectable, human-derived implant applied here. That's exactly why, of the four therapies we coordinate, this is the one we present with the least certainty — not because it lacks a rationale, but because the rationale we could confirm isn't yet backed by the same evidence base as the product actually applied here.
+That's a real finding, and it comes with three caveats. The results were not uniform: some trials found no difference from placebo on their main score. The trials were small and lasted weeks to a few months, so they say nothing about long-term effects or long-term safety. And each one used a specific commercial extract at its own dose and schedule — evidence for those products doesn't carry over automatically to a different preparation given on a different schedule.
+
+What that means for you: the strongest signal is for menopausal symptoms, and part of it comes from an injected, human-derived preparation — but not from the product applied here. That's exactly why, of the four therapies we coordinate, this is the one we present with the least certainty — not because it lacks a rationale, but because the evidence behind it was gathered on related products rather than this one.
 
 ## What it costs
 
@@ -46,7 +49,7 @@ Want a written, itemized quote? [Request a free evaluation →](/en/estimate/)
 These are areas of exploration, not established medical indications:
 
 - **Metabolic support** — wellness related to metabolism and energy levels.
-- **Hormonal balance** — the area with the most published research, though what we could verify in detail is for the oral format rather than the injectable one (see above).
+- **Hormonal balance** — the area with the most published research, almost all of it on menopausal symptoms and with related products rather than this one (see above).
 - **Vitality and longevity** — often combined with other therapies in the network.
 
 If you recognize yourself in any of these, the treating physician confirms it with you during your evaluation — not a form, and not a coordinator.
@@ -54,7 +57,7 @@ If you recognize yourself in any of these, the treating physician confirms it wi
 ## Common questions
 
 ### How much does freeze-dried placenta therapy cost?
-$880 USD per application across our partner clinics in Cancún. The figure includes the medical evaluation, the product and its laboratory preparation, and the session at a government-licensed (COFEPRIS) clinic. Travel, lodging, and coordination are quoted separately.
+$880 USD per application across our partner clinics in Cancún. The figure includes the medical evaluation, the product and its laboratory preparation, the session at a government-licensed (COFEPRIS) clinic, and our coordination. Flights, your hotel, and airport transfers sit outside it.
 
 ### Does it have side effects?
 As with any injection, pain, mild swelling, or bruising at the injection site are the most commonly reported effects and typically resolve within a few days. Your treating physician reviews the specific risks for your case before the procedure — not a coordinator.
@@ -70,7 +73,7 @@ No — like the other therapies we coordinate, it's considered investigational a
 
 ## Further reading
 
-- [Efficacy and Safety of Placental Extract on Menopausal Symptoms: A Systematic Review](https://pmc.ncbi.nlm.nih.gov/articles/PMC12736165/) — *Nutrients*, systematic review of 11 randomized controlled trials, National Institutes of Health
+- [Efficacy and Safety of Placental Extract on Menopausal Symptoms: A Systematic Review](https://pmc.ncbi.nlm.nih.gov/articles/PMC12736165/) — *Nutrients* (2025), systematic review of 11 randomized controlled trials, hosted on PubMed Central (U.S. National Library of Medicine)
 - [How to choose a stem cell clinic in Mexico](/en/how-to-choose-a-clinic/) — the full verification guide: what any legitimate provider should show you
 
 ## Have someone else review your case

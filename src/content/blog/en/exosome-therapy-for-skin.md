@@ -42,7 +42,7 @@ For skin-specific protocols, the main variables are:
 - The exosome product and dose used
 - Whether it's combined with microneedling or another delivery method
 - Number of sessions recommended for your case
-- Travel, lodging, and coordination — itemized separately in your written quote
+- Travel — flights, your hotel and airport transfers sit outside the treatment figure; our coordination is already inside it
 
 Only your treating physician can confirm both what's appropriate for your skin and the exact price, based on
 their evaluation.

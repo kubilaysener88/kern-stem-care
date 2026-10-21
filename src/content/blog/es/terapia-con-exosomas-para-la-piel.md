@@ -45,7 +45,7 @@ Para protocolos específicos de piel, las variables principales son:
 - El producto de exosomas y la dosis utilizada
 - Si se combina con microneedling u otro método de aplicación
 - Número de sesiones recomendadas para tu caso
-- Viaje, hospedaje y coordinación — detallados por separado en tu cotización escrita
+- El viaje — los vuelos, tu hotel y los traslados del aeropuerto quedan fuera de la cifra del tratamiento; nuestra coordinación ya va incluida
 
 Solo tu médico tratante puede confirmar tanto lo que es adecuado para tu piel como el precio exacto, según su
 evaluación.

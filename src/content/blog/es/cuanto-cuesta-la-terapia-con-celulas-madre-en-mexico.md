@@ -31,12 +31,12 @@ cotiza cada aplicación:
 | --- | --- |
 | Una articulación — rodilla, codo, hombro o cadera. Células madre, 56 millones por articulación. | $2,300 |
 | Dos articulaciones — rodillas, codos u hombros. Células madre, 112 millones en total. | $4,250 |
-| Una zona del rostro. Tratamiento estético con fibroblastos, las células que producen el colágeno de la piel. | $850 |
+| Una zona del rostro. Tratamiento estético con [fibroblastos](/es/blog/terapia-con-fibroblastos-para-la-piel/), las células que producen el colágeno de la piel. | $850 |
 | Rostro completo y cuello. El mismo tratamiento con fibroblastos, en una zona más amplia. | $1,500 |
-| Exosomas — 5 mil millones. Una preparación libre de células, cotizada por número de partículas. | $970 |
+| [Exosomas](/es/blog/terapia-con-exosomas-para-la-piel/) — 5 mil millones. Una preparación libre de células, cotizada por número de partículas. | $970 |
 | Exosomas ultrapurificados — 15 mil millones, ultrapurificados. | $2,490 |
 | Exosomas — 20 mil millones. El conteo de partículas más alto que coordinamos. | $2,630 |
-| Implante de placenta. Tejido placentario liofilizado, en inyecciones subdérmicas. | $880 |
+| [Implante de placenta](/es/blog/implante-de-placenta-liofilizada/). Tejido placentario liofilizado, en inyecciones subdérmicas. | $880 |
 | Antienvejecimiento / bienestar general. Células madre por vía intravenosa, 2 millones por kilogramo de peso corporal. | $2,300 – $7,500, según el peso del paciente |
 | Una condición grave o compleja | Se cotiza tras la evaluación — el protocolo se arma para tu caso |
 

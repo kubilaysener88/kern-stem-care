@@ -61,7 +61,7 @@ Para protocolos de fibroblastos específicamente, las variables principales son:
 
 - La zona tratada (una sola zona del rostro frente a rostro completo y cuello)
 - Número de sesiones recomendadas para tu caso
-- Viaje, hospedaje y coordinación — detallados por separado en tu cotización escrita
+- El viaje — los vuelos, tu hotel y los traslados del aeropuerto quedan fuera de la cifra del tratamiento; nuestra coordinación ya va incluida
 
 Consulta la lista de precios publicada en nuestra [página de precios](/es/precios/), o pídele a tu médico
 tratante que confirme qué es adecuado para tu piel durante tu evaluación.

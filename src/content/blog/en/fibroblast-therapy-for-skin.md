@@ -58,7 +58,7 @@ For fibroblast protocols specifically, the main variables are:
 
 - The area treated (a single facial area vs. full face and neck)
 - Number of sessions recommended for your case
-- Travel, lodging, and coordination — itemized separately in your written quote
+- Travel — flights, your hotel and airport transfers sit outside the treatment figure; our coordination is already inside it
 
 See the current published price list on our [pricing page](/en/pricing/), or ask your treating physician to
 confirm what's appropriate for your skin during your evaluation.
