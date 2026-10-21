@@ -1,7 +1,7 @@
 ---
 title: 'Células madre intravenosas o inyección en la articulación: a dónde van las células y qué dice la investigación'
-metaTitle: 'Células madre intravenosas vs. inyección articular'
-description: '¿Suero intravenoso o inyección en la articulación? Cómo funciona cada vía, a dónde llegan de verdad las células, qué dice la investigación de seguridad y cuánto cuesta en Cancún.'
+metaTitle: 'Células madre: IV o inyección articular'
+description: '¿Suero intravenoso o inyección en la articulación? A dónde llegan de verdad las células, qué dice la investigación de seguridad y cuánto cuesta en Cancún.'
 lang: 'es'
 translationKey: 'stem-cell-iv-vs-joint-injection'
 pubDate: 2026-09-29

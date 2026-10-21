@@ -1,5 +1,6 @@
 ---
 title: 'Exosome therapy for skin: what it is, what it costs, and what to expect'
+metaTitle: 'Exosome Therapy for Skin: Cost and Results'
 description: 'What exosome therapy for skin is, what the research says about fine lines and texture, what drives the cost, and how it compares to stem cell therapy.'
 lang: 'en'
 translationKey: 'exosome-therapy-skin'

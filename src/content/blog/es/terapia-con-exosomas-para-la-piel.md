@@ -1,5 +1,6 @@
 ---
 title: 'Terapia con exosomas para la piel: qué es, cuánto cuesta y qué esperar'
+metaTitle: 'Exosomas para la piel: precio y resultados'
 description: 'Qué es la terapia con exosomas para la piel, qué dice la investigación sobre líneas finas y textura, qué determina el costo y cómo se compara con células madre.'
 lang: 'es'
 translationKey: 'exosome-therapy-skin'

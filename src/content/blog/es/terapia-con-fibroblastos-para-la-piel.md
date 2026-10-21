@@ -1,6 +1,7 @@
 ---
 title: 'Terapia con fibroblastos para la piel: qué es, cuánto cuesta y qué esperar'
-description: 'Qué es la terapia con fibroblastos para la piel, en qué se diferencia de un tratamiento de "fibroblastos de plasma" (Plasma Pen), qué dice la investigación y qué determina el costo.'
+metaTitle: 'Fibroblastos: costo y resultados en la piel'
+description: 'Qué es la terapia con fibroblastos para la piel, en qué se diferencia del Plasma Pen, qué dice la investigación y qué determina el costo.'
 lang: 'es'
 translationKey: 'fibroblast-therapy-skin'
 pubDate: 2026-09-17

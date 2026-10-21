@@ -1,5 +1,6 @@
 ---
 title: 'Fibroblast therapy for skin: what it is, what it costs, and what to expect'
+metaTitle: 'Fibroblast Skin Therapy: Cost and Results'
 description: 'What fibroblast cell therapy for skin is, how it differs from a "plasma fibroblast" (Plasma Pen) treatment, what the research shows, and what drives the cost.'
 lang: 'en'
 translationKey: 'fibroblast-therapy-skin'

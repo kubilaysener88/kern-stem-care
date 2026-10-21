@@ -1,7 +1,7 @@
 ---
 title: '¿Cuánto duran los efectos de la terapia con células madre y se puede repetir?'
-metaTitle: '¿Cuánto duran los efectos de las células madre?'
-description: 'Qué midieron de verdad los estudios sobre cuánto duran los efectos de la terapia con células madre, por qué las células se van mucho antes y qué muestran los estudios con dosis repetidas.'
+metaTitle: '¿Cuánto dura la terapia con células madre?'
+description: 'Qué midieron de verdad los estudios sobre cuánto dura la terapia con células madre, por qué las células se van antes y qué muestran las dosis repetidas.'
 lang: 'es'
 translationKey: 'stem-cell-therapy-duration-repeat'
 pubDate: 2026-10-21
@@ -15,29 +15,31 @@ draft: false
 ## Respuesta corta
 
 Nadie puede decirte con honestidad un número de años. La mayoría de los ensayos con inyecciones de
-células madre para artrosis de rodilla siguieron a los pacientes entre 6 y 24 meses. Unos pocos llegaron
-más lejos: un ensayo pequeño seguía viendo mejoría cuatro años después de una sola inyección, y una
-revisión europea encontró beneficio a los dos o tres años — con la advertencia de que la evidencia es
-limitada. En internet vas a encontrar cifras muy seguras, como "de dos a cinco años" o "hasta quince".
+células madre para artrosis de rodilla reportan resultados a corto plazo, y las revisiones señalan qué
+pocos siguen a los pacientes más tiempo. Un ensayo pequeño seguía viendo mejoría cuatro años después de
+una sola inyección, y una revisión de la ESSKA, la sociedad europea de cirugía de rodilla, encontró
+beneficio a los dos o tres años — con la advertencia de que la evidencia es limitada. En internet vas a encontrar cifras muy seguras, como "de dos a cinco años" o "hasta quince".
 No encontramos estudios controlados que respalden números tan precisos.
 
-Sí se puede repetir. El único ensayo aleatorizado que comparó una dosis contra dos en la rodilla encontró
-el beneficio más claro, al año, en el grupo que recibió dos. Fue un estudio pequeño: apunta una respuesta,
-no la cierra.
+Sí se puede repetir. Un ensayo aleatorizado en Chile que comparó una dosis contra dos en la rodilla
+encontró el beneficio más claro, al año, en el grupo que recibió dos. Fue un estudio pequeño: apunta hacia
+una respuesta, no la cierra.
 
 Estas terapias se consideran de investigación y no están aprobadas por la FDA de EE.UU. ni por Health
 Canada para estos usos. Los resultados varían de una persona a otra, y hay quien no nota ninguna mejoría.
 
-## Las células se van mucho antes que el efecto
+## Las células no se quedan
 
 Esto sorprende a casi todos. Las células madre mesenquimales no llegan para quedarse. En un estudio de
 2012 en ratones, las células aplicadas por vena seguían vivas en los pulmones hasta 24 horas. Después ya
 no estaban. Los autores concluyeron que cualquier efecto más duradero tiene que pasar por las células del
-propio cuerpo.
+propio cuerpo. Es un estudio en ratones y con células aplicadas por vena, así que no cuenta toda la
+historia de una inyección en la articulación. Pero es una de las razones por las que los
+investigadores dejaron de ver estas células como piezas de repuesto permanentes.
 
-Eso coincide con lo que hoy piensan los investigadores sobre lo que estas células hacen sobre todo:
-liberan señales que calman la inflamación y apoyan la reparación del propio tejido. La señal dura poco;
-la respuesta del cuerpo puede durar mucho más. Así que "¿cuánto dura?" en realidad pregunta cuánto
+También coincide con lo que hoy piensan los investigadores sobre lo que estas células hacen sobre todo:
+liberan señales que calman la inflamación y apoyan la reparación del propio tejido. Las células duran
+poco; la respuesta del cuerpo, cuando la hay, puede durar más. Así que "¿cuánto dura?" en realidad pregunta cuánto
 tiempo conserva tu articulación esa respuesta — y eso depende tanto de la articulación como de las
 células.
 
@@ -45,9 +47,9 @@ células.
 
 | Estudio | Qué se aplicó | Cuánto tiempo se siguió a los pacientes | Qué encontró |
 |---|---|---|---|
-| Lamo-Espinosa y col., España, 2018 — 30 pacientes | Una inyección en la rodilla con células de la médula ósea del propio paciente | 4 años | El dolor y la función seguían mejor que al inicio. En el grupo control, el dolor había empeorado |
+| Lamo-Espinosa y col., España, 2018 — 30 pacientes | Una inyección en la rodilla con células de la médula ósea del propio paciente, junto con ácido hialurónico; el grupo control recibió solo ácido hialurónico | 4 años | El dolor y la función seguían mejor que al inicio. En el grupo control, el dolor había empeorado |
 | Revisión de ESSKA, 2023 — 9 estudios | Implante de células madre para artrosis de rodilla | 2 a 3 años | Mejores puntajes de dolor y función, pero pocos estudios tenían grupo control o resultados a mediano plazo |
-| Matas y col., Chile, 2019 — 26 pacientes | Células de cordón umbilical: una dosis, dos dosis con seis meses de diferencia, o ácido hialurónico | 1 año | El grupo de dos dosis tuvo el menor dolor al año. La resonancia no mostró diferencias |
+| Matas y col., Chile, 2019 — 26 pacientes | Células de cordón umbilical: una dosis, dos dosis con seis meses de diferencia, o ácido hialurónico | 1 año | Dos dosis dieron mejor resultado que una, y que el ácido hialurónico, al año. La resonancia no mostró diferencias |
 | Fares y col., revisión de 43 ensayos, 2024 | Inyecciones de células madre para artrosis, sobre todo de rodilla | Variable | La mayoría reportó mejoría, pero los protocolos eran tan distintos que los autores calificaron los resultados de no concluyentes |
 
 Dos cosas saltan a la vista. Los grupos son pequeños — decenas de pacientes, no miles. Y casi todo el
@@ -56,8 +58,8 @@ bienestar general, hay muchos menos datos sobre cuánto dura cualquier efecto.
 
 ## Por qué varía tanto de una persona a otra
 
-- **Qué tan desgastada está la articulación.** La revisión de ESSKA encontró el beneficio en artrosis
-  leve a moderada. Una rodilla con hueso contra hueso tiene menos tejido que pueda responder.
+- **Qué tan desgastada está la articulación.** Las conclusiones de la revisión de ESSKA se refieren a
+  artrosis leve a moderada. Una rodilla con hueso contra hueso tiene menos tejido que pueda responder.
 - **Qué células se usaron y cuántas.** El origen, la dosis y la preparación en laboratorio cambian de un
   protocolo a otro. Es una de las razones por las que la revisión de 2024 no pudo comparar bien los
   ensayos.
@@ -74,30 +76,30 @@ respondiste. Algunas cosas que conviene saber antes de esa conversación:
 
 - **El momento.** En el ensayo chileno, la segunda dosis se aplicó seis meses después de la primera y
   estaba planeada desde el principio. No se aplicó porque la primera "se hubiera acabado".
-- **La seguridad.** En el grupo de dos dosis de ese ensayo no se reportaron eventos adversos graves. Los
+- **La seguridad.** Ese ensayo no reportó eventos adversos graves, tampoco en el grupo de dos dosis. Los
   datos a largo plazo sobre dosis repetidas todavía son escasos.
 - **El costo.** Una segunda aplicación es una cotización aparte. En nuestra red, una articulación cuesta
-  $2,300 USD — consulta la [lista de precios](/es/precios/). El seguimiento en casa y cualquier aplicación
-  posterior quedan fuera de la primera cotización, y te lo decimos por escrito antes de que viajes.
+  $2,300 USD, según nuestra [lista de precios](/es/precios/). Esa misma lista aclara que el seguimiento en
+  casa y cualquier aplicación posterior quedan fuera de la primera cotización.
 - **Si funcionó la primera vez.** Si a los seis meses no notaste nada, pregúntale al médico por qué antes
   de pagar una segunda ronda. Repetir algo que no te hizo efecto no es automáticamente el siguiente paso.
 
 ## Preguntas frecuentes
 
 ### ¿La terapia con células madre es permanente?
-Ningún estudio muestra un efecto permanente. Las células no se quedan para siempre — en el estudio de
-seguimiento que citamos arriba, las aplicadas por vena desaparecieron en un día — y los efectos que miden
+Ningún estudio muestra un efecto permanente. Las células no se quedan para siempre — en el estudio en
+ratones que citamos arriba, las aplicadas por vena desaparecieron en un día — y los efectos que miden
 los ensayos se siguen durante meses o pocos años. Piénsalo como un tratamiento cuyo efecto puede durar un
 tiempo, no como un arreglo de una sola vez.
 
 ### ¿Cuánto dura una inyección de células madre en la rodilla?
-En los ensayos publicados, la mejoría casi siempre se midió entre uno y dos años. Un estudio pequeño la
-seguía viendo a los cuatro años. Cuánto te dure a ti depende de qué tan desgastada esté la articulación y
+En los estudios de la tabla, a los pacientes se les siguió entre uno y cuatro años. El seguimiento más
+largo, con 30 pacientes, todavía veía mejoría a los cuatro años. Cuánto te dure a ti depende de qué tan desgastada esté la articulación y
 de tu propia biología. Un médico que haya visto tus estudios de imagen te dará una estimación mucho mejor
 que cualquier cifra general.
 
 ### ¿Cuántas veces me puedo aplicar células madre?
-No hay un límite establecido, ni tampoco un calendario basado en evidencia. La aplicación repetida se ha
+Ninguna guía fija un número, y tampoco hay un calendario basado en evidencia. La aplicación repetida se ha
 estudiado en ensayos pequeños, sobre todo en rodilla. Cada cuánto tiene sentido en tu caso lo decide tu
 médico.
 
@@ -108,7 +110,7 @@ nuestras guías de [exosomas para la piel](/es/blog/terapia-con-exosomas-para-la
 [implante de placenta liofilizada](/es/blog/implante-de-placenta-liofilizada/).
 
 ### ¿Cuándo sabré si funcionó?
-La mayoría de quienes responden lo notan entre el primer y el sexto mes. Lo explicamos en
+Los relatos de pacientes suelen ubicarlo entre las primeras semanas y el sexto mes. Lo explicamos en
 [cuánto tardan en verse los resultados](/es/blog/cuanto-tarda-en-verse-resultados-celulas-madre/).
 
 ## Para leer más
