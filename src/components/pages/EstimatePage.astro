@@ -130,7 +130,10 @@ const hreflangOverride = { en: '/en/estimate', es: '/es/cotizacion' };
                 </div>
               </div>
               <div class="field"><label><span>{p.form.labelId}</span>
-                <input name="id_document" type="file" accept="image/*,.pdf" required />
+                <!-- Optional on purpose: asking for a passport before someone has even
+                     seen a price was the steepest step in the form. The ID is still
+                     needed before the evaluation, and the hint says so. -->
+                <input name="id_document" type="file" accept="image/*,.pdf" />
                 <span class="field-hint">{p.form.idHint}</span>
               </label></div>
             </div>

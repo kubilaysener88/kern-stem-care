@@ -2,8 +2,8 @@
 /**
  * Shared submit handler for Netlify Forms (AJAX, progressive enhancement).
  *
- * Any <form data-netlify="true"> on the page is submitted via fetch to "/" (Netlify
- * intercepts it by the hidden `form-name` field), then the form is replaced in place
+ * Any Netlify form on the page is submitted via fetch to "/" (Netlify intercepts it
+ * by the hidden `form-name` field), then the form is replaced in place
  * with an accessible success message (no page reload, no alert). A honeypot field
  * (`bot-field`) silently drops bots. On error we restore the form so the visitor can
  * retry. Without JS the native POST still works (Netlify shows its default success page).
@@ -11,6 +11,13 @@
  * A form containing a file input is submitted as multipart/form-data (the FormData
  * object as-is, letting the browser set the boundary) so uploaded files reach Netlify
  * intact — URL-encoding a FormData silently drops File entries.
+ *
+ * Forms are recognised by their hidden `form-name` input, NOT by `data-netlify`.
+ * Netlify strips `data-netlify` and `netlify-honeypot` from the served HTML once
+ * it has registered the form, so a `form[data-netlify]` selector matched in a
+ * local build and never in production. For months this handler did nothing on
+ * the live site: every visitor got Netlify's generic English "Thank you" page,
+ * Spanish site included, instead of the message below.
  */
 ---
 
@@ -21,7 +28,7 @@
     }
     document.addEventListener('submit', function (e) {
       var form = e.target;
-      if (!form || !form.matches || !form.matches('form[data-netlify]')) return;
+      if (!form || !form.querySelector || !form.querySelector('input[name="form-name"]')) return;
       e.preventDefault();
 
       // Honeypot: if the hidden field is filled, it's a bot — pretend success, do nothing.

@@ -448,8 +448,8 @@ const en: PagesSet = {
       conditionCategories: ['Joint & Orthopedic', 'Sports Injury & Recovery', 'Immune Wellness & Support', 'Anti-Aging & Longevity', 'Senior Health & Wellness', 'Aesthetic & Skin', 'Metabolic & Hormonal Support', 'Placenta Implant Therapy', 'Personalized / Not sure yet'],
       labelCondition: 'Tell us about your condition or goal',
       conditionPlaceholder: 'e.g. knee osteoarthritis, an autoimmune condition, anti-aging…',
-      labelId: 'Government ID or passport (to verify your identity)',
-      idHint: 'Used only to confirm your identity before your evaluation — stored securely and never shared without your consent.',
+      labelId: 'Government ID or passport (optional)',
+      idHint: 'You can send it later. We need it before your evaluation, only to confirm your identity — stored securely and never shared without your consent.',
       labelFiles: 'Lab studies or medical records (optional)',
       filesHint: 'PDF, JPG, or PNG — you can also send these later by email if you prefer.',
       labelConsent:
@@ -864,8 +864,8 @@ const es: PagesSet = {
       conditionCategories: ['Articular y Ortopédico', 'Lesiones Deportivas y Recuperación', 'Bienestar y Soporte Inmune', 'Antienvejecimiento y Longevidad', 'Salud y Bienestar en Adultos Mayores', 'Estética y Piel', 'Soporte Metabólico y Hormonal', 'Terapia de Implante de Placenta', 'Personalizado / Aún no estoy seguro'],
       labelCondition: 'Cuéntanos sobre tu condición u objetivo',
       conditionPlaceholder: 'ej. osteoartritis de rodilla, una condición autoinmune, antienvejecimiento…',
-      labelId: 'Identificación oficial o pasaporte (para verificar tu identidad)',
-      idHint: 'Se usa solo para confirmar tu identidad antes de tu evaluación — se guarda de forma segura y nunca se comparte sin tu consentimiento.',
+      labelId: 'Identificación oficial o pasaporte (opcional)',
+      idHint: 'Puedes enviarla después. La necesitamos antes de tu evaluación, solo para confirmar tu identidad — se guarda de forma segura y nunca se comparte sin tu consentimiento.',
       labelFiles: 'Estudios de laboratorio o expediente médico (opcional)',
       filesHint: 'PDF, JPG o PNG — también puedes enviarlos después por correo si prefieres.',
       labelConsent:
