@@ -1,7 +1,7 @@
 ---
 title: 'IV stem cell therapy vs. joint injection: where the cells go, and what the research shows'
 metaTitle: 'IV Stem Cell Therapy vs. Joint Injection'
-description: 'IV infusion or an injection into the joint? How each route works, where the cells actually end up, what the safety research shows, and what each costs in Cancún.'
+description: 'IV infusion or an injection into the joint? How each route works, where the cells end up, what the safety research shows, and what each costs in Cancún.'
 lang: 'en'
 translationKey: 'stem-cell-iv-vs-joint-injection'
 pubDate: 2026-09-29

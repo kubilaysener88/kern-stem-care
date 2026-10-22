@@ -1,7 +1,7 @@
 ---
 title: 'Células madre para regeneración ósea: fracturas que no sanan, necrosis de cadera y qué dice la investigación'
 metaTitle: 'Células madre para regeneración ósea'
-description: 'Qué muestra la investigación sobre células madre en hueso — fracturas que no consolidan y necrosis avascular de cadera — y qué preguntar antes de viajar a México.'
+description: 'Qué dice la investigación sobre células madre en hueso — fracturas que no consolidan y necrosis avascular de cadera — y qué preguntar antes de viajar a México.'
 lang: 'es'
 translationKey: 'stem-cell-therapy-bone-regeneration'
 pubDate: 2026-09-28

@@ -1,7 +1,7 @@
 ---
 title: 'Stem cell therapy for bone regeneration: fractures that won''t heal, hip necrosis, and what the research shows'
 metaTitle: 'Stem Cell Therapy for Bone Regeneration'
-description: 'What the research shows about stem cells for bone — non-healing fractures and avascular necrosis of the hip — and what to ask before travelling to Mexico for it.'
+description: 'What the research shows about stem cells for bone — non-healing fractures and avascular necrosis of the hip — and what to ask before travelling to Mexico.'
 lang: 'en'
 translationKey: 'stem-cell-therapy-bone-regeneration'
 pubDate: 2026-09-28

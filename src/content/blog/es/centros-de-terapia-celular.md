@@ -1,7 +1,7 @@
 ---
 title: 'Centros de terapia celular en México: qué son, quién hace qué, y qué pasa con las células antes de llegar a ti'
 metaTitle: 'Centros de terapia celular en México: qué son'
-description: 'Qué hay detrás de un centro de terapia celular: de dónde salen las células madre, qué hace el laboratorio con ellas, quién las aplica y qué preguntar en cada paso.'
+description: 'Qué hay detrás de un centro de terapia celular: de dónde salen las células madre, qué hace el laboratorio, quién las aplica y qué preguntar en cada paso.'
 lang: 'es'
 translationKey: 'cell-therapy-centre-lab-to-clinic'
 pubDate: 2026-10-06
