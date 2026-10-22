@@ -14,10 +14,10 @@ draft: false
 
 ## Short answer
 
-Not in the way most people hope. No study has shown that a stem cell injection regrows a worn-out knee's
-cartilage. What the injection research does show is more modest: the largest review so far found that
+Not in the way most people hope. There is no good evidence that a stem cell injection regrows a worn-out
+knee's cartilage. What the injection research does show is more modest: a 2025 Cochrane review found that
 injections may slightly improve knee pain and function for up to six months, compared with a placebo
-injection. Whether the cartilage itself changed was not measured in any of those trials.
+injection. None of the trials it included checked whether the joint itself changed on an X-ray.
 
 Cartilage regrowth has been shown in a different setting: stem cells *implanted surgically* into a
 single, well-defined hole in the cartilage. That is an operation, not an injection, and it is aimed at a
@@ -44,8 +44,9 @@ research that shows new cartilage is mostly about the first.
 ## What the injection studies actually measured
 
 - **Pain and function: a small benefit.** A 2025 Cochrane review — the most rigorous kind of evidence
-  summary — pooled 25 randomised trials with 1,341 people. Against a placebo injection, stem cells
-  improved pain by about 1.2 points on a 0-to-10 scale, up to six months out. The reviewers rated that
+  summary — gathered 25 randomised trials with 1,341 people. In the seven that compared stem cells with
+  a placebo injection (445 people), pain improved by about 1.2 points on a 0-to-10 scale, up to six
+  months out. The reviewers rated that
   evidence low certainty: the cell source, preparation and dose varied a great deal between trials,
   and up to three larger trials were withdrawn before reporting results.
 - **Cartilage: not measured.** None of the 25 trials assessed whether the joint changed on an X-ray.
@@ -65,7 +66,7 @@ little proof that it rebuilds what has worn away.
 
 - **Implanted stem cells.** A randomised trial in South Korea treated 114 people, average age 56, who
   had a large, full-thickness cartilage defect. Through a small open incision, surgeons either implanted
-  umbilical cord stem cells in a gel or performed microfracture. A year later, a camera inside the
+  umbilical cord blood stem cells in a gel or performed microfracture. A year later, a camera inside the
   joint showed better repair tissue in the stem cell group. Pain and function were similar at one year,
   and better in the stem cell group at three to five years.
 - **Cultured cartilage cells.** In the U.S., the FDA approved MACI in 2016 for full-thickness defects

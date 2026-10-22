@@ -14,11 +14,11 @@ draft: false
 
 ## Respuesta corta
 
-No de la forma en que casi todos esperan. Ningún estudio ha demostrado que una inyección de células madre
+No de la forma en que casi todos esperan. No hay buena evidencia de que una inyección de células madre
 vuelva a formar el cartílago de una rodilla desgastada. Lo que sí muestra la investigación sobre
-inyecciones es más modesto: la revisión más grande hasta hoy encontró que pueden mejorar ligeramente el
+inyecciones es más modesto: una revisión Cochrane de 2025 encontró que pueden mejorar ligeramente el
 dolor y la función de la rodilla hasta por seis meses, comparadas con una inyección de placebo. Ninguno de
-esos ensayos midió si el cartílago cambió.
+los ensayos que incluyó revisó si la articulación cambió en la radiografía.
 
 Donde sí se ha visto cartílago nuevo es en otro escenario: células madre *implantadas con cirugía* en un
 solo defecto bien delimitado del cartílago. Eso es una operación, no una inyección, y está pensada para
@@ -40,15 +40,15 @@ diferentes, y la respuesta depende de cuál tienes.
 | **Artrosis (desgaste)** | Cartílago que se adelgaza en toda una zona de la articulación, por lo general con la edad | Inyecciones en la articulación, para aliviar dolor e inflamación |
 | **Hueso con hueso** | Queda poco o nada de cartílago; en la radiografía el espacio articular se cerró | Normalmente, la conversación sobre una prótesis. Aquí la inyección tiene menos con qué trabajar |
 
-Casi todas las personas que buscan "regenerar cartílago" entre los 50 y los 75 años tienen el segundo
+Casi todas las personas que buscan "regenerar cartílago" entre los 50 y los 79 años tienen el segundo
 tipo. La investigación que muestra cartílago nuevo trata, sobre todo, del primero.
 
 ## Qué midieron de verdad los estudios de inyecciones
 
 - **Dolor y función: un beneficio pequeño.** Una revisión Cochrane de 2025 — el tipo de resumen de
-  evidencia más riguroso — reunió 25 ensayos aleatorizados con 1,341 personas. Frente a una inyección de
-  placebo, las células madre mejoraron el dolor en unos 1.2 puntos en una escala del 0 al 10, hasta los
-  seis meses. Los revisores calificaron esa evidencia como de certeza baja: el origen de las células, su
+  evidencia más riguroso — reunió 25 ensayos aleatorizados con 1,341 personas. En los siete que
+  compararon células madre con una inyección de placebo (445 personas), el dolor mejoró unos 1.2 puntos
+  en una escala del 0 al 10, hasta los seis meses. Los revisores calificaron esa evidencia como de certeza baja: el origen de las células, su
   preparación y la dosis cambiaban mucho de un ensayo a otro, y hasta tres ensayos más grandes se
   retiraron antes de publicar resultados.
 - **Cartílago: no se midió.** Ninguno de los 25 ensayos revisó si la articulación cambió en la
@@ -70,7 +70,7 @@ mejoría en cómo se siente la rodilla, con poca prueba de que reconstruya lo qu
 
 - **Células madre implantadas.** Un ensayo aleatorizado en Corea del Sur trató a 114 personas, con edad
   promedio de 56 años, que tenían un defecto de cartílago grande y de espesor completo. A través de una
-  incisión pequeña, los cirujanos implantaron células madre de cordón umbilical en un gel, o hicieron
+  incisión pequeña, los cirujanos implantaron células madre de sangre de cordón umbilical en un gel, o hicieron
   microfracturas. Al año, una cámara dentro de la articulación mostró mejor tejido de reparación en el
   grupo con células madre. El dolor y la función fueron parecidos al año, y mejores en ese grupo entre
   los tres y los cinco años.
