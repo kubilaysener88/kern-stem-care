@@ -1,11 +1,11 @@
 ---
 title: 'How much does stem cell therapy cost in Mexico?'
-metaTitle: 'Stem Cell Therapy Cost in Mexico'
-description: 'What stem cell therapy costs in Mexico, application by application, why quotes differ between clinics, and what the figure does and does not include.'
+metaTitle: 'Stem Cell Therapy Cost in Mexico: Price List'
+description: 'Stem cell therapy in Mexico costs $850 to $7,500 USD, and $2,300 for one knee. The price of each treatment, what it includes and why quotes differ.'
 lang: 'en'
 translationKey: 'stem-cell-therapy-cost'
 pubDate: 2026-06-10
-updatedDate: 2026-09-05
+updatedDate: 2026-10-25
 author: 'Kern Stem Care'
 reviewedBy: 'Beleguí Sánchez Guzmán, MD — Professional licence 11082915'
 scienceReviewedBy: 'Teresita Irais Álvarez Olvera, BSc Biology — Professional licence 10506533'
@@ -16,16 +16,23 @@ draft: false
 
 ## Short answer
 
-There is no single price — the cost of **[stem cell therapy](/en/services/stem-cells/)** in
-Mexico depends on the cell type and dose, the number of sessions, the condition being
-addressed, and the clinic and laboratory involved.
+Stem cell therapy in Mexico costs **between $850 and $7,500 USD** for what Kern Stem Care
+coordinates in Cancún, depending on the application. Stem cell injections into one joint —
+knee, elbow, shoulder or hip — cost **$2,300 USD**, with 56 million cells; two joints cost
+$4,250. Intravenous treatment for anti-aging or overall wellness runs $2,300 to $7,500,
+scaled to your body weight.
+
+Across the market there is no single price: the cost of **[stem cell therapy](/en/services/stem-cells/)**
+depends on the cell type and dose, the number of sessions, the condition being addressed, and
+the clinic and laboratory involved. That is why two quotes can be far apart; how to compare
+them is further down.
 
 > Looking for the figures rather than the explanation? The full list, by application, is on the **[prices page](/en/pricing/)**.
 
+## Price of each treatment
 
-In practice, most of what Kern Stem Care coordinates in Cancún falls between **$850 and
-$7,500 USD**. Rather than leave you guessing where inside that band you sit, here is what each
-application is quoted at:
+Rather than leave you guessing where inside that band you sit, here is what each application
+is quoted at, in U.S. dollars:
 
 | Application | Quoted at |
 | --- | --- |
@@ -98,6 +105,13 @@ and that the laboratory issues a Certificate of Analysis for the batch — docum
 source, cell count, viability, and sterility testing.
 
 ## Common questions
+
+### How much do stem cell injections for the knee cost?
+$2,300 USD for one knee, with 56 million stem cells, and $4,250 for both (112 million in
+total). For joints the count is always per joint, never by body weight. Before anything is
+quoted, the treating physician reviews your imaging over Zoom and tells you whether you are a
+candidate. What an injection can and cannot rebuild is covered in
+**[Can stem cells repair knee cartilage?](/en/blog/can-stem-cells-repair-knee-cartilage/)**
 
 ### Is a cheaper quote always a worse deal?
 Not necessarily — but it is a reason to ask three specific questions: how many cells you are

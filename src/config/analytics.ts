@@ -32,4 +32,6 @@ export const ANALYTICS_EVENTS = {
   contactSubmit: 'Contact Form Submit',
   testimonialPlay: 'Testimonial Play',
   estimateSubmit: 'Estimate Form Submit',
+  quoteTreatment: 'Quote My Treatment',
+  whatsappClick: 'WhatsApp Click',
 } as const;

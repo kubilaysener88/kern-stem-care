@@ -8,6 +8,7 @@ import Breadcrumbs from '../Breadcrumbs.astro';
 import type { Lang } from '../../i18n/ui';
 import { pagesContent } from '../../i18n/pages';
 import { withSlash } from '../../i18n/utils';
+import { ANALYTICS_EVENTS } from '../../config/analytics';
 
 interface Props {
   lang: Lang;
@@ -36,7 +37,7 @@ const servicesLabel = lang === 'es' ? 'Servicios' : 'Services';
     <div class="wrap">
       <ProseSections sections={p.sections} />
       <div style="display:flex;justify-content:center;margin-top:32px">
-        <a href={withSlash(`/${lang}/contact`)} class="btn btn-primary" data-analytics-event="Quote My Treatment">{quoteLabel}</a>
+        <a href={withSlash(`/${lang}/contact`)} class="btn btn-primary" data-analytics-event={ANALYTICS_EVENTS.quoteTreatment}>{quoteLabel}</a>
       </div>
     </div>
   </section>

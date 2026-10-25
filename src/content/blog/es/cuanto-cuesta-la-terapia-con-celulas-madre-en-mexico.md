@@ -1,11 +1,11 @@
 ---
-title: '¿Cuánto cuesta la terapia con células madre en México?'
-metaTitle: 'Cuánto cuesta la terapia con células madre'
-description: 'Cuánto cuesta la terapia con células madre en México, aplicación por aplicación, por qué varían las cotizaciones y qué incluye y qué no cada cifra.'
+title: '¿Cuánto cuesta un tratamiento de células madre en México?'
+metaTitle: 'Cuánto cuesta un tratamiento de células madre'
+description: 'Precio del tratamiento con células madre en México: de $850 a $7,500 USD, y $2,300 por una rodilla. Qué incluye cada precio, qué no y por qué varía.'
 lang: 'es'
 translationKey: 'stem-cell-therapy-cost'
 pubDate: 2026-06-10
-updatedDate: 2026-09-05
+updatedDate: 2026-10-25
 author: 'Kern Stem Care'
 reviewedBy: 'Dra. Beleguí Sánchez Guzmán — Cédula profesional 11082915'
 scienceReviewedBy: 'Biól. Teresita Irais Álvarez Olvera — Cédula profesional 10506533'
@@ -16,16 +16,23 @@ draft: false
 
 ## Respuesta corta
 
-No hay un precio único — el costo de la **[terapia con células madre](/es/services/stem-cells/)**
-en México depende del tipo de célula y la dosis, el número de sesiones, la condición a
-tratar, y la clínica y el laboratorio involucrados.
+Un tratamiento de células madre en México cuesta **entre $850 y $7,500 USD** en lo que
+Kern Stem Care coordina en Cancún, según la aplicación. Las inyecciones de células madre en
+una articulación —rodilla, codo, hombro o cadera— cuestan **$2,300 USD**, con 56 millones de
+células; en dos articulaciones, $4,250. El tratamiento intravenoso de antienvejecimiento o
+bienestar general va de $2,300 a $7,500, según tu peso.
+
+En el mercado no hay un precio único: el costo de la **[terapia con células madre](/es/services/stem-cells/)**
+depende del tipo de célula y la dosis, el número de sesiones, la condición a tratar, y la
+clínica y el laboratorio involucrados. Por eso dos cotizaciones pueden ser muy distintas;
+más abajo explicamos cómo compararlas.
 
 > ¿Buscas las cifras y no la explicación? La lista completa, por aplicación, está en la **[página de precios](/es/precios/)**.
 
+## Precio de cada tratamiento
 
-En la práctica, la mayoría de lo que Kern Stem Care coordina en Cancún está entre **$850 y
-$7,500 USD**. En vez de dejarte adivinando en qué punto de ese rango caes, aquí está lo que se
-cotiza cada aplicación:
+En vez de dejarte adivinando en qué punto del rango caes, esto es lo que se cotiza cada
+aplicación, en dólares estadounidenses:
 
 | Aplicación | Precio |
 | --- | --- |
@@ -99,6 +106,19 @@ tratante sea válida, y que el laboratorio emita un Certificado de Análisis del
 origen del tejido, el conteo celular, la viabilidad y las pruebas de esterilidad.
 
 ## Preguntas frecuentes
+
+### ¿Cuánto cuestan las inyecciones de células madre en la rodilla?
+$2,300 USD por una rodilla, con 56 millones de células madre, y $4,250 por las dos (112
+millones en total). En las articulaciones el conteo es siempre por articulación, no por peso.
+Antes de cotizar, el médico tratante revisa tus estudios por Zoom y te dice si eres
+candidato. Lo que una inyección puede y no puede reconstruir lo explicamos en
+**[¿Las células madre regeneran el cartílago de la rodilla?](/es/blog/celulas-madre-regenerar-cartilago-rodilla/)**
+
+### ¿Cuánto cuesta en pesos mexicanos?
+Publicamos los precios en dólares estadounidenses. Nuestros costos son en pesos mexicanos,
+así que las cifras en dólares se revisan cuando el tipo de cambio se mueve de forma
+significativa. La cifra que vale para tu caso es la de tu cotización por escrito, con
+vigencia de 30 días.
 
 ### ¿Una cotización más barata siempre es peor negocio?
 No necesariamente — pero sí es motivo para hacer tres preguntas concretas: cuántas células
