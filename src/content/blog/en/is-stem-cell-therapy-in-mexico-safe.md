@@ -1,7 +1,7 @@
 ---
 title: 'Is stem cell therapy in Mexico safe? What the safety data, the regulator and the trip itself tell you'
 metaTitle: 'Is Stem Cell Therapy in Mexico Safe?'
-description: 'In 55 trials with 2,696 patients, fever was the only side effect consistently tied to stem cells. In Mexico, the risk sits with the clinic and the lab.'
+description: 'In 55 IV trials with 2,696 patients, fever was the only side effect more common with stem cells. In Mexico, the real risk is the clinic and the lab.'
 lang: 'en'
 translationKey: 'stem-cell-therapy-mexico-safety'
 pubDate: 2026-10-27
@@ -14,9 +14,10 @@ draft: false
 
 ## Short answer
 
-Stem cell therapy in Mexico can be done safely: across 55 randomized trials with 2,696 patients,
-the only side effect consistently linked to mesenchymal stem cells was a temporary fever. The
-country is not what makes it safe or unsafe. The specific clinic, the laboratory that prepared the
+Stem cell therapy in Mexico can be done safely: in 55 randomized trials where 2,696 patients
+received mesenchymal stem cells by IV, the only side effect more common than in untreated patients
+was a temporary fever. Injected into a joint, the usual effects are local — soreness and swelling
+for a few days. The country is not what makes it safe or unsafe. The specific clinic, the laboratory that prepared the
 cells, and how the trip is planned around the procedure are.
 
 That is a narrower answer than either side of the argument likes. Clinics selling the treatment
@@ -36,6 +37,10 @@ intravenously to 2,696 adults. Compared with patients who did not receive the ce
 - **Infection, blood clots, cancer and death** were not more common.
 - **No trial was stopped early** because of a safety problem.
 
+A 2026 update limited to umbilical-cord cells — 42 trials, 2,280 patients — found the same
+pattern. How those numbers compare with injecting the cells into a joint is covered in
+[IV stem cell therapy vs. joint injection](/en/blog/stem-cell-iv-vs-joint-injection/).
+
 Two honest limits. These were controlled trials, run with well-characterised cells under
 research conditions — the review does not tell you how a given clinic performs. And "safe" is
 not the same as "effective": these are investigational therapies, and the review does not show
@@ -45,9 +50,10 @@ they work for any particular condition.
 
 When something has gone badly wrong, the product and the provider are what failed, not the
 cell type. The clearest documented case happened in the United States. In 2018 the CDC reported
-that a dozen patients in three states were hospitalised with serious bacterial infections after
-receiving umbilical cord blood products that were contaminated before they ever reached the
-clinic.
+12 patients in three states who were hospitalised with bacterial infections — in joints, the
+bloodstream and around the spine — after injections of an unapproved umbilical cord blood product.
+Almost all of them had it injected for joint or back pain. Unopened vials of the product grew the
+same bacteria, and the initial investigation pointed to contamination before it was shipped.
 
 That is the pattern worth remembering. The risks that matter are:
 
@@ -61,7 +67,7 @@ That is the pattern worth remembering. The risks that matter are:
 ## What Mexico's regulator checks — and what it says
 
 Mexico's federal health authority, COFEPRIS, licenses the clinics and laboratories that work with
-cells. It also enforces those licences. In 2015 it shut down the cell-therapy area of a Mexico City
+cells, and it can suspend the ones that fall short. In 2015 it shut down the cell-therapy area of a Mexico City
 clinic, and the reasons it gave are a useful checklist:
 
 - no research protocols supporting the treatment being offered;
@@ -69,7 +75,7 @@ clinic, and the reasons it gave are a useful checklist:
 - no flow cytometry to confirm the cell count and viability of what was being injected.
 
 In the same notice, COFEPRIS warned patients that stem cell treatments lack authorisation because
-their efficacy is not proven. We agree, and say the same on every page: a government licence
+their efficacy is not proven. That matches what we tell every patient: a government licence
 (COFEPRIS) means the establishment meets Mexico's requirements to operate. It does not mean the
 treatment is approved for a condition — in Mexico, in the U.S. by the FDA, or in Canada by Health
 Canada.
@@ -151,6 +157,7 @@ cells came from and how they were tested, that is your answer.
 ## Sources
 
 - [Cell therapy with intravascular administration of mesenchymal stromal cells continues to appear safe](https://doi.org/10.1016/j.eclinm.2019.100249) — Thompson et al., *EClinicalMedicine*, 2020
+- [Safety of intravascular administration of umbilical-cord-derived mesenchymal stromal cells: an updated systematic review and meta-analysis](https://doi.org/10.1093/stcltm/szag029) — Hum et al., *Stem Cells Translational Medicine*, 2026
 - [Infections after receipt of bacterially contaminated umbilical cord blood–derived stem cell products — United States, 2018](https://doi.org/10.15585/mmwr.mm6750a5) — Centers for Disease Control and Prevention, *MMWR*
 - [La COFEPRIS suspendió clínica del D.F. que ofrecía tratamientos con células madre sin aval científico](https://www.gob.mx/cofepris/prensa/la-cofepris-suspendio-clinica-del-d-f-que-ofrecia-tratamientos-con-celulas-madre-sin-aval-cientifico) — COFEPRIS (in Spanish)
 - [Important patient and consumer information about regenerative medicine therapies](https://www.fda.gov/vaccines-blood-biologics/consumers-biologics/important-patient-and-consumer-information-about-regenerative-medicine-therapies) — U.S. Food and Drug Administration

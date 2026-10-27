@@ -1,7 +1,7 @@
 ---
 title: '¿Es seguro ponerse células madre en México? Lo que dicen los estudios, la COFEPRIS y el propio viaje'
 metaTitle: '¿Es seguro ponerse células madre en México?'
-description: 'En 55 estudios con 2,696 pacientes, la fiebre fue el único efecto constante de las células madre. En México, el riesgo depende de la clínica y el laboratorio.'
+description: 'En 55 estudios con 2,696 pacientes por vía intravenosa, la fiebre fue el único efecto más frecuente. En México, el riesgo está en la clínica y el laboratorio.'
 lang: 'es'
 translationKey: 'stem-cell-therapy-mexico-safety'
 pubDate: 2026-10-27
@@ -14,9 +14,10 @@ draft: false
 
 ## Respuesta corta
 
-Sí, ponerse células madre en México puede ser seguro: en 55 estudios clínicos aleatorizados con
-2,696 pacientes, el único efecto secundario que se repitió con las células madre mesenquimales fue
-una fiebre pasajera. Lo que hace seguro o riesgoso un tratamiento no es el país. Es la clínica
+Sí, ponerse células madre en México puede ser seguro: en 55 estudios clínicos aleatorizados en los
+que 2,696 pacientes recibieron células madre mesenquimales por vía intravenosa, el único efecto
+secundario más frecuente que en quienes no las recibieron fue una fiebre pasajera. Aplicadas en una
+articulación, lo habitual son molestias locales — dolor e inflamación por unos días. Lo que hace seguro o riesgoso un tratamiento no es el país. Es la clínica
 concreta, el laboratorio que preparó las células y cómo se planea el viaje alrededor del
 procedimiento.
 
@@ -37,6 +38,11 @@ células madre mesenquimales (MSC) por vía intravenosa. Frente a quienes no las
 - **Infecciones, coágulos, cáncer y muertes** no fueron más frecuentes.
 - **Ningún estudio se detuvo antes de tiempo** por un problema de seguridad.
 
+Una actualización de 2026 dedicada a las células de cordón umbilical — 42 estudios, 2,280
+pacientes — encontró el mismo patrón. Cómo se comparan esas cifras con la aplicación en una
+articulación lo explicamos en
+[Células madre intravenosas o inyección en la articulación](/es/blog/celulas-madre-intravenosas-o-inyeccion-articular/).
+
 Dos límites, dichos con claridad. Eran estudios controlados, con células bien caracterizadas y en
 condiciones de investigación: la revisión no dice cómo trabaja una clínica en particular. Y
 "seguro" no es lo mismo que "eficaz": son terapias que se consideran de investigación, y la revisión
@@ -46,9 +52,11 @@ no demuestra que funcionen para una condición específica.
 
 Cuando algo ha salido mal de verdad, lo que falló fue el producto o el proveedor, no el tipo de
 célula. El caso mejor documentado ocurrió en Estados Unidos: en 2018, los CDC (la autoridad de
-salud pública de EE.UU.) reportaron a una docena de pacientes en tres estados hospitalizados por
-infecciones bacterianas graves, tras recibir productos de sangre de cordón umbilical que ya venían
-contaminados antes de llegar a la clínica.
+salud pública de EE.UU.) reportaron 12 pacientes en tres estados hospitalizados por infecciones
+bacterianas — en articulaciones, en la sangre y alrededor de la columna — tras inyectarse un
+producto de sangre de cordón umbilical no aprobado. Casi todos lo recibieron por dolor articular o
+de espalda. Los frascos sin abrir tenían las mismas bacterias, y la investigación inicial indicó que
+el producto ya venía contaminado antes de distribuirse.
 
 Ese es el patrón que vale la pena recordar. Los riesgos que importan son estos:
 
@@ -62,7 +70,7 @@ Ese es el patrón que vale la pena recordar. Los riesgos que importan son estos:
 ## Qué revisa la COFEPRIS — y qué dice
 
 La COFEPRIS, la autoridad sanitaria federal, otorga la licencia gubernamental a las clínicas y
-laboratorios que trabajan con células. Y la hace valer. En 2015 suspendió el área de terapias
+laboratorios que trabajan con células, y puede suspender a quien no cumple. En 2015 suspendió el área de terapias
 celulares de una clínica en la Ciudad de México, y los motivos que dio sirven como lista de
 revisión:
 
@@ -71,7 +79,7 @@ revisión:
 - no garantizaba la citometría de flujo para dar certeza del conteo y la viabilidad de las células.
 
 En el mismo comunicado, la COFEPRIS advirtió que los tratamientos con células madre carecen de
-autorización porque su eficacia no está probada. Estamos de acuerdo, y lo decimos en cada página:
+autorización porque su eficacia no está probada. Es lo mismo que le decimos a cada paciente:
 la licencia gubernamental (COFEPRIS) significa que el establecimiento cumple los requisitos para
 operar en México. No significa que el tratamiento esté aprobado para una enfermedad — ni en México,
 ni por la FDA en EE.UU., ni por Health Canada.
@@ -156,6 +164,7 @@ dónde vienen las células y cómo se analizaron, ya tienes tu respuesta.
 ## Fuentes
 
 - [Cell therapy with intravascular administration of mesenchymal stromal cells continues to appear safe](https://doi.org/10.1016/j.eclinm.2019.100249) — Thompson et al., *EClinicalMedicine*, 2020 (en inglés)
+- [Safety of intravascular administration of umbilical-cord-derived mesenchymal stromal cells: an updated systematic review and meta-analysis](https://doi.org/10.1093/stcltm/szag029) — Hum et al., *Stem Cells Translational Medicine*, 2026 (en inglés)
 - [Infections after receipt of bacterially contaminated umbilical cord blood–derived stem cell products — United States, 2018](https://doi.org/10.15585/mmwr.mm6750a5) — Centros para el Control y la Prevención de Enfermedades de EE.UU., *MMWR* (en inglés)
 - [La COFEPRIS suspendió clínica del D.F. que ofrecía tratamientos con células madre sin aval científico](https://www.gob.mx/cofepris/prensa/la-cofepris-suspendio-clinica-del-d-f-que-ofrecia-tratamientos-con-celulas-madre-sin-aval-cientifico) — COFEPRIS
 - [Información para pacientes sobre terapias de medicina regenerativa](https://www.fda.gov/vaccines-blood-biologics/consumers-biologics/important-patient-and-consumer-information-about-regenerative-medicine-therapies) — FDA de EE.UU. (en inglés)
