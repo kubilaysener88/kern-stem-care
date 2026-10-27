@@ -76,6 +76,8 @@ const ROUTES = [
   '/es/blog/celulas-madre-regenerar-cartilago-rodilla',
   '/en/blog/does-insurance-cover-stem-cell-therapy',
   '/es/blog/el-seguro-cubre-la-terapia-con-celulas-madre',
+  '/en/blog/is-stem-cell-therapy-in-mexico-safe',
+  '/es/blog/es-seguro-ponerse-celulas-madre-en-mexico',
   // Partner and team detail pages. These were never covered: the partner pages
   // are photo galleries and credential badges, which is exactly where contrast
   // and alt-text problems hide, and Y&H Clinic went public with six photos.
