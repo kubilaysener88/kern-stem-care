@@ -82,6 +82,8 @@ const ROUTES = [
   '/es/blog/mercado-de-terapia-celular-en-mexico',
   '/en/blog/stem-cell-pills-capsules-and-creams',
   '/es/blog/celulas-madre-en-pastillas-capsulas-y-cremas',
+  '/en/blog/stem-cell-therapy-for-back-pain-herniated-disc',
+  '/es/blog/celulas-madre-para-hernia-de-disco-y-columna',
   // Partner and team detail pages. These were never covered: the partner pages
   // are photo galleries and credential badges, which is exactly where contrast
   // and alt-text problems hide, and Y&H Clinic went public with six photos.
