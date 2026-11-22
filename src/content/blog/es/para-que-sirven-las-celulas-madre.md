@@ -85,8 +85,9 @@ recomendar nada.
 | Dos articulaciones — 112 millones de células | $4,250 |
 | Bienestar general por vena — 2 millones de células por kilogramo | $2,300 – $7,500, según el peso |
 
-Son los precios de nuestra [lista publicada](/es/precios/). La cifra que vale para ti es la cotización
-por escrito de tu evaluación.
+Son los precios de nuestra [lista publicada](/es/precios/). Qué incluye cada uno y por qué varía está en
+[cuánto cuesta un tratamiento de células madre en México](/es/blog/cuanto-cuesta-la-terapia-con-celulas-madre-en-mexico/).
+La cifra que vale para ti es la cotización por escrito de tu evaluación.
 
 ## Lo que las células madre no hacen
 

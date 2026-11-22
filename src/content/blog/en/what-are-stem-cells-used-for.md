@@ -82,8 +82,9 @@ your case before recommending anything.
 | Two joints — 112 million cells | $4,250 |
 | General wellness by IV — 2 million cells per kilogram | $2,300 – $7,500, by body weight |
 
-These come from our [published price list](/en/pricing/). The figure that counts for you is the written
-quote from your evaluation.
+These come from our [published price list](/en/pricing/). What each one includes, and why prices vary,
+is in [how much stem cell therapy costs in Mexico](/en/blog/how-much-does-stem-cell-therapy-cost-in-mexico/).
+The figure that counts for you is the written quote from your evaluation.
 
 ## What stem cells cannot do
 

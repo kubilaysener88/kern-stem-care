@@ -119,7 +119,7 @@ No manejamos pagos a plazos. Quien reparte el costo normalmente lo hace con su p
 banco. Si estás pensando en endeudarte para el tratamiento, haz la cuenta completa con intereses antes
 de comprometerte, y ten presente que nadie puede prometerte cuánto te va a ayudar.
 
-Para saber cuánto cuesta el tratamiento en sí, lee [cuánto cuesta la terapia con células madre en México](/es/blog/cuanto-cuesta-la-terapia-con-celulas-madre-en-mexico/)
+Para saber cuánto cuesta el tratamiento en sí, lee [cuánto cuesta un tratamiento de células madre en México](/es/blog/cuanto-cuesta-la-terapia-con-celulas-madre-en-mexico/)
 y nuestra comparación entre [Cancún, Tijuana y EE.UU.](/es/blog/costo-terapia-celulas-madre-cancun-tijuana-eeuu/)
 
 ## Preguntas frecuentes

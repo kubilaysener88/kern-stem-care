@@ -40,7 +40,7 @@ aprobada por la FDA para ninguna condición específica y los resultados varían
 ## Qué afecta el costo
 
 El precio de la terapia con exosomas depende de factores similares a otros tratamientos regenerativos —
-consulta el desglose completo en [cuánto cuesta la terapia con células madre y regenerativa en México](/es/blog/cuanto-cuesta-la-terapia-con-celulas-madre-en-mexico/).
+consulta el desglose completo en [cuánto cuesta un tratamiento de células madre en México](/es/blog/cuanto-cuesta-la-terapia-con-celulas-madre-en-mexico/).
 Para protocolos específicos de piel, las variables principales son:
 
 - El producto de exosomas y la dosis utilizada

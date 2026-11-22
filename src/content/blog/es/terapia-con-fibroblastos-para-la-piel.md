@@ -57,7 +57,7 @@ a la terapia celular aplicada en clínica.
 ## Qué afecta el costo
 
 El precio de la terapia con fibroblastos depende de factores similares a otros tratamientos regenerativos —
-consulta el desglose completo en [cuánto cuesta la terapia con células madre y regenerativa en México](/es/blog/cuanto-cuesta-la-terapia-con-celulas-madre-en-mexico/).
+consulta el desglose completo en [cuánto cuesta un tratamiento de células madre en México](/es/blog/cuanto-cuesta-la-terapia-con-celulas-madre-en-mexico/).
 Para protocolos de fibroblastos específicamente, las variables principales son:
 
 - La zona tratada (una sola zona del rostro frente a rostro completo y cuello)

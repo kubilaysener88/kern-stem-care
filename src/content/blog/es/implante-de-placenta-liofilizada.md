@@ -31,7 +31,7 @@ Es un hallazgo real, y viene con tres advertencias. Los resultados no fueron uni
 
 ## Cuánto cuesta
 
-El implante de placenta liofilizada cuesta **$880 USD** por aplicación en nuestra red de clínicas en Cancún — el mismo desglose transparente que usamos para las otras tres terapias. Para entender qué determina el precio de una terapia regenerativa en general (el producto, la dosis, el número de sesiones, y qué queda fuera de la cifra), consulta [cuánto cuesta la terapia con células madre en México](/es/blog/cuanto-cuesta-la-terapia-con-celulas-madre-en-mexico/). Solo el médico tratante puede confirmar si el implante es apropiado para tu caso, y el costo final se confirma en tu evaluación.
+El implante de placenta liofilizada cuesta **$880 USD** por aplicación en nuestra red de clínicas en Cancún — el mismo desglose transparente que usamos para las otras tres terapias. Para entender qué determina el precio de una terapia regenerativa en general (el producto, la dosis, el número de sesiones, y qué queda fuera de la cifra), consulta [cuánto cuesta un tratamiento de células madre en México](/es/blog/cuanto-cuesta-la-terapia-con-celulas-madre-en-mexico/). Solo el médico tratante puede confirmar si el implante es apropiado para tu caso, y el costo final se confirma en tu evaluación.
 
 ¿Quieres una cotización por escrito, desglosada? [Obtén tu evaluación gratuita →](/es/cotizacion/)
 

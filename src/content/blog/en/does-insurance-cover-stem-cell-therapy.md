@@ -1,7 +1,7 @@
 ---
-title: 'Does insurance cover stem cell therapy? Insurers, HSAs, travel cover and how patients pay'
-metaTitle: 'Does Insurance Cover Stem Cell Therapy?'
-description: 'Why insurers decline regenerative stem cell therapy, what an HSA or travel policy may still cover, and how payment works for treatment in Mexico.'
+title: 'Does insurance cover stem cell therapy? Blue Cross, Medicare, HSAs, travel cover and how patients pay'
+metaTitle: 'Does Blue Cross Cover Stem Cell Therapy?'
+description: 'Usually not: Blue Cross Blue Shield’s federal plan and most U.S. insurers class joint stem cell injections as investigational. What Medicare and HSAs cover.'
 lang: 'en'
 translationKey: 'stem-cell-insurance-payment'
 pubDate: 2026-10-25
@@ -14,9 +14,9 @@ draft: false
 
 ## Short answer
 
-Plan on paying for it yourself. U.S. insurers generally classify mesenchymal stem cell injections for
-joints and other orthopedic uses as investigational, and decline them — Blue Cross Blue Shield's
-policy for federal employees, for one, says so for every orthopedic application. Original Medicare
+Usually not, so plan on paying for it yourself. Blue Cross Blue Shield's policy for federal employees
+lists mesenchymal stem cell therapy as investigational for every orthopedic application, and U.S.
+insurers generally classify joint and other orthopedic injections the same way and decline them. Original Medicare
 generally does not pay for care outside the U.S. at all. In Canada, Ontario funds out-of-country care
 only with written approval in advance and only for treatment that is not experimental, and other
 provinces have rules of their own. None of this changes if the clinic is in your own city rather than
