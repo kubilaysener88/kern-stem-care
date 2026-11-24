@@ -94,6 +94,8 @@ const ROUTES = [
   '/es/blog/para-que-sirven-las-celulas-madre',
   '/en/blog/stem-cell-therapy-for-hip',
   '/es/blog/celulas-madre-para-la-cadera',
+  '/en/blog/stem-cell-therapy-for-knees-cost',
+  '/es/blog/celulas-madre-rodilla-precio',
   // Partner and team detail pages. These were never covered: the partner pages
   // are photo galleries and credential badges, which is exactly where contrast
   // and alt-text problems hide, and Y&H Clinic went public with six photos.
